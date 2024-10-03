@@ -8,14 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isSplashVisible = true
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            if AuthManager.shared.currentUser != nil {
+                MainTabView()
+                    .toolbar(isSplashVisible ? .hidden : .visible, for: .navigationBar)
+
+            } else {
+                LoginView()
+            }
+            
+            if isSplashVisible {
+                SplashView()
+                    .animation(.easeOut(duration: 0.4), value: isSplashVisible)
+            }
         }
-        .padding()
+        .task {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                isSplashVisible = false
+            }
+        }
     }
 }
 

@@ -62,7 +62,7 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 
 ### Config
-Config
+Config.xcconfig
 *.xcconfig
 
 ### .swift
