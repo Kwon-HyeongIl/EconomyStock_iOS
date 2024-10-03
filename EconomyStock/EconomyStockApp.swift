@@ -20,8 +20,6 @@ struct EconomyStockApp: App {
     init() {
         // Kakao 로그인 관련 초기화
         KakaoSDK.initSDK(appKey: kakaoAppKey as! String)
-        
-        print("앱키", kakaoAppKey)
     }
     
     var body: some Scene {
@@ -48,6 +46,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         FirebaseApp.configure()
+        
         return true
     }
 }

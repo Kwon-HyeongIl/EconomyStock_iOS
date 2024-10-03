@@ -19,7 +19,6 @@
 		CA9BB9D02CABA59A00886A1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA9BB9C72CABA59A00886A1A /* Assets.xcassets */; };
 		CA9BB9D42CABA8C300886A1A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9D32CABA8C300886A1A /* SplashView.swift */; };
 		CA9BB9D72CABA94400886A1A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9D62CABA94400886A1A /* MainTabView.swift */; };
-		CA9BB9D92CABAA3D00886A1A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA9BB9D82CABAA3D00886A1A /* GoogleService-Info.plist */; };
 		CA9BB9DC2CABAACF00886A1A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CA9BB9DB2CABAACF00886A1A /* FirebaseAuth */; };
 		CA9BB9DE2CABAACF00886A1A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CA9BB9DD2CABAACF00886A1A /* FirebaseFirestore */; };
 		CA9BB9E02CABAACF00886A1A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CA9BB9DF2CABAACF00886A1A /* FirebaseStorage */; };
@@ -37,6 +36,7 @@
 		CAEE16602CAD0D4D00210BD0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE165F2CAD0D4D00210BD0 /* LoginViewModel.swift */; };
 		CAEE16632CAD0D7200210BD0 /* LoginViewModel+Kakao.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE16622CAD0D7200210BD0 /* LoginViewModel+Kakao.swift */; };
 		CAEE16652CAD0D7800210BD0 /* LoginViewModel+Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE16642CAD0D7800210BD0 /* LoginViewModel+Apple.swift */; };
+		CAF2271D2CAE569B002868F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAF2271C2CAE569B002868F4 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +51,6 @@
 		CA9BB9C92CABA59A00886A1A /* EconomyStockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomyStockApp.swift; sourceTree = "<group>"; };
 		CA9BB9D32CABA8C300886A1A /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		CA9BB9D62CABA94400886A1A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		CA9BB9D82CABAA3D00886A1A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		CA9BB9E82CABB12700886A1A /* NavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackView.swift; sourceTree = "<group>"; };
 		CA9BB9EA2CABB18700886A1A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		CAEE165F2CAD0D4D00210BD0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CAEE16622CAD0D7200210BD0 /* LoginViewModel+Kakao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Kakao.swift"; sourceTree = "<group>"; };
 		CAEE16642CAD0D7800210BD0 /* LoginViewModel+Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Apple.swift"; sourceTree = "<group>"; };
+		CAF2271C2CAE569B002868F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				CA662BD32CAD7B86009E8D5F /* Info.plist */,
-				CA9BB9D82CABAA3D00886A1A /* GoogleService-Info.plist */,
+				CAF2271C2CAE569B002868F4 /* GoogleService-Info.plist */,
 				CA9BB9C92CABA59A00886A1A /* EconomyStockApp.swift */,
 				CA9BB9C82CABA59A00886A1A /* ContentView.swift */,
 				CA9BB9D62CABA94400886A1A /* MainTabView.swift */,
@@ -335,8 +335,8 @@
 			files = (
 				CA9BB9CE2CABA59A00886A1A /* Preview Assets.xcassets in Resources */,
 				CA662BD22CAD79F0009E8D5F /* Config.xcconfig in Resources */,
+				CAF2271D2CAE569B002868F4 /* GoogleService-Info.plist in Resources */,
 				CA9BB9CF2CABA59A00886A1A /* .gitignore in Resources */,
-				CA9BB9D92CABAA3D00886A1A /* GoogleService-Info.plist in Resources */,
 				CA9BB9D02CABA59A00886A1A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
