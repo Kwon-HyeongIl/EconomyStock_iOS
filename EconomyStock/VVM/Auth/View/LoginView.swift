@@ -11,10 +11,18 @@ struct LoginView: View {
     @State private var viewModel = LoginViewModel()
     
     var body: some View {
-        Button {
-            viewModel.kakaoAuthSignIn()
-        } label: {
-            Text("카카오 로그인")
+        VStack {
+            Button {
+                viewModel.kakaoAuthSignIn()
+            } label: {
+                Text("카카오 로그인")
+            }
+            
+            Button {
+                viewModel.appleAuthSignin()
+            } label: {
+                Text("애플 로그인")
+            }
         }
     }
 }
