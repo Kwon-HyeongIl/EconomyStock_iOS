@@ -22,7 +22,7 @@ enum MainTab: String, CaseIterable {
             "개념"
             
         case .newspaper:
-            "활용"
+            "뉴스"
             
         case .person:
             "프로필"

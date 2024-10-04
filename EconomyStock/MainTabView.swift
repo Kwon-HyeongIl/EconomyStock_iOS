@@ -43,6 +43,7 @@ struct MainTabView: View {
                     Spacer()
                     
                     MainCustomTabView()
+                        .offset(y: 95)
                 }
             }
         }
@@ -51,4 +52,5 @@ struct MainTabView: View {
 
 #Preview {
     MainTabView()
+        .environment(MainTabCapsule())
 }

@@ -16,6 +16,8 @@
 		CA17FC7F2CB00ABE0050250B /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC7E2CB00ABE0050250B /* StudyView.swift */; };
 		CA17FC812CB00AC60050250B /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC802CB00AC60050250B /* NewsView.swift */; };
 		CA17FC832CB00AD50050250B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC822CB00AD50050250B /* ProfileView.swift */; };
+		CA17FC8A2CB01E820050250B /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC892CB01E820050250B /* CornerRadius.swift */; };
+		CA17FC8C2CB01EBF0050250B /* RoundCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC8B2CB01EBF0050250B /* RoundCorner.swift */; };
 		CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */; };
 		CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936B2CAFB05800A883F1 /* Notification.swift */; };
 		CA2E936E2CAFB0B300A883F1 /* NotificationManager+Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */; };
@@ -61,6 +63,8 @@
 		CA17FC7E2CB00ABE0050250B /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
 		CA17FC802CB00AC60050250B /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		CA17FC822CB00AD50050250B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CA17FC892CB01E820050250B /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
+		CA17FC8B2CB01EBF0050250B /* RoundCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCorner.swift; sourceTree = "<group>"; };
 		CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		CA2E936B2CAFB05800A883F1 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationManager+Badge.swift"; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 		CA17FC6E2CB0056B0050250B /* Tab */ = {
 			isa = PBXGroup;
 			children = (
+				CA17FC882CB01E440050250B /* RoundCorner */,
 				CA17FC6F2CB005800050250B /* MainCustomTabView.swift */,
 			);
 			path = Tab;
@@ -188,6 +193,15 @@
 				CA17FC822CB00AD50050250B /* ProfileView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CA17FC882CB01E440050250B /* RoundCorner */ = {
+			isa = PBXGroup;
+			children = (
+				CA17FC892CB01E820050250B /* CornerRadius.swift */,
+				CA17FC8B2CB01EBF0050250B /* RoundCorner.swift */,
+			);
+			path = RoundCorner;
 			sourceTree = "<group>";
 		};
 		CA2E93682CAFAEB000A883F1 /* Notification */ = {
@@ -503,6 +517,8 @@
 				CA17FC772CB009680050250B /* TitleColor.swift in Sources */,
 				CAEE164F2CAD096C00210BD0 /* NotificationType.swift in Sources */,
 				CA9BB9D72CABA94400886A1A /* MainTabView.swift in Sources */,
+				CA17FC8A2CB01E820050250B /* CornerRadius.swift in Sources */,
+				CA17FC8C2CB01EBF0050250B /* RoundCorner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
