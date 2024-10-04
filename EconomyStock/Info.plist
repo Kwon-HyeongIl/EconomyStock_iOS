@@ -21,6 +21,10 @@
 			</array>
 		</dict>
 	</array>
+	<key>FIREBASE_ECONOMYSTOCK_PROJECT_ID</key>
+	<string>${FIREBASE_ECONOMYSTOCK_PROJECT_ID}</string>
+	<key>KAKAO_NATIVE_APP_KEY</key>
+	<string>${KAKAO_NATIVE_APP_KEY}</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>kakaokompassauth</string>
@@ -28,9 +32,12 @@
 	</array>
 	<key>SOCIALLOGIN_HASH_KEY</key>
 	<string>${SOCIALLOGIN_HASH_KEY}</string>
-	<key>FIREBASE_ECONOMYSTOCK_PROJECT_ID</key>
-	<string>${FIREBASE_ECONOMYSTOCK_PROJECT_ID}</string>
-	<key>KAKAO_NATIVE_APP_KEY</key>
-	<string>${KAKAO_NATIVE_APP_KEY}</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
+	<key>GOOGLE_OAUTH_ACCESS_TOKEN_URL_BODY</key>
+	<string>${GOOGLE_OAUTH_ACCESS_TOKEN_URL_BODY}</string>
 </dict>
 </plist>

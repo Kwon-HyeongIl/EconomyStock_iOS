@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA10C02E2CAF85C1007DAB3A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CA10C02D2CAF85C1007DAB3A /* FirebaseMessaging */; };
+		CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */; };
+		CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936B2CAFB05800A883F1 /* Notification.swift */; };
+		CA2E936E2CAFB0B300A883F1 /* NotificationManager+Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */; };
 		CA662BCA2CAD72E6009E8D5F /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BC92CAD72E6009E8D5F /* KakaoSDKAuth */; };
 		CA662BCC2CAD72E6009E8D5F /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BCB2CAD72E6009E8D5F /* KakaoSDKCommon */; };
 		CA662BCE2CAD72E6009E8D5F /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BCD2CAD72E6009E8D5F /* KakaoSDKUser */; };
@@ -41,6 +45,9 @@
 
 /* Begin PBXFileReference section */
 		CA10C02C2CAF782E007DAB3A /* EconomyStock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EconomyStock.entitlements; sourceTree = "<group>"; };
+		CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		CA2E936B2CAFB05800A883F1 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationManager+Badge.swift"; sourceTree = "<group>"; };
 		CA662BD12CAD79F0009E8D5F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		CA662BD32CAD7B86009E8D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CA83477C2CAAE28500BA1E4A /* EconomyStock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EconomyStock.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA10C02E2CAF85C1007DAB3A /* FirebaseMessaging in Frameworks */,
 				CA9BB9DC2CABAACF00886A1A /* FirebaseAuth in Frameworks */,
 				CAEE16552CAD0C8100210BD0 /* CryptoSwift in Frameworks */,
 				CA9BB9DE2CABAACF00886A1A /* FirebaseFirestore in Frameworks */,
@@ -86,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA2E93682CAFAEB000A883F1 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */,
+				CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		CA8347732CAAE28500BA1E4A = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +189,7 @@
 			children = (
 				CAEE16502CAD0C2E00210BD0 /* Auth */,
 				CAEE165B2CAD0D1400210BD0 /* FCM */,
+				CA2E93682CAFAEB000A883F1 /* Notification */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -197,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				CAEE164A2CAD082500210BD0 /* User.swift */,
+				CA2E936B2CAFB05800A883F1 /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,6 +305,7 @@
 				CA662BC92CAD72E6009E8D5F /* KakaoSDKAuth */,
 				CA662BCB2CAD72E6009E8D5F /* KakaoSDKCommon */,
 				CA662BCD2CAD72E6009E8D5F /* KakaoSDKUser */,
+				CA10C02D2CAF85C1007DAB3A /* FirebaseMessaging */,
 			);
 			productName = EconomyStock;
 			productReference = CA83477C2CAAE28500BA1E4A /* EconomyStock.app */;
@@ -364,7 +384,10 @@
 				CAEE16522CAD0C3F00210BD0 /* AuthManager+SocialLogin.swift in Sources */,
 				CAEE16582CAD0CA700210BD0 /* LoginView.swift in Sources */,
 				CA9BB9CD2CABA59A00886A1A /* EconomyStockApp.swift in Sources */,
+				CA2E936E2CAFB0B300A883F1 /* NotificationManager+Badge.swift in Sources */,
 				CA9BB9E92CABB12700886A1A /* NavigationStackView.swift in Sources */,
+				CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */,
+				CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */,
 				CAEE164B2CAD082500210BD0 /* User.swift in Sources */,
 				CAEE164F2CAD096C00210BD0 /* NotificationType.swift in Sources */,
 				CA9BB9D72CABA94400886A1A /* MainTabView.swift in Sources */,
@@ -618,6 +641,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CA10C02D2CAF85C1007DAB3A /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA9BB9DA2CABAACF00886A1A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
 		CA662BC92CAD72E6009E8D5F /* KakaoSDKAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CA662BC82CAD72E6009E8D5F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
