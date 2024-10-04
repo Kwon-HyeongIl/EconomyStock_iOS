@@ -8,17 +8,43 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @Environment(MainTabCapsule.self) var mainTabCapsule
+    
+    // 뷰 캐싱
+    @State private var homeView = HomeView()
+    @State private var studyView = StudyView()
+    @State private var newsView = NewsView()
+    @State private var profileView = ProfileView()
+    
+    init() {
+        UITabBar.appearance().isHidden = true
+    }
     
     var body: some View {
+        @Bindable var mainTabCapsule = mainTabCapsule
+        
         VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            
-            Button {
-                AuthManager.shared.signOut()
-            } label: {
-                Text("로그아웃")
+            ZStack {
+                switch mainTabCapsule.selectedTab {
+                case .house:
+                    homeView
+                    
+                case .textBookClosed:
+                    StudyView()
+                    
+                case .newspaper:
+                    newsView
+                    
+                case .person:
+                    profileView
+                }
+                
+                VStack {
+                    Spacer()
+                    
+                    MainCustomTabView()
+                }
             }
-
         }
     }
 }

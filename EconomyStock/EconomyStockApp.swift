@@ -15,6 +15,7 @@ import FirebaseMessaging
 struct EconomyStockApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @State private var navigationRouter = NavigationRouter()
+    @State private var mainTabCapsule = MainTabCapsule()
     
     let kakaoAppKey = Bundle.main.infoDictionary?["KAKAO_NATIVE_APP_KEY"] ?? ""
     
@@ -40,6 +41,7 @@ struct EconomyStockApp: App {
             }
         }
         .environment(navigationRouter)
+        .environment(mainTabCapsule)
     }
 }
 

@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		CA10C02E2CAF85C1007DAB3A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CA10C02D2CAF85C1007DAB3A /* FirebaseMessaging */; };
+		CA17FC702CB005800050250B /* MainCustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC6F2CB005800050250B /* MainCustomTabView.swift */; };
+		CA17FC722CB005A10050250B /* MainTabCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC712CB005A10050250B /* MainTabCapsule.swift */; };
+		CA17FC752CB005DB0050250B /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC742CB005DB0050250B /* MainTab.swift */; };
+		CA17FC772CB009680050250B /* TitleColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC762CB009680050250B /* TitleColor.swift */; };
+		CA17FC7D2CB00AB90050250B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC7C2CB00AB90050250B /* HomeView.swift */; };
+		CA17FC7F2CB00ABE0050250B /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC7E2CB00ABE0050250B /* StudyView.swift */; };
+		CA17FC812CB00AC60050250B /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC802CB00AC60050250B /* NewsView.swift */; };
+		CA17FC832CB00AD50050250B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC822CB00AD50050250B /* ProfileView.swift */; };
 		CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */; };
 		CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936B2CAFB05800A883F1 /* Notification.swift */; };
 		CA2E936E2CAFB0B300A883F1 /* NotificationManager+Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */; };
@@ -45,6 +53,14 @@
 
 /* Begin PBXFileReference section */
 		CA10C02C2CAF782E007DAB3A /* EconomyStock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EconomyStock.entitlements; sourceTree = "<group>"; };
+		CA17FC6F2CB005800050250B /* MainCustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCustomTabView.swift; sourceTree = "<group>"; };
+		CA17FC712CB005A10050250B /* MainTabCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCapsule.swift; sourceTree = "<group>"; };
+		CA17FC742CB005DB0050250B /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
+		CA17FC762CB009680050250B /* TitleColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleColor.swift; sourceTree = "<group>"; };
+		CA17FC7C2CB00AB90050250B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CA17FC7E2CB00ABE0050250B /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
+		CA17FC802CB00AC60050250B /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		CA17FC822CB00AD50050250B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		CA2E936B2CAFB05800A883F1 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationManager+Badge.swift"; sourceTree = "<group>"; };
@@ -94,6 +110,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA17FC6E2CB0056B0050250B /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				CA17FC6F2CB005800050250B /* MainCustomTabView.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		CA17FC732CB005C50050250B /* Capsule */ = {
+			isa = PBXGroup;
+			children = (
+				CA17FC712CB005A10050250B /* MainTabCapsule.swift */,
+			);
+			path = Capsule;
+			sourceTree = "<group>";
+		};
+		CA17FC782CB00A7A0050250B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CA17FC842CB00ADB0050250B /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CA17FC792CB00A7E0050250B /* Study */ = {
+			isa = PBXGroup;
+			children = (
+				CA17FC852CB00AE00050250B /* View */,
+			);
+			path = Study;
+			sourceTree = "<group>";
+		};
+		CA17FC7A2CB00A990050250B /* News */ = {
+			isa = PBXGroup;
+			children = (
+				CA17FC862CB00AE40050250B /* View */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		CA17FC7B2CB00AA90050250B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CA17FC872CB00AE70050250B /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CA17FC842CB00ADB0050250B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA17FC7C2CB00AB90050250B /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA17FC852CB00AE00050250B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA17FC7E2CB00ABE0050250B /* StudyView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA17FC862CB00AE40050250B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA17FC802CB00AC60050250B /* NewsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA17FC872CB00AE70050250B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA17FC822CB00AD50050250B /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CA2E93682CAFAEB000A883F1 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +218,8 @@
 		CA9BB9C32CABA59A00886A1A /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				CA17FC732CB005C50050250B /* Capsule */,
+				CA17FC6E2CB0056B0050250B /* Tab */,
 				CA9BB9D52CABA8DD00886A1A /* Color */,
 				CA9BB9D22CABA8BA00886A1A /* Splash */,
 				CA9BB9D12CABA8A700886A1A /* Background */,
@@ -180,6 +278,7 @@
 		CA9BB9D52CABA8DD00886A1A /* Color */ = {
 			isa = PBXGroup;
 			children = (
+				CA17FC762CB009680050250B /* TitleColor.swift */,
 			);
 			path = Color;
 			sourceTree = "<group>";
@@ -207,6 +306,7 @@
 			children = (
 				CA9BB9E82CABB12700886A1A /* NavigationStackView.swift */,
 				CAEE164E2CAD096C00210BD0 /* NotificationType.swift */,
+				CA17FC742CB005DB0050250B /* MainTab.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -259,6 +359,10 @@
 		CAEE165D2CAD0D2F00210BD0 /* MainTab */ = {
 			isa = PBXGroup;
 			children = (
+				CA17FC782CB00A7A0050250B /* Home */,
+				CA17FC792CB00A7E0050250B /* Study */,
+				CA17FC7A2CB00A990050250B /* News */,
+				CA17FC7B2CB00AA90050250B /* Profile */,
 			);
 			path = MainTab;
 			sourceTree = "<group>";
@@ -374,21 +478,29 @@
 				CAEE16482CAD07B900210BD0 /* AuthManager.swift in Sources */,
 				CAEE165A2CAD0CBA00210BD0 /* AuthManager+Hash.swift in Sources */,
 				CAEE16652CAD0D7800210BD0 /* LoginViewModel+Apple.swift in Sources */,
+				CA17FC752CB005DB0050250B /* MainTab.swift in Sources */,
 				CAEE164D2CAD08E600210BD0 /* FCMManager.swift in Sources */,
 				CAEE16602CAD0D4D00210BD0 /* LoginViewModel.swift in Sources */,
 				CAEE16632CAD0D7200210BD0 /* LoginViewModel+Kakao.swift in Sources */,
+				CA17FC722CB005A10050250B /* MainTabCapsule.swift in Sources */,
 				CA9BB9D42CABA8C300886A1A /* SplashView.swift in Sources */,
 				CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */,
+				CA17FC832CB00AD50050250B /* ProfileView.swift in Sources */,
 				CA9BB9CC2CABA59A00886A1A /* ContentView.swift in Sources */,
 				CA9BB9EB2CABB18700886A1A /* TestView.swift in Sources */,
+				CA17FC7F2CB00ABE0050250B /* StudyView.swift in Sources */,
 				CAEE16522CAD0C3F00210BD0 /* AuthManager+SocialLogin.swift in Sources */,
 				CAEE16582CAD0CA700210BD0 /* LoginView.swift in Sources */,
+				CA17FC7D2CB00AB90050250B /* HomeView.swift in Sources */,
+				CA17FC812CB00AC60050250B /* NewsView.swift in Sources */,
 				CA9BB9CD2CABA59A00886A1A /* EconomyStockApp.swift in Sources */,
 				CA2E936E2CAFB0B300A883F1 /* NotificationManager+Badge.swift in Sources */,
 				CA9BB9E92CABB12700886A1A /* NavigationStackView.swift in Sources */,
+				CA17FC702CB005800050250B /* MainCustomTabView.swift in Sources */,
 				CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */,
 				CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */,
 				CAEE164B2CAD082500210BD0 /* User.swift in Sources */,
+				CA17FC772CB009680050250B /* TitleColor.swift in Sources */,
 				CAEE164F2CAD096C00210BD0 /* NotificationType.swift in Sources */,
 				CA9BB9D72CABA94400886A1A /* MainTabView.swift in Sources */,
 			);
