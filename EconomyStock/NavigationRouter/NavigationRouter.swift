@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@MainActor
 @Observable
 class NavigationRouter {
     var path = NavigationPath()
@@ -21,16 +20,19 @@ class NavigationRouter {
         }
     }
     
+    @MainActor
     func navigate(_ view: NavigationStackView) {
         path.append(view)
     }
     
+    @MainActor
     func back() {
         if !path.isEmpty {
             path.removeLast()
         }
     }
     
+    @MainActor
     func popToRoot() {
         if !path.isEmpty {
             path.removeLast(path.count)

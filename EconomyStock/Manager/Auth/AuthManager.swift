@@ -41,13 +41,15 @@ class AuthManager {
     private func uploadUserData(userId: String, email: String, username: String, kakaoHashedUid: String = "", appleHashedUid: String = "") async {
         let deviceToken = FCMManager.shared.myDeviceToken ?? ""
         
-        if !kakaoHashedUid.isEmpty {
-            // 카카오 회원가입
-            self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, kakaoHashedUid: kakaoHashedUid, notificationType: [.empty])
-            
-        } else if !appleHashedUid.isEmpty {
-            // 애플 회원가입
-            self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, appleHashedUid: appleHashedUid, notificationType: [.empty])
+        await MainActor.run {
+            if !kakaoHashedUid.isEmpty {
+                // 카카오 회원가입
+                self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, kakaoHashedUid: kakaoHashedUid, notificationType: [.empty])
+                
+            } else if !appleHashedUid.isEmpty {
+                // 애플 회원가입
+                self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, appleHashedUid: appleHashedUid, notificationType: [.empty])
+            }
         }
         
         do {
@@ -74,21 +76,15 @@ class AuthManager {
         }
     }
     
-    func checkEmailDuplication(email: String) async -> Bool {
-        do {
-            return try await Firestore.firestore()
-                .collection("User").whereField("authEmail", isEqualTo: email).getDocuments().documents.isEmpty
-            
-        }  catch {
-            return false
-        }
-    }
-    
     func loadCurrentUserData() async {
         do {
             guard let userId = Auth.auth().currentUser?.uid else { return }
-            self.currentUser = try await Firestore.firestore()
+            let loadedCurrentUser = try await Firestore.firestore()
                 .collection("User").document(userId).getDocument(as: User.self)
+            
+            await MainActor.run {
+                self.currentUser = loadedCurrentUser
+            }
             
         } catch {
             print(error.localizedDescription)
@@ -143,7 +139,10 @@ class AuthManager {
     func signOut() {
         do {
             try Auth.auth().signOut()
-            currentUser = nil
+            
+            DispatchQueue.main.async {
+                self.currentUser = nil
+            }
             
         } catch {
             print(error.localizedDescription)
