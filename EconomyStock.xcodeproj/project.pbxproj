@@ -18,6 +18,9 @@
 		CA17FC832CB00AD50050250B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC822CB00AD50050250B /* ProfileView.swift */; };
 		CA17FC8A2CB01E820050250B /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC892CB01E820050250B /* CornerRadius.swift */; };
 		CA17FC8C2CB01EBF0050250B /* RoundCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC8B2CB01EBF0050250B /* RoundCorner.swift */; };
+		CA1DDD382CB0E75000C84D08 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CA1DDD372CB0E75000C84D08 /* Lottie */; };
+		CA1DDD3B2CB0E7A900C84D08 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DDD3A2CB0E7A900C84D08 /* LottieView.swift */; };
+		CA1DDD412CB12ADF00C84D08 /* Splash_Background.json in Resources */ = {isa = PBXBuildFile; fileRef = CA1DDD402CB12ADF00C84D08 /* Splash_Background.json */; };
 		CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */; };
 		CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936B2CAFB05800A883F1 /* Notification.swift */; };
 		CA2E936E2CAFB0B300A883F1 /* NotificationManager+Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */; };
@@ -65,6 +68,8 @@
 		CA17FC822CB00AD50050250B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CA17FC892CB01E820050250B /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		CA17FC8B2CB01EBF0050250B /* RoundCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCorner.swift; sourceTree = "<group>"; };
+		CA1DDD3A2CB0E7A900C84D08 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		CA1DDD402CB12ADF00C84D08 /* Splash_Background.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Splash_Background.json; sourceTree = "<group>"; };
 		CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		CA2E936B2CAFB05800A883F1 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationManager+Badge.swift"; sourceTree = "<group>"; };
@@ -102,6 +107,7 @@
 			files = (
 				CA10C02E2CAF85C1007DAB3A /* FirebaseMessaging in Frameworks */,
 				CA9BB9DC2CABAACF00886A1A /* FirebaseAuth in Frameworks */,
+				CA1DDD382CB0E75000C84D08 /* Lottie in Frameworks */,
 				CAEE16552CAD0C8100210BD0 /* CryptoSwift in Frameworks */,
 				CA9BB9DE2CABAACF00886A1A /* FirebaseFirestore in Frameworks */,
 				CA662BCE2CAD72E6009E8D5F /* KakaoSDKUser in Frameworks */,
@@ -204,6 +210,30 @@
 			path = RoundCorner;
 			sourceTree = "<group>";
 		};
+		CA1DDD392CB0E79900C84D08 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				CA1DDD3A2CB0E7A900C84D08 /* LottieView.swift */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		CA1DDD3C2CB0E9CB00C84D08 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				CA1DDD3D2CB0E9EA00C84D08 /* Lottie */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		CA1DDD3D2CB0E9EA00C84D08 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				CA1DDD402CB12ADF00C84D08 /* Splash_Background.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		CA2E93682CAFAEB000A883F1 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +262,7 @@
 		CA9BB9C32CABA59A00886A1A /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				CA1DDD392CB0E79900C84D08 /* Lottie */,
 				CA17FC732CB005C50050250B /* Capsule */,
 				CA17FC6E2CB0056B0050250B /* Tab */,
 				CA9BB9D52CABA8DD00886A1A /* Color */,
@@ -264,6 +295,7 @@
 				CA9BB9C32CABA59A00886A1A /* Component */,
 				CAEE16492CAD081A00210BD0 /* Model */,
 				CA9BB9E52CABAF1B00886A1A /* Enum */,
+				CA1DDD3C2CB0E9CB00C84D08 /* Json */,
 				CA9BB9C72CABA59A00886A1A /* Assets.xcassets */,
 				CA9BB9C62CABA59A00886A1A /* .gitignore */,
 				CA9BB9C52CABA59A00886A1A /* Preview Content */,
@@ -424,6 +456,7 @@
 				CA662BCB2CAD72E6009E8D5F /* KakaoSDKCommon */,
 				CA662BCD2CAD72E6009E8D5F /* KakaoSDKUser */,
 				CA10C02D2CAF85C1007DAB3A /* FirebaseMessaging */,
+				CA1DDD372CB0E75000C84D08 /* Lottie */,
 			);
 			productName = EconomyStock;
 			productReference = CA83477C2CAAE28500BA1E4A /* EconomyStock.app */;
@@ -457,6 +490,7 @@
 				CA9BB9DA2CABAACF00886A1A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				CAEE16532CAD0C8100210BD0 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 				CA662BC82CAD72E6009E8D5F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				CA1DDD362CB0E75000C84D08 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CA83477D2CAAE28500BA1E4A /* Products */;
@@ -477,6 +511,7 @@
 				CA662BD22CAD79F0009E8D5F /* Config.xcconfig in Resources */,
 				CAF2271D2CAE569B002868F4 /* GoogleService-Info.plist in Resources */,
 				CA9BB9CF2CABA59A00886A1A /* .gitignore in Resources */,
+				CA1DDD412CB12ADF00C84D08 /* Splash_Background.json in Resources */,
 				CA9BB9D02CABA59A00886A1A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,6 +546,7 @@
 				CA2E936E2CAFB0B300A883F1 /* NotificationManager+Badge.swift in Sources */,
 				CA9BB9E92CABB12700886A1A /* NavigationStackView.swift in Sources */,
 				CA17FC702CB005800050250B /* MainCustomTabView.swift in Sources */,
+				CA1DDD3B2CB0E7A900C84D08 /* LottieView.swift in Sources */,
 				CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */,
 				CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */,
 				CAEE164B2CAD082500210BD0 /* User.swift in Sources */,
@@ -742,6 +778,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CA1DDD362CB0E75000C84D08 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
 		CA662BC82CAD72E6009E8D5F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
@@ -773,6 +817,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CA9BB9DA2CABAACF00886A1A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
+		};
+		CA1DDD372CB0E75000C84D08 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA1DDD362CB0E75000C84D08 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 		CA662BC92CAD72E6009E8D5F /* KakaoSDKAuth */ = {
 			isa = XCSwiftPackageProductDependency;
