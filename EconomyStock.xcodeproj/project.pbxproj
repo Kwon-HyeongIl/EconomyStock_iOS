@@ -20,7 +20,6 @@
 		CA17FC8C2CB01EBF0050250B /* RoundCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC8B2CB01EBF0050250B /* RoundCorner.swift */; };
 		CA1DDD382CB0E75000C84D08 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CA1DDD372CB0E75000C84D08 /* Lottie */; };
 		CA1DDD3B2CB0E7A900C84D08 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DDD3A2CB0E7A900C84D08 /* LottieView.swift */; };
-		CA1DDD412CB12ADF00C84D08 /* Splash_Background.json in Resources */ = {isa = PBXBuildFile; fileRef = CA1DDD402CB12ADF00C84D08 /* Splash_Background.json */; };
 		CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */; };
 		CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936B2CAFB05800A883F1 /* Notification.swift */; };
 		CA2E936E2CAFB0B300A883F1 /* NotificationManager+Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */; };
@@ -69,7 +68,6 @@
 		CA17FC892CB01E820050250B /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		CA17FC8B2CB01EBF0050250B /* RoundCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCorner.swift; sourceTree = "<group>"; };
 		CA1DDD3A2CB0E7A900C84D08 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		CA1DDD402CB12ADF00C84D08 /* Splash_Background.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Splash_Background.json; sourceTree = "<group>"; };
 		CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		CA2E936B2CAFB05800A883F1 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationManager+Badge.swift"; sourceTree = "<group>"; };
@@ -218,22 +216,6 @@
 			path = Lottie;
 			sourceTree = "<group>";
 		};
-		CA1DDD3C2CB0E9CB00C84D08 /* Json */ = {
-			isa = PBXGroup;
-			children = (
-				CA1DDD3D2CB0E9EA00C84D08 /* Lottie */,
-			);
-			path = Json;
-			sourceTree = "<group>";
-		};
-		CA1DDD3D2CB0E9EA00C84D08 /* Lottie */ = {
-			isa = PBXGroup;
-			children = (
-				CA1DDD402CB12ADF00C84D08 /* Splash_Background.json */,
-			);
-			path = Lottie;
-			sourceTree = "<group>";
-		};
 		CA2E93682CAFAEB000A883F1 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,7 +277,6 @@
 				CA9BB9C32CABA59A00886A1A /* Component */,
 				CAEE16492CAD081A00210BD0 /* Model */,
 				CA9BB9E52CABAF1B00886A1A /* Enum */,
-				CA1DDD3C2CB0E9CB00C84D08 /* Json */,
 				CA9BB9C72CABA59A00886A1A /* Assets.xcassets */,
 				CA9BB9C62CABA59A00886A1A /* .gitignore */,
 				CA9BB9C52CABA59A00886A1A /* Preview Content */,
@@ -511,7 +492,6 @@
 				CA662BD22CAD79F0009E8D5F /* Config.xcconfig in Resources */,
 				CAF2271D2CAE569B002868F4 /* GoogleService-Info.plist in Resources */,
 				CA9BB9CF2CABA59A00886A1A /* .gitignore in Resources */,
-				CA1DDD412CB12ADF00C84D08 /* Splash_Background.json in Resources */,
 				CA9BB9D02CABA59A00886A1A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

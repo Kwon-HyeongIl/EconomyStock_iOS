@@ -27,13 +27,7 @@ struct MainCustomTabView: View {
                             .scaleEffect(mainTabCapsule.selectedTab == tab ? 1.25 : 1.0)
                             .foregroundStyle(mainTabCapsule.selectedTab == tab ? Color.ESTitle : .black)
                             .font(.system(size: 19))
-                            .padding(.bottom, 1)
                             .padding(.top, 10)
-                        
-                        Text(tab.title)
-                            .font(.system(size: 9))
-                            .fontWeight(.medium)
-                            .foregroundStyle(mainTabCapsule.selectedTab == tab ? Color.ESTitle : .black)
                     }
                     .onTapGesture {
                         withAnimation(.easeInOut(duration: 0.1)) {
