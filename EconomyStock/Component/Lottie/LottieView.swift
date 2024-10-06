@@ -11,14 +11,19 @@ import Lottie
 struct LottieView: UIViewRepresentable {
     let fileName: String
     let loopMode: LottieLoopMode
+    var toProgress: CGFloat
+
+    init(fileName: String, loopMode: LottieLoopMode, toProgress: CGFloat = 1.0) {
+        self.fileName = fileName
+        self.loopMode = loopMode
+        self.toProgress = toProgress
+    }
     
     func makeUIView(context: Context) -> UIView {
         let containerView = UIView()
         let animationView = LottieAnimationView(name: fileName)
         
         animationView.loopMode = loopMode
-        animationView.play()
-        
         animationView.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(animationView)
         
@@ -26,6 +31,8 @@ struct LottieView: UIViewRepresentable {
             animationView.widthAnchor.constraint(equalTo: containerView.widthAnchor),
             animationView.heightAnchor.constraint(equalTo: containerView.heightAnchor)
         ])
+        
+        animationView.play(fromProgress: 0, toProgress: toProgress)
         
         return containerView
     }
