@@ -21,16 +21,19 @@ class AuthManager {
         }
     }
     
-    func createUser(email: String, password: String, username: String, kakaoHashedUid: String = "", appleHashedUid: String = "") async {
+    func createUser(email: String, password: String, username: String, appleHashedUid: String = "", googleHashedUid: String = "", kakaoHashedUid: String = "") async {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             let userId = result.user.uid
             
-            if !kakaoHashedUid.isEmpty { // 카카오 회원가입
-                await uploadUserData(userId: userId, email: email, username: username, kakaoHashedUid: kakaoHashedUid)
-                
-            } else if !appleHashedUid.isEmpty { // 애플 회원가입
+            if !appleHashedUid.isEmpty { // 애플 회원가입
                 await uploadUserData(userId: userId, email: email, username: username, appleHashedUid: appleHashedUid)
+                
+            } else if !googleHashedUid.isEmpty {
+                await uploadUserData(userId: userId, email: email, username: username, googleHashedUid: googleHashedUid)
+                
+            } else if !kakaoHashedUid.isEmpty { // 카카오 회원가입
+                await uploadUserData(userId: userId, email: email, username: username, kakaoHashedUid: kakaoHashedUid)
             }
             
         } catch {
@@ -38,17 +41,20 @@ class AuthManager {
         }
     }
     
-    private func uploadUserData(userId: String, email: String, username: String, kakaoHashedUid: String = "", appleHashedUid: String = "") async {
+    private func uploadUserData(userId: String, email: String, username: String, appleHashedUid: String = "", googleHashedUid: String = "", kakaoHashedUid: String = "") async {
         let deviceToken = FCMManager.shared.myDeviceToken ?? ""
         
         await MainActor.run {
-            if !kakaoHashedUid.isEmpty {
-                // 카카오 회원가입
-                self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, kakaoHashedUid: kakaoHashedUid, notificationType: [.empty])
-                
-            } else if !appleHashedUid.isEmpty {
+            if !appleHashedUid.isEmpty {
                 // 애플 회원가입
                 self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, appleHashedUid: appleHashedUid, notificationType: [.empty])
+                
+            } else if !googleHashedUid.isEmpty {
+                self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, googleHashedUid: googleHashedUid, notificationType: [.empty])
+                
+            } else if !kakaoHashedUid.isEmpty {
+                // 카카오 회원가입
+                self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, kakaoHashedUid: kakaoHashedUid, notificationType: [.empty])
             }
         }
         

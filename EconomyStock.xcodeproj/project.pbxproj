@@ -30,6 +30,8 @@
 		CA6C54D42CB160A1008CF887 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CA6C54D32CB160A1008CF887 /* GoogleSignIn */; };
 		CA6C54D62CB160A1008CF887 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CA6C54D52CB160A1008CF887 /* GoogleSignInSwift */; };
 		CA77DFCD2CB24D0900992829 /* Loading.json in Resources */ = {isa = PBXBuildFile; fileRef = CA77DFCC2CB24D0900992829 /* Loading.json */; };
+		CA77DFCF2CB256DD00992829 /* LoginViewModel+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77DFCE2CB256DD00992829 /* LoginViewModel+Google.swift */; };
+		CA77DFD22CB26D0100992829 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77DFD12CB26D0100992829 /* CustomError.swift */; };
 		CA9BB9CB2CABA59A00886A1A /* ESBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9C22CABA59A00886A1A /* ESBackgroundView.swift */; };
 		CA9BB9CC2CABA59A00886A1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9C82CABA59A00886A1A /* ContentView.swift */; };
 		CA9BB9CD2CABA59A00886A1A /* EconomyStockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9C92CABA59A00886A1A /* EconomyStockApp.swift */; };
@@ -77,6 +79,8 @@
 		CA662BD12CAD79F0009E8D5F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		CA662BD32CAD7B86009E8D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CA77DFCC2CB24D0900992829 /* Loading.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Loading.json; sourceTree = "<group>"; };
+		CA77DFCE2CB256DD00992829 /* LoginViewModel+Google.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Google.swift"; sourceTree = "<group>"; };
+		CA77DFD12CB26D0100992829 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		CA83477C2CAAE28500BA1E4A /* EconomyStock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EconomyStock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA9BB9C22CABA59A00886A1A /* ESBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESBackgroundView.swift; sourceTree = "<group>"; };
 		CA9BB9C42CABA59A00886A1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -240,6 +244,14 @@
 			path = Json;
 			sourceTree = "<group>";
 		};
+		CA77DFD02CB26CF100992829 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				CA77DFD12CB26D0100992829 /* CustomError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		CA8347732CAAE28500BA1E4A = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +358,7 @@
 		CA9BB9E52CABAF1B00886A1A /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				CA77DFD02CB26CF100992829 /* Error */,
 				CA9BB9E82CABB12700886A1A /* NavigationStackView.swift */,
 				CAEE164E2CAD096C00210BD0 /* NotificationType.swift */,
 				CA17FC742CB005DB0050250B /* MainTab.swift */,
@@ -421,8 +434,9 @@
 			isa = PBXGroup;
 			children = (
 				CAEE165F2CAD0D4D00210BD0 /* LoginViewModel.swift */,
-				CAEE16622CAD0D7200210BD0 /* LoginViewModel+Kakao.swift */,
 				CAEE16642CAD0D7800210BD0 /* LoginViewModel+Apple.swift */,
+				CA77DFCE2CB256DD00992829 /* LoginViewModel+Google.swift */,
+				CAEE16622CAD0D7200210BD0 /* LoginViewModel+Kakao.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -536,10 +550,12 @@
 				CA17FC832CB00AD50050250B /* ProfileView.swift in Sources */,
 				CA9BB9CC2CABA59A00886A1A /* ContentView.swift in Sources */,
 				CA9BB9EB2CABB18700886A1A /* TestView.swift in Sources */,
+				CA77DFCF2CB256DD00992829 /* LoginViewModel+Google.swift in Sources */,
 				CA17FC7F2CB00ABE0050250B /* StudyView.swift in Sources */,
 				CAEE16522CAD0C3F00210BD0 /* AuthManager+SocialLogin.swift in Sources */,
 				CAEE16582CAD0CA700210BD0 /* LoginView.swift in Sources */,
 				CA17FC7D2CB00AB90050250B /* HomeView.swift in Sources */,
+				CA77DFD22CB26D0100992829 /* CustomError.swift in Sources */,
 				CA17FC812CB00AC60050250B /* NewsView.swift in Sources */,
 				CA9BB9CD2CABA59A00886A1A /* EconomyStockApp.swift in Sources */,
 				CA2E936E2CAFB0B300A883F1 /* NotificationManager+Badge.swift in Sources */,

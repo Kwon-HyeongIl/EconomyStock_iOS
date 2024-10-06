@@ -10,6 +10,7 @@ import FirebaseCore
 import KakaoSDKCommon
 import KakaoSDKAuth
 import FirebaseMessaging
+import GoogleSignIn
 
 @main
 struct EconomyStockApp: App {
@@ -32,10 +33,13 @@ struct EconomyStockApp: App {
                         navigationRouter.destinationNavigate(to: view)
                     }
                     .onOpenURL { url in
-                        // Kakao 로그인 URL 처리
+                        // 카카오 로그인 URL 처리
                         if (AuthApi.isKakaoTalkLoginUrl(url)) {
                             _ = AuthController.handleOpenUrl(url: url)
                         }
+                        
+                        // 구글 로그인 URL 처리
+                        GIDSignIn.sharedInstance.handle(url)
                     }
                     .preferredColorScheme(.light)
             }

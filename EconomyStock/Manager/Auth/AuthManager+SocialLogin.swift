@@ -9,32 +9,41 @@ import Foundation
 import FirebaseFirestore
 
 extension AuthManager {
-    func getAuthEmailWithKakaoUid(uid: String) async -> String? {
-        do {
-            let user = try await Firestore.firestore().collection("User").whereField("kakaoHashedUid", isEqualTo: uid).getDocuments().documents
-            if user.isEmpty { return nil }
-            let findUser = try user.first?.data(as: User.self)
-            
-            return findUser?.authEmail
-            
-        } catch {
-            print(error.localizedDescription)
-            return nil
-        }
+    func getAuthEmailWithAppleUid(uid: String) async throws -> String? {
+        let userDocuments = try await Firestore.firestore()
+            .collection("User").whereField("appleHashedUid", isEqualTo: uid)
+            .getDocuments().documents
+        
+        if userDocuments.count == 0 { return nil }
+        if userDocuments.count > 1 { throw CustomError.multipleSameUser }
+        
+        return try userDocuments.first?.data(as: User.self).authEmail
+        
     }
     
-    func getAuthEmailWithAppleUid(uid: String) async -> String? {
-        do {
-            let user = try await Firestore.firestore().collection("User").whereField("appleHashedUid", isEqualTo: uid).getDocuments().documents
-            if user.isEmpty { return nil }
-            let findUser = try user.first?.data(as: User.self)
-            
-            return findUser?.authEmail
-            
-        } catch {
-            print(error.localizedDescription)
-            return nil
-        }
+    func getAuthEmailWithGoogleUid(uid: String) async throws -> String? {
+        let userDocuments = try await Firestore.firestore()
+            .collection("User").whereField("googleHashedUid", isEqualTo: uid)
+            .getDocuments().documents
+        
+        if userDocuments.count == 0 { return nil }
+        if userDocuments.count > 1 { throw CustomError.multipleSameUser }
+        
+        return try userDocuments.first?.data(as: User.self).authEmail
     }
+    
+    func getAuthEmailWithKakaoUid(uid: String) async throws -> String? {
+        let userDocuments = try await Firestore.firestore().collection("User")
+            .whereField("kakaoHashedUid", isEqualTo: uid)
+            .getDocuments().documents
+        
+        if userDocuments.count == 0 { return nil }
+        if userDocuments.count > 1 { throw CustomError.multipleSameUser }
+        
+        return try userDocuments.first?.data(as: User.self).authEmail
+        
+    }
+    
+    
 }
 

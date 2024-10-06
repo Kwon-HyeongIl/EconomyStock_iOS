@@ -13,15 +13,21 @@ struct LoginView: View {
     var body: some View {
         VStack {
             Button {
-                viewModel.kakaoAuthSignIn()
+                viewModel.loginWithKakao()
             } label: {
                 Text("카카오 로그인")
             }
             
             Button {
-                viewModel.appleAuthSignin()
+                viewModel.loginWithApple()
             } label: {
                 Text("애플 로그인")
+            }
+            
+            Button {
+                viewModel.loginWithGoogle()
+            } label: {
+                Text("구글 로그인")
             }
         }
     }

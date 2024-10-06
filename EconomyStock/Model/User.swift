@@ -14,9 +14,11 @@ struct User: Codable, Identifiable, Hashable, Equatable {
     let username: String
     
     var authEmail: String
-    var kakaoHashedUid: String?
+    
     var appleHashedUid: String?
-
+    var googleHashedUid: String?
+    var kakaoHashedUid: String?
+    
     var contactEmail: String?
     var profileImageUrl: String?
     
