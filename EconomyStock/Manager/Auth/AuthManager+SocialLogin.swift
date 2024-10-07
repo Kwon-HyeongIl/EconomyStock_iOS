@@ -41,9 +41,6 @@ extension AuthManager {
         if userDocuments.count > 1 { throw CustomError.multipleSameUser }
         
         return try userDocuments.first?.data(as: User.self).authEmail
-        
     }
-    
-    
 }
 

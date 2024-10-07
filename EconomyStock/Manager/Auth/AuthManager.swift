@@ -26,13 +26,16 @@ class AuthManager {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             let userId = result.user.uid
             
-            if !appleHashedUid.isEmpty { // 애플 회원가입
+            if !appleHashedUid.isEmpty {
+                // 애플 회원가입
                 await uploadUserData(userId: userId, email: email, username: username, appleHashedUid: appleHashedUid)
                 
             } else if !googleHashedUid.isEmpty {
+                // 구글 회원가입
                 await uploadUserData(userId: userId, email: email, username: username, googleHashedUid: googleHashedUid)
                 
-            } else if !kakaoHashedUid.isEmpty { // 카카오 회원가입
+            } else if !kakaoHashedUid.isEmpty {
+                // 카카오 회원가입
                 await uploadUserData(userId: userId, email: email, username: username, kakaoHashedUid: kakaoHashedUid)
             }
             
@@ -50,6 +53,7 @@ class AuthManager {
                 self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, appleHashedUid: appleHashedUid, notificationType: [.empty])
                 
             } else if !googleHashedUid.isEmpty {
+                // 구글 회원가입
                 self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, googleHashedUid: googleHashedUid, notificationType: [.empty])
                 
             } else if !kakaoHashedUid.isEmpty {
