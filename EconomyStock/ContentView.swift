@@ -26,7 +26,7 @@ struct ContentView: View {
             }
         }
         .task {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                 isSplashVisible = false
             }
         }

@@ -26,6 +26,7 @@ struct MainCustomTabView: View {
                         Image(systemName: mainTabCapsule.selectedTab == tab ? fillImage : tab.rawValue)
                             .scaleEffect(mainTabCapsule.selectedTab == tab ? 1.25 : 1.0)
                             .foregroundStyle(mainTabCapsule.selectedTab == tab ? Color.ESTitle : .black)
+                            .shadow(color: mainTabCapsule.selectedTab == tab ? .ESTitle.opacity(0.8) : .clear, radius: 10, x: 0, y: 0)
                             .font(.system(size: 19))
                             .padding(.top, 10)
                     }

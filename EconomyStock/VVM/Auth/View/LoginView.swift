@@ -28,13 +28,13 @@ struct LoginView: View {
                         Image("Apple_Logo")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 20)
+                            .frame(width: 18)
                             .padding(.trailing, 11)
                         
                         Text("Apple로 계속하기")
                             .foregroundStyle(.white)
-                            .fontWeight(.bold)
-                            .font(.system(size: 18))
+                            .fontWeight(.medium)
+                            .font(.system(size: 16))
                             .padding(.trailing, 6)
                     }
                 }
@@ -55,14 +55,14 @@ struct LoginView: View {
                         Image("Google_Logo")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 30)
+                            .frame(width: 28)
                             .padding(.trailing, 5)
                         
                         Text("Google로 계속하기")
                             .foregroundStyle(.black)
-                            .fontWeight(.bold)
+                            .fontWeight(.medium)
                             .opacity(0.6)
-                            .font(.system(size: 18))
+                            .font(.system(size: 16))
                     }
                 }
                 .padding(.bottom, 10)
@@ -82,14 +82,14 @@ struct LoginView: View {
                         Image("Kakao_Logo")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 28)
-                            .padding(.trailing, 6)
+                            .frame(width: 23)
+                            .padding(.trailing, 8)
                         
                         Text("Kakao로 계속하기")
                             .foregroundStyle(.black)
                             .fontWeight(.medium)
-                            .font(.system(size: 18))
-                            .padding(.trailing, 6)
+                            .font(.system(size: 16))
+                            .padding(.trailing, 5)
                     }
                 }
                 .padding(.bottom, 100)
