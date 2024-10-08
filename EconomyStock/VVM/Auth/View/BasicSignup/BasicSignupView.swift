@@ -59,11 +59,13 @@ struct BasicSignupView: View {
                             Spacer()
                         }
                         .padding(.bottom, 5)
+                        
                         TextField("닉네임", text: $viewModel.username)
                             .font(.system(size: 20))
                             .padding(.leading, 20)
                             .padding(.bottom, 10)
                             .focused($focus, equals: .username)
+                        
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(focus == .username ? Color.ESTitle : .gray)
                             .opacity(focus == .username ? 0.8 : 0.5)
@@ -86,11 +88,13 @@ struct BasicSignupView: View {
                             Spacer()
                         }
                         .padding(.bottom, 5)
+                        
                         SecureField("비밀번호 (6자리 이상)", text: $viewModel.password)
                             .font(.system(size: 20))
                             .padding(.leading, 20)
                             .padding(.bottom, 10)
                             .focused($focus, equals: .password)
+                        
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(focus == .password ? Color.ESTitle : .gray)
                             .opacity(focus == .password ? 0.8 : 0.5)
@@ -112,11 +116,13 @@ struct BasicSignupView: View {
                         Spacer()
                     }
                     .padding(.bottom, 5)
+                    
                     TextField("이메일", text: $viewModel.email)
                         .font(.system(size: 20))
                         .padding(.leading, 20)
                         .padding(.bottom, 10)
                         .focused($focus, equals: .email)
+                    
                     RoundedRectangle(cornerRadius: 10)
                         .foregroundStyle(focus == .email ? Color.ESTitle : .gray)
                         .opacity(focus == .email ? 0.8 : 0.5)
@@ -136,13 +142,24 @@ struct BasicSignupView: View {
                             // 첫번째 다음
                             if !viewModel.email.isEmpty {
                                 if viewModel.checkEmailFormValidation() {
+                                    withAnimation(.smooth(duration: 0.2)) {
+                                        loadingBarState = true
+                                    }
+                                    
                                     if await viewModel.checkEmailDuplication() {
-                                        withAnimation(.easeOut(duration: 1.0)) {
+                                        withAnimation(.smooth(duration: 0.2)) {
+                                            loadingBarState = false
+                                        }
+                                        
+                                        withAnimation(.easeOut(duration: 0.5)) {
                                             isPasswordTextFieldShowing = true
                                         }
                                         focus = .password
                                         
                                     } else {
+                                        withAnimation(.smooth(duration: 0.1)) {
+                                            loadingBarState = false
+                                        }
                                         isEmailDulicatedAlertShowing = true
                                     }
                                     
@@ -157,7 +174,7 @@ struct BasicSignupView: View {
                         } else if !isUsernameTextFieldShowing {
                             // 두번째 다음
                             if viewModel.password.count >= 6 {
-                                withAnimation(.easeOut(duration: 1.0)) {
+                                withAnimation(.easeOut(duration: 0.5)) {
                                     isUsernameTextFieldShowing = true
                                 }
                                 focus = .username
