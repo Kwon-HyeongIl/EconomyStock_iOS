@@ -139,8 +139,9 @@ struct BasicSignupView: View {
                                     if await viewModel.checkEmailDuplication() {
                                         withAnimation(.easeOut(duration: 1.0)) {
                                             isPasswordTextFieldShowing = true
-                                            focus = .password
                                         }
+                                        focus = .password
+                                        
                                     } else {
                                         isEmailDulicatedAlertShowing = true
                                     }
@@ -156,10 +157,10 @@ struct BasicSignupView: View {
                         } else if !isUsernameTextFieldShowing {
                             // 두번째 다음
                             if viewModel.password.count >= 6 {
-                                withAnimation(.easeOut(duration: 1.5)) {
+                                withAnimation(.easeOut(duration: 1.0)) {
                                     isUsernameTextFieldShowing = true
-                                    focus = .username
                                 }
+                                focus = .username
                                 
                             } else {
                                 isEmptyAlertShowing = true
@@ -227,7 +228,6 @@ struct BasicSignupView: View {
                     .padding(.bottom, 60)
             }
         }
-        .toolbarBackground(Color.ESTitle, for: .navigationBar)
         .navigationBarBackButtonHidden()
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
