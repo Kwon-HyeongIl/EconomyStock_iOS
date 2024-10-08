@@ -28,25 +28,6 @@ struct BasicSignupView: View {
         ZStack {
             VStack {
                 if isUsernameTextFieldShowing {
-                    Text("닉네임을 입력해주세요")
-                        .font(.system(size: 23))
-                        .fontWeight(.semibold)
-                        .padding(.bottom, 30)
-                    
-                } else if isPasswordTextFieldShowing {
-                    Text("비밀번호를 입력해주세요")
-                        .font(.system(size: 23))
-                        .fontWeight(.semibold)
-                        .padding(.bottom, 30)
-                    
-                } else {
-                    Text("등록할 이메일을 입력해주세요")
-                        .font(.system(size: 23))
-                        .fontWeight(.semibold)
-                        .padding(.bottom, 30)
-                }
-                
-                if isUsernameTextFieldShowing {
                     VStack(spacing: 0) {
                         HStack {
                             Text("닉네임")
@@ -72,6 +53,7 @@ struct BasicSignupView: View {
                             .padding(.horizontal, 20)
                             .padding(.bottom, 30)
                     }
+                    .padding(.top, 20)
                 }
                 
                 if isPasswordTextFieldShowing {
@@ -100,6 +82,7 @@ struct BasicSignupView: View {
                             .padding(.horizontal, 20)
                             .padding(.bottom, 30)
                     }
+                    .padding(.top, isUsernameTextFieldShowing ? 0 : 20)
                 }
                 
                 VStack(spacing: 0) {
@@ -126,6 +109,7 @@ struct BasicSignupView: View {
                         .frame(height: 2)
                         .padding(.horizontal, 20)
                 }
+                .padding(.top, isPasswordTextFieldShowing ? 0 : 20)
                 
                 Spacer()
             }
@@ -267,11 +251,11 @@ struct BasicSignupView: View {
         .overlay {
             if loadingBarState {
                 LottieView(fileName: "Loading", loopMode: .loop)
-                    .scaleEffect(0.6)
+                    .scaleEffect(0.5)
                     .padding(.bottom, 60)
             }
         }
-        .modifier(NavigationBackModifier())
+        .modifier(NavigationBackTitleModifier(navigationTitle: isUsernameTextFieldShowing ? "닉네임을 입력해주세요" : (isPasswordTextFieldShowing ? "비밀번호를 입력해주세요" : "이메일을 입력해주세요")))
     }
 }
 
