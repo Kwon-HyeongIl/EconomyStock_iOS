@@ -15,17 +15,17 @@ struct LoginView: View {
             Image("ES_Chracter")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 900)
-                .opacity(0.2)
+                .frame(width: 600)
+                .opacity(0.1)
                 .ignoresSafeArea()
             
             VStack {
-                Image("ES_TitleLogo")
+                Image("ES_TitleLogo_Blue")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200)
                     .shadow(color: .black.opacity(0.3), radius: 10, x: 5, y: 5)
-                    .padding(.top, 140)
+                    .padding(.top, 80)
                 
                 Spacer()
                 
@@ -36,7 +36,7 @@ struct LoginView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .frame(height: 50)
                             .foregroundStyle(.black)
-                            .padding(.horizontal, 290)
+                            .padding(.horizontal, 150)
                             .shadow(color: .black.opacity(0.2), radius: 10, x: 5, y: 5)
                         
                         HStack {
@@ -63,7 +63,7 @@ struct LoginView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .frame(height: 50)
                             .foregroundStyle(.white)
-                            .padding(.horizontal, 290)
+                            .padding(.horizontal, 150)
                             .shadow(color: .black.opacity(0.2), radius: 10, x: 5, y: 5)
                         
                         HStack {
@@ -90,7 +90,7 @@ struct LoginView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .frame(height: 50)
                             .foregroundStyle(Color(red: 254/255, green: 229/255, blue: 0/255))
-                            .padding(.horizontal, 290)
+                            .padding(.horizontal, 150)
                             .shadow(color: .black.opacity(0.2), radius: 10, x: 5, y: 5)
                         
                         HStack {

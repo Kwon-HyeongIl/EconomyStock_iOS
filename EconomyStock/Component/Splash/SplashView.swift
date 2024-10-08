@@ -14,11 +14,10 @@ struct SplashView: View {
             Color.white
             
             VStack {
-                Image("ES_Chracter")
+                Image("ES_TitleLogo_Blue")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 170)
-                    .padding(.leading)
+                    .frame(width: 200)
             }
             .padding(.bottom, 30)
         }
