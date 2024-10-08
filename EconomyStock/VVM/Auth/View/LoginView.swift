@@ -110,6 +110,13 @@ struct LoginView: View {
                     .padding(.bottom, 100)
                 }
             }
+            .overlay {
+                if viewModel.loadingBarState {
+                    LottieView(fileName: "Loading", loopMode: .loop)
+                        .scaleEffect(0.5)
+                        .padding(.bottom, 60)
+                }
+            }
         }
     }
 }
