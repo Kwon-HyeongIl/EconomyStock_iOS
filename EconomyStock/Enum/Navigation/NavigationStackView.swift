@@ -8,5 +8,8 @@
 import Foundation
 
 enum NavigationStackView: Hashable {
+    case BasicLoginView
     case BasicSignupView
+    case FindPasswordView
+    case AccountSupportView
 }

@@ -113,10 +113,11 @@ struct LoginView: View {
                 }
                 
                 Button {
-                    navigationRouter.navigate(.BasicSignupView)
+                    navigationRouter.navigate(.BasicLoginView)
                 } label: {
                     Text("또는 다른 방식으로 로그인")
                         .font(.system(size: 12))
+                        .fontWeight(.semibold)
                         .foregroundStyle(.gray)
                         .padding(.bottom, 50)
                 }
@@ -126,7 +127,7 @@ struct LoginView: View {
         .overlay {
             if viewModel.loadingBarState {
                 LottieView(fileName: "Loading", loopMode: .loop)
-                    .scaleEffect(0.5)
+                    .scaleEffect(0.6)
                     .padding(.bottom, 60)
             }
         }

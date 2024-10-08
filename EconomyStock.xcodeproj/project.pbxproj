@@ -26,9 +26,8 @@
 		CA3BBAA82CB50063007CA152 /* BasicSignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAA72CB50063007CA152 /* BasicSignupView.swift */; };
 		CA3BBAAE2CB50144007CA152 /* BasicSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAAD2CB50144007CA152 /* BasicSignupViewModel.swift */; };
 		CA3BBAB12CB5035E007CA152 /* LongButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */; };
-		CA3BBAB42CB50414007CA152 /* BackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB32CB50414007CA152 /* BackModifier.swift */; };
-		CA3BBAB62CB50441007CA152 /* BackTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB52CB50441007CA152 /* BackTitleModifier.swift */; };
-		CA3BBABA2CB5055B007CA152 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB92CB5055B007CA152 /* TextFieldModifier.swift */; };
+		CA3BBAB42CB50414007CA152 /* NavigationBackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */; };
+		CA3BBAB62CB50441007CA152 /* NavigationBackTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */; };
 		CA662BCA2CAD72E6009E8D5F /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BC92CAD72E6009E8D5F /* KakaoSDKAuth */; };
 		CA662BCC2CAD72E6009E8D5F /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BCB2CAD72E6009E8D5F /* KakaoSDKCommon */; };
 		CA662BCE2CAD72E6009E8D5F /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BCD2CAD72E6009E8D5F /* KakaoSDKUser */; };
@@ -52,6 +51,13 @@
 		CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */; };
 		CA9BB9E92CABB12700886A1A /* NavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9E82CABB12700886A1A /* NavigationStackView.swift */; };
 		CAEDDAB92CB53B3F0046162D /* BasicSignupFocusField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDAB82CB53B3E0046162D /* BasicSignupFocusField.swift */; };
+		CAEDDABD2CB56C330046162D /* BasicLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDABC2CB56C330046162D /* BasicLoginView.swift */; };
+		CAEDDABF2CB56C4D0046162D /* BasicLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDABE2CB56C4D0046162D /* BasicLoginViewModel.swift */; };
+		CAEDDAC22CB570710046162D /* BasicLoginFocusField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDAC12CB570710046162D /* BasicLoginFocusField.swift */; };
+		CAEDDAC62CB5757E0046162D /* FindPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDAC52CB5757E0046162D /* FindPasswordView.swift */; };
+		CAEDDAC82CB575880046162D /* AccountSupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDAC72CB575880046162D /* AccountSupportView.swift */; };
+		CAEDDACC2CB575BD0046162D /* FindPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDACB2CB575BD0046162D /* FindPasswordViewModel.swift */; };
+		CAEDDACE2CB575C60046162D /* AccountSupportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDACD2CB575C60046162D /* AccountSupportViewModel.swift */; };
 		CAEE16482CAD07B900210BD0 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE16472CAD07B900210BD0 /* AuthManager.swift */; };
 		CAEE164B2CAD082500210BD0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE164A2CAD082500210BD0 /* User.swift */; };
 		CAEE164D2CAD08E600210BD0 /* FCMManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE164C2CAD08E600210BD0 /* FCMManager.swift */; };
@@ -85,9 +91,8 @@
 		CA3BBAA72CB50063007CA152 /* BasicSignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSignupView.swift; sourceTree = "<group>"; };
 		CA3BBAAD2CB50144007CA152 /* BasicSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSignupViewModel.swift; sourceTree = "<group>"; };
 		CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButtonModifier.swift; sourceTree = "<group>"; };
-		CA3BBAB32CB50414007CA152 /* BackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackModifier.swift; sourceTree = "<group>"; };
-		CA3BBAB52CB50441007CA152 /* BackTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackTitleModifier.swift; sourceTree = "<group>"; };
-		CA3BBAB92CB5055B007CA152 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
+		CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackModifier.swift; sourceTree = "<group>"; };
+		CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackTitleModifier.swift; sourceTree = "<group>"; };
 		CA662BD12CAD79F0009E8D5F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		CA662BD32CAD7B86009E8D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CA77DFCC2CB24D0900992829 /* Loading.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Loading.json; sourceTree = "<group>"; };
@@ -105,6 +110,13 @@
 		CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		CA9BB9E82CABB12700886A1A /* NavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackView.swift; sourceTree = "<group>"; };
 		CAEDDAB82CB53B3E0046162D /* BasicSignupFocusField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSignupFocusField.swift; sourceTree = "<group>"; };
+		CAEDDABC2CB56C330046162D /* BasicLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLoginView.swift; sourceTree = "<group>"; };
+		CAEDDABE2CB56C4D0046162D /* BasicLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLoginViewModel.swift; sourceTree = "<group>"; };
+		CAEDDAC12CB570710046162D /* BasicLoginFocusField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLoginFocusField.swift; sourceTree = "<group>"; };
+		CAEDDAC52CB5757E0046162D /* FindPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordView.swift; sourceTree = "<group>"; };
+		CAEDDAC72CB575880046162D /* AccountSupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSupportView.swift; sourceTree = "<group>"; };
+		CAEDDACB2CB575BD0046162D /* FindPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordViewModel.swift; sourceTree = "<group>"; };
+		CAEDDACD2CB575C60046162D /* AccountSupportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSupportViewModel.swift; sourceTree = "<group>"; };
 		CAEE16472CAD07B900210BD0 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		CAEE164A2CAD082500210BD0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CAEE164C2CAD08E600210BD0 /* FCMManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMManager.swift; sourceTree = "<group>"; };
@@ -267,7 +279,6 @@
 		CA3BBAAF2CB502AC007CA152 /* Modifier */ = {
 			isa = PBXGroup;
 			children = (
-				CA3BBAB82CB5054F007CA152 /* TextField */,
 				CA3BBAB22CB50403007CA152 /* Navigation */,
 				CA3BBAB72CB50497007CA152 /* Button */,
 			);
@@ -277,8 +288,8 @@
 		CA3BBAB22CB50403007CA152 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				CA3BBAB32CB50414007CA152 /* BackModifier.swift */,
-				CA3BBAB52CB50441007CA152 /* BackTitleModifier.swift */,
+				CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */,
+				CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -289,14 +300,6 @@
 				CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */,
 			);
 			path = Button;
-			sourceTree = "<group>";
-		};
-		CA3BBAB82CB5054F007CA152 /* TextField */ = {
-			isa = PBXGroup;
-			children = (
-				CA3BBAB92CB5055B007CA152 /* TextFieldModifier.swift */,
-			);
-			path = TextField;
 			sourceTree = "<group>";
 		};
 		CA77DFCB2CB24D0100992829 /* Json */ = {
@@ -422,12 +425,99 @@
 			isa = PBXGroup;
 			children = (
 				CA77DFD02CB26CF100992829 /* Error */,
-				CA9BB9E82CABB12700886A1A /* NavigationStackView.swift */,
-				CAEE164E2CAD096C00210BD0 /* NotificationType.swift */,
-				CA17FC742CB005DB0050250B /* MainTab.swift */,
-				CAEDDAB82CB53B3E0046162D /* BasicSignupFocusField.swift */,
+				CAEDDACF2CB575DB0046162D /* Navigation */,
+				CAEDDAD02CB575E20046162D /* Notification */,
+				CAEDDAD12CB575EA0046162D /* Tab */,
+				CAEDDAC02CB570610046162D /* FocusField */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		CAEDDABA2CB56C020046162D /* BasicLogin */ = {
+			isa = PBXGroup;
+			children = (
+				CAEDDABC2CB56C330046162D /* BasicLoginView.swift */,
+				CA3BBAA92CB50083007CA152 /* BasicSignup */,
+				CAEDDAC32CB5751E0046162D /* FindPasswordView */,
+				CAEDDAC42CB5752C0046162D /* AccountSupportView */,
+			);
+			path = BasicLogin;
+			sourceTree = "<group>";
+		};
+		CAEDDABB2CB56C1A0046162D /* BasicLogin */ = {
+			isa = PBXGroup;
+			children = (
+				CAEDDABE2CB56C4D0046162D /* BasicLoginViewModel.swift */,
+				CA3BBAAA2CB500AC007CA152 /* BasicSignup */,
+				CAEDDAC92CB5758F0046162D /* FindPasswordView */,
+				CAEDDACA2CB575A90046162D /* AccountSupportView */,
+			);
+			path = BasicLogin;
+			sourceTree = "<group>";
+		};
+		CAEDDAC02CB570610046162D /* FocusField */ = {
+			isa = PBXGroup;
+			children = (
+				CAEDDAB82CB53B3E0046162D /* BasicSignupFocusField.swift */,
+				CAEDDAC12CB570710046162D /* BasicLoginFocusField.swift */,
+			);
+			path = FocusField;
+			sourceTree = "<group>";
+		};
+		CAEDDAC32CB5751E0046162D /* FindPasswordView */ = {
+			isa = PBXGroup;
+			children = (
+				CAEDDAC52CB5757E0046162D /* FindPasswordView.swift */,
+			);
+			path = FindPasswordView;
+			sourceTree = "<group>";
+		};
+		CAEDDAC42CB5752C0046162D /* AccountSupportView */ = {
+			isa = PBXGroup;
+			children = (
+				CAEDDAC72CB575880046162D /* AccountSupportView.swift */,
+			);
+			path = AccountSupportView;
+			sourceTree = "<group>";
+		};
+		CAEDDAC92CB5758F0046162D /* FindPasswordView */ = {
+			isa = PBXGroup;
+			children = (
+				CAEDDACB2CB575BD0046162D /* FindPasswordViewModel.swift */,
+			);
+			path = FindPasswordView;
+			sourceTree = "<group>";
+		};
+		CAEDDACA2CB575A90046162D /* AccountSupportView */ = {
+			isa = PBXGroup;
+			children = (
+				CAEDDACD2CB575C60046162D /* AccountSupportViewModel.swift */,
+			);
+			path = AccountSupportView;
+			sourceTree = "<group>";
+		};
+		CAEDDACF2CB575DB0046162D /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				CA9BB9E82CABB12700886A1A /* NavigationStackView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		CAEDDAD02CB575E20046162D /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				CAEE164E2CAD096C00210BD0 /* NotificationType.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		CAEDDAD12CB575EA0046162D /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				CA17FC742CB005DB0050250B /* MainTab.swift */,
+			);
+			path = Tab;
 			sourceTree = "<group>";
 		};
 		CAEE16492CAD081A00210BD0 /* Model */ = {
@@ -490,7 +580,7 @@
 			isa = PBXGroup;
 			children = (
 				CAEE16572CAD0CA700210BD0 /* LoginView.swift */,
-				CA3BBAA92CB50083007CA152 /* BasicSignup */,
+				CAEDDABA2CB56C020046162D /* BasicLogin */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -502,7 +592,7 @@
 				CAEE16642CAD0D7800210BD0 /* LoginViewModel+Apple.swift */,
 				CA77DFCE2CB256DD00992829 /* LoginViewModel+Google.swift */,
 				CAEE16622CAD0D7200210BD0 /* LoginViewModel+Kakao.swift */,
-				CA3BBAAA2CB500AC007CA152 /* BasicSignup */,
+				CAEDDABB2CB56C1A0046162D /* BasicLogin */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -602,14 +692,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA3BBAB62CB50441007CA152 /* BackTitleModifier.swift in Sources */,
+				CA3BBAB62CB50441007CA152 /* NavigationBackTitleModifier.swift in Sources */,
 				CA9BB9CB2CABA59A00886A1A /* ESBackgroundView.swift in Sources */,
 				CAEE16482CAD07B900210BD0 /* AuthManager.swift in Sources */,
 				CAEE165A2CAD0CBA00210BD0 /* AuthManager+Hash.swift in Sources */,
 				CAEE16652CAD0D7800210BD0 /* LoginViewModel+Apple.swift in Sources */,
 				CA17FC752CB005DB0050250B /* MainTab.swift in Sources */,
+				CAEDDACE2CB575C60046162D /* AccountSupportViewModel.swift in Sources */,
 				CAEE164D2CAD08E600210BD0 /* FCMManager.swift in Sources */,
 				CAEE16602CAD0D4D00210BD0 /* LoginViewModel.swift in Sources */,
+				CAEDDAC82CB575880046162D /* AccountSupportView.swift in Sources */,
+				CAEDDAC22CB570710046162D /* BasicLoginFocusField.swift in Sources */,
 				CAEE16632CAD0D7200210BD0 /* LoginViewModel+Kakao.swift in Sources */,
 				CA17FC722CB005A10050250B /* MainTabCapsule.swift in Sources */,
 				CA9BB9D42CABA8C300886A1A /* SplashView.swift in Sources */,
@@ -617,25 +710,28 @@
 				CA17FC832CB00AD50050250B /* ProfileView.swift in Sources */,
 				CA9BB9CC2CABA59A00886A1A /* ContentView.swift in Sources */,
 				CA3BBAA82CB50063007CA152 /* BasicSignupView.swift in Sources */,
+				CAEDDABF2CB56C4D0046162D /* BasicLoginViewModel.swift in Sources */,
 				CA77DFCF2CB256DD00992829 /* LoginViewModel+Google.swift in Sources */,
 				CA17FC7F2CB00ABE0050250B /* StudyView.swift in Sources */,
 				CAEE16522CAD0C3F00210BD0 /* AuthManager+SocialLogin.swift in Sources */,
 				CAEE16582CAD0CA700210BD0 /* LoginView.swift in Sources */,
 				CA17FC7D2CB00AB90050250B /* HomeView.swift in Sources */,
 				CA77DFD22CB26D0100992829 /* CustomError.swift in Sources */,
+				CAEDDABD2CB56C330046162D /* BasicLoginView.swift in Sources */,
 				CA17FC812CB00AC60050250B /* NewsView.swift in Sources */,
-				CA3BBAB42CB50414007CA152 /* BackModifier.swift in Sources */,
+				CAEDDACC2CB575BD0046162D /* FindPasswordViewModel.swift in Sources */,
+				CA3BBAB42CB50414007CA152 /* NavigationBackModifier.swift in Sources */,
 				CA9BB9CD2CABA59A00886A1A /* EconomyStockApp.swift in Sources */,
 				CA3BBAB12CB5035E007CA152 /* LongButtonModifier.swift in Sources */,
 				CA2E936E2CAFB0B300A883F1 /* NotificationManager+Badge.swift in Sources */,
 				CA9BB9E92CABB12700886A1A /* NavigationStackView.swift in Sources */,
+				CAEDDAC62CB5757E0046162D /* FindPasswordView.swift in Sources */,
 				CA17FC702CB005800050250B /* MainCustomTabView.swift in Sources */,
 				CA1DDD3B2CB0E7A900C84D08 /* LottieView.swift in Sources */,
 				CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */,
 				CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */,
 				CAEE164B2CAD082500210BD0 /* User.swift in Sources */,
 				CA17FC772CB009680050250B /* TitleColor.swift in Sources */,
-				CA3BBABA2CB5055B007CA152 /* TextFieldModifier.swift in Sources */,
 				CAEDDAB92CB53B3F0046162D /* BasicSignupFocusField.swift in Sources */,
 				CAEE164F2CAD096C00210BD0 /* NotificationType.swift in Sources */,
 				CA3BBAAE2CB50144007CA152 /* BasicSignupViewModel.swift in Sources */,

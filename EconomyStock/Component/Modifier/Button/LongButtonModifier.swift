@@ -15,10 +15,10 @@ struct LongButtonModifier: ViewModifier {
             .fontWeight(.semibold)
             .foregroundStyle(.white)
             .frame(maxWidth: .infinity)
-            .frame(height: 50)
+            .frame(height: 45)
             .background(bgColor)
-            .clipShape(RoundedRectangle(cornerRadius: 20))
-            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
-            .padding(.horizontal, 3)
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+            .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+            .padding(.horizontal)
     }
 }

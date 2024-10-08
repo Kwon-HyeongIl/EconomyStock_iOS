@@ -15,8 +15,15 @@ class NavigationRouter {
     func destinationNavigate(to view: NavigationStackView) -> some View {
         switch view {
             
+        // Auth
+        case .BasicLoginView:
+            BasicLoginView()
         case .BasicSignupView:
             BasicSignupView()
+        case .FindPasswordView:
+            FindPasswordView()
+        case .AccountSupportView:
+            AccountSupportView()
         }
     }
     

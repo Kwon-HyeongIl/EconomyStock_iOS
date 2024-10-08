@@ -68,7 +68,7 @@ struct BasicSignupView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(focus == .username ? Color.ESTitle : .gray)
                             .opacity(focus == .username ? 0.8 : 0.5)
-                            .frame(height: 3)
+                            .frame(height: 2)
                             .padding(.horizontal, 20)
                             .padding(.bottom, 30)
                     }
@@ -96,7 +96,7 @@ struct BasicSignupView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(focus == .password ? Color.ESTitle : .gray)
                             .opacity(focus == .password ? 0.8 : 0.5)
-                            .frame(height: 3)
+                            .frame(height: 2)
                             .padding(.horizontal, 20)
                             .padding(.bottom, 30)
                     }
@@ -123,7 +123,7 @@ struct BasicSignupView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .foregroundStyle(focus == .email ? Color.ESTitle : .gray)
                         .opacity(focus == .email ? 0.8 : 0.5)
-                        .frame(height: 3)
+                        .frame(height: 2)
                         .padding(.horizontal, 20)
                 }
                 
@@ -160,9 +160,7 @@ struct BasicSignupView: View {
                                     isPasswordTextFieldShowing = true
                                 }
                                 
-                                withAnimation(.smooth(duration: 0.4)) {
-                                    focus = .password
-                                }
+                                focus = .password
                                 
                             } else {
                                 withAnimation(.smooth(duration: 0.1)) {
@@ -181,9 +179,7 @@ struct BasicSignupView: View {
                                 
                             }
                             
-                            withAnimation(.smooth(duration: 0.4)) {
-                                focus = .username
-                            }
+                            focus = .username
                             
                         } else {
                             alertEmptyTextField = true
@@ -218,7 +214,6 @@ struct BasicSignupView: View {
                                 }
                                 
                                 await viewModel.signup()
-                                viewModel.clearInputData()
                                 navigationRouter.popToRoot()
                             }
                             
@@ -228,7 +223,13 @@ struct BasicSignupView: View {
                     }
                 } label: {
                     Text(isUsernameTextFieldShowing ? "완료" : "다음")
-                        .modifier(LongButtonModifier(bgColor: .ESTitle))
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 50)
+                        .background(Color.ESTitle)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .padding(.horizontal, 5)
                         .padding(.bottom, 5)
                 }
                 .alert("이메일 형식 불일치", isPresented: $alertEmailFormValidation) {
@@ -261,31 +262,16 @@ struct BasicSignupView: View {
             }
         }
         .onAppear {
-            withAnimation(.smooth(duration: 0.4)) {
-                focus = .email
-            }
+            focus = .email
         }
         .overlay {
             if loadingBarState {
                 LottieView(fileName: "Loading", loopMode: .loop)
-                    .scaleEffect(0.5)
+                    .scaleEffect(0.6)
                     .padding(.bottom, 60)
             }
         }
-        .navigationBarBackButtonHidden()
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                Button {
-                    navigationRouter.back()
-                    viewModel.clearInputData()
-                } label: {
-                    Image(systemName: "chevron.left")
-                        .fontWeight(.medium)
-                        .foregroundStyle(.black)
-                }
-            }
-        }
+        .modifier(NavigationBackModifier())
     }
 }
 
