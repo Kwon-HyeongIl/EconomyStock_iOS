@@ -12,6 +12,7 @@ struct LongButtonModifier: ViewModifier {
     
     func body(content: Content) -> some View {
         content
+            .fontWeight(.semibold)
             .foregroundStyle(.white)
             .frame(maxWidth: .infinity)
             .frame(height: 50)

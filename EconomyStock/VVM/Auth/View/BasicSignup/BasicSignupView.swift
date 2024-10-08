@@ -18,9 +18,9 @@ struct BasicSignupView: View {
     @State private var emailTextFieldDown = false
     @State private var passwordTextFieldDown = false
     
-    @State private var isEmptyAlertShowing = false
-    @State private var isEmailFormValidatedAlertShowing = false
-    @State private var isEmailDulicatedAlertShowing = false
+    @State private var alertEmptyTextField = false
+    @State private var alertEmailFormValidation = false
+    @State private var alertEmailDulication = false
     
     @State private var loadingBarState = false
     
@@ -28,19 +28,19 @@ struct BasicSignupView: View {
         ZStack {
             VStack {
                 if isUsernameTextFieldShowing {
-                    Text("닉네임을 입력해주세요.")
+                    Text("닉네임을 입력해주세요")
                         .font(.system(size: 23))
                         .fontWeight(.semibold)
                         .padding(.bottom, 30)
                     
                 } else if isPasswordTextFieldShowing {
-                    Text("비밀번호를 입력해주세요.")
+                    Text("비밀번호를 입력해주세요")
                         .font(.system(size: 23))
                         .fontWeight(.semibold)
                         .padding(.bottom, 30)
                     
                 } else {
-                    Text("등록할 이메일을 입력해주세요.")
+                    Text("등록할 이메일을 입력해주세요")
                         .font(.system(size: 23))
                         .fontWeight(.semibold)
                         .padding(.bottom, 30)
@@ -54,7 +54,6 @@ struct BasicSignupView: View {
                                 .fontWeight(.medium)
                                 .foregroundStyle(focus == .username ? Color.ESTitle : .gray)
                                 .padding(.leading, 20)
-                                .padding(.bottom, 5)
                             
                             Spacer()
                         }
@@ -83,7 +82,6 @@ struct BasicSignupView: View {
                                 .fontWeight(.medium)
                                 .foregroundStyle(focus == .password ? Color.ESTitle : .gray)
                                 .padding(.leading, 20)
-                                .padding(.bottom, 5)
                             
                             Spacer()
                         }
@@ -111,7 +109,6 @@ struct BasicSignupView: View {
                             .fontWeight(.medium)
                             .foregroundStyle(focus == .email ? Color.ESTitle : .gray)
                             .padding(.leading, 20)
-                            .padding(.bottom, 5)
                         
                         Spacer()
                     }
@@ -137,76 +134,104 @@ struct BasicSignupView: View {
                 Spacer()
                 
                 Button {
-                    Task {
-                        if !isPasswordTextFieldShowing {
-                            // 첫번째 다음
-                            if !viewModel.email.isEmpty {
-                                if viewModel.checkEmailFormValidation() {
-                                    withAnimation(.smooth(duration: 0.2)) {
-                                        loadingBarState = true
-                                    }
-                                    
-                                    if await viewModel.checkEmailDuplication() {
-                                        withAnimation(.smooth(duration: 0.2)) {
-                                            loadingBarState = false
-                                        }
-                                        
-                                        withAnimation(.easeOut(duration: 0.5)) {
-                                            isPasswordTextFieldShowing = true
-                                        }
-                                        focus = .password
-                                        
-                                    } else {
-                                        withAnimation(.smooth(duration: 0.1)) {
-                                            loadingBarState = false
-                                        }
-                                        isEmailDulicatedAlertShowing = true
-                                    }
-                                    
-                                } else {
-                                    isEmailFormValidatedAlertShowing = true
+                    if !isPasswordTextFieldShowing {
+                        // 첫번째 다음
+                        guard !viewModel.email.isEmpty else {
+                            alertEmptyTextField = true
+                            return
+                        }
+                        
+                        guard viewModel.checkEmailFormValidation() else {
+                            alertEmailFormValidation = true
+                            return
+                        }
+                        
+                        withAnimation(.smooth(duration: 0.1)) {
+                            loadingBarState = true
+                        }
+                        
+                        Task {
+                            if await !viewModel.checkEmailDuplication() {
+                                withAnimation(.smooth(duration: 0.1)) {
+                                    loadingBarState = false
+                                }
+                                
+                                withAnimation(.easeOut(duration: 0.4)) {
+                                    isPasswordTextFieldShowing = true
+                                }
+                                
+                                withAnimation(.smooth(duration: 0.4)) {
+                                    focus = .password
                                 }
                                 
                             } else {
-                                isEmptyAlertShowing = true
+                                withAnimation(.smooth(duration: 0.1)) {
+                                    loadingBarState = false
+                                }
+                                
+                                alertEmailDulication = true
+                            }
+                        }
+                        
+                    } else if !isUsernameTextFieldShowing {
+                        // 두번째 다음
+                        if viewModel.password.count >= 6 {
+                            withAnimation(.easeOut(duration: 0.4)) {
+                                isUsernameTextFieldShowing = true
+                                
                             }
                             
-                        } else if !isUsernameTextFieldShowing {
-                            // 두번째 다음
-                            if viewModel.password.count >= 6 {
-                                withAnimation(.easeOut(duration: 0.5)) {
-                                    isUsernameTextFieldShowing = true
-                                }
+                            withAnimation(.smooth(duration: 0.4)) {
                                 focus = .username
-                                
-                            } else {
-                                isEmptyAlertShowing = true
                             }
                             
-                        } else if isUsernameTextFieldShowing {
-                            // 완료
-                            if !viewModel.username.isEmpty {
-                                withAnimation(.smooth(duration: 0.2)) {
-                                    loadingBarState = true
-                                }
-                                Task {
-                                    await viewModel.signup()
-                                    viewModel.clearInputData()
-                                    navigationRouter.popToRoot()
+                        } else {
+                            alertEmptyTextField = true
+                        }
+                        
+                    } else if isUsernameTextFieldShowing {
+                        // 완료
+                        if !viewModel.username.isEmpty && viewModel.password.count >= 6 {
+                            withAnimation(.smooth(duration: 0.1)) {
+                                loadingBarState = true
+                            }
+                            
+                            // 이메일 재검증 1
+                            guard viewModel.checkEmailFormValidation() else {
+                                withAnimation(.smooth(duration: 0.1)) {
+                                    loadingBarState = false
                                 }
                                 
-                            } else {
-                                isEmptyAlertShowing = true
+                                alertEmailFormValidation = true
+                                return
                             }
+                            
+                            Task {
+                                //이메일 재검증 2
+                                guard await !viewModel.checkEmailDuplication() else {
+                                    withAnimation(.smooth(duration: 0.1)) {
+                                        loadingBarState = false
+                                    }
+                                    
+                                    alertEmailDulication = true
+                                    return
+                                }
+                                
+                                await viewModel.signup()
+                                viewModel.clearInputData()
+                                navigationRouter.popToRoot()
+                            }
+                            
+                        } else {
+                            alertEmptyTextField = true
                         }
                     }
                 } label: {
                     Text(isUsernameTextFieldShowing ? "완료" : "다음")
                         .modifier(LongButtonModifier(bgColor: .ESTitle))
-                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                         .padding(.bottom, 5)
                 }
-                .alert("이메일 형식 불일치", isPresented: $isEmailFormValidatedAlertShowing) {
+                .alert("이메일 형식 불일치", isPresented: $alertEmailFormValidation) {
                     Button {
                         
                     } label: {
@@ -215,7 +240,7 @@ struct BasicSignupView: View {
                 } message: {
                     Text("~@~.com 형식을 지켜주세요.")
                 }
-                .alert("중복된 이메일", isPresented: $isEmailDulicatedAlertShowing) {
+                .alert("중복된 이메일", isPresented: $alertEmailDulication) {
                     Button {
                         
                     } label: {
@@ -224,7 +249,7 @@ struct BasicSignupView: View {
                 } message: {
                     Text("다른 이메일로 다시 입력해주세요.")
                 }
-                .alert("공백 제출 불가능", isPresented: $isEmptyAlertShowing) {
+                .alert("공백 제출 불가능", isPresented: $alertEmptyTextField) {
                     Button {
                         
                     } label: {
@@ -236,7 +261,9 @@ struct BasicSignupView: View {
             }
         }
         .onAppear {
-            focus = .email
+            withAnimation(.smooth(duration: 0.4)) {
+                focus = .email
+            }
         }
         .overlay {
             if loadingBarState {
