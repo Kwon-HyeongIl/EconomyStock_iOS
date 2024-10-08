@@ -23,6 +23,12 @@
 		CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */; };
 		CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936B2CAFB05800A883F1 /* Notification.swift */; };
 		CA2E936E2CAFB0B300A883F1 /* NotificationManager+Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */; };
+		CA3BBAA82CB50063007CA152 /* BasicSignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAA72CB50063007CA152 /* BasicSignupView.swift */; };
+		CA3BBAAE2CB50144007CA152 /* BasicSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAAD2CB50144007CA152 /* BasicSignupViewModel.swift */; };
+		CA3BBAB12CB5035E007CA152 /* LongButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */; };
+		CA3BBAB42CB50414007CA152 /* BackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB32CB50414007CA152 /* BackModifier.swift */; };
+		CA3BBAB62CB50441007CA152 /* BackTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB52CB50441007CA152 /* BackTitleModifier.swift */; };
+		CA3BBABA2CB5055B007CA152 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB92CB5055B007CA152 /* TextFieldModifier.swift */; };
 		CA662BCA2CAD72E6009E8D5F /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BC92CAD72E6009E8D5F /* KakaoSDKAuth */; };
 		CA662BCC2CAD72E6009E8D5F /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BCB2CAD72E6009E8D5F /* KakaoSDKCommon */; };
 		CA662BCE2CAD72E6009E8D5F /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BCD2CAD72E6009E8D5F /* KakaoSDKUser */; };
@@ -45,7 +51,7 @@
 		CA9BB9E02CABAACF00886A1A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CA9BB9DF2CABAACF00886A1A /* FirebaseStorage */; };
 		CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */; };
 		CA9BB9E92CABB12700886A1A /* NavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9E82CABB12700886A1A /* NavigationStackView.swift */; };
-		CA9BB9EB2CABB18700886A1A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9EA2CABB18700886A1A /* TestView.swift */; };
+		CAEDDAB92CB53B3F0046162D /* BasicSignupFocusField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDAB82CB53B3E0046162D /* BasicSignupFocusField.swift */; };
 		CAEE16482CAD07B900210BD0 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE16472CAD07B900210BD0 /* AuthManager.swift */; };
 		CAEE164B2CAD082500210BD0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE164A2CAD082500210BD0 /* User.swift */; };
 		CAEE164D2CAD08E600210BD0 /* FCMManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE164C2CAD08E600210BD0 /* FCMManager.swift */; };
@@ -76,6 +82,12 @@
 		CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		CA2E936B2CAFB05800A883F1 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationManager+Badge.swift"; sourceTree = "<group>"; };
+		CA3BBAA72CB50063007CA152 /* BasicSignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSignupView.swift; sourceTree = "<group>"; };
+		CA3BBAAD2CB50144007CA152 /* BasicSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSignupViewModel.swift; sourceTree = "<group>"; };
+		CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButtonModifier.swift; sourceTree = "<group>"; };
+		CA3BBAB32CB50414007CA152 /* BackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackModifier.swift; sourceTree = "<group>"; };
+		CA3BBAB52CB50441007CA152 /* BackTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackTitleModifier.swift; sourceTree = "<group>"; };
+		CA3BBAB92CB5055B007CA152 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
 		CA662BD12CAD79F0009E8D5F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		CA662BD32CAD7B86009E8D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CA77DFCC2CB24D0900992829 /* Loading.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Loading.json; sourceTree = "<group>"; };
@@ -92,7 +104,7 @@
 		CA9BB9D62CABA94400886A1A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		CA9BB9E82CABB12700886A1A /* NavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackView.swift; sourceTree = "<group>"; };
-		CA9BB9EA2CABB18700886A1A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		CAEDDAB82CB53B3E0046162D /* BasicSignupFocusField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSignupFocusField.swift; sourceTree = "<group>"; };
 		CAEE16472CAD07B900210BD0 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		CAEE164A2CAD082500210BD0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CAEE164C2CAD08E600210BD0 /* FCMManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMManager.swift; sourceTree = "<group>"; };
@@ -236,6 +248,57 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
+		CA3BBAA92CB50083007CA152 /* BasicSignup */ = {
+			isa = PBXGroup;
+			children = (
+				CA3BBAA72CB50063007CA152 /* BasicSignupView.swift */,
+			);
+			path = BasicSignup;
+			sourceTree = "<group>";
+		};
+		CA3BBAAA2CB500AC007CA152 /* BasicSignup */ = {
+			isa = PBXGroup;
+			children = (
+				CA3BBAAD2CB50144007CA152 /* BasicSignupViewModel.swift */,
+			);
+			path = BasicSignup;
+			sourceTree = "<group>";
+		};
+		CA3BBAAF2CB502AC007CA152 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				CA3BBAB82CB5054F007CA152 /* TextField */,
+				CA3BBAB22CB50403007CA152 /* Navigation */,
+				CA3BBAB72CB50497007CA152 /* Button */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
+		CA3BBAB22CB50403007CA152 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				CA3BBAB32CB50414007CA152 /* BackModifier.swift */,
+				CA3BBAB52CB50441007CA152 /* BackTitleModifier.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		CA3BBAB72CB50497007CA152 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		CA3BBAB82CB5054F007CA152 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				CA3BBAB92CB5055B007CA152 /* TextFieldModifier.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 		CA77DFCB2CB24D0100992829 /* Json */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +334,7 @@
 		CA9BB9C32CABA59A00886A1A /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				CA3BBAAF2CB502AC007CA152 /* Modifier */,
 				CA1DDD392CB0E79900C84D08 /* Lottie */,
 				CA17FC732CB005C50050250B /* Capsule */,
 				CA17FC6E2CB0056B0050250B /* Tab */,
@@ -307,7 +371,6 @@
 				CA9BB9C72CABA59A00886A1A /* Assets.xcassets */,
 				CA9BB9C62CABA59A00886A1A /* .gitignore */,
 				CA9BB9C52CABA59A00886A1A /* Preview Content */,
-				CA9BB9EA2CABB18700886A1A /* TestView.swift */,
 				CA662BD12CAD79F0009E8D5F /* Config.xcconfig */,
 			);
 			path = EconomyStock;
@@ -362,6 +425,7 @@
 				CA9BB9E82CABB12700886A1A /* NavigationStackView.swift */,
 				CAEE164E2CAD096C00210BD0 /* NotificationType.swift */,
 				CA17FC742CB005DB0050250B /* MainTab.swift */,
+				CAEDDAB82CB53B3E0046162D /* BasicSignupFocusField.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -426,6 +490,7 @@
 			isa = PBXGroup;
 			children = (
 				CAEE16572CAD0CA700210BD0 /* LoginView.swift */,
+				CA3BBAA92CB50083007CA152 /* BasicSignup */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -437,6 +502,7 @@
 				CAEE16642CAD0D7800210BD0 /* LoginViewModel+Apple.swift */,
 				CA77DFCE2CB256DD00992829 /* LoginViewModel+Google.swift */,
 				CAEE16622CAD0D7200210BD0 /* LoginViewModel+Kakao.swift */,
+				CA3BBAAA2CB500AC007CA152 /* BasicSignup */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -536,6 +602,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA3BBAB62CB50441007CA152 /* BackTitleModifier.swift in Sources */,
 				CA9BB9CB2CABA59A00886A1A /* ESBackgroundView.swift in Sources */,
 				CAEE16482CAD07B900210BD0 /* AuthManager.swift in Sources */,
 				CAEE165A2CAD0CBA00210BD0 /* AuthManager+Hash.swift in Sources */,
@@ -549,7 +616,7 @@
 				CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */,
 				CA17FC832CB00AD50050250B /* ProfileView.swift in Sources */,
 				CA9BB9CC2CABA59A00886A1A /* ContentView.swift in Sources */,
-				CA9BB9EB2CABB18700886A1A /* TestView.swift in Sources */,
+				CA3BBAA82CB50063007CA152 /* BasicSignupView.swift in Sources */,
 				CA77DFCF2CB256DD00992829 /* LoginViewModel+Google.swift in Sources */,
 				CA17FC7F2CB00ABE0050250B /* StudyView.swift in Sources */,
 				CAEE16522CAD0C3F00210BD0 /* AuthManager+SocialLogin.swift in Sources */,
@@ -557,7 +624,9 @@
 				CA17FC7D2CB00AB90050250B /* HomeView.swift in Sources */,
 				CA77DFD22CB26D0100992829 /* CustomError.swift in Sources */,
 				CA17FC812CB00AC60050250B /* NewsView.swift in Sources */,
+				CA3BBAB42CB50414007CA152 /* BackModifier.swift in Sources */,
 				CA9BB9CD2CABA59A00886A1A /* EconomyStockApp.swift in Sources */,
+				CA3BBAB12CB5035E007CA152 /* LongButtonModifier.swift in Sources */,
 				CA2E936E2CAFB0B300A883F1 /* NotificationManager+Badge.swift in Sources */,
 				CA9BB9E92CABB12700886A1A /* NavigationStackView.swift in Sources */,
 				CA17FC702CB005800050250B /* MainCustomTabView.swift in Sources */,
@@ -566,7 +635,10 @@
 				CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */,
 				CAEE164B2CAD082500210BD0 /* User.swift in Sources */,
 				CA17FC772CB009680050250B /* TitleColor.swift in Sources */,
+				CA3BBABA2CB5055B007CA152 /* TextFieldModifier.swift in Sources */,
+				CAEDDAB92CB53B3F0046162D /* BasicSignupFocusField.swift in Sources */,
 				CAEE164F2CAD096C00210BD0 /* NotificationType.swift in Sources */,
+				CA3BBAAE2CB50144007CA152 /* BasicSignupViewModel.swift in Sources */,
 				CA9BB9D72CABA94400886A1A /* MainTabView.swift in Sources */,
 				CA17FC8A2CB01E820050250B /* CornerRadius.swift in Sources */,
 				CA17FC8C2CB01EBF0050250B /* RoundCorner.swift in Sources */,

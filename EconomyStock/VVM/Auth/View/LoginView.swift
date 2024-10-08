@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
+    @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
     @State private var viewModel = LoginViewModel()
     
     var body: some View {
@@ -24,7 +25,7 @@ struct LoginView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200)
-                    .shadow(color: .black.opacity(0.3), radius: 10, x: 5, y: 5)
+                    .shadow(color: .gray.opacity(0.8), radius: 10, x: 5, y: 5)
                     .padding(.top, 80)
                 
                 Spacer()
@@ -33,11 +34,11 @@ struct LoginView: View {
                     viewModel.loginWithApple()
                 } label: {
                     ZStack {
-                        RoundedRectangle(cornerRadius: 10)
+                        RoundedRectangle(cornerRadius: 12)
                             .frame(height: 50)
                             .foregroundStyle(.black)
                             .padding(.horizontal, 150)
-                            .shadow(color: .black.opacity(0.2), radius: 10, x: 5, y: 5)
+                            .shadow(color: .gray.opacity(0.8), radius: 10, x: 5, y: 5)
                         
                         HStack {
                             Image("Apple_Logo")
@@ -53,18 +54,18 @@ struct LoginView: View {
                                 .padding(.trailing, 6)
                         }
                     }
-                    .padding(.bottom, 10)
+                    .padding(.bottom, 12)
                 }
                 
                 Button {
                     viewModel.loginWithGoogle()
                 } label: {
                     ZStack {
-                        RoundedRectangle(cornerRadius: 10)
+                        RoundedRectangle(cornerRadius: 12)
                             .frame(height: 50)
                             .foregroundStyle(.white)
                             .padding(.horizontal, 150)
-                            .shadow(color: .black.opacity(0.2), radius: 10, x: 5, y: 5)
+                            .shadow(color: .gray.opacity(0.8), radius: 10, x: 5, y: 5)
                         
                         HStack {
                             Image("Google_Logo")
@@ -76,22 +77,23 @@ struct LoginView: View {
                             Text("Google로 계속하기")
                                 .foregroundStyle(.black)
                                 .fontWeight(.medium)
-                                .opacity(0.6)
+                                .opacity(0.8)
                                 .font(.system(size: 16))
+                                .padding(.trailing, 1)
                         }
                     }
-                    .padding(.bottom, 10)
+                    .padding(.bottom, 12)
                 }
                 
                 Button {
                     viewModel.loginWithKakao()
                 } label: {
                     ZStack {
-                        RoundedRectangle(cornerRadius: 10)
+                        RoundedRectangle(cornerRadius: 12)
                             .frame(height: 50)
                             .foregroundStyle(Color(red: 254/255, green: 229/255, blue: 0/255))
                             .padding(.horizontal, 150)
-                            .shadow(color: .black.opacity(0.2), radius: 10, x: 5, y: 5)
+                            .shadow(color: .gray.opacity(0.8), radius: 10, x: 5, y: 5)
                         
                         HStack {
                             Image("Kakao_Logo")
@@ -107,8 +109,18 @@ struct LoginView: View {
                                 .padding(.trailing, 5)
                         }
                     }
-                    .padding(.bottom, 100)
+                    .padding(.bottom)
                 }
+                
+                Button {
+                    navigationRouter.navigate(.BasicSignupView)
+                } label: {
+                    Text("또는 다른 방식으로 로그인")
+                        .font(.system(size: 12))
+                        .foregroundStyle(.gray)
+                        .padding(.bottom, 50)
+                }
+                
             }
             .overlay {
                 if viewModel.loadingBarState {
@@ -123,4 +135,5 @@ struct LoginView: View {
 
 #Preview {
     LoginView()
+        .environment(NavigationRouter())
 }

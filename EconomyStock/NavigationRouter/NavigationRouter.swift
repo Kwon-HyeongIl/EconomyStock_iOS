@@ -15,8 +15,8 @@ class NavigationRouter {
     func destinationNavigate(to view: NavigationStackView) -> some View {
         switch view {
             
-        case .TestView:
-            TestView()
+        case .BasicSignupView:
+            BasicSignupView()
         }
     }
     
