@@ -17,7 +17,7 @@ struct SplashView: View {
                 Image("ES_TitleLogo_Blue")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 210)
+                    .frame(width: 220)
             }
             .padding(.bottom, 30)
         }

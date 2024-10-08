@@ -26,7 +26,11 @@ class AuthManager {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             let userId = result.user.uid
             
-            if !appleHashedUid.isEmpty {
+            if appleHashedUid.isEmpty && googleHashedUid.isEmpty && kakaoHashedUid.isEmpty {
+                // 베이직 회원가입
+                await uploadUserData(userId: userId, email: email, username: username)
+                
+            } else if !appleHashedUid.isEmpty {
                 // 애플 회원가입
                 await uploadUserData(userId: userId, email: email, username: username, appleHashedUid: appleHashedUid)
                 
@@ -48,7 +52,11 @@ class AuthManager {
         let deviceToken = FCMManager.shared.myDeviceToken ?? ""
         
         await MainActor.run {
-            if !appleHashedUid.isEmpty {
+            if appleHashedUid.isEmpty && googleHashedUid.isEmpty && kakaoHashedUid.isEmpty {
+                // 베이직 회원가입
+                self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, notificationType: [.empty])
+                
+            } else if !appleHashedUid.isEmpty {
                 // 애플 회원가입
                 self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, appleHashedUid: appleHashedUid, notificationType: [.empty])
                 
@@ -143,6 +151,16 @@ class AuthManager {
         } catch {
             print(error.localizedDescription)
             return nil
+        }
+    }
+    
+    func checkEmailDuplication(email: String) async -> Bool {
+        do {
+            return try await Firestore.firestore()
+                .collection("User").whereField("authEmail", isEqualTo: email).getDocuments().documents.isEmpty
+            
+        }  catch {
+            return false
         }
     }
     
