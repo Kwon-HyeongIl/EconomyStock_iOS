@@ -14,7 +14,7 @@ struct ShortButtonModifier: ViewModifier {
         content
             .fontWeight(.semibold)
             .foregroundStyle(.white)
-            .frame(width: 100)
+            .frame(width: 150)
             .frame(height: 45)
             .background(bgColor)
             .clipShape(RoundedRectangle(cornerRadius: 20))

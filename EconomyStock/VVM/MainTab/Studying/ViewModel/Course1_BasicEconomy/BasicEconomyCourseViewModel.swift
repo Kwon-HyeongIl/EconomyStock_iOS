@@ -9,5 +9,12 @@ import Foundation
 
 @Observable
 class BasicEconomyCourseViewModel {
+    var currentUser: User?
     
+    var progressRate: Double = 0.0
+    
+    init() {
+        self.currentUser = AuthManager.shared.currentUser
+        self.progressRate = currentUser?.studyingCourse.BasicEconomy ?? 0.0
+    }
 }

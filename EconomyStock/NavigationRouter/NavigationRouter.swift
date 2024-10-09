@@ -26,10 +26,20 @@ class NavigationRouter {
             AccountSupportView()
             
         // Studying
-        case .BasicEconomyCourseView:
-            BasicEconomyCourseView()
+        // // BasicEconomy
+        case .BasicEconomyCourseIntroductionView:
+            BasicEconomyCourseIntroductionView()
+        case .Page1View:
+            Page1View()
+        case .Page2View:
+            Page2View()
+        case .Page3View:
+            Page3View()
+        case .Page4View:
+            Page4View()
+        case .Page5View:
+            Page5View()
         }
-        
     }
     
     @MainActor

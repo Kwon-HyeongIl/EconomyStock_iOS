@@ -24,7 +24,9 @@ class StudyingViewModel {
         
         // 다른 항목들 추가
         
-        self.studyingItems = tempStudyingItems
+        DispatchQueue.main.async {
+            self.studyingItems = tempStudyingItems
+        }
     }
 }
 
