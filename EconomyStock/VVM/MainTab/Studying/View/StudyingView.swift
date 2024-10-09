@@ -15,7 +15,7 @@ struct StudyingView: View {
         ScrollView {
             LazyVStack {
                 ForEach(viewModel.studyingItems) { item in
-                    StudyingCoverView(title: item.title, lottieFileName: item.lottieFileName, backgroundColor: item.backgroundColor, progressRate: item.progressRate)
+                    StudyingCoverView(title: item.title, lottieFileName: item.lottieFileName, backgroundGradient: item.backgroundGradient, progressRate: item.progressRate)
                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                         .onTapGesture {
                             navigationRouter.navigate(item.destination)

@@ -13,7 +13,7 @@ struct StudyingCoverView: View {
     
     let title: String
     let lottieFileName: String
-    let backgroundColor: Color
+    let backgroundGradient: LinearGradient
     let progressRate: Double
     
     var body: some View {
@@ -43,6 +43,10 @@ struct StudyingCoverView: View {
                         
                     } else {
                         ZStack {
+                            Circle()
+                                .stroke(Color.gray.opacity(0.2), lineWidth: 4)
+                                .frame(width: 30, height: 30)
+                            
                             Circle()
                                 .trim(from: 0, to: animatedProgressRate / 100)
                                 .stroke(.gray, lineWidth: 3)
@@ -86,12 +90,15 @@ struct StudyingCoverView: View {
         }
         .frame(maxWidth: .infinity)
         .frame(height: 180)
-        .background(backgroundColor)
+        .background(backgroundGradient)
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .padding(.horizontal, 10)
     }
 }
 
 #Preview {
-    StudyingCoverView(title: "기초 경제", lottieFileName: "BasicEconomyCover", backgroundColor: .yellow, progressRate: 90.0)
+    StudyingCoverView(title: "기초 경제", lottieFileName: "BasicEconomyCover", backgroundGradient: LinearGradient(
+        gradient: Gradient(colors: [Color.yellow, Color.orange]),
+        startPoint: .topLeading,
+        endPoint: .bottomTrailing), progressRate: 90.0)
 }

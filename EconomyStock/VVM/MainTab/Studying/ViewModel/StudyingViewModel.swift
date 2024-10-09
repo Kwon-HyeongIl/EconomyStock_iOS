@@ -16,7 +16,11 @@ class StudyingViewModel {
         
         var tempStudyingItems: [StudyingItem] = []
         
-        tempStudyingItems.append(StudyingItem(title: "기초 경제", lottieFileName: "BasicEconomyCover", backgroundColor: .yellow, destination: .BasicEconomyCourseView, progressRate: currentUser?.studyingCourse.BasicEconomy ?? 0.0))
+        let BasicEconomyGradient = LinearGradient(
+            gradient: Gradient(colors: [Color.yellow, Color.orange]),
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing)
+        tempStudyingItems.append(StudyingItem(title: "기초 경제", lottieFileName: "BasicEconomyCover", backgroundGradient: BasicEconomyGradient, destination: .BasicEconomyCourseView, progressRate: currentUser?.studyingCourse.BasicEconomy ?? 0.0))
         
         // 다른 항목들 추가
         
@@ -28,7 +32,7 @@ struct StudyingItem: Identifiable {
     let id = UUID()
     let title: String
     let lottieFileName: String
-    let backgroundColor: Color
+    let backgroundGradient: LinearGradient
     let destination: NavigationStackPath
     var progressRate: Double
 }
