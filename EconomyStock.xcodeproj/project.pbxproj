@@ -34,6 +34,7 @@
 		CA3BBAB12CB5035E007CA152 /* LongButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */; };
 		CA3BBAB42CB50414007CA152 /* NavigationBackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */; };
 		CA3BBAB62CB50441007CA152 /* NavigationBackTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */; };
+		CA58A4ED2CB6D9E900DB91BD /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58A4EC2CB6D9E900DB91BD /* ProgressCircleView.swift */; };
 		CA662BCA2CAD72E6009E8D5F /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BC92CAD72E6009E8D5F /* KakaoSDKAuth */; };
 		CA662BCC2CAD72E6009E8D5F /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BCB2CAD72E6009E8D5F /* KakaoSDKCommon */; };
 		CA662BCE2CAD72E6009E8D5F /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BCD2CAD72E6009E8D5F /* KakaoSDKUser */; };
@@ -43,7 +44,6 @@
 		CA77DFCD2CB24D0900992829 /* Loading.json in Resources */ = {isa = PBXBuildFile; fileRef = CA77DFCC2CB24D0900992829 /* Loading.json */; };
 		CA77DFCF2CB256DD00992829 /* LoginViewModel+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77DFCE2CB256DD00992829 /* LoginViewModel+Google.swift */; };
 		CA77DFD22CB26D0100992829 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77DFD12CB26D0100992829 /* CustomError.swift */; };
-		CA9BB9CB2CABA59A00886A1A /* ESBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9C22CABA59A00886A1A /* ESBackgroundView.swift */; };
 		CA9BB9CC2CABA59A00886A1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9C82CABA59A00886A1A /* ContentView.swift */; };
 		CA9BB9CD2CABA59A00886A1A /* EconomyStockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9C92CABA59A00886A1A /* EconomyStockApp.swift */; };
 		CA9BB9CE2CABA59A00886A1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA9BB9C42CABA59A00886A1A /* Preview Assets.xcassets */; };
@@ -109,13 +109,13 @@
 		CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButtonModifier.swift; sourceTree = "<group>"; };
 		CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackModifier.swift; sourceTree = "<group>"; };
 		CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackTitleModifier.swift; sourceTree = "<group>"; };
+		CA58A4EC2CB6D9E900DB91BD /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 		CA662BD12CAD79F0009E8D5F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		CA662BD32CAD7B86009E8D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CA77DFCC2CB24D0900992829 /* Loading.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Loading.json; sourceTree = "<group>"; };
 		CA77DFCE2CB256DD00992829 /* LoginViewModel+Google.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Google.swift"; sourceTree = "<group>"; };
 		CA77DFD12CB26D0100992829 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		CA83477C2CAAE28500BA1E4A /* EconomyStock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EconomyStock.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA9BB9C22CABA59A00886A1A /* ESBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESBackgroundView.swift; sourceTree = "<group>"; };
 		CA9BB9C42CABA59A00886A1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA9BB9C62CABA59A00886A1A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CA9BB9C72CABA59A00886A1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -400,6 +400,14 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		CA58A4EB2CB6D9DB00DB91BD /* ProgressCircle */ = {
+			isa = PBXGroup;
+			children = (
+				CA58A4EC2CB6D9E900DB91BD /* ProgressCircleView.swift */,
+			);
+			path = ProgressCircle;
+			sourceTree = "<group>";
+		};
 		CA77DFCB2CB24D0100992829 /* Json */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,7 +451,6 @@
 				CA17FC6E2CB0056B0050250B /* Tab */,
 				CA9BB9D52CABA8DD00886A1A /* Color */,
 				CA9BB9D22CABA8BA00886A1A /* Splash */,
-				CA9BB9D12CABA8A700886A1A /* Background */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -478,14 +485,6 @@
 				CA662BD12CAD79F0009E8D5F /* Config.xcconfig */,
 			);
 			path = EconomyStock;
-			sourceTree = "<group>";
-		};
-		CA9BB9D12CABA8A700886A1A /* Background */ = {
-			isa = PBXGroup;
-			children = (
-				CA9BB9C22CABA59A00886A1A /* ESBackgroundView.swift */,
-			);
-			path = Background;
 			sourceTree = "<group>";
 		};
 		CA9BB9D22CABA8BA00886A1A /* Splash */ = {
@@ -546,6 +545,7 @@
 			isa = PBXGroup;
 			children = (
 				CA114FDB2CB6318200AD5AD9 /* StudyingCover */,
+				CA58A4EB2CB6D9DB00DB91BD /* ProgressCircle */,
 			);
 			path = CommonView;
 			sourceTree = "<group>";
@@ -820,7 +820,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA3BBAB62CB50441007CA152 /* NavigationBackTitleModifier.swift in Sources */,
-				CA9BB9CB2CABA59A00886A1A /* ESBackgroundView.swift in Sources */,
 				CAEE16482CAD07B900210BD0 /* AuthManager.swift in Sources */,
 				CAEE165A2CAD0CBA00210BD0 /* AuthManager+Hash.swift in Sources */,
 				CAEE16652CAD0D7800210BD0 /* LoginViewModel+Apple.swift in Sources */,
@@ -831,6 +830,7 @@
 				CAEDDAC82CB575880046162D /* AccountSupportView.swift in Sources */,
 				CAEDDAC22CB570710046162D /* BasicLoginFocusField.swift in Sources */,
 				CAEE16632CAD0D7200210BD0 /* LoginViewModel+Kakao.swift in Sources */,
+				CA58A4ED2CB6D9E900DB91BD /* ProgressCircleView.swift in Sources */,
 				CA17FC722CB005A10050250B /* MainTabCapsule.swift in Sources */,
 				CA9BB9D42CABA8C300886A1A /* SplashView.swift in Sources */,
 				CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */,
