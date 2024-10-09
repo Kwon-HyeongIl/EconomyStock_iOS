@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct StudyingCoverView: View {
+    @State private var animatedProgressRate: Double = 0
+    @State private var timer: Timer?
+    
     let title: String
     let lottieFileName: String
     let backgroundColor: Color
@@ -24,7 +27,7 @@ struct StudyingCoverView: View {
                         .font(.system(size: 32))
                         .fontWeight(.bold)
                         .padding(.trailing, 55)
-                        .padding(.leading, 25)
+                        .padding(.leading, 20)
                 }
                 
                 HStack {
@@ -39,12 +42,43 @@ struct StudyingCoverView: View {
                             .padding(.bottom, 120)
                         
                     } else {
-                        Text("\(Int(progressRate))%")
-                            .font(.system(size: 20))
-                            .fontWeight(.semibold)
-                            .padding(.leading, 320)
-                            .padding(.bottom, 130)
-                            .padding(.trailing, 5)
+                        ZStack {
+                            Circle()
+                                .trim(from: 0, to: animatedProgressRate / 100)
+                                .stroke(.gray, lineWidth: 3)
+                                .frame(width: 30, height: 30)
+                                .rotationEffect(Angle(degrees: -90))
+                            
+                            Text("\(Int(animatedProgressRate))%")
+                                .font(.system(size: 8))
+                                .foregroundStyle(.gray)
+                                .fontWeight(.semibold)
+                        }
+                        .onAppear {
+                            let duration = 2.0
+                            let updateInterval = 0.02
+                            let totalSteps = Int(duration / updateInterval)
+                            var currentStep = 0
+                            let increment = progressRate / Double(totalSteps)
+                            
+                            timer = Timer.scheduledTimer(withTimeInterval: updateInterval, repeats: true) { _ in
+                                if currentStep >= totalSteps {
+                                    timer?.invalidate()
+                                    timer = nil
+                                    animatedProgressRate = progressRate
+                                    
+                                } else {
+                                    animatedProgressRate += increment
+                                    currentStep += 1
+                                }
+                            }
+                        }
+                        .onDisappear {
+                            timer?.invalidate()
+                            timer = nil
+                        }
+                        .padding(.leading, 320)
+                        .padding(.bottom, 120)
                     }
                 }
             }
@@ -59,5 +93,5 @@ struct StudyingCoverView: View {
 }
 
 #Preview {
-    StudyingCoverView(title: "기초 경제", lottieFileName: "BasicEconomyCover", backgroundColor: .yellow, progressRate: 100.0)
+    StudyingCoverView(title: "기초 경제", lottieFileName: "BasicEconomyCover", backgroundColor: .yellow, progressRate: 90.0)
 }
