@@ -59,5 +59,5 @@ struct StudyingCoverView: View {
     StudyingCoverView(title: "기초 경제", lottieFileName: "BasicEconomyCover", backgroundGradient: LinearGradient(
         gradient: Gradient(colors: [Color.yellow, Color.orange]),
         startPoint: .topLeading,
-        endPoint: .bottomTrailing), progressRate: 90.0)
+        endPoint: .bottomTrailing), progressRate: 100.0)
 }

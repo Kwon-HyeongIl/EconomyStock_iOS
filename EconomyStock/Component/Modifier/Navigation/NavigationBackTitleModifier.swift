@@ -21,6 +21,8 @@ struct NavigationBackTitleModifier: ViewModifier {
                         navigationRouter.back()
                     } label: {
                         Image(systemName: "chevron.left")
+                            .scaledToFit()
+                            .frame(width: 24)
                             .fontWeight(.medium)
                             .foregroundStyle(.black)
                     }
