@@ -12,20 +12,19 @@ struct StudyingView: View {
     @State private var viewModel = StudyingViewModel()
     
     var body: some View {
-        VStack {
-            ScrollView {
-                LazyVStack {
-                    ForEach(viewModel.studyingItems) { item in
-                        StudyingCoverView(title: item.title, lottieFileName: item.lottieFileName, backgroundColor: item.backgroundColor, isFinished: item.isFinihed)
-                            .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
-                            .onTapGesture {
-                                navigationRouter.navigate(item.destination)
-                            }
-                    }
+        ScrollView {
+            LazyVStack {
+                ForEach(viewModel.studyingItems) { item in
+                    StudyingCoverView(title: item.title, lottieFileName: item.lottieFileName, backgroundColor: item.backgroundColor, progressRate: item.progressRate)
+                        .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                        .onTapGesture {
+                            navigationRouter.navigate(item.destination)
+                        }
                 }
             }
         }
         .modifier(NavigationTitleModifier(title: "학습"))
+        .scrollIndicators(.never)
     }
 }
 

@@ -87,7 +87,7 @@ struct BasicLoginView: View {
                 }
             } label: {
                 Text("로그인")
-                    .modifier(LongButtonModifier(bgColor: .ESTitle))
+                    .modifier(LongButtonModifier())
                     .padding(.bottom)
             }
             .alert("로그인 실패", isPresented: $alertLogin) {
@@ -138,8 +138,7 @@ struct BasicLoginView: View {
         }
         .overlay {
             if loadingBarState {
-                LottieViewRouter(fileName: "Loading", loopMode: .loop)
-                    .scaleEffect(0.8)
+                LottieViewConverter(fileName: "Loading", loopMode: .loop, width: 100, height: 100)
                     .padding(.top, 280)
             }
         }

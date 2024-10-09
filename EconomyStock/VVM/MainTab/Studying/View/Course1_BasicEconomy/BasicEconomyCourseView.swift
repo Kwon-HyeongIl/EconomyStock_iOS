@@ -11,23 +11,28 @@ struct BasicEconomyCourseView: View {
     @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
     
     var body: some View {
-        VStack {
-            VStack {
-                LottieViewRouter(fileName: "BasicEconomyCover", loopMode: .loop)
-//                    .scaleEffect(0.5)
-                    .border(.black)
+            ScrollView {
+                VStack(spacing: 0) {
+                    LottieViewConverter(fileName: "BasicEconomyCover", loopMode: .loop, width: 200, height: 200)
+                    
+                    Text("기초 경제")
+                        .font(.system(size: 35))
+                        .fontWeight(.bold)
+                        .foregroundStyle(.black)
+                        .padding(.bottom)
+                    
+                    Text("시작하기")
+                        .modifier(ShortButtonModifier())
+                        .padding(.bottom, 30)
+                    
+                    VStack {
+                        Text("내용 목차")
+                    }
+                    .modifier(TileModifier(height: 400))
+                }
             }
-            .frame(width: 100, height: 100)
-            
-            Text("기초 경제")
-                .font(.system(size: 25))
-                .fontWeight(.bold)
-                .foregroundStyle(.black)
-                .border(.black)
-            
-            Spacer()
-        }
-        .modifier(NavigationBackModifier())
+            .modifier(NavigationBackModifier())
+            .scrollIndicators(.never)
     }
 }
 

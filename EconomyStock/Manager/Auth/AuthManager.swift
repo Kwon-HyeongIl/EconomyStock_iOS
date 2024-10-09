@@ -50,23 +50,24 @@ class AuthManager {
     
     private func uploadUserData(userId: String, email: String, username: String, appleHashedUid: String = "", googleHashedUid: String = "", kakaoHashedUid: String = "") async {
         let deviceToken = FCMManager.shared.myDeviceToken ?? ""
+        let studyingCourse = StudyingCourse(BasicEconomy: 0.0)
         
         await MainActor.run {
             if appleHashedUid.isEmpty && googleHashedUid.isEmpty && kakaoHashedUid.isEmpty {
                 // 베이직 회원가입
-                self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, notificationType: [.empty], studyingPercentage: 0.0, studyingCourse: [])
+                self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: studyingCourse)
                 
             } else if !appleHashedUid.isEmpty {
                 // 애플 회원가입
-                self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, appleHashedUid: appleHashedUid, notificationType: [.empty], studyingPercentage: 0.0, studyingCourse: [])
+                self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, appleHashedUid: appleHashedUid, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: studyingCourse)
                 
             } else if !googleHashedUid.isEmpty {
                 // 구글 회원가입
-                self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, googleHashedUid: googleHashedUid, notificationType: [.empty], studyingPercentage: 0.0, studyingCourse: [])
+                self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, googleHashedUid: googleHashedUid, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: studyingCourse)
                 
             } else if !kakaoHashedUid.isEmpty {
                 // 카카오 회원가입
-                self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, kakaoHashedUid: kakaoHashedUid, notificationType: [.empty], studyingPercentage: 0.0, studyingCourse: [])
+                self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, kakaoHashedUid: kakaoHashedUid, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: studyingCourse)
             }
         }
         

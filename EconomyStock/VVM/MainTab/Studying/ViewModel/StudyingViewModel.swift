@@ -16,7 +16,7 @@ class StudyingViewModel {
         
         var tempStudyingItems: [StudyingItem] = []
         
-        tempStudyingItems.append(StudyingItem(title: "기초 경제", lottieFileName: "BasicEconomyCover", backgroundColor: .yellow, destination: .BasicEconomyCourseView, isFinihed: currentUser?.studyingCourse.contains(.BasicEconomy) ?? false))
+        tempStudyingItems.append(StudyingItem(title: "기초 경제", lottieFileName: "BasicEconomyCover", backgroundColor: .yellow, destination: .BasicEconomyCourseView, progressRate: currentUser?.studyingCourse.BasicEconomy ?? 0.0))
         
         // 다른 항목들 추가
         
@@ -30,5 +30,5 @@ struct StudyingItem: Identifiable {
     let lottieFileName: String
     let backgroundColor: Color
     let destination: NavigationStackPath
-    var isFinihed: Bool
+    var progressRate: Double
 }

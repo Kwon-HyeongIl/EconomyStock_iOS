@@ -11,7 +11,7 @@ import FirebaseAuth
 struct User: Codable, Identifiable, Hashable, Equatable {
     let id: String
     var deviceToken: String
-    let username: String
+    var username: String
     
     var authEmail: String
     
@@ -25,10 +25,10 @@ struct User: Codable, Identifiable, Hashable, Equatable {
     var isNotificationBadge: Bool?
     var notificationType: [NotificationType]
     
-    var studyingPercentage: Double
-    var studyingCourse: [StudyingCourse]
+    var totalStudyingPercentage: Double
+    var studyingCourse: StudyingCourse
 }
 
 extension User {
-    static var DUMMY_USER: User = User(id: UUID().uuidString, deviceToken: "test", username: "행이", authEmail: "test@naver.com", notificationType: [.empty], studyingPercentage: 0.0, studyingCourse: [.BasicEconomy])
+    static var DUMMY_USER: User = User(id: UUID().uuidString, deviceToken: "test", username: "행이", authEmail: "test@naver.com", notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse(BasicEconomy: 0.0))
 }

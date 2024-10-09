@@ -8,16 +8,10 @@
 import SwiftUI
 import Lottie
 
-struct LottieViewRouter: UIViewRepresentable {
+struct LottieViewMain: UIViewRepresentable {
     let fileName: String
     let loopMode: LottieLoopMode
     var toProgress: CGFloat
-
-    init(fileName: String, loopMode: LottieLoopMode, toProgress: CGFloat = 1.0) {
-        self.fileName = fileName
-        self.loopMode = loopMode
-        self.toProgress = toProgress
-    }
     
     func makeUIView(context: Context) -> UIView {
         let containerView = UIView()
@@ -38,5 +32,20 @@ struct LottieViewRouter: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIView, context: Context) {
+    }
+}
+
+struct LottieViewConverter: View {
+    let fileName: String
+    let loopMode: LottieLoopMode
+    var toProgress: CGFloat = 1.0
+    let width: CGFloat
+    let height: CGFloat
+    
+    var body: some View {
+        VStack {
+            LottieViewMain(fileName: fileName, loopMode: loopMode, toProgress: toProgress)
+        }
+        .frame(width: width, height: height)
     }
 }
