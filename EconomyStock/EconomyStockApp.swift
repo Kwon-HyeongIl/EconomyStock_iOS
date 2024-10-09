@@ -29,7 +29,7 @@ struct EconomyStockApp: App {
         WindowGroup {
             NavigationStack(path: $navigationRouter.path) {
                 ContentView()
-                    .navigationDestination(for: NavigationStackView.self) { view in
+                    .navigationDestination(for: NavigationStackPath.self) { view in
                         navigationRouter.destinationNavigate(to: view)
                     }
                     .onOpenURL { url in

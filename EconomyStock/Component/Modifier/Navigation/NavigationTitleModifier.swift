@@ -16,7 +16,7 @@ struct NavigationTitleModifier: ViewModifier {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Text(title)
-                        .font(.system(size: 20))
+                        .font(.system(size: 25))
                         .fontWeight(.semibold)
                 }
             }

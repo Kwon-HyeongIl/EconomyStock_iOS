@@ -12,7 +12,7 @@ class NavigationRouter {
     var path = NavigationPath()
     
     @ViewBuilder
-    func destinationNavigate(to view: NavigationStackView) -> some View {
+    func destinationNavigate(to view: NavigationStackPath) -> some View {
         switch view {
             
         // Auth
@@ -24,11 +24,16 @@ class NavigationRouter {
             FindPasswordView()
         case .AccountSupportView:
             AccountSupportView()
+            
+        // Studying
+        case .BasicEconomyCourseView:
+            BasicEconomyCourseView()
         }
+        
     }
     
     @MainActor
-    func navigate(_ view: NavigationStackView) {
+    func navigate(_ view: NavigationStackPath) {
         path.append(view)
     }
     
