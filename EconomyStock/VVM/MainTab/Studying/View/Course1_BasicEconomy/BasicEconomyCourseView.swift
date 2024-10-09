@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct BasicEconomyCourseView: View {
+    @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
+    
     var body: some View {
         VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            VStack {
+                LottieViewRouter(fileName: "BasicEconomyCover", loopMode: .loop)
+//                    .scaleEffect(0.5)
+                    .border(.black)
+            }
+            .frame(width: 100, height: 100)
+            
+            Text("기초 경제")
+                .font(.system(size: 25))
+                .fontWeight(.bold)
+                .foregroundStyle(.black)
+                .border(.black)
+            
+            Spacer()
         }
         .modifier(NavigationBackModifier())
     }
@@ -18,6 +33,7 @@ struct BasicEconomyCourseView: View {
 
 #Preview {
     BasicEconomyCourseView()
+        .environment(NavigationRouter())
 }
 
 

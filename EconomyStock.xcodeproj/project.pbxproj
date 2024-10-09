@@ -25,7 +25,7 @@
 		CA17FC8A2CB01E820050250B /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC892CB01E820050250B /* CornerRadius.swift */; };
 		CA17FC8C2CB01EBF0050250B /* RoundCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC8B2CB01EBF0050250B /* RoundCorner.swift */; };
 		CA1DDD382CB0E75000C84D08 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CA1DDD372CB0E75000C84D08 /* Lottie */; };
-		CA1DDD3B2CB0E7A900C84D08 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DDD3A2CB0E7A900C84D08 /* LottieView.swift */; };
+		CA1DDD3B2CB0E7A900C84D08 /* LottieViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DDD3A2CB0E7A900C84D08 /* LottieViewRouter.swift */; };
 		CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */; };
 		CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936B2CAFB05800A883F1 /* Notification.swift */; };
 		CA2E936E2CAFB0B300A883F1 /* NotificationManager+Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */; };
@@ -98,7 +98,7 @@
 		CA17FC822CB00AD50050250B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CA17FC892CB01E820050250B /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		CA17FC8B2CB01EBF0050250B /* RoundCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCorner.swift; sourceTree = "<group>"; };
-		CA1DDD3A2CB0E7A900C84D08 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		CA1DDD3A2CB0E7A900C84D08 /* LottieViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewRouter.swift; sourceTree = "<group>"; };
 		CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		CA2E936B2CAFB05800A883F1 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationManager+Badge.swift"; sourceTree = "<group>"; };
@@ -337,7 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				CA77DFCB2CB24D0100992829 /* Json */,
-				CA1DDD3A2CB0E7A900C84D08 /* LottieView.swift */,
+				CA1DDD3A2CB0E7A900C84D08 /* LottieViewRouter.swift */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -844,7 +844,7 @@
 				CA9BB9E92CABB12700886A1A /* NavigationStackPath.swift in Sources */,
 				CAEDDAC62CB5757E0046162D /* FindPasswordView.swift in Sources */,
 				CA17FC702CB005800050250B /* MainCustomTabView.swift in Sources */,
-				CA1DDD3B2CB0E7A900C84D08 /* LottieView.swift in Sources */,
+				CA1DDD3B2CB0E7A900C84D08 /* LottieViewRouter.swift in Sources */,
 				CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */,
 				CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */,
 				CAEE164B2CAD082500210BD0 /* User.swift in Sources */,

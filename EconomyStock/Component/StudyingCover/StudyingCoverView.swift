@@ -16,7 +16,7 @@ struct StudyingCoverView: View {
     var body: some View {
         VStack {
             HStack(spacing: 0) {
-                LottieView(fileName: lottieFileName, loopMode: .loop)
+                LottieViewRouter(fileName: lottieFileName, loopMode: .loop)
                     .scaleEffect(0.7)
                 
                 Text(title)

@@ -8,7 +8,7 @@
 import SwiftUI
 import Lottie
 
-struct LottieView: UIViewRepresentable {
+struct LottieViewRouter: UIViewRepresentable {
     let fileName: String
     let loopMode: LottieLoopMode
     var toProgress: CGFloat

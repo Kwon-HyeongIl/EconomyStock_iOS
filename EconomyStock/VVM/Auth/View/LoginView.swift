@@ -126,7 +126,7 @@ struct LoginView: View {
         }
         .overlay {
             if viewModel.loadingBarState {
-                LottieView(fileName: "Loading", loopMode: .loop)
+                LottieViewRouter(fileName: "Loading", loopMode: .loop)
                     .scaleEffect(0.5)
                     .padding(.bottom, 60)
             }
