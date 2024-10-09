@@ -12,7 +12,7 @@ struct AccountSupportView: View {
         VStack {
             
         }
-        .modifier(NavigationBackTitleModifier(navigationTitle: "로그인"))
+        .modifier(NavigationBackTitleModifier(title: "로그인"))
     }
 }
 

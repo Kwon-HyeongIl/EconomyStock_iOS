@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NavigationBackTitleModifier: ViewModifier {
     @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
-    var navigationTitle: String
+    var title: String
     
     func body(content: Content) -> some View {
         content
@@ -27,7 +27,7 @@ struct NavigationBackTitleModifier: ViewModifier {
                 }
                 
                 ToolbarItem(placement: .principal) {
-                    Text(navigationTitle)
+                    Text(title)
                         .font(.system(size: 18))
                         .fontWeight(.semibold)
                 }

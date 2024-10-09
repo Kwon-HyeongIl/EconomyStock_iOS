@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CA10C02E2CAF85C1007DAB3A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CA10C02D2CAF85C1007DAB3A /* FirebaseMessaging */; };
+		CA114FD72CB62D2A00AD5AD9 /* StudyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA114FD62CB62D2A00AD5AD9 /* StudyViewModel.swift */; };
+		CA114FDA2CB62E7D00AD5AD9 /* NavigationTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA114FD92CB62E7D00AD5AD9 /* NavigationTitleModifier.swift */; };
+		CA114FDD2CB631A500AD5AD9 /* StudyingCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA114FDC2CB631A500AD5AD9 /* StudyingCoverView.swift */; };
 		CA17FC702CB005800050250B /* MainCustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC6F2CB005800050250B /* MainCustomTabView.swift */; };
 		CA17FC722CB005A10050250B /* MainTabCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC712CB005A10050250B /* MainTabCapsule.swift */; };
 		CA17FC752CB005DB0050250B /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC742CB005DB0050250B /* MainTab.swift */; };
@@ -74,6 +77,9 @@
 
 /* Begin PBXFileReference section */
 		CA10C02C2CAF782E007DAB3A /* EconomyStock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EconomyStock.entitlements; sourceTree = "<group>"; };
+		CA114FD62CB62D2A00AD5AD9 /* StudyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewModel.swift; sourceTree = "<group>"; };
+		CA114FD92CB62E7D00AD5AD9 /* NavigationTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleModifier.swift; sourceTree = "<group>"; };
+		CA114FDC2CB631A500AD5AD9 /* StudyingCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyingCoverView.swift; sourceTree = "<group>"; };
 		CA17FC6F2CB005800050250B /* MainCustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCustomTabView.swift; sourceTree = "<group>"; };
 		CA17FC712CB005A10050250B /* MainTabCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCapsule.swift; sourceTree = "<group>"; };
 		CA17FC742CB005DB0050250B /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
@@ -177,6 +183,7 @@
 		CA114FD42CB6248C00AD5AD9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CA114FD62CB62D2A00AD5AD9 /* StudyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -186,6 +193,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA114FDB2CB6318200AD5AD9 /* StudyingCover */ = {
+			isa = PBXGroup;
+			children = (
+				CA114FDC2CB631A500AD5AD9 /* StudyingCoverView.swift */,
+			);
+			path = StudyingCover;
 			sourceTree = "<group>";
 		};
 		CA17FC6E2CB0056B0050250B /* Tab */ = {
@@ -330,6 +345,7 @@
 			children = (
 				CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */,
 				CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */,
+				CA114FD92CB62E7D00AD5AD9 /* NavigationTitleModifier.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -377,6 +393,7 @@
 		CA9BB9C32CABA59A00886A1A /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				CA114FDB2CB6318200AD5AD9 /* StudyingCover */,
 				CA3BBAAF2CB502AC007CA152 /* Modifier */,
 				CA1DDD392CB0E79900C84D08 /* Lottie */,
 				CA17FC732CB005C50050250B /* Capsule */,
@@ -759,6 +776,7 @@
 				CA77DFD22CB26D0100992829 /* CustomError.swift in Sources */,
 				CAEDDABD2CB56C330046162D /* BasicLoginView.swift in Sources */,
 				CA17FC812CB00AC60050250B /* NewsView.swift in Sources */,
+				CA114FDD2CB631A500AD5AD9 /* StudyingCoverView.swift in Sources */,
 				CAEDDACC2CB575BD0046162D /* FindPasswordViewModel.swift in Sources */,
 				CA3BBAB42CB50414007CA152 /* NavigationBackModifier.swift in Sources */,
 				CA9BB9CD2CABA59A00886A1A /* EconomyStockApp.swift in Sources */,
@@ -772,6 +790,8 @@
 				CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */,
 				CAEE164B2CAD082500210BD0 /* User.swift in Sources */,
 				CA17FC772CB009680050250B /* TitleColor.swift in Sources */,
+				CA114FD72CB62D2A00AD5AD9 /* StudyViewModel.swift in Sources */,
+				CA114FDA2CB62E7D00AD5AD9 /* NavigationTitleModifier.swift in Sources */,
 				CAEDDAB92CB53B3F0046162D /* BasicSignupFocusField.swift in Sources */,
 				CAEE164F2CAD096C00210BD0 /* NotificationType.swift in Sources */,
 				CA3BBAAE2CB50144007CA152 /* BasicSignupViewModel.swift in Sources */,

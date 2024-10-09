@@ -255,7 +255,7 @@ struct BasicSignupView: View {
                     .padding(.bottom, 60)
             }
         }
-        .modifier(NavigationBackTitleModifier(navigationTitle: isUsernameTextFieldShowing ? "닉네임을 입력해주세요" : (isPasswordTextFieldShowing ? "비밀번호를 입력해주세요" : "이메일을 입력해주세요")))
+        .modifier(NavigationBackTitleModifier(title: isUsernameTextFieldShowing ? "닉네임을 입력해주세요" : (isPasswordTextFieldShowing ? "비밀번호를 입력해주세요" : "이메일을 입력해주세요")))
     }
 }
 

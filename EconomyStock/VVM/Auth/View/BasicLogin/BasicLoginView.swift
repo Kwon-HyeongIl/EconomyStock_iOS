@@ -143,7 +143,7 @@ struct BasicLoginView: View {
                     .padding(.top, 280)
             }
         }
-        .modifier(NavigationBackTitleModifier(navigationTitle: "로그인"))
+        .modifier(NavigationBackTitleModifier(title: "로그인"))
     }
 }
 

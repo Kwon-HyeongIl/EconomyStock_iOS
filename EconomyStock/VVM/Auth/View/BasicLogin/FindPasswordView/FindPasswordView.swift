@@ -12,7 +12,7 @@ struct FindPasswordView: View {
         VStack {
             
         }
-        .modifier(NavigationBackTitleModifier(navigationTitle: "비밀번호 찾기"))
+        .modifier(NavigationBackTitleModifier(title: "비밀번호 찾기"))
     }
 }
 
