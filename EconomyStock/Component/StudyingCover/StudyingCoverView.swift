@@ -11,6 +11,7 @@ struct StudyingCoverView: View {
     let title: String
     let lottieFileName: String
     let backgroundColor: Color
+    let isFinished: Bool
     
     var body: some View {
         VStack {
@@ -22,7 +23,17 @@ struct StudyingCoverView: View {
                     .foregroundStyle(.white)
                     .font(.system(size: 30))
                     .fontWeight(.bold)
-                    .padding(.trailing, 80)
+                    .padding(.trailing, 35)
+                
+                Image(systemName: "checkmark.seal")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 35)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.green)
+                    .padding(.bottom, 120)
+                    .padding(.trailing, 12)
+                    .opacity(isFinished ? 1.0 : 0)
             }
             
         }
@@ -35,5 +46,5 @@ struct StudyingCoverView: View {
 }
 
 #Preview {
-    StudyingCoverView(title: "기초 경제", lottieFileName: "BasicEconomyCover", backgroundColor: .yellow)
+    StudyingCoverView(title: "기초 경제", lottieFileName: "BasicEconomyCover", backgroundColor: .yellow, isFinished: true)
 }

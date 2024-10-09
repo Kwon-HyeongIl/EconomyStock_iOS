@@ -56,6 +56,8 @@
 		CA9BB9E02CABAACF00886A1A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CA9BB9DF2CABAACF00886A1A /* FirebaseStorage */; };
 		CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */; };
 		CA9BB9E92CABB12700886A1A /* NavigationStackPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9E82CABB12700886A1A /* NavigationStackPath.swift */; };
+		CAD101D72CB6803400CA9C6A /* StudyingCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101D62CB6803400CA9C6A /* StudyingCourse.swift */; };
+		CAD101DA2CB6853200CA9C6A /* NavigationGestureEnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */; };
 		CAEDDAB92CB53B3F0046162D /* BasicSignupFocusField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDAB82CB53B3E0046162D /* BasicSignupFocusField.swift */; };
 		CAEDDABD2CB56C330046162D /* BasicLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDABC2CB56C330046162D /* BasicLoginView.swift */; };
 		CAEDDABF2CB56C4D0046162D /* BasicLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDABE2CB56C4D0046162D /* BasicLoginViewModel.swift */; };
@@ -121,6 +123,8 @@
 		CA9BB9D62CABA94400886A1A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		CA9BB9E82CABB12700886A1A /* NavigationStackPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackPath.swift; sourceTree = "<group>"; };
+		CAD101D62CB6803400CA9C6A /* StudyingCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyingCourse.swift; sourceTree = "<group>"; };
+		CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationGestureEnable.swift; sourceTree = "<group>"; };
 		CAEDDAB82CB53B3E0046162D /* BasicSignupFocusField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSignupFocusField.swift; sourceTree = "<group>"; };
 		CAEDDABC2CB56C330046162D /* BasicLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLoginView.swift; sourceTree = "<group>"; };
 		CAEDDABE2CB56C4D0046162D /* BasicLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLoginViewModel.swift; sourceTree = "<group>"; };
@@ -426,6 +430,7 @@
 		CA9BB9C32CABA59A00886A1A /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				CAD101D82CB6851200CA9C6A /* NavigationGesture */,
 				CA114FDB2CB6318200AD5AD9 /* StudyingCover */,
 				CA3BBAAF2CB502AC007CA152 /* Modifier */,
 				CA1DDD392CB0E79900C84D08 /* Lottie */,
@@ -514,6 +519,7 @@
 		CA9BB9E52CABAF1B00886A1A /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				CAD101D52CB6800F00CA9C6A /* StudyingCourse */,
 				CA77DFD02CB26CF100992829 /* Error */,
 				CAEDDACF2CB575DB0046162D /* Navigation */,
 				CAEDDAD02CB575E20046162D /* Notification */,
@@ -521,6 +527,22 @@
 				CAEDDAC02CB570610046162D /* FocusField */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		CAD101D52CB6800F00CA9C6A /* StudyingCourse */ = {
+			isa = PBXGroup;
+			children = (
+				CAD101D62CB6803400CA9C6A /* StudyingCourse.swift */,
+			);
+			path = StudyingCourse;
+			sourceTree = "<group>";
+		};
+		CAD101D82CB6851200CA9C6A /* NavigationGesture */ = {
+			isa = PBXGroup;
+			children = (
+				CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */,
+			);
+			path = NavigationGesture;
 			sourceTree = "<group>";
 		};
 		CAEDDABA2CB56C020046162D /* BasicLogin */ = {
@@ -802,6 +824,7 @@
 				CA9BB9CC2CABA59A00886A1A /* ContentView.swift in Sources */,
 				CA3BBAA82CB50063007CA152 /* BasicSignupView.swift in Sources */,
 				CAEDDABF2CB56C4D0046162D /* BasicLoginViewModel.swift in Sources */,
+				CAD101D72CB6803400CA9C6A /* StudyingCourse.swift in Sources */,
 				CA114FE02CB6393F00AD5AD9 /* BasicEconomyCourseView.swift in Sources */,
 				CA77DFCF2CB256DD00992829 /* LoginViewModel+Google.swift in Sources */,
 				CA17FC7F2CB00ABE0050250B /* StudyingView.swift in Sources */,
@@ -813,6 +836,7 @@
 				CA17FC812CB00AC60050250B /* NewsView.swift in Sources */,
 				CA114FDD2CB631A500AD5AD9 /* StudyingCoverView.swift in Sources */,
 				CAEDDACC2CB575BD0046162D /* FindPasswordViewModel.swift in Sources */,
+				CAD101DA2CB6853200CA9C6A /* NavigationGestureEnable.swift in Sources */,
 				CA3BBAB42CB50414007CA152 /* NavigationBackModifier.swift in Sources */,
 				CA9BB9CD2CABA59A00886A1A /* EconomyStockApp.swift in Sources */,
 				CA3BBAB12CB5035E007CA152 /* LongButtonModifier.swift in Sources */,

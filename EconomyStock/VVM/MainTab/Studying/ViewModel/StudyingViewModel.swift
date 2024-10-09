@@ -9,9 +9,19 @@ import SwiftUI
 
 @Observable
 class StudyingViewModel {
-    let studyingItems: [StudyingItem] = [
-        StudyingItem(title: "기초 경제", lottieFileName: "BasicEconomyCover", backgroundColor: .yellow, destination: .BasicEconomyCourseView)
-    ]
+    var studyingItems: [StudyingItem] = []
+    
+    init() {
+        let currentUser = AuthManager.shared.currentUser
+        
+        var tempStudyingItems: [StudyingItem] = []
+        
+        tempStudyingItems.append(StudyingItem(title: "기초 경제", lottieFileName: "BasicEconomyCover", backgroundColor: .yellow, destination: .BasicEconomyCourseView, isFinihed: currentUser?.studyingCourse.contains(.BasicEconomy) ?? false))
+        
+        // 다른 항목들 추가
+        
+        self.studyingItems = tempStudyingItems
+    }
 }
 
 struct StudyingItem: Identifiable {
@@ -20,4 +30,5 @@ struct StudyingItem: Identifiable {
     let lottieFileName: String
     let backgroundColor: Color
     let destination: NavigationStackPath
+    var isFinihed: Bool
 }
