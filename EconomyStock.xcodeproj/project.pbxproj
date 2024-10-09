@@ -152,6 +152,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA114FC42CB6218900AD5AD9 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				CA77DFCC2CB24D0900992829 /* Loading.json */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		CA114FD22CB6246E00AD5AD9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA114FD32CB6247A00AD5AD9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA114FD42CB6248C00AD5AD9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA114FD52CB6249500AD5AD9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		CA17FC6E2CB0056B0050250B /* Tab */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				CA17FC842CB00ADB0050250B /* View */,
+				CA114FD52CB6249500AD5AD9 /* ViewModel */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -181,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				CA17FC852CB00AE00050250B /* View */,
+				CA114FD42CB6248C00AD5AD9 /* ViewModel */,
 			);
 			path = Study;
 			sourceTree = "<group>";
@@ -189,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				CA17FC862CB00AE40050250B /* View */,
+				CA114FD32CB6247A00AD5AD9 /* ViewModel */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -197,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				CA17FC872CB00AE70050250B /* View */,
+				CA114FD22CB6246E00AD5AD9 /* ViewModel */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -305,7 +345,7 @@
 		CA77DFCB2CB24D0100992829 /* Json */ = {
 			isa = PBXGroup;
 			children = (
-				CA77DFCC2CB24D0900992829 /* Loading.json */,
+				CA114FC42CB6218900AD5AD9 /* Loading */,
 			);
 			path = Json;
 			sourceTree = "<group>";

@@ -43,6 +43,7 @@ struct BasicLoginView: View {
                     .frame(height: 2)
                     .padding(.horizontal, 20)
             }
+            .padding(.top, 5)
             .padding(.bottom)
             
             VStack(spacing: 0) {
@@ -91,7 +92,7 @@ struct BasicLoginView: View {
             }
             .alert("로그인 실패", isPresented: $alertLogin) {
                 Button {
-                    
+                    loadingBarState = false
                 } label: {
                     Text("확인")
                 }

@@ -24,8 +24,10 @@ struct User: Codable, Identifiable, Hashable, Equatable {
     
     var isNotificationBadge: Bool?
     var notificationType: [NotificationType]
+    
+    var studyingPercentage: Double
 }
 
 extension User {
-    static var DUMMY_USER: User = User(id: UUID().uuidString, deviceToken: "test", username: "행이", authEmail: "test@naver.com", notificationType: [.empty])
+    static var DUMMY_USER: User = User(id: UUID().uuidString, deviceToken: "test", username: "행이", authEmail: "test@naver.com", notificationType: [.empty], studyingPercentage: 0.0)
 }
