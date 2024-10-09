@@ -250,7 +250,7 @@ struct BasicSignupView: View {
         }
         .overlay {
             if loadingBarState {
-                LottieViewConverter(fileName: "Loading", loopMode: .loop, width: 100, height: 100)
+                LottieViewConverter(fileName: "Loading", loopMode: .loop, width: 150, height: 150)
                     .padding(.bottom, 60)
             }
         }
