@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Page1BasicEconomyView: View {
-    @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
+    @Environment(NavigationRouter.self) var navigationRouter
     @Bindable var viewModel: CourseViewModel
     
     var body: some View {

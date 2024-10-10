@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StudyingView: View {
-    @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
+    @Environment(NavigationRouter.self) var navigationRouter
     @State private var viewModel = StudyingViewModel()
     
     var body: some View {

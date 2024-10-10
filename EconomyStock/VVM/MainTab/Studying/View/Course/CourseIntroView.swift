@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CourseIntroView: View {
-    @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
-    @Environment(MainTabCapsule.self) var mainTabCapsule: MainTabCapsule
+    @Environment(NavigationRouter.self) var navigationRouter
+    @Environment(MainTabCapsule.self) var mainTabCapsule
     @Bindable var viewModel: CourseViewModel
     
     var body: some View {
