@@ -10,7 +10,7 @@ import SwiftUI
 struct CourseIntroView: View {
     @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
     @Environment(MainTabCapsule.self) var mainTabCapsule: MainTabCapsule
-    @Environment(CourseViewModel.self) var viewModel: CourseViewModel
+    @Bindable var viewModel: CourseViewModel
     
     var body: some View {
         ScrollView {
@@ -30,7 +30,7 @@ struct CourseIntroView: View {
                 }
                 
                 Button {
-//                    navigationRouter.navigate(.Page1View)
+                    navigationRouter.navigate(.Page1BasicEconomyView)
                 } label: {
                     Text("시작하기")
                         .modifier(ShortButtonModifier())
@@ -60,12 +60,12 @@ struct CourseIntroView: View {
             }
         }
         .scrollIndicators(.never)
+        .environment(viewModel)
     }
 }
 
 #Preview {
-    CourseIntroView()
+    CourseIntroView(viewModel: CourseViewModel(course: .DUMMY_COURSE))
         .environment(NavigationRouter())
         .environment(MainTabCapsule())
-        .environment(CourseViewModel(course: .DUMMY_COURSE))
 }

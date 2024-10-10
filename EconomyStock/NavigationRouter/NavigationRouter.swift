@@ -26,8 +26,8 @@ class NavigationRouter {
             AccountSupportView()
             
         // Studying
-        case .CourseIntroView:
-            CourseIntroView()
+        case .CourseIntroView(let viewModel):
+            CourseIntroView(viewModel: viewModel)
         
         case .Page1BasicEconomyView:
             Page1BasicEconomyView()

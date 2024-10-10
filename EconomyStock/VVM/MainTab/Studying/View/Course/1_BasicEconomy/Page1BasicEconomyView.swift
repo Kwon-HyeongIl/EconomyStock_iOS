@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Page1BasicEconomyView: View {
+    @Environment(CourseViewModel.self) var viewModel: CourseViewModel
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -15,4 +17,5 @@ struct Page1BasicEconomyView: View {
 
 #Preview {
     Page1BasicEconomyView()
+        .environment(CourseViewModel(course: .DUMMY_COURSE))
 }

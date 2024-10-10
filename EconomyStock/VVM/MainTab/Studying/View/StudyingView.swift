@@ -17,9 +17,6 @@ struct StudyingView: View {
                 ForEach(viewModel.courses) { course in
                     CourseCoverView(course: course)
                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
-                        .onTapGesture {
-                            navigationRouter.navigate(.CourseIntroView)
-                        }
                 }
             }
         }
