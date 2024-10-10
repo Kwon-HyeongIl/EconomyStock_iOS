@@ -30,7 +30,7 @@ struct CourseIntroView: View {
                 }
                 
                 Button {
-                    navigationRouter.navigate(.Page1BasicEconomyView(viewModel))
+                    navigationRouter.navigate(.BasicEconomy1View(viewModel))
                 } label: {
                     Text("시작하기")
                         .modifier(ShortButtonModifier())

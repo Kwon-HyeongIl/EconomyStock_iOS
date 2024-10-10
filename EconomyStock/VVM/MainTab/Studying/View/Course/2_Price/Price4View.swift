@@ -1,18 +1,18 @@
 //
-//  BasicEconomyPage4.swift
+//  Price4View.swift
 //  EconomyStock
 //
-//  Created by 권형일 on 10/10/24.
+//  Created by 권형일 on 10/11/24.
 //
 
 import SwiftUI
 
-struct Page4BasicEconomyView: View {
+struct Price4View: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    Page4BasicEconomyView()
+    Price4View()
 }

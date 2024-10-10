@@ -26,7 +26,7 @@ class StudyingViewModel {
         let basicEconomyTotalPage = 12.0
         let basicEconomyProgressRate = (basicEconomyCurrentPage / basicEconomyTotalPage) * 100.0
         
-        tempCorses.append(Course(id: UUID().uuidString, title: "기초 경제", description: "설명입니다", lottieFileName: "BasicEconomyCover", backgroundGradient: basicEconomyGradient, progressRate: basicEconomyProgressRate))
+        tempCorses.append(Course(id: UUID().uuidString, title: "기초 경제", number: "I", description: "설명입니다", lottieFileName: "BasicEconomyCover", backgroundGradient: basicEconomyGradient, progressRate: basicEconomyProgressRate))
         
         // 다른 항목들 추가
         

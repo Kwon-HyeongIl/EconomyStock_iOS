@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Page1BasicEconomyView: View {
+struct BasicEconomy1View: View {
     @Environment(NavigationRouter.self) var navigationRouter
     @Bindable var viewModel: CourseViewModel
     
@@ -20,5 +20,5 @@ struct Page1BasicEconomyView: View {
 }
 
 #Preview {
-    Page1BasicEconomyView(viewModel: CourseViewModel(course: .DUMMY_COURSE))
+    BasicEconomy1View(viewModel: CourseViewModel(course: .DUMMY_COURSE))
 }

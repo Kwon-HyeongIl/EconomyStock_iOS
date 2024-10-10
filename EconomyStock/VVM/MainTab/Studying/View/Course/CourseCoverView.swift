@@ -24,12 +24,18 @@ struct CourseCoverView: View {
                     HStack(spacing: 0) {
                         LottieViewConverter(fileName: viewModel.course.lottieFileName, loopMode: .loop, width: 140, height: 140)
                         
+                        Text(viewModel.course.number)
+                            .font(.system(size: 38, design: .serif))
+                            .foregroundStyle(.white)
+                            .fontWeight(.bold)
+                            .padding(.bottom, 2)
+                        
                         Text(viewModel.course.title)
                             .foregroundStyle(.white)
                             .font(.system(size: 32))
                             .fontWeight(.bold)
                             .padding(.trailing, 55)
-                            .padding(.leading, 20)
+                            .padding(.leading, 10)
                     }
                     
                     HStack {

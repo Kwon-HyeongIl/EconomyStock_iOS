@@ -17,10 +17,5 @@ enum NavigationStackPath: Hashable {
     // Studying
     case CourseIntroView(CourseViewModel)
     
-    case Page1BasicEconomyView(CourseViewModel)
-//    case Page2BasicEconomyView(CourseViewModel)
-//    case Page3BasicEconomyView(CourseViewModel)
-//    case Page4BasicEconomyView(CourseViewModel)
-//    case Page5BasicEconomyView(CourseViewModel)
-    
+    case BasicEconomy1View(CourseViewModel)
 }
