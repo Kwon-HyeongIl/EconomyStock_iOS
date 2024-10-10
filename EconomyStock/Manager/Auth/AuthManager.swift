@@ -50,7 +50,7 @@ class AuthManager {
     
     private func uploadUserData(userId: String, email: String, username: String, appleHashedUid: String = "", googleHashedUid: String = "", kakaoHashedUid: String = "") async {
         let deviceToken = FCMManager.shared.myDeviceToken ?? ""
-        let studyingCourse = StudyingCourse(BasicEconomy: 0.0)
+        let studyingCourse = StudyingCourse(BasicEconomyCurrentPage: 0)
         
         await MainActor.run {
             if appleHashedUid.isEmpty && googleHashedUid.isEmpty && kakaoHashedUid.isEmpty {

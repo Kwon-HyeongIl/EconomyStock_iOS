@@ -16,11 +16,17 @@ class StudyingViewModel {
         
         var tempStudyingItems: [StudyingItem] = []
         
-        let BasicEconomyGradient = LinearGradient(
+        // 기초 경제
+        let basicEconomyGradient = LinearGradient(
             gradient: Gradient(colors: [Color.yellow, Color.orange]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing)
-        tempStudyingItems.append(StudyingItem(title: "기초 경제", lottieFileName: "BasicEconomyCover", backgroundGradient: BasicEconomyGradient, destination: .BasicEconomyCourseView, progressRate: currentUser?.studyingCourse.BasicEconomy ?? 0.0))
+        
+        let basicEconomyCurrentPage = Double(currentUser?.studyingCourse.BasicEconomyCurrentPage ?? 0)
+        let basicEconomyTotalPage = 12.0
+        let basicEconomyProgressRate = (basicEconomyCurrentPage / basicEconomyTotalPage) * 100.0
+        
+        tempStudyingItems.append(StudyingItem(title: "기초 경제", lottieFileName: "BasicEconomyCover", backgroundGradient: basicEconomyGradient, destination: .BasicEconomyCourseIntroductionView, progressRate: basicEconomyProgressRate))
         
         // 다른 항목들 추가
         

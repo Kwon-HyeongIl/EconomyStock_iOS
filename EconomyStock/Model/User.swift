@@ -30,5 +30,5 @@ struct User: Codable, Identifiable, Hashable, Equatable {
 }
 
 extension User {
-    static var DUMMY_USER: User = User(id: UUID().uuidString, deviceToken: "test", username: "행이", authEmail: "test@naver.com", notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse(BasicEconomy: 100.0))
+    static var DUMMY_USER: User = User(id: UUID().uuidString, deviceToken: "test", username: "행이", authEmail: "test@naver.com", notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse(BasicEconomyCurrentPage: 12))
 }

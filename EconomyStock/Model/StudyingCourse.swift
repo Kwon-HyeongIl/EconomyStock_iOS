@@ -8,5 +8,5 @@
 import Foundation
 
 struct StudyingCourse: Codable, Hashable, Equatable {
-    var BasicEconomy: Double
+    var BasicEconomyCurrentPage: Int
 }

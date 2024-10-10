@@ -15,6 +15,9 @@ class BasicEconomyCourseViewModel {
     
     init() {
         self.currentUser = AuthManager.shared.currentUser
-        self.progressRate = currentUser?.studyingCourse.BasicEconomy ?? 0.0
+        
+        let currentPage = Double(currentUser?.studyingCourse.BasicEconomyCurrentPage ?? 0)
+        let totalPage = 12.0
+        self.progressRate = (currentPage / totalPage) * 100.0   
     }
 }
