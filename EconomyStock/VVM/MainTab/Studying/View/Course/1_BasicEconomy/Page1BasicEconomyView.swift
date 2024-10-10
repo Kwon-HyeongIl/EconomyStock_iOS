@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct Page1BasicEconomyView: View {
-    @Environment(CourseViewModel.self) var viewModel: CourseViewModel
+    @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
+    @Bindable var viewModel: CourseViewModel
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        }
+        .modifier(NavigationBackModifier())
     }
 }
 
 #Preview {
-    Page1BasicEconomyView()
-        .environment(CourseViewModel(course: .DUMMY_COURSE))
+    Page1BasicEconomyView(viewModel: CourseViewModel(course: .DUMMY_COURSE))
 }

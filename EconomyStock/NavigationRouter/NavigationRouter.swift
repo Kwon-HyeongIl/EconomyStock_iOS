@@ -29,16 +29,16 @@ class NavigationRouter {
         case .CourseIntroView(let viewModel):
             CourseIntroView(viewModel: viewModel)
         
-        case .Page1BasicEconomyView:
-            Page1BasicEconomyView()
-        case .Page2BasicEconomyView:
-            Page2BasicEconomyView()
-        case .Page3BasicEconomyView:
-            Page3BasicEconomyView()
-        case .Page4BasicEconomyView:
-            Page4BasicEconomyView()
-        case .Page5BasicEconomyView:
-            Page5BasicEconomyView()
+        case .Page1BasicEconomyView(let viewModel):
+            Page1BasicEconomyView(viewModel: viewModel)
+//        case .Page2BasicEconomyView(let viewModel):
+//            Page2BasicEconomyView(viewModel: viewModel)
+//        case .Page3BasicEconomyView(let viewModel):
+//            Page3BasicEconomyView(viewModel: viewModel)
+//        case .Page4BasicEconomyView(let viewModel):
+//            Page4BasicEconomyView(viewModel: viewModel)
+//        case .Page5BasicEconomyView(let viewModel):
+//            Page5BasicEconomyView(viewModel: viewModel)
         }
     }
     
