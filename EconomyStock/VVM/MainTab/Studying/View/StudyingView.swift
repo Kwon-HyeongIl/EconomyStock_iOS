@@ -14,11 +14,11 @@ struct StudyingView: View {
     var body: some View {
         ScrollView {
             LazyVStack {
-                ForEach(viewModel.studyingItems) { item in
-                    StudyingCoverView(title: item.title, lottieFileName: item.lottieFileName, backgroundGradient: item.backgroundGradient, progressRate: item.progressRate)
+                ForEach(viewModel.courses) { course in
+                    CourseCoverView(course: course)
                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                         .onTapGesture {
-                            navigationRouter.navigate(item.destination)
+                            navigationRouter.navigate(.CourseIntroView)
                         }
                 }
             }

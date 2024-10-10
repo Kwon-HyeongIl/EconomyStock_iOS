@@ -26,19 +26,19 @@ class NavigationRouter {
             AccountSupportView()
             
         // Studying
-        // // BasicEconomy
-        case .BasicEconomyCourseIntroductionView:
-            BasicEconomyCourseIntroductionView()
-        case .Page1View:
-            Page1View()
-        case .Page2View:
-            Page2View()
-        case .Page3View:
-            Page3View()
-        case .Page4View:
-            Page4View()
-        case .Page5View:
-            Page5View()
+        case .CourseIntroView:
+            CourseIntroView()
+        
+        case .Page1BasicEconomyView:
+            Page1BasicEconomyView()
+        case .Page2BasicEconomyView:
+            Page2BasicEconomyView()
+        case .Page3BasicEconomyView:
+            Page3BasicEconomyView()
+        case .Page4BasicEconomyView:
+            Page4BasicEconomyView()
+        case .Page5BasicEconomyView:
+            Page5BasicEconomyView()
         }
     }
     

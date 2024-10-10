@@ -1,37 +1,36 @@
 //
-//  Course1View.swift
+//  CourseIntroView.swift
 //  EconomyStock
 //
-//  Created by 권형일 on 10/9/24.
+//  Created by 권형일 on 10/10/24.
 //
 
 import SwiftUI
 
-struct BasicEconomyCourseIntroductionView: View {
+struct CourseIntroView: View {
     @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
-    @Environment(MainTabCapsule.self) var mainTabCapsule
-    
-    @State private var viewModel = BasicEconomyCourseViewModel()
+    @Environment(MainTabCapsule.self) var mainTabCapsule: MainTabCapsule
+    @Environment(CourseViewModel.self) var viewModel: CourseViewModel
     
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
-                LottieViewConverter(fileName: "BasicEconomyCover", loopMode: .loop, width: 200, height: 200)
+                LottieViewConverter(fileName: viewModel.course.lottieFileName, loopMode: .loop, width: 200, height: 200)
                 
                 ZStack {
-                    Text("기초 경제")
+                    Text(viewModel.course.title)
                         .font(.system(size: 35))
                         .fontWeight(.bold)
                         .foregroundStyle(.black)
                         .padding(.bottom)
                     
-                    ProgressCircleView(progressRate: viewModel.progressRate)
+                    ProgressCircleView(progressRate: viewModel.course.progressRate)
                         .padding(.leading, 180)
                         .padding(.bottom)
                 }
                 
                 Button {
-                    navigationRouter.navigate(.Page1View)
+//                    navigationRouter.navigate(.Page1View)
                 } label: {
                     Text("시작하기")
                         .modifier(ShortButtonModifier())
@@ -39,7 +38,7 @@ struct BasicEconomyCourseIntroductionView: View {
                 }
                 
                 VStack {
-                    Text("내용 목차")
+                    Text(viewModel.course.description)
                 }
                 .modifier(TileModifier(height: 400))
             }
@@ -61,14 +60,12 @@ struct BasicEconomyCourseIntroductionView: View {
             }
         }
         .scrollIndicators(.never)
-        .environment(viewModel)
     }
 }
 
 #Preview {
-    BasicEconomyCourseIntroductionView()
+    CourseIntroView()
         .environment(NavigationRouter())
         .environment(MainTabCapsule())
+        .environment(CourseViewModel(course: .DUMMY_COURSE))
 }
-
-
