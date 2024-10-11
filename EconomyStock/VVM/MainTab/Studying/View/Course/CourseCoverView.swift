@@ -31,14 +31,17 @@ struct CourseCoverView: View {
                                 .foregroundStyle(.white)
                                 .fontWeight(.semibold)
                                 .padding(.bottom, 2)
+                                
                             
                             Text(viewModel.course.title)
                                 .foregroundStyle(.white)
                                 .font(.system(size: 32))
                                 .fontWeight(.bold)
                                 .padding(.leading, 10)
+                            
+                            Spacer()
                         }
-                        .padding(.leading, 80)
+                        .padding(.leading, 170)
                     }
                     
                     HStack {
