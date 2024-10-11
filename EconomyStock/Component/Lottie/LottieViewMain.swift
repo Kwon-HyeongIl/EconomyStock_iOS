@@ -18,7 +18,7 @@ struct LottieViewMain: UIViewRepresentable {
         let animationView = LottieAnimationView(name: fileName)
         
         animationView.loopMode = loopMode
-        animationView.animationSpeed = LottieSpeedRouter.route(fileName: fileName)
+        animationView.animationSpeed = LottieRouter.speedRoute(fileName: fileName)
         animationView.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(animationView)
         
@@ -46,6 +46,7 @@ struct LottieViewConverter: View {
     var body: some View {
         VStack {
             LottieViewMain(fileName: fileName, loopMode: loopMode, toProgress: toProgress)
+                .scaleEffect(LottieRouter.scaleRoute(fileName: fileName))
         }
         .frame(width: width, height: height)
     }

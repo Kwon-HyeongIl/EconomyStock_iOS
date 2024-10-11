@@ -67,8 +67,8 @@
 		CA9BB9E02CABAACF00886A1A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CA9BB9DF2CABAACF00886A1A /* FirebaseStorage */; };
 		CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */; };
 		CA9BB9E92CABB12700886A1A /* NavigationStackPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9E82CABB12700886A1A /* NavigationStackPath.swift */; };
-		CAACDE2B2CB8BB28004234FF /* PriceLevelCourseCover.json in Resources */ = {isa = PBXBuildFile; fileRef = CAACDE2A2CB8BB28004234FF /* PriceLevelCourseCover.json */; };
-		CAACDE2D2CB8BBBA004234FF /* LottieSpeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACDE2C2CB8BBBA004234FF /* LottieSpeedRouter.swift */; };
+		CAACDE2D2CB8BBBA004234FF /* LottieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACDE2C2CB8BBBA004234FF /* LottieRouter.swift */; };
+		CAAE54182CB8E34200B5352D /* PriceLevelCourseCover.json in Resources */ = {isa = PBXBuildFile; fileRef = CAAE54172CB8E34200B5352D /* PriceLevelCourseCover.json */; };
 		CAD101DA2CB6853200CA9C6A /* NavigationGestureEnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */; };
 		CAD101DE2CB68DFA00CA9C6A /* TileModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101DD2CB68DFA00CA9C6A /* TileModifier.swift */; };
 		CAD101E22CB6905F00CA9C6A /* ShortButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */; };
@@ -149,8 +149,8 @@
 		CA9BB9D62CABA94400886A1A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		CA9BB9E82CABB12700886A1A /* NavigationStackPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackPath.swift; sourceTree = "<group>"; };
-		CAACDE2A2CB8BB28004234FF /* PriceLevelCourseCover.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevelCourseCover.json; sourceTree = "<group>"; };
-		CAACDE2C2CB8BBBA004234FF /* LottieSpeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieSpeedRouter.swift; sourceTree = "<group>"; };
+		CAACDE2C2CB8BBBA004234FF /* LottieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieRouter.swift; sourceTree = "<group>"; };
+		CAAE54172CB8E34200B5352D /* PriceLevelCourseCover.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevelCourseCover.json; sourceTree = "<group>"; };
 		CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationGestureEnable.swift; sourceTree = "<group>"; };
 		CAD101DD2CB68DFA00CA9C6A /* TileModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileModifier.swift; sourceTree = "<group>"; };
 		CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortButtonModifier.swift; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				CA114FEE2CB64B0E00AD5AD9 /* BasicEconomyCourseCover.json */,
-				CAACDE2A2CB8BB28004234FF /* PriceLevelCourseCover.json */,
+				CAAE54172CB8E34200B5352D /* PriceLevelCourseCover.json */,
 			);
 			path = StudyingCover;
 			sourceTree = "<group>";
@@ -368,7 +368,7 @@
 			children = (
 				CA77DFCB2CB24D0100992829 /* Json */,
 				CA1DDD3A2CB0E7A900C84D08 /* LottieViewMain.swift */,
-				CAACDE2C2CB8BBBA004234FF /* LottieSpeedRouter.swift */,
+				CAACDE2C2CB8BBBA004234FF /* LottieRouter.swift */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -841,12 +841,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAACDE2B2CB8BB28004234FF /* PriceLevelCourseCover.json in Resources */,
 				CA9BB9CE2CABA59A00886A1A /* Preview Assets.xcassets in Resources */,
 				CA662BD22CAD79F0009E8D5F /* Config.xcconfig in Resources */,
 				CA77DFCD2CB24D0900992829 /* Loading.json in Resources */,
 				CAF2271D2CAE569B002868F4 /* GoogleService-Info.plist in Resources */,
 				CA9BB9CF2CABA59A00886A1A /* .gitignore in Resources */,
+				CAAE54182CB8E34200B5352D /* PriceLevelCourseCover.json in Resources */,
 				CA9BB9D02CABA59A00886A1A /* Assets.xcassets in Resources */,
 				CA114FEF2CB64B0E00AD5AD9 /* BasicEconomyCourseCover.json in Resources */,
 			);
@@ -876,7 +876,7 @@
 				CAEE16632CAD0D7200210BD0 /* LoginViewModel+Kakao.swift in Sources */,
 				CA58A4ED2CB6D9E900DB91BD /* ProgressCircleView.swift in Sources */,
 				CA17FC722CB005A10050250B /* MainTabCapsule.swift in Sources */,
-				CAACDE2D2CB8BBBA004234FF /* LottieSpeedRouter.swift in Sources */,
+				CAACDE2D2CB8BBBA004234FF /* LottieRouter.swift in Sources */,
 				CA9BB9D42CABA8C300886A1A /* SplashView.swift in Sources */,
 				CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */,
 				CAD101E42CB6959D00CA9C6A /* StudyingCourse.swift in Sources */,
