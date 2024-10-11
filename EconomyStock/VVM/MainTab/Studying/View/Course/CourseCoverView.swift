@@ -45,21 +45,9 @@ struct CourseCoverView: View {
                     }
                     
                     HStack {
-                        if viewModel.course.progressRate == 100.0 {
-                            Image(systemName: "checkmark.seal")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 35)
-                                .fontWeight(.semibold)
-                                .foregroundStyle(.green)
-                                .padding(.leading, 320)
-                                .padding(.bottom, 110)
-                            
-                        } else {
-                            ProgressCircleView(progressRate: viewModel.course.progressRate)
-                                .padding(.leading, 320)
-                                .padding(.bottom, 110)
-                        }
+                        ProgressCircleView(progressRate: viewModel.course.progressRate)
+                            .padding(.leading, 320)
+                            .padding(.bottom, 110)
                     }
                 }
                 

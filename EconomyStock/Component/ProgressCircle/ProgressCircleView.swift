@@ -13,25 +13,35 @@ struct ProgressCircleView: View {
     let progressRate: Double
 
     var body: some View {
-        ZStack {
-            // 배경 원 테두리
-            Circle()
-                .stroke(Color.gray.opacity(0.2), lineWidth: 4)
-                .frame(width: 30, height: 30)
-
-            // 진행률 원 테두리
-            Circle()
-                .trim(from: 0, to: animatedProgressRate / 100)
-                .stroke(Color.gray, lineWidth: 3)
-                .frame(width: 30, height: 30)
-                .rotationEffect(Angle(degrees: -90))
-
-            // 진행률 텍스트
-            AnimatableNumberText(value: animatedProgressRate)
-        }
-        .onAppear {
-            withAnimation(.easeOut(duration: 1.5)) {
-                animatedProgressRate = progressRate
+        if progressRate == 100.0 {
+            Image(systemName: "checkmark.seal")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 35)
+                .fontWeight(.semibold)
+                .foregroundStyle(.green)
+            
+        } else {
+            ZStack {
+                // 배경 원 테두리
+                Circle()
+                    .stroke(Color.gray.opacity(0.2), lineWidth: 4)
+                    .frame(width: 30, height: 30)
+                
+                // 진행률 원 테두리
+                Circle()
+                    .trim(from: 0, to: animatedProgressRate / 100)
+                    .stroke(Color.gray, lineWidth: 3)
+                    .frame(width: 30, height: 30)
+                    .rotationEffect(Angle(degrees: -90))
+                
+                // 진행률 텍스트
+                AnimatableNumberText(value: animatedProgressRate)
+            }
+            .onAppear {
+                withAnimation(.easeOut(duration: 1.5)) {
+                    animatedProgressRate = progressRate
+                }
             }
         }
     }
