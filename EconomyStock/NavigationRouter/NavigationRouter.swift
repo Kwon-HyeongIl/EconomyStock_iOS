@@ -31,6 +31,9 @@ class NavigationRouter {
         
         case .BasicEconomy1View(let viewModel):
             BasicEconomy1View(viewModel: viewModel)
+            
+        case .Price1View(let viewModel):
+            Price1View(viewModel: viewModel)
         }
     }
     

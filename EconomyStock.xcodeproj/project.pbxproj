@@ -16,7 +16,7 @@
 		CA114FD72CB62D2A00AD5AD9 /* StudyingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA114FD62CB62D2A00AD5AD9 /* StudyingViewModel.swift */; };
 		CA114FDA2CB62E7D00AD5AD9 /* NavigationTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA114FD92CB62E7D00AD5AD9 /* NavigationTitleModifier.swift */; };
 		CA114FDD2CB631A500AD5AD9 /* CourseCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA114FDC2CB631A500AD5AD9 /* CourseCoverView.swift */; };
-		CA114FEF2CB64B0E00AD5AD9 /* BasicEconomyCover.json in Resources */ = {isa = PBXBuildFile; fileRef = CA114FEE2CB64B0E00AD5AD9 /* BasicEconomyCover.json */; };
+		CA114FEF2CB64B0E00AD5AD9 /* BasicEconomyCourseCover.json in Resources */ = {isa = PBXBuildFile; fileRef = CA114FEE2CB64B0E00AD5AD9 /* BasicEconomyCourseCover.json */; };
 		CA17FC702CB005800050250B /* MainCustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC6F2CB005800050250B /* MainCustomTabView.swift */; };
 		CA17FC722CB005A10050250B /* MainTabCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC712CB005A10050250B /* MainTabCapsule.swift */; };
 		CA17FC752CB005DB0050250B /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC742CB005DB0050250B /* MainTab.swift */; };
@@ -67,6 +67,8 @@
 		CA9BB9E02CABAACF00886A1A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CA9BB9DF2CABAACF00886A1A /* FirebaseStorage */; };
 		CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */; };
 		CA9BB9E92CABB12700886A1A /* NavigationStackPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9E82CABB12700886A1A /* NavigationStackPath.swift */; };
+		CAACDE2B2CB8BB28004234FF /* PriceCourseCover.json in Resources */ = {isa = PBXBuildFile; fileRef = CAACDE2A2CB8BB28004234FF /* PriceCourseCover.json */; };
+		CAACDE2D2CB8BBBA004234FF /* LottieSpeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACDE2C2CB8BBBA004234FF /* LottieSpeedRouter.swift */; };
 		CAD101DA2CB6853200CA9C6A /* NavigationGestureEnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */; };
 		CAD101DE2CB68DFA00CA9C6A /* TileModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101DD2CB68DFA00CA9C6A /* TileModifier.swift */; };
 		CAD101E22CB6905F00CA9C6A /* ShortButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */; };
@@ -103,7 +105,7 @@
 		CA114FD62CB62D2A00AD5AD9 /* StudyingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyingViewModel.swift; sourceTree = "<group>"; };
 		CA114FD92CB62E7D00AD5AD9 /* NavigationTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleModifier.swift; sourceTree = "<group>"; };
 		CA114FDC2CB631A500AD5AD9 /* CourseCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCoverView.swift; sourceTree = "<group>"; };
-		CA114FEE2CB64B0E00AD5AD9 /* BasicEconomyCover.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomyCover.json; sourceTree = "<group>"; };
+		CA114FEE2CB64B0E00AD5AD9 /* BasicEconomyCourseCover.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomyCourseCover.json; sourceTree = "<group>"; };
 		CA17FC6F2CB005800050250B /* MainCustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCustomTabView.swift; sourceTree = "<group>"; };
 		CA17FC712CB005A10050250B /* MainTabCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCapsule.swift; sourceTree = "<group>"; };
 		CA17FC742CB005DB0050250B /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
@@ -147,6 +149,8 @@
 		CA9BB9D62CABA94400886A1A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		CA9BB9E82CABB12700886A1A /* NavigationStackPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackPath.swift; sourceTree = "<group>"; };
+		CAACDE2A2CB8BB28004234FF /* PriceCourseCover.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceCourseCover.json; sourceTree = "<group>"; };
+		CAACDE2C2CB8BBBA004234FF /* LottieSpeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieSpeedRouter.swift; sourceTree = "<group>"; };
 		CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationGestureEnable.swift; sourceTree = "<group>"; };
 		CAD101DD2CB68DFA00CA9C6A /* TileModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileModifier.swift; sourceTree = "<group>"; };
 		CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortButtonModifier.swift; sourceTree = "<group>"; };
@@ -258,7 +262,8 @@
 		CA114FED2CB64ADD00AD5AD9 /* StudyingCover */ = {
 			isa = PBXGroup;
 			children = (
-				CA114FEE2CB64B0E00AD5AD9 /* BasicEconomyCover.json */,
+				CA114FEE2CB64B0E00AD5AD9 /* BasicEconomyCourseCover.json */,
+				CAACDE2A2CB8BB28004234FF /* PriceCourseCover.json */,
 			);
 			path = StudyingCover;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 			children = (
 				CA77DFCB2CB24D0100992829 /* Json */,
 				CA1DDD3A2CB0E7A900C84D08 /* LottieViewMain.swift */,
+				CAACDE2C2CB8BBBA004234FF /* LottieSpeedRouter.swift */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -835,13 +841,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAACDE2B2CB8BB28004234FF /* PriceCourseCover.json in Resources */,
 				CA9BB9CE2CABA59A00886A1A /* Preview Assets.xcassets in Resources */,
 				CA662BD22CAD79F0009E8D5F /* Config.xcconfig in Resources */,
 				CA77DFCD2CB24D0900992829 /* Loading.json in Resources */,
 				CAF2271D2CAE569B002868F4 /* GoogleService-Info.plist in Resources */,
 				CA9BB9CF2CABA59A00886A1A /* .gitignore in Resources */,
 				CA9BB9D02CABA59A00886A1A /* Assets.xcassets in Resources */,
-				CA114FEF2CB64B0E00AD5AD9 /* BasicEconomyCover.json in Resources */,
+				CA114FEF2CB64B0E00AD5AD9 /* BasicEconomyCourseCover.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -869,6 +876,7 @@
 				CAEE16632CAD0D7200210BD0 /* LoginViewModel+Kakao.swift in Sources */,
 				CA58A4ED2CB6D9E900DB91BD /* ProgressCircleView.swift in Sources */,
 				CA17FC722CB005A10050250B /* MainTabCapsule.swift in Sources */,
+				CAACDE2D2CB8BBBA004234FF /* LottieSpeedRouter.swift in Sources */,
 				CA9BB9D42CABA8C300886A1A /* SplashView.swift in Sources */,
 				CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */,
 				CAD101E42CB6959D00CA9C6A /* StudyingCourse.swift in Sources */,

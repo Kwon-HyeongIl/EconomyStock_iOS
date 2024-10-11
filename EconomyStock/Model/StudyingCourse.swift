@@ -8,5 +8,6 @@
 import Foundation
 
 struct StudyingCourse: Codable, Hashable, Equatable {
-    var BasicEconomyCurrentPage: Int
+    var basicEconomyCurrentPage = 0
+    var priceCurrentPage = 0
 }

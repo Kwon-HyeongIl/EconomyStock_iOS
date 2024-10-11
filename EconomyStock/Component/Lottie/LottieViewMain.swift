@@ -18,6 +18,7 @@ struct LottieViewMain: UIViewRepresentable {
         let animationView = LottieAnimationView(name: fileName)
         
         animationView.loopMode = loopMode
+        animationView.animationSpeed = LottieSpeedRouter.route(fileName: fileName)
         animationView.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(animationView)
         
