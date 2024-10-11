@@ -8,7 +8,7 @@
 import SwiftUI
 
 @Observable
-class StudyingViewModel {
+class CourseListViewModel {
     var courses: [Course] = []
     
     init() {

@@ -12,7 +12,7 @@ struct MainTabView: View {
     
     // 뷰 캐싱
     @State private var homeView = HomeView()
-    @State private var studyingView = StudyingView()
+    @State private var courseListView = CourseListView()
     @State private var newsView = NewsView()
     @State private var profileView = ProfileView()
     
@@ -30,7 +30,7 @@ struct MainTabView: View {
                     homeView
                     
                 case .textBookClosed:
-                    studyingView
+                    courseListView
                     
                 case .newspaper:
                     newsView

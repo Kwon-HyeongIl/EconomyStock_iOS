@@ -42,15 +42,30 @@ struct CourseToolbarModifier: ViewModifier {
             }
             .alert("정말 나가시겠습니까?", isPresented: $alertExit) {
                 Button {
+                    withAnimation(.smooth(duration: 0.2)) {
+                        loadingBarState = true
+                    }
                     // 페이지 저장 코드 추가
                     /*
                      1. currentUser의 basicEconomyLastPage 값 바꾸기 (currentUser의 값만 바꾸고 initCourses 다시 호출하면 Course 값 다시 바뀜)
                      2. DB User의 basicEconomyLastPage 값 바꾸기
                      */
                     
-                    withAnimation(.smooth(duration: 0.2)) {
-                        loadingBarState = true
+                    
+                    switch viewModel.course.title {
+                        
+                    case "기초 경제":
+                        AuthManager.shared.currentUser?.studyingCourse.basicEconomyLastPage = currentPage
+                    case "물가":
+                        AuthManager.shared.currentUser?.studyingCourse.priceLevelLastPage = currentPage
+                        
+                    default:
+                        break
                     }
+                    
+                    // DB User의 basicEconomyLastPage 값 바꾸기
+                    
+                    // initCourses 다시 호출
                     
                     navigationRouter.popToRoot()
                 } label: {

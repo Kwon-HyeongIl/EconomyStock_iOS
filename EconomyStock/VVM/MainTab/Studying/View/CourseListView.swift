@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct StudyingView: View {
+struct CourseListView: View {
     @Environment(NavigationRouter.self) var navigationRouter
-    @State private var viewModel = StudyingViewModel()
+    @State private var viewModel = CourseListViewModel()
     
     var body: some View {
         ScrollView {
@@ -26,6 +26,6 @@ struct StudyingView: View {
 }
 
 #Preview {
-    StudyingView()
+    CourseListView()
         .environment(NavigationRouter())
 }
