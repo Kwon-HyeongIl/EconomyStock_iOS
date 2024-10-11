@@ -15,7 +15,7 @@ struct BasicEconomy1View: View {
         VStack {
 
         }
-        .modifier(CourseToolbarModifier(currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
+        .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
     }
 }
 
