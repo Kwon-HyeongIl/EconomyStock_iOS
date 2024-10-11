@@ -27,7 +27,7 @@ struct CourseCoverView: View {
                         Text(viewModel.course.number)
                             .font(.system(size: 38, design: .serif))
                             .foregroundStyle(.white)
-                            .fontWeight(.bold)
+                            .fontWeight(.semibold)
                             .padding(.bottom, 2)
                         
                         Text(viewModel.course.title)

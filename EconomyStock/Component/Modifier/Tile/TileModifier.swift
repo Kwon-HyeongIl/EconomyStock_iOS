@@ -14,7 +14,7 @@ struct TileModifier: ViewModifier {
         content
             .frame(maxWidth: .infinity)
             .frame(height: height)
-            .background(.ultraThinMaterial)
+            .background(.thickMaterial)
             .clipShape(RoundedRectangle(cornerRadius: 20))
             .padding(.horizontal)
             .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
