@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LongButtonModifier: ViewModifier {
-    var bgColor: Color = .ESTitle
+    let bgColor: Color = .ESTitle
     
     func body(content: Content) -> some View {
         content

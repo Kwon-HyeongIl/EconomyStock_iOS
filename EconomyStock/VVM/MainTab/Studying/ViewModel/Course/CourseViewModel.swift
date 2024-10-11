@@ -11,6 +11,8 @@ import Foundation
 class CourseViewModel: Hashable, Equatable {
     let course: Course
     
+    var currentPage = 1
+    
     init(course: Course) {
         self.course = course
     }

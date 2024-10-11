@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CourseIntroView: View {
     @Environment(NavigationRouter.self) var navigationRouter
-    @Environment(MainTabCapsule.self) var mainTabCapsule
     @Bindable var viewModel: CourseViewModel
     
     var body: some View {
@@ -55,22 +54,7 @@ struct CourseIntroView: View {
                 .modifier(TileModifier(height: 400))
             }
         }
-        .modifier(NavigationBackModifier())
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    navigationRouter.popToRoot()
-                    mainTabCapsule.selectedTab = .house
-                } label: {
-                    Image(systemName: "house")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 28)
-                        .foregroundStyle(Color.ESTitle)
-                        .padding(.trailing, 5)
-                }
-            }
-        }
+        .modifier(NavigationBackHomeModifier())
         .scrollIndicators(.never)
         .environment(viewModel)
     }

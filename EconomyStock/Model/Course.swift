@@ -16,11 +16,12 @@ struct Course: Identifiable {
     let lottieFileName: String
     let backgroundGradient: LinearGradient
     let progressRate: Double
+    let totalPage: Int
 }
 
 extension Course {
     static var DUMMY_COURSE = Course(id: UUID().uuidString, title: "기초 경제", number: "III", description: "소개입니다", lottieFileName: "BasicEconomyCourseCover", backgroundGradient: LinearGradient(
         gradient: Gradient(colors: [Color.yellow, Color.orange]),
         startPoint: .topLeading,
-        endPoint: .bottomTrailing), progressRate: 100.0)
+        endPoint: .bottomTrailing), progressRate: 100.0, totalPage: 5)
 }

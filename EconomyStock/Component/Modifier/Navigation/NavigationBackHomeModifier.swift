@@ -1,15 +1,15 @@
 //
-//  BackTitleModifier.swift
+//  NavigationBackHomeModifier.swift
 //  EconomyStock
 //
-//  Created by 권형일 on 10/8/24.
+//  Created by 권형일 on 10/11/24.
 //
 
 import SwiftUI
 
-struct NavigationBackTitleModifier: ViewModifier {
+struct NavigationBackHomeModifier: ViewModifier {
     @Environment(NavigationRouter.self) var navigationRouter
-    let title: String
+    @Environment(MainTabCapsule.self) var mainTabCapsule
     
     func body(content: Content) -> some View {
         content
@@ -28,10 +28,17 @@ struct NavigationBackTitleModifier: ViewModifier {
                     }
                 }
                 
-                ToolbarItem(placement: .principal) {
-                    Text(title)
-                        .font(.system(size: 18))
-                        .fontWeight(.semibold)
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        navigationRouter.popToRoot()
+                        mainTabCapsule.selectedTab = .house
+                    } label: {
+                        Image(systemName: "house")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 28)
+                            .foregroundStyle(Color.ESTitle)
+                    }
                 }
             }
     }

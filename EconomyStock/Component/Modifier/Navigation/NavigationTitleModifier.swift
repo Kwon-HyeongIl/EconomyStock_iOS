@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NavigationTitleModifier: ViewModifier {
-    var title: String
+    let title: String
     
     func body(content: Content) -> some View {
         content

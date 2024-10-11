@@ -23,11 +23,11 @@ class StudyingViewModel {
             endPoint: .bottomTrailing
         )
         
-        let basicEconomyCurrentPage = Double(currentUser?.studyingCourse.basicEconomyCurrentPage ?? 0)
-        let basicEconomyTotalPage = 12.0
-        let basicEconomyProgressRate = (basicEconomyCurrentPage / basicEconomyTotalPage) * 100.0
+        let basicEconomyLastPage = Double(currentUser?.studyingCourse.basicEconomyLastPage ?? 0)
+        let basicEconomyTotalPage = 5.0
+        let basicEconomyProgressRate = (basicEconomyLastPage / basicEconomyTotalPage) * 100.0
         
-        tempCorses.append(Course(id: UUID().uuidString, title: "기초 경제", number: "I", description: "설명입니다", lottieFileName: "BasicEconomyCourseCover", backgroundGradient: basicEconomyGradient, progressRate: basicEconomyProgressRate))
+        tempCorses.append(Course(id: UUID().uuidString, title: "기초 경제", number: "I", description: "설명입니다", lottieFileName: "BasicEconomyCourseCover", backgroundGradient: basicEconomyGradient, progressRate: basicEconomyProgressRate, totalPage: Int(basicEconomyTotalPage)))
         
         
         // II 물가
@@ -37,11 +37,11 @@ class StudyingViewModel {
             endPoint: .bottomTrailing
         )
         
-        let priceLevelCurrentPage = Double(currentUser?.studyingCourse.priceCurrentPage ?? 0)
-        let priceLevelTotalPage = 12.0
+        let priceLevelCurrentPage = Double(currentUser?.studyingCourse.priceLevelLastPage ?? 0)
+        let priceLevelTotalPage = 5.0
         let priceLevelProgressRate = (priceLevelCurrentPage / priceLevelTotalPage) * 100.0
         
-        tempCorses.append(Course(id: UUID().uuidString, title: "물가", number: "II", description: "설명입니다", lottieFileName: "PriceLevelCourseCover", backgroundGradient: priceLevelGradient, progressRate: priceLevelProgressRate))
+        tempCorses.append(Course(id: UUID().uuidString, title: "물가", number: "II", description: "설명입니다", lottieFileName: "PriceLevelCourseCover", backgroundGradient: priceLevelGradient, progressRate: priceLevelProgressRate, totalPage: Int(priceLevelTotalPage)))
         
         // 다른 항목들 추가
         

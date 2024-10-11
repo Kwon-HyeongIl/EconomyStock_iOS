@@ -13,9 +13,9 @@ struct BasicEconomy1View: View {
     
     var body: some View {
         VStack {
-            Text("Basic Economy")
+
         }
-        .modifier(NavigationBackModifier())
+        .modifier(CourseToolbarModifier(currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
     }
 }
 

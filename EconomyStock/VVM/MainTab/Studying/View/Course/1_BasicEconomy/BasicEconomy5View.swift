@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct BasicEconomy5View: View {
+    @Environment(NavigationRouter.self) var navigationRouter
+    @Bindable var viewModel: CourseViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            
+        }
+        .modifier(CourseToolbarModifier(currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
     }
 }
 
 #Preview {
-    BasicEconomy5View()
+    BasicEconomy5View(viewModel: CourseViewModel(course: .DUMMY_COURSE))
+        .environment(NavigationRouter())
 }
