@@ -12,6 +12,7 @@ struct CourseToolbarModifier: ViewModifier {
     @Bindable var viewModel: CourseViewModel
     
     @State private var alertExit = false
+    @State private var loadingBarState = false
     
     let currentPage: Int
     let totalPage: Int
@@ -42,12 +43,22 @@ struct CourseToolbarModifier: ViewModifier {
             .alert("정말 나가시겠습니까?", isPresented: $alertExit) {
                 Button {
                     // 페이지 저장 코드 추가
+                    withAnimation(.smooth(duration: 0.1)) {
+                        loadingBarState = true
+                    }
+                    
                     navigationRouter.popToRoot()
                 } label: {
                     Text("확인")
                 }
             } message: {
                 Text("현재까지 진행한 내용은 자동으로 저장됩니다.")
+            }
+            .overlay {
+                if loadingBarState {
+                    LottieViewConverter(fileName: "Loading", loopMode: .loop, width: 150, height: 150)
+                        .padding(.bottom, 60)
+                }
             }
     }
 }

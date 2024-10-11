@@ -27,7 +27,9 @@ struct ContentView: View {
         }
         .task {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-                isSplashVisible = false
+                withAnimation(.easeOut(duration: 0.4)) {
+                    isSplashVisible = false
+                }
             }
         }
     }
