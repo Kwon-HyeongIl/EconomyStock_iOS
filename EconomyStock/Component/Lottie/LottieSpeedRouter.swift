@@ -8,7 +8,7 @@
 import Foundation
 
 struct LottieSpeedRouter {
-    static func route(fileName: String) -> Double {
+    static func route(fileName: String) -> CGFloat {
         switch fileName {
             
         case "PriceCourseCover":
