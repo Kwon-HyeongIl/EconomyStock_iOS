@@ -43,6 +43,11 @@ struct CourseToolbarModifier: ViewModifier {
             .alert("정말 나가시겠습니까?", isPresented: $alertExit) {
                 Button {
                     // 페이지 저장 코드 추가
+                    /*
+                     1. currentUser의 basicEconomyLastPage 값 바꾸기 (currentUser의 값만 바꾸고 initCourses 다시 호출하면 Course 값 다시 바뀜)
+                     2. DB User의 basicEconomyLastPage 값 바꾸기
+                     */
+                    
                     withAnimation(.smooth(duration: 0.2)) {
                         loadingBarState = true
                     }

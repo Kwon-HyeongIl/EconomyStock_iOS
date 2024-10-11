@@ -12,6 +12,10 @@ class StudyingViewModel {
     var courses: [Course] = []
     
     init() {
+        self.initCourses()
+    }
+    
+    func initCourses() {
         let currentUser = AuthManager.shared.currentUser
         
         var tempCorses: [Course] = []
