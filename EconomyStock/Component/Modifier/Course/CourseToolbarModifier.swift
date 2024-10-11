@@ -43,7 +43,7 @@ struct CourseToolbarModifier: ViewModifier {
             .alert("정말 나가시겠습니까?", isPresented: $alertExit) {
                 Button {
                     // 페이지 저장 코드 추가
-                    withAnimation(.smooth(duration: 0.1)) {
+                    withAnimation(.smooth(duration: 0.2)) {
                         loadingBarState = true
                     }
                     

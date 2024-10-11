@@ -130,7 +130,7 @@ struct BasicSignupView: View {
                             return
                         }
                         
-                        withAnimation(.smooth(duration: 0.1)) {
+                        withAnimation(.smooth(duration: 0.2)) {
                             loadingBarState = true
                         }
                         
@@ -172,7 +172,7 @@ struct BasicSignupView: View {
                     } else if isUsernameTextFieldShowing {
                         // 완료
                         if !viewModel.username.isEmpty && viewModel.password.count >= 6 {
-                            withAnimation(.smooth(duration: 0.1)) {
+                            withAnimation(.smooth(duration: 0.2)) {
                                 loadingBarState = true
                             }
                             

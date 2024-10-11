@@ -74,7 +74,7 @@ struct BasicLoginView: View {
             
             Button {
                 Task {
-                    withAnimation(.smooth(duration: 0.1)) {
+                    withAnimation(.smooth(duration: 0.2)) {
                         loadingBarState = true
                     }
                     
