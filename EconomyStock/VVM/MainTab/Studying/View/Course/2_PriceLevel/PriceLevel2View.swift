@@ -1,5 +1,5 @@
 //
-//  Price4View.swift
+//  Price2View.swift
 //  EconomyStock
 //
 //  Created by 권형일 on 10/11/24.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct Price4View: View {
+struct PriceLevel2View: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    Price4View()
+    PriceLevel2View()
 }

@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CA08F3982CB839460093117E /* Price1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F3972CB839460093117E /* Price1View.swift */; };
-		CA08F39A2CB8394C0093117E /* Price2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F3992CB8394C0093117E /* Price2View.swift */; };
-		CA08F39C2CB839520093117E /* Price3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F39B2CB839520093117E /* Price3View.swift */; };
-		CA08F39E2CB839580093117E /* Price4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F39D2CB839580093117E /* Price4View.swift */; };
-		CA08F3A02CB839600093117E /* Price5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F39F2CB839600093117E /* Price5View.swift */; };
+		CA08F3982CB839460093117E /* PriceLevel1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F3972CB839460093117E /* PriceLevel1View.swift */; };
+		CA08F39A2CB8394C0093117E /* PriceLevel2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F3992CB8394C0093117E /* PriceLevel2View.swift */; };
+		CA08F39C2CB839520093117E /* PriceLevel3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F39B2CB839520093117E /* PriceLevel3View.swift */; };
+		CA08F39E2CB839580093117E /* PriceLevel4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F39D2CB839580093117E /* PriceLevel4View.swift */; };
+		CA08F3A02CB839600093117E /* PriceLevel5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F39F2CB839600093117E /* PriceLevel5View.swift */; };
 		CA10C02E2CAF85C1007DAB3A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CA10C02D2CAF85C1007DAB3A /* FirebaseMessaging */; };
 		CA114FD72CB62D2A00AD5AD9 /* StudyingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA114FD62CB62D2A00AD5AD9 /* StudyingViewModel.swift */; };
 		CA114FDA2CB62E7D00AD5AD9 /* NavigationTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA114FD92CB62E7D00AD5AD9 /* NavigationTitleModifier.swift */; };
@@ -67,7 +67,7 @@
 		CA9BB9E02CABAACF00886A1A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CA9BB9DF2CABAACF00886A1A /* FirebaseStorage */; };
 		CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */; };
 		CA9BB9E92CABB12700886A1A /* NavigationStackPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9E82CABB12700886A1A /* NavigationStackPath.swift */; };
-		CAACDE2B2CB8BB28004234FF /* PriceCourseCover.json in Resources */ = {isa = PBXBuildFile; fileRef = CAACDE2A2CB8BB28004234FF /* PriceCourseCover.json */; };
+		CAACDE2B2CB8BB28004234FF /* PriceLevelCourseCover.json in Resources */ = {isa = PBXBuildFile; fileRef = CAACDE2A2CB8BB28004234FF /* PriceLevelCourseCover.json */; };
 		CAACDE2D2CB8BBBA004234FF /* LottieSpeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACDE2C2CB8BBBA004234FF /* LottieSpeedRouter.swift */; };
 		CAD101DA2CB6853200CA9C6A /* NavigationGestureEnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */; };
 		CAD101DE2CB68DFA00CA9C6A /* TileModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101DD2CB68DFA00CA9C6A /* TileModifier.swift */; };
@@ -96,11 +96,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CA08F3972CB839460093117E /* Price1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price1View.swift; sourceTree = "<group>"; };
-		CA08F3992CB8394C0093117E /* Price2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price2View.swift; sourceTree = "<group>"; };
-		CA08F39B2CB839520093117E /* Price3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price3View.swift; sourceTree = "<group>"; };
-		CA08F39D2CB839580093117E /* Price4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price4View.swift; sourceTree = "<group>"; };
-		CA08F39F2CB839600093117E /* Price5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price5View.swift; sourceTree = "<group>"; };
+		CA08F3972CB839460093117E /* PriceLevel1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel1View.swift; sourceTree = "<group>"; };
+		CA08F3992CB8394C0093117E /* PriceLevel2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel2View.swift; sourceTree = "<group>"; };
+		CA08F39B2CB839520093117E /* PriceLevel3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel3View.swift; sourceTree = "<group>"; };
+		CA08F39D2CB839580093117E /* PriceLevel4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel4View.swift; sourceTree = "<group>"; };
+		CA08F39F2CB839600093117E /* PriceLevel5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel5View.swift; sourceTree = "<group>"; };
 		CA10C02C2CAF782E007DAB3A /* EconomyStock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EconomyStock.entitlements; sourceTree = "<group>"; };
 		CA114FD62CB62D2A00AD5AD9 /* StudyingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyingViewModel.swift; sourceTree = "<group>"; };
 		CA114FD92CB62E7D00AD5AD9 /* NavigationTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleModifier.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 		CA9BB9D62CABA94400886A1A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		CA9BB9E82CABB12700886A1A /* NavigationStackPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackPath.swift; sourceTree = "<group>"; };
-		CAACDE2A2CB8BB28004234FF /* PriceCourseCover.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceCourseCover.json; sourceTree = "<group>"; };
+		CAACDE2A2CB8BB28004234FF /* PriceLevelCourseCover.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevelCourseCover.json; sourceTree = "<group>"; };
 		CAACDE2C2CB8BBBA004234FF /* LottieSpeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieSpeedRouter.swift; sourceTree = "<group>"; };
 		CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationGestureEnable.swift; sourceTree = "<group>"; };
 		CAD101DD2CB68DFA00CA9C6A /* TileModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileModifier.swift; sourceTree = "<group>"; };
@@ -198,16 +198,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CA08F3962CB838620093117E /* 2_Price */ = {
+		CA08F3962CB838620093117E /* 2_PriceLevel */ = {
 			isa = PBXGroup;
 			children = (
-				CA08F3972CB839460093117E /* Price1View.swift */,
-				CA08F3992CB8394C0093117E /* Price2View.swift */,
-				CA08F39B2CB839520093117E /* Price3View.swift */,
-				CA08F39D2CB839580093117E /* Price4View.swift */,
-				CA08F39F2CB839600093117E /* Price5View.swift */,
+				CA08F3972CB839460093117E /* PriceLevel1View.swift */,
+				CA08F3992CB8394C0093117E /* PriceLevel2View.swift */,
+				CA08F39B2CB839520093117E /* PriceLevel3View.swift */,
+				CA08F39D2CB839580093117E /* PriceLevel4View.swift */,
+				CA08F39F2CB839600093117E /* PriceLevel5View.swift */,
 			);
-			path = 2_Price;
+			path = 2_PriceLevel;
 			sourceTree = "<group>";
 		};
 		CA114FC42CB6218900AD5AD9 /* Loading */ = {
@@ -254,7 +254,7 @@
 				CA114FDC2CB631A500AD5AD9 /* CourseCoverView.swift */,
 				CA4E71AA2CB78DE900BAA70C /* CourseIntroView.swift */,
 				CA92DDB12CB7D74400A7D2A4 /* 1_BasicEconomy */,
-				CA08F3962CB838620093117E /* 2_Price */,
+				CA08F3962CB838620093117E /* 2_PriceLevel */,
 			);
 			path = Course;
 			sourceTree = "<group>";
@@ -263,7 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				CA114FEE2CB64B0E00AD5AD9 /* BasicEconomyCourseCover.json */,
-				CAACDE2A2CB8BB28004234FF /* PriceCourseCover.json */,
+				CAACDE2A2CB8BB28004234FF /* PriceLevelCourseCover.json */,
 			);
 			path = StudyingCover;
 			sourceTree = "<group>";
@@ -841,7 +841,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAACDE2B2CB8BB28004234FF /* PriceCourseCover.json in Resources */,
+				CAACDE2B2CB8BB28004234FF /* PriceLevelCourseCover.json in Resources */,
 				CA9BB9CE2CABA59A00886A1A /* Preview Assets.xcassets in Resources */,
 				CA662BD22CAD79F0009E8D5F /* Config.xcconfig in Resources */,
 				CA77DFCD2CB24D0900992829 /* Loading.json in Resources */,
@@ -867,7 +867,7 @@
 				CAEDDACE2CB575C60046162D /* AccountSupportViewModel.swift in Sources */,
 				CAEE164D2CAD08E600210BD0 /* FCMManager.swift in Sources */,
 				CA92DDB52CB7D7AF00A7D2A4 /* BasicEconomy2View.swift in Sources */,
-				CA08F3982CB839460093117E /* Price1View.swift in Sources */,
+				CA08F3982CB839460093117E /* PriceLevel1View.swift in Sources */,
 				CA92DDB32CB7D7A600A7D2A4 /* BasicEconomy1View.swift in Sources */,
 				CA4E71A52CB78A8300BAA70C /* Course.swift in Sources */,
 				CAEE16602CAD0D4D00210BD0 /* LoginViewModel.swift in Sources */,
@@ -902,13 +902,13 @@
 				CA3BBAB12CB5035E007CA152 /* LongButtonModifier.swift in Sources */,
 				CA2E936E2CAFB0B300A883F1 /* NotificationManager+Badge.swift in Sources */,
 				CA9BB9E92CABB12700886A1A /* NavigationStackPath.swift in Sources */,
-				CA08F39A2CB8394C0093117E /* Price2View.swift in Sources */,
+				CA08F39A2CB8394C0093117E /* PriceLevel2View.swift in Sources */,
 				CAEDDAC62CB5757E0046162D /* FindPasswordView.swift in Sources */,
-				CA08F39C2CB839520093117E /* Price3View.swift in Sources */,
+				CA08F39C2CB839520093117E /* PriceLevel3View.swift in Sources */,
 				CA17FC702CB005800050250B /* MainCustomTabView.swift in Sources */,
 				CA1DDD3B2CB0E7A900C84D08 /* LottieViewMain.swift in Sources */,
 				CA92DDB72CB7D7B900A7D2A4 /* BasicEconomy3View.swift in Sources */,
-				CA08F39E2CB839580093117E /* Price4View.swift in Sources */,
+				CA08F39E2CB839580093117E /* PriceLevel4View.swift in Sources */,
 				CAD101DE2CB68DFA00CA9C6A /* TileModifier.swift in Sources */,
 				CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */,
 				CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */,
@@ -922,7 +922,7 @@
 				CA4E71A82CB78B8400BAA70C /* CourseViewModel.swift in Sources */,
 				CA92DDBB2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift in Sources */,
 				CA3BBAAE2CB50144007CA152 /* BasicSignupViewModel.swift in Sources */,
-				CA08F3A02CB839600093117E /* Price5View.swift in Sources */,
+				CA08F3A02CB839600093117E /* PriceLevel5View.swift in Sources */,
 				CA9BB9D72CABA94400886A1A /* MainTabView.swift in Sources */,
 				CA17FC8A2CB01E820050250B /* CornerRadius.swift in Sources */,
 				CA17FC8C2CB01EBF0050250B /* RoundCorner.swift in Sources */,

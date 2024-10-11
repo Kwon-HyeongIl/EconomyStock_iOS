@@ -17,7 +17,7 @@ struct CourseIntroView: View {
             VStack(spacing: 0) {
                 LottieViewConverter(fileName: viewModel.course.lottieFileName, loopMode: .loop, width: 200, height: 200)
                 
-                ZStack {
+                HStack {
                     Text(viewModel.course.title)
                         .font(.system(size: 35))
                         .fontWeight(.bold)
@@ -25,7 +25,6 @@ struct CourseIntroView: View {
                         .padding(.bottom)
                     
                     ProgressCircleView(progressRate: viewModel.course.progressRate)
-                        .padding(.leading, 180)
                         .padding(.bottom)
                 }
                 
@@ -37,7 +36,7 @@ struct CourseIntroView: View {
                     case "I":
                         courseDestination = .BasicEconomy1View(viewModel)
                     case "II":
-                        courseDestination = .Price1View(viewModel)
+                        courseDestination = .PriceLevel1View(viewModel)
                         
                     default:
                         return

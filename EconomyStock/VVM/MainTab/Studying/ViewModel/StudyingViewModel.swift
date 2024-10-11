@@ -31,17 +31,17 @@ class StudyingViewModel {
         
         
         // II 물가
-        let priceGradient = LinearGradient(
+        let priceLevelGradient = LinearGradient(
             gradient: Gradient(colors: [.yellow, .orange]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
         
-        let priceCurrentPage = Double(currentUser?.studyingCourse.priceCurrentPage ?? 0)
-        let priceTotalPage = 12.0
-        let priceProgressRate = (priceCurrentPage / priceTotalPage) * 100.0
+        let priceLevelCurrentPage = Double(currentUser?.studyingCourse.priceCurrentPage ?? 0)
+        let priceLevelTotalPage = 12.0
+        let priceLevelProgressRate = (priceLevelCurrentPage / priceLevelTotalPage) * 100.0
         
-        tempCorses.append(Course(id: UUID().uuidString, title: "물가", number: "II", description: "설명입니다", lottieFileName: "PriceCourseCover", backgroundGradient: priceGradient, progressRate: priceProgressRate))
+        tempCorses.append(Course(id: UUID().uuidString, title: "물가", number: "II", description: "설명입니다", lottieFileName: "PriceLevelCourseCover", backgroundGradient: priceLevelGradient, progressRate: priceLevelProgressRate))
         
         // 다른 항목들 추가
         

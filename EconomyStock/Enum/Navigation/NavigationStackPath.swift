@@ -19,5 +19,5 @@ enum NavigationStackPath: Hashable {
     
     case BasicEconomy1View(CourseViewModel)
     
-    case Price1View(CourseViewModel)
+    case PriceLevel1View(CourseViewModel)
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Price1View: View {
+struct PriceLevel1View: View {
     @Environment(NavigationRouter.self) var navigationRouter
     @Bindable var viewModel: CourseViewModel
     
@@ -17,5 +17,5 @@ struct Price1View: View {
 }
 
 #Preview {
-    Price1View(viewModel: CourseViewModel(course: .DUMMY_COURSE))
+    PriceLevel1View(viewModel: CourseViewModel(course: .DUMMY_COURSE))
 }

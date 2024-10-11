@@ -11,7 +11,7 @@ struct LottieSpeedRouter {
     static func route(fileName: String) -> CGFloat {
         switch fileName {
             
-        case "PriceCourseCover":
+        case "PriceLevelCourseCover":
             0.5
             
         default:
