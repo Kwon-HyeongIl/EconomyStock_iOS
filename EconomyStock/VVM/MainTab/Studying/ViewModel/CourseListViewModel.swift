@@ -31,7 +31,7 @@ class CourseListViewModel {
         let basicEconomyTotalPage = 5.0
         let basicEconomyProgressRate = (basicEconomyLastPage / basicEconomyTotalPage) * 100.0
         
-        tempCorses.append(Course(id: UUID().uuidString, title: "기초 경제", number: "I", description: "설명입니다", lottieFileName: "BasicEconomyCourseCover", backgroundGradient: basicEconomyGradient, progressRate: basicEconomyProgressRate, totalPage: Int(basicEconomyTotalPage)))
+        tempCorses.append(Course(id: UUID().uuidString, type: .basicEconomy, title: "기초 경제", number: "I", description: "설명입니다", lottieFileName: "BasicEconomyCourseCover", backgroundGradient: basicEconomyGradient, progressRate: basicEconomyProgressRate, totalPage: Int(basicEconomyTotalPage)))
         
         
         // II 물가
@@ -45,7 +45,7 @@ class CourseListViewModel {
         let priceLevelTotalPage = 5.0
         let priceLevelProgressRate = (priceLevelCurrentPage / priceLevelTotalPage) * 100.0
         
-        tempCorses.append(Course(id: UUID().uuidString, title: "물가", number: "II", description: "설명입니다", lottieFileName: "PriceLevelCourseCover", backgroundGradient: priceLevelGradient, progressRate: priceLevelProgressRate, totalPage: Int(priceLevelTotalPage)))
+        tempCorses.append(Course(id: UUID().uuidString, type: .priceLevel, title: "물가", number: "II", description: "설명입니다", lottieFileName: "PriceLevelCourseCover", backgroundGradient: priceLevelGradient, progressRate: priceLevelProgressRate, totalPage: Int(priceLevelTotalPage)))
         
         // 다른 항목들 추가
         

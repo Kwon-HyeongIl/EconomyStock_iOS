@@ -76,6 +76,7 @@
 		CAD101DE2CB68DFA00CA9C6A /* TileModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101DD2CB68DFA00CA9C6A /* TileModifier.swift */; };
 		CAD101E22CB6905F00CA9C6A /* ShortButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */; };
 		CAD101E42CB6959D00CA9C6A /* StudyingCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101E32CB6959D00CA9C6A /* StudyingCourse.swift */; };
+		CAD9A1102CC515B000A4F70B /* CourseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9A10F2CC515B000A4F70B /* CourseType.swift */; };
 		CAEDDAB92CB53B3F0046162D /* BasicSignupFocusField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDAB82CB53B3E0046162D /* BasicSignupFocusField.swift */; };
 		CAEDDABD2CB56C330046162D /* BasicLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDABC2CB56C330046162D /* BasicLoginView.swift */; };
 		CAEDDABF2CB56C4D0046162D /* BasicLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDABE2CB56C4D0046162D /* BasicLoginViewModel.swift */; };
@@ -161,6 +162,7 @@
 		CAD101DD2CB68DFA00CA9C6A /* TileModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileModifier.swift; sourceTree = "<group>"; };
 		CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortButtonModifier.swift; sourceTree = "<group>"; };
 		CAD101E32CB6959D00CA9C6A /* StudyingCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyingCourse.swift; sourceTree = "<group>"; };
+		CAD9A10F2CC515B000A4F70B /* CourseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseType.swift; sourceTree = "<group>"; };
 		CAEDDAB82CB53B3E0046162D /* BasicSignupFocusField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSignupFocusField.swift; sourceTree = "<group>"; };
 		CAEDDABC2CB56C330046162D /* BasicLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLoginView.swift; sourceTree = "<group>"; };
 		CAEDDABE2CB56C4D0046162D /* BasicLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLoginViewModel.swift; sourceTree = "<group>"; };
@@ -579,6 +581,7 @@
 		CA9BB9E52CABAF1B00886A1A /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				CAD9A10E2CC515A300A4F70B /* Course */,
 				CA77DFD02CB26CF100992829 /* Error */,
 				CAEDDACF2CB575DB0046162D /* Navigation */,
 				CAEDDAD02CB575E20046162D /* Notification */,
@@ -610,6 +613,14 @@
 				CAD101DD2CB68DFA00CA9C6A /* TileModifier.swift */,
 			);
 			path = Tile;
+			sourceTree = "<group>";
+		};
+		CAD9A10E2CC515A300A4F70B /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				CAD9A10F2CC515B000A4F70B /* CourseType.swift */,
+			);
+			path = Course;
 			sourceTree = "<group>";
 		};
 		CAEDDABA2CB56C020046162D /* BasicLogin */ = {
@@ -876,6 +887,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAD9A1102CC515B000A4F70B /* CourseType.swift in Sources */,
 				CA3BBAB62CB50441007CA152 /* NavigationBackTitleModifier.swift in Sources */,
 				CAEE16482CAD07B900210BD0 /* AuthManager.swift in Sources */,
 				CAEE165A2CAD0CBA00210BD0 /* AuthManager+Hash.swift in Sources */,

@@ -22,29 +22,25 @@ class AuthManager {
     }
     
     func createUser(email: String, password: String, username: String, appleHashedUid: String = "", googleHashedUid: String = "", kakaoHashedUid: String = "") async {
-        do {
-            let result = try await Auth.auth().createUser(withEmail: email, password: password)
-            let userId = result.user.uid
+        
+        guard let result = try? await Auth.auth().createUser(withEmail: email, password: password) else { return }
+        let userId = result.user.uid
+        
+        if appleHashedUid.isEmpty && googleHashedUid.isEmpty && kakaoHashedUid.isEmpty {
+            // 베이직 회원가입
+            await uploadUserData(userId: userId, email: email, username: username)
             
-            if appleHashedUid.isEmpty && googleHashedUid.isEmpty && kakaoHashedUid.isEmpty {
-                // 베이직 회원가입
-                await uploadUserData(userId: userId, email: email, username: username)
-                
-            } else if !appleHashedUid.isEmpty {
-                // 애플 회원가입
-                await uploadUserData(userId: userId, email: email, username: username, appleHashedUid: appleHashedUid)
-                
-            } else if !googleHashedUid.isEmpty {
-                // 구글 회원가입
-                await uploadUserData(userId: userId, email: email, username: username, googleHashedUid: googleHashedUid)
-                
-            } else if !kakaoHashedUid.isEmpty {
-                // 카카오 회원가입
-                await uploadUserData(userId: userId, email: email, username: username, kakaoHashedUid: kakaoHashedUid)
-            }
+        } else if !appleHashedUid.isEmpty {
+            // 애플 회원가입
+            await uploadUserData(userId: userId, email: email, username: username, appleHashedUid: appleHashedUid)
             
-        } catch {
-            print(error.localizedDescription)
+        } else if !googleHashedUid.isEmpty {
+            // 구글 회원가입
+            await uploadUserData(userId: userId, email: email, username: username, googleHashedUid: googleHashedUid)
+            
+        } else if !kakaoHashedUid.isEmpty {
+            // 카카오 회원가입
+            await uploadUserData(userId: userId, email: email, username: username, kakaoHashedUid: kakaoHashedUid)
         }
     }
     
@@ -81,17 +77,12 @@ class AuthManager {
     }
     
     func login(email: String, password: String) async -> Bool {
-        do {
-            _ = try await Auth.auth().signIn(withEmail: email, password: password)
-            await updateDeviceToken()
-            await loadCurrentUserData()
-            
-            return true
-            
-        } catch {
-            print(error.localizedDescription)
-            return false
-        }
+        guard let _ = try? await Auth.auth().signIn(withEmail: email, password: password) else { return false }
+        
+        await updateDeviceToken()
+        await loadCurrentUserData()
+        
+        return true
     }
     
     func loadCurrentUserData() async {
