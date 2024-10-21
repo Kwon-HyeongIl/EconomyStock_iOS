@@ -51,6 +51,7 @@ struct CourseToolbarModifier: ViewModifier {
                      2. DB User의 basicEconomyLastPage 값 바꾸기
                      */
                     
+                    // 로컬 currentUser의 basicEconomyLastPage 값 바꾸기
                     switch viewModel.course.type {
                     case .basicEconomy:
                         AuthManager.shared.currentUser?.studyingCourse.basicEconomyLastPage = currentPage
@@ -58,9 +59,13 @@ struct CourseToolbarModifier: ViewModifier {
                         AuthManager.shared.currentUser?.studyingCourse.priceLevelLastPage = currentPage
                     }
                     
-                    // DB User의 basicEconomyLastPage 값 바꾸기
+                    // CourseViewModel의 initCourses() 호출
                     
-                    // initCourses 다시 호출
+                    
+                    // DB User의 basicEconomyLastPage 값 바꾸기
+                    Task {
+                        await AuthManager.shared.updateCourseLastPage(courseType: viewModel.course.type, lastPage: currentPage)
+                    }
                     
                     navigationRouter.popToRoot()
                 } label: {
