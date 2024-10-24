@@ -68,6 +68,8 @@
 		CA9BB9E02CABAACF00886A1A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CA9BB9DF2CABAACF00886A1A /* FirebaseStorage */; };
 		CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */; };
 		CA9BB9E92CABB12700886A1A /* NavigationStackPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9E82CABB12700886A1A /* NavigationStackPath.swift */; };
+		CAAA4B532CC9F2A00083F86C /* NavigationBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA4B522CC9F2A00083F86C /* NavigationBaseView.swift */; };
+		CAAA4B552CC9F2F70083F86C /* AisleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA4B542CC9F2F70083F86C /* AisleView.swift */; };
 		CAACDE2D2CB8BBBA004234FF /* LottieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACDE2C2CB8BBBA004234FF /* LottieRouter.swift */; };
 		CAAE54182CB8E34200B5352D /* PriceLevelCourseCover.json in Resources */ = {isa = PBXBuildFile; fileRef = CAAE54172CB8E34200B5352D /* PriceLevelCourseCover.json */; };
 		CAB77FD72CB8EC2900DF11D6 /* CourseToolbarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */; };
@@ -154,6 +156,8 @@
 		CA9BB9D62CABA94400886A1A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		CA9BB9E82CABB12700886A1A /* NavigationStackPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackPath.swift; sourceTree = "<group>"; };
+		CAAA4B522CC9F2A00083F86C /* NavigationBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBaseView.swift; sourceTree = "<group>"; };
+		CAAA4B542CC9F2F70083F86C /* AisleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AisleView.swift; sourceTree = "<group>"; };
 		CAACDE2C2CB8BBBA004234FF /* LottieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieRouter.swift; sourceTree = "<group>"; };
 		CAAE54172CB8E34200B5352D /* PriceLevelCourseCover.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevelCourseCover.json; sourceTree = "<group>"; };
 		CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseToolbarModifier.swift; sourceTree = "<group>"; };
@@ -528,6 +532,8 @@
 				CA662BD32CAD7B86009E8D5F /* Info.plist */,
 				CAF2271C2CAE569B002868F4 /* GoogleService-Info.plist */,
 				CA9BB9C92CABA59A00886A1A /* EconomyStockApp.swift */,
+				CAAA4B522CC9F2A00083F86C /* NavigationBaseView.swift */,
+				CAAA4B542CC9F2F70083F86C /* AisleView.swift */,
 				CA9BB9C82CABA59A00886A1A /* ContentView.swift */,
 				CA9BB9D62CABA94400886A1A /* MainTabView.swift */,
 				CA9BB9E42CABAF0A00886A1A /* NavigationRouter */,
@@ -901,6 +907,7 @@
 				CA4E71A52CB78A8300BAA70C /* Course.swift in Sources */,
 				CAEE16602CAD0D4D00210BD0 /* LoginViewModel.swift in Sources */,
 				CAEDDAC82CB575880046162D /* AccountSupportView.swift in Sources */,
+				CAAA4B552CC9F2F70083F86C /* AisleView.swift in Sources */,
 				CAEDDAC22CB570710046162D /* BasicLoginFocusField.swift in Sources */,
 				CAEE16632CAD0D7200210BD0 /* LoginViewModel+Kakao.swift in Sources */,
 				CA58A4ED2CB6D9E900DB91BD /* ProgressCircleView.swift in Sources */,
@@ -952,6 +959,7 @@
 				CAEE164F2CAD096C00210BD0 /* NotificationType.swift in Sources */,
 				CA4E71A82CB78B8400BAA70C /* CourseViewModel.swift in Sources */,
 				CAB77FD72CB8EC2900DF11D6 /* CourseToolbarModifier.swift in Sources */,
+				CAAA4B532CC9F2A00083F86C /* NavigationBaseView.swift in Sources */,
 				CA92DDBB2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift in Sources */,
 				CA3BBAAE2CB50144007CA152 /* BasicSignupViewModel.swift in Sources */,
 				CA08F3A02CB839600093117E /* PriceLevel5View.swift in Sources */,

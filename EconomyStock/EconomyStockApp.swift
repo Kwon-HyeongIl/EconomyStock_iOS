@@ -15,8 +15,6 @@ import GoogleSignIn
 @main
 struct EconomyStockApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @State private var navigationRouter = NavigationRouter()
-    @State private var mainTabCapsule = MainTabCapsule()
     
     let kakaoAppKey = Bundle.main.infoDictionary?["KAKAO_NATIVE_APP_KEY"] ?? ""
     
@@ -27,25 +25,17 @@ struct EconomyStockApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack(path: $navigationRouter.path) {
-                ContentView()
-                    .navigationDestination(for: NavigationStackPath.self) { view in
-                        navigationRouter.destinationNavigate(to: view)
+            NavigationBaseView()
+                .onOpenURL { url in
+                    // 카카오 로그인 URL 처리
+                    if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                        _ = AuthController.handleOpenUrl(url: url)
                     }
-                    .onOpenURL { url in
-                        // 카카오 로그인 URL 처리
-                        if (AuthApi.isKakaoTalkLoginUrl(url)) {
-                            _ = AuthController.handleOpenUrl(url: url)
-                        }
-                        
-                        // 구글 로그인 URL 처리
-                        GIDSignIn.sharedInstance.handle(url)
-                    }
-                    .preferredColorScheme(.light)
-            }
+                    
+                    // 구글 로그인 URL 처리
+                    GIDSignIn.sharedInstance.handle(url)
+                }
         }
-        .environment(navigationRouter)
-        .environment(mainTabCapsule)
     }
 }
 
