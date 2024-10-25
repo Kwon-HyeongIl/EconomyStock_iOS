@@ -28,7 +28,7 @@ struct CourseIntroView: View {
                 }
                 
                 Button {
-                    var courseDestination: NavigationStackPath
+                    var courseDestination: NavigationDestinationPath
                     
                     switch viewModel.course.number {
                         

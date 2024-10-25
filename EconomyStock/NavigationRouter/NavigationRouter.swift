@@ -12,7 +12,7 @@ class NavigationRouter {
     var path = NavigationPath()
     
     @ViewBuilder
-    func destinationNavigate(to view: NavigationStackPath) -> some View {
+    func destinationNavigate(to view: NavigationDestinationPath) -> some View {
         switch view {
             
         // Auth
@@ -38,7 +38,7 @@ class NavigationRouter {
     }
     
     @MainActor
-    func navigate(_ view: NavigationStackPath) {
+    func navigate(_ view: NavigationDestinationPath) {
         path.append(view)
     }
     

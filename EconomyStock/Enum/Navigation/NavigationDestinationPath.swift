@@ -7,7 +7,8 @@
 
 import Foundation
 
-enum NavigationStackPath: Hashable {
+enum NavigationDestinationPath: Hashable {
+    
     // Auth
     case BasicLoginView
     case BasicSignupView

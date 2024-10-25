@@ -14,7 +14,7 @@ struct NavigationBaseView: View {
     var body: some View {
         NavigationStack(path: $navigationRouter.path) {
             AisleView()
-                .navigationDestination(for: NavigationStackPath.self) { view in
+                .navigationDestination(for: NavigationDestinationPath.self) { view in
                     navigationRouter.destinationNavigate(to: view)
                 }
                 .preferredColorScheme(.light)
