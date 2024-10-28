@@ -21,7 +21,6 @@ struct NavigationBaseView: View {
         }
         .environment(navigationRouter)
         .environment(mainTabCapsule)
-        
     }
 }
 

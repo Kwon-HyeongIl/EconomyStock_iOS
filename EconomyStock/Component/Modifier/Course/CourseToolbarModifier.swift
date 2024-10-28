@@ -53,6 +53,7 @@ struct CourseToolbarModifier: ViewModifier {
                     
                     // 로컬 currentUser의 basicEconomyLastPage 값 바꾸기
                     switch viewModel.course.type {
+                        
                     case .basicEconomy:
                         AuthManager.shared.currentUser?.studyingCourse.basicEconomyLastPage = currentPage
                     case .priceLevel:

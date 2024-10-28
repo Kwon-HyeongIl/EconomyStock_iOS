@@ -12,16 +12,17 @@ extension AuthManager {
     func updateCourseLastPage(courseType: CourseType, lastPage: Int) async {
         var editedData: [String: Any] = [:]
         
-        let courseTypeLastPage = {
-            switch courseType {
-            case .basicEconomy:
-                "basicEconomyLastPage"
-            case .priceLevel:
-                "priceLevelLastPage"
-            }
+        let courseTypeLastPage: String
+        
+        switch courseType {
+            
+        case .basicEconomy:
+            courseTypeLastPage = "basicEconomyLastPage"
+        case .priceLevel:
+            courseTypeLastPage = "priceLevelLastPage"
         }
         
-        editedData["studyingCourse.\(String(describing: courseTypeLastPage))"] = lastPage
+        editedData["studyingCourse.\(courseTypeLastPage)"] = lastPage
         
         guard let userId = AuthManager.shared.currentUser?.id else { return }
         
