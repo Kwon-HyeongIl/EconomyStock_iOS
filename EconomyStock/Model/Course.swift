@@ -16,7 +16,7 @@ struct Course: Identifiable {
     let description: String
     let lottieFileName: String
     let backgroundGradient: LinearGradient
-    let progressRate: Double
+    var progressRate: Double
     let totalPage: Int
 }
 

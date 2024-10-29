@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CourseListView: View {
     @Environment(NavigationRouter.self) var navigationRouter
-    @State private var viewModel = CourseListViewModel()
+    @Environment(CourseListViewModel.self) var viewModel
     
     var body: some View {
         ScrollView {

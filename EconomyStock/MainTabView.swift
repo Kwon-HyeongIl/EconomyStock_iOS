@@ -26,6 +26,7 @@ struct MainTabView: View {
         VStack {
             ZStack {
                 switch mainTabCapsule.selectedTab {
+                    
                 case .house:
                     homeView
                     

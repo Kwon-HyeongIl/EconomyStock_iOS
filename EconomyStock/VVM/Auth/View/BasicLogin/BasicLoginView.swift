@@ -138,7 +138,7 @@ struct BasicLoginView: View {
         }
         .overlay {
             if loadingBarState {
-                LottieViewConverter(fileName: "Loading", loopMode: .loop, width: 150, height: 150)
+                LottieViewConverter(fileName: "Loading", loopMode: .loop, width: 180, height: 180)
                     .padding(.top, 280)
             }
         }

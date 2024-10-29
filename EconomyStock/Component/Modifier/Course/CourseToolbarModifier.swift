@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CourseToolbarModifier: ViewModifier {
     @Environment(NavigationRouter.self) var navigationRouter
+    @Environment(CourseListViewModel.self) var courseListViewModel
     @Bindable var viewModel: CourseViewModel
     
     @State private var alertExit = false
@@ -45,23 +46,18 @@ struct CourseToolbarModifier: ViewModifier {
                     withAnimation(.smooth(duration: 0.2)) {
                         loadingBarState = true
                     }
-                    // 페이지 저장 코드 추가
-                    /*
-                     1. currentUser의 basicEconomyLastPage 값 바꾸기 (currentUser의 값만 바꾸고 initCourses 다시 호출하면 Course 값 다시 바뀜)
-                     2. DB User의 basicEconomyLastPage 값 바꾸기
-                     */
                     
-                    // 로컬 currentUser의 basicEconomyLastPage 값 바꾸기
+                    // 로컬 currentUser의 basicEconomyLastPage 값 바꾸고, CourseViewModel의 updateCourses() 호출
                     switch viewModel.course.type {
                         
                     case .basicEconomy:
                         AuthManager.shared.currentUser?.studyingCourse.basicEconomyLastPage = currentPage
+                        courseListViewModel.updateBasicEconomyCourse()
+                        
                     case .priceLevel:
                         AuthManager.shared.currentUser?.studyingCourse.priceLevelLastPage = currentPage
+                        courseListViewModel.updatePriceLevelCourse()
                     }
-                    
-                    // CourseViewModel의 initCourses() 호출
-                    
                     
                     // DB User의 basicEconomyLastPage 값 바꾸기
                     Task {
@@ -77,7 +73,7 @@ struct CourseToolbarModifier: ViewModifier {
             }
             .overlay {
                 if loadingBarState {
-                    LottieViewConverter(fileName: "Loading", loopMode: .loop, width: 150, height: 150)
+                    LottieViewConverter(fileName: "Loading", loopMode: .loop, width: 180, height: 180)
                         .padding(.bottom, 60)
                 }
             }
