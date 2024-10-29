@@ -12,15 +12,14 @@ class CourseListViewModel {
     var courses: [Course] = []
     
     init() {
-        self.initCourses()
+        initBasicEconomyCourse()
+        initPriceLevelCourse()
     }
     
-    func initCourses() {
+    // I 기초 경제
+    func initBasicEconomyCourse() {
         let currentUser = AuthManager.shared.currentUser
         
-        var tempCorses: [Course] = []
-        
-        // I 기초 경제
         let basicEconomyGradient = LinearGradient(
             gradient: Gradient(colors: [.green, Color(red: 0.75, green: 1.0, blue: 0.0)]),
             startPoint: .topLeading,
@@ -31,10 +30,15 @@ class CourseListViewModel {
         let basicEconomyTotalPage = 5.0
         let basicEconomyProgressRate = (basicEconomyLastPage / basicEconomyTotalPage) * 100.0
         
-        tempCorses.append(Course(id: UUID().uuidString, type: .basicEconomy, title: "기초 경제", number: "I", description: "설명입니다", lottieFileName: "BasicEconomyCourseCover", backgroundGradient: basicEconomyGradient, progressRate: basicEconomyProgressRate, totalPage: Int(basicEconomyTotalPage)))
+        DispatchQueue.main.async {
+            self.courses.append(Course(id: UUID().uuidString, type: .basicEconomy, title: "기초 경제", number: "I", description: "설명입니다", lottieFileName: "BasicEconomyCourseCover", backgroundGradient: basicEconomyGradient, progressRate: basicEconomyProgressRate, totalPage: Int(basicEconomyTotalPage)))
+        }
+    }
+    
+    // II 물가
+    func initPriceLevelCourse() {
+        let currentUser = AuthManager.shared.currentUser
         
-        
-        // II 물가
         let priceLevelGradient = LinearGradient(
             gradient: Gradient(colors: [.yellow, .orange]),
             startPoint: .topLeading,
@@ -45,12 +49,8 @@ class CourseListViewModel {
         let priceLevelTotalPage = 5.0
         let priceLevelProgressRate = (priceLevelCurrentPage / priceLevelTotalPage) * 100.0
         
-        tempCorses.append(Course(id: UUID().uuidString, type: .priceLevel, title: "물가", number: "II", description: "설명입니다", lottieFileName: "PriceLevelCourseCover", backgroundGradient: priceLevelGradient, progressRate: priceLevelProgressRate, totalPage: Int(priceLevelTotalPage)))
-        
-        // 다른 항목들 추가
-        
         DispatchQueue.main.async {
-            self.courses = tempCorses
+            self.courses.append(Course(id: UUID().uuidString, type: .priceLevel, title: "물가", number: "II", description: "설명입니다", lottieFileName: "PriceLevelCourseCover", backgroundGradient: priceLevelGradient, progressRate: priceLevelProgressRate, totalPage: Int(priceLevelTotalPage)))
         }
     }
 }
