@@ -73,6 +73,8 @@ class CourseListViewModel {
         let totalPage = 5.0
         let progressRate = (lastPage / totalPage) * 100.0
         
-        self.courses[1].progressRate = progressRate
+        DispatchQueue.main.async {
+            self.courses[1].progressRate = progressRate
+        }
     }
 }
