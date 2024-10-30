@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            if Auth.auth().currentUser != nil {
+            if IsLoginControlManager.shared.isLogin {
                 MainTabView()
                     .toolbar(isSplashVisible ? .hidden : .visible, for: .navigationBar)
 

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 /**
  ContentView에서 AuthManager.shared.currentUser로 로그인 했는지 여부를 파악해서 LoginView를 띄울지 MainTabView를 띄울지 정하게 하면,
@@ -16,5 +17,15 @@ import Foundation
  */
 @Observable
 class IsLoginControlManager {
+    static let shared = IsLoginControlManager()
     
+    var isLogin: Bool
+    
+    init() {
+        if Auth.auth().currentUser != nil {
+            isLogin = true
+        } else {
+            isLogin = false
+        }
+    }
 }
