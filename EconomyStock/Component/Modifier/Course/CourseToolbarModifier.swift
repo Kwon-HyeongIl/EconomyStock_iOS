@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CourseToolbarModifier: ViewModifier {
     @Environment(NavigationRouter.self) var navigationRouter
-    @Environment(CourseListViewModel.self) var courseListViewModel
     @Bindable var viewModel: CourseViewModel
     
     @State private var alertExit = false
@@ -47,16 +46,14 @@ struct CourseToolbarModifier: ViewModifier {
                         loadingBarState = true
                     }
                     
-                    // 로컬 currentUser의 basicEconomyLastPage 값 바꾸고, CourseViewModel의 updateCourses() 호출
+                    // 로컬 currentUser의 basicEconomyLastPage 값 바꾸고, CourseViewModel의 init 호출
                     switch viewModel.course.type {
                         
                     case .basicEconomy:
                         AuthManager.shared.currentUser?.studyingCourse.basicEconomyLastPage = currentPage
-                        courseListViewModel.updateBasicEconomyCourse()
                         
                     case .priceLevel:
                         AuthManager.shared.currentUser?.studyingCourse.priceLevelLastPage = currentPage
-                        courseListViewModel.updatePriceLevelCourse()
                     }
                     
                     // DB User의 basicEconomyLastPage 값 바꾸기
