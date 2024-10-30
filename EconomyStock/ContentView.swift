@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ContentView: View {
     @State private var isSplashVisible = true
     
     var body: some View {
         ZStack {
-            if AuthManager.shared.currentUser != nil {
+            if Auth.auth().currentUser != nil {
                 MainTabView()
                     .toolbar(isSplashVisible ? .hidden : .visible, for: .navigationBar)
 

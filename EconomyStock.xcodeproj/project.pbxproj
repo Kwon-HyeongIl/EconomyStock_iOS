@@ -17,6 +17,7 @@
 		CA114FDA2CB62E7D00AD5AD9 /* NavigationTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA114FD92CB62E7D00AD5AD9 /* NavigationTitleModifier.swift */; };
 		CA114FDD2CB631A500AD5AD9 /* CourseCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA114FDC2CB631A500AD5AD9 /* CourseCoverView.swift */; };
 		CA114FEF2CB64B0E00AD5AD9 /* BasicEconomyCourseCover.json in Resources */ = {isa = PBXBuildFile; fileRef = CA114FEE2CB64B0E00AD5AD9 /* BasicEconomyCourseCover.json */; };
+		CA13CCE52CD2A8A000FA3B92 /* IsLoginControlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13CCE42CD2A8A000FA3B92 /* IsLoginControlManager.swift */; };
 		CA17FC702CB005800050250B /* MainCustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC6F2CB005800050250B /* MainCustomTabView.swift */; };
 		CA17FC722CB005A10050250B /* MainTabCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC712CB005A10050250B /* MainTabCapsule.swift */; };
 		CA17FC752CB005DB0050250B /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC742CB005DB0050250B /* MainTab.swift */; };
@@ -112,6 +113,7 @@
 		CA114FD92CB62E7D00AD5AD9 /* NavigationTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleModifier.swift; sourceTree = "<group>"; };
 		CA114FDC2CB631A500AD5AD9 /* CourseCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCoverView.swift; sourceTree = "<group>"; };
 		CA114FEE2CB64B0E00AD5AD9 /* BasicEconomyCourseCover.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomyCourseCover.json; sourceTree = "<group>"; };
+		CA13CCE42CD2A8A000FA3B92 /* IsLoginControlManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsLoginControlManager.swift; sourceTree = "<group>"; };
 		CA17FC6F2CB005800050250B /* MainCustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCustomTabView.swift; sourceTree = "<group>"; };
 		CA17FC712CB005A10050250B /* MainTabCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCapsule.swift; sourceTree = "<group>"; };
 		CA17FC742CB005DB0050250B /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
@@ -572,6 +574,7 @@
 				CAEE16502CAD0C2E00210BD0 /* Auth */,
 				CAEE165B2CAD0D1400210BD0 /* FCM */,
 				CA2E93682CAFAEB000A883F1 /* Notification */,
+				CA13CCE42CD2A8A000FA3B92 /* IsLoginControlManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -958,6 +961,7 @@
 				CAEDDAB92CB53B3F0046162D /* BasicSignupFocusField.swift in Sources */,
 				CAEE164F2CAD096C00210BD0 /* NotificationType.swift in Sources */,
 				CA4E71A82CB78B8400BAA70C /* CourseViewModel.swift in Sources */,
+				CA13CCE52CD2A8A000FA3B92 /* IsLoginControlManager.swift in Sources */,
 				CAB77FD72CB8EC2900DF11D6 /* CourseToolbarModifier.swift in Sources */,
 				CAAA4B532CC9F2A00083F86C /* NavigationBaseView.swift in Sources */,
 				CA92DDBB2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift in Sources */,
