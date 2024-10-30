@@ -81,7 +81,6 @@ class AuthManager {
         
         await updateDeviceToken()
         await loadCurrentUserData()
-        IsLoginControlManager.shared.isLogin = true
         
         return true
     }
@@ -162,7 +161,6 @@ class AuthManager {
             
             DispatchQueue.main.async {
                 self.currentUser = nil
-                IsLoginControlManager.shared.isLogin = false
             }
             
         } catch {

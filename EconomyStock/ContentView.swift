@@ -6,14 +6,18 @@
 //
 
 import SwiftUI
-import FirebaseAuth
 
 struct ContentView: View {
     @State private var isSplashVisible = true
     
     var body: some View {
         ZStack {
-            if IsLoginControlManager.shared.isLogin {
+            
+            /*
+             if문의 조건이 충족 될 때, if문 안에 있는 뷰가 생성
+             예를 들어, ContentView가 init될 때 currentUser가 nil이면 MainTabView는 생성하지 않고있음
+             */
+            if AuthManager.shared.currentUser != nil {
                 MainTabView()
                     .toolbar(isSplashVisible ? .hidden : .visible, for: .navigationBar)
 
