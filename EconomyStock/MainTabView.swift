@@ -10,12 +10,6 @@ import SwiftUI
 struct MainTabView: View {
     @Environment(MainTabCapsule.self) var mainTabCapsule
     
-    // 뷰 캐싱
-    @State private var homeView = HomeView()
-    @State private var courseListView = CourseListView()
-    @State private var newsView = NewsView()
-    @State private var profileView = ProfileView()
-    
     init() {
         UITabBar.appearance().isHidden = true
     }
@@ -28,16 +22,16 @@ struct MainTabView: View {
                 switch mainTabCapsule.selectedTab {
                     
                 case .house:
-                    homeView
+                    HomeView()
                     
                 case .textBookClosed:
-                    courseListView
+                    CourseListView()
                     
                 case .newspaper:
-                    newsView
+                    NewsView()
                     
                 case .person:
-                    profileView
+                    ProfileView()
                 }
                 
                 VStack {
