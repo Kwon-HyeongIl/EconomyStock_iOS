@@ -13,6 +13,7 @@ struct CourseIntroView: View {
     
     @State private var alertAskStartContinue = false
     @State private var alertAskStartBeginning = false
+    @State private var alertFinishing = false
     
     var body: some View {
         ScrollView {
@@ -36,6 +37,10 @@ struct CourseIntroView: View {
                     case .basicEconomy:
                         if viewModel.course.lastPage == 0 {
                             navigationRouter.navigate(.BasicEconomy1View(viewModel))
+                            
+                        } else if viewModel.course.lastPage == 5 {
+                            alertFinishing = true
+                            
                         } else {
                             alertAskStartContinue = true
                         }
@@ -43,6 +48,10 @@ struct CourseIntroView: View {
                     case .priceLevel:
                         if viewModel.course.lastPage == 0 {
                             navigationRouter.navigate(.PriceLevel1View(viewModel))
+                            
+                        } else if viewModel.course.lastPage == 5 {
+                            alertFinishing = true
+                            
                         } else {
                             alertAskStartContinue = true
                         }
@@ -141,6 +150,27 @@ struct CourseIntroView: View {
                     }
                 } message: {
                     Text("강의 진행률은 초기화되지 않습니다.")
+                }
+                .alert("이미 완료한 강의입니다", isPresented: $alertFinishing) {
+                    Button(role: .cancel) {
+                        
+                    } label: {
+                        Text("취소")
+                    }
+                    
+                    Button {
+                        switch viewModel.course.type {
+                            
+                        case .basicEconomy:
+                            navigationRouter.navigate(.BasicEconomy1View(viewModel))
+                        case .priceLevel:
+                            navigationRouter.navigate(.PriceLevel1View(viewModel))
+                        }
+                    } label: {
+                        Text("확인")
+                    }
+                } message: {
+                    Text("첫페이지로 돌아갑니다. 강의 진행률은 초기화되지 않습니다.")
                 }
                 
                 VStack {

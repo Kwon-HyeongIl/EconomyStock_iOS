@@ -45,7 +45,6 @@
 		CA662BCA2CAD72E6009E8D5F /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BC92CAD72E6009E8D5F /* KakaoSDKAuth */; };
 		CA662BCC2CAD72E6009E8D5F /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BCB2CAD72E6009E8D5F /* KakaoSDKCommon */; };
 		CA662BCE2CAD72E6009E8D5F /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BCD2CAD72E6009E8D5F /* KakaoSDKUser */; };
-		CA662BD22CAD79F0009E8D5F /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CA662BD12CAD79F0009E8D5F /* Config.xcconfig */; };
 		CA6C54D42CB160A1008CF887 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CA6C54D32CB160A1008CF887 /* GoogleSignIn */; };
 		CA6C54D62CB160A1008CF887 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CA6C54D52CB160A1008CF887 /* GoogleSignInSwift */; };
 		CA77DFCD2CB24D0900992829 /* Loading.json in Resources */ = {isa = PBXBuildFile; fileRef = CA77DFCC2CB24D0900992829 /* Loading.json */; };
@@ -840,7 +839,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					CA83477B2CAAE28500BA1E4A = {
 						CreatedOnToolsVersion = 16.0;
@@ -879,7 +878,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA9BB9CE2CABA59A00886A1A /* Preview Assets.xcassets in Resources */,
-				CA662BD22CAD79F0009E8D5F /* Config.xcconfig in Resources */,
 				CA77DFCD2CB24D0900992829 /* Loading.json in Resources */,
 				CAF2271D2CAE569B002868F4 /* GoogleService-Info.plist in Resources */,
 				CA9BB9CF2CABA59A00886A1A /* .gitignore in Resources */,
