@@ -121,7 +121,7 @@ struct CourseIntroView: View {
                 } message: {
                     Text("이전에 학습하시던 \(viewModel.course.lastPage)페이지로 이동합니다.")
                 }
-                .alert("처음부터 시작하시겠습니까?", isPresented: $alertAskStartContinue) {
+                .alert("처음부터 시작하시겠습니까?", isPresented: $alertAskStartBeginning) {
                     Button(role: .cancel) {
                         
                     } label: {
