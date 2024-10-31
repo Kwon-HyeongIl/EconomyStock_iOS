@@ -57,4 +57,11 @@ class CourseListViewModel {
             self.courses.append(Course(id: UUID().uuidString, type: .priceLevel, title: "물가", number: "II", description: "설명입니다", lottieFileName: "PriceLevelCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
         }
     }
+
+    func updateAllCourses() {
+        courses.removeAll()
+        
+        initBasicEconomyCourse()
+        initPriceLevelCourse()
+    }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CourseListView: View {
+    @Environment(CourseListViewCapsule.self) var capsule
     @State private var viewModel = CourseListViewModel()
     
     var body: some View {
@@ -21,6 +22,11 @@ struct CourseListView: View {
         }
         .modifier(NavigationTitleModifier(title: "학습"))
         .scrollIndicators(.never)
+        .onAppear {
+            if capsule.isUpdate {
+                viewModel.updateAllCourses()
+            }
+        }
     }
 }
 

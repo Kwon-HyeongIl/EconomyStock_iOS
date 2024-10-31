@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CourseToolbarModifier: ViewModifier {
     @Environment(NavigationRouter.self) var navigationRouter
+    @Environment(CourseListViewCapsule.self) var courseListViewCapule
     @Bindable var viewModel: CourseViewModel
     
     @State private var alertExit = false
@@ -46,20 +47,23 @@ struct CourseToolbarModifier: ViewModifier {
                         loadingBarState = true
                     }
                     
-                    // 로컬 currentUser의 basicEconomyParmanentProgressPage 값 바꾸고 (기존의 값보다 큰 경우에만), 로컬 basicEconomyLastPage 값 변경 후 CourseViewModel의 init 호출
+                    // 로컬 currentUser의 parmanentProgressPage 값 바꾸고 (기존의 값보다 큰 경우에만), 로컬 basicEconomyLastPage 값 변경 후
                     switch viewModel.course.type {
                         
                     case .basicEconomy:
                         if AuthManager.shared.currentUser?.studyingCourse.basicEconomyParmanentProgressPage ?? 0 < currentPage {
                             AuthManager.shared.currentUser?.studyingCourse.basicEconomyParmanentProgressPage = currentPage
                             
-                            // DB User의 basicEconomyProgressPage 값 바꾸기 (기존의 값보다 큰 경우에만)
+                            // DB User의 parmanentProgressPage 값 바꾸기 (기존의 값보다 큰 경우에만)
                             Task {
                                 await AuthManager.shared.updateCourseParmanentProgressPage(courseType: viewModel.course.type, parmanentProgressPage: currentPage)
                             }
                         }
                         
                         AuthManager.shared.currentUser?.studyingCourse.basicEconomyLastPage = currentPage
+                        
+                        // CourseListViewModel의 updateAllCourses 메서드 호출 (중간 인터페이스로 연결)
+                        courseListViewCapule.isUpdate = true
                         
                     case .priceLevel:
                         if AuthManager.shared.currentUser?.studyingCourse.priceLevelParmanentProgressPage ?? 0 < currentPage {
@@ -71,9 +75,11 @@ struct CourseToolbarModifier: ViewModifier {
                         }
                         
                         AuthManager.shared.currentUser?.studyingCourse.priceLevelLastPage = currentPage
+                        
+                        courseListViewCapule.isUpdate = true
                     }
                     
-                    // DB User의 basicEconomyLastPage 값 바꾸기
+                    // DB User의 lastPage 값 바꾸기
                     Task {
                         await AuthManager.shared.updateCourseLastPage(courseType: viewModel.course.type, lastPage: currentPage)
                     }

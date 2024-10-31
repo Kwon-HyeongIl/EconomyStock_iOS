@@ -11,6 +11,8 @@ struct NavigationBaseView: View {
     @State private var navigationRouter = NavigationRouter()
     @State private var mainTabCapsule = MainTabCapsule()
     
+    @State private var courseListViewCapsule = CourseListViewCapsule() // 상태 변경 체크 인터페이스
+    
     var body: some View {
         NavigationStack(path: $navigationRouter.path) {
             AisleView()
@@ -21,6 +23,7 @@ struct NavigationBaseView: View {
         }
         .environment(navigationRouter)
         .environment(mainTabCapsule)
+        .environment(courseListViewCapsule)
     }
 }
 
