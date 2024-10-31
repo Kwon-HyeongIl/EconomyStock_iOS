@@ -31,9 +31,25 @@ class NavigationRouter {
         
         case .BasicEconomy1View(let viewModel):
             BasicEconomy1View(viewModel: viewModel)
+        case .BasicEconomy2View(let viewModel):
+            BasicEconomy2View(viewModel: viewModel)
+        case .BasicEconomy3View(let viewModel):
+            BasicEconomy3View(viewModel: viewModel)
+        case .BasicEconomy4View(let viewModel):
+            BasicEconomy4View(viewModel: viewModel)
+        case .BasicEconomy5View(let viewModel):
+            BasicEconomy5View(viewModel: viewModel)
             
         case .PriceLevel1View(let viewModel):
             PriceLevel1View(viewModel: viewModel)
+        case .PriceLevel2View(let viewModel):
+            PriceLevel2View(viewModel: viewModel)
+        case .PriceLevel3View(let viewModel):
+            PriceLevel3View(viewModel: viewModel)
+        case .PriceLevel4View(let viewModel):
+            PriceLevel4View(viewModel: viewModel)
+        case .PriceLevel5View(let viewModel):
+            PriceLevel5View(viewModel: viewModel)
         }
     }
     

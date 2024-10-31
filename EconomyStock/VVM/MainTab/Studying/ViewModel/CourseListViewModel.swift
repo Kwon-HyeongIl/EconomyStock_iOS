@@ -26,12 +26,14 @@ class CourseListViewModel {
             endPoint: .bottomTrailing
         )
         
-        let lastPage = Double(currentUser?.studyingCourse.basicEconomyLastPage ?? 0)
+        let progressSavePage = Double(currentUser?.studyingCourse.basicEconomyProgressSavePage ?? 0)
         let totalPage = 5.0
-        let progressRate = (lastPage / totalPage) * 100.0
+        let progressRate = (progressSavePage / totalPage) * 100.0
+        
+        let lastPage = currentUser?.studyingCourse.basicEconomyLastPage ?? 0
         
         DispatchQueue.main.async {
-            self.courses.append(Course(id: UUID().uuidString, type: .basicEconomy, title: "기초 경제", number: "I", description: "설명입니다", lottieFileName: "BasicEconomyCourseCover", backgroundGradient: gradient, progressRate: progressRate, totalPage: Int(totalPage)))
+            self.courses.append(Course(id: UUID().uuidString, type: .basicEconomy, title: "기초 경제", number: "I", description: "설명입니다", lottieFileName: "BasicEconomyCourseCover", backgroundGradient: gradient, progressSavePage: Int(progressSavePage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
         }
     }
     
@@ -45,12 +47,14 @@ class CourseListViewModel {
             endPoint: .bottomTrailing
         )
         
-        let lastPage = Double(currentUser?.studyingCourse.priceLevelLastPage ?? 0)
+        let progressSavePage = Double(currentUser?.studyingCourse.priceLevelLastPage ?? 0)
         let totalPage = 5.0
-        let progressRate = (lastPage / totalPage) * 100.0
+        let progressRate = (progressSavePage / totalPage) * 100.0
+        
+        let lastPage = currentUser?.studyingCourse.priceLevelLastPage ?? 0
         
         DispatchQueue.main.async {
-            self.courses.append(Course(id: UUID().uuidString, type: .priceLevel, title: "물가", number: "II", description: "설명입니다", lottieFileName: "PriceLevelCourseCover", backgroundGradient: gradient, progressRate: progressRate, totalPage: Int(totalPage)))
+            self.courses.append(Course(id: UUID().uuidString, type: .priceLevel, title: "물가", number: "II", description: "설명입니다", lottieFileName: "PriceLevelCourseCover", backgroundGradient: gradient, progressSavePage: Int(progressSavePage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
         }
     }
 }

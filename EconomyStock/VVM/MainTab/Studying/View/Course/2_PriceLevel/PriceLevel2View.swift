@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct PriceLevel2View: View {
+    @Environment(NavigationRouter.self) var navigationRouter
+    @Bindable var viewModel: CourseViewModel
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    PriceLevel2View()
+    PriceLevel2View(viewModel: CourseViewModel(course: Course.DUMMY_COURSE))
 }

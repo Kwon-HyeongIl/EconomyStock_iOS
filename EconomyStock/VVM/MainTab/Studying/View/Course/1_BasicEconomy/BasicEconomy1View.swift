@@ -13,7 +13,12 @@ struct BasicEconomy1View: View {
     
     var body: some View {
         VStack {
-
+            Button {
+                viewModel.currentPage += 1
+                navigationRouter.navigate(.BasicEconomy2View(viewModel))
+            } label: {
+                Text("2 이동")
+            }
         }
         .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
     }
