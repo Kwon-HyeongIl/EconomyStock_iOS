@@ -35,18 +35,6 @@ class CourseListViewModel {
         }
     }
     
-    func updateBasicEconomyCourse() {
-        let currentUser = AuthManager.shared.currentUser
-        
-        let lastPage = Double(currentUser?.studyingCourse.basicEconomyLastPage ?? 0)
-        let totalPage = 5.0
-        let progressRate = (lastPage / totalPage) * 100.0
-        
-        DispatchQueue.main.async {
-            self.courses[0].progressRate = progressRate
-        }
-    }
-    
     // II 물가
     func initPriceLevelCourse() {
         let currentUser = AuthManager.shared.currentUser
@@ -63,18 +51,6 @@ class CourseListViewModel {
         
         DispatchQueue.main.async {
             self.courses.append(Course(id: UUID().uuidString, type: .priceLevel, title: "물가", number: "II", description: "설명입니다", lottieFileName: "PriceLevelCourseCover", backgroundGradient: gradient, progressRate: progressRate, totalPage: Int(totalPage)))
-        }
-    }
-    
-    func updatePriceLevelCourse() {
-        let currentUser = AuthManager.shared.currentUser
-        
-        let lastPage = Double(currentUser?.studyingCourse.priceLevelLastPage ?? 0)
-        let totalPage = 5.0
-        let progressRate = (lastPage / totalPage) * 100.0
-        
-        DispatchQueue.main.async {
-            self.courses[1].progressRate = progressRate
         }
     }
 }
