@@ -80,18 +80,36 @@ struct CourseIntroView: View {
                                 
                             case 2:
                                 viewModel.currentPage = 2
+                                
+                                navigationRouter.path.append(NavigationDestinationPath.BasicEconomy1View(viewModel))
+                                
                                 navigationRouter.navigate(.BasicEconomy2View(viewModel))
                                 
                             case 3:
                                 viewModel.currentPage = 3
+                                
+                                navigationRouter.path.append(NavigationDestinationPath.BasicEconomy1View(viewModel))
+                                navigationRouter.path.append(NavigationDestinationPath.BasicEconomy2View(viewModel))
+                                
                                 navigationRouter.navigate(.BasicEconomy3View(viewModel))
                                 
                             case 4:
                                 viewModel.currentPage = 4
+                                
+                                navigationRouter.path.append(NavigationDestinationPath.BasicEconomy1View(viewModel))
+                                navigationRouter.path.append(NavigationDestinationPath.BasicEconomy2View(viewModel))
+                                navigationRouter.path.append(NavigationDestinationPath.BasicEconomy3View(viewModel))
+                                
                                 navigationRouter.navigate(.BasicEconomy4View(viewModel))
                                 
                             case 5:
                                 viewModel.currentPage = 5
+                                
+                                navigationRouter.path.append(NavigationDestinationPath.BasicEconomy1View(viewModel))
+                                navigationRouter.path.append(NavigationDestinationPath.BasicEconomy2View(viewModel))
+                                navigationRouter.path.append(NavigationDestinationPath.BasicEconomy3View(viewModel))
+                                navigationRouter.path.append(NavigationDestinationPath.BasicEconomy4View(viewModel))
+                                
                                 navigationRouter.navigate(.BasicEconomy5View(viewModel))
                                 
                             default:
@@ -106,18 +124,36 @@ struct CourseIntroView: View {
                                 
                             case 2:
                                 viewModel.currentPage = 2
+                                
+                                navigationRouter.path.append(NavigationDestinationPath.PriceLevel1View(viewModel))
+                                
                                 navigationRouter.navigate(.PriceLevel2View(viewModel))
                                 
                             case 3:
                                 viewModel.currentPage = 3
+                                
+                                navigationRouter.path.append(NavigationDestinationPath.PriceLevel1View(viewModel))
+                                navigationRouter.path.append(NavigationDestinationPath.PriceLevel2View(viewModel))
+                                
                                 navigationRouter.navigate(.PriceLevel3View(viewModel))
                                 
                             case 4:
                                 viewModel.currentPage = 4
+                                
+                                navigationRouter.path.append(NavigationDestinationPath.PriceLevel1View(viewModel))
+                                navigationRouter.path.append(NavigationDestinationPath.PriceLevel2View(viewModel))
+                                navigationRouter.path.append(NavigationDestinationPath.PriceLevel3View(viewModel))
+                                
                                 navigationRouter.navigate(.PriceLevel4View(viewModel))
                                 
                             case 5:
                                 viewModel.currentPage = 5
+                                
+                                navigationRouter.path.append(NavigationDestinationPath.PriceLevel1View(viewModel))
+                                navigationRouter.path.append(NavigationDestinationPath.PriceLevel2View(viewModel))
+                                navigationRouter.path.append(NavigationDestinationPath.PriceLevel3View(viewModel))
+                                navigationRouter.path.append(NavigationDestinationPath.PriceLevel4View(viewModel))
+                                
                                 navigationRouter.navigate(.PriceLevel5View(viewModel))
                                 
                             default:

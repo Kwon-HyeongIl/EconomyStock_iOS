@@ -14,6 +14,13 @@ struct BasicEconomy3View: View {
     var body: some View {
         VStack {
             Button {
+                viewModel.currentPage -= 1
+                navigationRouter.back()
+            } label: {
+                Text("뒤로")
+            }
+            
+            Button {
                 viewModel.currentPage += 1
                 navigationRouter.navigate(.BasicEconomy4View(viewModel))
             } label: {

@@ -13,7 +13,12 @@ struct BasicEconomy5View: View {
     
     var body: some View {
         VStack {
-            
+            Button {
+                viewModel.currentPage -= 1
+                navigationRouter.back()
+            } label: {
+                Text("뒤로")
+            }
         }
         .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
     }
