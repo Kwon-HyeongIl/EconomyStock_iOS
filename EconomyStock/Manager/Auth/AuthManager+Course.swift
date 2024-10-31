@@ -9,20 +9,20 @@ import Foundation
 import FirebaseFirestore
 
 extension AuthManager {
-    func updateCourseProgressSavePage(courseType: CourseType, progressSavePage: Int) async {
+    func updateCourseParmanentProgressPage(courseType: CourseType, parmanentProgressPage: Int) async {
         var editedData: [String: Any] = [:]
         
-        let courseTypeProgressSavePage: String
+        let courseTypeParmanentProgressPage: String
         
         switch courseType {
             
         case .basicEconomy:
-            courseTypeProgressSavePage = "basicEconomyProgressSavePage"
+            courseTypeParmanentProgressPage = "basicEconomyParmanentProgressPage"
         case .priceLevel:
-            courseTypeProgressSavePage = "priceLevelProgressSavePage"
+            courseTypeParmanentProgressPage = "priceLevelParmanentProgressPage"
         }
         
-        editedData["studyingCourse.\(courseTypeProgressSavePage)"] = progressSavePage
+        editedData["studyingCourse.\(courseTypeParmanentProgressPage)"] = parmanentProgressPage
         
         guard let userId = AuthManager.shared.currentUser?.id else { return }
         

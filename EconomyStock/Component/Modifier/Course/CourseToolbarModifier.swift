@@ -46,27 +46,27 @@ struct CourseToolbarModifier: ViewModifier {
                         loadingBarState = true
                     }
                     
-                    // 로컬 currentUser의 basicEconomyProgressSavePage 값 바꾸고 (기존의 값보다 큰 경우에만), 로컬 basicEconomyLastPage 값 변경 후 CourseViewModel의 init 호출
+                    // 로컬 currentUser의 basicEconomyParmanentProgressPage 값 바꾸고 (기존의 값보다 큰 경우에만), 로컬 basicEconomyLastPage 값 변경 후 CourseViewModel의 init 호출
                     switch viewModel.course.type {
                         
                     case .basicEconomy:
-                        if AuthManager.shared.currentUser?.studyingCourse.basicEconomyProgressSavePage ?? 0 < currentPage {
-                            AuthManager.shared.currentUser?.studyingCourse.basicEconomyProgressSavePage = currentPage
+                        if AuthManager.shared.currentUser?.studyingCourse.basicEconomyParmanentProgressPage ?? 0 < currentPage {
+                            AuthManager.shared.currentUser?.studyingCourse.basicEconomyParmanentProgressPage = currentPage
                             
                             // DB User의 basicEconomyProgressPage 값 바꾸기 (기존의 값보다 큰 경우에만)
                             Task {
-                                await AuthManager.shared.updateCourseProgressSavePage(courseType: viewModel.course.type, progressSavePage: currentPage)
+                                await AuthManager.shared.updateCourseParmanentProgressPage(courseType: viewModel.course.type, parmanentProgressPage: currentPage)
                             }
                         }
                         
                         AuthManager.shared.currentUser?.studyingCourse.basicEconomyLastPage = currentPage
                         
                     case .priceLevel:
-                        if AuthManager.shared.currentUser?.studyingCourse.priceLevelProgressSavePage ?? 0 < currentPage {
-                            AuthManager.shared.currentUser?.studyingCourse.priceLevelProgressSavePage = currentPage
+                        if AuthManager.shared.currentUser?.studyingCourse.priceLevelParmanentProgressPage ?? 0 < currentPage {
+                            AuthManager.shared.currentUser?.studyingCourse.priceLevelParmanentProgressPage = currentPage
                             
                             Task {
-                                await AuthManager.shared.updateCourseProgressSavePage(courseType: viewModel.course.type, progressSavePage: currentPage)
+                                await AuthManager.shared.updateCourseParmanentProgressPage(courseType: viewModel.course.type, parmanentProgressPage: currentPage)
                             }
                         }
                         
