@@ -30,15 +30,12 @@ struct CourseIntroView: View {
                 Button {
                     var courseDestination: NavigationDestinationPath
                     
-                    switch viewModel.course.number {
+                    switch viewModel.course.type {
                         
-                    case "I":
+                    case .basicEconomy:
                         courseDestination = .BasicEconomy1View(viewModel)
-                    case "II":
+                    case .priceLevel:
                         courseDestination = .PriceLevel1View(viewModel)
-                        
-                    default:
-                        return
                     }
                     
                     navigationRouter.navigate(courseDestination)
