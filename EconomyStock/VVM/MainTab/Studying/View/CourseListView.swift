@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CourseListView: View {
-    @Environment(NavigationRouter.self) var navigationRouter
     @State private var viewModel = CourseListViewModel()
     
     var body: some View {
@@ -27,5 +26,4 @@ struct CourseListView: View {
 
 #Preview {
     CourseListView()
-        .environment(NavigationRouter())
 }
