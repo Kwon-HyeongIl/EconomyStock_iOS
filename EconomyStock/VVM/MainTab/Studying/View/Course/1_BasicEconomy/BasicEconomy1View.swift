@@ -32,9 +32,9 @@ struct BasicEconomy1View: View {
             
             if progress.count >= 1 {
                 (Text("우리나라에서 경제의 주체는 \n")
-                 + Text("가계, 기업, 정부, 해외부문")
+                 + Text("가계, 기업, 정부, 해외")
                     .foregroundStyle(Color.ESTitle)
-                 + Text("으로 나뉘어요")
+                 + Text("부문으로 나뉘어요")
                 )
                 .font(.system(size: 20))
                 .fontWeight(.semibold)
@@ -44,10 +44,26 @@ struct BasicEconomy1View: View {
             if progress.count >= 2 {
                 VStack(spacing: 20) {
                     HStack(spacing: 60) {
-                        LottieViewConverter(fileName: "BasicEconomy1_Home", loopMode: .playOnce, width: 100, height: 100)
+                        VStack {
+                            LottieViewConverter(fileName: "BasicEconomy1_Home", loopMode: .playOnce, width: 100, height: 100)
+                                .padding(.bottom, 5)
+                            
+                            Text("가계")
+                                .font(.system(size: 15))
+                                .fontWeight(.semibold)
+                                .foregroundStyle(Color.ESTitle)
+                        }
                         
                         if building {
-                            LottieViewConverter(fileName: "BasicEconomy1_Building",  loopMode: .playOnce, toProgress: 0.8, width: 100, height: 100)
+                            VStack {
+                                LottieViewConverter(fileName: "BasicEconomy1_Building",  loopMode: .playOnce, toProgress: 0.8, width: 100, height: 100)
+                                    .padding(.bottom, 5)
+                                
+                                Text("기업")
+                                    .font(.system(size: 15))
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(Color.ESTitle)
+                            }
                         }
                             
                     }
@@ -56,16 +72,35 @@ struct BasicEconomy1View: View {
                         .font(.system(size: 25))
                         .fontWeight(.semibold)
                         .foregroundStyle(Color.ESTitle)
+                        .overlay {
+                            Ellipse()
+                                .stroke(Color.ESTitle, lineWidth: 2)
+                                .frame(width: 80, height: 40)
+                        }
                         .padding(.top, 20)
+                        
                     
                     HStack(spacing: 60) {
                         if governmentBuilding {
-                            LottieViewConverter(fileName: "BasicEconomy1_GovernmentBuilding", loopMode: .playOnce, width: 100, height: 100)
+                            VStack {
+                                LottieViewConverter(fileName: "BasicEconomy1_GovernmentBuilding", loopMode: .playOnce, width: 100, height: 100)
+                                
+                                Text("정부")
+                                    .font(.system(size: 15))
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(Color.ESTitle)
+                            }
                         }
                         
                         if earth {
-                            LottieViewConverter(fileName: "BasicEconomy1_Earth", loopMode: .playOnce, toProgress: 0.7, width: 110, height: 110)
-                            
+                            VStack(spacing: 0) {
+                                LottieViewConverter(fileName: "BasicEconomy1_Earth", loopMode: .playOnce, toProgress: 0.7, width: 110, height: 110)
+                                
+                                Text("해외")
+                                    .font(.system(size: 15))
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(Color.ESTitle)
+                            }
                         }
                     }
                 }

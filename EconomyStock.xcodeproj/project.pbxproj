@@ -38,6 +38,7 @@
 		CA3BBAB42CB50414007CA152 /* NavigationBackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */; };
 		CA3BBAB62CB50441007CA152 /* NavigationBackTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */; };
 		CA47D3A92CD686B9009FCE4F /* LottieViewConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47D3A82CD686B9009FCE4F /* LottieViewConverter.swift */; };
+		CA47D3AB2CD68909009FCE4F /* BasicEconomy1_Earth.json in Resources */ = {isa = PBXBuildFile; fileRef = CA47D3AA2CD68909009FCE4F /* BasicEconomy1_Earth.json */; };
 		CA4B4F072CB9577500C2D4E0 /* AuthManager+Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B4F062CB9577500C2D4E0 /* AuthManager+Course.swift */; };
 		CA4E71A52CB78A8300BAA70C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E71A42CB78A8300BAA70C /* Course.swift */; };
 		CA4E71A82CB78B8400BAA70C /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E71A72CB78B8400BAA70C /* CourseViewModel.swift */; };
@@ -51,7 +52,6 @@
 		CA712CA72CD65B30002E7276 /* BasicEconomy1_Home.json in Resources */ = {isa = PBXBuildFile; fileRef = CA712CA62CD65B30002E7276 /* BasicEconomy1_Home.json */; };
 		CA712CA92CD65D54002E7276 /* BasicEconomy1_Building.json in Resources */ = {isa = PBXBuildFile; fileRef = CA712CA82CD65D54002E7276 /* BasicEconomy1_Building.json */; };
 		CA712CAB2CD65ED5002E7276 /* BasicEconomy1_GovernmentBuilding.json in Resources */ = {isa = PBXBuildFile; fileRef = CA712CAA2CD65ED5002E7276 /* BasicEconomy1_GovernmentBuilding.json */; };
-		CA712CB02CD6618B002E7276 /* BasicEconomy1_Earth.json in Resources */ = {isa = PBXBuildFile; fileRef = CA712CAF2CD6618B002E7276 /* BasicEconomy1_Earth.json */; };
 		CA77DFCD2CB24D0900992829 /* Loading.json in Resources */ = {isa = PBXBuildFile; fileRef = CA77DFCC2CB24D0900992829 /* Loading.json */; };
 		CA77DFCF2CB256DD00992829 /* LoginViewModel+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77DFCE2CB256DD00992829 /* LoginViewModel+Google.swift */; };
 		CA77DFD22CB26D0100992829 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77DFD12CB26D0100992829 /* CustomError.swift */; };
@@ -138,6 +138,7 @@
 		CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackModifier.swift; sourceTree = "<group>"; };
 		CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackTitleModifier.swift; sourceTree = "<group>"; };
 		CA47D3A82CD686B9009FCE4F /* LottieViewConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewConverter.swift; sourceTree = "<group>"; };
+		CA47D3AA2CD68909009FCE4F /* BasicEconomy1_Earth.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy1_Earth.json; sourceTree = "<group>"; };
 		CA4B4F062CB9577500C2D4E0 /* AuthManager+Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthManager+Course.swift"; sourceTree = "<group>"; };
 		CA4E71A42CB78A8300BAA70C /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		CA4E71A72CB78B8400BAA70C /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
@@ -148,7 +149,6 @@
 		CA712CA62CD65B30002E7276 /* BasicEconomy1_Home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy1_Home.json; sourceTree = "<group>"; };
 		CA712CA82CD65D54002E7276 /* BasicEconomy1_Building.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy1_Building.json; sourceTree = "<group>"; };
 		CA712CAA2CD65ED5002E7276 /* BasicEconomy1_GovernmentBuilding.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy1_GovernmentBuilding.json; sourceTree = "<group>"; };
-		CA712CAF2CD6618B002E7276 /* BasicEconomy1_Earth.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy1_Earth.json; sourceTree = "<group>"; };
 		CA77DFCC2CB24D0900992829 /* Loading.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Loading.json; sourceTree = "<group>"; };
 		CA77DFCE2CB256DD00992829 /* LoginViewModel+Google.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Google.swift"; sourceTree = "<group>"; };
 		CA77DFD12CB26D0100992829 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
@@ -487,7 +487,7 @@
 				CA712CA62CD65B30002E7276 /* BasicEconomy1_Home.json */,
 				CA712CA82CD65D54002E7276 /* BasicEconomy1_Building.json */,
 				CA712CAA2CD65ED5002E7276 /* BasicEconomy1_GovernmentBuilding.json */,
-				CA712CAF2CD6618B002E7276 /* BasicEconomy1_Earth.json */,
+				CA47D3AA2CD68909009FCE4F /* BasicEconomy1_Earth.json */,
 			);
 			path = Page1;
 			sourceTree = "<group>";
@@ -925,7 +925,7 @@
 				CAF2271D2CAE569B002868F4 /* GoogleService-Info.plist in Resources */,
 				CA712CAB2CD65ED5002E7276 /* BasicEconomy1_GovernmentBuilding.json in Resources */,
 				CA9BB9CF2CABA59A00886A1A /* .gitignore in Resources */,
-				CA712CB02CD6618B002E7276 /* BasicEconomy1_Earth.json in Resources */,
+				CA47D3AB2CD68909009FCE4F /* BasicEconomy1_Earth.json in Resources */,
 				CA712CA72CD65B30002E7276 /* BasicEconomy1_Home.json in Resources */,
 				CAAE54182CB8E34200B5352D /* PriceLevelCourseCover.json in Resources */,
 				CA9BB9D02CABA59A00886A1A /* Assets.xcassets in Resources */,
