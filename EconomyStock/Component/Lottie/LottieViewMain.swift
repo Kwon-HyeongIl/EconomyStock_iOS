@@ -35,19 +35,3 @@ struct LottieViewMain: UIViewRepresentable {
     func updateUIView(_ uiView: UIView, context: Context) {
     }
 }
-
-struct LottieViewConverter: View {
-    let fileName: String
-    let loopMode: LottieLoopMode
-    var toProgress: CGFloat = 1.0
-    let width: CGFloat
-    let height: CGFloat
-    
-    var body: some View {
-        VStack {
-            LottieViewMain(fileName: fileName, loopMode: loopMode, toProgress: toProgress)
-                .scaleEffect(LottieRouter.scaleRoute(fileName: fileName))
-        }
-        .frame(width: width, height: height)
-    }
-}

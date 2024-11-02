@@ -37,6 +37,7 @@
 		CA3BBAB12CB5035E007CA152 /* LongButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */; };
 		CA3BBAB42CB50414007CA152 /* NavigationBackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */; };
 		CA3BBAB62CB50441007CA152 /* NavigationBackTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */; };
+		CA47D3A92CD686B9009FCE4F /* LottieViewConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47D3A82CD686B9009FCE4F /* LottieViewConverter.swift */; };
 		CA4B4F072CB9577500C2D4E0 /* AuthManager+Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B4F062CB9577500C2D4E0 /* AuthManager+Course.swift */; };
 		CA4E71A52CB78A8300BAA70C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E71A42CB78A8300BAA70C /* Course.swift */; };
 		CA4E71A82CB78B8400BAA70C /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E71A72CB78B8400BAA70C /* CourseViewModel.swift */; };
@@ -136,6 +137,7 @@
 		CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButtonModifier.swift; sourceTree = "<group>"; };
 		CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackModifier.swift; sourceTree = "<group>"; };
 		CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackTitleModifier.swift; sourceTree = "<group>"; };
+		CA47D3A82CD686B9009FCE4F /* LottieViewConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewConverter.swift; sourceTree = "<group>"; };
 		CA4B4F062CB9577500C2D4E0 /* AuthManager+Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthManager+Course.swift"; sourceTree = "<group>"; };
 		CA4E71A42CB78A8300BAA70C /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		CA4E71A72CB78B8400BAA70C /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 			children = (
 				CA77DFCB2CB24D0100992829 /* Json */,
 				CA1DDD3A2CB0E7A900C84D08 /* LottieViewMain.swift */,
+				CA47D3A82CD686B9009FCE4F /* LottieViewConverter.swift */,
 				CAACDE2C2CB8BBBA004234FF /* LottieRouter.swift */,
 			);
 			path = Lottie;
@@ -1009,6 +1012,7 @@
 				CA92DDBB2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift in Sources */,
 				CA3BBAAE2CB50144007CA152 /* BasicSignupViewModel.swift in Sources */,
 				CA08F3A02CB839600093117E /* PriceLevel5View.swift in Sources */,
+				CA47D3A92CD686B9009FCE4F /* LottieViewConverter.swift in Sources */,
 				CA9BB9D72CABA94400886A1A /* MainTabView.swift in Sources */,
 				CA17FC8A2CB01E820050250B /* CornerRadius.swift in Sources */,
 				CA17FC8C2CB01EBF0050250B /* RoundCorner.swift in Sources */,
