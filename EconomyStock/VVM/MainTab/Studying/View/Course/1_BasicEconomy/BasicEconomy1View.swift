@@ -17,6 +17,8 @@ struct BasicEconomy1View: View {
     @State private var governmentBuilding = false
     @State private var earth = false
     
+    @State private var button = false
+    
     var body: some View {
         VStack {
             HStack {
@@ -41,7 +43,7 @@ struct BasicEconomy1View: View {
             
             if progress.count >= 2 {
                 VStack(spacing: 20) {
-                    HStack(spacing: 50) {
+                    HStack(spacing: 60) {
                         LottieViewConverter(fileName: "BasicEconomy1_Home", loopMode: .playOnce, width: 100, height: 100)
                         
                         if building {
@@ -56,7 +58,7 @@ struct BasicEconomy1View: View {
                         .foregroundStyle(Color.ESTitle)
                         .padding(.top, 20)
                     
-                    HStack(spacing: 50) {
+                    HStack(spacing: 60) {
                         if governmentBuilding {
                             LottieViewConverter(fileName: "BasicEconomy1_GovernmentBuilding", loopMode: .playOnce, width: 100, height: 100)
                         }
@@ -72,7 +74,7 @@ struct BasicEconomy1View: View {
             
             Spacer()
             
-            if progress.count >= 2 {
+            if button {
                 Button {
                     viewModel.currentPage += 1
                     navigationRouter.navigate(.BasicEconomy2View(viewModel))
@@ -89,21 +91,27 @@ struct BasicEconomy1View: View {
                 progress.append(1)
                 
                 if progress.count == 2 {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                         withAnimation(.smooth(duration: 1.0)) {
                             building = true
                         }
                     }
                     
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                         withAnimation(.smooth(duration: 1.0)) {
                             governmentBuilding = true
                         }
                     }
                     
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                         withAnimation(.smooth(duration: 1.0)) {
                             earth = true
+                        }
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                        withAnimation(.smooth(duration: 1.0)) {
+                            button = true
                         }
                     }
                 }
