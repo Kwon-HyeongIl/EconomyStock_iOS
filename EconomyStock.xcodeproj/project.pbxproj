@@ -74,6 +74,7 @@
 		CAAE54182CB8E34200B5352D /* PriceLevelCourseCover.json in Resources */ = {isa = PBXBuildFile; fileRef = CAAE54172CB8E34200B5352D /* PriceLevelCourseCover.json */; };
 		CAB77FD72CB8EC2900DF11D6 /* CourseToolbarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */; };
 		CAB77FD92CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */; };
+		CAC280272CD5EC05003E8E9A /* CourseMoveButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC280262CD5EC05003E8E9A /* CourseMoveButtonModifier.swift */; };
 		CAD101DA2CB6853200CA9C6A /* NavigationGestureEnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */; };
 		CAD101DE2CB68DFA00CA9C6A /* TileModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101DD2CB68DFA00CA9C6A /* TileModifier.swift */; };
 		CAD101E22CB6905F00CA9C6A /* ShortButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */; };
@@ -163,6 +164,7 @@
 		CAAE54172CB8E34200B5352D /* PriceLevelCourseCover.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevelCourseCover.json; sourceTree = "<group>"; };
 		CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseToolbarModifier.swift; sourceTree = "<group>"; };
 		CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackHomeModifier.swift; sourceTree = "<group>"; };
+		CAC280262CD5EC05003E8E9A /* CourseMoveButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseMoveButtonModifier.swift; sourceTree = "<group>"; };
 		CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationGestureEnable.swift; sourceTree = "<group>"; };
 		CAD101DD2CB68DFA00CA9C6A /* TileModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileModifier.swift; sourceTree = "<group>"; };
 		CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortButtonModifier.swift; sourceTree = "<group>"; };
@@ -439,6 +441,7 @@
 			children = (
 				CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */,
 				CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */,
+				CAC280262CD5EC05003E8E9A /* CourseMoveButtonModifier.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -944,6 +947,7 @@
 				CA9BB9E92CABB12700886A1A /* NavigationDestinationPath.swift in Sources */,
 				CA08F39A2CB8394C0093117E /* PriceLevel2View.swift in Sources */,
 				CAEDDAC62CB5757E0046162D /* FindPasswordView.swift in Sources */,
+				CAC280272CD5EC05003E8E9A /* CourseMoveButtonModifier.swift in Sources */,
 				CA08F39C2CB839520093117E /* PriceLevel3View.swift in Sources */,
 				CA17FC702CB005800050250B /* MainCustomTabView.swift in Sources */,
 				CA1DDD3B2CB0E7A900C84D08 /* LottieViewMain.swift in Sources */,

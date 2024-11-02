@@ -13,11 +13,14 @@ struct BasicEconomy1View: View {
     
     var body: some View {
         VStack {
+            Spacer()
+            
             Button {
                 viewModel.currentPage += 1
                 navigationRouter.navigate(.BasicEconomy2View(viewModel))
             } label: {
-                Text("2 이동")
+                Image(systemName: "chevron.right")
+                    .modifier(CourseMoveButtonModifier())
             }
         }
         .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
@@ -27,4 +30,5 @@ struct BasicEconomy1View: View {
 #Preview {
     BasicEconomy1View(viewModel: CourseViewModel(course: .DUMMY_COURSE))
         .environment(NavigationRouter())
+        .environment(CourseListViewCapsule())
 }

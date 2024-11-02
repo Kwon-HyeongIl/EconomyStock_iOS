@@ -13,18 +13,24 @@ struct BasicEconomy4View: View {
     
     var body: some View {
         VStack {
-            Button {
-                viewModel.currentPage -= 1
-                navigationRouter.back()
-            } label: {
-                Text("뒤로")
-            }
+            Spacer()
             
-            Button {
-                viewModel.currentPage += 1
-                navigationRouter.navigate(.BasicEconomy5View(viewModel))
-            } label: {
-                Text("5 이동")
+            HStack(spacing: 50) {
+                Button {
+                    viewModel.currentPage -= 1
+                    navigationRouter.back()
+                } label: {
+                    Image(systemName: "chevron.left")
+                        .modifier(CourseMoveButtonModifier())
+                }
+                
+                Button {
+                    viewModel.currentPage += 1
+                    navigationRouter.navigate(.BasicEconomy3View(viewModel))
+                } label: {
+                    Image(systemName: "chevron.right")
+                        .modifier(CourseMoveButtonModifier())
+                }
             }
         }
         .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
