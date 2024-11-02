@@ -11,14 +11,15 @@ import Lottie
 struct LottieViewMain: UIViewRepresentable {
     let fileName: String
     let loopMode: LottieLoopMode
-    var toProgress: CGFloat
+    let toProgress: CGFloat
+    let speed: CGFloat
     
     func makeUIView(context: Context) -> UIView {
         let containerView = UIView()
         let animationView = LottieAnimationView(name: fileName)
         
         animationView.loopMode = loopMode
-        animationView.animationSpeed = LottieRouter.speedRoute(fileName: fileName)
+        animationView.animationSpeed = LottieRouter.speedRoute(fileName: fileName, speed: speed)
         animationView.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(animationView)
         

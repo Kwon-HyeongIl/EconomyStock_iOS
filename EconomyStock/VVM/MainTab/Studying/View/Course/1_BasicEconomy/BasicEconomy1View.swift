@@ -93,8 +93,8 @@ struct BasicEconomy1View: View {
                         }
                         
                         if earth {
-                            VStack(spacing: 0) {
-                                LottieViewConverter(fileName: "BasicEconomy1_Earth", loopMode: .playOnce, toProgress: 0.7, width: 110, height: 110)
+                            VStack {
+                                LottieViewConverter(fileName: "BasicEconomy1_Earth", loopMode: .playOnce, toProgress: 0.3, scale: 1.15, width: 100, height: 100)
                                 
                                 Text("해외")
                                     .font(.system(size: 15))

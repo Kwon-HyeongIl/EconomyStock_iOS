@@ -11,14 +11,16 @@ import Lottie
 struct LottieViewConverter: View {
     let fileName: String
     let loopMode: LottieLoopMode
-    var toProgress: CGFloat = 1.0
+    var toProgress: CGFloat = 1.0 // 기본값 1.0
+    var speed: CGFloat = 1.0 // 기본값 1.0
+    var scale: CGFloat = 1.0 // 기본값 1.0
     let width: CGFloat
     let height: CGFloat
     
     var body: some View {
         VStack {
-            LottieViewMain(fileName: fileName, loopMode: loopMode, toProgress: toProgress)
-                .scaleEffect(LottieRouter.scaleRoute(fileName: fileName))
+            LottieViewMain(fileName: fileName, loopMode: loopMode, toProgress: toProgress, speed: speed)
+                .scaleEffect(LottieRouter.scaleRoute(fileName: fileName, scale: scale))
         }
         .frame(width: width, height: height) // border 사이즈
     }
