@@ -22,10 +22,8 @@ struct CourseListView: View {
         }
         .modifier(NavigationTitleModifier(title: "학습"))
         .scrollIndicators(.never)
-        .onAppear {
-            if capsule.isUpdate {
-                viewModel.updateAllCourses()
-            }
+        .onChange(of: capsule.isUpdate) {
+            viewModel.updateAllCourses()
         }
     }
 }

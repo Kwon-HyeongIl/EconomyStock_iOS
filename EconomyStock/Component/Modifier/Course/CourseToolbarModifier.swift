@@ -63,7 +63,7 @@ struct CourseToolbarModifier: ViewModifier {
                         AuthManager.shared.currentUser?.studyingCourse.basicEconomyLastPage = currentPage
                         
                         // CourseListViewModel의 updateAllCourses 메서드 호출 (중간 인터페이스로 연결)
-                        courseListViewCapule.isUpdate = true
+                        courseListViewCapule.isUpdate.toggle()
                         
                     case .priceLevel:
                         if AuthManager.shared.currentUser?.studyingCourse.priceLevelParmanentProgressPage ?? 0 < currentPage {
@@ -76,7 +76,7 @@ struct CourseToolbarModifier: ViewModifier {
                         
                         AuthManager.shared.currentUser?.studyingCourse.priceLevelLastPage = currentPage
                         
-                        courseListViewCapule.isUpdate = true
+                        courseListViewCapule.isUpdate.toggle()
                     }
                     
                     // DB User의 lastPage 값 바꾸기
