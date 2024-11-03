@@ -114,8 +114,7 @@ struct BasicEconomy1View: View {
                     viewModel.currentPage += 1
                     navigationRouter.navigate(.BasicEconomy2View(viewModel))
                 } label: {
-                    Image(systemName: "chevron.right")
-                        .modifier(CourseMoveButtonModifier())
+                    LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, width: 200, height: 200)
                 }
             }
         }
