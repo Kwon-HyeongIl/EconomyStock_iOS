@@ -24,26 +24,11 @@ struct MainCustomTabView: View {
                     
                     VStack {
                         if mainTabCapsule.selectedTab == tab {
-                            let fromProgress: CGFloat = {
-                                switch tab {
-                                    
-                                case .home:
-                                    return 0.1
-                                case .studying:
-                                    return 0.1
-                                case .news:
-                                    return 0.05
-                                case .profile:
-                                    return 0.3
-                                }
-                            }()
-                            
-                            LottieViewConverter(fileName: fillImage, loopMode: .playOnce, fromProgress: fromProgress, width: 80, height: 22)
-                                .shadow(color: Color.ESTitle, radius: 10, x: 0, y: 0)
-                                .scaleEffect(1.25)
+                            LottieViewConverter(fileName: fillImage, loopMode: .playOnce, width: 80, height: 25)
+                                .shadow(color: Color.ESTitle.opacity(0.5), radius: 10, x: 0, y: 0)
                             
                         } else {
-                            LottieViewConverter(fileName: tab.rawValue, loopMode: .playOnce, toProgress: 0.0, width: 80, height: 22)
+                            LottieViewConverter(fileName: tab.rawValue, loopMode: .playOnce, toProgress: 0.0, width: 80, height: 25)
                         }
                     }
                     .padding(.top, 10)
