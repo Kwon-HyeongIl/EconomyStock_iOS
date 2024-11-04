@@ -27,16 +27,16 @@ struct MainTabView: View {
             ZStack {
                 switch mainTabCapsule.selectedTab {
                     
-                case .house:
+                case .home:
                     homeView
                     
-                case .textBookClosed:
+                case .studying:
                     courseListView
                     
-                case .newspaper:
+                case .news:
                     newsView
                     
-                case .person:
+                case .profile:
                     profileView
                 }
                 

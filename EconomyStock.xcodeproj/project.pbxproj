@@ -49,6 +49,14 @@
 		CA662BCA2CAD72E6009E8D5F /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BC92CAD72E6009E8D5F /* KakaoSDKAuth */; };
 		CA662BCC2CAD72E6009E8D5F /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BCB2CAD72E6009E8D5F /* KakaoSDKCommon */; };
 		CA662BCE2CAD72E6009E8D5F /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BCD2CAD72E6009E8D5F /* KakaoSDKUser */; };
+		CA6664F82CD907E100B7C198 /* MainTab_News.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6664F22CD907E100B7C198 /* MainTab_News.json */; };
+		CA6664F92CD907E100B7C198 /* MainTab_Home_On.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6664F12CD907E100B7C198 /* MainTab_Home_On.json */; };
+		CA6664FA2CD907E100B7C198 /* MainTab_Profile.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6664F42CD907E100B7C198 /* MainTab_Profile.json */; };
+		CA6664FB2CD907E100B7C198 /* MainTab_Profile_On.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6664F52CD907E100B7C198 /* MainTab_Profile_On.json */; };
+		CA6664FC2CD907E100B7C198 /* MainTab_Home.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6664F02CD907E100B7C198 /* MainTab_Home.json */; };
+		CA6664FD2CD907E100B7C198 /* MainTab_Studying_On.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6664F72CD907E100B7C198 /* MainTab_Studying_On.json */; };
+		CA6664FE2CD907E100B7C198 /* MainTab_News_On.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6664F32CD907E100B7C198 /* MainTab_News_On.json */; };
+		CA6664FF2CD907E100B7C198 /* MainTab_Studying.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6664F62CD907E100B7C198 /* MainTab_Studying.json */; };
 		CA6C54D42CB160A1008CF887 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CA6C54D32CB160A1008CF887 /* GoogleSignIn */; };
 		CA6C54D62CB160A1008CF887 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CA6C54D52CB160A1008CF887 /* GoogleSignInSwift */; };
 		CA712CA72CD65B30002E7276 /* BasicEconomy1_Home.json in Resources */ = {isa = PBXBuildFile; fileRef = CA712CA62CD65B30002E7276 /* BasicEconomy1_Home.json */; };
@@ -150,6 +158,14 @@
 		CA5B3A5D2CD7B20000341E23 /* CourseNextButton.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CourseNextButton.json; sourceTree = "<group>"; };
 		CA662BD12CAD79F0009E8D5F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		CA662BD32CAD7B86009E8D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CA6664F02CD907E100B7C198 /* MainTab_Home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MainTab_Home.json; sourceTree = "<group>"; };
+		CA6664F12CD907E100B7C198 /* MainTab_Home_On.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MainTab_Home_On.json; sourceTree = "<group>"; };
+		CA6664F22CD907E100B7C198 /* MainTab_News.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MainTab_News.json; sourceTree = "<group>"; };
+		CA6664F32CD907E100B7C198 /* MainTab_News_On.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MainTab_News_On.json; sourceTree = "<group>"; };
+		CA6664F42CD907E100B7C198 /* MainTab_Profile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MainTab_Profile.json; sourceTree = "<group>"; };
+		CA6664F52CD907E100B7C198 /* MainTab_Profile_On.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MainTab_Profile_On.json; sourceTree = "<group>"; };
+		CA6664F62CD907E100B7C198 /* MainTab_Studying.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MainTab_Studying.json; sourceTree = "<group>"; };
+		CA6664F72CD907E100B7C198 /* MainTab_Studying_On.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MainTab_Studying_On.json; sourceTree = "<group>"; };
 		CA712CA62CD65B30002E7276 /* BasicEconomy1_Home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy1_Home.json; sourceTree = "<group>"; };
 		CA712CA82CD65D54002E7276 /* BasicEconomy1_Building.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy1_Building.json; sourceTree = "<group>"; };
 		CA712CAA2CD65ED5002E7276 /* BasicEconomy1_GovernmentBuilding.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy1_GovernmentBuilding.json; sourceTree = "<group>"; };
@@ -478,9 +494,25 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		CA6664E72CD8FD9300B7C198 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				CA6664F02CD907E100B7C198 /* MainTab_Home.json */,
+				CA6664F12CD907E100B7C198 /* MainTab_Home_On.json */,
+				CA6664F22CD907E100B7C198 /* MainTab_News.json */,
+				CA6664F32CD907E100B7C198 /* MainTab_News_On.json */,
+				CA6664F42CD907E100B7C198 /* MainTab_Profile.json */,
+				CA6664F52CD907E100B7C198 /* MainTab_Profile_On.json */,
+				CA6664F62CD907E100B7C198 /* MainTab_Studying.json */,
+				CA6664F72CD907E100B7C198 /* MainTab_Studying_On.json */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
 		CA712CA42CD65B00002E7276 /* Course */ = {
 			isa = PBXGroup;
 			children = (
+				CA6664E72CD8FD9300B7C198 /* MainTab */,
 				CA5B3A562CD7B03100341E23 /* Button */,
 				CA712CA52CD65B15002E7276 /* BasicEconomy */,
 			);
@@ -937,6 +969,14 @@
 				CA9BB9CE2CABA59A00886A1A /* Preview Assets.xcassets in Resources */,
 				CA77DFCD2CB24D0900992829 /* Loading.json in Resources */,
 				CAF2271D2CAE569B002868F4 /* GoogleService-Info.plist in Resources */,
+				CA6664F82CD907E100B7C198 /* MainTab_News.json in Resources */,
+				CA6664F92CD907E100B7C198 /* MainTab_Home_On.json in Resources */,
+				CA6664FA2CD907E100B7C198 /* MainTab_Profile.json in Resources */,
+				CA6664FB2CD907E100B7C198 /* MainTab_Profile_On.json in Resources */,
+				CA6664FC2CD907E100B7C198 /* MainTab_Home.json in Resources */,
+				CA6664FD2CD907E100B7C198 /* MainTab_Studying_On.json in Resources */,
+				CA6664FE2CD907E100B7C198 /* MainTab_News_On.json in Resources */,
+				CA6664FF2CD907E100B7C198 /* MainTab_Studying.json in Resources */,
 				CA712CAB2CD65ED5002E7276 /* BasicEconomy1_GovernmentBuilding.json in Resources */,
 				CA5B3A5E2CD7B20000341E23 /* CourseFinishButton.json in Resources */,
 				CA5B3A5F2CD7B20000341E23 /* CourseNextButton.json in Resources */,

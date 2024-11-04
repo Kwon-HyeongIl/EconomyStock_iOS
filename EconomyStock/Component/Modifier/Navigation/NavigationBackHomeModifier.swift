@@ -31,7 +31,7 @@ struct NavigationBackHomeModifier: ViewModifier {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         navigationRouter.popToRoot()
-                        mainTabCapsule.selectedTab = .house
+                        mainTabCapsule.selectedTab = .home
                     } label: {
                         Image(systemName: "house")
                             .resizable()

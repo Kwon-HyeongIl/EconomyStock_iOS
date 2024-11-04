@@ -8,8 +8,8 @@
 import Foundation
 
 enum MainTab: String, CaseIterable {
-    case house = "house"
-    case textBookClosed = "text.book.closed"
-    case newspaper = "newspaper"
-    case person = "person"
+    case home = "MainTab_Home"
+    case studying = "MainTab_Studying"
+    case news = "MainTab_News"
+    case profile = "MainTab_Profile"
 }

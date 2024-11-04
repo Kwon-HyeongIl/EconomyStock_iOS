@@ -11,6 +11,7 @@ import Lottie
 struct LottieViewMain: UIViewRepresentable {
     let fileName: String
     let loopMode: LottieLoopMode
+    let fromProgress: CGFloat
     let toProgress: CGFloat
     let speed: CGFloat
     
@@ -28,7 +29,7 @@ struct LottieViewMain: UIViewRepresentable {
             animationView.heightAnchor.constraint(equalTo: containerView.heightAnchor)
         ])
         
-        animationView.play(fromProgress: 0, toProgress: toProgress)
+        animationView.play(fromProgress: fromProgress, toProgress: toProgress)
         
         return containerView
     }
