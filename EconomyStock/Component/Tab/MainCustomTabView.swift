@@ -38,12 +38,12 @@ struct MainCustomTabView: View {
                                 }
                             }()
                             
-                            LottieViewConverter(fileName: fillImage, loopMode: .playOnce, fromProgress: fromProgress, width: 23, height: 23)
+                            LottieViewConverter(fileName: fillImage, loopMode: .playOnce, fromProgress: fromProgress, width: 80, height: 22)
                                 .shadow(color: Color.ESTitle, radius: 10, x: 0, y: 0)
                                 .scaleEffect(1.25)
                             
                         } else {
-                            LottieViewConverter(fileName: tab.rawValue, loopMode: .playOnce, toProgress: 0.0, width: 23, height: 23)
+                            LottieViewConverter(fileName: tab.rawValue, loopMode: .playOnce, toProgress: 0.0, width: 80, height: 22)
                         }
                     }
                     .padding(.top, 10)
