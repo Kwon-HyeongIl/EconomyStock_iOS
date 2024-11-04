@@ -48,6 +48,11 @@ struct MainCustomTabView: View {
                     }
                     .padding(.top, 10)
                     .onTapGesture {
+                        
+                        // 햅틱
+                        let view = UIView(frame: .zero)
+                        UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
+                        
                         withAnimation(.easeInOut(duration: 0.2)) {
                             mainTabCapsule.selectedTab = tab
                         }
