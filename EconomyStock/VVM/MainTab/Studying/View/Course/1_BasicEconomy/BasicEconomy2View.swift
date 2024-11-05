@@ -59,7 +59,7 @@ struct BasicEconomy2View: View {
                     
                     if progress.count >= 2 {
                         HStack {
-                            Text("국민소득 3연 등가의 법칙")
+                            Text("국민소득 3면 등가의 법칙")
                                 .font(.system(size: 20))
                                 .fontWeight(.semibold)
                                 .padding(.top, 20)
@@ -108,8 +108,31 @@ struct BasicEconomy2View: View {
                             }
                             
                             if rotate {
-                                LottieViewConverter(fileName: "BasicEconomy2_Rotate", loopMode: .playOnce, width: 130, height: 130)
-                                    .padding(.top, 80)
+                                VStack {
+                                    HStack(spacing: 60) {
+                                        Image(systemName: "equal")
+                                            .frame(width: 30, height: 30)
+                                            .fontWeight(.semibold)
+                                            .foregroundStyle(Color.ESTitle)
+                                            .rotationEffect(.degrees(-45))
+                                            .scaleEffect(2.0)
+                                        
+                                        Image(systemName: "equal")
+                                            .frame(width: 30, height: 30)
+                                            .fontWeight(.semibold)
+                                            .foregroundStyle(Color.ESTitle)
+                                            .rotationEffect(.degrees(45))
+                                            .scaleEffect(2.0)
+                                    }
+                                    .padding(.top, 100)
+                                    
+                                    Image(systemName: "equal")
+                                        .frame(width: 30, height: 30)
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(Color.ESTitle)
+                                        .padding(.top, 20)
+                                        .scaleEffect(2.0)
+                                }
                             }
                         }
                         .padding(.top, 20)
@@ -123,7 +146,7 @@ struct BasicEconomy2View: View {
                                 viewModel.currentPage += 1
                                 navigationRouter.navigate(.BasicEconomy3View(viewModel))
                             } label: {
-                                LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, width: 200, height: 200)
+                                LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                     .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                             }
                             
@@ -137,12 +160,14 @@ struct BasicEconomy2View: View {
                                             .font(.system(size: 25))
                                             .fontWeight(.semibold)
                                             .foregroundStyle(Color.ESTitle)
-                                            .padding(.leading, 80)
+                                            .padding()
                                             .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                                     }
                                     
                                     Spacer()
                                 }
+                                .padding(.leading, 60)
+                                .padding(.trailing, 70)
                             }
                         }
                     }
@@ -164,13 +189,13 @@ struct BasicEconomy2View: View {
                         }
                     }
                     
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                         withAnimation(.smooth(duration: 1.0)) {
                             nextButton = true
                         }
                     }
                     
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                         withAnimation(.smooth(duration: 1.0)) {
                             beforeButton = true
                         }
