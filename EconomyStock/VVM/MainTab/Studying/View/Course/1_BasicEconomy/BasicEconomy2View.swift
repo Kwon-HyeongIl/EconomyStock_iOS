@@ -138,6 +138,10 @@ struct BasicEconomy2View: View {
                         .padding(.top, 20)
                     }
                     
+                    if progress.count >= 4 {
+                        
+                    }
+                    
                     Spacer()
                     
                     if nextButton {
@@ -178,7 +182,7 @@ struct BasicEconomy2View: View {
         .contentShape(Rectangle())
         .onTapGesture {
             withAnimation(.smooth(duration: 1.0)) {
-                if progress.count < 4 {
+                if progress.count < 6 {
                     progress.append(1)
                 }
                 
