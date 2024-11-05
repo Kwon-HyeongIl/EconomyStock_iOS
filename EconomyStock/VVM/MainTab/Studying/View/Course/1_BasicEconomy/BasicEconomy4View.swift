@@ -21,7 +21,6 @@ struct BasicEconomy4View: View {
                     navigationRouter.back()
                 } label: {
                     Image(systemName: "chevron.left")
-                        .modifier(CourseMoveButtonModifier())
                 }
                 
                 Button {
@@ -29,7 +28,6 @@ struct BasicEconomy4View: View {
                     navigationRouter.navigate(.BasicEconomy3View(viewModel))
                 } label: {
                     Image(systemName: "chevron.right")
-                        .modifier(CourseMoveButtonModifier())
                 }
             }
         }

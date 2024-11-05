@@ -25,7 +25,7 @@ struct CourseToolbarModifier: ViewModifier {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Text("\(currentPage) / \(totalPage)")
-                        .font(.system(size: 28))
+                        .font(.system(size: 21))
                         .fontWeight(.bold)
                 }
                 
@@ -36,7 +36,7 @@ struct CourseToolbarModifier: ViewModifier {
                         Image(systemName: "rectangle.portrait.and.arrow.right")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 28)
+                            .frame(width: 25)
                             .foregroundStyle(Color.ESTitle)
                     }
                 }

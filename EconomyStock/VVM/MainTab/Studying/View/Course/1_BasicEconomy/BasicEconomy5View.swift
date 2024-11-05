@@ -20,7 +20,6 @@ struct BasicEconomy5View: View {
                 navigationRouter.back()
             } label: {
                 Image(systemName: "chevron.left")
-                    .modifier(CourseMoveButtonModifier())
             }
         }
         .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))

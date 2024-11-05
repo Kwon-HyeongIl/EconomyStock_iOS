@@ -24,11 +24,11 @@ struct MainCustomTabView: View {
                     
                     VStack {
                         if mainTabCapsule.selectedTab == tab {
-                            LottieViewConverter(fileName: fillImage, loopMode: .playOnce, width: 80, height: 25)
-                                .shadow(color: Color.ESTitle.opacity(0.5), radius: 10, x: 0, y: 0)
+                            LottieViewConverter(fileName: fillImage, loopMode: .playOnce, width: 80, height: tab == .studying ? 28 : (tab == .profile ? 27 : 25))
+                                .scaleEffect(1.25)
                             
                         } else {
-                            LottieViewConverter(fileName: tab.rawValue, loopMode: .playOnce, toProgress: 0.0, width: 80, height: 25)
+                            LottieViewConverter(fileName: tab.rawValue, loopMode: .playOnce, toProgress: 0.0, width: 80, height: tab == .studying ? 28 : (tab == .profile ? 27 : 25))
                         }
                     }
                     .padding(.top, 10)

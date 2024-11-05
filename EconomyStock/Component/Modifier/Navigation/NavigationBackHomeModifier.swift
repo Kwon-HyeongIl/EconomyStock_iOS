@@ -36,7 +36,7 @@ struct NavigationBackHomeModifier: ViewModifier {
                         Image(systemName: "house")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 28)
+                            .frame(width: 25)
                             .foregroundStyle(Color.ESTitle)
                     }
                 }
