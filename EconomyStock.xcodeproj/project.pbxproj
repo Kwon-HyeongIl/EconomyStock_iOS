@@ -482,6 +482,22 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		CA424BBC2CDA6AC300209C2F /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				CAEDDAB82CB53B3E0046162D /* BasicSignupFocusField.swift */,
+				CAEDDAC12CB570710046162D /* BasicLoginFocusField.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		CA424BBD2CDA6ACB00209C2F /* Course */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Course;
+			sourceTree = "<group>";
+		};
 		CA58A4EB2CB6D9DB00DB91BD /* ProgressCircle */ = {
 			isa = PBXGroup;
 			children = (
@@ -750,8 +766,8 @@
 		CAEDDAC02CB570610046162D /* FocusField */ = {
 			isa = PBXGroup;
 			children = (
-				CAEDDAB82CB53B3E0046162D /* BasicSignupFocusField.swift */,
-				CAEDDAC12CB570710046162D /* BasicLoginFocusField.swift */,
+				CA424BBD2CDA6ACB00209C2F /* Course */,
+				CA424BBC2CDA6AC300209C2F /* Auth */,
 			);
 			path = FocusField;
 			sourceTree = "<group>";
