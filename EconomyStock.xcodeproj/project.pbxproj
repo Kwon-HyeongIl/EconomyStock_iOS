@@ -54,6 +54,7 @@
 		CA4E71AB2CB78DE900BAA70C /* CourseIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E71AA2CB78DE900BAA70C /* CourseIntroView.swift */; };
 		CA5389CF2CDCE3C2003DA62F /* QuestionMark.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5389CE2CDCE3C2003DA62F /* QuestionMark.json */; };
 		CA58A4ED2CB6D9E900DB91BD /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58A4EC2CB6D9E900DB91BD /* ProgressCircleView.swift */; };
+		CA5A4A9C2CDDC2F300E225F3 /* BasicEconomy4_Building.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5A4A9B2CDDC2F300E225F3 /* BasicEconomy4_Building.json */; };
 		CA5B3A5E2CD7B20000341E23 /* CourseFinishButton.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5B3A5C2CD7B20000341E23 /* CourseFinishButton.json */; };
 		CA5B3A5F2CD7B20000341E23 /* CourseNextButton.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5B3A5D2CD7B20000341E23 /* CourseNextButton.json */; };
 		CA662BCA2CAD72E6009E8D5F /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BC92CAD72E6009E8D5F /* KakaoSDKAuth */; };
@@ -170,6 +171,7 @@
 		CA4E71AA2CB78DE900BAA70C /* CourseIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseIntroView.swift; sourceTree = "<group>"; };
 		CA5389CE2CDCE3C2003DA62F /* QuestionMark.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QuestionMark.json; sourceTree = "<group>"; };
 		CA58A4EC2CB6D9E900DB91BD /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
+		CA5A4A9B2CDDC2F300E225F3 /* BasicEconomy4_Building.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy4_Building.json; sourceTree = "<group>"; };
 		CA5B3A5C2CD7B20000341E23 /* CourseFinishButton.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CourseFinishButton.json; sourceTree = "<group>"; };
 		CA5B3A5D2CD7B20000341E23 /* CourseNextButton.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CourseNextButton.json; sourceTree = "<group>"; };
 		CA662BD12CAD79F0009E8D5F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -512,6 +514,14 @@
 			path = ProgressCircle;
 			sourceTree = "<group>";
 		};
+		CA5A4A982CDDBEC200E225F3 /* Page4 */ = {
+			isa = PBXGroup;
+			children = (
+				CA5A4A9B2CDDC2F300E225F3 /* BasicEconomy4_Building.json */,
+			);
+			path = Page4;
+			sourceTree = "<group>";
+		};
 		CA5B3A562CD7B03100341E23 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,6 +561,7 @@
 			isa = PBXGroup;
 			children = (
 				CA712CAC2CD65EE1002E7276 /* Page1 */,
+				CA5A4A982CDDBEC200E225F3 /* Page4 */,
 				CAF2C03A2CD9C53600D0E15D /* Page10 */,
 			);
 			path = BasicEconomy;
@@ -1023,6 +1034,7 @@
 				CA712CAB2CD65ED5002E7276 /* BasicEconomy1_GovernmentBuilding.json in Resources */,
 				CA47F5772CD9359D00DCAFCF /* MainTab_Home.json in Resources */,
 				CA47F5782CD9359D00DCAFCF /* MainTab_Profile.json in Resources */,
+				CA5A4A9C2CDDC2F300E225F3 /* BasicEconomy4_Building.json in Resources */,
 				CA47F5792CD9359D00DCAFCF /* MainTab_Studying.json in Resources */,
 				CA47F57A2CD9359D00DCAFCF /* MainTab_News.json in Resources */,
 				CA5B3A5E2CD7B20000341E23 /* CourseFinishButton.json in Resources */,

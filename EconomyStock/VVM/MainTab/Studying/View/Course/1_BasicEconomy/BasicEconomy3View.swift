@@ -120,7 +120,7 @@ struct BasicEconomy3View: View {
                             LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
                                 .padding(.leading, 10)
                             
-                            Text("이자율이란")
+                            Text("이자율이란?")
                                 .font(.system(size: 15))
                                 .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
                                 .fontWeight(.semibold)
@@ -166,7 +166,7 @@ struct BasicEconomy3View: View {
                     ZStack {
                         Button {
                             viewModel.currentPage += 1
-                            navigationRouter.navigate(.BasicEconomy3View(viewModel))
+                            navigationRouter.navigate(.BasicEconomy4View(viewModel))
                         } label: {
                             LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                 .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
@@ -219,6 +219,18 @@ struct BasicEconomy3View: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                         withAnimation(.smooth(duration: 1.0)) {
                             questionMark = true
+                        }
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                        withAnimation(.smooth(duration: 1.0)) {
+                            nextButton = true
+                        }
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                        withAnimation(.smooth(duration: 1.0)) {
+                            beforeButton = true
                         }
                     }
                 }

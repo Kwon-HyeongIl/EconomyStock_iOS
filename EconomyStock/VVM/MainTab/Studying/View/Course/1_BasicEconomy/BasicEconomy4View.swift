@@ -11,12 +11,22 @@ struct BasicEconomy4View: View {
     @Environment(NavigationRouter.self) var navigationRouter
     @Bindable var viewModel: CourseViewModel
     
+    @State private var progress: [Int] = []
+    
+    @State private var building = false
+    
+    @State private var bubble = false
+    @State private var bubbleContent = false
+    
+    @State private var questionMark = false
+    @State private var questionMarkContent = false
+    
     @State private var nextButton = false
     @State private var beforeButton = false
     
     var body: some View {
         VStack {
-            VStack {
+            ScrollView {
                 HStack {
                     Text("2.")
                         .font(.system(size: 35))
@@ -34,13 +44,114 @@ struct BasicEconomy4View: View {
                 .opacity(0.2)
                 .padding(.top)
                 
+                if progress.count >= 1 {
+                    VStack(spacing: 10) {
+                        HStack {
+                            Text("1) 소비 (Consumption)")
+                                .font(.system(size: 20))
+                                .fontWeight(.semibold)
+                                .padding(.leading, 30)
+                                .padding(.top, 5)
+                            
+                            Spacer()
+                        }
+                        
+                        HStack {
+                            Text("투자는 주로 기업부문에서 이루어지며. \n이자율과 반비례해요")
+                                .font(.system(size: 15))
+                                .fontWeight(.semibold)
+                                .padding(.leading, 45)
+                            
+                            Spacer()
+                        }
+                    }
+                }
+                
+                if progress.count >= 2 {
+                    VStack {
+                        HStack {
+                            if building {
+                                LottieViewConverter(fileName: "BasicEconomy4_Building", loopMode: .playOnce, toProgress: 0.5, width: 230, height: 230)
+                            }
+                            
+                            Image("TeachingSad_Toktok")
+                                .resizable()
+                                .frame(width: 75, height: 70)
+                                .padding(.top, 165)
+                                .scaleEffect(x: -1, y: 1, anchor: .center)
+                        }
+                        
+                        if bubble {
+                            ZStack {
+                                LottieViewConverter(fileName: "Bubble", loopMode: .playOnce, scale: 3.0, width: 200, height: 200)
+                                    .scaleEffect(x: -1, y: -1, anchor: .center)
+                                    .padding(.top, 25)
+                                
+                                if bubbleContent {
+                                    Text("금리가 너무 많이 올라\n돈을 빌리기가 어려워...\n진행하려던 프로젝트의 수익률도\n높은 편이 아니라서 프로젝트를 진행할 바엔 은행에 저축해서\n이자를 받는게 낫겠네...")
+                                        .font(.system(size: 13))
+                                        .fontWeight(.semibold)
+                                        .padding(.top, 35)
+                                        .padding(.leading, 10)
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                if questionMark {
+                    VStack {
+                        HStack(spacing: 5) {
+                            LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
+                                .padding(.leading, 10)
+                            
+                            Text("투자란?")
+                                .font(.system(size: 15))
+                                .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
+                                .fontWeight(.semibold)
+                            
+                            Spacer()
+                        }
+                        
+                        if questionMarkContent {
+                            HStack(spacing: 5) {
+                                Text(":")
+                                    .font(.system(size: 15))
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.black.opacity(0.6))
+                                    .padding(.leading, 20)
+                                    .padding(.bottom, 50)
+                                
+                                Text("경제화에서 투자란 기업이 사업을 시행하거나 토지, 건물, 기계 등을 구입하기 위해 지출하는 행위로, 시세차익을 얻기 위해 행하는 주식 투자의 개념과 달라요.")
+                                    .font(.system(size: 15))
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.black.opacity(0.6))
+                                    .padding(.bottom, 10)
+                                
+                                Spacer()
+                            }
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                    .background(.purple.opacity(0.1))
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .padding(.horizontal)
+                    .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                    .padding(.top, 30)
+                    .onTapGesture {
+                        withAnimation(.smooth(duration: 0.7)) {
+                            questionMarkContent.toggle()
+                        }
+                    }
+                }
+                
                 Spacer()
                 
                 if nextButton {
                     ZStack {
                         Button {
                             viewModel.currentPage += 1
-                            navigationRouter.navigate(.BasicEconomy3View(viewModel))
+                            navigationRouter.navigate(.BasicEconomy5View(viewModel))
                         } label: {
                             LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                 .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
@@ -73,7 +184,47 @@ struct BasicEconomy4View: View {
         .contentShape(Rectangle())
         .onTapGesture {
             withAnimation(.smooth(duration: 1.0)) {
+                if progress.count < 3 {
+                    progress.append(1)
+                }
                 
+                if progress.count == 2 {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        withAnimation(.smooth(duration: 1.0)) {
+                            building = true
+                        }
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        withAnimation(.smooth(duration: 1.0)) {
+                            bubble = true
+                        }
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
+                        withAnimation(.smooth(duration: 1.0)) {
+                            bubbleContent = true
+                        }
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
+                        withAnimation(.smooth(duration: 1.0)) {
+                            questionMark = true
+                        }
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
+                        withAnimation(.smooth(duration: 1.0)) {
+                            nextButton = true
+                        }
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.7) {
+                        withAnimation(.smooth(duration: 1.0)) {
+                            beforeButton = true
+                        }
+                    }
+                }
             }
         }
     }
