@@ -145,18 +145,18 @@ struct BasicEconomy1View: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                         withAnimation(.smooth(duration: 1.0)) {
                             building = true
-                        }
-                    }
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                        withAnimation(.smooth(duration: 1.0)) {
-                            governmentBuilding = true
-                        }
-                    }
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                        withAnimation(.smooth(duration: 1.0)) {
-                            earth = true
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                withAnimation(.smooth(duration: 1.0)) {
+                                    governmentBuilding = true
+                                    
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                        withAnimation(.smooth(duration: 1.0)) {
+                                            earth = true
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                     

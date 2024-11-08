@@ -203,36 +203,36 @@ struct BasicEconomy2View: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
                         withAnimation(.smooth(duration: 1.0)) {
                             gdp1 = true
-                        }
-                    }
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                        withAnimation(.smooth(duration: 1.0)) {
-                            gdp2 = true
-                        }
-                    }
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
-                        withAnimation(.smooth(duration: 1.0)) {
-                            gdp3 = true
-                        }
-                    }
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                        withAnimation(.smooth(duration: 1.0)) {
-                            gdp4 = true
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                                withAnimation(.smooth(duration: 1.0)) {
+                                    gdp2 = true
+                                    
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                                        withAnimation(.smooth(duration: 1.0)) {
+                                            gdp3 = true
+                                            
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                                                withAnimation(.smooth(duration: 1.0)) {
+                                                    gdp4 = true
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                         withAnimation(.smooth(duration: 1.0)) {
                             nextButton = true
-                        }
-                    }
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                        withAnimation(.smooth(duration: 1.0)) {
-                            beforeButton = true
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                withAnimation(.smooth(duration: 1.0)) {
+                                    beforeButton = true
+                                }
+                            }
                         }
                     }
                 }
