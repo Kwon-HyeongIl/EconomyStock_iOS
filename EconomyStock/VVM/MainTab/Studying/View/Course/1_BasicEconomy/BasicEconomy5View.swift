@@ -16,45 +16,66 @@ struct BasicEconomy5View: View {
     
     var body: some View {
         VStack {
-            ScrollView {
-                VStack {
-                    Spacer()
+            VStack {
+                HStack {
+                    Text("2.")
+                        .font(.system(size: 35))
+                        .fontWeight(.bold)
+                        .foregroundStyle(Color.ESTitle)
+                        .padding(.leading, 30)
+                        .padding(.bottom, 3)
                     
-                    if nextButton {
-                        ZStack {
-                            Button {
-                                viewModel.currentPage += 1
-                                navigationRouter.navigate(.BasicEconomy3View(viewModel))
-                            } label: {
-                                LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
-                                    .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
-                            }
-                            
-                            if beforeButton {
-                                HStack {
-                                    Button {
-                                        viewModel.currentPage -= 1
-                                        navigationRouter.back()
-                                    } label: {
-                                        Image(systemName: "chevron.left")
-                                            .font(.system(size: 25))
-                                            .fontWeight(.semibold)
-                                            .foregroundStyle(Color.ESTitle)
-                                            .padding()
-                                            .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
-                                    }
-                                    
-                                    Spacer()
+                    Text("GDP (국내총생산)")
+                        .font(.system(size: 25))
+                        .fontWeight(.bold)
+                    
+                    Spacer()
+                }
+                .opacity(0.2)
+                .padding(.top)
+                
+                Spacer()
+                
+                if nextButton {
+                    ZStack {
+                        Button {
+                            viewModel.currentPage += 1
+                            navigationRouter.navigate(.BasicEconomy3View(viewModel))
+                        } label: {
+                            LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                        }
+                        
+                        if beforeButton {
+                            HStack {
+                                Button {
+                                    viewModel.currentPage -= 1
+                                    navigationRouter.back()
+                                } label: {
+                                    Image(systemName: "chevron.left")
+                                        .font(.system(size: 25))
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(Color.ESTitle)
+                                        .padding()
+                                        .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                                 }
-                                .padding(.leading, 60)
-                                .padding(.trailing, 70)
+                                
+                                Spacer()
                             }
+                            .padding(.leading, 60)
+                            .padding(.trailing, 70)
                         }
                     }
                 }
             }
         }
         .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
+        .contentShape(Rectangle())
+        .onTapGesture {
+            withAnimation(.smooth(duration: 1.0)) {
+                
+            }
+        }
     }
 }
 

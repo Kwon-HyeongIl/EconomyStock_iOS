@@ -13,7 +13,7 @@ struct LoginView: View {
     
     var body: some View {
         ZStack {
-            Image("ES_Chracter")
+            Image("Basic_Toktok")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 600)

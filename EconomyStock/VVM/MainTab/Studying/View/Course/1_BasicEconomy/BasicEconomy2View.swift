@@ -13,204 +13,179 @@ struct BasicEconomy2View: View {
     
     @State private var progress: [Int] = []
     
-    @State private var rotate = false
+    @State private var gdp1 = false
+    @State private var gdp2 = false
+    @State private var gdp3 = false
+    @State private var gdp4 = false
     
     @State private var nextButton = false
     @State private var beforeButton = false
     
     var body: some View {
         VStack {
-            ScrollViewReader { proxy in
-                ScrollView {
-                    VStack {
+            VStack {
+                HStack {
+                    Text("2.")
+                        .font(.system(size: 35))
+                        .fontWeight(.bold)
+                        .foregroundStyle(Color.ESTitle)
+                        .padding(.leading, 30)
+                        .padding(.bottom, 3)
+                    
+                    Text("GDP (국내총생산)")
+                        .font(.system(size: 25))
+                        .fontWeight(.bold)
+                    
+                    Spacer()
+                }
+                .padding(.top)
+                
+                if progress.count >= 1 {
+                    VStack(spacing: 0) {
                         HStack {
-                            Text("GDP (국내총생산)")
-                                .font(.system(size: 25))
-                                .fontWeight(.bold)
+                            Text("GDP (Gross Domestic Product)")
+                                .font(.system(size: 20))
+                                .fontWeight(.semibold)
+                                .padding(.top, 5)
                                 .padding(.leading, 30)
                             
                             Spacer()
                         }
-                        .padding(.top)
                         
-                        if progress.count >= 1 {
-                            VStack(spacing: 0) {
-                                HStack {
-                                    Text("GDP (Gross Domestic Product)")
-                                        .font(.system(size: 20))
-                                        .fontWeight(.semibold)
-                                        .padding(.top, 20)
-                                        .padding(.leading, 30)
-                                    
-                                    Spacer()
-                                }
-                                
-                                HStack {
-                                    Text(":일정기간 동안 한 나라의 영토 내에서\n 생산되는 모든 재화와 서비스")
-                                        .font(.system(size: 15))
-                                        .fontWeight(.semibold)
-                                        .padding(.top, 8)
-                                        .padding(.leading, 35)
-                                    
-                                    Spacer()
-                                }
-                            }
+                        HStack {
+                            Text(":일정기간 동안 한 나라의 영토 내에서\n 생산되는 모든 재화와 서비스")
+                                .font(.system(size: 15))
+                                .fontWeight(.semibold)
+                                .padding(.top, 8)
+                                .padding(.leading, 35)
+                            
+                            Spacer()
+                        }
+                    }
+                }
+                
+                if progress.count >= 2 {
+                    VStack {
+                        HStack {
+                            Text("국내총생산 (GDP)")
+                                .font(.system(size: 20))
+                                .fontWeight(.semibold)
+                                .padding(.leading, 30)
+                                .padding(.top, 50)
+                                .padding(.bottom)
+                            
+                            Spacer()
                         }
                         
-                        if progress.count >= 2 {
-                            HStack {
-                                Text("국민소득 3면 등가의 법칙")
+                        HStack {
+                            if gdp1 {
+                                Text("=")
                                     .font(.system(size: 20))
                                     .fontWeight(.semibold)
-                                    .padding(.top, 30)
-                                    .padding(.leading, 30)
+                                    .padding(.leading, 35)
+                                    .padding(.bottom, 10)
                                 
-                                Spacer()
+                                VStack {
+                                    Text("소비지출")
+                                        .font(.system(size: 15))
+                                        .fontWeight(.semibold)
+                                    
+                                    Text("C")
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(Color.ESTitle)
+                                }
                             }
                             
-                            ZStack {
+                            if gdp2 {
+                                Text("+")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .padding(.bottom, 10)
+                                
                                 VStack {
-                                    VStack(spacing: 0) {
-                                        LottieViewConverter(fileName: "BasicEconomy2_Distribution", loopMode: .playOnce, width: 110, height: 110)
-                                        
-                                        Text("분배")
-                                            .font(.system(size: 15))
-                                            .fontWeight(.semibold)
-                                            .foregroundStyle(Color.ESTitle)
-                                    }
+                                    Text("투자지출")
+                                        .font(.system(size: 15))
+                                        .fontWeight(.semibold)
                                     
-                                    HStack {
-                                        VStack(spacing: 0) {
-                                            LottieViewConverter(fileName: "BasicEconomy2_Factory", loopMode: .playOnce, width: 110, height: 110)
-                                                .padding(.leading, 30)
-                                            
-                                            Text("생산")
-                                                .font(.system(size: 15))
-                                                .fontWeight(.semibold)
-                                                .foregroundStyle(Color.ESTitle)
-                                        }
-                                        
-                                        Spacer()
-                                        
-                                        VStack(spacing: 0) {
-                                            LottieViewConverter(fileName: "BasicEconomy2_Payment", loopMode: .playOnce, toProgress: 0.745, width: 110, height: 110)
-                                                .padding(.trailing, 30)
-                                            
-                                            Text("지출")
-                                                .font(.system(size: 15))
-                                                .fontWeight(.semibold)
-                                                .foregroundStyle(Color.ESTitle)
-                                        }
-                                    }
-                                    .padding(.top, 40)
-                                }
-                                
-                                if rotate {
-                                    VStack {
-                                        HStack(spacing: 60) {
-                                            Image(systemName: "equal")
-                                                .frame(width: 30, height: 30)
-                                                .fontWeight(.semibold)
-                                                .foregroundStyle(Color.ESTitle)
-                                                .rotationEffect(.degrees(-45))
-                                                .scaleEffect(2.0)
-                                            
-                                            Image(systemName: "equal")
-                                                .frame(width: 30, height: 30)
-                                                .fontWeight(.semibold)
-                                                .foregroundStyle(Color.ESTitle)
-                                                .rotationEffect(.degrees(45))
-                                                .scaleEffect(2.0)
-                                        }
-                                        .padding(.top, 100)
-                                        
-                                        Image(systemName: "equal")
-                                            .frame(width: 30, height: 30)
-                                            .fontWeight(.semibold)
-                                            .foregroundStyle(Color.ESTitle)
-                                            .padding(.top, 20)
-                                            .scaleEffect(2.0)
-                                    }
-                                }
-                            }
-                            .padding(.top, 20)
-                        }
-                        
-                        if progress.count >= 3 {
-                            VStack {
-                                HStack {
-                                    Text("해외부문을 고려하지 않는다면")
+                                    Text("I")
                                         .font(.system(size: 20))
                                         .fontWeight(.semibold)
-                                        .padding(.top, 50)
-                                        .padding(.leading, 30)
-                                    
-                                    Spacer()
-                                }
-                                
-                                HStack {
-                                    Text("국내총생산 (GDP)")
-                                        .font(.system(size: 20))
-                                        .fontWeight(.semibold)
-                                        .padding(.top, 5)
-                                        .padding(.leading, 30)
-                                    
-                                    Spacer()
-                                }
-                                
-                                HStack {
-                                    Text("= 소비지출 + 투자지출 + 정부지출")
-                                        .font(.system(size: 20))
-                                        .fontWeight(.semibold)
-                                        .padding(.top, 5)
-                                        .padding(.leading, 35)
-                                    
-                                    Spacer()
+                                        .foregroundStyle(Color.ESTitle)
                                 }
                             }
-                            .id("one")
-                        }
-                        
-                        if progress.count >= 4 {
-                            VStack {
-                                Text("d")
+                            
+                            if gdp3 {
+                                Text("+")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .padding(.bottom, 10)
+                                
+                                VStack {
+                                    Text("정부지출")
+                                        .font(.system(size: 15))
+                                        .fontWeight(.semibold)
+                                    
+                                    Text("G")
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(Color.ESTitle)
+                                }
                             }
-                            .modifier(TileModifier(height: 300))
-                            .id("two")
+                            
+                            if gdp4 {
+                                Text("+")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .padding(.bottom, 10)
+                                
+                                VStack {
+                                    Text("순수지출")
+                                        .font(.system(size: 15))
+                                        .fontWeight(.semibold)
+                                    
+                                    Text("(X-M)")
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(Color.ESTitle)
+                                }
+                            }
+                            
+                            Spacer()
+                        }
+                    }
+                }
+                
+                Spacer()
+                
+                if nextButton {
+                    ZStack {
+                        Button {
+                            viewModel.currentPage += 1
+                            navigationRouter.navigate(.BasicEconomy3View(viewModel))
+                        } label: {
+                            LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                         }
                         
-                        Spacer()
-                        
-                        if nextButton {
-                            ZStack {
+                        if beforeButton {
+                            HStack {
                                 Button {
-                                    viewModel.currentPage += 1
-                                    navigationRouter.navigate(.BasicEconomy3View(viewModel))
+                                    viewModel.currentPage -= 1
+                                    navigationRouter.back()
                                 } label: {
-                                    LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                    Image(systemName: "chevron.left")
+                                        .font(.system(size: 25))
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(Color.ESTitle)
+                                        .padding()
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                                 }
                                 
-                                if beforeButton {
-                                    HStack {
-                                        Button {
-                                            viewModel.currentPage -= 1
-                                            navigationRouter.back()
-                                        } label: {
-                                            Image(systemName: "chevron.left")
-                                                .font(.system(size: 25))
-                                                .fontWeight(.semibold)
-                                                .foregroundStyle(Color.ESTitle)
-                                                .padding()
-                                                .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
-                                        }
-                                        
-                                        Spacer()
-                                    }
-                                    .padding(.leading, 60)
-                                    .padding(.trailing, 70)
-                                }
+                                Spacer()
                             }
+                            .padding(.leading, 60)
+                            .padding(.trailing, 70)
                         }
                     }
                 }
@@ -220,24 +195,34 @@ struct BasicEconomy2View: View {
         .contentShape(Rectangle())
         .onTapGesture {
             withAnimation(.smooth(duration: 1.0)) {
-                if progress.count < 5 {
+                if progress.count < 3 {
                     progress.append(1)
                 }
                 
                 if progress.count == 2 {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
                         withAnimation(.smooth(duration: 1.0)) {
-                            rotate = true
+                            gdp1 = true
                         }
                     }
-                }
-                
-                if progress.count == 3 {
                     
-                }
-                
-                if progress.count == 4 {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        withAnimation(.smooth(duration: 1.0)) {
+                            gdp2 = true
+                        }
+                    }
                     
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
+                        withAnimation(.smooth(duration: 1.0)) {
+                            gdp3 = true
+                        }
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        withAnimation(.smooth(duration: 1.0)) {
+                            gdp4 = true
+                        }
+                    }
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                         withAnimation(.smooth(duration: 1.0)) {
