@@ -13,69 +13,167 @@ struct BasicEconomy6View: View {
     
     @State private var progress: [Int] = []
     
+    @State private var image = false
+    
     @State private var nextButton = false
     @State private var beforeButton = false
     
     var body: some View {
-        VStack {
+        ScrollViewReader { proxy in
             VStack {
-                HStack {
-                    Text("2.")
-                        .font(.system(size: 35))
-                        .fontWeight(.bold)
-                        .foregroundStyle(Color.ESTitle)
-                        .padding(.leading, 30)
-                        .padding(.bottom, 3)
-                    
-                    Text("GDP (국내총생산)")
-                        .font(.system(size: 25))
-                        .fontWeight(.bold)
-                    
-                    Spacer()
-                }
-                .opacity(0.2)
-                .padding(.top)
-                
-                Spacer()
-                
-                if nextButton {
-                    ZStack {
-                        Button {
-                            viewModel.currentPage += 1
-                            navigationRouter.navigate(.BasicEconomy3View(viewModel))
-                        } label: {
-                            LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
-                                .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                ZStack {
+                    ScrollView {
+                        HStack {
+                            Text("2.")
+                                .font(.system(size: 35))
+                                .fontWeight(.bold)
+                                .foregroundStyle(Color.ESTitle)
+                                .padding(.leading, 30)
+                                .padding(.bottom, 3)
+                            
+                            Text("GDP (국내총생산)")
+                                .font(.system(size: 25))
+                                .fontWeight(.bold)
+                            
+                            Spacer()
+                        }
+                        .opacity(0.2)
+                        .padding(.top)
+                        
+                        HStack {
+                            Text("정부지출을 위한 재원은 어떻게 조달될까요?")
+                                .font(.system(size: 20))
+                                .fontWeight(.semibold)
+                                .padding(.leading, 30)
+                            
+                            Spacer()
+                        }
+                        .padding(.top, 5)
+                        
+                        if progress.count >= 1 {
+                            VStack {
+                                HStack {
+                                    Text("1) 소득세/법인세 등의 조세를 통한 방법")
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                        .padding(.leading, 35)
+                                    
+                                    Spacer()
+                                }
+                                
+                                if image {
+                                    ZStack {
+                                        LottieViewConverter(fileName: "BasicEconomy6_MoneyStack", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
+                                            .padding(.trailing, 150)
+                                            .opacity(0.6)
+                                        
+                                        HStack {
+                                            Image("Angry_Toktok")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 80)
+                                            
+                                            ZStack {
+                                                Image("Suit_Toktok")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 80)
+                                                    .scaleEffect(x: -1, y: 1, anchor: .center)
+                                                
+                                                LottieViewConverter(fileName: "Sweat", loopMode: .playOnce, toProgress: 0.5, width: 50, height: 50)
+                                                    .padding(.bottom, 70)
+                                                    .padding(.leading, 90)
+                                            }
+                                        }
+                                        .padding(.leading, 50)
+                                        .padding(.top, 40)
+                                    }
+                                    .padding(.top)
+                                }
+                            }
+                            .padding(.top)
                         }
                         
-                        if beforeButton {
+                        if progress.count >= 2 {
                             HStack {
+                                LottieViewConverter(fileName: "ArrowRight", loopMode: .playOnce, toProgress: 0.5, width: 80, height: 80)
+                                
+                                Text("저항이 심해요..!")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .padding(.trailing, 10)
+                            }
+                            .padding(.top)
+                        }
+                    }
+                    
+                    if nextButton {
+                        VStack {
+                            Spacer()
+                            
+                            ZStack {
                                 Button {
-                                    viewModel.currentPage -= 1
-                                    navigationRouter.back()
+                                    viewModel.currentPage += 1
+                                    navigationRouter.navigate(.BasicEconomy3View(viewModel))
                                 } label: {
-                                    Image(systemName: "chevron.left")
-                                        .font(.system(size: 25))
-                                        .fontWeight(.semibold)
-                                        .foregroundStyle(Color.ESTitle)
-                                        .padding()
+                                    LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                                 }
                                 
-                                Spacer()
+                                if beforeButton {
+                                    HStack {
+                                        Button {
+                                            viewModel.currentPage -= 1
+                                            navigationRouter.back()
+                                        } label: {
+                                            Image(systemName: "chevron.left")
+                                                .font(.system(size: 25))
+                                                .fontWeight(.semibold)
+                                                .foregroundStyle(Color.ESTitle)
+                                                .padding()
+                                                .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                                        }
+                                        
+                                        Spacer()
+                                    }
+                                    .padding(.leading, 60)
+                                    .padding(.trailing, 70)
+                                }
                             }
-                            .padding(.leading, 60)
-                            .padding(.trailing, 70)
                         }
                     }
                 }
             }
-        }
-        .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
-        .contentShape(Rectangle())
-        .onTapGesture {
-            withAnimation(.smooth(duration: 1.0)) {
-                
+            .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
+            .contentShape(Rectangle())
+            .onTapGesture {
+                withAnimation(.smooth(duration: 1.0)) {
+                    if progress.count < 3 {
+                        progress.append(1)
+                    }
+                    
+                    if progress.count == 1 {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            withAnimation(.smooth(duration: 1.0)) {
+                                image = true
+                            }
+                        }
+                    }
+                    
+                    if progress.count == 2 {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
+                            withAnimation(.smooth(duration: 1.0)) {
+                                nextButton = true
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                    withAnimation(.smooth(duration: 1.0)) {
+                                        beforeButton = true
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

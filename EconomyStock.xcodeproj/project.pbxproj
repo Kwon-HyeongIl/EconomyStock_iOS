@@ -62,6 +62,8 @@
 		CA662BCE2CAD72E6009E8D5F /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BCD2CAD72E6009E8D5F /* KakaoSDKUser */; };
 		CA6927122CDF7FDD005F2A6B /* ArrowRight.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6927112CDF7FDD005F2A6B /* ArrowRight.json */; };
 		CA6927142CDF8016005F2A6B /* BasicEconomy5_Money.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6927132CDF8016005F2A6B /* BasicEconomy5_Money.json */; };
+		CA6927162CDF8A19005F2A6B /* Sweat.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6927152CDF8A19005F2A6B /* Sweat.json */; };
+		CA6927192CDF8B64005F2A6B /* BasicEconomy6_MoneyStack.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6927182CDF8B64005F2A6B /* BasicEconomy6_MoneyStack.json */; };
 		CA6C54D42CB160A1008CF887 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CA6C54D32CB160A1008CF887 /* GoogleSignIn */; };
 		CA6C54D62CB160A1008CF887 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CA6C54D52CB160A1008CF887 /* GoogleSignInSwift */; };
 		CA712CA72CD65B30002E7276 /* BasicEconomy1_Home.json in Resources */ = {isa = PBXBuildFile; fileRef = CA712CA62CD65B30002E7276 /* BasicEconomy1_Home.json */; };
@@ -184,6 +186,8 @@
 		CA662BD32CAD7B86009E8D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CA6927112CDF7FDD005F2A6B /* ArrowRight.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ArrowRight.json; sourceTree = "<group>"; };
 		CA6927132CDF8016005F2A6B /* BasicEconomy5_Money.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy5_Money.json; sourceTree = "<group>"; };
+		CA6927152CDF8A19005F2A6B /* Sweat.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sweat.json; sourceTree = "<group>"; };
+		CA6927182CDF8B64005F2A6B /* BasicEconomy6_MoneyStack.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy6_MoneyStack.json; sourceTree = "<group>"; };
 		CA712CA62CD65B30002E7276 /* BasicEconomy1_Home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy1_Home.json; sourceTree = "<group>"; };
 		CA712CA82CD65D54002E7276 /* BasicEconomy1_Building.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy1_Building.json; sourceTree = "<group>"; };
 		CA712CAA2CD65ED5002E7276 /* BasicEconomy1_GovernmentBuilding.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy1_GovernmentBuilding.json; sourceTree = "<group>"; };
@@ -566,6 +570,14 @@
 			path = MainTab;
 			sourceTree = "<group>";
 		};
+		CA6927172CDF8B59005F2A6B /* Page6 */ = {
+			isa = PBXGroup;
+			children = (
+				CA6927182CDF8B64005F2A6B /* BasicEconomy6_MoneyStack.json */,
+			);
+			path = Page6;
+			sourceTree = "<group>";
+		};
 		CA712CA42CD65B00002E7276 /* Course */ = {
 			isa = PBXGroup;
 			children = (
@@ -583,6 +595,7 @@
 				CA712CAC2CD65EE1002E7276 /* Page1 */,
 				CA5A4A982CDDBEC200E225F3 /* Page4 */,
 				CA0835C02CDF22AD00B29607 /* Page5 */,
+				CA6927172CDF8B59005F2A6B /* Page6 */,
 				CAF2C03A2CD9C53600D0E15D /* Page10 */,
 			);
 			path = BasicEconomy;
@@ -783,6 +796,7 @@
 				CAD1CD352CDCD73A00E89FA7 /* Bubble.json */,
 				CA5389CE2CDCE3C2003DA62F /* QuestionMark.json */,
 				CA6927112CDF7FDD005F2A6B /* ArrowRight.json */,
+				CA6927152CDF8A19005F2A6B /* Sweat.json */,
 			);
 			path = Etc;
 			sourceTree = "<group>";
@@ -1062,6 +1076,7 @@
 				CA47F5782CD9359D00DCAFCF /* MainTab_Profile.json in Resources */,
 				CA5A4A9C2CDDC2F300E225F3 /* BasicEconomy4_Building.json in Resources */,
 				CA47F5792CD9359D00DCAFCF /* MainTab_Studying.json in Resources */,
+				CA6927162CDF8A19005F2A6B /* Sweat.json in Resources */,
 				CA47F57A2CD9359D00DCAFCF /* MainTab_News.json in Resources */,
 				CA6927122CDF7FDD005F2A6B /* ArrowRight.json in Resources */,
 				CA5B3A5E2CD7B20000341E23 /* CourseFinishButton.json in Resources */,
@@ -1071,6 +1086,7 @@
 				CAF2C03F2CD9C54C00D0E15D /* BasicEconomy10_Factory.json in Resources */,
 				CAF2C0402CD9C54C00D0E15D /* BasicEconomy10_Distribution.json in Resources */,
 				CA9BB9CF2CABA59A00886A1A /* .gitignore in Resources */,
+				CA6927192CDF8B64005F2A6B /* BasicEconomy6_MoneyStack.json in Resources */,
 				CA47D3AB2CD68909009FCE4F /* BasicEconomy1_Earth.json in Resources */,
 				CA712CA72CD65B30002E7276 /* BasicEconomy1_Home.json in Resources */,
 				CAAE54182CB8E34200B5352D /* PriceLevelCourseCover.json in Resources */,
