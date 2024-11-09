@@ -44,6 +44,72 @@ struct BasicEconomy3View: View {
                         .opacity(0.2)
                         .padding(.top)
                         
+                        HStack {
+                            VStack {
+                                Text("소비지출")
+                                    .font(.system(size: 15))
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(Color.ESTitle)
+                                
+                                Text("C")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(Color.ESTitle)
+                            }
+                            
+                            Text("+")
+                                .font(.system(size: 20))
+                                .fontWeight(.semibold)
+                                .padding(.bottom, 10)
+                                .opacity(0.2)
+                            
+                            VStack {
+                                Text("투자지출")
+                                    .font(.system(size: 15))
+                                    .fontWeight(.semibold)
+                                
+                                Text("I")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                            }
+                            .opacity(0.2)
+                            
+                            Text("+")
+                                .font(.system(size: 20))
+                                .fontWeight(.semibold)
+                                .padding(.bottom, 10)
+                                .opacity(0.2)
+                            
+                            VStack {
+                                Text("정부지출")
+                                    .font(.system(size: 15))
+                                    .fontWeight(.semibold)
+                                
+                                Text("G")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                            }
+                            .opacity(0.2)
+                            
+                            Text("+")
+                                .font(.system(size: 20))
+                                .fontWeight(.semibold)
+                                .padding(.bottom, 10)
+                                .opacity(0.2)
+                            
+                            VStack {
+                                Text("순수지출")
+                                    .font(.system(size: 15))
+                                    .fontWeight(.semibold)
+                                
+                                Text("(X-M)")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                            }
+                            .opacity(0.2)
+                        }
+                        .padding(.top, 5)
+                        
                         if progress.count >= 1 {
                             VStack(spacing: 10) {
                                 HStack {
@@ -51,7 +117,6 @@ struct BasicEconomy3View: View {
                                         .font(.system(size: 20))
                                         .fontWeight(.semibold)
                                         .padding(.leading, 30)
-                                        .padding(.top, 5)
                                     
                                     Spacer()
                                 }
@@ -65,6 +130,7 @@ struct BasicEconomy3View: View {
                                 .multilineTextAlignment(.center)
                                 .padding(.horizontal)
                             }
+                            .padding(.top)
                         }
                         
                         if progress.count >= 2 {
@@ -170,6 +236,11 @@ struct BasicEconomy3View: View {
                             }
                             .padding(.top, 23)
                         }
+                        
+                        Rectangle()
+                            .fill(.clear)
+                            .frame(width: 300, height: 110)
+                            .id("bottom")
                     }
                     
                     if nextButton {
@@ -239,6 +310,12 @@ struct BasicEconomy3View: View {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                             withAnimation(.smooth(duration: 1.0)) {
                                 nextButton = true
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                    withAnimation(.smooth(duration: 1.0)) {
+                                        proxy.scrollTo("bottom", anchor: .top)
+                                    }
+                                }
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                     withAnimation(.smooth(duration: 1.0)) {

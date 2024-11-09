@@ -80,7 +80,6 @@ struct BasicEconomy2View: View {
                                     Text("=")
                                         .font(.system(size: 20))
                                         .fontWeight(.semibold)
-                                        .padding(.leading, 35)
                                         .padding(.bottom, 10)
                                     
                                     VStack {
@@ -148,8 +147,6 @@ struct BasicEconomy2View: View {
                                             .foregroundStyle(Color.ESTitle)
                                     }
                                 }
-                                
-                                Spacer()
                             }
                         }
                     }
@@ -201,19 +198,19 @@ struct BasicEconomy2View: View {
                 }
                 
                 if progress.count == 2 {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                         withAnimation(.smooth(duration: 1.0)) {
                             gdp1 = true
                             
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                 withAnimation(.smooth(duration: 1.0)) {
                                     gdp2 = true
                                     
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                         withAnimation(.smooth(duration: 1.0)) {
                                             gdp3 = true
                                             
-                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                                 withAnimation(.smooth(duration: 1.0)) {
                                                     gdp4 = true
                                                 }
