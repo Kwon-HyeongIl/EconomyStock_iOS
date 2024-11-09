@@ -23,169 +23,170 @@ struct BasicEconomy2View: View {
     
     var body: some View {
         VStack {
-            VStack {
-                HStack {
-                    Text("2.")
-                        .font(.system(size: 35))
-                        .fontWeight(.bold)
-                        .foregroundStyle(Color.ESTitle)
-                        .padding(.leading, 30)
-                        .padding(.bottom, 3)
-                    
-                    Text("GDP (국내총생산)")
-                        .font(.system(size: 25))
-                        .fontWeight(.bold)
-                    
-                    Spacer()
-                }
-                .padding(.top)
-                
-                if progress.count >= 1 {
-                    VStack(spacing: 0) {
-                        HStack {
-                            Text("GDP (Gross Domestic Product)")
-                                .font(.system(size: 20))
-                                .fontWeight(.semibold)
-                                .padding(.top, 5)
-                                .padding(.leading, 30)
-                            
-                            Spacer()
-                        }
+            ZStack {
+                ScrollView {
+                    HStack {
+                        Text("2.")
+                            .font(.system(size: 35))
+                            .fontWeight(.bold)
+                            .foregroundStyle(Color.ESTitle)
+                            .padding(.leading, 30)
+                            .padding(.bottom, 3)
                         
-                        HStack {
-                            Text(":일정기간 동안 한 나라의 영토 내에서\n 생산되는 모든 재화와 서비스")
-                                .font(.system(size: 15))
+                        Text("GDP (국내총생산)")
+                            .font(.system(size: 25))
+                            .fontWeight(.bold)
+                        
+                        Spacer()
+                    }
+                    .padding(.top)
+                    
+                    if progress.count >= 1 {
+                        VStack(spacing: 0) {
+                            HStack {
+                                Text("GDP (Gross Domestic Product)")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .padding(.top, 5)
+                                    .padding(.leading, 30)
+                                
+                                Spacer()
+                            }
+                            
+                            Text("일정기간 동안 한 나라의 영토 내에서 생산되는 모든 재화와 서비스")
+                                .font(.system(size: 20))
                                 .fontWeight(.semibold)
                                 .padding(.top, 8)
-                                .padding(.leading, 35)
-                            
-                            Spacer()
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal)
                         }
                     }
-                }
-                
-                if progress.count >= 2 {
-                    VStack {
-                        HStack {
-                            Text("국내총생산 (GDP)")
-                                .font(.system(size: 20))
-                                .fontWeight(.semibold)
-                                .padding(.leading, 30)
-                                .padding(.top, 50)
-                                .padding(.bottom)
-                            
-                            Spacer()
-                        }
-                        
-                        HStack {
-                            if gdp1 {
-                                Text("=")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.semibold)
-                                    .padding(.leading, 35)
-                                    .padding(.bottom, 10)
-                                
-                                VStack {
-                                    Text("소비지출")
-                                        .font(.system(size: 15))
-                                        .fontWeight(.semibold)
-                                    
-                                    Text("C")
-                                        .font(.system(size: 20))
-                                        .fontWeight(.semibold)
-                                        .foregroundStyle(Color.ESTitle)
-                                }
-                            }
-                            
-                            if gdp2 {
-                                Text("+")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.semibold)
-                                    .padding(.bottom, 10)
-                                
-                                VStack {
-                                    Text("투자지출")
-                                        .font(.system(size: 15))
-                                        .fontWeight(.semibold)
-                                    
-                                    Text("I")
-                                        .font(.system(size: 20))
-                                        .fontWeight(.semibold)
-                                        .foregroundStyle(Color.ESTitle)
-                                }
-                            }
-                            
-                            if gdp3 {
-                                Text("+")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.semibold)
-                                    .padding(.bottom, 10)
-                                
-                                VStack {
-                                    Text("정부지출")
-                                        .font(.system(size: 15))
-                                        .fontWeight(.semibold)
-                                    
-                                    Text("G")
-                                        .font(.system(size: 20))
-                                        .fontWeight(.semibold)
-                                        .foregroundStyle(Color.ESTitle)
-                                }
-                            }
-                            
-                            if gdp4 {
-                                Text("+")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.semibold)
-                                    .padding(.bottom, 10)
-                                
-                                VStack {
-                                    Text("순수지출")
-                                        .font(.system(size: 15))
-                                        .fontWeight(.semibold)
-                                    
-                                    Text("(X-M)")
-                                        .font(.system(size: 20))
-                                        .fontWeight(.semibold)
-                                        .foregroundStyle(Color.ESTitle)
-                                }
-                            }
-                            
-                            Spacer()
-                        }
-                    }
-                }
-                
-                Spacer()
-                
-                if nextButton {
-                    ZStack {
-                        Button {
-                            viewModel.currentPage += 1
-                            navigationRouter.navigate(.BasicEconomy3View(viewModel))
-                        } label: {
-                            LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
-                                .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
-                        }
-                        
-                        if beforeButton {
+                    
+                    if progress.count >= 2 {
+                        VStack {
                             HStack {
-                                Button {
-                                    viewModel.currentPage -= 1
-                                    navigationRouter.back()
-                                } label: {
-                                    Image(systemName: "chevron.left")
-                                        .font(.system(size: 25))
+                                Text("국내총생산 (GDP)")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .padding(.leading, 30)
+                                    .padding(.top, 50)
+                                    .padding(.bottom)
+                                
+                                Spacer()
+                            }
+                            
+                            HStack {
+                                if gdp1 {
+                                    Text("=")
+                                        .font(.system(size: 20))
                                         .fontWeight(.semibold)
-                                        .foregroundStyle(Color.ESTitle)
-                                        .padding()
-                                        .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                                        .padding(.leading, 35)
+                                        .padding(.bottom, 10)
+                                    
+                                    VStack {
+                                        Text("소비지출")
+                                            .font(.system(size: 15))
+                                            .fontWeight(.semibold)
+                                        
+                                        Text("C")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.semibold)
+                                            .foregroundStyle(Color.ESTitle)
+                                    }
+                                }
+                                
+                                if gdp2 {
+                                    Text("+")
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                        .padding(.bottom, 10)
+                                    
+                                    VStack {
+                                        Text("투자지출")
+                                            .font(.system(size: 15))
+                                            .fontWeight(.semibold)
+                                        
+                                        Text("I")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.semibold)
+                                            .foregroundStyle(Color.ESTitle)
+                                    }
+                                }
+                                
+                                if gdp3 {
+                                    Text("+")
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                        .padding(.bottom, 10)
+                                    
+                                    VStack {
+                                        Text("정부지출")
+                                            .font(.system(size: 15))
+                                            .fontWeight(.semibold)
+                                        
+                                        Text("G")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.semibold)
+                                            .foregroundStyle(Color.ESTitle)
+                                    }
+                                }
+                                
+                                if gdp4 {
+                                    Text("+")
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                        .padding(.bottom, 10)
+                                    
+                                    VStack {
+                                        Text("순수지출")
+                                            .font(.system(size: 15))
+                                            .fontWeight(.semibold)
+                                        
+                                        Text("(X-M)")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.semibold)
+                                            .foregroundStyle(Color.ESTitle)
+                                    }
                                 }
                                 
                                 Spacer()
                             }
-                            .padding(.leading, 60)
-                            .padding(.trailing, 70)
+                        }
+                    }
+                }
+                
+                if nextButton {
+                    VStack {
+                        Spacer()
+                        
+                        ZStack {
+                            Button {
+                                viewModel.currentPage += 1
+                                navigationRouter.navigate(.BasicEconomy3View(viewModel))
+                            } label: {
+                                LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                    .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                            }
+                            
+                            if beforeButton {
+                                HStack {
+                                    Button {
+                                        viewModel.currentPage -= 1
+                                        navigationRouter.back()
+                                    } label: {
+                                        Image(systemName: "chevron.left")
+                                            .font(.system(size: 25))
+                                            .fontWeight(.semibold)
+                                            .foregroundStyle(Color.ESTitle)
+                                            .padding()
+                                            .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                                    }
+                                    
+                                    Spacer()
+                                }
+                                .padding(.leading, 60)
+                                .padding(.trailing, 70)
+                            }
                         }
                     }
                 }

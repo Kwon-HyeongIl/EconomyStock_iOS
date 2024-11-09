@@ -60,6 +60,8 @@
 		CA662BCA2CAD72E6009E8D5F /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BC92CAD72E6009E8D5F /* KakaoSDKAuth */; };
 		CA662BCC2CAD72E6009E8D5F /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BCB2CAD72E6009E8D5F /* KakaoSDKCommon */; };
 		CA662BCE2CAD72E6009E8D5F /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BCD2CAD72E6009E8D5F /* KakaoSDKUser */; };
+		CA6927122CDF7FDD005F2A6B /* ArrowRight.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6927112CDF7FDD005F2A6B /* ArrowRight.json */; };
+		CA6927142CDF8016005F2A6B /* BasicEconomy5_Money.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6927132CDF8016005F2A6B /* BasicEconomy5_Money.json */; };
 		CA6C54D42CB160A1008CF887 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CA6C54D32CB160A1008CF887 /* GoogleSignIn */; };
 		CA6C54D62CB160A1008CF887 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CA6C54D52CB160A1008CF887 /* GoogleSignInSwift */; };
 		CA712CA72CD65B30002E7276 /* BasicEconomy1_Home.json in Resources */ = {isa = PBXBuildFile; fileRef = CA712CA62CD65B30002E7276 /* BasicEconomy1_Home.json */; };
@@ -98,6 +100,10 @@
 		CAD101E42CB6959D00CA9C6A /* StudyingCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101E32CB6959D00CA9C6A /* StudyingCourse.swift */; };
 		CAD1CD362CDCD73A00E89FA7 /* Bubble.json in Resources */ = {isa = PBXBuildFile; fileRef = CAD1CD352CDCD73A00E89FA7 /* Bubble.json */; };
 		CAD9A1102CC515B000A4F70B /* CourseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9A10F2CC515B000A4F70B /* CourseType.swift */; };
+		CAE4C1DF2CDE3F2E00CDD0CF /* BasicEconomy6View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE4C1DE2CDE3F2E00CDD0CF /* BasicEconomy6View.swift */; };
+		CAE4C1E12CDE3F3E00CDD0CF /* BasicEconomy7View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE4C1E02CDE3F3E00CDD0CF /* BasicEconomy7View.swift */; };
+		CAE4C1E32CDE3F4A00CDD0CF /* BasicEconomy8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE4C1E22CDE3F4A00CDD0CF /* BasicEconomy8View.swift */; };
+		CAE4C1E52CDE3F5400CDD0CF /* BasicEconomy9View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE4C1E42CDE3F5400CDD0CF /* BasicEconomy9View.swift */; };
 		CAEDDAB92CB53B3F0046162D /* BasicSignupFocusField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDAB82CB53B3E0046162D /* BasicSignupFocusField.swift */; };
 		CAEDDABD2CB56C330046162D /* BasicLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDABC2CB56C330046162D /* BasicLoginView.swift */; };
 		CAEDDABF2CB56C4D0046162D /* BasicLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDABE2CB56C4D0046162D /* BasicLoginViewModel.swift */; };
@@ -176,6 +182,8 @@
 		CA5B3A5D2CD7B20000341E23 /* CourseNextButton.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CourseNextButton.json; sourceTree = "<group>"; };
 		CA662BD12CAD79F0009E8D5F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		CA662BD32CAD7B86009E8D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CA6927112CDF7FDD005F2A6B /* ArrowRight.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ArrowRight.json; sourceTree = "<group>"; };
+		CA6927132CDF8016005F2A6B /* BasicEconomy5_Money.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy5_Money.json; sourceTree = "<group>"; };
 		CA712CA62CD65B30002E7276 /* BasicEconomy1_Home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy1_Home.json; sourceTree = "<group>"; };
 		CA712CA82CD65D54002E7276 /* BasicEconomy1_Building.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy1_Building.json; sourceTree = "<group>"; };
 		CA712CAA2CD65ED5002E7276 /* BasicEconomy1_GovernmentBuilding.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy1_GovernmentBuilding.json; sourceTree = "<group>"; };
@@ -210,6 +218,10 @@
 		CAD101E32CB6959D00CA9C6A /* StudyingCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyingCourse.swift; sourceTree = "<group>"; };
 		CAD1CD352CDCD73A00E89FA7 /* Bubble.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Bubble.json; sourceTree = "<group>"; };
 		CAD9A10F2CC515B000A4F70B /* CourseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseType.swift; sourceTree = "<group>"; };
+		CAE4C1DE2CDE3F2E00CDD0CF /* BasicEconomy6View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy6View.swift; sourceTree = "<group>"; };
+		CAE4C1E02CDE3F3E00CDD0CF /* BasicEconomy7View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy7View.swift; sourceTree = "<group>"; };
+		CAE4C1E22CDE3F4A00CDD0CF /* BasicEconomy8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy8View.swift; sourceTree = "<group>"; };
+		CAE4C1E42CDE3F5400CDD0CF /* BasicEconomy9View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy9View.swift; sourceTree = "<group>"; };
 		CAEDDAB82CB53B3E0046162D /* BasicSignupFocusField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSignupFocusField.swift; sourceTree = "<group>"; };
 		CAEDDABC2CB56C330046162D /* BasicLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLoginView.swift; sourceTree = "<group>"; };
 		CAEDDABE2CB56C4D0046162D /* BasicLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLoginViewModel.swift; sourceTree = "<group>"; };
@@ -257,6 +269,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA0835C02CDF22AD00B29607 /* Page5 */ = {
+			isa = PBXGroup;
+			children = (
+				CA6927132CDF8016005F2A6B /* BasicEconomy5_Money.json */,
+			);
+			path = Page5;
+			sourceTree = "<group>";
+		};
 		CA08F3962CB838620093117E /* 2_PriceLevel */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,6 +582,7 @@
 			children = (
 				CA712CAC2CD65EE1002E7276 /* Page1 */,
 				CA5A4A982CDDBEC200E225F3 /* Page4 */,
+				CA0835C02CDF22AD00B29607 /* Page5 */,
 				CAF2C03A2CD9C53600D0E15D /* Page10 */,
 			);
 			path = BasicEconomy;
@@ -628,6 +649,10 @@
 				CA92DDB62CB7D7B900A7D2A4 /* BasicEconomy3View.swift */,
 				CA92DDB82CB7D7C300A7D2A4 /* BasicEconomy4View.swift */,
 				CA92DDBA2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift */,
+				CAE4C1DE2CDE3F2E00CDD0CF /* BasicEconomy6View.swift */,
+				CAE4C1E02CDE3F3E00CDD0CF /* BasicEconomy7View.swift */,
+				CAE4C1E22CDE3F4A00CDD0CF /* BasicEconomy8View.swift */,
+				CAE4C1E42CDE3F5400CDD0CF /* BasicEconomy9View.swift */,
 				CA4D88CD2CDC70210003DE3C /* BasicEconomy10View.swift */,
 			);
 			path = 1_BasicEconomy;
@@ -757,6 +782,7 @@
 			children = (
 				CAD1CD352CDCD73A00E89FA7 /* Bubble.json */,
 				CA5389CE2CDCE3C2003DA62F /* QuestionMark.json */,
+				CA6927112CDF7FDD005F2A6B /* ArrowRight.json */,
 			);
 			path = Etc;
 			sourceTree = "<group>";
@@ -1037,6 +1063,7 @@
 				CA5A4A9C2CDDC2F300E225F3 /* BasicEconomy4_Building.json in Resources */,
 				CA47F5792CD9359D00DCAFCF /* MainTab_Studying.json in Resources */,
 				CA47F57A2CD9359D00DCAFCF /* MainTab_News.json in Resources */,
+				CA6927122CDF7FDD005F2A6B /* ArrowRight.json in Resources */,
 				CA5B3A5E2CD7B20000341E23 /* CourseFinishButton.json in Resources */,
 				CA5B3A5F2CD7B20000341E23 /* CourseNextButton.json in Resources */,
 				CAF2C03E2CD9C54C00D0E15D /* BasicEconomy10_Payment.json in Resources */,
@@ -1049,6 +1076,7 @@
 				CAAE54182CB8E34200B5352D /* PriceLevelCourseCover.json in Resources */,
 				CA9BB9D02CABA59A00886A1A /* Assets.xcassets in Resources */,
 				CA47F56B2CD933B100DCAFCF /* MainTab_Profile_On.json in Resources */,
+				CA6927142CDF8016005F2A6B /* BasicEconomy5_Money.json in Resources */,
 				CA47F56E2CD933B100DCAFCF /* MainTab_Studying_On.json in Resources */,
 				CA47F5702CD933B100DCAFCF /* MainTab_Home_On.json in Resources */,
 				CAD1CD362CDCD73A00E89FA7 /* Bubble.json in Resources */,
@@ -1067,6 +1095,7 @@
 				CAD9A1102CC515B000A4F70B /* CourseType.swift in Sources */,
 				CA3BBAB62CB50441007CA152 /* NavigationBackTitleModifier.swift in Sources */,
 				CAEE16482CAD07B900210BD0 /* AuthManager.swift in Sources */,
+				CAE4C1DF2CDE3F2E00CDD0CF /* BasicEconomy6View.swift in Sources */,
 				CAEE165A2CAD0CBA00210BD0 /* AuthManager+Hash.swift in Sources */,
 				CAEE16652CAD0D7800210BD0 /* LoginViewModel+Apple.swift in Sources */,
 				CA17FC752CB005DB0050250B /* MainTab.swift in Sources */,
@@ -1095,6 +1124,7 @@
 				CAEDDABF2CB56C4D0046162D /* BasicLoginViewModel.swift in Sources */,
 				CA77DFCF2CB256DD00992829 /* LoginViewModel+Google.swift in Sources */,
 				CA17FC7F2CB00ABE0050250B /* CourseListView.swift in Sources */,
+				CAE4C1E12CDE3F3E00CDD0CF /* BasicEconomy7View.swift in Sources */,
 				CAEE16522CAD0C3F00210BD0 /* AuthManager+SocialLogin.swift in Sources */,
 				CAEE16582CAD0CA700210BD0 /* LoginView.swift in Sources */,
 				CA17FC7D2CB00AB90050250B /* HomeView.swift in Sources */,
@@ -1128,9 +1158,11 @@
 				CA17FC772CB009680050250B /* TitleColor.swift in Sources */,
 				CA114FD72CB62D2A00AD5AD9 /* CourseListViewModel.swift in Sources */,
 				CA114FDA2CB62E7D00AD5AD9 /* NavigationTitleModifier.swift in Sources */,
+				CAE4C1E52CDE3F5400CDD0CF /* BasicEconomy9View.swift in Sources */,
 				CAEDDAB92CB53B3F0046162D /* BasicSignupFocusField.swift in Sources */,
 				CAEE164F2CAD096C00210BD0 /* NotificationType.swift in Sources */,
 				CA4E71A82CB78B8400BAA70C /* CourseViewModel.swift in Sources */,
+				CAE4C1E32CDE3F4A00CDD0CF /* BasicEconomy8View.swift in Sources */,
 				CAB77FD72CB8EC2900DF11D6 /* CourseToolbarModifier.swift in Sources */,
 				CAAA4B532CC9F2A00083F86C /* NavigationBaseView.swift in Sources */,
 				CA92DDBB2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift in Sources */,

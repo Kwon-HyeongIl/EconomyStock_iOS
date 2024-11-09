@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct BasicEconomy10View: View {
+    @Environment(NavigationRouter.self) var navigationRouter
+    @Bindable var viewModel: CourseViewModel
+    
+    @State private var progress: [Int] = []
+    
+    @State private var nextButton = false
+    @State private var beforeButton = false
+    
     var body: some View {
         if true {
             HStack {
@@ -91,5 +99,7 @@ struct BasicEconomy10View: View {
 }
 
 #Preview {
-    BasicEconomy10View()
+    BasicEconomy10View(viewModel: CourseViewModel(course: .DUMMY_COURSE))
+        .environment(NavigationRouter())
+        .environment(CourseListViewCapsule())
 }
