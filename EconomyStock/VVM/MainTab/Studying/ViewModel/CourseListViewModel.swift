@@ -27,7 +27,7 @@ class CourseListViewModel {
         )
         
         let parmanentProgressPage = Double(currentUser?.studyingCourse.basicEconomyParmanentProgressPage ?? 0)
-        let totalPage = 5.0
+        let totalPage = 11.0
         let progressRate = (parmanentProgressPage / totalPage) * 100.0
         
         let lastPage = currentUser?.studyingCourse.basicEconomyLastPage ?? 0

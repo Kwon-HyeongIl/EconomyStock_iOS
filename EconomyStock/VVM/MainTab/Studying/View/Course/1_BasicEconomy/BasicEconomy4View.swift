@@ -116,7 +116,7 @@ struct BasicEconomy4View: View {
                         if progress.count >= 1 {
                             VStack(spacing: 10) {
                                 HStack {
-                                    Text("1) 소비 (Consumption)")
+                                    Text("1) 투자")
                                         .font(.system(size: 20))
                                         .fontWeight(.semibold)
                                         .padding(.leading, 30)
@@ -131,6 +131,7 @@ struct BasicEconomy4View: View {
                                 .fontWeight(.semibold)
                                 .multilineTextAlignment(.center)
                                 .padding(.horizontal)
+                                .padding(.top, 10)
                             }
                             .padding(.top)
                         }
@@ -208,7 +209,7 @@ struct BasicEconomy4View: View {
                             .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                             .padding(.top, 30)
                             .onTapGesture {
-                                withAnimation(.smooth(duration: 1.0)) {
+                                withAnimation(.smooth(duration: 0.7)) {
                                     questionMarkContent.toggle()
                                     
                                     if questionMarkContent {
@@ -224,7 +225,7 @@ struct BasicEconomy4View: View {
                         
                         Rectangle()
                             .fill(.clear)
-                            .frame(width: 300, height: 110)
+                            .frame(width: 300, height: 100)
                             .id("bottom")
                     }
                     

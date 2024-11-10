@@ -129,6 +129,7 @@ struct BasicEconomy3View: View {
                                 .fontWeight(.semibold)
                                 .multilineTextAlignment(.center)
                                 .padding(.horizontal)
+                                .padding(.top, 10)
                             }
                             .padding(.top)
                         }
@@ -222,7 +223,7 @@ struct BasicEconomy3View: View {
                             .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                             .padding(.top, 30)
                             .onTapGesture {
-                                withAnimation(.smooth(duration: 1.0)) {
+                                withAnimation(.smooth(duration: 0.7)) {
                                     questionMarkContent.toggle()
                                     
                                     if questionMarkContent {
@@ -311,7 +312,7 @@ struct BasicEconomy3View: View {
                             withAnimation(.smooth(duration: 1.0)) {
                                 nextButton = true
                                 
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                     withAnimation {
                                         proxy.scrollTo("bottom", anchor: .top)
                                     }
