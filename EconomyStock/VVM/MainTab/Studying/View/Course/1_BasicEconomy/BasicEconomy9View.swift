@@ -13,6 +13,9 @@ struct BasicEconomy9View: View {
     
     @State private var progress: [Int] = []
     
+    @State private var contentPart1 = false
+    @State private var contentPart2 = false
+    
     @State private var nextButton = false
     @State private var beforeButton = false
     
@@ -38,9 +41,43 @@ struct BasicEconomy9View: View {
                         .opacity(0.2)
                         .padding(.top)
                         
-                        Text("T")
-                            .font(.system(size: 20))
-                            .fontWeight(.semibold)
+                        HStack {
+                            Text("정부지출을 위한 재원은 어떻게 조달될까요?")
+                                .font(.system(size: 20))
+                                .fontWeight(.semibold)
+                                .padding(.leading, 30)
+                            
+                            Spacer()
+                        }
+                        .padding(.top, 5)
+                        .opacity(0.2)
+                        
+                        if progress.count >= 1 {
+                            VStack {
+                                HStack {
+                                    Text("4) 순수출")
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                        .padding(.leading, 35)
+                                    
+                                    Spacer()
+                                }
+                                
+                                if contentPart1 {
+                                    LottieViewConverter(fileName: "BasicEconomy9_GlobalExport", loopMode: .playOnce, scale: 1.3, width: 150, height: 150)
+                                }
+                                
+                                if contentPart2 {
+                                    Text("순수출은 수출에서 수입을 뺀 값을 말해요")
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                        .multilineTextAlignment(.center)
+                                        .padding(.horizontal)
+                                        .padding(.top, 20)
+                                }
+                            }
+                            .padding(.top)
+                        }
                     }
                     
                     if nextButton {
@@ -50,7 +87,7 @@ struct BasicEconomy9View: View {
                             ZStack {
                                 Button {
                                     viewModel.currentPage += 1
-                                    navigationRouter.navigate(.BasicEconomy3View(viewModel))
+                                    navigationRouter.navigate(.BasicEconomy10View(viewModel))
                                 } label: {
                                     LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
@@ -84,13 +121,28 @@ struct BasicEconomy9View: View {
             .contentShape(Rectangle())
             .onTapGesture {
                 withAnimation(.smooth(duration: 1.0)) {
+                    if progress.count < 2 {
+                        progress.append(1)
+                    }
                     
-                    if progress.count == 2 {
+                    if progress.count == 1 {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            withAnimation(.smooth(duration: 1.0)) {
+                                contentPart1 = true
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                    withAnimation(.smooth(duration: 1.0)) {
+                                        contentPart2 = true
+                                    }
+                                }
+                            }
+                        }
+                        
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
                             withAnimation(.smooth(duration: 1.0)) {
                                 nextButton = true
                                 
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                                     withAnimation(.smooth(duration: 1.0)) {
                                         proxy.scrollTo("bottom", anchor: .top)
                                     }

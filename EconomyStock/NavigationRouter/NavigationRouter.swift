@@ -49,6 +49,8 @@ class NavigationRouter {
             BasicEconomy9View(viewModel: viewModel)
         case .BasicEconomy10View(let viewModel):
             BasicEconomy10View(viewModel: viewModel)
+        case .BasicEconomy11View(let viewModel):
+            BasicEconomy11View(viewModel: viewModel)
             
         case .PriceLevel1View(let viewModel):
             PriceLevel1View(viewModel: viewModel)

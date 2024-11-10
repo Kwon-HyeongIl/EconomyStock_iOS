@@ -53,7 +53,7 @@ struct BasicEconomy6View: View {
                         if progress.count >= 1 {
                             VStack {
                                 HStack {
-                                    Text("1) 소득세/법인세 등의 조세를 통한 방법")
+                                    Text("1) 소득세/법인세 등의 조세 부과")
                                         .font(.system(size: 20))
                                         .fontWeight(.semibold)
                                         .padding(.leading, 35)
@@ -114,7 +114,7 @@ struct BasicEconomy6View: View {
                             ZStack {
                                 Button {
                                     viewModel.currentPage += 1
-                                    navigationRouter.navigate(.BasicEconomy3View(viewModel))
+                                    navigationRouter.navigate(.BasicEconomy7View(viewModel))
                                 } label: {
                                     LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)

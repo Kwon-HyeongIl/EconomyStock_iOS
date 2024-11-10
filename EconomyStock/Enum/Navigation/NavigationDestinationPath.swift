@@ -28,6 +28,7 @@ enum NavigationDestinationPath: Hashable {
     case BasicEconomy8View(CourseViewModel)
     case BasicEconomy9View(CourseViewModel)
     case BasicEconomy10View(CourseViewModel)
+    case BasicEconomy11View(CourseViewModel)
     
     case PriceLevel1View(CourseViewModel)
     case PriceLevel2View(CourseViewModel)

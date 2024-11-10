@@ -57,6 +57,10 @@
 		CA5A4A9C2CDDC2F300E225F3 /* BasicEconomy4_Building.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5A4A9B2CDDC2F300E225F3 /* BasicEconomy4_Building.json */; };
 		CA5B3A5E2CD7B20000341E23 /* CourseFinishButton.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5B3A5C2CD7B20000341E23 /* CourseFinishButton.json */; };
 		CA5B3A5F2CD7B20000341E23 /* CourseNextButton.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5B3A5D2CD7B20000341E23 /* CourseNextButton.json */; };
+		CA61CEB52CE0A0C3007BCF4E /* BasicEconomy11View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA61CEB42CE0A0C3007BCF4E /* BasicEconomy11View.swift */; };
+		CA61CEB82CE0B050007BCF4E /* BasicEconomy9_GlobalExport.json in Resources */ = {isa = PBXBuildFile; fileRef = CA61CEB72CE0B050007BCF4E /* BasicEconomy9_GlobalExport.json */; };
+		CA61CEBA2CE0B727007BCF4E /* BasicEconomy8_MoneyPublish.json in Resources */ = {isa = PBXBuildFile; fileRef = CA61CEB92CE0B727007BCF4E /* BasicEconomy8_MoneyPublish.json */; };
+		CA61CEBC2CE0BA32007BCF4E /* BasicEconomy10_MoneyDistribution.json in Resources */ = {isa = PBXBuildFile; fileRef = CA61CEBB2CE0BA32007BCF4E /* BasicEconomy10_MoneyDistribution.json */; };
 		CA662BCA2CAD72E6009E8D5F /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BC92CAD72E6009E8D5F /* KakaoSDKAuth */; };
 		CA662BCC2CAD72E6009E8D5F /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BCB2CAD72E6009E8D5F /* KakaoSDKCommon */; };
 		CA662BCE2CAD72E6009E8D5F /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = CA662BCD2CAD72E6009E8D5F /* KakaoSDKUser */; };
@@ -182,6 +186,10 @@
 		CA5A4A9B2CDDC2F300E225F3 /* BasicEconomy4_Building.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy4_Building.json; sourceTree = "<group>"; };
 		CA5B3A5C2CD7B20000341E23 /* CourseFinishButton.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CourseFinishButton.json; sourceTree = "<group>"; };
 		CA5B3A5D2CD7B20000341E23 /* CourseNextButton.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CourseNextButton.json; sourceTree = "<group>"; };
+		CA61CEB42CE0A0C3007BCF4E /* BasicEconomy11View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy11View.swift; sourceTree = "<group>"; };
+		CA61CEB72CE0B050007BCF4E /* BasicEconomy9_GlobalExport.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy9_GlobalExport.json; sourceTree = "<group>"; };
+		CA61CEB92CE0B727007BCF4E /* BasicEconomy8_MoneyPublish.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy8_MoneyPublish.json; sourceTree = "<group>"; };
+		CA61CEBB2CE0BA32007BCF4E /* BasicEconomy10_MoneyDistribution.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy10_MoneyDistribution.json; sourceTree = "<group>"; };
 		CA662BD12CAD79F0009E8D5F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		CA662BD32CAD7B86009E8D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CA6927112CDF7FDD005F2A6B /* ArrowRight.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ArrowRight.json; sourceTree = "<group>"; };
@@ -555,6 +563,22 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		CA61CEB12CE0994B007BCF4E /* Page8 */ = {
+			isa = PBXGroup;
+			children = (
+				CA61CEB92CE0B727007BCF4E /* BasicEconomy8_MoneyPublish.json */,
+			);
+			path = Page8;
+			sourceTree = "<group>";
+		};
+		CA61CEB62CE0B045007BCF4E /* Page9 */ = {
+			isa = PBXGroup;
+			children = (
+				CA61CEB72CE0B050007BCF4E /* BasicEconomy9_GlobalExport.json */,
+			);
+			path = Page9;
+			sourceTree = "<group>";
+		};
 		CA6664E72CD8FD9300B7C198 /* MainTab */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,6 +620,8 @@
 				CA5A4A982CDDBEC200E225F3 /* Page4 */,
 				CA0835C02CDF22AD00B29607 /* Page5 */,
 				CA6927172CDF8B59005F2A6B /* Page6 */,
+				CA61CEB12CE0994B007BCF4E /* Page8 */,
+				CA61CEB62CE0B045007BCF4E /* Page9 */,
 				CAF2C03A2CD9C53600D0E15D /* Page10 */,
 			);
 			path = BasicEconomy;
@@ -667,6 +693,7 @@
 				CAE4C1E22CDE3F4A00CDD0CF /* BasicEconomy8View.swift */,
 				CAE4C1E42CDE3F5400CDD0CF /* BasicEconomy9View.swift */,
 				CA4D88CD2CDC70210003DE3C /* BasicEconomy10View.swift */,
+				CA61CEB42CE0A0C3007BCF4E /* BasicEconomy11View.swift */,
 			);
 			path = 1_BasicEconomy;
 			sourceTree = "<group>";
@@ -983,6 +1010,7 @@
 				CAF2C03B2CD9C54C00D0E15D /* BasicEconomy10_Distribution.json */,
 				CAF2C03C2CD9C54C00D0E15D /* BasicEconomy10_Factory.json */,
 				CAF2C03D2CD9C54C00D0E15D /* BasicEconomy10_Payment.json */,
+				CA61CEBB2CE0BA32007BCF4E /* BasicEconomy10_MoneyDistribution.json */,
 			);
 			path = Page10;
 			sourceTree = "<group>";
@@ -1072,10 +1100,13 @@
 				CA77DFCD2CB24D0900992829 /* Loading.json in Resources */,
 				CAF2271D2CAE569B002868F4 /* GoogleService-Info.plist in Resources */,
 				CA712CAB2CD65ED5002E7276 /* BasicEconomy1_GovernmentBuilding.json in Resources */,
+				CA61CEB82CE0B050007BCF4E /* BasicEconomy9_GlobalExport.json in Resources */,
 				CA47F5772CD9359D00DCAFCF /* MainTab_Home.json in Resources */,
 				CA47F5782CD9359D00DCAFCF /* MainTab_Profile.json in Resources */,
 				CA5A4A9C2CDDC2F300E225F3 /* BasicEconomy4_Building.json in Resources */,
 				CA47F5792CD9359D00DCAFCF /* MainTab_Studying.json in Resources */,
+				CA61CEBA2CE0B727007BCF4E /* BasicEconomy8_MoneyPublish.json in Resources */,
+				CA61CEBC2CE0BA32007BCF4E /* BasicEconomy10_MoneyDistribution.json in Resources */,
 				CA6927162CDF8A19005F2A6B /* Sweat.json in Resources */,
 				CA47F57A2CD9359D00DCAFCF /* MainTab_News.json in Resources */,
 				CA6927122CDF7FDD005F2A6B /* ArrowRight.json in Resources */,
@@ -1128,6 +1159,7 @@
 				CAEE16632CAD0D7200210BD0 /* LoginViewModel+Kakao.swift in Sources */,
 				CA58A4ED2CB6D9E900DB91BD /* ProgressCircleView.swift in Sources */,
 				CA17FC722CB005A10050250B /* MainTabCapsule.swift in Sources */,
+				CA61CEB52CE0A0C3007BCF4E /* BasicEconomy11View.swift in Sources */,
 				CAACDE2D2CB8BBBA004234FF /* LottieRouter.swift in Sources */,
 				CA9BB9D42CABA8C300886A1A /* SplashView.swift in Sources */,
 				CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */,

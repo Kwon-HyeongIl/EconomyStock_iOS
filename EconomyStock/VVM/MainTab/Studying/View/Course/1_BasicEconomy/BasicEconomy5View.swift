@@ -350,7 +350,7 @@ struct BasicEconomy5View: View {
                             withAnimation(.smooth(duration: 1.0)) {
                                 nextButton = true
                                 
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                                     withAnimation(.smooth(duration: 1.0)) {
                                         proxy.scrollTo("bottom", anchor: .top)
                                     }
