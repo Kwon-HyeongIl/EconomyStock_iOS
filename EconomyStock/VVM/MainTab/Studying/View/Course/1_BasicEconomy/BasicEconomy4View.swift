@@ -213,7 +213,7 @@ struct BasicEconomy4View: View {
                                     
                                     if questionMarkContent {
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                            withAnimation(.smooth(duration: 0.1)) {
+                                            withAnimation {
                                                 proxy.scrollTo("bottom", anchor: .bottom)
                                             }
                                         }
@@ -302,8 +302,8 @@ struct BasicEconomy4View: View {
                             withAnimation(.smooth(duration: 1.0)) {
                                 nextButton = true
                                 
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                    withAnimation(.smooth(duration: 1.0)) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                    withAnimation {
                                         proxy.scrollTo("bottom", anchor: .top)
                                     }
                                 }
