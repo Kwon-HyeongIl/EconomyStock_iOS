@@ -163,8 +163,18 @@ struct BasicEconomy11View: View {
             
                         navigationRouter.popToRoot()
                     } label: {
-                        LottieViewConverter(fileName: "CourseComplete", loopMode: .playOnce, fromProgress: 0.34, toProgress: 0.34, scale: 1.3, width: 150, height: 150)
-                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                        RoundedRectangle(cornerRadius: 20)
+                            .frame(width: 80, height: 40)
+                            .foregroundStyle(Color.ESTitle)
+                            .overlay {
+                                Text("돌아가기")
+                                    .foregroundStyle(.white)
+                                    .font(.system(size: 15))
+                                    .fontWeight(.semibold)
+                            }
+                            .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                            .padding(.top, 30)
+                            
                     }
                 }
             }
