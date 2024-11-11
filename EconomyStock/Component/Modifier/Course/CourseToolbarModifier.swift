@@ -47,7 +47,7 @@ struct CourseToolbarModifier: ViewModifier {
                         loadingBarState = true
                     }
                     
-                    // 로컬 currentUser의 parmanentProgressPage 값 바꾸고 (기존의 값보다 큰 경우에만), 로컬 basicEconomyLastPage 값 변경 후
+                    // 로컬 currentUser의 parmanentProgressPage 값 바꾸고 (기존의 값보다 큰 경우에만), 로컬 basicEconomyLastPage 값 변경
                     switch viewModel.course.type {
                         
                     case .basicEconomy:
@@ -60,6 +60,7 @@ struct CourseToolbarModifier: ViewModifier {
                             }
                         }
                         
+                        // CurrentUser의 lastPage 값 바꾸기
                         AuthManager.shared.currentUser?.studyingCourse.basicEconomyLastPage = currentPage
                         
                         // CourseListViewModel의 updateAllCourses 메서드 호출 (중간 인터페이스로 연결)

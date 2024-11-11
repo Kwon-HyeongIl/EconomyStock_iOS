@@ -55,7 +55,7 @@
 		CA5389CF2CDCE3C2003DA62F /* QuestionMark.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5389CE2CDCE3C2003DA62F /* QuestionMark.json */; };
 		CA58A4ED2CB6D9E900DB91BD /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58A4EC2CB6D9E900DB91BD /* ProgressCircleView.swift */; };
 		CA5A4A9C2CDDC2F300E225F3 /* BasicEconomy4_Building.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5A4A9B2CDDC2F300E225F3 /* BasicEconomy4_Building.json */; };
-		CA5B3A5E2CD7B20000341E23 /* CourseFinishButton.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5B3A5C2CD7B20000341E23 /* CourseFinishButton.json */; };
+		CA5B3A5E2CD7B20000341E23 /* CourseCompleteButton.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5B3A5C2CD7B20000341E23 /* CourseCompleteButton.json */; };
 		CA5B3A5F2CD7B20000341E23 /* CourseNextButton.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5B3A5D2CD7B20000341E23 /* CourseNextButton.json */; };
 		CA61CEB52CE0A0C3007BCF4E /* BasicEconomy11View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA61CEB42CE0A0C3007BCF4E /* BasicEconomy11View.swift */; };
 		CA61CEB82CE0B050007BCF4E /* BasicEconomy9_GlobalExport.json in Resources */ = {isa = PBXBuildFile; fileRef = CA61CEB72CE0B050007BCF4E /* BasicEconomy9_GlobalExport.json */; };
@@ -73,9 +73,11 @@
 		CA712CA72CD65B30002E7276 /* BasicEconomy1_Home.json in Resources */ = {isa = PBXBuildFile; fileRef = CA712CA62CD65B30002E7276 /* BasicEconomy1_Home.json */; };
 		CA712CA92CD65D54002E7276 /* BasicEconomy1_Building.json in Resources */ = {isa = PBXBuildFile; fileRef = CA712CA82CD65D54002E7276 /* BasicEconomy1_Building.json */; };
 		CA712CAB2CD65ED5002E7276 /* BasicEconomy1_GovernmentBuilding.json in Resources */ = {isa = PBXBuildFile; fileRef = CA712CAA2CD65ED5002E7276 /* BasicEconomy1_GovernmentBuilding.json */; };
+		CA7757682CE22BAC00A8F3DE /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = CA7757672CE22BAC00A8F3DE /* PopupView */; };
 		CA77DFCD2CB24D0900992829 /* Loading.json in Resources */ = {isa = PBXBuildFile; fileRef = CA77DFCC2CB24D0900992829 /* Loading.json */; };
 		CA77DFCF2CB256DD00992829 /* LoginViewModel+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77DFCE2CB256DD00992829 /* LoginViewModel+Google.swift */; };
 		CA77DFD22CB26D0100992829 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77DFD12CB26D0100992829 /* CustomError.swift */; };
+		CA9246EB2CE114FB007AA018 /* CourseComplete.json in Resources */ = {isa = PBXBuildFile; fileRef = CA9246EA2CE114FB007AA018 /* CourseComplete.json */; };
 		CA92DDB32CB7D7A600A7D2A4 /* BasicEconomy1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDB22CB7D7A600A7D2A4 /* BasicEconomy1View.swift */; };
 		CA92DDB52CB7D7AF00A7D2A4 /* BasicEconomy2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDB42CB7D7AF00A7D2A4 /* BasicEconomy2View.swift */; };
 		CA92DDB72CB7D7B900A7D2A4 /* BasicEconomy3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDB62CB7D7B900A7D2A4 /* BasicEconomy3View.swift */; };
@@ -184,7 +186,7 @@
 		CA5389CE2CDCE3C2003DA62F /* QuestionMark.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QuestionMark.json; sourceTree = "<group>"; };
 		CA58A4EC2CB6D9E900DB91BD /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 		CA5A4A9B2CDDC2F300E225F3 /* BasicEconomy4_Building.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy4_Building.json; sourceTree = "<group>"; };
-		CA5B3A5C2CD7B20000341E23 /* CourseFinishButton.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CourseFinishButton.json; sourceTree = "<group>"; };
+		CA5B3A5C2CD7B20000341E23 /* CourseCompleteButton.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CourseCompleteButton.json; sourceTree = "<group>"; };
 		CA5B3A5D2CD7B20000341E23 /* CourseNextButton.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CourseNextButton.json; sourceTree = "<group>"; };
 		CA61CEB42CE0A0C3007BCF4E /* BasicEconomy11View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy11View.swift; sourceTree = "<group>"; };
 		CA61CEB72CE0B050007BCF4E /* BasicEconomy9_GlobalExport.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy9_GlobalExport.json; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 		CA77DFCE2CB256DD00992829 /* LoginViewModel+Google.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Google.swift"; sourceTree = "<group>"; };
 		CA77DFD12CB26D0100992829 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		CA83477C2CAAE28500BA1E4A /* EconomyStock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EconomyStock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA9246EA2CE114FB007AA018 /* CourseComplete.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CourseComplete.json; sourceTree = "<group>"; };
 		CA92DDB22CB7D7A600A7D2A4 /* BasicEconomy1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy1View.swift; sourceTree = "<group>"; };
 		CA92DDB42CB7D7AF00A7D2A4 /* BasicEconomy2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy2View.swift; sourceTree = "<group>"; };
 		CA92DDB62CB7D7B900A7D2A4 /* BasicEconomy3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy3View.swift; sourceTree = "<group>"; };
@@ -264,6 +267,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA7757682CE22BAC00A8F3DE /* PopupView in Frameworks */,
 				CA10C02E2CAF85C1007DAB3A /* FirebaseMessaging in Frameworks */,
 				CA9BB9DC2CABAACF00886A1A /* FirebaseAuth in Frameworks */,
 				CA1DDD382CB0E75000C84D08 /* Lottie in Frameworks */,
@@ -557,7 +561,7 @@
 		CA5B3A562CD7B03100341E23 /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				CA5B3A5C2CD7B20000341E23 /* CourseFinishButton.json */,
+				CA5B3A5C2CD7B20000341E23 /* CourseCompleteButton.json */,
 				CA5B3A5D2CD7B20000341E23 /* CourseNextButton.json */,
 			);
 			path = Button;
@@ -824,6 +828,7 @@
 				CA5389CE2CDCE3C2003DA62F /* QuestionMark.json */,
 				CA6927112CDF7FDD005F2A6B /* ArrowRight.json */,
 				CA6927152CDF8A19005F2A6B /* Sweat.json */,
+				CA9246EA2CE114FB007AA018 /* CourseComplete.json */,
 			);
 			path = Etc;
 			sourceTree = "<group>";
@@ -1043,6 +1048,7 @@
 				CA1DDD372CB0E75000C84D08 /* Lottie */,
 				CA6C54D32CB160A1008CF887 /* GoogleSignIn */,
 				CA6C54D52CB160A1008CF887 /* GoogleSignInSwift */,
+				CA7757672CE22BAC00A8F3DE /* PopupView */,
 			);
 			productName = EconomyStock;
 			productReference = CA83477C2CAAE28500BA1E4A /* EconomyStock.app */;
@@ -1078,6 +1084,7 @@
 				CA662BC82CAD72E6009E8D5F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				CA1DDD362CB0E75000C84D08 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				CA6C54D22CB160A1008CF887 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				CA7757662CE22BAC00A8F3DE /* XCRemoteSwiftPackageReference "PopupView" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CA83477D2CAAE28500BA1E4A /* Products */;
@@ -1110,7 +1117,8 @@
 				CA6927162CDF8A19005F2A6B /* Sweat.json in Resources */,
 				CA47F57A2CD9359D00DCAFCF /* MainTab_News.json in Resources */,
 				CA6927122CDF7FDD005F2A6B /* ArrowRight.json in Resources */,
-				CA5B3A5E2CD7B20000341E23 /* CourseFinishButton.json in Resources */,
+				CA5B3A5E2CD7B20000341E23 /* CourseCompleteButton.json in Resources */,
+				CA9246EB2CE114FB007AA018 /* CourseComplete.json in Resources */,
 				CA5B3A5F2CD7B20000341E23 /* CourseNextButton.json in Resources */,
 				CAF2C03E2CD9C54C00D0E15D /* BasicEconomy10_Payment.json in Resources */,
 				CAF2C0442CD9D36400D0E15D /* BasicEconomy10_Rotate.json in Resources */,
@@ -1467,6 +1475,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		CA7757662CE22BAC00A8F3DE /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.4;
+			};
+		};
 		CA9BB9DA2CABAACF00886A1A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1520,6 +1536,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CA6C54D22CB160A1008CF887 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		CA7757672CE22BAC00A8F3DE /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA7757662CE22BAC00A8F3DE /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
 		};
 		CA9BB9DB2CABAACF00886A1A /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
