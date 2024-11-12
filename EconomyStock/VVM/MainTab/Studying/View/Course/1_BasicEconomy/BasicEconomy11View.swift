@@ -56,6 +56,9 @@ struct BasicEconomy11View: View {
                             
                             ZStack {
                                 Button {
+                                    let view = UIView(frame: .zero)
+                                    UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
+                                    
                                     popup = true
                                 } label: {
                                     LottieViewConverter(fileName: "CourseCompleteButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
@@ -179,7 +182,7 @@ struct BasicEconomy11View: View {
                 }
             }
             .frame(width: 300, height: 500)
-            .background(.thickMaterial)
+            .background(.ultraThickMaterial)
             .clipShape(RoundedRectangle(cornerRadius: 20))
             .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
             .onAppear {

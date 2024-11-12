@@ -163,6 +163,9 @@ struct BasicEconomy7View: View {
                             
                             ZStack {
                                 Button {
+                                    let view = UIView(frame: .zero)
+                                    UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
+                                    
                                     viewModel.currentPage += 1
                                     navigationRouter.navigate(.BasicEconomy8View(viewModel))
                                 } label: {
