@@ -15,73 +15,71 @@ struct ProfileView: View {
         ScrollView {
             VStack(spacing: 0) {
                 HStack(spacing: 0) {
-                    HStack {
-                        Text("\(viewModel.user?.username ?? "닉네임")")
-                            .font(.system(size: 25))
-                            .fontWeight(.bold)
-                    }
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 150)
-                    .background(.ultraThickMaterial)
-                    .clipShape(RoundedRectangle(cornerRadius: 20))
-                    .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
-                    .padding(.leading, 10)
+                    Image(systemName: "person.crop.circle")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50)
+                        .padding(.leading, 10)
                     
-                    HStack(spacing: 0) {
-                        Image("Basic_Toktok")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50)
-                            .padding(.top, 50)
-                            .padding(.leading)
-                        
-                        if let percentage = viewModel.user?.totalStudyingPercentage {
-                            switch percentage {
-                                
-                            case 0..<20:
-                                LottieViewConverter(fileName: "ProfilePlantLevel1", loopMode: .playOnce, width: 100, height: 100)
-                            case 20..<40:
-                                LottieViewConverter(fileName: "ProfilePlantLevel2", loopMode: .playOnce, width: 100, height: 100)
-                            case 40..<60:
-                                LottieViewConverter(fileName: "ProfilePlantLevel3", loopMode: .playOnce, width: 100, height: 100)
-                            case 60..<80:
-                                LottieViewConverter(fileName: "ProfilePlantLevel4", loopMode: .playOnce, width: 100, height: 100)
-                            case 80..<100:
-                                LottieViewConverter(fileName: "ProfilePlantLevel5", loopMode: .playOnce, width: 100, height: 100)
-                                
-                            default:
-                                LottieViewConverter(fileName: "ProfilePlantLevel1", loopMode: .playOnce, width: 100, height: 100)
-                            }
+                    VStack {
+                        HStack {
+                            Text(viewModel.user?.username ?? "nickname")
+                                .font(.system(size: 25))
+                                .fontWeight(.semibold)
                             
-                        } else {
-                            LottieViewConverter(fileName: "ProfilePlantLevel5", loopMode: .playOnce, width: 100, height: 100)
+                            Spacer()
+                        }
+                        
+                        HStack {
+                            Text("처음 함께한 0000년 00월 00일")
+                                .font(.system(size: 13))
+                                .foregroundStyle(Color.ESTitle)
+                            
+                            Spacer()
                         }
                     }
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 150)
-                    .background(.ultraThickMaterial)
-                    .clipShape(RoundedRectangle(cornerRadius: 20))
-                    .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                     .padding(.leading, 10)
-                    .padding(.trailing, 10)
+                        
+                    Spacer()
                 }
                 
                 HStack {
-                    VStack {
-                        
-                    }
+                    Image("Basic_Toktok")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50)
+                        .padding(.top, 70)
+                        .padding(.leading)
                     
-                    VStack {
+                    if let percentage = viewModel.user?.totalStudyingPercentage {
+                        switch percentage {
+                            
+                        case 0..<20:
+                            LottieViewConverter(fileName: "ProfilePlantLevel1", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
+                        case 20..<40:
+                            LottieViewConverter(fileName: "ProfilePlantLevel2", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
+                        case 40..<60:
+                            LottieViewConverter(fileName: "ProfilePlantLevel3", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
+                        case 60..<80:
+                            LottieViewConverter(fileName: "ProfilePlantLevel4", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
+                        case 80..<100:
+                            LottieViewConverter(fileName: "ProfilePlantLevel5", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
+                            
+                        default:
+                            LottieViewConverter(fileName: "ProfilePlantLevel1", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
+                        }
                         
+                    } else {
+                        LottieViewConverter(fileName: "ProfilePlantLevel5", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
                     }
                 }
                 .frame(maxWidth: .infinity)
-                .frame(height: 300)
+                .frame(height: 150)
                 .background(.ultraThickMaterial)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                 .padding(.horizontal, 10)
-                .padding(.top, 10)
+                .padding(.top, 20)
                 
                 VStack(spacing: 0) {
                     HStack {
@@ -126,7 +124,7 @@ struct ProfileView: View {
                 } label: {
                     Text("로그아웃")
                         .font(.system(size: 13))
-                        .padding(.top, 60)
+                        .padding(.top, 360)
                 }
             }
         }
