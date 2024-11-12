@@ -102,6 +102,12 @@
 		CAAE54182CB8E34200B5352D /* PriceLevelCourseCover.json in Resources */ = {isa = PBXBuildFile; fileRef = CAAE54172CB8E34200B5352D /* PriceLevelCourseCover.json */; };
 		CAB77FD72CB8EC2900DF11D6 /* CourseToolbarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */; };
 		CAB77FD92CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */; };
+		CAC86FD52CE2E5AF00785D4F /* ProfilePlantLevel5.json in Resources */ = {isa = PBXBuildFile; fileRef = CAC86FD42CE2E5AF00785D4F /* ProfilePlantLevel5.json */; };
+		CAC86FD62CE2E5AF00785D4F /* ProfilePlantLevel2.json in Resources */ = {isa = PBXBuildFile; fileRef = CAC86FD12CE2E5AF00785D4F /* ProfilePlantLevel2.json */; };
+		CAC86FD72CE2E5AF00785D4F /* ProfilePlantLevel4.json in Resources */ = {isa = PBXBuildFile; fileRef = CAC86FD32CE2E5AF00785D4F /* ProfilePlantLevel4.json */; };
+		CAC86FD82CE2E5AF00785D4F /* ProfilePlantLevel1.json in Resources */ = {isa = PBXBuildFile; fileRef = CAC86FD02CE2E5AF00785D4F /* ProfilePlantLevel1.json */; };
+		CAC86FD92CE2E5AF00785D4F /* ProfilePlantLevel3.json in Resources */ = {isa = PBXBuildFile; fileRef = CAC86FD22CE2E5AF00785D4F /* ProfilePlantLevel3.json */; };
+		CAC86FDB2CE2E6C200785D4F /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC86FDA2CE2E6C200785D4F /* ProfileViewModel.swift */; };
 		CAD101DA2CB6853200CA9C6A /* NavigationGestureEnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */; };
 		CAD101DE2CB68DFA00CA9C6A /* TileModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101DD2CB68DFA00CA9C6A /* TileModifier.swift */; };
 		CAD101E22CB6905F00CA9C6A /* ShortButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */; };
@@ -227,6 +233,12 @@
 		CAAE54172CB8E34200B5352D /* PriceLevelCourseCover.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevelCourseCover.json; sourceTree = "<group>"; };
 		CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseToolbarModifier.swift; sourceTree = "<group>"; };
 		CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackHomeModifier.swift; sourceTree = "<group>"; };
+		CAC86FD02CE2E5AF00785D4F /* ProfilePlantLevel1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ProfilePlantLevel1.json; sourceTree = "<group>"; };
+		CAC86FD12CE2E5AF00785D4F /* ProfilePlantLevel2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ProfilePlantLevel2.json; sourceTree = "<group>"; };
+		CAC86FD22CE2E5AF00785D4F /* ProfilePlantLevel3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ProfilePlantLevel3.json; sourceTree = "<group>"; };
+		CAC86FD32CE2E5AF00785D4F /* ProfilePlantLevel4.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ProfilePlantLevel4.json; sourceTree = "<group>"; };
+		CAC86FD42CE2E5AF00785D4F /* ProfilePlantLevel5.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ProfilePlantLevel5.json; sourceTree = "<group>"; };
+		CAC86FDA2CE2E6C200785D4F /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationGestureEnable.swift; sourceTree = "<group>"; };
 		CAD101DD2CB68DFA00CA9C6A /* TileModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileModifier.swift; sourceTree = "<group>"; };
 		CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortButtonModifier.swift; sourceTree = "<group>"; };
@@ -316,6 +328,7 @@
 		CA114FD22CB6246E00AD5AD9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CAC86FDA2CE2E6C200785D4F /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -645,6 +658,7 @@
 		CA77DFCB2CB24D0100992829 /* Json */ = {
 			isa = PBXGroup;
 			children = (
+				CAC86FCF2CE2E5A600785D4F /* Profile */,
 				CA712CA42CD65B00002E7276 /* Course */,
 				CA114FED2CB64ADD00AD5AD9 /* StudyingCover */,
 				CA114FC42CB6218900AD5AD9 /* Loading */,
@@ -803,6 +817,18 @@
 				CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */,
 			);
 			path = Course;
+			sourceTree = "<group>";
+		};
+		CAC86FCF2CE2E5A600785D4F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CAC86FD02CE2E5AF00785D4F /* ProfilePlantLevel1.json */,
+				CAC86FD12CE2E5AF00785D4F /* ProfilePlantLevel2.json */,
+				CAC86FD22CE2E5AF00785D4F /* ProfilePlantLevel3.json */,
+				CAC86FD32CE2E5AF00785D4F /* ProfilePlantLevel4.json */,
+				CAC86FD42CE2E5AF00785D4F /* ProfilePlantLevel5.json */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		CAD101D82CB6851200CA9C6A /* NavigationGesture */ = {
@@ -1113,6 +1139,11 @@
 				CA5A4A9C2CDDC2F300E225F3 /* BasicEconomy4_Building.json in Resources */,
 				CA47F5792CD9359D00DCAFCF /* MainTab_Studying.json in Resources */,
 				CA61CEBA2CE0B727007BCF4E /* BasicEconomy8_MoneyPublish.json in Resources */,
+				CAC86FD52CE2E5AF00785D4F /* ProfilePlantLevel5.json in Resources */,
+				CAC86FD62CE2E5AF00785D4F /* ProfilePlantLevel2.json in Resources */,
+				CAC86FD72CE2E5AF00785D4F /* ProfilePlantLevel4.json in Resources */,
+				CAC86FD82CE2E5AF00785D4F /* ProfilePlantLevel1.json in Resources */,
+				CAC86FD92CE2E5AF00785D4F /* ProfilePlantLevel3.json in Resources */,
 				CA61CEBC2CE0BA32007BCF4E /* BasicEconomy10_MoneyDistribution.json in Resources */,
 				CA6927162CDF8A19005F2A6B /* Sweat.json in Resources */,
 				CA47F57A2CD9359D00DCAFCF /* MainTab_News.json in Resources */,
@@ -1211,6 +1242,7 @@
 				CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */,
 				CAEE164B2CAD082500210BD0 /* User.swift in Sources */,
 				CA4E71AB2CB78DE900BAA70C /* CourseIntroView.swift in Sources */,
+				CAC86FDB2CE2E6C200785D4F /* ProfileViewModel.swift in Sources */,
 				CA17FC772CB009680050250B /* TitleColor.swift in Sources */,
 				CA114FD72CB62D2A00AD5AD9 /* CourseListViewModel.swift in Sources */,
 				CA114FDA2CB62E7D00AD5AD9 /* NavigationTitleModifier.swift in Sources */,

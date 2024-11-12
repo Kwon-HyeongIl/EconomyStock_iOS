@@ -9,11 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Button {
-            AuthManager.shared.signOut()
-        } label: {
-            Text("로그아웃")
-        }
+        Text("home")
     }
 }
 
