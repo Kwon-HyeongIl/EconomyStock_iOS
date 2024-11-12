@@ -33,7 +33,7 @@ class CourseListViewModel {
         let lastPage = currentUser?.studyingCourse.basicEconomyLastPage ?? 0
         
         DispatchQueue.main.async {
-            self.courses.append(Course(id: UUID().uuidString, type: .basicEconomy, title: "기초 경제", number: "I", description: "설명입니다", lottieFileName: "BasicEconomyCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
+            self.courses.append(Course(id: UUID().uuidString, type: .basicEconomy, title: "기초 경제", number: "I", lottieFileName: "BasicEconomyCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
         }
     }
     
@@ -54,7 +54,7 @@ class CourseListViewModel {
         let lastPage = currentUser?.studyingCourse.priceLevelLastPage ?? 0
         
         DispatchQueue.main.async {
-            self.courses.append(Course(id: UUID().uuidString, type: .priceLevel, title: "물가", number: "II", description: "설명입니다", lottieFileName: "PriceLevelCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
+            self.courses.append(Course(id: UUID().uuidString, type: .priceLevel, title: "물가", number: "II", lottieFileName: "PriceLevelCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
         }
     }
 

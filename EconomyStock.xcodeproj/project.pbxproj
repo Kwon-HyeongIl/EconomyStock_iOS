@@ -109,7 +109,6 @@
 		CAC86FD92CE2E5AF00785D4F /* ProfilePlantLevel3.json in Resources */ = {isa = PBXBuildFile; fileRef = CAC86FD22CE2E5AF00785D4F /* ProfilePlantLevel3.json */; };
 		CAC86FDB2CE2E6C200785D4F /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC86FDA2CE2E6C200785D4F /* ProfileViewModel.swift */; };
 		CAD101DA2CB6853200CA9C6A /* NavigationGestureEnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */; };
-		CAD101DE2CB68DFA00CA9C6A /* TileModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101DD2CB68DFA00CA9C6A /* TileModifier.swift */; };
 		CAD101E22CB6905F00CA9C6A /* ShortButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */; };
 		CAD101E42CB6959D00CA9C6A /* StudyingCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101E32CB6959D00CA9C6A /* StudyingCourse.swift */; };
 		CAD1CD362CDCD73A00E89FA7 /* Bubble.json in Resources */ = {isa = PBXBuildFile; fileRef = CAD1CD352CDCD73A00E89FA7 /* Bubble.json */; };
@@ -240,7 +239,6 @@
 		CAC86FD42CE2E5AF00785D4F /* ProfilePlantLevel5.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ProfilePlantLevel5.json; sourceTree = "<group>"; };
 		CAC86FDA2CE2E6C200785D4F /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationGestureEnable.swift; sourceTree = "<group>"; };
-		CAD101DD2CB68DFA00CA9C6A /* TileModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileModifier.swift; sourceTree = "<group>"; };
 		CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortButtonModifier.swift; sourceTree = "<group>"; };
 		CAD101E32CB6959D00CA9C6A /* StudyingCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyingCourse.swift; sourceTree = "<group>"; };
 		CAD1CD352CDCD73A00E89FA7 /* Bubble.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Bubble.json; sourceTree = "<group>"; };
@@ -842,7 +840,6 @@
 		CAD101DC2CB68DEB00CA9C6A /* Tile */ = {
 			isa = PBXGroup;
 			children = (
-				CAD101DD2CB68DFA00CA9C6A /* TileModifier.swift */,
 			);
 			path = Tile;
 			sourceTree = "<group>";
@@ -1237,7 +1234,6 @@
 				CA1DDD3B2CB0E7A900C84D08 /* LottieViewMain.swift in Sources */,
 				CA92DDB72CB7D7B900A7D2A4 /* BasicEconomy3View.swift in Sources */,
 				CA08F39E2CB839580093117E /* PriceLevel4View.swift in Sources */,
-				CAD101DE2CB68DFA00CA9C6A /* TileModifier.swift in Sources */,
 				CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */,
 				CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */,
 				CAEE164B2CAD082500210BD0 /* User.swift in Sources */,
