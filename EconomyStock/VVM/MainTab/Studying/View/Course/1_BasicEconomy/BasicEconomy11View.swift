@@ -29,25 +29,48 @@ struct BasicEconomy11View: View {
                 ZStack {
                     ScrollView {
                         HStack {
-                            Text("2.")
-                                .font(.system(size: 35))
-                                .fontWeight(.bold)
-                                .foregroundStyle(Color.ESTitle)
-                                .padding(.leading, 30)
-                                .padding(.bottom, 3)
-                            
-                            Text("GDP (국내총생산)")
+                            Text("마무리")
                                 .font(.system(size: 25))
                                 .fontWeight(.bold)
+                                .padding(.leading, 30)
                             
                             Spacer()
                         }
-                        .opacity(0.2)
                         .padding(.top)
                         
-                        Text("T")
+                        Text("경제학이 지향하는 목표")
                             .font(.system(size: 20))
                             .fontWeight(.semibold)
+                            .padding(.top, 20)
+                        
+                        if progress.count >= 1 {
+                            HStack(spacing: 20) {
+                                Ellipse()
+                                    .frame(width: 110, height: 60)
+                                    .foregroundStyle(Color.ESTitle)
+                                    .overlay {
+                                        Text("경제성장")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.semibold)
+                                            .foregroundStyle(.white)
+                                    }
+                                
+                                Text("+")
+                                    .font(.system(size: 30))
+                                    .fontWeight(.semibold)
+                                
+                                Ellipse()
+                                    .frame(width: 110, height: 60)
+                                    .foregroundStyle(Color.ESTitle)
+                                    .overlay {
+                                        Text("물가안정")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.semibold)
+                                            .foregroundStyle(.white)
+                                    }
+                            }
+                            .padding(.top)
+                        }
                     }
                     
                     if completeButton {
@@ -97,7 +120,7 @@ struct BasicEconomy11View: View {
                         progress.append(1)
                     }
                     
-                    if progress.count == 1 {
+                    if progress.count == 2 {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
                             withAnimation(.smooth(duration: 1.0)) {
                                 completeButton = true

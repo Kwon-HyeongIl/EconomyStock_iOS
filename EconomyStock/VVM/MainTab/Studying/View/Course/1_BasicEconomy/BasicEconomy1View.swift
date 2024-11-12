@@ -82,17 +82,16 @@ struct BasicEconomy1View: View {
                                 
                             }
                             
-                            Text("경제")
-                                .font(.system(size: 25))
-                                .fontWeight(.semibold)
+                            Ellipse()
+                                .frame(width: 90, height: 50)
                                 .foregroundStyle(Color.ESTitle)
                                 .overlay {
-                                    Ellipse()
-                                        .stroke(Color.ESTitle, lineWidth: 2)
-                                        .frame(width: 80, height: 40)
+                                    Text("경제")
+                                        .font(.system(size: 25))
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(.white)
                                 }
                                 .padding(.top, 20)
-                            
                             
                             HStack(spacing: 60) {
                                 if governmentBuilding {
