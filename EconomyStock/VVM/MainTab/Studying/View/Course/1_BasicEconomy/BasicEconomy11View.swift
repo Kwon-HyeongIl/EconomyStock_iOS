@@ -15,6 +15,10 @@ struct BasicEconomy11View: View {
     
     @State private var progress: [Int] = []
     
+    @State private var contentPart2_1 = false
+    @State private var contentPart2_2 = false
+    @State private var contentPart2_3 = false
+    
     @State private var completeButton = false
     @State private var beforeButton = false
     
@@ -22,6 +26,8 @@ struct BasicEconomy11View: View {
     @State private var popupComplete = true
     
     @State private var loadingBarState = false
+    
+    @Namespace private var animation
     
     var body: some View {
         ScrollViewReader { proxy in
@@ -42,6 +48,7 @@ struct BasicEconomy11View: View {
                             .font(.system(size: 20))
                             .fontWeight(.semibold)
                             .padding(.top, 20)
+                            .blur(radius: progress.count != 2 ? 0 : 10)
                         
                         if progress.count >= 1 {
                             HStack(spacing: 20) {
@@ -54,10 +61,12 @@ struct BasicEconomy11View: View {
                                             .fontWeight(.semibold)
                                             .foregroundStyle(.white)
                                     }
+                                    .matchedGeometryEffect(id: "animation", in: animation)
                                 
                                 Text("+")
                                     .font(.system(size: 30))
                                     .fontWeight(.semibold)
+                                    .foregroundStyle(Color.ESTitle)
                                 
                                 Ellipse()
                                     .frame(width: 110, height: 60)
@@ -70,6 +79,76 @@ struct BasicEconomy11View: View {
                                     }
                             }
                             .padding(.top)
+                            .blur(radius: progress.count == 1 ? 0 : 10)
+                        }
+                        
+                        if progress.count >= 2 {
+                            VStack(spacing: 20) {
+                                Ellipse()
+                                    .frame(width: 110, height: 60)
+                                    .foregroundStyle(Color.ESTitle)
+                                    .overlay {
+                                        Text("경제성장")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.semibold)
+                                            .foregroundStyle(.white)
+                                    }
+                                    .matchedGeometryEffect(id: "animation", in: animation)
+                                
+                                if contentPart2_1 {
+                                    HStack {
+                                        Text("=")
+                                            .foregroundStyle(Color.ESTitle)
+                                            .font(.system(size: 30))
+                                            .fontWeight(.semibold)
+                                            .padding(.bottom, 5)
+                                        
+                                        (Text("GDP의 증가 ")
+                                         + Text("(생산)")
+                                            .foregroundStyle(Color.ESTitle)
+                                        )
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                    }
+                                    .padding(.top)
+                                }
+                                
+                                if contentPart2_2 {
+                                    HStack {
+                                        Text("=")
+                                            .foregroundStyle(Color.ESTitle)
+                                            .font(.system(size: 30))
+                                            .fontWeight(.semibold)
+                                            .padding(.bottom, 5)
+                                        
+                                        (Text("국민소득의 증가 ")
+                                         + Text("(분배)")
+                                            .foregroundStyle(Color.ESTitle)
+                                        )
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                    }
+                                }
+                                
+                                if contentPart2_3 {
+                                    HStack {
+                                        Text("=")
+                                            .foregroundStyle(Color.ESTitle)
+                                            .font(.system(size: 30))
+                                            .fontWeight(.semibold)
+                                            .padding(.bottom, 5)
+                                        
+                                        (Text("소비, 투자, 정부지출, 순수출의 증가 ")
+                                         + Text("(지출)")
+                                            .foregroundStyle(Color.ESTitle)
+                                        )
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                        .multilineTextAlignment(.center)
+                                    }
+                                }
+                            }
+                            .padding(.top, 60)
                         }
                     }
                     
@@ -121,7 +200,25 @@ struct BasicEconomy11View: View {
                     }
                     
                     if progress.count == 2 {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                            withAnimation(.smooth(duration: 1.0)) {
+                                contentPart2_1 = true
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                    withAnimation(.smooth(duration: 1.0)) {
+                                        contentPart2_2 = true
+                                        
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                            withAnimation(.smooth(duration: 1.0)) {
+                                                contentPart2_3 = true
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.4) {
                             withAnimation(.smooth(duration: 1.0)) {
                                 completeButton = true
                                 
