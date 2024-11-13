@@ -46,6 +46,7 @@ struct BasicEconomy1View: View {
                         (Text("우리나라에서 경제의 주체는 \n")
                          + Text("가계, 기업, 정부, 해외")
                             .foregroundStyle(Color.ESTitle)
+                            .fontWeight(.bold)
                          + Text("부문으로 나뉘어요")
                         )
                         .font(.system(size: 20))

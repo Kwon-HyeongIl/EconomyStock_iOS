@@ -54,10 +54,15 @@ struct BasicEconomy8View: View {
                     if progress.count >= 1 {
                         VStack {
                             HStack {
-                                Text("3) 화폐발행")
+                                Text("3)")
                                     .font(.system(size: 20))
                                     .fontWeight(.semibold)
                                     .padding(.leading, 35)
+                                
+                                Text("화폐발행")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .padding(.top, 1)
                                 
                                 Spacer()
                             }

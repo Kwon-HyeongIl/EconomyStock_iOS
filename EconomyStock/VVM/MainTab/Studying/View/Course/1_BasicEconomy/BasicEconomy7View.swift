@@ -13,8 +13,8 @@ struct BasicEconomy7View: View {
     
     @State private var progress: [Int] = []
     
-    @State private var contentPart1 = false
-    @State private var contentPart2 = false
+    @State private var contentImageAndText = false
+    @State private var contentText2 = false
     
     @State private var questionMark = false
     @State private var questionMarkContent = false
@@ -58,15 +58,20 @@ struct BasicEconomy7View: View {
                         if progress.count >= 1 {
                             VStack {
                                 HStack {
-                                    Text("2) 국채발행")
+                                    Text("2)")
                                         .font(.system(size: 20))
                                         .fontWeight(.semibold)
                                         .padding(.leading, 35)
                                     
+                                    Text("국채발행")
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                        .padding(.top, 2)
+                                    
                                     Spacer()
                                 }
                                 
-                                if contentPart1 {
+                                if contentImageAndText {
                                     Image("Bond")
                                         .resizable()
                                         .scaledToFit()
@@ -83,12 +88,12 @@ struct BasicEconomy7View: View {
                                         .padding(.top)
                                         .padding(.horizontal)
                                     
-                                    if contentPart2 {
+                                    if contentText2 {
                                         Text("그러나 만기에 이자까지 더해서 갚아야하는 돈으로, 이를 갚기 위해 미래에 세금 징수가 증가할 수 있어요")
                                             .font(.system(size: 20))
                                             .fontWeight(.semibold)
                                             .multilineTextAlignment(.center)
-                                            .padding(.top)
+                                            .padding(.top, 20)
                                             .padding(.horizontal)
                                     }
                                 }
@@ -208,31 +213,25 @@ struct BasicEconomy7View: View {
                     if progress.count == 1 {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                             withAnimation(.smooth(duration: 1.0)) {
-                                contentPart1 = true
+                                contentImageAndText = true
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                     withAnimation(.smooth(duration: 1.0)) {
-                                        contentPart2 = true
+                                        contentText2 = true
                                     }
                                 }
                             }
                         }
                         
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
                             withAnimation(.smooth(duration: 1.0)) {
                                 questionMark = true
                             }
                         }
                         
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
                             withAnimation(.smooth(duration: 1.0)) {
                                 nextButton = true
-                                
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                    withAnimation {
-                                        proxy.scrollTo("bottom", anchor: .top)
-                                    }
-                                }
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                     withAnimation(.smooth(duration: 1.0)) {

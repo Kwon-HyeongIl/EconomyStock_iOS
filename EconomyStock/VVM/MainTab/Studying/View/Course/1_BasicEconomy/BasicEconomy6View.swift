@@ -52,10 +52,15 @@ struct BasicEconomy6View: View {
                     if progress.count >= 1 {
                         VStack {
                             HStack {
-                                Text("1) 소득세/법인세 등의 조세 부과")
+                                Text("1)")
                                     .font(.system(size: 20))
                                     .fontWeight(.semibold)
                                     .padding(.leading, 35)
+                                
+                                Text("소득세/법인세 등의 조세 부과")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .padding(.top, 1)
                                 
                                 Spacer()
                             }

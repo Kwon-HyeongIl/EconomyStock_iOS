@@ -13,6 +13,7 @@ struct BasicEconomy3View: View {
     
     @State private var progress: [Int] = []
     
+    @State private var contentPart2 = false
     @State private var bubble = false
     @State private var bubbleContent = false
     
@@ -45,15 +46,15 @@ struct BasicEconomy3View: View {
                         .padding(.top)
                         
                         HStack {
-                            VStack {
+                            VStack(spacing: 5) {
                                 Text("소비지출")
                                     .font(.system(size: 15))
-                                    .fontWeight(.semibold)
+                                    .fontWeight(.bold)
                                     .foregroundStyle(Color.ESTitle)
                                 
                                 Text("C")
                                     .font(.system(size: 20))
-                                    .fontWeight(.semibold)
+                                    .fontWeight(.bold)
                                     .foregroundStyle(Color.ESTitle)
                             }
                             
@@ -63,7 +64,7 @@ struct BasicEconomy3View: View {
                                 .padding(.bottom, 10)
                                 .opacity(0.2)
                             
-                            VStack {
+                            VStack(spacing: 5) {
                                 Text("투자지출")
                                     .font(.system(size: 15))
                                     .fontWeight(.semibold)
@@ -80,7 +81,7 @@ struct BasicEconomy3View: View {
                                 .padding(.bottom, 10)
                                 .opacity(0.2)
                             
-                            VStack {
+                            VStack(spacing: 5) {
                                 Text("정부지출")
                                     .font(.system(size: 15))
                                     .fontWeight(.semibold)
@@ -97,7 +98,7 @@ struct BasicEconomy3View: View {
                                 .padding(.bottom, 10)
                                 .opacity(0.2)
                             
-                            VStack {
+                            VStack(spacing: 5) {
                                 Text("순수지출")
                                     .font(.system(size: 15))
                                     .fontWeight(.semibold)
@@ -110,137 +111,160 @@ struct BasicEconomy3View: View {
                         }
                         .padding(.top, 5)
                         
-                        if progress.count >= 1 {
-                            VStack(spacing: 10) {
-                                HStack {
-                                    Text("1) 소비 (Consumption)")
-                                        .font(.system(size: 20))
-                                        .fontWeight(.semibold)
-                                        .padding(.leading, 30)
-                                    
-                                    Spacer()
-                                }
-                                
-                                (Text("주로 가계에서 이루어지며, 소득에 비례하고 ")
-                                 + Text("이자율")
-                                    .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
-                                 + Text("에 반비례해요"))
-                                .font(.system(size: 20))
-                                .fontWeight(.semibold)
-                                .multilineTextAlignment(.center)
-                                .padding(.horizontal)
-                                .padding(.top, 10)
-                            }
-                            .padding(.top)
-                        }
-                        
-                        if progress.count >= 2 {
-                            VStack {
-                                HStack {
-                                    Image("Basic_Toktok")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 80)
-                                        .padding(.top, 130)
-                                    
-                                    if bubble {
-                                        ZStack {
-                                            LottieViewConverter(fileName: "Bubble", loopMode: .playOnce, scale: 2.5, width: 180, height: 140)
-                                            
-                                            if bubbleContent {
-                                                Text("월급이 올랐으니\n자동차를 사야지!")
-                                                    .font(.system(size: 13))
-                                                    .fontWeight(.semibold)
-                                                    .padding(.leading, 5)
-                                                    .padding(.bottom, 8)
-                                            }
-                                        }
-                                    }
-                                }
-                                
-                                HStack {
-                                    if bubble {
-                                        ZStack {
-                                            LottieViewConverter(fileName: "Bubble", loopMode: .playOnce, scale: 2.5, width: 180, height: 140)
-                                                .scaleEffect(x: -1, y: 1, anchor: .center)
-                                            
-                                            if bubbleContent {
-                                                Text("예금 이자율이\n올랐네. 이번달은\n저축을 좀 해야겠어.")
-                                                    .font(.system(size: 13))
-                                                    .fontWeight(.semibold)
-                                                    .padding(.bottom, 14)
-                                                    .padding(.leading, 2)
-                                            }
-                                        }
-                                    }
-                                    
-                                    Image("Sad_Toktok")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 80)
-                                        .padding(.top, 130)
-                                }
-                            }
-                        }
-                        
-                        if questionMark {
-                            VStack {
-                                HStack(spacing: 5) {
-                                    LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
-                                        .padding(.leading, 10)
-                                    
-                                    Text("이자율이란?")
-                                        .font(.system(size: 15))
-                                        .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
-                                        .fontWeight(.semibold)
-                                    
-                                    Spacer()
-                                }
-                                
-                                if questionMarkContent {
-                                    HStack(spacing: 5) {
-                                        Text(":")
-                                            .font(.system(size: 15))
+                        ZStack {
+                            if progress.count >= 1 {
+                                VStack(spacing: 10) {
+                                    HStack {
+                                        Text("1)")
+                                            .font(.system(size: 20))
                                             .fontWeight(.semibold)
-                                            .foregroundStyle(.black.opacity(0.6))
-                                            .padding(.leading, 20)
-                                            .padding(.bottom, 50)
+                                            .padding(.leading, 30)
                                         
-                                        Text("이자율의 정의는 돈을 빌린 대가이지만, 돈의 가격이라고 생각하면 편해요. 또한, 이자율은 금리와 같은 의미를 가져요.")
-                                            .font(.system(size: 15))
+                                        Text("소비 (Consumption)")
+                                            .font(.system(size: 20))
                                             .fontWeight(.semibold)
-                                            .foregroundStyle(.black.opacity(0.6))
-                                            .padding(.bottom, 10)
+                                            .padding(.top, 2)
                                         
                                         Spacer()
                                     }
+                                    
+                                    (Text("주로 가계에서 이루어지며, 소득에 비례하고 ")
+                                     + Text("이자율")
+                                        .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
+                                     + Text("에 반비례해요"))
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal)
+                                    .padding(.top, 10)
+                                }
+                                .padding(.top)
+                            }
+                            
+                            Rectangle()
+                                .fill(.clear)
+                                .frame(width: 100, height: 200)
+                        }
+                        
+                        ZStack {
+                            if contentPart2 {
+                                VStack {
+                                    HStack {
+                                        Image("Basic_Toktok")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 80)
+                                            .padding(.top, 130)
+                                        
+                                        if bubble {
+                                            ZStack {
+                                                LottieViewConverter(fileName: "Bubble", loopMode: .playOnce, scale: 2.5, width: 180, height: 140)
+                                                
+                                                if bubbleContent {
+                                                    Text("월급이 올랐으니\n자동차를 사야지!")
+                                                        .font(.system(size: 13))
+                                                        .fontWeight(.semibold)
+                                                        .padding(.leading, 5)
+                                                        .padding(.bottom, 8)
+                                                }
+                                            }
+                                        }
+                                    }
+                                    
+                                    HStack {
+                                        if bubble {
+                                            ZStack {
+                                                LottieViewConverter(fileName: "Bubble", loopMode: .playOnce, scale: 2.5, width: 180, height: 140)
+                                                    .scaleEffect(x: -1, y: 1, anchor: .center)
+                                                
+                                                if bubbleContent {
+                                                    Text("예금 이자율이\n올랐네. 이번달은\n저축을 좀 해야겠어.")
+                                                        .font(.system(size: 13))
+                                                        .fontWeight(.semibold)
+                                                        .padding(.bottom, 14)
+                                                        .padding(.leading, 2)
+                                                }
+                                            }
+                                        }
+                                        
+                                        Image("Sad_Toktok")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 80)
+                                            .padding(.top, 130)
+                                    }
                                 }
                             }
-                            .frame(maxWidth: .infinity)
-                            .background(.purple.opacity(0.1))
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                            .padding(.horizontal)
-                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
-                            .padding(.top, 30)
-                            .onTapGesture {
-                                withAnimation(.smooth(duration: 0.7)) {
-                                    questionMarkContent.toggle()
+                            
+                            Rectangle()
+                                .fill(.clear)
+                                .frame(width: 100, height: 450)
+                        }
+                        
+                        ZStack {
+                            if questionMark {
+                                VStack {
+                                    HStack(spacing: 5) {
+                                        LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
+                                            .padding(.leading, 10)
+                                        
+                                        Text("이자율이란?")
+                                            .font(.system(size: 15))
+                                            .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
+                                            .fontWeight(.semibold)
+                                        
+                                        Spacer()
+                                    }
                                     
                                     if questionMarkContent {
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                            withAnimation {
-                                                proxy.scrollTo("bottom", anchor: .bottom)
+                                        HStack(spacing: 5) {
+                                            Text(":")
+                                                .font(.system(size: 15))
+                                                .fontWeight(.semibold)
+                                                .foregroundStyle(.black.opacity(0.6))
+                                                .padding(.leading, 20)
+                                                .padding(.bottom, 50)
+                                            
+                                            Text("이자율의 정의는 돈을 빌린 대가이지만, 돈의 가격이라고 생각하면 편해요. 또한, 이자율은 금리와 같은 의미를 가져요.")
+                                                .font(.system(size: 15))
+                                                .fontWeight(.semibold)
+                                                .foregroundStyle(.black.opacity(0.6))
+                                                .padding(.bottom, 10)
+                                            
+                                            Spacer()
+                                        }
+                                    }
+                                }
+                                .frame(maxWidth: .infinity)
+                                .background(.purple.opacity(0.1))
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                                .padding(.horizontal)
+                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                .padding(.top, 30)
+                                .onTapGesture {
+                                    withAnimation(.smooth(duration: 0.7)) {
+                                        questionMarkContent.toggle()
+                                        
+                                        if questionMarkContent {
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                                withAnimation {
+                                                    proxy.scrollTo("bottom", anchor: .bottom)
+                                                }
                                             }
                                         }
                                     }
                                 }
+                                .padding(.top, 23)
                             }
-                            .padding(.top, 23)
+                            
+                            Rectangle()
+                                .fill(.clear)
+                                .frame(width: 100, height: 100)
                         }
                         
                         Rectangle()
                             .fill(.clear)
-                            .frame(width: 300, height: 110)
+                            .frame(width: 300, height: 100)
                             .id("bottom")
                     }
                     
@@ -293,37 +317,46 @@ struct BasicEconomy3View: View {
                     }
                     
                     if progress.count == 2 {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                        withAnimation {
+                            proxy.scrollTo("bottom", anchor: .top)
+                        }
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                             withAnimation(.smooth(duration: 1.0)) {
-                                bubble = true
+                                contentPart2 = true
                                 
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
                                     withAnimation(.smooth(duration: 1.0)) {
-                                        bubbleContent = true
+                                        bubble = true
+                                        
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                            withAnimation(.smooth(duration: 1.0)) {
+                                                bubbleContent = true
+                                            }
+                                        }
                                     }
                                 }
                             }
-                        }
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                            withAnimation(.smooth(duration: 1.0)) {
-                                questionMark = true
-                            }
-                        }
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                            withAnimation(.smooth(duration: 1.0)) {
-                                nextButton = true
-                                
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                    withAnimation {
-                                        proxy.scrollTo("bottom", anchor: .top)
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                                withAnimation(.smooth(duration: 1.0)) {
+                                    
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                        withAnimation(.smooth(duration: 1.0)) {
+                                            questionMark = true
+                                        }
                                     }
                                 }
-                                
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    withAnimation(.smooth(duration: 1.0)) {
-                                        beforeButton = true
+                            }
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
+                                withAnimation(.smooth(duration: 1.0)) {
+                                    nextButton = true
+                                    
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                        withAnimation(.smooth(duration: 1.0)) {
+                                            beforeButton = true
+                                        }
                                     }
                                 }
                             }

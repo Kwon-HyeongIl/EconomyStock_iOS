@@ -14,7 +14,7 @@ struct BasicEconomy5View: View {
     @State private var progress: [Int] = []
     
     @State private var giveMoney = false
-    
+    @State private var contentPart2 = false
     @State private var bubble = false
     @State private var bubbleContent = false
     
@@ -47,7 +47,7 @@ struct BasicEconomy5View: View {
                         .padding(.top)
                         
                         HStack {
-                            VStack {
+                            VStack(spacing: 5) {
                                 Text("소비지출")
                                     .font(.system(size: 15))
                                     .fontWeight(.semibold)
@@ -65,7 +65,7 @@ struct BasicEconomy5View: View {
                                 .padding(.bottom, 10)
                                 .opacity(0.2)
                             
-                            VStack {
+                            VStack(spacing: 5) {
                                 Text("투자지출")
                                     .font(.system(size: 15))
                                     .fontWeight(.semibold)
@@ -82,15 +82,15 @@ struct BasicEconomy5View: View {
                                 .padding(.bottom, 10)
                                 .opacity(0.2)
                             
-                            VStack {
+                            VStack(spacing: 5) {
                                 Text("정부지출")
                                     .font(.system(size: 15))
-                                    .fontWeight(.semibold)
+                                    .fontWeight(.bold)
                                     .foregroundStyle(Color.ESTitle)
                                 
                                 Text("G")
                                     .font(.system(size: 20))
-                                    .fontWeight(.semibold)
+                                    .fontWeight(.bold)
                                     .foregroundStyle(Color.ESTitle)
                             }
                             
@@ -100,7 +100,7 @@ struct BasicEconomy5View: View {
                                 .padding(.bottom, 10)
                                 .opacity(0.2)
                             
-                            VStack {
+                            VStack(spacing: 5) {
                                 Text("순수지출")
                                     .font(.system(size: 15))
                                     .fontWeight(.semibold)
@@ -117,10 +117,15 @@ struct BasicEconomy5View: View {
                             if progress.count >= 1 {
                                 VStack(spacing: 10) {
                                     HStack {
-                                        Text("3) 정부지출")
+                                        Text("3)")
                                             .font(.system(size: 20))
                                             .fontWeight(.semibold)
                                             .padding(.leading, 30)
+                                        
+                                        Text("정부지출")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.semibold)
+                                            .padding(.top, 2)
                                         
                                         Spacer()
                                     }
@@ -136,14 +141,13 @@ struct BasicEconomy5View: View {
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 150)
+                                .frame(width: 100, height: 170)
                         }
-                        .padding(.top, 5)
                         
                         ZStack {
                             if progress.count >= 2 {
                                 VStack {
-                                    LottieViewConverter(fileName: "BasicEconomy1_GovernmentBuilding", loopMode: .playOnce, width: 200, height: 200)
+                                    LottieViewConverter(fileName: "BasicEconomy1_GovernmentBuilding", loopMode: .playOnce, width: 150, height: 150)
                                         .padding(.trailing, 100)
                                     
                                     if bubble {
@@ -166,11 +170,11 @@ struct BasicEconomy5View: View {
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 350)
+                                .frame(width: 100, height: 300)
                         }
                         
                         ZStack {
-                            if progress.count >= 3 {
+                            if contentPart2 {
                                 VStack {
                                     (Text("정부지출은 정부가 지출하는 모든 것을 포함하지만, ")
                                      + Text("재난지원금, 실업수당 ")
@@ -229,7 +233,7 @@ struct BasicEconomy5View: View {
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 300)
+                                .frame(width: 100, height: 250)
                         }
                         .padding(.top, 30)
                         
@@ -295,7 +299,7 @@ struct BasicEconomy5View: View {
                         
                         Rectangle()
                             .fill(.clear)
-                            .frame(width: 100, height: 85)
+                            .frame(width: 100, height: 100)
                             .id("bottom")
                     }
                     
@@ -344,20 +348,7 @@ struct BasicEconomy5View: View {
             .onTapGesture {
                 withAnimation(.smooth(duration: 1.0)) {
                     if progress.count < 5 {
-                        if progress.count == 2 {
-                            withAnimation(.smooth(duration: 1.0)) {
-                                proxy.scrollTo("bottom", anchor: .bottom)
-                            }
-                            
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                withAnimation(.smooth(duration: 1.0)) {
-                                    progress.append(1)
-                                }
-                            }
-                            
-                        } else {
-                            progress.append(1)
-                        }
+                        progress.append(1)
                     }
                     
                     if progress.count == 2 {
@@ -372,9 +363,20 @@ struct BasicEconomy5View: View {
                                 }
                             }
                         }
-                        
-                        
                     }
+                    
+                    if progress.count == 3 {
+                        withAnimation {
+                            proxy.scrollTo("bottom", anchor: .top)
+                        }
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            withAnimation(.smooth(duration: 1.0)) {
+                                contentPart2 = true
+                            }
+                        }
+                    }
+                        
                     
                     if progress.count == 4 {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -386,10 +388,6 @@ struct BasicEconomy5View: View {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                             withAnimation(.smooth(duration: 1.0)) {
                                 questionMark = true
-
-                                withAnimation {
-                                    proxy.scrollTo("bottom", anchor: .bottom)
-                                }
                             }
                         }
                         

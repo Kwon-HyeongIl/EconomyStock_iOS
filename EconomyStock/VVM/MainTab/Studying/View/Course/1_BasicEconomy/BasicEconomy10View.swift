@@ -134,6 +134,8 @@ struct BasicEconomy10View: View {
                                     if contentPart1_1 {
                                         LottieViewConverter(fileName: "BasicEconomy10_MoneyDistribution", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
                                     }
+                                    
+                                    Spacer()
                                 }
                             }
                             
@@ -220,6 +222,8 @@ struct BasicEconomy10View: View {
                                         }
                                         .padding(.top, 20)
                                     }
+                                    
+                                    Spacer()
                                 }
                             }
                             
@@ -397,12 +401,6 @@ struct BasicEconomy10View: View {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2.4) {
                             withAnimation(.smooth(duration: 1.0)) {
                                 nextButton = true
-                                
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                    withAnimation {
-                                        proxy.scrollTo("bottom", anchor: .top)
-                                    }
-                                }
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                     withAnimation(.smooth(duration: 1.0)) {

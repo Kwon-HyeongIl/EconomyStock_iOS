@@ -56,7 +56,7 @@ struct BasicEconomy2View: View {
                             Text("일정기간 동안 한 나라의 영토 내에서 생산되는 모든 재화와 서비스")
                                 .font(.system(size: 20))
                                 .fontWeight(.semibold)
-                                .padding(.top, 8)
+                                .padding(.top)
                                 .multilineTextAlignment(.center)
                                 .padding(.horizontal)
                         }
@@ -69,7 +69,7 @@ struct BasicEconomy2View: View {
                                     .font(.system(size: 20))
                                     .fontWeight(.semibold)
                                     .padding(.leading, 30)
-                                    .padding(.top, 50)
+                                    .padding(.top, 70)
                                     .padding(.bottom)
                                 
                                 Spacer()
@@ -82,14 +82,14 @@ struct BasicEconomy2View: View {
                                         .fontWeight(.semibold)
                                         .padding(.bottom, 10)
                                     
-                                    VStack {
+                                    VStack(spacing: 5) {
                                         Text("소비지출")
                                             .font(.system(size: 15))
                                             .fontWeight(.semibold)
                                         
                                         Text("C")
                                             .font(.system(size: 20))
-                                            .fontWeight(.semibold)
+                                            .fontWeight(.bold)
                                             .foregroundStyle(Color.ESTitle)
                                     }
                                 }
@@ -100,10 +100,10 @@ struct BasicEconomy2View: View {
                                         .fontWeight(.semibold)
                                         .padding(.bottom, 10)
                                     
-                                    VStack {
+                                    VStack(spacing: 5) {
                                         Text("투자지출")
                                             .font(.system(size: 15))
-                                            .fontWeight(.semibold)
+                                            .fontWeight(.bold)
                                         
                                         Text("I")
                                             .font(.system(size: 20))
@@ -118,10 +118,10 @@ struct BasicEconomy2View: View {
                                         .fontWeight(.semibold)
                                         .padding(.bottom, 10)
                                     
-                                    VStack {
+                                    VStack(spacing: 5) {
                                         Text("정부지출")
                                             .font(.system(size: 15))
-                                            .fontWeight(.semibold)
+                                            .fontWeight(.bold)
                                         
                                         Text("G")
                                             .font(.system(size: 20))
@@ -136,10 +136,10 @@ struct BasicEconomy2View: View {
                                         .fontWeight(.semibold)
                                         .padding(.bottom, 10)
                                     
-                                    VStack {
+                                    VStack(spacing: 5) {
                                         Text("순수지출")
                                             .font(.system(size: 15))
-                                            .fontWeight(.semibold)
+                                            .fontWeight(.bold)
                                         
                                         Text("(X-M)")
                                             .font(.system(size: 20))

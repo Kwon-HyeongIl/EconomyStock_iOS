@@ -13,7 +13,7 @@ struct PriceLevel1View: View {
     
     @State private var progress: [Int] = []
     
-    @State private var image = false
+    @State private var contentImage = false
     
     @State private var nextButton = false
     
@@ -45,7 +45,7 @@ struct PriceLevel1View: View {
                             .padding(.horizontal)
                             .padding(.top)
                         
-                        if image {
+                        if contentImage {
                             LottieViewConverter(fileName: "PriceLevel1_PriceProduct", loopMode: .playOnce, width: 150, height: 150)
                                 .padding(.top)
                         }
@@ -90,7 +90,7 @@ struct PriceLevel1View: View {
                 if progress.count == 1 {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                         withAnimation(.smooth(duration: 1.0)) {
-                            image = true
+                            contentImage = true
                         }
                     }
                 }

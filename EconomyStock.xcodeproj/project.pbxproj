@@ -39,6 +39,7 @@
 		CA3BBAB62CB50441007CA152 /* NavigationBackTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */; };
 		CA3F36B82CE4D45800FF871E /* PriceLevel1_PriceProduct.json in Resources */ = {isa = PBXBuildFile; fileRef = CA3F36B72CE4D45800FF871E /* PriceLevel1_PriceProduct.json */; };
 		CA3F36BC2CE4DB8600FF871E /* PriceLevel2_PriceBalance.json in Resources */ = {isa = PBXBuildFile; fileRef = CA3F36BB2CE4DB8600FF871E /* PriceLevel2_PriceBalance.json */; };
+		CA3F36BE2CE4E57800FF871E /* PriceLevel2_Apple.json in Resources */ = {isa = PBXBuildFile; fileRef = CA3F36BD2CE4E57800FF871E /* PriceLevel2_Apple.json */; };
 		CA47D3A92CD686B9009FCE4F /* LottieViewConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47D3A82CD686B9009FCE4F /* LottieViewConverter.swift */; };
 		CA47D3AB2CD68909009FCE4F /* BasicEconomy1_Earth.json in Resources */ = {isa = PBXBuildFile; fileRef = CA47D3AA2CD68909009FCE4F /* BasicEconomy1_Earth.json */; };
 		CA47F56B2CD933B100DCAFCF /* MainTab_Profile_On.json in Resources */ = {isa = PBXBuildFile; fileRef = CA47F5682CD933B100DCAFCF /* MainTab_Profile_On.json */; };
@@ -177,6 +178,7 @@
 		CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackTitleModifier.swift; sourceTree = "<group>"; };
 		CA3F36B72CE4D45800FF871E /* PriceLevel1_PriceProduct.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel1_PriceProduct.json; sourceTree = "<group>"; };
 		CA3F36BB2CE4DB8600FF871E /* PriceLevel2_PriceBalance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel2_PriceBalance.json; sourceTree = "<group>"; };
+		CA3F36BD2CE4E57800FF871E /* PriceLevel2_Apple.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel2_Apple.json; sourceTree = "<group>"; };
 		CA47D3A82CD686B9009FCE4F /* LottieViewConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewConverter.swift; sourceTree = "<group>"; };
 		CA47D3AA2CD68909009FCE4F /* BasicEconomy1_Earth.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy1_Earth.json; sourceTree = "<group>"; };
 		CA47F5642CD933B100DCAFCF /* MainTab_Home_On.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MainTab_Home_On.json; sourceTree = "<group>"; };
@@ -571,6 +573,7 @@
 			isa = PBXGroup;
 			children = (
 				CA3F36BB2CE4DB8600FF871E /* PriceLevel2_PriceBalance.json */,
+				CA3F36BD2CE4E57800FF871E /* PriceLevel2_Apple.json */,
 			);
 			path = Page2;
 			sourceTree = "<group>";
@@ -1186,6 +1189,7 @@
 				CA6927122CDF7FDD005F2A6B /* ArrowRight.json in Resources */,
 				CA5B3A5E2CD7B20000341E23 /* CourseCompleteButton.json in Resources */,
 				CA9246EB2CE114FB007AA018 /* CourseComplete.json in Resources */,
+				CA3F36BE2CE4E57800FF871E /* PriceLevel2_Apple.json in Resources */,
 				CA5B3A5F2CD7B20000341E23 /* CourseNextButton.json in Resources */,
 				CAF2C03E2CD9C54C00D0E15D /* BasicEconomy10_Payment.json in Resources */,
 				CAF2C0442CD9D36400D0E15D /* BasicEconomy10_Rotate.json in Resources */,
