@@ -37,6 +37,8 @@
 		CA3BBAB12CB5035E007CA152 /* LongButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */; };
 		CA3BBAB42CB50414007CA152 /* NavigationBackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */; };
 		CA3BBAB62CB50441007CA152 /* NavigationBackTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */; };
+		CA3F36B82CE4D45800FF871E /* PriceLevel1_PriceProduct.json in Resources */ = {isa = PBXBuildFile; fileRef = CA3F36B72CE4D45800FF871E /* PriceLevel1_PriceProduct.json */; };
+		CA3F36BC2CE4DB8600FF871E /* PriceLevel2_PriceBalance.json in Resources */ = {isa = PBXBuildFile; fileRef = CA3F36BB2CE4DB8600FF871E /* PriceLevel2_PriceBalance.json */; };
 		CA47D3A92CD686B9009FCE4F /* LottieViewConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47D3A82CD686B9009FCE4F /* LottieViewConverter.swift */; };
 		CA47D3AB2CD68909009FCE4F /* BasicEconomy1_Earth.json in Resources */ = {isa = PBXBuildFile; fileRef = CA47D3AA2CD68909009FCE4F /* BasicEconomy1_Earth.json */; };
 		CA47F56B2CD933B100DCAFCF /* MainTab_Profile_On.json in Resources */ = {isa = PBXBuildFile; fileRef = CA47F5682CD933B100DCAFCF /* MainTab_Profile_On.json */; };
@@ -173,6 +175,8 @@
 		CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButtonModifier.swift; sourceTree = "<group>"; };
 		CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackModifier.swift; sourceTree = "<group>"; };
 		CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackTitleModifier.swift; sourceTree = "<group>"; };
+		CA3F36B72CE4D45800FF871E /* PriceLevel1_PriceProduct.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel1_PriceProduct.json; sourceTree = "<group>"; };
+		CA3F36BB2CE4DB8600FF871E /* PriceLevel2_PriceBalance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel2_PriceBalance.json; sourceTree = "<group>"; };
 		CA47D3A82CD686B9009FCE4F /* LottieViewConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewConverter.swift; sourceTree = "<group>"; };
 		CA47D3AA2CD68909009FCE4F /* BasicEconomy1_Earth.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy1_Earth.json; sourceTree = "<group>"; };
 		CA47F5642CD933B100DCAFCF /* MainTab_Home_On.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MainTab_Home_On.json; sourceTree = "<group>"; };
@@ -537,6 +541,40 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		CA3F36B52CE4D44900FF871E /* InCourse */ = {
+			isa = PBXGroup;
+			children = (
+				CA3F36B62CE4D45000FF871E /* PriceLevel */,
+				CA712CA52CD65B15002E7276 /* BasicEconomy */,
+			);
+			path = InCourse;
+			sourceTree = "<group>";
+		};
+		CA3F36B62CE4D45000FF871E /* PriceLevel */ = {
+			isa = PBXGroup;
+			children = (
+				CA3F36B92CE4D45B00FF871E /* Page1 */,
+				CA3F36BA2CE4DB7700FF871E /* Page2 */,
+			);
+			path = PriceLevel;
+			sourceTree = "<group>";
+		};
+		CA3F36B92CE4D45B00FF871E /* Page1 */ = {
+			isa = PBXGroup;
+			children = (
+				CA3F36B72CE4D45800FF871E /* PriceLevel1_PriceProduct.json */,
+			);
+			path = Page1;
+			sourceTree = "<group>";
+		};
+		CA3F36BA2CE4DB7700FF871E /* Page2 */ = {
+			isa = PBXGroup;
+			children = (
+				CA3F36BB2CE4DB8600FF871E /* PriceLevel2_PriceBalance.json */,
+			);
+			path = Page2;
+			sourceTree = "<group>";
+		};
 		CA424BBC2CDA6AC300209C2F /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -620,10 +658,10 @@
 		CA712CA42CD65B00002E7276 /* Course */ = {
 			isa = PBXGroup;
 			children = (
+				CA3F36B52CE4D44900FF871E /* InCourse */,
 				CAD1CD322CDCD4CC00E89FA7 /* Etc */,
-				CA6664E72CD8FD9300B7C198 /* MainTab */,
 				CA5B3A562CD7B03100341E23 /* Button */,
-				CA712CA52CD65B15002E7276 /* BasicEconomy */,
+				CA114FED2CB64ADD00AD5AD9 /* StudyingCover */,
 			);
 			path = Course;
 			sourceTree = "<group>";
@@ -658,8 +696,8 @@
 			children = (
 				CAC86FCF2CE2E5A600785D4F /* Profile */,
 				CA712CA42CD65B00002E7276 /* Course */,
-				CA114FED2CB64ADD00AD5AD9 /* StudyingCover */,
 				CA114FC42CB6218900AD5AD9 /* Loading */,
+				CA6664E72CD8FD9300B7C198 /* MainTab */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -1142,6 +1180,7 @@
 				CAC86FD82CE2E5AF00785D4F /* ProfilePlantLevel1.json in Resources */,
 				CAC86FD92CE2E5AF00785D4F /* ProfilePlantLevel3.json in Resources */,
 				CA61CEBC2CE0BA32007BCF4E /* BasicEconomy10_MoneyDistribution.json in Resources */,
+				CA3F36B82CE4D45800FF871E /* PriceLevel1_PriceProduct.json in Resources */,
 				CA6927162CDF8A19005F2A6B /* Sweat.json in Resources */,
 				CA47F57A2CD9359D00DCAFCF /* MainTab_News.json in Resources */,
 				CA6927122CDF7FDD005F2A6B /* ArrowRight.json in Resources */,
@@ -1161,6 +1200,7 @@
 				CA47F56B2CD933B100DCAFCF /* MainTab_Profile_On.json in Resources */,
 				CA6927142CDF8016005F2A6B /* BasicEconomy5_Money.json in Resources */,
 				CA47F56E2CD933B100DCAFCF /* MainTab_Studying_On.json in Resources */,
+				CA3F36BC2CE4DB8600FF871E /* PriceLevel2_PriceBalance.json in Resources */,
 				CA47F5702CD933B100DCAFCF /* MainTab_Home_On.json in Resources */,
 				CAD1CD362CDCD73A00E89FA7 /* Bubble.json in Resources */,
 				CA47F5722CD933B100DCAFCF /* MainTab_News_On.json in Resources */,
