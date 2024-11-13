@@ -215,22 +215,23 @@ struct CourseIntroView: View {
                             
                         case .basicEconomy:
                             VStack(spacing: 20) {
-                                Text("- 경제활동의 주체에는 누가 있는지 알아보아요")
+                                Text("본격적인 경제 공부를 하기 전에, 이번시간에는 우리 경제에서 경제활동을 하는 주체는 누구인지, 그리고 GDP의 의미와 구성요소에 대해 알아볼게요.")
                                     .font(.system(size: 20))
                                     .fontWeight(.semibold)
                                     .multilineTextAlignment(.center)
+                                    .padding(.horizontal, 10)
                                     .padding(.top)
-                                
-                                Text("- GDP의 의미와 구성요소에 대해 알아보아요")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.semibold)
-                                    .multilineTextAlignment(.center)
                                 
                                 Spacer()
                             }
                             
                         case .priceLevel:
-                            Text("2")
+                            Text("물가 안정은 경제성장과 더불어 정부 정책이 지향해야할 가장 중요한 목표 중 하나에요.\n\n이번 시간에는 물가가 무엇인지, 인플레이션과 디플레이션, 그리고 물가측정지표에 대해 알아보아요.")
+                                .font(.system(size: 20))
+                                .fontWeight(.semibold)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal, 10)
+                                .padding(.top)
                         }
                     }
                     .frame(maxWidth: .infinity)
