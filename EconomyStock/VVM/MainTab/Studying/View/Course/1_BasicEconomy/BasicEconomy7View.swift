@@ -55,105 +55,119 @@ struct BasicEconomy7View: View {
                         .padding(.top, 5)
                         .opacity(0.2)
                         
-                        if progress.count >= 1 {
-                            VStack {
-                                HStack {
-                                    Text("2)")
-                                        .font(.system(size: 20))
-                                        .fontWeight(.semibold)
-                                        .padding(.leading, 35)
+                        ZStack {
+                            if progress.count >= 1 {
+                                VStack {
+                                    HStack {
+                                        Text("2)")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.semibold)
+                                            .padding(.leading, 35)
+                                        
+                                        Text("국채발행")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.semibold)
+                                            .padding(.top, 2)
+                                        
+                                        Spacer()
+                                    }
                                     
-                                    Text("국채발행")
-                                        .font(.system(size: 20))
-                                        .fontWeight(.semibold)
-                                        .padding(.top, 2)
-                                    
-                                    Spacer()
-                                }
-                                
-                                if contentImageAndText {
-                                    Image("Bond")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 150)
-                                        .padding(.top)
-                                    
-                                    (Text("국채는 국가에서 발행하는 ")
-                                    + Text("채권")
-                                        .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
-                                    + Text("으로, 가장 많이 사용되는 방법이에요"))
+                                    if contentImageAndText {
+                                        Image("Bond")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 150)
+                                            .padding(.top)
+                                        
+                                        (Text("국채는 국가에서 발행하는 ")
+                                         + Text("채권")
+                                            .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
+                                         + Text("으로, 가장 많이 사용되는 방법이에요"))
                                         .font(.system(size: 20))
                                         .fontWeight(.semibold)
                                         .multilineTextAlignment(.center)
                                         .padding(.top)
                                         .padding(.horizontal)
-                                    
-                                    if contentText2 {
-                                        Text("그러나 만기에 이자까지 더해서 갚아야하는 돈으로, 이를 갚기 위해 미래에 세금 징수가 증가할 수 있어요")
-                                            .font(.system(size: 20))
-                                            .fontWeight(.semibold)
-                                            .multilineTextAlignment(.center)
-                                            .padding(.top, 20)
-                                            .padding(.horizontal)
+                                        
+                                        if contentText2 {
+                                            Text("그러나 만기에 이자까지 더해서 갚아야하는 돈으로, 이를 갚기 위해 미래에 세금 징수가 증가할 수 있어요")
+                                                .font(.system(size: 20))
+                                                .fontWeight(.semibold)
+                                                .multilineTextAlignment(.center)
+                                                .padding(.top, 20)
+                                                .padding(.horizontal)
+                                        }
                                     }
-                                }
-                            }
-                            .padding(.top)
-                        }
-                        
-                        if questionMark {
-                            VStack {
-                                HStack(spacing: 5) {
-                                    LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
-                                        .padding(.leading, 10)
-                                    
-                                    Text("채권이란?")
-                                        .font(.system(size: 15))
-                                        .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
-                                        .fontWeight(.semibold)
                                     
                                     Spacer()
                                 }
-                                
-                                if questionMarkContent {
+                                .padding(.top)
+                            }
+                            
+                            Rectangle()
+                                .fill(.clear)
+                                .frame(width: 300, height: 200)
+                        }
+                        
+                        ZStack {
+                            if questionMark {
+                                VStack {
                                     HStack(spacing: 5) {
-                                        Text(":")
-                                            .font(.system(size: 15))
-                                            .fontWeight(.semibold)
-                                            .foregroundStyle(.black.opacity(0.6))
-                                            .padding(.leading, 20)
-                                            .padding(.bottom, 50)
+                                        LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
+                                            .padding(.leading, 10)
                                         
-                                        Text("정부나 회사, 지자체 등에서 자금을 마련하기 위해 발행하는 증권으로, 만기와 빌린 금액, 돈을 빌린 사람 등이 적혀있는 차용증서에요.")
+                                        Text("채권이란?")
                                             .font(.system(size: 15))
+                                            .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
                                             .fontWeight(.semibold)
-                                            .foregroundStyle(.black.opacity(0.6))
-                                            .padding(.bottom, 10)
                                         
                                         Spacer()
                                     }
-                                }
-                            }
-                            .frame(maxWidth: .infinity)
-                            .background(.purple.opacity(0.1))
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                            .padding(.horizontal)
-                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
-                            .padding(.top, 30)
-                            .onTapGesture {
-                                withAnimation(.smooth(duration: 0.7)) {
-                                    questionMarkContent.toggle()
                                     
                                     if questionMarkContent {
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                            withAnimation(.smooth(duration: 0.1)) {
-                                                proxy.scrollTo("bottom", anchor: .bottom)
+                                        HStack(spacing: 5) {
+                                            Text(":")
+                                                .font(.system(size: 15))
+                                                .fontWeight(.semibold)
+                                                .foregroundStyle(.black.opacity(0.6))
+                                                .padding(.leading, 20)
+                                                .padding(.bottom, 50)
+                                            
+                                            Text("정부나 회사, 지자체 등에서 자금을 마련하기 위해 발행하는 증권으로, 만기와 빌린 금액, 돈을 빌린 사람 등이 적혀있는 차용증서에요.")
+                                                .font(.system(size: 15))
+                                                .fontWeight(.semibold)
+                                                .foregroundStyle(.black.opacity(0.6))
+                                                .padding(.bottom, 10)
+                                            
+                                            Spacer()
+                                        }
+                                    }
+                                }
+                                .frame(maxWidth: .infinity)
+                                .background(.purple.opacity(0.1))
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                                .padding(.horizontal)
+                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                .padding(.top, 30)
+                                .onTapGesture {
+                                    withAnimation(.smooth(duration: 0.7)) {
+                                        questionMarkContent.toggle()
+                                        
+                                        if questionMarkContent {
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                                withAnimation(.smooth(duration: 0.1)) {
+                                                    proxy.scrollTo("bottom", anchor: .bottom)
+                                                }
                                             }
                                         }
                                     }
                                 }
+                                .padding(.top, 135)
                             }
-                            .padding(.top, 145)
+                            
+                            Rectangle()
+                                .fill(.clear)
+                                .frame(width: 300, height: 200)
                         }
                         
                         Rectangle()
@@ -225,11 +239,17 @@ struct BasicEconomy7View: View {
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
                             withAnimation(.smooth(duration: 1.0)) {
-                                questionMark = true
+                                proxy.scrollTo("bottom", anchor: .top)
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                    withAnimation(.smooth(duration: 1.0)) {
+                                        questionMark = true
+                                    }
+                                }
                             }
                         }
                         
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.9) {
                             withAnimation(.smooth(duration: 1.0)) {
                                 nextButton = true
                                 
