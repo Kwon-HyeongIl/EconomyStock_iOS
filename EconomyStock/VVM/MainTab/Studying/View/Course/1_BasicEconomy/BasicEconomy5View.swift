@@ -14,7 +14,7 @@ struct BasicEconomy5View: View {
     @State private var progress: [Int] = []
     
     @State private var giveMoney = false
-    @State private var contentPart2 = false
+    @State private var nextScrollPart = false
     @State private var bubble = false
     @State private var bubbleContent = false
     
@@ -174,7 +174,7 @@ struct BasicEconomy5View: View {
                         }
                         
                         ZStack {
-                            if contentPart2 {
+                            if nextScrollPart {
                                 VStack {
                                     (Text("정부지출은 정부가 지출하는 모든 것을 포함하지만, ")
                                      + Text("재난지원금, 실업수당 ")
@@ -222,6 +222,7 @@ struct BasicEconomy5View: View {
                                     (Text("재난지원금, 실업수당 처럼 정부가 대가 없이 국민에게 지급하기 위해 행해지는 것을 ")
                                      + Text("이전지출")
                                         .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
+                                        .fontWeight(.bold)
                                      + Text("이라고 해요"))
                                     .font(.system(size: 20))
                                     .fontWeight(.semibold)
@@ -372,7 +373,7 @@ struct BasicEconomy5View: View {
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                             withAnimation(.smooth(duration: 1.0)) {
-                                contentPart2 = true
+                                nextScrollPart = true
                             }
                         }
                     }

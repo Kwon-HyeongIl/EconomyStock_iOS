@@ -107,7 +107,7 @@ struct PriceLevel2View: View {
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 450)
+                                .frame(width: 100, height: 500)
                         }
                         
                         Rectangle()

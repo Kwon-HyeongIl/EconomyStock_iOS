@@ -13,7 +13,7 @@ struct BasicEconomy3View: View {
     
     @State private var progress: [Int] = []
     
-    @State private var contentPart2 = false
+    @State private var nextScrollPart = false
     @State private var bubble = false
     @State private var bubbleContent = false
     
@@ -131,6 +131,7 @@ struct BasicEconomy3View: View {
                                     (Text("주로 가계에서 이루어지며, 소득에 비례하고 ")
                                      + Text("이자율")
                                         .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
+                                        .fontWeight(.bold)
                                      + Text("에 반비례해요"))
                                     .font(.system(size: 20))
                                     .fontWeight(.semibold)
@@ -147,7 +148,7 @@ struct BasicEconomy3View: View {
                         }
                         
                         ZStack {
-                            if contentPart2 {
+                            if nextScrollPart {
                                 VStack {
                                     HStack {
                                         Image("Basic_Toktok")
@@ -323,7 +324,7 @@ struct BasicEconomy3View: View {
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                             withAnimation(.smooth(duration: 1.0)) {
-                                contentPart2 = true
+                                nextScrollPart = true
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
                                     withAnimation(.smooth(duration: 1.0)) {

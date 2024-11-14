@@ -82,6 +82,7 @@ struct BasicEconomy7View: View {
                                         (Text("국채는 국가에서 발행하는 ")
                                          + Text("채권")
                                             .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
+                                            .fontWeight(.bold)
                                          + Text("으로, 가장 많이 사용되는 방법이에요"))
                                         .font(.system(size: 20))
                                         .fontWeight(.semibold)

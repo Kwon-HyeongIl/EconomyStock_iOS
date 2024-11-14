@@ -115,12 +115,16 @@ struct BasicEconomy10View: View {
                         }
                         .padding(.top, 10)
                         
-                        Text("즉, 생산과 지출이 같아진다고 했어요")
-                            .font(.system(size: 20))
-                            .fontWeight(.semibold)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal)
-                            .padding(.top, 10)
+                        (Text("즉, ")
+                         + Text("생산과 지출이 같아")
+                            .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
+                            .fontWeight(.bold)
+                         + Text("진다고 했어요"))
+                        .font(.system(size: 20))
+                        .fontWeight(.semibold)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
+                        .padding(.top, 10)
                         
                         ZStack {
                             if progress.count >= 1 {

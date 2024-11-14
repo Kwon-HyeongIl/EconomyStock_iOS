@@ -13,7 +13,7 @@ struct BasicEconomy4View: View {
     
     @State private var progress: [Int] = []
     
-    @State private var contentPart2 = false
+    @State private var nextScrollPart = false
     @State private var building = false
     @State private var bubble = false
     @State private var bubbleContent = false
@@ -133,6 +133,7 @@ struct BasicEconomy4View: View {
                                     
                                     (Text("투자")
                                         .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
+                                        .fontWeight(.bold)
                                      + Text("는 주로 기업부문에서 이루어지며, 이자율과 반비례해요"))
                                     .font(.system(size: 20))
                                     .fontWeight(.semibold)
@@ -149,7 +150,7 @@ struct BasicEconomy4View: View {
                         }
                         
                         ZStack {
-                            if contentPart2 {
+                            if nextScrollPart {
                                 VStack {
                                     HStack {
                                         if building {
@@ -308,7 +309,7 @@ struct BasicEconomy4View: View {
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                             withAnimation(.smooth(duration: 1.0)) {
-                                contentPart2 = true
+                                nextScrollPart = true
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                     withAnimation(.smooth(duration: 1.0)) {
