@@ -12,6 +12,8 @@
 		CA08F39C2CB839520093117E /* PriceLevel3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F39B2CB839520093117E /* PriceLevel3View.swift */; };
 		CA08F39E2CB839580093117E /* PriceLevel4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F39D2CB839580093117E /* PriceLevel4View.swift */; };
 		CA08F3A02CB839600093117E /* PriceLevel5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F39F2CB839600093117E /* PriceLevel5View.swift */; };
+		CA0A66682CE65F8000F8B050 /* PriceLevel5_PriceDown.json in Resources */ = {isa = PBXBuildFile; fileRef = CA0A66672CE65F8000F8B050 /* PriceLevel5_PriceDown.json */; };
+		CA0A666A2CE6602200F8B050 /* PriceLevel4_PriceUp.json in Resources */ = {isa = PBXBuildFile; fileRef = CA0A66692CE6602200F8B050 /* PriceLevel4_PriceUp.json */; };
 		CA10C02E2CAF85C1007DAB3A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CA10C02D2CAF85C1007DAB3A /* FirebaseMessaging */; };
 		CA114FD72CB62D2A00AD5AD9 /* CourseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA114FD62CB62D2A00AD5AD9 /* CourseListViewModel.swift */; };
 		CA114FDA2CB62E7D00AD5AD9 /* NavigationTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA114FD92CB62E7D00AD5AD9 /* NavigationTitleModifier.swift */; };
@@ -91,7 +93,6 @@
 		CA92DDBB2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDBA2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift */; };
 		CA94BA712CD3C918006ED29A /* CourseListViewCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA94BA702CD3C918006ED29A /* CourseListViewCapsule.swift */; };
 		CA9635552CE6052B000E7B01 /* PriceLevel3_BadFinance.json in Resources */ = {isa = PBXBuildFile; fileRef = CA9635542CE6052B000E7B01 /* PriceLevel3_BadFinance.json */; };
-		CA9635582CE608A2000E7B01 /* PriceLevel4_PriceUp.json in Resources */ = {isa = PBXBuildFile; fileRef = CA9635572CE608A2000E7B01 /* PriceLevel4_PriceUp.json */; };
 		CA96355A2CE60B79000E7B01 /* PriceLevel4_HotEconomy.json in Resources */ = {isa = PBXBuildFile; fileRef = CA9635592CE60B79000E7B01 /* PriceLevel4_HotEconomy.json */; };
 		CA96355C2CE60C1E000E7B01 /* PriceLevel4_OilPrice.json in Resources */ = {isa = PBXBuildFile; fileRef = CA96355B2CE60C1E000E7B01 /* PriceLevel4_OilPrice.json */; };
 		CA9BB9CC2CABA59A00886A1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9C82CABA59A00886A1A /* ContentView.swift */; };
@@ -159,6 +160,8 @@
 		CA08F39B2CB839520093117E /* PriceLevel3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel3View.swift; sourceTree = "<group>"; };
 		CA08F39D2CB839580093117E /* PriceLevel4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel4View.swift; sourceTree = "<group>"; };
 		CA08F39F2CB839600093117E /* PriceLevel5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel5View.swift; sourceTree = "<group>"; };
+		CA0A66672CE65F8000F8B050 /* PriceLevel5_PriceDown.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel5_PriceDown.json; sourceTree = "<group>"; };
+		CA0A66692CE6602200F8B050 /* PriceLevel4_PriceUp.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel4_PriceUp.json; sourceTree = "<group>"; };
 		CA10C02C2CAF782E007DAB3A /* EconomyStock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EconomyStock.entitlements; sourceTree = "<group>"; };
 		CA114FD62CB62D2A00AD5AD9 /* CourseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewModel.swift; sourceTree = "<group>"; };
 		CA114FD92CB62E7D00AD5AD9 /* NavigationTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleModifier.swift; sourceTree = "<group>"; };
@@ -234,7 +237,6 @@
 		CA92DDBA2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy5View.swift; sourceTree = "<group>"; };
 		CA94BA702CD3C918006ED29A /* CourseListViewCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewCapsule.swift; sourceTree = "<group>"; };
 		CA9635542CE6052B000E7B01 /* PriceLevel3_BadFinance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel3_BadFinance.json; sourceTree = "<group>"; };
-		CA9635572CE608A2000E7B01 /* PriceLevel4_PriceUp.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel4_PriceUp.json; sourceTree = "<group>"; };
 		CA9635592CE60B79000E7B01 /* PriceLevel4_HotEconomy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel4_HotEconomy.json; sourceTree = "<group>"; };
 		CA96355B2CE60C1E000E7B01 /* PriceLevel4_OilPrice.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel4_OilPrice.json; sourceTree = "<group>"; };
 		CA9BB9C42CABA59A00886A1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -333,6 +335,14 @@
 				CA08F39F2CB839600093117E /* PriceLevel5View.swift */,
 			);
 			path = 2_PriceLevel;
+			sourceTree = "<group>";
+		};
+		CA0A66602CE6586000F8B050 /* Page5 */ = {
+			isa = PBXGroup;
+			children = (
+				CA0A66672CE65F8000F8B050 /* PriceLevel5_PriceDown.json */,
+			);
+			path = Page5;
 			sourceTree = "<group>";
 		};
 		CA114FC42CB6218900AD5AD9 /* Loading */ = {
@@ -573,6 +583,7 @@
 				CA3F36BA2CE4DB7700FF871E /* Page2 */,
 				CA7AF56A2CE5F272006DA22F /* Page3 */,
 				CA9635562CE60896000E7B01 /* Page4 */,
+				CA0A66602CE6586000F8B050 /* Page5 */,
 			);
 			path = PriceLevel;
 			sourceTree = "<group>";
@@ -784,9 +795,9 @@
 		CA9635562CE60896000E7B01 /* Page4 */ = {
 			isa = PBXGroup;
 			children = (
-				CA9635572CE608A2000E7B01 /* PriceLevel4_PriceUp.json */,
 				CA9635592CE60B79000E7B01 /* PriceLevel4_HotEconomy.json */,
 				CA96355B2CE60C1E000E7B01 /* PriceLevel4_OilPrice.json */,
+				CA0A66692CE6602200F8B050 /* PriceLevel4_PriceUp.json */,
 			);
 			path = Page4;
 			sourceTree = "<group>";
@@ -1202,7 +1213,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA0A66682CE65F8000F8B050 /* PriceLevel5_PriceDown.json in Resources */,
 				CA712CA92CD65D54002E7276 /* BasicEconomy1_Building.json in Resources */,
+				CA0A666A2CE6602200F8B050 /* PriceLevel4_PriceUp.json in Resources */,
 				CA5389CF2CDCE3C2003DA62F /* QuestionMark.json in Resources */,
 				CA9BB9CE2CABA59A00886A1A /* Preview Assets.xcassets in Resources */,
 				CA77DFCD2CB24D0900992829 /* Loading.json in Resources */,
@@ -1247,7 +1260,6 @@
 				CA6927142CDF8016005F2A6B /* BasicEconomy5_Money.json in Resources */,
 				CA47F56E2CD933B100DCAFCF /* MainTab_Studying_On.json in Resources */,
 				CA3F36BC2CE4DB8600FF871E /* PriceLevel2_PriceBalance.json in Resources */,
-				CA9635582CE608A2000E7B01 /* PriceLevel4_PriceUp.json in Resources */,
 				CA9635552CE6052B000E7B01 /* PriceLevel3_BadFinance.json in Resources */,
 				CA47F5702CD933B100DCAFCF /* MainTab_Home_On.json in Resources */,
 				CAD1CD362CDCD73A00E89FA7 /* Bubble.json in Resources */,

@@ -67,7 +67,7 @@ struct PriceLevel4View: View {
                                         .padding(.horizontal)
                                     
                                     if contentImage1 {
-                                        LottieViewConverter(fileName: "PriceLevel4_PriceUp", loopMode: .playOnce, width: 150, height: 150)
+                                        LottieViewConverter(fileName: "PriceLevel4_PriceUp", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
                                     }
                                     
                                     Spacer()
@@ -109,7 +109,7 @@ struct PriceLevel4View: View {
                                         .padding(.leading, 30)
                                         
                                         if contentImage2 {
-                                            LottieViewConverter(fileName: "PriceLevel4_HotEconomy", loopMode: .playOnce, width: 150, height: 150)
+                                            LottieViewConverter(fileName: "PriceLevel4_HotEconomy", loopMode: .playOnce, speed: 0.5, width: 150, height: 150)
                                         }
                                     }
                                     

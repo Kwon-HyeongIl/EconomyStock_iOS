@@ -24,14 +24,14 @@ struct PriceLevel5View: View {
             ZStack {
                 ScrollView {
                     HStack {
-                        Text("1.")
+                        Text("2.")
                             .font(.system(size: 35))
                             .fontWeight(.bold)
                             .foregroundStyle(Color.ESTitle)
                             .padding(.leading, 30)
                             .padding(.bottom, 3)
                         
-                        Text("물가의 개념")
+                        Text("물가의 변동")
                             .font(.system(size: 25))
                             .fontWeight(.bold)
                         
@@ -41,15 +41,14 @@ struct PriceLevel5View: View {
                     .padding(.top)
                     
                     HStack {
-                        Text("정부지출을 위한 재원은 어떻게 조달될까요?")
-                            .font(.system(size: 20))
+                        Text("디플레이션")
+                            .font(.system(size: 22))
                             .fontWeight(.semibold)
                             .padding(.leading, 30)
                         
                         Spacer()
                     }
                     .padding(.top, 5)
-                    
                 }
                 
                 if nextButton {
