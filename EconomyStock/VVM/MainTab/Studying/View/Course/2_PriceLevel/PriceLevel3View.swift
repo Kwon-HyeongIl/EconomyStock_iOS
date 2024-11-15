@@ -83,7 +83,7 @@ struct PriceLevel3View: View {
                                                 .opacity(progress.count >= 2 ? 0.4 : 1.0)
                                                 
                                                 if progress.count >= 2 {
-                                                    LottieViewConverter(fileName: "Warning", loopMode: .playOnce, scale: 1.2, width: 120, height: 120)
+                                                    LottieViewConverter(fileName: "Warning", loopMode: .playOnce, scale: 1.3, width: 120, height: 120)
                                                 }
                                             }
                                         }

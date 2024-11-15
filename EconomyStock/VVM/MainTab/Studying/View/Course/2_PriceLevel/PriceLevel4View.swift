@@ -215,7 +215,7 @@ struct PriceLevel4View: View {
                         
                         Rectangle()
                             .fill(.clear)
-                            .frame(width: 100, height: 90)
+                            .frame(width: 100, height: 70)
                             .id("bottom")
                     }
                     

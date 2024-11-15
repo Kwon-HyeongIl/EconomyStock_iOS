@@ -300,7 +300,7 @@ struct BasicEconomy10View: View {
                         
                         Rectangle()
                             .fill(.clear)
-                            .frame(width: 300, height: 85)
+                            .frame(width: 300, height: 70)
                             .id("bottom")
                     }
                     
