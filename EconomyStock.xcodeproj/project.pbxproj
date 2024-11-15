@@ -83,7 +83,6 @@
 		CA77DFCF2CB256DD00992829 /* LoginViewModel+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77DFCE2CB256DD00992829 /* LoginViewModel+Google.swift */; };
 		CA77DFD22CB26D0100992829 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77DFD12CB26D0100992829 /* CustomError.swift */; };
 		CA7AF56D2CE5F282006DA22F /* PriceLevel3_BubbleHeart.json in Resources */ = {isa = PBXBuildFile; fileRef = CA7AF56B2CE5F282006DA22F /* PriceLevel3_BubbleHeart.json */; };
-		CA7AF56E2CE5F282006DA22F /* PriceLevel3_PriceDown.json in Resources */ = {isa = PBXBuildFile; fileRef = CA7AF56C2CE5F282006DA22F /* PriceLevel3_PriceDown.json */; };
 		CA7AF5702CE5FC83006DA22F /* Warning.json in Resources */ = {isa = PBXBuildFile; fileRef = CA7AF56F2CE5FC83006DA22F /* Warning.json */; };
 		CA9246EB2CE114FB007AA018 /* CourseComplete.json in Resources */ = {isa = PBXBuildFile; fileRef = CA9246EA2CE114FB007AA018 /* CourseComplete.json */; };
 		CA92DDB32CB7D7A600A7D2A4 /* BasicEconomy1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDB22CB7D7A600A7D2A4 /* BasicEconomy1View.swift */; };
@@ -92,7 +91,6 @@
 		CA92DDB92CB7D7C300A7D2A4 /* BasicEconomy4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDB82CB7D7C300A7D2A4 /* BasicEconomy4View.swift */; };
 		CA92DDBB2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDBA2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift */; };
 		CA94BA712CD3C918006ED29A /* CourseListViewCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA94BA702CD3C918006ED29A /* CourseListViewCapsule.swift */; };
-		CA9635552CE6052B000E7B01 /* PriceLevel3_BadFinance.json in Resources */ = {isa = PBXBuildFile; fileRef = CA9635542CE6052B000E7B01 /* PriceLevel3_BadFinance.json */; };
 		CA96355A2CE60B79000E7B01 /* PriceLevel4_HotEconomy.json in Resources */ = {isa = PBXBuildFile; fileRef = CA9635592CE60B79000E7B01 /* PriceLevel4_HotEconomy.json */; };
 		CA96355C2CE60C1E000E7B01 /* PriceLevel4_OilPrice.json in Resources */ = {isa = PBXBuildFile; fileRef = CA96355B2CE60C1E000E7B01 /* PriceLevel4_OilPrice.json */; };
 		CA9BB9CC2CABA59A00886A1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9C82CABA59A00886A1A /* ContentView.swift */; };
@@ -123,6 +121,13 @@
 		CAD101E22CB6905F00CA9C6A /* ShortButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */; };
 		CAD101E42CB6959D00CA9C6A /* StudyingCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101E32CB6959D00CA9C6A /* StudyingCourse.swift */; };
 		CAD1CD362CDCD73A00E89FA7 /* Bubble.json in Resources */ = {isa = PBXBuildFile; fileRef = CAD1CD352CDCD73A00E89FA7 /* Bubble.json */; };
+		CAD255FA2CE6DE35008E7788 /* PriceLevel6View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD255F92CE6DE35008E7788 /* PriceLevel6View.swift */; };
+		CAD255FC2CE6DE3C008E7788 /* PriceLevel7View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD255FB2CE6DE3C008E7788 /* PriceLevel7View.swift */; };
+		CAD255FE2CE6DE44008E7788 /* PriceLevel8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD255FD2CE6DE44008E7788 /* PriceLevel8View.swift */; };
+		CAD256002CE6DE4B008E7788 /* PriceLevel9View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD255FF2CE6DE4B008E7788 /* PriceLevel9View.swift */; };
+		CAD256022CE6DE50008E7788 /* PriceLevel10View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD256012CE6DE50008E7788 /* PriceLevel10View.swift */; };
+		CAD256042CE6E299008E7788 /* PriceLevel3_Rain.json in Resources */ = {isa = PBXBuildFile; fileRef = CAD256032CE6E299008E7788 /* PriceLevel3_Rain.json */; };
+		CAD256062CE6E734008E7788 /* PriceLevel3_PriceDown.json in Resources */ = {isa = PBXBuildFile; fileRef = CAD256052CE6E734008E7788 /* PriceLevel3_PriceDown.json */; };
 		CAD9A1102CC515B000A4F70B /* CourseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9A10F2CC515B000A4F70B /* CourseType.swift */; };
 		CAE4C1DF2CDE3F2E00CDD0CF /* BasicEconomy6View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE4C1DE2CDE3F2E00CDD0CF /* BasicEconomy6View.swift */; };
 		CAE4C1E12CDE3F3E00CDD0CF /* BasicEconomy7View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE4C1E02CDE3F3E00CDD0CF /* BasicEconomy7View.swift */; };
@@ -226,7 +231,6 @@
 		CA77DFCE2CB256DD00992829 /* LoginViewModel+Google.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Google.swift"; sourceTree = "<group>"; };
 		CA77DFD12CB26D0100992829 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		CA7AF56B2CE5F282006DA22F /* PriceLevel3_BubbleHeart.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel3_BubbleHeart.json; sourceTree = "<group>"; };
-		CA7AF56C2CE5F282006DA22F /* PriceLevel3_PriceDown.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel3_PriceDown.json; sourceTree = "<group>"; };
 		CA7AF56F2CE5FC83006DA22F /* Warning.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Warning.json; sourceTree = "<group>"; };
 		CA83477C2CAAE28500BA1E4A /* EconomyStock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EconomyStock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA9246EA2CE114FB007AA018 /* CourseComplete.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CourseComplete.json; sourceTree = "<group>"; };
@@ -236,7 +240,6 @@
 		CA92DDB82CB7D7C300A7D2A4 /* BasicEconomy4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy4View.swift; sourceTree = "<group>"; };
 		CA92DDBA2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy5View.swift; sourceTree = "<group>"; };
 		CA94BA702CD3C918006ED29A /* CourseListViewCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewCapsule.swift; sourceTree = "<group>"; };
-		CA9635542CE6052B000E7B01 /* PriceLevel3_BadFinance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel3_BadFinance.json; sourceTree = "<group>"; };
 		CA9635592CE60B79000E7B01 /* PriceLevel4_HotEconomy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel4_HotEconomy.json; sourceTree = "<group>"; };
 		CA96355B2CE60C1E000E7B01 /* PriceLevel4_OilPrice.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel4_OilPrice.json; sourceTree = "<group>"; };
 		CA9BB9C42CABA59A00886A1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -264,6 +267,13 @@
 		CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortButtonModifier.swift; sourceTree = "<group>"; };
 		CAD101E32CB6959D00CA9C6A /* StudyingCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyingCourse.swift; sourceTree = "<group>"; };
 		CAD1CD352CDCD73A00E89FA7 /* Bubble.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Bubble.json; sourceTree = "<group>"; };
+		CAD255F92CE6DE35008E7788 /* PriceLevel6View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel6View.swift; sourceTree = "<group>"; };
+		CAD255FB2CE6DE3C008E7788 /* PriceLevel7View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel7View.swift; sourceTree = "<group>"; };
+		CAD255FD2CE6DE44008E7788 /* PriceLevel8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel8View.swift; sourceTree = "<group>"; };
+		CAD255FF2CE6DE4B008E7788 /* PriceLevel9View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel9View.swift; sourceTree = "<group>"; };
+		CAD256012CE6DE50008E7788 /* PriceLevel10View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel10View.swift; sourceTree = "<group>"; };
+		CAD256032CE6E299008E7788 /* PriceLevel3_Rain.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel3_Rain.json; sourceTree = "<group>"; };
+		CAD256052CE6E734008E7788 /* PriceLevel3_PriceDown.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel3_PriceDown.json; sourceTree = "<group>"; };
 		CAD9A10F2CC515B000A4F70B /* CourseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseType.swift; sourceTree = "<group>"; };
 		CAE4C1DE2CDE3F2E00CDD0CF /* BasicEconomy6View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy6View.swift; sourceTree = "<group>"; };
 		CAE4C1E02CDE3F3E00CDD0CF /* BasicEconomy7View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy7View.swift; sourceTree = "<group>"; };
@@ -333,6 +343,11 @@
 				CA08F39B2CB839520093117E /* PriceLevel3View.swift */,
 				CA08F39D2CB839580093117E /* PriceLevel4View.swift */,
 				CA08F39F2CB839600093117E /* PriceLevel5View.swift */,
+				CAD255F92CE6DE35008E7788 /* PriceLevel6View.swift */,
+				CAD255FB2CE6DE3C008E7788 /* PriceLevel7View.swift */,
+				CAD255FD2CE6DE44008E7788 /* PriceLevel8View.swift */,
+				CAD255FF2CE6DE4B008E7788 /* PriceLevel9View.swift */,
+				CAD256012CE6DE50008E7788 /* PriceLevel10View.swift */,
 			);
 			path = 2_PriceLevel;
 			sourceTree = "<group>";
@@ -744,8 +759,8 @@
 			isa = PBXGroup;
 			children = (
 				CA7AF56B2CE5F282006DA22F /* PriceLevel3_BubbleHeart.json */,
-				CA7AF56C2CE5F282006DA22F /* PriceLevel3_PriceDown.json */,
-				CA9635542CE6052B000E7B01 /* PriceLevel3_BadFinance.json */,
+				CAD256032CE6E299008E7788 /* PriceLevel3_Rain.json */,
+				CAD256052CE6E734008E7788 /* PriceLevel3_PriceDown.json */,
 			);
 			path = Page3;
 			sourceTree = "<group>";
@@ -1247,6 +1262,7 @@
 				CAF2C03E2CD9C54C00D0E15D /* BasicEconomy10_Payment.json in Resources */,
 				CAF2C0442CD9D36400D0E15D /* BasicEconomy10_Rotate.json in Resources */,
 				CAF2C03F2CD9C54C00D0E15D /* BasicEconomy10_Factory.json in Resources */,
+				CAD256062CE6E734008E7788 /* PriceLevel3_PriceDown.json in Resources */,
 				CAF2C0402CD9C54C00D0E15D /* BasicEconomy10_Distribution.json in Resources */,
 				CA9BB9CF2CABA59A00886A1A /* .gitignore in Resources */,
 				CA6927192CDF8B64005F2A6B /* BasicEconomy6_MoneyStack.json in Resources */,
@@ -1255,13 +1271,12 @@
 				CAAE54182CB8E34200B5352D /* PriceLevelCourseCover.json in Resources */,
 				CA9BB9D02CABA59A00886A1A /* Assets.xcassets in Resources */,
 				CA7AF56D2CE5F282006DA22F /* PriceLevel3_BubbleHeart.json in Resources */,
-				CA7AF56E2CE5F282006DA22F /* PriceLevel3_PriceDown.json in Resources */,
 				CA47F56B2CD933B100DCAFCF /* MainTab_Profile_On.json in Resources */,
 				CA6927142CDF8016005F2A6B /* BasicEconomy5_Money.json in Resources */,
 				CA47F56E2CD933B100DCAFCF /* MainTab_Studying_On.json in Resources */,
 				CA3F36BC2CE4DB8600FF871E /* PriceLevel2_PriceBalance.json in Resources */,
-				CA9635552CE6052B000E7B01 /* PriceLevel3_BadFinance.json in Resources */,
 				CA47F5702CD933B100DCAFCF /* MainTab_Home_On.json in Resources */,
+				CAD256042CE6E299008E7788 /* PriceLevel3_Rain.json in Resources */,
 				CAD1CD362CDCD73A00E89FA7 /* Bubble.json in Resources */,
 				CA47F5722CD933B100DCAFCF /* MainTab_News_On.json in Resources */,
 				CA114FEF2CB64B0E00AD5AD9 /* BasicEconomyCourseCover.json in Resources */,
@@ -1293,12 +1308,15 @@
 				CAAA4B552CC9F2F70083F86C /* AisleView.swift in Sources */,
 				CAEDDAC22CB570710046162D /* BasicLoginFocusField.swift in Sources */,
 				CAEE16632CAD0D7200210BD0 /* LoginViewModel+Kakao.swift in Sources */,
+				CAD255FA2CE6DE35008E7788 /* PriceLevel6View.swift in Sources */,
 				CA58A4ED2CB6D9E900DB91BD /* ProgressCircleView.swift in Sources */,
 				CA17FC722CB005A10050250B /* MainTabCapsule.swift in Sources */,
 				CA61CEB52CE0A0C3007BCF4E /* BasicEconomy11View.swift in Sources */,
 				CAACDE2D2CB8BBBA004234FF /* LottieRouter.swift in Sources */,
+				CAD255FC2CE6DE3C008E7788 /* PriceLevel7View.swift in Sources */,
 				CA9BB9D42CABA8C300886A1A /* SplashView.swift in Sources */,
 				CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */,
+				CAD255FE2CE6DE44008E7788 /* PriceLevel8View.swift in Sources */,
 				CAD101E42CB6959D00CA9C6A /* StudyingCourse.swift in Sources */,
 				CA17FC832CB00AD50050250B /* ProfileView.swift in Sources */,
 				CA9BB9CC2CABA59A00886A1A /* ContentView.swift in Sources */,
@@ -1340,6 +1358,7 @@
 				CA4E71AB2CB78DE900BAA70C /* CourseIntroView.swift in Sources */,
 				CAC86FDB2CE2E6C200785D4F /* ProfileViewModel.swift in Sources */,
 				CA17FC772CB009680050250B /* TitleColor.swift in Sources */,
+				CAD256022CE6DE50008E7788 /* PriceLevel10View.swift in Sources */,
 				CA114FD72CB62D2A00AD5AD9 /* CourseListViewModel.swift in Sources */,
 				CA114FDA2CB62E7D00AD5AD9 /* NavigationTitleModifier.swift in Sources */,
 				CAE4C1E52CDE3F5400CDD0CF /* BasicEconomy9View.swift in Sources */,
@@ -1352,6 +1371,7 @@
 				CA92DDBB2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift in Sources */,
 				CA3BBAAE2CB50144007CA152 /* BasicSignupViewModel.swift in Sources */,
 				CA08F3A02CB839600093117E /* PriceLevel5View.swift in Sources */,
+				CAD256002CE6DE4B008E7788 /* PriceLevel9View.swift in Sources */,
 				CA47D3A92CD686B9009FCE4F /* LottieViewConverter.swift in Sources */,
 				CA9BB9D72CABA94400886A1A /* MainTabView.swift in Sources */,
 				CA17FC8A2CB01E820050250B /* CornerRadius.swift in Sources */,

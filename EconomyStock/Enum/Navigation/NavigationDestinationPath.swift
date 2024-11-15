@@ -35,4 +35,9 @@ enum NavigationDestinationPath: Hashable {
     case PriceLevel3View(CourseViewModel)
     case PriceLevel4View(CourseViewModel)
     case PriceLevel5View(CourseViewModel)
+    case PriceLevel6View(CourseViewModel)
+    case PriceLevel7View(CourseViewModel)
+    case PriceLevel8View(CourseViewModel)
+    case PriceLevel9View(CourseViewModel)
+    case PriceLevel10View(CourseViewModel)
 }

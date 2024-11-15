@@ -219,7 +219,7 @@ struct PriceLevel5View: View {
                                     UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
                                     
                                     viewModel.currentPage += 1
-                                    navigationRouter.navigate(.BasicEconomy10View(viewModel))
+                                    navigationRouter.navigate(.PriceLevel6View(viewModel))
                                 } label: {
                                     LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
@@ -311,6 +311,8 @@ struct PriceLevel5View: View {
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                             withAnimation(.smooth(duration: 1.0)) {
                                                 nextButton = true
+                                                
+                                                proxy.scrollTo("bottom", anchor: .top)
                                                 
                                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                                     withAnimation(.smooth(duration: 1.0)) {

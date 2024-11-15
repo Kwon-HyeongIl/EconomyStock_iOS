@@ -1,22 +1,24 @@
 //
-//  BasicEconomyPage4.swift
+//  PriceLevel6View.swift
 //  EconomyStock
 //
-//  Created by 권형일 on 10/10/24.
+//  Created by 권형일 on 11/15/24.
 //
 
 import SwiftUI
 
-struct BasicEconomy4View: View {
+struct PriceLevel6View: View {
     @Environment(NavigationRouter.self) var navigationRouter
     @Bindable var viewModel: CourseViewModel
     
     @State private var progress: [Int] = []
     
-    @State private var nextScrollPart = false
-    @State private var building = false
+    @State private var contentImage1 = false
+    @State private var nextScrollPart1 = false
+    @State private var contentImage2 = false
     @State private var bubble = false
     @State private var bubbleContent = false
+    @State private var nextScrollPart2 = false
     
     @State private var questionMark = false
     @State private var questionMarkContent = false
@@ -37,7 +39,7 @@ struct BasicEconomy4View: View {
                                 .padding(.leading, 30)
                                 .padding(.bottom, 3)
                             
-                            Text("GDP (국내총생산)")
+                            Text("물가의 변동")
                                 .font(.system(size: 25))
                                 .fontWeight(.bold)
                             
@@ -47,145 +49,107 @@ struct BasicEconomy4View: View {
                         .padding(.top)
                         
                         HStack {
-                            VStack(spacing: 5) {
-                                Text("소비지출")
-                                    .font(.system(size: 15))
-                                    .fontWeight(.semibold)
-                                    .opacity(0.2)
-                                
-                                Text("C")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.semibold)
-                                    .opacity(0.2)
-                            }
-                            
-                            Text("+")
-                                .font(.system(size: 20))
+                            Text("스태그 플레이션")
+                                .font(.system(size: 22))
                                 .fontWeight(.semibold)
-                                .padding(.bottom, 10)
-                                .opacity(0.2)
+                                .padding(.leading, 30)
                             
-                            VStack(spacing: 5) {
-                                Text("투자지출")
-                                    .font(.system(size: 15))
-                                    .fontWeight(.bold)
-                                    .foregroundStyle(Color.ESTitle)
-                                
-                                Text("I")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.bold)
-                                    .foregroundStyle(Color.ESTitle)
-                            }
-                            
-                            Text("+")
-                                .font(.system(size: 20))
-                                .fontWeight(.semibold)
-                                .padding(.bottom, 10)
-                                .opacity(0.2)
-                            
-                            VStack(spacing: 5) {
-                                Text("정부지출")
-                                    .font(.system(size: 15))
-                                    .fontWeight(.semibold)
-                                
-                                Text("G")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.semibold)
-                            }
-                            .opacity(0.2)
-                            
-                            Text("+")
-                                .font(.system(size: 20))
-                                .fontWeight(.semibold)
-                                .padding(.bottom, 10)
-                                .opacity(0.2)
-                            
-                            VStack(spacing: 5) {
-                                Text("순수지출")
-                                    .font(.system(size: 15))
-                                    .fontWeight(.semibold)
-                                
-                                Text("(X-M)")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.semibold)
-                            }
-                            .opacity(0.2)
+                            Spacer()
                         }
                         .padding(.top, 5)
                         
                         ZStack {
                             if progress.count >= 1 {
-                                VStack(spacing: 10) {
-                                    HStack {
-                                        Text("2)")
-                                            .font(.system(size: 20))
-                                            .fontWeight(.semibold)
-                                            .padding(.leading, 30)
-                                        
-                                        Text("투자")
-                                            .font(.system(size: 20))
-                                            .fontWeight(.semibold)
-                                            .padding(.top, 4)
-                                        
-                                        Spacer()
-                                    }
-                                    .padding(.top, 5)
+                                VStack {
+                                    (Text("스태그 플레이션이란 ")
+                                    + Text("물가 상승")
+                                        .foregroundStyle(Color.ESTitle)
+                                        .fontWeight(.bold)
+                                    + Text("과")
+                                    + Text("경기 침체")
+                                        .foregroundStyle(Color.ESTitle)
+                                        .fontWeight(.bold)
+                                    + Text("가 공존하는 비정상적인 상황을 의미해요"))
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                        .multilineTextAlignment(.center)
+                                        .padding(.horizontal)
                                     
-                                    (Text("투자")
+                                    if contentImage1 {
+                                        LottieViewConverter(fileName: "PriceLevel5_PriceDown", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
+                                    }
+                                    
+                                    Spacer()
+                                }
+                            }
+                            
+                            Rectangle()
+                                .fill(.clear)
+                                .frame(width: 100, height: 200)
+                        }
+                        .padding(.top, 20)
+                        
+                        ZStack {
+                            if nextScrollPart1 {
+                                VStack(spacing: 0) {
+                                    (Text("디플레이션은 ")
+                                     + Text("기업의 수익성을 약화")
                                         .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
                                         .fontWeight(.bold)
-                                     + Text("는 주로 기업부문에서 이루어지며, 이자율과 반비례해요"))
+                                     + Text("시키고, 이는 기업의 고용과 투자를 감소시켜요"))
                                     .font(.system(size: 20))
                                     .fontWeight(.semibold)
                                     .multilineTextAlignment(.center)
                                     .padding(.horizontal)
-                                    .padding(.top, 10)
-                                }
-                                .padding(.top)
-                            }
-                            
-                            Rectangle()
-                                .fill(.clear)
-                                .frame(width: 100, height: 120)
-                        }
-                        
-                        ZStack {
-                            if nextScrollPart {
-                                VStack {
-                                    HStack {
-                                        if building {
-                                            LottieViewConverter(fileName: "BasicEconomy4_Building", loopMode: .playOnce, toProgress: 0.5, width: 230, height: 230)
-                                        }
-                                        
-                                        Image("TeachingSad_Toktok")
-                                            .resizable()
-                                            .frame(width: 75, height: 70)
-                                            .padding(.top, 165)
-                                            .scaleEffect(x: -1, y: 1, anchor: .center)
-                                    }
                                     
-                                    if bubble {
-                                        ZStack {
-                                            LottieViewConverter(fileName: "Bubble", loopMode: .playOnce, scale: 3.0, width: 200, height: 200)
-                                                .scaleEffect(x: -1, y: -1, anchor: .center)
-                                                .padding(.top, 25)
+                                    if contentImage2 {
+                                        HStack {
+                                            Image("Crying_Toktok")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 70)
+                                                .padding(.top, 220)
                                             
-                                            if bubbleContent {
-                                                Text("금리가 너무 많이 올라\n돈을 빌리기가 어려워...\n진행하려던 프로젝트의 수익률도\n높은 편이 아니라서 프로젝트를\n진행할 바엔 은행에 저축해서\n이자를 받는게 낫겠네...")
-                                                    .font(.system(size: 13))
-                                                    .fontWeight(.semibold)
-                                                    .multilineTextAlignment(.center)
-                                                    .padding(.top, 35)
-                                                    .padding(.trailing, 5)
+                                            if bubble {
+                                                ZStack {
+                                                    LottieViewConverter(fileName: "Bubble", loopMode: .playOnce, scale: 3.0, width: 160, height: 160)
+                                                    
+                                                    if bubbleContent {
+                                                        Text("작년에는 사과를 이 정도 팔아서 100만원은 벌었는데, 올해는 80만원 밖에 못벌었네...")
+                                                            .font(.system(size: 13))
+                                                            .fontWeight(.semibold)
+                                                            .multilineTextAlignment(.center)
+                                                            .frame(width: 130)
+                                                            .padding(.leading, 5)
+                                                    }
+                                                }
                                             }
                                         }
                                     }
+                                    
+                                    Spacer()
                                 }
                             }
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 500)
+                                .frame(width: 100, height: 400)
+                        }
+                        .padding(.top, 80)
+                        
+                        ZStack {
+                            if nextScrollPart2 {
+                                Text("고용의 감소는 소비자들의 소득의 감소로 이어지게 되며, 소비자들은 미래의 물가가 더 크게 하락할 것을 기대하며 현재의 소비를 줄이고, 이는 경제에 손실을 입혀요")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal)
+                            }
+                            
+                            Rectangle()
+                                .fill(.clear)
+                                .frame(width: 100, height: 150)
+                                .id("middle")
                         }
                         
                         ZStack {
@@ -195,7 +159,7 @@ struct BasicEconomy4View: View {
                                         LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
                                             .padding(.leading, 10)
                                         
-                                        Text("투자란?")
+                                        Text("물가가 하락하는데 왜 기업의 수익성이 악화될까요?")
                                             .font(.system(size: 15))
                                             .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
                                             .fontWeight(.semibold)
@@ -210,9 +174,9 @@ struct BasicEconomy4View: View {
                                                 .fontWeight(.semibold)
                                                 .foregroundStyle(.black.opacity(0.6))
                                                 .padding(.leading, 20)
-                                                .padding(.bottom, 70)
+                                                .padding(.bottom, 68)
                                             
-                                            Text("경제화에서 투자란 기업이 사업을 시행하거나 토지, 건물, 기계 등을 구입하기 위해 지출하는 행위로, 시세차익을 얻기 위해 행하는 주식 투자의 개념과 달라요.")
+                                            Text("물가가 하락하더라도 기업이 해외에서 수입을 해 올 원자재의 가격은 하락하지 않으며, 기업의 차입금 또한 물가가 하락한다고 해서 감소하는 것이 아니므로 수익성이 악화되어요.")
                                                 .font(.system(size: 15))
                                                 .fontWeight(.semibold)
                                                 .foregroundStyle(.black.opacity(0.6))
@@ -227,7 +191,6 @@ struct BasicEconomy4View: View {
                                 .clipShape(RoundedRectangle(cornerRadius: 20))
                                 .padding(.horizontal)
                                 .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
-                                .padding(.top, 30)
                                 .onTapGesture {
                                     withAnimation(.smooth(duration: 0.7)) {
                                         questionMarkContent.toggle()
@@ -250,7 +213,7 @@ struct BasicEconomy4View: View {
                         
                         Rectangle()
                             .fill(.clear)
-                            .frame(width: 300, height: 90)
+                            .frame(width: 100, height: 85)
                             .id("bottom")
                     }
                     
@@ -264,7 +227,7 @@ struct BasicEconomy4View: View {
                                     UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
                                     
                                     viewModel.currentPage += 1
-                                    navigationRouter.navigate(.BasicEconomy5View(viewModel))
+                                    navigationRouter.navigate(.BasicEconomy10View(viewModel))
                                 } label: {
                                     LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
@@ -298,52 +261,72 @@ struct BasicEconomy4View: View {
             .contentShape(Rectangle())
             .onTapGesture {
                 withAnimation(.smooth(duration: 1.0)) {
-                    if progress.count < 3 {
+                    if progress.count < 4 {
                         progress.append(1)
                     }
                     
+                    if progress.count == 1 {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            withAnimation(.smooth(duration: 1.0)) {
+                                contentImage1 = true
+                            }
+                        }
+                    }
+                    
                     if progress.count == 2 {
+                        withAnimation {
+                            proxy.scrollTo("middle", anchor: .bottom)
+                        }
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            withAnimation(.smooth(duration: 1.0)) {
+                                nextScrollPart1 = true
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                    withAnimation(.smooth(duration: 1.0)) {
+                                        contentImage2 = true
+                                        
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                            withAnimation(.smooth(duration: 1.0)) {
+                                                bubble = true
+                                                
+                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                                    withAnimation(.smooth(duration: 1.0)) {
+                                                        bubbleContent = true
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    if progress.count == 3 {
                         withAnimation {
                             proxy.scrollTo("bottom", anchor: .top)
                         }
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                             withAnimation(.smooth(duration: 1.0)) {
-                                nextScrollPart = true
+                                nextScrollPart2 = true
                                 
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    withAnimation(.smooth(duration: 1.0)) {
-                                        building = true
-                                    }
-                                }
-                                
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                                    withAnimation(.smooth(duration: 1.0)) {
-                                        bubble = true
-                                        
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                            withAnimation(.smooth(duration: 1.0)) {
-                                                bubbleContent = true
-                                            }
-                                        }
-                                    }
-                                }
-                                
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                     withAnimation(.smooth(duration: 1.0)) {
                                         questionMark = true
-                                    }
-                                }
-                                
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
-                                    withAnimation(.smooth(duration: 1.0)) {
-                                        nextButton = true
                                         
-                                        proxy.scrollTo("bottom", anchor: .top)
-                                        
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                             withAnimation(.smooth(duration: 1.0)) {
-                                                beforeButton = true
+                                                nextButton = true
+                                                
+                                                proxy.scrollTo("bottom", anchor: .top)
+                                                
+                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                                    withAnimation(.smooth(duration: 1.0)) {
+                                                        beforeButton = true
+                                                    }
+                                                }
                                             }
                                         }
                                     }
@@ -358,7 +341,7 @@ struct BasicEconomy4View: View {
 }
 
 #Preview {
-    BasicEconomy4View(viewModel: CourseViewModel(course: .DUMMY_COURSE))
+    PriceLevel6View(viewModel: CourseViewModel(course: Course.DUMMY_COURSE))
         .environment(NavigationRouter())
         .environment(CourseListViewCapsule())
 }

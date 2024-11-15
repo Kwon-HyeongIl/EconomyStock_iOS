@@ -62,6 +62,16 @@ class NavigationRouter {
             PriceLevel4View(viewModel: viewModel)
         case .PriceLevel5View(let viewModel):
             PriceLevel5View(viewModel: viewModel)
+        case .PriceLevel6View(let viewModel):
+            PriceLevel6View(viewModel: viewModel)
+        case .PriceLevel7View(let viewModel):
+            PriceLevel7View(viewModel: viewModel)
+        case .PriceLevel8View(let viewModel):
+            PriceLevel8View(viewModel: viewModel)
+        case .PriceLevel9View(let viewModel):
+            PriceLevel9View(viewModel: viewModel)
+        case .PriceLevel10View(let viewModel):
+            PriceLevel10View(viewModel: viewModel)
         }
     }
     

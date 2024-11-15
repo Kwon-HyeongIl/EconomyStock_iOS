@@ -78,12 +78,12 @@ struct PriceLevel3View: View {
                                                             .frame(width: 70)
                                                     }
                                                     
-                                                    LottieViewConverter(fileName: "PriceLevel3_PriceDown", loopMode: .playOnce, width: 150, height: 150)
+                                                    LottieViewConverter(fileName: "PriceLevel3_PriceDown", loopMode: .playOnce, scale: 1.3, width: 150, height: 150)
                                                 }
                                                 .opacity(progress.count >= 2 ? 0.4 : 1.0)
                                                 
                                                 if progress.count >= 2 {
-                                                    LottieViewConverter(fileName: "Warning", loopMode: .playOnce, width: 150, height: 150)
+                                                    LottieViewConverter(fileName: "Warning", loopMode: .playOnce, scale: 1.2, width: 120, height: 120)
                                                 }
                                             }
                                         }
@@ -95,7 +95,7 @@ struct PriceLevel3View: View {
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 300)
+                                .frame(width: 100, height: 400)
                         }
                         
                         ZStack {
@@ -128,9 +128,15 @@ struct PriceLevel3View: View {
                                         .fontWeight(.semibold)
                                         .multilineTextAlignment(.center)
                                         .padding(.horizontal)
+                                        .padding(.bottom)
                                     
                                     if contentImage2 {
-                                        LottieViewConverter(fileName: "PriceLevel3_BadFinance", loopMode: .playOnce, toProgress: 0.5, scale: 1.3, width: 150, height: 150)
+                                        ZStack {
+                                            LottieViewConverter(fileName: "BasicEconomy4_Building", loopMode: .playOnce, toProgress: 0.5, scale: 1.1, width: 150, height: 150)
+                                            
+                                            LottieViewConverter(fileName: "PriceLevel3_Rain", loopMode: .playOnce, speed: 0.7, width: 140, height: 140)
+                                                .padding(.bottom, 130)
+                                        }
                                     }
                                     
                                     Spacer()
@@ -139,7 +145,7 @@ struct PriceLevel3View: View {
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 300)
+                                .frame(width: 100, height: 400)
                         }
                         .padding(.top, 50)
                         
@@ -182,7 +188,6 @@ struct PriceLevel3View: View {
                                 .clipShape(RoundedRectangle(cornerRadius: 20))
                                 .padding(.horizontal)
                                 .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
-                                .padding(.top, 30)
                                 .onTapGesture {
                                     withAnimation(.smooth(duration: 0.7)) {
                                         questionMarkContent.toggle()
@@ -205,7 +210,7 @@ struct PriceLevel3View: View {
                         
                         Rectangle()
                             .fill(.clear)
-                            .frame(width: 100, height: 100)
+                            .frame(width: 100, height: 70)
                             .id("bottom")
                     }
                     
@@ -295,6 +300,8 @@ struct PriceLevel3View: View {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
                                     withAnimation(.smooth(duration: 1.0)) {
                                         nextButton = true
+                                        
+                                        proxy.scrollTo("bottom", anchor: .top)
                                         
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                             withAnimation(.smooth(duration: 1.0)) {
