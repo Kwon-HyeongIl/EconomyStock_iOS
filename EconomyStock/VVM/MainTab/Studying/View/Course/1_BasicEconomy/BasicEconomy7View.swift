@@ -124,6 +124,7 @@ struct BasicEconomy7View: View {
                                         
                                         Spacer()
                                     }
+                                    .padding(.top, questionMarkContent ? 5 : 0)
                                     
                                     if questionMarkContent {
                                         HStack(spacing: 5) {

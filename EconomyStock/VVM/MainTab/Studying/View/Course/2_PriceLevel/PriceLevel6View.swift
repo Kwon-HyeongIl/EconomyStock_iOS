@@ -13,15 +13,9 @@ struct PriceLevel6View: View {
     
     @State private var progress: [Int] = []
     
-    @State private var contentImage1 = false
-    @State private var nextScrollPart1 = false
-    @State private var contentImage2 = false
-    @State private var bubble = false
-    @State private var bubbleContent = false
-    @State private var nextScrollPart2 = false
-    
-    @State private var questionMark = false
-    @State private var questionMarkContent = false
+    @State private var contentText1_2 = false
+    @State private var contentImage = false
+    @State private var nextScrollPart = false
     
     @State private var nextButton = false
     @State private var beforeButton = false
@@ -62,67 +56,44 @@ struct PriceLevel6View: View {
                             if progress.count >= 1 {
                                 VStack {
                                     (Text("스태그 플레이션이란 ")
-                                    + Text("물가 상승")
+                                     + Text("물가 상승")
                                         .foregroundStyle(Color.ESTitle)
                                         .fontWeight(.bold)
-                                    + Text("과")
-                                    + Text("경기 침체")
+                                     + Text("과")
+                                     + Text("경기 침체")
                                         .foregroundStyle(Color.ESTitle)
                                         .fontWeight(.bold)
-                                    + Text("가 공존하는 비정상적인 상황을 의미해요"))
-                                        .font(.system(size: 20))
-                                        .fontWeight(.semibold)
-                                        .multilineTextAlignment(.center)
-                                        .padding(.horizontal)
-                                    
-                                    if contentImage1 {
-                                        LottieViewConverter(fileName: "PriceLevel5_PriceDown", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
-                                    }
-                                    
-                                    Spacer()
-                                }
-                            }
-                            
-                            Rectangle()
-                                .fill(.clear)
-                                .frame(width: 100, height: 200)
-                        }
-                        .padding(.top, 20)
-                        
-                        ZStack {
-                            if nextScrollPart1 {
-                                VStack(spacing: 0) {
-                                    (Text("디플레이션은 ")
-                                     + Text("기업의 수익성을 약화")
-                                        .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
-                                        .fontWeight(.bold)
-                                     + Text("시키고, 이는 기업의 고용과 투자를 감소시켜요"))
+                                     + Text("가 공존하는 비정상적인 상황을 의미해요"))
                                     .font(.system(size: 20))
                                     .fontWeight(.semibold)
                                     .multilineTextAlignment(.center)
                                     .padding(.horizontal)
                                     
-                                    if contentImage2 {
+                                    
+                                    if contentText1_2 {
+                                        Text("일반적으로는 물가 상승과 경기 과열이 함께 발생하며, 물가의 하락과 경기 침체가 함께 발생해요")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.semibold)
+                                            .multilineTextAlignment(.center)
+                                            .padding(.horizontal)
+                                            .padding(.top, 30)
+                                    }
+                                    
+                                    if contentImage {
                                         HStack {
-                                            Image("Crying_Toktok")
-                                                .resizable()
-                                                .scaledToFit()
-                                                .frame(width: 70)
-                                                .padding(.top, 220)
+                                            LottieViewConverter(fileName: "PriceLevel4_PriceUp", loopMode: .playOnce, scale: 1.1, width: 150, height: 150)
                                             
-                                            if bubble {
-                                                ZStack {
-                                                    LottieViewConverter(fileName: "Bubble", loopMode: .playOnce, scale: 3.0, width: 160, height: 160)
-                                                    
-                                                    if bubbleContent {
-                                                        Text("작년에는 사과를 이 정도 팔아서 100만원은 벌었는데, 올해는 80만원 밖에 못벌었네...")
-                                                            .font(.system(size: 13))
-                                                            .fontWeight(.semibold)
-                                                            .multilineTextAlignment(.center)
-                                                            .frame(width: 130)
-                                                            .padding(.leading, 5)
-                                                    }
-                                                }
+                                            Text("+")
+                                                .font(.system(size: 40))
+                                                .fontWeight(.bold)
+                                                .foregroundStyle(Color.ESTitle)
+                                                .padding(.trailing, 12)
+                                            
+                                            ZStack {
+                                                LottieViewConverter(fileName: "BasicEconomy4_Building", loopMode: .playOnce, toProgress: 0.5, width: 120, height: 120)
+                                                
+                                                LottieViewConverter(fileName: "PriceLevel3_Rain", loopMode: .playOnce, speed: 0.7, width: 100, height: 100)
+                                                    .padding(.bottom, 110)
                                             }
                                         }
                                     }
@@ -135,11 +106,11 @@ struct PriceLevel6View: View {
                                 .fill(.clear)
                                 .frame(width: 100, height: 400)
                         }
-                        .padding(.top, 80)
+                        .padding(.top, 20)
                         
                         ZStack {
-                            if nextScrollPart2 {
-                                Text("고용의 감소는 소비자들의 소득의 감소로 이어지게 되며, 소비자들은 미래의 물가가 더 크게 하락할 것을 기대하며 현재의 소비를 줄이고, 이는 경제에 손실을 입혀요")
+                            if nextScrollPart {
+                                Text("스태그 플레이션은 인플레이션 또는 디플레이션과 달리 예측이 어렵고, 대처가 쉽지 않다는 특징이 있어요")
                                     .font(.system(size: 20))
                                     .fontWeight(.semibold)
                                     .multilineTextAlignment(.center)
@@ -148,72 +119,13 @@ struct PriceLevel6View: View {
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 150)
-                                .id("middle")
+                                .frame(width: 100, height: 200)
                         }
-                        
-                        ZStack {
-                            if questionMark {
-                                VStack {
-                                    HStack(spacing: 5) {
-                                        LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
-                                            .padding(.leading, 10)
-                                        
-                                        Text("물가가 하락하는데 왜 기업의 수익성이 악화될까요?")
-                                            .font(.system(size: 15))
-                                            .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
-                                            .fontWeight(.semibold)
-                                        
-                                        Spacer()
-                                    }
-                                    
-                                    if questionMarkContent {
-                                        HStack(spacing: 5) {
-                                            Text(":")
-                                                .font(.system(size: 15))
-                                                .fontWeight(.semibold)
-                                                .foregroundStyle(.black.opacity(0.6))
-                                                .padding(.leading, 20)
-                                                .padding(.bottom, 68)
-                                            
-                                            Text("물가가 하락하더라도 기업이 해외에서 수입을 해 올 원자재의 가격은 하락하지 않으며, 기업의 차입금 또한 물가가 하락한다고 해서 감소하는 것이 아니므로 수익성이 악화되어요.")
-                                                .font(.system(size: 15))
-                                                .fontWeight(.semibold)
-                                                .foregroundStyle(.black.opacity(0.6))
-                                                .padding(.bottom, 10)
-                                            
-                                            Spacer()
-                                        }
-                                    }
-                                }
-                                .frame(maxWidth: .infinity)
-                                .background(.purple.opacity(0.1))
-                                .clipShape(RoundedRectangle(cornerRadius: 20))
-                                .padding(.horizontal)
-                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
-                                .onTapGesture {
-                                    withAnimation(.smooth(duration: 0.7)) {
-                                        questionMarkContent.toggle()
-                                        
-                                        if questionMarkContent {
-                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                                withAnimation {
-                                                    proxy.scrollTo("bottom", anchor: .bottom)
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            
-                            Rectangle()
-                                .fill(.clear)
-                                .frame(width: 100, height: 100)
-                        }
+                        .padding(.top, 30)
                         
                         Rectangle()
                             .fill(.clear)
-                            .frame(width: 100, height: 85)
+                            .frame(width: 100, height: 70)
                             .id("bottom")
                     }
                     
@@ -227,7 +139,7 @@ struct PriceLevel6View: View {
                                     UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
                                     
                                     viewModel.currentPage += 1
-                                    navigationRouter.navigate(.BasicEconomy10View(viewModel))
+                                    navigationRouter.navigate(.PriceLevel7View(viewModel))
                                 } label: {
                                     LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
@@ -266,67 +178,37 @@ struct PriceLevel6View: View {
                     }
                     
                     if progress.count == 1 {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                             withAnimation(.smooth(duration: 1.0)) {
-                                contentImage1 = true
-                            }
-                        }
-                    }
-                    
-                    if progress.count == 2 {
-                        withAnimation {
-                            proxy.scrollTo("middle", anchor: .bottom)
-                        }
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            withAnimation(.smooth(duration: 1.0)) {
-                                nextScrollPart1 = true
+                                contentText1_2 = true
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                     withAnimation(.smooth(duration: 1.0)) {
-                                        contentImage2 = true
-                                        
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                            withAnimation(.smooth(duration: 1.0)) {
-                                                bubble = true
-                                                
-                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                                    withAnimation(.smooth(duration: 1.0)) {
-                                                        bubbleContent = true
-                                                    }
-                                                }
-                                            }
-                                        }
+                                        contentImage = true
                                     }
                                 }
                             }
                         }
                     }
                     
-                    if progress.count == 3 {
+                    if progress.count == 2 {
                         withAnimation {
                             proxy.scrollTo("bottom", anchor: .top)
                         }
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                             withAnimation(.smooth(duration: 1.0)) {
-                                nextScrollPart2 = true
+                                nextScrollPart = true
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                     withAnimation(.smooth(duration: 1.0)) {
-                                        questionMark = true
+                                        nextButton = true
                                         
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                        proxy.scrollTo("bottom", anchor: .top)
+                                        
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                             withAnimation(.smooth(duration: 1.0)) {
-                                                nextButton = true
-                                                
-                                                proxy.scrollTo("bottom", anchor: .top)
-                                                
-                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                                    withAnimation(.smooth(duration: 1.0)) {
-                                                        beforeButton = true
-                                                    }
-                                                }
+                                                beforeButton = true
                                             }
                                         }
                                     }

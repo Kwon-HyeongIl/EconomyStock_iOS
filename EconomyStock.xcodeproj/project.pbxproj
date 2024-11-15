@@ -84,6 +84,7 @@
 		CA77DFD22CB26D0100992829 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77DFD12CB26D0100992829 /* CustomError.swift */; };
 		CA7AF56D2CE5F282006DA22F /* PriceLevel3_BubbleHeart.json in Resources */ = {isa = PBXBuildFile; fileRef = CA7AF56B2CE5F282006DA22F /* PriceLevel3_BubbleHeart.json */; };
 		CA7AF5702CE5FC83006DA22F /* Warning.json in Resources */ = {isa = PBXBuildFile; fileRef = CA7AF56F2CE5FC83006DA22F /* Warning.json */; };
+		CA89ABB32CE788AB0069B276 /* PriceLevel7_Product.json in Resources */ = {isa = PBXBuildFile; fileRef = CA89ABB22CE788AB0069B276 /* PriceLevel7_Product.json */; };
 		CA9246EB2CE114FB007AA018 /* CourseComplete.json in Resources */ = {isa = PBXBuildFile; fileRef = CA9246EA2CE114FB007AA018 /* CourseComplete.json */; };
 		CA92DDB32CB7D7A600A7D2A4 /* BasicEconomy1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDB22CB7D7A600A7D2A4 /* BasicEconomy1View.swift */; };
 		CA92DDB52CB7D7AF00A7D2A4 /* BasicEconomy2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDB42CB7D7AF00A7D2A4 /* BasicEconomy2View.swift */; };
@@ -233,6 +234,7 @@
 		CA7AF56B2CE5F282006DA22F /* PriceLevel3_BubbleHeart.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel3_BubbleHeart.json; sourceTree = "<group>"; };
 		CA7AF56F2CE5FC83006DA22F /* Warning.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Warning.json; sourceTree = "<group>"; };
 		CA83477C2CAAE28500BA1E4A /* EconomyStock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EconomyStock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA89ABB22CE788AB0069B276 /* PriceLevel7_Product.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel7_Product.json; sourceTree = "<group>"; };
 		CA9246EA2CE114FB007AA018 /* CourseComplete.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CourseComplete.json; sourceTree = "<group>"; };
 		CA92DDB22CB7D7A600A7D2A4 /* BasicEconomy1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy1View.swift; sourceTree = "<group>"; };
 		CA92DDB42CB7D7AF00A7D2A4 /* BasicEconomy2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy2View.swift; sourceTree = "<group>"; };
@@ -599,6 +601,7 @@
 				CA7AF56A2CE5F272006DA22F /* Page3 */,
 				CA9635562CE60896000E7B01 /* Page4 */,
 				CA0A66602CE6586000F8B050 /* Page5 */,
+				CA89ABB12CE788A10069B276 /* Page7 */,
 			);
 			path = PriceLevel;
 			sourceTree = "<group>";
@@ -779,6 +782,14 @@
 				CA83477C2CAAE28500BA1E4A /* EconomyStock.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CA89ABB12CE788A10069B276 /* Page7 */ = {
+			isa = PBXGroup;
+			children = (
+				CA89ABB22CE788AB0069B276 /* PriceLevel7_Product.json */,
+			);
+			path = Page7;
 			sourceTree = "<group>";
 		};
 		CA92DDB02CB7D5B900A7D2A4 /* Course */ = {
@@ -1265,6 +1276,7 @@
 				CAD256062CE6E734008E7788 /* PriceLevel3_PriceDown.json in Resources */,
 				CAF2C0402CD9C54C00D0E15D /* BasicEconomy10_Distribution.json in Resources */,
 				CA9BB9CF2CABA59A00886A1A /* .gitignore in Resources */,
+				CA89ABB32CE788AB0069B276 /* PriceLevel7_Product.json in Resources */,
 				CA6927192CDF8B64005F2A6B /* BasicEconomy6_MoneyStack.json in Resources */,
 				CA47D3AB2CD68909009FCE4F /* BasicEconomy1_Earth.json in Resources */,
 				CA712CA72CD65B30002E7276 /* BasicEconomy1_Home.json in Resources */,
