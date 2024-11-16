@@ -35,10 +35,16 @@ struct BasicEconomy11View: View {
                 ZStack {
                     ScrollView {
                         HStack {
+                            Text("3.")
+                                .font(.system(size: 35))
+                                .fontWeight(.bold)
+                                .foregroundStyle(Color.ESTitle)
+                                .padding(.leading, 30)
+                            
                             Text("마무리")
                                 .font(.system(size: 25))
                                 .fontWeight(.bold)
-                                .padding(.leading, 30)
+                                .padding(.top, 5)
                             
                             Spacer()
                         }
@@ -47,7 +53,7 @@ struct BasicEconomy11View: View {
                         Text("경제학이 지향하는 목표")
                             .font(.system(size: 20))
                             .fontWeight(.semibold)
-                            .padding(.top, 20)
+                            .padding(.top, 10)
                             .blur(radius: progress.count != 2 ? 0 : 10)
                         
                         if progress.count >= 1 {
@@ -148,7 +154,7 @@ struct BasicEconomy11View: View {
                                     }
                                 }
                             }
-                            .padding(.top, 60)
+                            .padding(.top, 50)
                         }
                     }
                     
@@ -316,6 +322,7 @@ struct BasicEconomy11View: View {
             $0
                 .animation(.spring(duration: 0.7))
                 .closeOnTapOutside(true)
+                .closeOnTap(false)
                 .backgroundColor(.gray.opacity(0.8))
         }
         .overlay {

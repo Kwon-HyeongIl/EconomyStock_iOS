@@ -106,6 +106,9 @@
 		CA9BB9E02CABAACF00886A1A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CA9BB9DF2CABAACF00886A1A /* FirebaseStorage */; };
 		CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */; };
 		CA9BB9E92CABB12700886A1A /* NavigationDestinationPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9E82CABB12700886A1A /* NavigationDestinationPath.swift */; };
+		CAAA24F82CE8425900F8C380 /* PriceLevel9_GDP.json in Resources */ = {isa = PBXBuildFile; fileRef = CAAA24F72CE8425900F8C380 /* PriceLevel9_GDP.json */; };
+		CAAA24FB2CE845C900F8C380 /* PriceLevel10_Balance.json in Resources */ = {isa = PBXBuildFile; fileRef = CAAA24FA2CE845C900F8C380 /* PriceLevel10_Balance.json */; };
+		CAAA24FD2CE84B2200F8C380 /* PriceLevel10_ScienceProgress.json in Resources */ = {isa = PBXBuildFile; fileRef = CAAA24FC2CE84B2200F8C380 /* PriceLevel10_ScienceProgress.json */; };
 		CAAA4B532CC9F2A00083F86C /* NavigationBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA4B522CC9F2A00083F86C /* NavigationBaseView.swift */; };
 		CAAA4B552CC9F2F70083F86C /* AisleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA4B542CC9F2F70083F86C /* AisleView.swift */; };
 		CAACDE2D2CB8BBBA004234FF /* LottieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACDE2C2CB8BBBA004234FF /* LottieRouter.swift */; };
@@ -253,6 +256,9 @@
 		CA9BB9D62CABA94400886A1A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		CA9BB9E82CABB12700886A1A /* NavigationDestinationPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestinationPath.swift; sourceTree = "<group>"; };
+		CAAA24F72CE8425900F8C380 /* PriceLevel9_GDP.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel9_GDP.json; sourceTree = "<group>"; };
+		CAAA24FA2CE845C900F8C380 /* PriceLevel10_Balance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel10_Balance.json; sourceTree = "<group>"; };
+		CAAA24FC2CE84B2200F8C380 /* PriceLevel10_ScienceProgress.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevel10_ScienceProgress.json; sourceTree = "<group>"; };
 		CAAA4B522CC9F2A00083F86C /* NavigationBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBaseView.swift; sourceTree = "<group>"; };
 		CAAA4B542CC9F2F70083F86C /* AisleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AisleView.swift; sourceTree = "<group>"; };
 		CAACDE2C2CB8BBBA004234FF /* LottieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieRouter.swift; sourceTree = "<group>"; };
@@ -602,6 +608,8 @@
 				CA9635562CE60896000E7B01 /* Page4 */,
 				CA0A66602CE6586000F8B050 /* Page5 */,
 				CA89ABB12CE788A10069B276 /* Page7 */,
+				CAAA24F62CE8424A00F8C380 /* Page9 */,
+				CAAA24F92CE845BF00F8C380 /* Page10 */,
 			);
 			path = PriceLevel;
 			sourceTree = "<group>";
@@ -921,6 +929,23 @@
 				CAEDDAC02CB570610046162D /* FocusField */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		CAAA24F62CE8424A00F8C380 /* Page9 */ = {
+			isa = PBXGroup;
+			children = (
+				CAAA24F72CE8425900F8C380 /* PriceLevel9_GDP.json */,
+			);
+			path = Page9;
+			sourceTree = "<group>";
+		};
+		CAAA24F92CE845BF00F8C380 /* Page10 */ = {
+			isa = PBXGroup;
+			children = (
+				CAAA24FA2CE845C900F8C380 /* PriceLevel10_Balance.json */,
+				CAAA24FC2CE84B2200F8C380 /* PriceLevel10_ScienceProgress.json */,
+			);
+			path = Page10;
 			sourceTree = "<group>";
 		};
 		CAB77FD52CB8EC1600DF11D6 /* Course */ = {
@@ -1263,8 +1288,11 @@
 				CA61CEBC2CE0BA32007BCF4E /* BasicEconomy10_MoneyDistribution.json in Resources */,
 				CA3F36B82CE4D45800FF871E /* PriceLevel1_PriceProduct.json in Resources */,
 				CA6927162CDF8A19005F2A6B /* Sweat.json in Resources */,
+				CAAA24FB2CE845C900F8C380 /* PriceLevel10_Balance.json in Resources */,
+				CAAA24FD2CE84B2200F8C380 /* PriceLevel10_ScienceProgress.json in Resources */,
 				CA47F57A2CD9359D00DCAFCF /* MainTab_News.json in Resources */,
 				CA6927122CDF7FDD005F2A6B /* ArrowRight.json in Resources */,
+				CAAA24F82CE8425900F8C380 /* PriceLevel9_GDP.json in Resources */,
 				CA7AF5702CE5FC83006DA22F /* Warning.json in Resources */,
 				CA5B3A5E2CD7B20000341E23 /* CourseCompleteButton.json in Resources */,
 				CA9246EB2CE114FB007AA018 /* CourseComplete.json in Resources */,
