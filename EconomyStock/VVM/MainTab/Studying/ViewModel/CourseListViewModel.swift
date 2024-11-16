@@ -14,6 +14,7 @@ class CourseListViewModel {
     init() {
         initBasicEconomyCourse()
         initPriceLevelCourse()
+        initUnEmploymentCourse()
     }
     
     // I 기초 경제
@@ -63,7 +64,7 @@ class CourseListViewModel {
         let currentUser = AuthManager.shared.currentUser
         
         let gradient = LinearGradient(
-            gradient: Gradient(colors: [.gray, .blue]),
+            gradient: Gradient(colors: [.blue, .cyan]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
@@ -75,7 +76,7 @@ class CourseListViewModel {
         let lastPage = currentUser?.studyingCourse.unEmploymentLastPage ?? 0
         
         DispatchQueue.main.async {
-            self.courses.append(Course(id: UUID().uuidString, type: .unEmployment, title: "실업", number: "III", lottieFileName: "UnEmplymentCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
+            self.courses.append(Course(id: UUID().uuidString, type: .unEmployment, title: "실업", number: "III", lottieFileName: "UnEmploymentCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
         }
     }
 
