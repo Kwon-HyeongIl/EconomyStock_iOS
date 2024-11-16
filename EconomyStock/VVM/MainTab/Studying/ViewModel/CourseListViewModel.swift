@@ -57,11 +57,33 @@ class CourseListViewModel {
             self.courses.append(Course(id: UUID().uuidString, type: .priceLevel, title: "물가", number: "II", lottieFileName: "PriceLevelCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
         }
     }
+    
+    // 실업
+    func initUnEmploymentCourse() {
+        let currentUser = AuthManager.shared.currentUser
+        
+        let gradient = LinearGradient(
+            gradient: Gradient(colors: [.gray, .blue]),
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
+        
+        let parmanentProgressPage = Double(currentUser?.studyingCourse.unEmploymentLastPage ?? 0)
+        let totalPage = 5.0
+        let progressRate = (parmanentProgressPage / totalPage) * 100.0
+        
+        let lastPage = currentUser?.studyingCourse.unEmploymentLastPage ?? 0
+        
+        DispatchQueue.main.async {
+            self.courses.append(Course(id: UUID().uuidString, type: .unEmployment, title: "실업", number: "III", lottieFileName: "UnEmplymentCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
+        }
+    }
 
     func updateAllCourses() {
         courses.removeAll()
         
         initBasicEconomyCourse()
         initPriceLevelCourse()
+        initUnEmploymentCourse()
     }
 }

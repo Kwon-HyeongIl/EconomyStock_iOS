@@ -78,6 +78,19 @@ struct CourseToolbarModifier: ViewModifier {
                         AuthManager.shared.currentUser?.studyingCourse.priceLevelLastPage = currentPage
                         
                         courseListViewCapule.isUpdate.toggle()
+                        
+                    case .unEmployment:
+                        if AuthManager.shared.currentUser?.studyingCourse.unEmploymentParmanentProgressPage ?? 0 < currentPage {
+                            AuthManager.shared.currentUser?.studyingCourse.unEmploymentParmanentProgressPage = currentPage
+                            
+                            Task {
+                                await AuthManager.shared.updateCourseParmanentProgressPage(courseType: viewModel.course.type, parmanentProgressPage: currentPage)
+                            }
+                        }
+                        
+                        AuthManager.shared.currentUser?.studyingCourse.unEmploymentLastPage = currentPage
+                        
+                        courseListViewCapule.isUpdate.toggle()
                     }
                     
                     // DB User의 lastPage 값 바꾸기

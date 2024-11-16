@@ -29,6 +29,7 @@ class NavigationRouter {
         case .CourseIntroView(let viewModel):
             CourseIntroView(viewModel: viewModel)
         
+            // 기초 경제
         case .BasicEconomy1View(let viewModel):
             BasicEconomy1View(viewModel: viewModel)
         case .BasicEconomy2View(let viewModel):
@@ -52,6 +53,7 @@ class NavigationRouter {
         case .BasicEconomy11View(let viewModel):
             BasicEconomy11View(viewModel: viewModel)
             
+            // 물가
         case .PriceLevel1View(let viewModel):
             PriceLevel1View(viewModel: viewModel)
         case .PriceLevel2View(let viewModel):
@@ -72,6 +74,24 @@ class NavigationRouter {
             PriceLevel9View(viewModel: viewModel)
         case .PriceLevel10View(let viewModel):
             PriceLevel10View(viewModel: viewModel)
+            
+            // 실업
+        case .UnEmployment1View(let viewModel):
+            UnEmployment1View(viewModel: viewModel)
+        case .UnEmployment2View(let viewModel):
+            UnEmployment2View(viewModel: viewModel)
+        case .UnEmployment3View(let viewModel):
+            UnEmployment3View(viewModel: viewModel)
+        case .UnEmployment4View(let viewModel):
+            UnEmployment4View(viewModel: viewModel)
+        case .UnEmployment5View(let viewModel):
+            UnEmployment5View(viewModel: viewModel)
+        case .UnEmployment6View(let viewModel):
+            UnEmployment6View(viewModel: viewModel)
+        case .UnEmployment7View(let viewModel):
+            UnEmployment7View(viewModel: viewModel)
+        case .UnEmployment8View(let viewModel):
+            UnEmployment8View(viewModel: viewModel)
         }
     }
     

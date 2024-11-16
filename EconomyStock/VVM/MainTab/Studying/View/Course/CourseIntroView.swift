@@ -56,6 +56,17 @@ struct CourseIntroView: View {
                             } else {
                                 alertAskStartContinue = true
                             }
+                            
+                        case .unEmployment:
+                            if viewModel.course.lastPage == 0 {
+                                navigationRouter.navigate(.UnEmployment1View(viewModel))
+                                
+                            } else if viewModel.course.lastPage == 5 {
+                                alertFinishing = true
+                                
+                            } else {
+                                alertAskStartContinue = true
+                            }
                         }
                         
                     } label: {
@@ -113,6 +124,87 @@ struct CourseIntroView: View {
                                     
                                     navigationRouter.navigate(.BasicEconomy5View(viewModel))
                                     
+                                case 6:
+                                    viewModel.currentPage = 6
+                                    
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy1View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy2View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy3View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy4View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy5View(viewModel))
+                                    
+                                    navigationRouter.navigate(.BasicEconomy6View(viewModel))
+                                    
+                                case 7:
+                                    viewModel.currentPage = 7
+                                    
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy1View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy2View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy3View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy4View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy5View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy6View(viewModel))
+                                    
+                                    navigationRouter.navigate(.BasicEconomy7View(viewModel))
+                                    
+                                case 8:
+                                    viewModel.currentPage = 8
+                                    
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy1View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy2View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy3View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy4View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy5View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy6View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy7View(viewModel))
+                                    
+                                    navigationRouter.navigate(.BasicEconomy8View(viewModel))
+                                    
+                                case 9:
+                                    viewModel.currentPage = 9
+                                    
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy1View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy2View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy3View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy4View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy5View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy6View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy7View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy8View(viewModel))
+                                    
+                                    navigationRouter.navigate(.BasicEconomy9View(viewModel))
+                                    
+                                case 10:
+                                    viewModel.currentPage = 10
+                                    
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy1View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy2View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy3View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy4View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy5View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy6View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy7View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy8View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy9View(viewModel))
+                                    
+                                    navigationRouter.navigate(.BasicEconomy10View(viewModel))
+                                    
+                                case 11:
+                                    viewModel.currentPage = 11
+                                    
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy1View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy2View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy3View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy4View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy5View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy6View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy7View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy8View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy9View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.BasicEconomy10View(viewModel))
+                                    
+                                    navigationRouter.navigate(.BasicEconomy11View(viewModel))
+                                    
                                 default:
                                     navigationRouter.navigate(.BasicEconomy1View(viewModel))
                                 }
@@ -157,8 +249,153 @@ struct CourseIntroView: View {
                                     
                                     navigationRouter.navigate(.PriceLevel5View(viewModel))
                                     
+                                case 6:
+                                    viewModel.currentPage = 6
+                                    
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel1View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel2View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel3View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel4View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel5View(viewModel))
+                                    
+                                    navigationRouter.navigate(.PriceLevel6View(viewModel))
+                                    
+                                case 7:
+                                    viewModel.currentPage = 7
+                                    
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel1View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel2View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel3View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel4View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel5View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel6View(viewModel))
+                                    
+                                    navigationRouter.navigate(.PriceLevel7View(viewModel))
+                                    
+                                case 8:
+                                    viewModel.currentPage = 8
+                                    
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel1View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel2View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel3View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel4View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel5View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel6View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel7View(viewModel))
+                                    
+                                    navigationRouter.navigate(.PriceLevel8View(viewModel))
+                                    
+                                case 9:
+                                    viewModel.currentPage = 9
+                                    
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel1View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel2View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel3View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel4View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel5View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel6View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel7View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel8View(viewModel))
+                                    
+                                    navigationRouter.navigate(.PriceLevel9View(viewModel))
+                                    
+                                case 10:
+                                    viewModel.currentPage = 10
+                                    
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel1View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel2View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel3View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel4View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel5View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel6View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel7View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel8View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.PriceLevel9View(viewModel))
+                                    
+                                    navigationRouter.navigate(.PriceLevel10View(viewModel))
+                                    
                                 default:
                                     navigationRouter.navigate(.PriceLevel1View(viewModel))
+                                }
+                                
+                            case .unEmployment:
+                                switch viewModel.course.lastPage {
+                                    
+                                case 1:
+                                    navigationRouter.navigate(.UnEmployment1View(viewModel))
+                                    
+                                case 2:
+                                    viewModel.currentPage = 2
+                                    
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment1View(viewModel))
+                                    
+                                    navigationRouter.navigate(.UnEmployment2View(viewModel))
+                                    
+                                case 3:
+                                    viewModel.currentPage = 3
+                                    
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment1View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment2View(viewModel))
+                                    
+                                    navigationRouter.navigate(.UnEmployment3View(viewModel))
+                                    
+                                case 4:
+                                    viewModel.currentPage = 4
+                                    
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment1View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment2View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment3View(viewModel))
+                                    
+                                    navigationRouter.navigate(.UnEmployment4View(viewModel))
+                                    
+                                case 5:
+                                    viewModel.currentPage = 5
+                                    
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment1View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment2View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment3View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment4View(viewModel))
+                                    
+                                    navigationRouter.navigate(.UnEmployment5View(viewModel))
+                                    
+                                case 6:
+                                    viewModel.currentPage = 6
+                                    
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment1View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment2View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment3View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment4View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment5View(viewModel))
+                                    
+                                    navigationRouter.navigate(.UnEmployment6View(viewModel))
+                                    
+                                case 7:
+                                    viewModel.currentPage = 7
+                                    
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment1View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment2View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment3View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment4View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment5View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment6View(viewModel))
+                                    
+                                    navigationRouter.navigate(.UnEmployment7View(viewModel))
+                                    
+                                case 8:
+                                    viewModel.currentPage = 8
+                                    
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment1View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment2View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment3View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment4View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment5View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment6View(viewModel))
+                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment7View(viewModel))
+                                    
+                                    navigationRouter.navigate(.UnEmployment8View(viewModel))
+                                    
+                                default:
+                                    navigationRouter.navigate(.UnEmployment1View(viewModel))
                                 }
                             }
                         } label: {
@@ -181,6 +418,8 @@ struct CourseIntroView: View {
                                 navigationRouter.navigate(.BasicEconomy1View(viewModel))
                             case .priceLevel:
                                 navigationRouter.navigate(.PriceLevel1View(viewModel))
+                            case .unEmployment:
+                                navigationRouter.navigate(.UnEmployment1View(viewModel))
                             }
                         } label: {
                             Text("확인")
@@ -202,6 +441,8 @@ struct CourseIntroView: View {
                                 navigationRouter.navigate(.BasicEconomy1View(viewModel))
                             case .priceLevel:
                                 navigationRouter.navigate(.PriceLevel1View(viewModel))
+                            case .unEmployment:
+                                navigationRouter.navigate(.UnEmployment1View(viewModel))
                             }
                         } label: {
                             Text("확인")
@@ -227,6 +468,14 @@ struct CourseIntroView: View {
                             
                         case .priceLevel:
                             Text("물가 안정은 경제성장과 더불어 정부 정책이 지향해야할 가장 중요한 목표 중 하나에요.\n\n이번 시간에는 물가가 무엇인지, 인플레이션과 디플레이션, 그리고 물가측정지표에 대해 알아보아요.")
+                                .font(.system(size: 18))
+                                .fontWeight(.semibold)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal, 20)
+                                .padding(.top)
+                            
+                        case .unEmployment:
+                            Text("경제학이 지향하는 경제 성장이라는 목표는 실업의 감소라고도 볼 수 있어요.\n\n이번 시간에는 실업의 의미에 대해 알아보아요.")
                                 .font(.system(size: 18))
                                 .fontWeight(.semibold)
                                 .multilineTextAlignment(.center)

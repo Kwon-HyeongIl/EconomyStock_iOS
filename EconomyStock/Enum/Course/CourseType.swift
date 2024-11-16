@@ -10,4 +10,5 @@ import Foundation
 enum CourseType {
     case basicEconomy
     case priceLevel
+    case unEmployment
 }

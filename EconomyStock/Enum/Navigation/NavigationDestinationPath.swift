@@ -18,6 +18,7 @@ enum NavigationDestinationPath: Hashable {
     // Studying
     case CourseIntroView(CourseViewModel)
     
+        // 기초 경제
     case BasicEconomy1View(CourseViewModel)
     case BasicEconomy2View(CourseViewModel)
     case BasicEconomy3View(CourseViewModel)
@@ -30,6 +31,7 @@ enum NavigationDestinationPath: Hashable {
     case BasicEconomy10View(CourseViewModel)
     case BasicEconomy11View(CourseViewModel)
     
+        // 물가
     case PriceLevel1View(CourseViewModel)
     case PriceLevel2View(CourseViewModel)
     case PriceLevel3View(CourseViewModel)
@@ -40,4 +42,14 @@ enum NavigationDestinationPath: Hashable {
     case PriceLevel8View(CourseViewModel)
     case PriceLevel9View(CourseViewModel)
     case PriceLevel10View(CourseViewModel)
+    
+        // 실업
+    case UnEmployment1View(CourseViewModel)
+    case UnEmployment2View(CourseViewModel)
+    case UnEmployment3View(CourseViewModel)
+    case UnEmployment4View(CourseViewModel)
+    case UnEmployment5View(CourseViewModel)
+    case UnEmployment6View(CourseViewModel)
+    case UnEmployment7View(CourseViewModel)
+    case UnEmployment8View(CourseViewModel)
 }
