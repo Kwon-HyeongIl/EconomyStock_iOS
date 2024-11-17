@@ -80,7 +80,13 @@ struct UnEmployment1View: View {
                                 .padding(.vertical, 5)
                                 .padding(.bottom, 5)
                             
+                            /*
+                             matchedGeometryEffect 수정자를 사용할 때, 뷰에 padding이 적용되어 있으면
+                             애니메이션 과정에서 끊김이 발생하므로 Spacer로 간격 조절
+                             */
                             HStack(spacing: 30) {
+                                Spacer()
+                                
                                 Text("그 외")
                                     .font(.system(size: 18))
                                     .fontWeight(.semibold)
@@ -92,7 +98,9 @@ struct UnEmployment1View: View {
                                             .foregroundStyle(Color.ESTitle)
                                         
                                     }
-                                    .padding(.leading, 25)
+                                    .padding(.leading, 30)
+                                
+                                Spacer()
                                 
                                 Text("생산 가능 인구")
                                     .font(.system(size: 18))
@@ -105,8 +113,9 @@ struct UnEmployment1View: View {
                                             .foregroundStyle(Color.ESTitle)
                                         
                                     }
-                                    .padding(.leading, progress.count == 1 ? 65 : 0)
                                     .matchedGeometryEffect(id: "animation1", in: animation)
+                                
+                                Spacer()
                             }
                         }
                     }
@@ -148,6 +157,8 @@ struct UnEmployment1View: View {
                                 .padding(.bottom, 5)
                             
                             HStack(spacing: 30) {
+                                Spacer()
+                                
                                 Text("비경제 활동 인구")
                                     .font(.system(size: 18))
                                     .fontWeight(.semibold)
@@ -160,6 +171,8 @@ struct UnEmployment1View: View {
                                         
                                     }
                                 
+                                Spacer()
+                                
                                 Text("경제 활동 인구")
                                     .font(.system(size: 18))
                                     .fontWeight(.semibold)
@@ -171,8 +184,9 @@ struct UnEmployment1View: View {
                                             .foregroundStyle(Color.ESTitle)
                                         
                                     }
-                                    .padding(.leading, progress.count == 2 ? 15 : 0)
                                     .matchedGeometryEffect(id: "animation2", in: animation)
+                                
+                                Spacer()
                             }
                         }
                         
@@ -284,7 +298,7 @@ struct UnEmployment1View: View {
                             UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
                             
                             viewModel.currentPage += 1
-                            navigationRouter.navigate(.PriceLevel2View(viewModel))
+                            navigationRouter.navigate(.UnEmployment2View(viewModel))
                         } label: {
                             LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                 .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
