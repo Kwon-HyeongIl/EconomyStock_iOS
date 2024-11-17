@@ -166,6 +166,7 @@
 		CAEE16602CAD0D4D00210BD0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE165F2CAD0D4D00210BD0 /* LoginViewModel.swift */; };
 		CAEE16632CAD0D7200210BD0 /* LoginViewModel+Kakao.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE16622CAD0D7200210BD0 /* LoginViewModel+Kakao.swift */; };
 		CAEE16652CAD0D7800210BD0 /* LoginViewModel+Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE16642CAD0D7800210BD0 /* LoginViewModel+Apple.swift */; };
+		CAEE84582CE9E554008F6DFE /* UnEmployment3_CaffeWork.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEE84572CE9E554008F6DFE /* UnEmployment3_CaffeWork.json */; };
 		CAF2271D2CAE569B002868F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAF2271C2CAE569B002868F4 /* GoogleService-Info.plist */; };
 		CAF2C03E2CD9C54C00D0E15D /* BasicEconomy10_Payment.json in Resources */ = {isa = PBXBuildFile; fileRef = CAF2C03D2CD9C54C00D0E15D /* BasicEconomy10_Payment.json */; };
 		CAF2C03F2CD9C54C00D0E15D /* BasicEconomy10_Factory.json in Resources */ = {isa = PBXBuildFile; fileRef = CAF2C03C2CD9C54C00D0E15D /* BasicEconomy10_Factory.json */; };
@@ -325,6 +326,7 @@
 		CAEE165F2CAD0D4D00210BD0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CAEE16622CAD0D7200210BD0 /* LoginViewModel+Kakao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Kakao.swift"; sourceTree = "<group>"; };
 		CAEE16642CAD0D7800210BD0 /* LoginViewModel+Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Apple.swift"; sourceTree = "<group>"; };
+		CAEE84572CE9E554008F6DFE /* UnEmployment3_CaffeWork.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UnEmployment3_CaffeWork.json; sourceTree = "<group>"; };
 		CAF2271C2CAE569B002868F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAF2C03B2CD9C54C00D0E15D /* BasicEconomy10_Distribution.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy10_Distribution.json; sourceTree = "<group>"; };
 		CAF2C03C2CD9C54C00D0E15D /* BasicEconomy10_Factory.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy10_Factory.json; sourceTree = "<group>"; };
@@ -846,6 +848,7 @@
 			isa = PBXGroup;
 			children = (
 				CA9633D42CE997A600D318D1 /* Page2 */,
+				CAEE84562CE9E542008F6DFE /* Page3 */,
 			);
 			path = UnEmployment;
 			sourceTree = "<group>";
@@ -1217,6 +1220,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		CAEE84562CE9E542008F6DFE /* Page3 */ = {
+			isa = PBXGroup;
+			children = (
+				CAEE84572CE9E554008F6DFE /* UnEmployment3_CaffeWork.json */,
+			);
+			path = Page3;
+			sourceTree = "<group>";
+		};
 		CAF2C03A2CD9C53600D0E15D /* Page10 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1335,6 +1346,7 @@
 				CA9633D62CE997AD00D318D1 /* UnEmployment2_Suit.json in Resources */,
 				CA61CEBC2CE0BA32007BCF4E /* BasicEconomy10_MoneyDistribution.json in Resources */,
 				CA3F36B82CE4D45800FF871E /* PriceLevel1_PriceProduct.json in Resources */,
+				CAEE84582CE9E554008F6DFE /* UnEmployment3_CaffeWork.json in Resources */,
 				CA6927162CDF8A19005F2A6B /* Sweat.json in Resources */,
 				CAAA24FB2CE845C900F8C380 /* PriceLevel10_Balance.json in Resources */,
 				CAAA24FD2CE84B2200F8C380 /* PriceLevel10_ScienceProgress.json in Resources */,
