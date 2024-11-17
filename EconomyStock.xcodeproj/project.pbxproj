@@ -167,6 +167,9 @@
 		CAEE16632CAD0D7200210BD0 /* LoginViewModel+Kakao.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE16622CAD0D7200210BD0 /* LoginViewModel+Kakao.swift */; };
 		CAEE16652CAD0D7800210BD0 /* LoginViewModel+Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE16642CAD0D7800210BD0 /* LoginViewModel+Apple.swift */; };
 		CAEE84582CE9E554008F6DFE /* UnEmployment3_CaffeWork.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEE84572CE9E554008F6DFE /* UnEmployment3_CaffeWork.json */; };
+		CAEE845C2CE9F28E008F6DFE /* UnEmployment4_Factory.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEE845A2CE9F28E008F6DFE /* UnEmployment4_Factory.json */; };
+		CAEE845D2CE9F28E008F6DFE /* UnEmployment4_Store.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEE845B2CE9F28E008F6DFE /* UnEmployment4_Store.json */; };
+		CAEE845F2CE9F8A4008F6DFE /* UnEmployment4_Road.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEE845E2CE9F8A4008F6DFE /* UnEmployment4_Road.json */; };
 		CAF2271D2CAE569B002868F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAF2271C2CAE569B002868F4 /* GoogleService-Info.plist */; };
 		CAF2C03E2CD9C54C00D0E15D /* BasicEconomy10_Payment.json in Resources */ = {isa = PBXBuildFile; fileRef = CAF2C03D2CD9C54C00D0E15D /* BasicEconomy10_Payment.json */; };
 		CAF2C03F2CD9C54C00D0E15D /* BasicEconomy10_Factory.json in Resources */ = {isa = PBXBuildFile; fileRef = CAF2C03C2CD9C54C00D0E15D /* BasicEconomy10_Factory.json */; };
@@ -327,6 +330,9 @@
 		CAEE16622CAD0D7200210BD0 /* LoginViewModel+Kakao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Kakao.swift"; sourceTree = "<group>"; };
 		CAEE16642CAD0D7800210BD0 /* LoginViewModel+Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Apple.swift"; sourceTree = "<group>"; };
 		CAEE84572CE9E554008F6DFE /* UnEmployment3_CaffeWork.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UnEmployment3_CaffeWork.json; sourceTree = "<group>"; };
+		CAEE845A2CE9F28E008F6DFE /* UnEmployment4_Factory.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UnEmployment4_Factory.json; sourceTree = "<group>"; };
+		CAEE845B2CE9F28E008F6DFE /* UnEmployment4_Store.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UnEmployment4_Store.json; sourceTree = "<group>"; };
+		CAEE845E2CE9F8A4008F6DFE /* UnEmployment4_Road.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UnEmployment4_Road.json; sourceTree = "<group>"; };
 		CAF2271C2CAE569B002868F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAF2C03B2CD9C54C00D0E15D /* BasicEconomy10_Distribution.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy10_Distribution.json; sourceTree = "<group>"; };
 		CAF2C03C2CD9C54C00D0E15D /* BasicEconomy10_Factory.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy10_Factory.json; sourceTree = "<group>"; };
@@ -849,6 +855,7 @@
 			children = (
 				CA9633D42CE997A600D318D1 /* Page2 */,
 				CAEE84562CE9E542008F6DFE /* Page3 */,
+				CAEE84592CE9F27D008F6DFE /* Page4 */,
 			);
 			path = UnEmployment;
 			sourceTree = "<group>";
@@ -1228,6 +1235,16 @@
 			path = Page3;
 			sourceTree = "<group>";
 		};
+		CAEE84592CE9F27D008F6DFE /* Page4 */ = {
+			isa = PBXGroup;
+			children = (
+				CAEE845A2CE9F28E008F6DFE /* UnEmployment4_Factory.json */,
+				CAEE845B2CE9F28E008F6DFE /* UnEmployment4_Store.json */,
+				CAEE845E2CE9F8A4008F6DFE /* UnEmployment4_Road.json */,
+			);
+			path = Page4;
+			sourceTree = "<group>";
+		};
 		CAF2C03A2CD9C53600D0E15D /* Page10 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1328,10 +1345,13 @@
 				CA5389CF2CDCE3C2003DA62F /* QuestionMark.json in Resources */,
 				CA9BB9CE2CABA59A00886A1A /* Preview Assets.xcassets in Resources */,
 				CA77DFCD2CB24D0900992829 /* Loading.json in Resources */,
+				CAEE845F2CE9F8A4008F6DFE /* UnEmployment4_Road.json in Resources */,
 				CAF2271D2CAE569B002868F4 /* GoogleService-Info.plist in Resources */,
 				CA712CAB2CD65ED5002E7276 /* BasicEconomy1_GovernmentBuilding.json in Resources */,
 				CA61CEB82CE0B050007BCF4E /* BasicEconomy9_GlobalExport.json in Resources */,
 				CA47F5772CD9359D00DCAFCF /* MainTab_Home.json in Resources */,
+				CAEE845C2CE9F28E008F6DFE /* UnEmployment4_Factory.json in Resources */,
+				CAEE845D2CE9F28E008F6DFE /* UnEmployment4_Store.json in Resources */,
 				CA47F5782CD9359D00DCAFCF /* MainTab_Profile.json in Resources */,
 				CA5A4A9C2CDDC2F300E225F3 /* BasicEconomy4_Building.json in Resources */,
 				CA47F5792CD9359D00DCAFCF /* MainTab_Studying.json in Resources */,
