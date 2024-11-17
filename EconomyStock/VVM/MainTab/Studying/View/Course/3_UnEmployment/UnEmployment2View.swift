@@ -13,6 +13,9 @@ struct UnEmployment2View: View {
     
     @State private var progress: [Int] = []
     
+    @State private var contentText1_2 = false
+    @State private var contentImage = false
+    
     @State private var nextButton = false
     @State private var beforeButton = false
     
@@ -22,44 +25,86 @@ struct UnEmployment2View: View {
                 ZStack {
                     ScrollView {
                         HStack {
-                            Text("1.")
+                            Text("2.")
                                 .font(.system(size: 35))
                                 .fontWeight(.bold)
                                 .foregroundStyle(Color.ESTitle)
                                 .padding(.leading, 30)
                                 .padding(.bottom, 3)
                             
-                            Text("물가의 개념")
+                            Text("고용 지표")
                                 .font(.system(size: 25))
                                 .fontWeight(.bold)
                             
                             Spacer()
                         }
-                        .opacity(0.2)
                         .padding(.top)
                         
                         ZStack {
-                            VStack {
-                                if progress.count >= 1 {
-                                    (Text("물가의 중요한 특징 중 하나는, 물가와 화폐 가치가 ")
-                                     + Text("반비례")
-                                        .foregroundStyle(Color.ESTitle)
-                                        .fontWeight(.bold)
-                                     + Text("한다는 사실이에요"))
-                                    .font(.system(size: 20))
-                                    .fontWeight(.semibold)
-                                    .multilineTextAlignment(.center)
-                                    .padding(.horizontal)
-                                    .padding(.top)
+                            if progress.count >= 1 {
+                                VStack {
+                                    VStack(spacing: 5) {
+                                        Text("실업률")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.semibold)
+                                            .multilineTextAlignment(.center)
+                                            .padding(.horizontal)
+                                            .foregroundStyle(Color.ESTitle)
+                                            .fontWeight(.bold)
+                                        
+                                        Text("경제활동인구 중 실업자가 차지하는 비율을 말해요")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.semibold)
+                                            .multilineTextAlignment(.center)
+                                            .padding(.horizontal)
+                                    }
                                     
+                                    Text("(생산가능인구가 아니에요!)")
+                                        .font(.system(size: 17))
+                                        .fontWeight(.semibold)
+                                        .multilineTextAlignment(.center)
+                                        .foregroundStyle(Color.ESTitle)
+                                        .padding(.horizontal)
+                                        .padding(.top, 5)
+                                    
+                                    if contentText1_2 {
+                                        VStack(spacing: 5) {
+                                            Text("고용률")
+                                                .font(.system(size: 20))
+                                                .fontWeight(.semibold)
+                                                .multilineTextAlignment(.center)
+                                                .padding(.horizontal)
+                                                .foregroundStyle(Color.ESTitle)
+                                                .fontWeight(.bold)
+                                            
+                                            Text("생산가능인구 중 취업자가 차지하는 비율을 말해요")
+                                                .font(.system(size: 20))
+                                                .fontWeight(.semibold)
+                                                .multilineTextAlignment(.center)
+                                                .padding(.horizontal)
+                                        }
+                                        .padding(.top, 20)
+                                        
+                                        Text("(경제활동인구가 아니에요!)")
+                                            .font(.system(size: 17))
+                                            .fontWeight(.semibold)
+                                            .multilineTextAlignment(.center)
+                                            .foregroundStyle(Color.ESTitle)
+                                            .padding(.horizontal)
+                                            .padding(.top, 5)
+                                    }
+                                    
+                                    if contentImage {
+                                        LottieViewConverter(fileName: "UnEmployment2_Suit", loopMode: .playOnce, width: 180, height: 180)
+                                    }
+                                    
+                                    Spacer()
                                 }
-                                
-                                Spacer()
                             }
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 200)
+                                .frame(width: 100, height: 500)
                         }
                         
                         Rectangle()
@@ -78,7 +123,7 @@ struct UnEmployment2View: View {
                                     UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
                                     
                                     viewModel.currentPage += 1
-                                    navigationRouter.navigate(.PriceLevel3View(viewModel))
+                                    navigationRouter.navigate(.UnEmployment3View(viewModel))
                                 } label: {
                                     LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
@@ -116,18 +161,26 @@ struct UnEmployment2View: View {
                         progress.append(1)
                     }
                     
-                    if progress.count == 2 {
-                        withAnimation {
-                            proxy.scrollTo("bottom", anchor: .bottom)
-                        }
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
+                    if progress.count == 1 {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                             withAnimation(.smooth(duration: 1.0)) {
-                                nextButton = true
+                                contentText1_2 = true
                                 
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                     withAnimation(.smooth(duration: 1.0)) {
-                                        beforeButton = true
+                                        contentImage = true
+                                        
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                            withAnimation(.smooth(duration: 1.0)) {
+                                                nextButton = true
+                                                
+                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                                    withAnimation(.smooth(duration: 1.0)) {
+                                                        beforeButton = true
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }

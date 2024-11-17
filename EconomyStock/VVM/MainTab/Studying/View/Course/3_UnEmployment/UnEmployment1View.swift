@@ -57,7 +57,7 @@ struct UnEmployment1View: View {
                     }
                     
                     if contentImage1_1 {
-                        Text("총 인구")
+                        Text("총인구")
                             .font(.system(size: 18))
                             .fontWeight(.semibold)
                             .foregroundStyle(Color.ESTitle)
@@ -102,7 +102,7 @@ struct UnEmployment1View: View {
                                 
                                 Spacer()
                                 
-                                Text("생산 가능 인구")
+                                Text("생산가능인구")
                                     .font(.system(size: 18))
                                     .fontWeight(.semibold)
                                     .foregroundStyle(Color.ESTitle)
@@ -121,19 +121,26 @@ struct UnEmployment1View: View {
                     }
                     
                     if contentText1 {
-                        (Text("생산 가능 인구")
-                            .foregroundStyle(Color.ESTitle)
-                            .fontWeight(.bold)
-                         + Text(": 대한민국에 상주하는 만 15세 이상 인구 가운데 군인, 교도소 수감자 등을 제외한 인구"))
-                        .font(.system(size: 20))
-                        .fontWeight(.semibold)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal)
+                        VStack(spacing: 5) {
+                            Text("생산가능인구")
+                                .font(.system(size: 20))
+                                .fontWeight(.semibold)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal)
+                                .foregroundStyle(Color.ESTitle)
+                                .fontWeight(.bold)
+                            
+                            Text("대한민국에 상주하는 만 15세 이상 인구 가운데 군인, 교도소 수감자 등을 제외한 인구를 말해요")
+                                .font(.system(size: 20))
+                                .fontWeight(.semibold)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal)
+                        }
                         .padding(.top, 50)
                     }
                     
                     if progress.count == 2 {
-                        Text("생산 가능 인구")
+                        Text("생산가능인구")
                             .font(.system(size: 18))
                             .fontWeight(.semibold)
                             .foregroundStyle(Color.ESTitle)
@@ -159,7 +166,7 @@ struct UnEmployment1View: View {
                             HStack(spacing: 30) {
                                 Spacer()
                                 
-                                Text("비경제 활동 인구")
+                                Text("비경제활동인구")
                                     .font(.system(size: 18))
                                     .fontWeight(.semibold)
                                     .foregroundStyle(Color.ESTitle)
@@ -173,7 +180,7 @@ struct UnEmployment1View: View {
                                 
                                 Spacer()
                                 
-                                Text("경제 활동 인구")
+                                Text("경제활동인구")
                                     .font(.system(size: 18))
                                     .fontWeight(.semibold)
                                     .foregroundStyle(Color.ESTitle)
@@ -191,30 +198,44 @@ struct UnEmployment1View: View {
                         }
                         
                         if contentText2 {
-                            (Text("경제 활동 인구")
-                                .foregroundStyle(Color.ESTitle)
-                                .fontWeight(.bold)
-                             + Text(": 생산 가능 인구 중 일할 의지와 능력이 모두 있는 사람"))
-                            .font(.system(size: 20))
-                            .fontWeight(.semibold)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal)
+                            VStack(spacing: 5) {
+                                Text("경제활동인구")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal)
+                                    .foregroundStyle(Color.ESTitle)
+                                    .fontWeight(.bold)
+                                
+                                Text("생산가능인구 중 일할 의지와 능력이 모두 있는 사람을 말해요")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal)
+                            }
                             .padding(.top, 50)
                             
-                            (Text("비경제 활동 인구")
-                                .foregroundStyle(Color.ESTitle)
-                                .fontWeight(.bold)
-                             + Text(": 생산 가능 인구 중 일할 의지와 능력이 없는 사람"))
-                            .font(.system(size: 20))
-                            .fontWeight(.semibold)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal)
-                            .padding(.top, 5)
+                            VStack(spacing: 5) {
+                                Text("비경제활동인구")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal)
+                                    .foregroundStyle(Color.ESTitle)
+                                    .fontWeight(.bold)
+                                
+                                Text("생산가능인구 중 일할 의지와 능력이 없는 사람을 말해요")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal)
+                            }
+                            .padding(.top, 10)
                         }
                     }
                     
                     if progress.count == 3 {
-                        Text("경제 활동 인구")
+                        Text("경제활동인구")
                             .font(.system(size: 18))
                             .fontWeight(.semibold)
                             .foregroundStyle(Color.ESTitle)
@@ -266,25 +287,39 @@ struct UnEmployment1View: View {
                         }
                         
                         if contentText3 {
-                            (Text("실업자")
-                                .foregroundStyle(Color.ESTitle)
-                                .fontWeight(.bold)
-                             + Text(": 경제 활동 인구 중 일을 하지 못하고 있는 사람"))
-                            .font(.system(size: 20))
-                            .fontWeight(.semibold)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal)
+                            VStack(spacing: 5) {
+                                Text("실업자")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal)
+                                    .foregroundStyle(Color.ESTitle)
+                                    .fontWeight(.bold)
+                                
+                                Text("경제활동인구 중 일을 하지 못하고 있는 사람을 말해요")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal)
+                            }
                             .padding(.top, 50)
                             
-                            (Text("취업자")
-                                .foregroundStyle(Color.ESTitle)
-                                .fontWeight(.bold)
-                             + Text(": 경제 활동 인구 중 일을 하고 있는 사람"))
-                            .font(.system(size: 20))
-                            .fontWeight(.semibold)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal)
-                            .padding(.top, 5)
+                            VStack(spacing: 5) {
+                                Text("취업자")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal)
+                                    .foregroundStyle(Color.ESTitle)
+                                    .fontWeight(.bold)
+                                
+                                Text("경제활동인구 중 일을 하고 있는 사람을 말해요")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal)
+                            }
+                            .padding(.top, 10)
                         }
                     }
                 }
