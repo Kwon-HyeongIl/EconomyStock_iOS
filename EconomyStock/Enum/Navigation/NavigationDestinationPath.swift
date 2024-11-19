@@ -51,5 +51,4 @@ enum NavigationDestinationPath: Hashable {
     case UnEmployment5View(CourseViewModel)
     case UnEmployment6View(CourseViewModel)
     case UnEmployment7View(CourseViewModel)
-    case UnEmployment8View(CourseViewModel)
 }

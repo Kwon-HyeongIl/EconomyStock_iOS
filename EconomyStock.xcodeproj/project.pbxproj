@@ -119,13 +119,13 @@
 		CAAA250A2CE8558700F8C380 /* UnEmployment5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA25092CE8558700F8C380 /* UnEmployment5View.swift */; };
 		CAAA250C2CE8558D00F8C380 /* UnEmployment6View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA250B2CE8558D00F8C380 /* UnEmployment6View.swift */; };
 		CAAA250E2CE8559300F8C380 /* UnEmployment7View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA250D2CE8559300F8C380 /* UnEmployment7View.swift */; };
-		CAAA25102CE8559800F8C380 /* UnEmployment8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA250F2CE8559800F8C380 /* UnEmployment8View.swift */; };
 		CAAA4B532CC9F2A00083F86C /* NavigationBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA4B522CC9F2A00083F86C /* NavigationBaseView.swift */; };
 		CAAA4B552CC9F2F70083F86C /* AisleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA4B542CC9F2F70083F86C /* AisleView.swift */; };
 		CAACDE2D2CB8BBBA004234FF /* LottieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACDE2C2CB8BBBA004234FF /* LottieRouter.swift */; };
 		CAAE54182CB8E34200B5352D /* PriceLevelCourseCover.json in Resources */ = {isa = PBXBuildFile; fileRef = CAAE54172CB8E34200B5352D /* PriceLevelCourseCover.json */; };
 		CAB77FD72CB8EC2900DF11D6 /* CourseToolbarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */; };
 		CAB77FD92CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */; };
+		CAC1FE532CEC988E00DA1D4B /* UnEmployment7_Business.json in Resources */ = {isa = PBXBuildFile; fileRef = CAC1FE522CEC988E00DA1D4B /* UnEmployment7_Business.json */; };
 		CAC86FD52CE2E5AF00785D4F /* ProfilePlantLevel5.json in Resources */ = {isa = PBXBuildFile; fileRef = CAC86FD42CE2E5AF00785D4F /* ProfilePlantLevel5.json */; };
 		CAC86FD62CE2E5AF00785D4F /* ProfilePlantLevel2.json in Resources */ = {isa = PBXBuildFile; fileRef = CAC86FD12CE2E5AF00785D4F /* ProfilePlantLevel2.json */; };
 		CAC86FD72CE2E5AF00785D4F /* ProfilePlantLevel4.json in Resources */ = {isa = PBXBuildFile; fileRef = CAC86FD32CE2E5AF00785D4F /* ProfilePlantLevel4.json */; };
@@ -284,13 +284,13 @@
 		CAAA25092CE8558700F8C380 /* UnEmployment5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnEmployment5View.swift; sourceTree = "<group>"; };
 		CAAA250B2CE8558D00F8C380 /* UnEmployment6View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnEmployment6View.swift; sourceTree = "<group>"; };
 		CAAA250D2CE8559300F8C380 /* UnEmployment7View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnEmployment7View.swift; sourceTree = "<group>"; };
-		CAAA250F2CE8559800F8C380 /* UnEmployment8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnEmployment8View.swift; sourceTree = "<group>"; };
 		CAAA4B522CC9F2A00083F86C /* NavigationBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBaseView.swift; sourceTree = "<group>"; };
 		CAAA4B542CC9F2F70083F86C /* AisleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AisleView.swift; sourceTree = "<group>"; };
 		CAACDE2C2CB8BBBA004234FF /* LottieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieRouter.swift; sourceTree = "<group>"; };
 		CAAE54172CB8E34200B5352D /* PriceLevelCourseCover.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PriceLevelCourseCover.json; sourceTree = "<group>"; };
 		CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseToolbarModifier.swift; sourceTree = "<group>"; };
 		CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackHomeModifier.swift; sourceTree = "<group>"; };
+		CAC1FE522CEC988E00DA1D4B /* UnEmployment7_Business.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UnEmployment7_Business.json; sourceTree = "<group>"; };
 		CAC86FD02CE2E5AF00785D4F /* ProfilePlantLevel1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ProfilePlantLevel1.json; sourceTree = "<group>"; };
 		CAC86FD12CE2E5AF00785D4F /* ProfilePlantLevel2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ProfilePlantLevel2.json; sourceTree = "<group>"; };
 		CAC86FD22CE2E5AF00785D4F /* ProfilePlantLevel3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ProfilePlantLevel3.json; sourceTree = "<group>"; };
@@ -867,6 +867,7 @@
 				CAEE84562CE9E542008F6DFE /* Page3 */,
 				CAEE84592CE9F27D008F6DFE /* Page4 */,
 				CA5855CB2CEC2BB9005AB472 /* Page6 */,
+				CAC1FE512CEC988400DA1D4B /* Page7 */,
 			);
 			path = UnEmployment;
 			sourceTree = "<group>";
@@ -1011,7 +1012,6 @@
 				CAAA25092CE8558700F8C380 /* UnEmployment5View.swift */,
 				CAAA250B2CE8558D00F8C380 /* UnEmployment6View.swift */,
 				CAAA250D2CE8559300F8C380 /* UnEmployment7View.swift */,
-				CAAA250F2CE8559800F8C380 /* UnEmployment8View.swift */,
 			);
 			path = 3_UnEmployment;
 			sourceTree = "<group>";
@@ -1022,6 +1022,14 @@
 				CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */,
 			);
 			path = Course;
+			sourceTree = "<group>";
+		};
+		CAC1FE512CEC988400DA1D4B /* Page7 */ = {
+			isa = PBXGroup;
+			children = (
+				CAC1FE522CEC988E00DA1D4B /* UnEmployment7_Business.json */,
+			);
+			path = Page7;
 			sourceTree = "<group>";
 		};
 		CAC86FCF2CE2E5A600785D4F /* Profile */ = {
@@ -1367,6 +1375,7 @@
 				CA5A4A9C2CDDC2F300E225F3 /* BasicEconomy4_Building.json in Resources */,
 				CA47F5792CD9359D00DCAFCF /* MainTab_Studying.json in Resources */,
 				CA61CEBA2CE0B727007BCF4E /* BasicEconomy8_MoneyPublish.json in Resources */,
+				CAC1FE532CEC988E00DA1D4B /* UnEmployment7_Business.json in Resources */,
 				CA96355A2CE60B79000E7B01 /* PriceLevel4_HotEconomy.json in Resources */,
 				CA96355C2CE60C1E000E7B01 /* PriceLevel4_OilPrice.json in Resources */,
 				CAC86FD52CE2E5AF00785D4F /* ProfilePlantLevel5.json in Resources */,
@@ -1462,7 +1471,6 @@
 				CA17FC7F2CB00ABE0050250B /* CourseListView.swift in Sources */,
 				CAE4C1E12CDE3F3E00CDD0CF /* BasicEconomy7View.swift in Sources */,
 				CAEE16522CAD0C3F00210BD0 /* AuthManager+SocialLogin.swift in Sources */,
-				CAAA25102CE8559800F8C380 /* UnEmployment8View.swift in Sources */,
 				CAEE16582CAD0CA700210BD0 /* LoginView.swift in Sources */,
 				CA17FC7D2CB00AB90050250B /* HomeView.swift in Sources */,
 				CA77DFD22CB26D0100992829 /* CustomError.swift in Sources */,

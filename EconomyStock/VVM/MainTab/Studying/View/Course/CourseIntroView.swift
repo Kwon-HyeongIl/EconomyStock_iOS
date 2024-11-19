@@ -381,19 +381,6 @@ struct CourseIntroView: View {
                                     
                                     navigationRouter.navigate(.UnEmployment7View(viewModel))
                                     
-                                case 8:
-                                    viewModel.currentPage = 8
-                                    
-                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment1View(viewModel))
-                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment2View(viewModel))
-                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment3View(viewModel))
-                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment4View(viewModel))
-                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment5View(viewModel))
-                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment6View(viewModel))
-                                    navigationRouter.path.append(NavigationDestinationPath.UnEmployment7View(viewModel))
-                                    
-                                    navigationRouter.navigate(.UnEmployment8View(viewModel))
-                                    
                                 default:
                                     navigationRouter.navigate(.UnEmployment1View(viewModel))
                                 }

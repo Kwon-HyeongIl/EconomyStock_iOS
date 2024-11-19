@@ -90,8 +90,6 @@ class NavigationRouter {
             UnEmployment6View(viewModel: viewModel)
         case .UnEmployment7View(let viewModel):
             UnEmployment7View(viewModel: viewModel)
-        case .UnEmployment8View(let viewModel):
-            UnEmployment8View(viewModel: viewModel)
         }
     }
     
