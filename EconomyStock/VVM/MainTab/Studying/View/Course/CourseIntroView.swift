@@ -11,6 +11,7 @@ struct CourseIntroView: View {
     @Environment(NavigationRouter.self) var navigationRouter
     @Bindable var viewModel: CourseViewModel
     
+    @State private var alertAskLogin = false
     @State private var alertAskStartContinue = false
     @State private var alertAskStartBeginning = false
     @State private var alertFinishing = false
@@ -33,6 +34,11 @@ struct CourseIntroView: View {
                     }
                     
                     Button {
+                        // 로그인 안한 사용자일 경우 로그인 페이지로 이동
+                        if AuthManager.shared.currentUser == nil {
+                            
+                        }
+                            
                         switch viewModel.course.type {
                             
                         case .basicEconomy:
@@ -73,6 +79,21 @@ struct CourseIntroView: View {
                         Text("시작하기")
                             .modifier(ShortButtonModifier())
                             .padding(.bottom, 30)
+                    }
+                    .alert("로그인이 필요한 서비스입니다", isPresented: $alertFinishing) {
+                        Button(role: .cancel) {
+                            
+                        } label: {
+                            Text("취소")
+                        }
+                        
+                        Button {
+                            navigationRouter.navigate(.LoginView)
+                        } label: {
+                            Text("확인")
+                        }
+                    } message: {
+                        Text("로그인 페이지로 이동하시겠습니까?")
                     }
                     .alert("이이서 계속 하시겠습니까?", isPresented: $alertAskStartContinue) {
                         Button(role: .cancel) {

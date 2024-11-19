@@ -16,6 +16,8 @@ class NavigationRouter {
         switch view {
             
         // Auth
+        case .LoginView:
+            LoginView()
         case .BasicLoginView:
             BasicLoginView()
         case .BasicSignupView:

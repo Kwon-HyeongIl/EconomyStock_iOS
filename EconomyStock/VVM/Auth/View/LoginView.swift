@@ -13,12 +13,14 @@ struct LoginView: View {
     
     var body: some View {
         ZStack {
-            Image("Basic_Toktok")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 600)
-                .opacity(0.1)
-                .ignoresSafeArea()
+            ScrollView {
+                Image("Basic_Toktok")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 600)
+                    .opacity(0.1)
+                    .ignoresSafeArea()
+            }
             
             VStack {
                 Image("ES_TitleLogo_Blue")
@@ -26,12 +28,18 @@ struct LoginView: View {
                     .scaledToFit()
                     .frame(width: 200)
                     .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
-                    .padding(.top, 80)
+                    .padding(.top, 90)
                 
                 Spacer()
                 
                 Button {
                     viewModel.loginWithApple()
+                    
+                    if AuthManager.shared.currentUser != nil {
+                        navigationRouter.popToRoot()
+                    } else {
+                        viewModel.loadingBarState = false
+                    }
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 12)
@@ -59,6 +67,12 @@ struct LoginView: View {
                 
                 Button {
                     viewModel.loginWithGoogle()
+                    
+                    if AuthManager.shared.currentUser != nil {
+                        navigationRouter.popToRoot()
+                    } else {
+                        viewModel.loadingBarState = false
+                    }
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 12)
@@ -87,6 +101,12 @@ struct LoginView: View {
                 
                 Button {
                     viewModel.loginWithKakao()
+                    
+                    if AuthManager.shared.currentUser != nil {
+                        navigationRouter.popToRoot()
+                    } else {
+                        viewModel.loadingBarState = false
+                    }
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 12)
@@ -121,7 +141,6 @@ struct LoginView: View {
                         .foregroundStyle(.gray)
                         .padding(.bottom, 50)
                 }
-                
             }
         }
         .overlay {

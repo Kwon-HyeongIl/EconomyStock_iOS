@@ -12,7 +12,7 @@ class LoginViewModel: NSObject {
     var email = ""
     var password = ""
     
-    var loadingBarState = false
+    var loadingBarState = false // 소셜 로그인 뷰모델 내에서 컨트롤하기 위해 뷰모델 내에 선언
     
     func login() async -> Bool {
         return await AuthManager.shared.login(email: self.email, password: self.password)

@@ -10,6 +10,7 @@ import Foundation
 enum NavigationDestinationPath: Hashable {
     
     // Auth
+    case LoginView
     case BasicLoginView
     case BasicSignupView
     case FindPasswordView
