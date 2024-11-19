@@ -13,6 +13,12 @@ struct UnEmployment5View: View {
     
     @State private var progress: [Int] = []
     
+    @State private var contentImage1_1 = false
+    @State private var contentImage1_2 = false
+    @State private var contentImage1_3 = false
+    @State private var nextScrollPart = false
+    @State private var contentText2_2 = false
+    
     @State private var nextButton = false
     @State private var beforeButton = false
     
@@ -22,14 +28,14 @@ struct UnEmployment5View: View {
                 ZStack {
                     ScrollView {
                         HStack {
-                            Text("1.")
+                            Text("3.")
                                 .font(.system(size: 35))
                                 .fontWeight(.bold)
                                 .foregroundStyle(Color.ESTitle)
                                 .padding(.leading, 30)
                                 .padding(.bottom, 3)
                             
-                            Text("물가의 개념")
+                            Text("임금")
                                 .font(.system(size: 25))
                                 .fontWeight(.bold)
                             
@@ -41,17 +47,55 @@ struct UnEmployment5View: View {
                         ZStack {
                             VStack {
                                 if progress.count >= 1 {
-                                    (Text("물가의 중요한 특징 중 하나는, 물가와 화폐 가치가 ")
-                                     + Text("반비례")
-                                        .foregroundStyle(Color.ESTitle)
-                                        .fontWeight(.bold)
-                                     + Text("한다는 사실이에요"))
+                                    Text("임금은 노동의 대가를 의미해요")
                                     .font(.system(size: 20))
                                     .fontWeight(.semibold)
                                     .multilineTextAlignment(.center)
                                     .padding(.horizontal)
                                     .padding(.top)
-                                    
+                                }
+                                
+                                if contentImage1_1 {
+                                    LottieViewConverter(fileName: "BasicEconomy10_Distribution", loopMode: .playOnce, width: 150, height: 150)
+                                }
+                                
+                                if contentImage1_2 {
+                                    HStack(spacing: 40) {
+                                        LottieViewConverter(fileName: "ArrowRight", loopMode: .playOnce, toProgress: 0.5, scale: 1.6, width: 60, height: 60)
+                                            .rotationEffect(.degrees(126))
+                                        
+                                        LottieViewConverter(fileName: "ArrowRight", loopMode: .playOnce, toProgress: 0.5, scale: 1.6, width: 60, height: 60)
+                                            .rotationEffect(.degrees(52))
+                                    }
+                                }
+                                
+                                if contentImage1_3 {
+                                    HStack(spacing: 70) {
+                                        VStack {
+                                            Image("Suit_Toktok")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 90)
+                                            
+                                            Text("근로자")
+                                                .font(.system(size: 18))
+                                                .fontWeight(.semibold)
+                                                .foregroundStyle(Color.ESTitle)
+                                                .padding(.top, 10)
+                                        }
+                                        .padding(.leading, 10)
+                                        .padding(.top, 20)
+                                        
+                                        VStack {
+                                            LottieViewConverter(fileName: "BasicEconomy4_Building", loopMode: .playOnce, toProgress: 0.5, width: 100, height: 100)
+                                            
+                                            Text("기업")
+                                                .font(.system(size: 18))
+                                                .fontWeight(.semibold)
+                                                .foregroundStyle(Color.ESTitle)
+                                                .padding(.top, 5)
+                                        }
+                                    }
                                 }
                                 
                                 Spacer()
@@ -59,8 +103,42 @@ struct UnEmployment5View: View {
                             
                             Rectangle()
                                 .fill(.clear)
+                                .frame(width: 100, height: 400)
+                        }
+                        
+                        ZStack {
+                            if nextScrollPart {
+                                VStack {
+                                    (Text("근로자")
+                                        .foregroundStyle(Color.ESTitle)
+                                        .fontWeight(.bold)
+                                     + Text("에게는 소득의 원천이 되어 소비지출이 늘어날 수 있게 하며,"))
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal)
+                                    
+                                    if contentText2_2 {
+                                        (Text("기업")
+                                            .foregroundStyle(Color.ESTitle)
+                                            .fontWeight(.bold)
+                                         + Text("에게는 생산비용으로 재화나 서비스의 가격에 영향을 미치게 되어요"))
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                        .multilineTextAlignment(.center)
+                                        .padding(.horizontal)
+                                        .padding(.top, 20)
+                                    }
+                                    
+                                    Spacer()
+                                }
+                            }
+                            
+                            Rectangle()
+                                .fill(.clear)
                                 .frame(width: 100, height: 200)
                         }
+                        .padding(.top, 50)
                         
                         Rectangle()
                             .fill(.clear)
@@ -78,7 +156,7 @@ struct UnEmployment5View: View {
                                     UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
                                     
                                     viewModel.currentPage += 1
-                                    navigationRouter.navigate(.PriceLevel3View(viewModel))
+                                    navigationRouter.navigate(.UnEmployment6View(viewModel))
                                 } label: {
                                     LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
@@ -116,18 +194,50 @@ struct UnEmployment5View: View {
                         progress.append(1)
                     }
                     
+                    if progress.count == 1 {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            withAnimation(.smooth(duration: 1.0)) {
+                                contentImage1_1 = true
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                    withAnimation(.smooth(duration: 1.0)) {
+                                        contentImage1_2 = true
+                                        
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                                            withAnimation(.smooth(duration: 1.0)) {
+                                                contentImage1_3 = true
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
                     if progress.count == 2 {
                         withAnimation {
                             proxy.scrollTo("bottom", anchor: .bottom)
                         }
                         
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                             withAnimation(.smooth(duration: 1.0)) {
-                                nextButton = true
+                                nextScrollPart = true
                                 
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                     withAnimation(.smooth(duration: 1.0)) {
-                                        beforeButton = true
+                                        contentText2_2 = true
+                                        
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                            withAnimation(.smooth(duration: 1.0)) {
+                                                nextButton = true
+                                                
+                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                                    withAnimation(.smooth(duration: 1.0)) {
+                                                        beforeButton = true
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
