@@ -173,6 +173,7 @@ struct PriceLevel7View: View {
                                         }
                                     }
                                 }
+                                .padding(.top, 50)
                             }
                             
                             Rectangle()
@@ -182,7 +183,7 @@ struct PriceLevel7View: View {
                         
                         Rectangle()
                             .fill(.clear)
-                            .frame(width: 100, height: 90)
+                            .frame(width: 100, height: 100)
                             .id("bottom")
                     }
                     

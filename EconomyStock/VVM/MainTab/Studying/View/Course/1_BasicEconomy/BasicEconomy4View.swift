@@ -251,7 +251,7 @@ struct BasicEconomy4View: View {
                         
                         Rectangle()
                             .fill(.clear)
-                            .frame(width: 300, height: 70)
+                            .frame(width: 300, height: 85)
                             .id("bottom")
                     }
                     
