@@ -58,6 +58,7 @@
 		CA4E71A82CB78B8400BAA70C /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E71A72CB78B8400BAA70C /* CourseViewModel.swift */; };
 		CA4E71AB2CB78DE900BAA70C /* CourseIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E71AA2CB78DE900BAA70C /* CourseIntroView.swift */; };
 		CA5389CF2CDCE3C2003DA62F /* QuestionMark.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5389CE2CDCE3C2003DA62F /* QuestionMark.json */; };
+		CA5855CD2CEC2BCF005AB472 /* UnEmployment6_MoneyBalance.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5855CC2CEC2BCF005AB472 /* UnEmployment6_MoneyBalance.json */; };
 		CA58A4ED2CB6D9E900DB91BD /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58A4EC2CB6D9E900DB91BD /* ProgressCircleView.swift */; };
 		CA5A4A9C2CDDC2F300E225F3 /* BasicEconomy4_Building.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5A4A9B2CDDC2F300E225F3 /* BasicEconomy4_Building.json */; };
 		CA5B3A5E2CD7B20000341E23 /* CourseCompleteButton.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5B3A5C2CD7B20000341E23 /* CourseCompleteButton.json */; };
@@ -228,6 +229,7 @@
 		CA4E71A72CB78B8400BAA70C /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		CA4E71AA2CB78DE900BAA70C /* CourseIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseIntroView.swift; sourceTree = "<group>"; };
 		CA5389CE2CDCE3C2003DA62F /* QuestionMark.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QuestionMark.json; sourceTree = "<group>"; };
+		CA5855CC2CEC2BCF005AB472 /* UnEmployment6_MoneyBalance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UnEmployment6_MoneyBalance.json; sourceTree = "<group>"; };
 		CA58A4EC2CB6D9E900DB91BD /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 		CA5A4A9B2CDDC2F300E225F3 /* BasicEconomy4_Building.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy4_Building.json; sourceTree = "<group>"; };
 		CA5B3A5C2CD7B20000341E23 /* CourseCompleteButton.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CourseCompleteButton.json; sourceTree = "<group>"; };
@@ -671,6 +673,14 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		CA5855CB2CEC2BB9005AB472 /* Page6 */ = {
+			isa = PBXGroup;
+			children = (
+				CA5855CC2CEC2BCF005AB472 /* UnEmployment6_MoneyBalance.json */,
+			);
+			path = Page6;
+			sourceTree = "<group>";
+		};
 		CA58A4EB2CB6D9DB00DB91BD /* ProgressCircle */ = {
 			isa = PBXGroup;
 			children = (
@@ -856,6 +866,7 @@
 				CA9633D42CE997A600D318D1 /* Page2 */,
 				CAEE84562CE9E542008F6DFE /* Page3 */,
 				CAEE84592CE9F27D008F6DFE /* Page4 */,
+				CA5855CB2CEC2BB9005AB472 /* Page6 */,
 			);
 			path = UnEmployment;
 			sourceTree = "<group>";
@@ -1374,6 +1385,7 @@
 				CA6927122CDF7FDD005F2A6B /* ArrowRight.json in Resources */,
 				CAAA24F82CE8425900F8C380 /* PriceLevel9_GDP.json in Resources */,
 				CA7AF5702CE5FC83006DA22F /* Warning.json in Resources */,
+				CA5855CD2CEC2BCF005AB472 /* UnEmployment6_MoneyBalance.json in Resources */,
 				CA5B3A5E2CD7B20000341E23 /* CourseCompleteButton.json in Resources */,
 				CA9246EB2CE114FB007AA018 /* CourseComplete.json in Resources */,
 				CA3F36BE2CE4E57800FF871E /* PriceLevel2_Apple.json in Resources */,

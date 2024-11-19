@@ -13,6 +13,15 @@ struct UnEmployment6View: View {
     
     @State private var progress: [Int] = []
     
+    @State private var contentText1_2 = false
+    @State private var contentText1_3 = false
+    @State private var contentImage = false
+    @State private var nextScorllPart = false
+    @State private var contentText2_2 = false
+    
+    @State private var questionMark = false
+    @State private var questionMarkContent = false
+    
     @State private var nextButton = false
     @State private var beforeButton = false
     
@@ -22,14 +31,14 @@ struct UnEmployment6View: View {
                 ZStack {
                     ScrollView {
                         HStack {
-                            Text("1.")
+                            Text("3.")
                                 .font(.system(size: 35))
                                 .fontWeight(.bold)
                                 .foregroundStyle(Color.ESTitle)
                                 .padding(.leading, 30)
                                 .padding(.bottom, 3)
                             
-                            Text("물가의 개념")
+                            Text("임금")
                                 .font(.system(size: 25))
                                 .fontWeight(.bold)
                             
@@ -41,17 +50,38 @@ struct UnEmployment6View: View {
                         ZStack {
                             VStack {
                                 if progress.count >= 1 {
-                                    (Text("물가의 중요한 특징 중 하나는, 물가와 화폐 가치가 ")
-                                     + Text("반비례")
-                                        .foregroundStyle(Color.ESTitle)
-                                        .fontWeight(.bold)
-                                     + Text("한다는 사실이에요"))
+                                    Text("임금의 하락은 국민들의 소비지출을 위축시키는 반면,")
                                     .font(.system(size: 20))
                                     .fontWeight(.semibold)
                                     .multilineTextAlignment(.center)
                                     .padding(.horizontal)
                                     .padding(.top)
-                                    
+                                }
+                                
+                                if contentText1_2 {
+                                    Text("임금이 과도하게 상승할 경우 물가가 상승할 우려가 있고, 기업들이 고용을 줄이게 되며, 실업이 증가할 가능성이 있어요")
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                        .multilineTextAlignment(.center)
+                                        .padding(.horizontal)
+                                        .padding(.top, 20)
+                                }
+                                
+                                if contentText1_3 {
+                                    (Text("따라서 ")
+                                    + Text("적절한 임금수준")
+                                        .foregroundStyle(Color.ESTitle)
+                                        .fontWeight(.bold)
+                                    + Text("을 유지하는 것이 중요해요"))
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal)
+                                    .padding(.top, 20)
+                                }
+                                
+                                if contentImage {
+                                    LottieViewConverter(fileName: "UnEmployment6_MoneyBalance", loopMode: .playOnce, width: 150, height: 150)
                                 }
                                 
                                 Spacer()
@@ -59,12 +89,113 @@ struct UnEmployment6View: View {
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 200)
+                                .frame(width: 100, height: 500)
+                        }
+                        
+                        ZStack {
+                            if nextScorllPart {
+                                VStack {
+                                    (Text("최적의 임금 수준은 ")
+                                     + Text("노동에 대한 수요와 공급")
+                                        .foregroundStyle(Color.ESTitle)
+                                        .fontWeight(.bold)
+                                     + Text("에 의해 결정되지만"))
+                                    .font(.system(size: 20))
+                                    .fontWeight(.semibold)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal)
+                                    
+                                    if contentText2_2 {
+                                        (Text("현실에서는 ")
+                                         + Text("효율임금")
+                                            .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
+                                            .fontWeight(.bold)
+                                         + Text("과 ")
+                                         + Text("최저임금제 ")
+                                            .foregroundStyle(Color.ESTitle)
+                                            .fontWeight(.bold)
+                                         + Text("등으로 최적 수준보다 높은 수준에서 결정되어요"))
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                        .multilineTextAlignment(.center)
+                                        .padding(.horizontal)
+                                        .padding(.top, 20)
+                                    }
+                                    
+                                    Spacer()
+                                }
+                            }
+                            
+                            Rectangle()
+                                .fill(.clear)
+                                .frame(width: 100, height: 150)
+                        }
+                        
+                        ZStack {
+                            if questionMark {
+                                VStack {
+                                    HStack(spacing: 5) {
+                                        LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
+                                            .padding(.leading, 10)
+                                        
+                                        Text("효율임금이론이란?")
+                                            .font(.system(size: 15))
+                                            .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
+                                            .fontWeight(.semibold)
+                                            .padding(.vertical, 5)
+                                            .padding(.top, questionMarkContent ? 5 : 0)
+                                        
+                                        Spacer()
+                                    }
+                                    
+                                    if questionMarkContent {
+                                        HStack(spacing: 5) {
+                                            Text(":")
+                                                .font(.system(size: 15))
+                                                .fontWeight(.semibold)
+                                                .foregroundStyle(.black.opacity(0.6))
+                                                .padding(.leading, 20)
+                                                .padding(.bottom, 68)
+                                            
+                                            Text("효율임금이론은 균형임금 수준보다 더 높은 임금을 지급하여 노동자들이 더 일할 수 있는 동기 부여를 제공하여 이직률을 낮추고 채용과정에서 발생되는 기업의 막대한 비용을 낮추는 것을 말해요.")
+                                                .font(.system(size: 15))
+                                                .fontWeight(.semibold)
+                                                .foregroundStyle(.black.opacity(0.6))
+                                                .frame(height: 90)
+                                                .padding(.bottom, 10)
+                                            
+                                            Spacer()
+                                        }
+                                    }
+                                }
+                                .frame(maxWidth: .infinity)
+                                .background(.purple.opacity(0.1))
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                                .padding(.horizontal)
+                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                .onTapGesture {
+                                    withAnimation(.smooth(duration: 0.7)) {
+                                        questionMarkContent.toggle()
+                                        
+                                        if questionMarkContent {
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                                withAnimation {
+                                                    proxy.scrollTo("bottom", anchor: .bottom)
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            Rectangle()
+                                .fill(.clear)
+                                .frame(width: 100, height: 100)
                         }
                         
                         Rectangle()
                             .fill(.clear)
-                            .frame(width: 100, height: 85)
+                            .frame(width: 100, height: 70)
                             .id("bottom")
                     }
                     
@@ -78,7 +209,7 @@ struct UnEmployment6View: View {
                                     UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
                                     
                                     viewModel.currentPage += 1
-                                    navigationRouter.navigate(.PriceLevel3View(viewModel))
+                                    navigationRouter.navigate(.UnEmployment7View(viewModel))
                                 } label: {
                                     LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
@@ -116,18 +247,58 @@ struct UnEmployment6View: View {
                         progress.append(1)
                     }
                     
+                    if progress.count == 1 {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            withAnimation(.smooth(duration: 1.0)) {
+                                contentText1_2 = true
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                    withAnimation(.smooth(duration: 1.0)) {
+                                        contentText1_3 = true
+                                        
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                            withAnimation(.smooth(duration: 1.0)) {
+                                                contentImage = true
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
                     if progress.count == 2 {
                         withAnimation {
                             proxy.scrollTo("bottom", anchor: .bottom)
                         }
                         
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                             withAnimation(.smooth(duration: 1.0)) {
-                                nextButton = true
+                                nextScorllPart = true
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                     withAnimation(.smooth(duration: 1.0)) {
-                                        beforeButton = true
+                                        contentText2_2 = true
+                                        
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                            withAnimation(.smooth(duration: 1.0)) {
+                                                questionMark = true
+                                                
+                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                                    withAnimation(.smooth(duration: 1.0)) {
+                                                        nextButton = true
+                                                        
+                                                        proxy.scrollTo("bottom", anchor: .bottom)
+                                                        
+                                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                                            withAnimation(.smooth(duration: 1.0)) {
+                                                                beforeButton = true
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }

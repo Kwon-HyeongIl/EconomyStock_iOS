@@ -41,7 +41,6 @@ struct UnEmployment5View: View {
                             
                             Spacer()
                         }
-                        .opacity(0.2)
                         .padding(.top)
                         
                         ZStack {
@@ -56,15 +55,15 @@ struct UnEmployment5View: View {
                                 }
                                 
                                 if contentImage1_1 {
-                                    LottieViewConverter(fileName: "BasicEconomy10_Distribution", loopMode: .playOnce, width: 150, height: 150)
+                                    LottieViewConverter(fileName: "BasicEconomy10_Distribution", loopMode: .playOnce, width: 130, height: 130)
                                 }
                                 
                                 if contentImage1_2 {
                                     HStack(spacing: 40) {
-                                        LottieViewConverter(fileName: "ArrowRight", loopMode: .playOnce, toProgress: 0.5, scale: 1.6, width: 60, height: 60)
+                                        LottieViewConverter(fileName: "ArrowRight", loopMode: .playOnce, toProgress: 0.5, scale: 1.4, width: 60, height: 60)
                                             .rotationEffect(.degrees(126))
                                         
-                                        LottieViewConverter(fileName: "ArrowRight", loopMode: .playOnce, toProgress: 0.5, scale: 1.6, width: 60, height: 60)
+                                        LottieViewConverter(fileName: "ArrowRight", loopMode: .playOnce, toProgress: 0.5, scale: 1.4, width: 60, height: 60)
                                             .rotationEffect(.degrees(52))
                                     }
                                 }
@@ -75,7 +74,7 @@ struct UnEmployment5View: View {
                                             Image("Suit_Toktok")
                                                 .resizable()
                                                 .scaledToFit()
-                                                .frame(width: 90)
+                                                .frame(width: 80)
                                             
                                             Text("근로자")
                                                 .font(.system(size: 18))
@@ -83,8 +82,8 @@ struct UnEmployment5View: View {
                                                 .foregroundStyle(Color.ESTitle)
                                                 .padding(.top, 10)
                                         }
-                                        .padding(.leading, 10)
-                                        .padding(.top, 20)
+                                        .padding(.leading, 15)
+                                        .padding(.top, 30)
                                         
                                         VStack {
                                             LottieViewConverter(fileName: "BasicEconomy4_Building", loopMode: .playOnce, toProgress: 0.5, width: 100, height: 100)
