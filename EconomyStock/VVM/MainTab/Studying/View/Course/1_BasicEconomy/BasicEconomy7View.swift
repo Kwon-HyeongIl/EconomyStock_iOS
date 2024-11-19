@@ -112,19 +112,21 @@ struct BasicEconomy7View: View {
                         
                         ZStack {
                             if questionMark {
-                                VStack {
+                                VStack(spacing: 0) {
                                     HStack(spacing: 5) {
                                         LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
                                             .padding(.leading, 10)
+                                            .padding(.top, questionMarkContent ? 5 : 0)
                                         
                                         Text("채권이란?")
                                             .font(.system(size: 15))
                                             .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
                                             .fontWeight(.semibold)
+                                            .padding(.vertical, questionMarkContent ? 0 : 5)
+                                            .padding(.top, questionMarkContent ? 5 : 0)
                                         
                                         Spacer()
                                     }
-                                    .padding(.top, questionMarkContent ? 5 : 0)
                                     
                                     if questionMarkContent {
                                         HStack(spacing: 5) {

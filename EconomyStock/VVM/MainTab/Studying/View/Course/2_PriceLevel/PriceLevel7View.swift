@@ -120,17 +120,17 @@ struct PriceLevel7View: View {
                         
                         ZStack {
                             if questionMark {
-                                VStack {
+                                VStack(spacing: 0) {
                                     HStack(spacing: 5) {
                                         LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
                                             .padding(.leading, 10)
                                         
-                                        Text("CPI에 주택 임대료는 포함되지만 주택 가격은 포함되지 않는 이유는?")
+                                        Text("CPI에 주택임대료는 포함되지만 주택가격은 포함되지 않는 이유는?")
                                             .font(.system(size: 15))
                                             .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
                                             .fontWeight(.semibold)
-                                            .padding(.vertical, 5)
-                                            .padding(.top, questionMarkContent ? 5 : 0)
+                                            .padding(.vertical, questionMarkContent ? 0 : 5)
+                                            .padding(.vertical, questionMarkContent ? 10 : 0)
                                         
                                         Spacer()
                                     }

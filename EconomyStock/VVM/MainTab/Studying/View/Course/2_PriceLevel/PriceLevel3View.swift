@@ -151,19 +151,21 @@ struct PriceLevel3View: View {
                         
                         ZStack {
                             if questionMark {
-                                VStack {
+                                VStack(spacing: 0) {
                                     HStack(spacing: 5) {
                                         LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
                                             .padding(.leading, 10)
+                                            .padding(.top, questionMarkContent ? 5 : 0)
                                         
-                                        Text("경기 침체란?")
+                                        Text("경기침체란?")
                                             .font(.system(size: 15))
                                             .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
                                             .fontWeight(.semibold)
+                                            .padding(.vertical, questionMarkContent ? 0 : 5)
+                                            .padding(.top, questionMarkContent ? 5 : 0)
                                         
                                         Spacer()
                                     }
-                                    .padding(.top, questionMarkContent ? 5 : 0)
                                     
                                     if questionMarkContent {
                                         HStack(spacing: 5) {
@@ -174,7 +176,7 @@ struct PriceLevel3View: View {
                                                 .padding(.leading, 20)
                                                 .padding(.bottom, 68)
                                             
-                                            Text("경기 침체는 경제 내에서 생산이 적정 수준보다 과소하게 이루어지는 현상을 말해요, 이 때 실업률이 상승하고, 국민 소득이 감소하며 물가가 크게 하락하는 특징이 있어요.")
+                                            Text("경기침체는 경제 내에서 생산이 적정 수준보다 과소하게 이루어지는 현상을 말해요, 이 때 실업률이 상승하고, 국민 소득이 감소하며 물가가 크게 하락하는 특징이 있어요.")
                                                 .font(.system(size: 15))
                                                 .fontWeight(.semibold)
                                                 .foregroundStyle(.black.opacity(0.6))

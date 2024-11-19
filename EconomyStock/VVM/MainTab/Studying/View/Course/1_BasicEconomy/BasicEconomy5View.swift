@@ -240,19 +240,21 @@ struct BasicEconomy5View: View {
                         
                         ZStack {
                             if questionMark {
-                                VStack {
+                                VStack(spacing: 0) {
                                     HStack(spacing: 5) {
                                         LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
                                             .padding(.leading, 10)
+                                            .padding(.top, questionMarkContent ? 5 : 0)
                                         
                                         Text("이전지출이란?")
                                             .font(.system(size: 15))
                                             .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
                                             .fontWeight(.semibold)
+                                            .padding(.vertical, questionMarkContent ? 0 : 5)
+                                            .padding(.top, questionMarkContent ? 5 : 0)
                                         
                                         Spacer()
                                     }
-                                    .padding(.top, questionMarkContent ? 5 : 0)
                                     
                                     if questionMarkContent {
                                         HStack(spacing: 5) {
@@ -261,9 +263,9 @@ struct BasicEconomy5View: View {
                                                 .fontWeight(.semibold)
                                                 .foregroundStyle(.black.opacity(0.6))
                                                 .padding(.leading, 20)
-                                                .padding(.bottom, 33)
+                                                .padding(.bottom, 51)
                                             
-                                            Text("단순히 소득의 이전이며, 어떠한 부가가치도 창출하지 않으므로 정부지출에 포함되지 않아요.")
+                                            Text("이전지출은 단순히 소득의 이전이며, 어떠한 부가가치도 창출하지 않으므로 정부지출에 포함되지 않아요.")
                                                 .font(.system(size: 15))
                                                 .fontWeight(.semibold)
                                                 .foregroundStyle(.black.opacity(0.6))

@@ -116,10 +116,10 @@ struct BasicEconomy10View: View {
                         .padding(.top, 10)
                         
                         (Text("즉, ")
-                         + Text("생산과 지출이 같아")
+                         + Text("생산과 지출이 같아진다")
                             .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
                             .fontWeight(.bold)
-                         + Text("진다고 했어요"))
+                         + Text("고 했어요"))
                         .font(.system(size: 20))
                         .fontWeight(.semibold)
                         .multilineTextAlignment(.center)
@@ -239,15 +239,18 @@ struct BasicEconomy10View: View {
                         
                         ZStack {
                             if questionMark {
-                                VStack {
+                                VStack(spacing: 0) {
                                     HStack(spacing: 5) {
                                         LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
                                             .padding(.leading, 10)
+                                            .padding(.top, questionMarkContent ? 5 : 0)
                                         
                                         Text("생산과 지출이 같다는게 무슨 의미일까요?")
                                             .font(.system(size: 15))
                                             .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
                                             .fontWeight(.semibold)
+                                            .padding(.vertical, questionMarkContent ? 0 : 5)
+                                            .padding(.top, questionMarkContent ? 5 : 0)
                                         
                                         Spacer()
                                     }

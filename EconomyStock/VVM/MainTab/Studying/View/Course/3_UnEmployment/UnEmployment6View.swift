@@ -133,16 +133,17 @@ struct UnEmployment6View: View {
                         
                         ZStack {
                             if questionMark {
-                                VStack {
+                                VStack(spacing: 0) {
                                     HStack(spacing: 5) {
                                         LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
                                             .padding(.leading, 10)
+                                            .padding(.top, questionMarkContent ? 5 : 0)
                                         
-                                        Text("효율임금이론이란?")
+                                        Text("효율임금이란?")
                                             .font(.system(size: 15))
                                             .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
                                             .fontWeight(.semibold)
-                                            .padding(.vertical, 5)
+                                            .padding(.vertical, questionMarkContent ? 0 : 5)
                                             .padding(.top, questionMarkContent ? 5 : 0)
                                         
                                         Spacer()
@@ -155,9 +156,9 @@ struct UnEmployment6View: View {
                                                 .fontWeight(.semibold)
                                                 .foregroundStyle(.black.opacity(0.6))
                                                 .padding(.leading, 20)
-                                                .padding(.bottom, 68)
+                                                .padding(.bottom, 83)
                                             
-                                            Text("효율임금이론은 균형임금 수준보다 더 높은 임금을 지급하여 노동자들이 더 일할 수 있는 동기 부여를 제공하여 이직률을 낮추고 채용과정에서 발생되는 기업의 막대한 비용을 낮추는 것을 말해요.")
+                                            Text("효율임금이론은 균형임금 수준보다 더 높은 임금을 지급함으로써 노동자들에게 더 열심히 일할 수 있는 동기를 부여하여 이직률을 낮추고 채용과정에서 발생되는 기업의 막대한 비용을 낮출 수 있음을 설명하는 이론이에요.")
                                                 .font(.system(size: 15))
                                                 .fontWeight(.semibold)
                                                 .foregroundStyle(.black.opacity(0.6))

@@ -146,19 +146,20 @@ struct PriceLevel5View: View {
                         
                         ZStack {
                             if questionMark {
-                                VStack {
+                                VStack(spacing: 0) {
                                     HStack(spacing: 5) {
                                         LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
                                             .padding(.leading, 10)
                                         
-                                        Text("물가가 하락하는데 왜 기업의 수익성이 악화될까요?")
+                                        Text("물가가 하락하는데 왜 기업의 수익성이 약화될까요?")
                                             .font(.system(size: 15))
                                             .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
                                             .fontWeight(.semibold)
+                                            .padding(.vertical, questionMarkContent ? 0 : 5)
+                                            .padding(.vertical, questionMarkContent ? 10 : 0)
                                         
                                         Spacer()
                                     }
-                                    .padding(.top, questionMarkContent ? 5 : 0)
                                     
                                     if questionMarkContent {
                                         HStack(spacing: 5) {
@@ -173,6 +174,7 @@ struct PriceLevel5View: View {
                                                 .font(.system(size: 15))
                                                 .fontWeight(.semibold)
                                                 .foregroundStyle(.black.opacity(0.6))
+                                                .frame(height: 80)
                                                 .padding(.bottom, 10)
                                             
                                             Spacer()
@@ -206,7 +208,7 @@ struct PriceLevel5View: View {
                         
                         Rectangle()
                             .fill(.clear)
-                            .frame(width: 100, height: 70)
+                            .frame(width: 100, height: 80)
                             .id("bottom")
                     }
                     
