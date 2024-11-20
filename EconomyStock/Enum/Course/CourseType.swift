@@ -11,4 +11,5 @@ enum CourseType {
     case basicEconomy
     case priceLevel
     case unEmployment
+    case moneyAndFinance
 }

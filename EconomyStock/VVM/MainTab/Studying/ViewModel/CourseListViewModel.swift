@@ -15,6 +15,7 @@ class CourseListViewModel {
         initBasicEconomyCourse()
         initPriceLevelCourse()
         initUnEmploymentCourse()
+        initMoneyAndFinanceCourse()
     }
     
     // I 기초 경제
@@ -79,6 +80,27 @@ class CourseListViewModel {
             self.courses.append(Course(id: UUID().uuidString, type: .unEmployment, title: "실업", number: "III", lottieFileName: "UnEmploymentCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
         }
     }
+    
+    // 화폐와 금융
+    func initMoneyAndFinanceCourse() {
+        let currentUser = AuthManager.shared.currentUser
+        
+        let gradient = LinearGradient(
+            gradient: Gradient(colors: [.pink, .yellow]),
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
+        
+        let parmanentProgressPage = Double(currentUser?.studyingCourse.moneyAndFinanceLastPage ?? 0)
+        let totalPage = 5.0
+        let progressRate = (parmanentProgressPage / totalPage) * 100.0
+        
+        let lastPage = currentUser?.studyingCourse.moneyAndFinanceLastPage ?? 0
+        
+        DispatchQueue.main.async {
+            self.courses.append(Course(id: UUID().uuidString, type: .moneyAndFinance, title: "화폐와 금융", number: "IV", lottieFileName: "MoneyAndFinanceCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
+        }
+    }
 
     func updateAllCourses() {
         courses.removeAll()
@@ -86,5 +108,6 @@ class CourseListViewModel {
         initBasicEconomyCourse()
         initPriceLevelCourse()
         initUnEmploymentCourse()
+        initMoneyAndFinanceCourse()
     }
 }

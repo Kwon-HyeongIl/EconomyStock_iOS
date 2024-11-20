@@ -63,9 +63,6 @@ struct CourseToolbarModifier: ViewModifier {
                         // CurrentUser의 lastPage 값 바꾸기
                         AuthManager.shared.currentUser?.studyingCourse.basicEconomyLastPage = currentPage
                         
-                        // CourseListViewModel의 updateAllCourses 메서드 호출 (중간 인터페이스로 연결)
-                        courseListViewCapule.isUpdate.toggle()
-                        
                     case .priceLevel:
                         if AuthManager.shared.currentUser?.studyingCourse.priceLevelParmanentProgressPage ?? 0 < currentPage {
                             AuthManager.shared.currentUser?.studyingCourse.priceLevelParmanentProgressPage = currentPage
@@ -76,8 +73,6 @@ struct CourseToolbarModifier: ViewModifier {
                         }
                         
                         AuthManager.shared.currentUser?.studyingCourse.priceLevelLastPage = currentPage
-                        
-                        courseListViewCapule.isUpdate.toggle()
                         
                     case .unEmployment:
                         if AuthManager.shared.currentUser?.studyingCourse.unEmploymentParmanentProgressPage ?? 0 < currentPage {
@@ -90,8 +85,20 @@ struct CourseToolbarModifier: ViewModifier {
                         
                         AuthManager.shared.currentUser?.studyingCourse.unEmploymentLastPage = currentPage
                         
-                        courseListViewCapule.isUpdate.toggle()
+                    case .moneyAndFinance:
+                        if AuthManager.shared.currentUser?.studyingCourse.moneyAndFinanceParmanentProgressPage ?? 0 < currentPage {
+                            AuthManager.shared.currentUser?.studyingCourse.moneyAndFinanceParmanentProgressPage = currentPage
+                            
+                            Task {
+                                await AuthManager.shared.updateCourseParmanentProgressPage(courseType: viewModel.course.type, parmanentProgressPage: currentPage)
+                            }
+                        }
+                        
+                        AuthManager.shared.currentUser?.studyingCourse.moneyAndFinanceLastPage = currentPage
                     }
+                    
+                    // CourseListViewModel의 updateAllCourses 메서드 호출 (중간 인터페이스로 연결)
+                    courseListViewCapule.isUpdate.toggle()
                     
                     // DB User의 lastPage 값 바꾸기
                     Task {

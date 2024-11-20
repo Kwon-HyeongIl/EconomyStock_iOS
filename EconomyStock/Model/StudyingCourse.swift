@@ -17,4 +17,6 @@ struct StudyingCourse: Codable, Hashable, Equatable {
     var unEmploymentParmanentProgressPage = 0
     var unEmploymentLastPage = 0
     
+    var moneyAndFinanceParmanentProgressPage = 0
+    var moneyAndFinanceLastPage = 0
 }

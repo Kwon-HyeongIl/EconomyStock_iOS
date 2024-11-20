@@ -92,6 +92,54 @@ class NavigationRouter {
             UnEmployment6View(viewModel: viewModel)
         case .UnEmployment7View(let viewModel):
             UnEmployment7View(viewModel: viewModel)
+            
+            // 화폐와 금융
+        case .MoneyAndFinance1View(let viewModel):
+            MoneyAndFinance1View(viewModel: viewModel)
+        case .MoneyAndFinance2View(let viewModel):
+            MoneyAndFinance2View(viewModel: viewModel)
+        case .MoneyAndFinance3View(let viewModel):
+            MoneyAndFinance3View(viewModel: viewModel)
+        case .MoneyAndFinance4View(let viewModel):
+            MoneyAndFinance4View(viewModel: viewModel)
+        case .MoneyAndFinance5View(let viewModel):
+            MoneyAndFinance5View(viewModel: viewModel)
+        case .MoneyAndFinance6View(let viewModel):
+            MoneyAndFinance6View(viewModel: viewModel)
+        case .MoneyAndFinance7View(let viewModel):
+            MoneyAndFinance7View(viewModel: viewModel)
+        case .MoneyAndFinance8View(let viewModel):
+            MoneyAndFinance8View(viewModel: viewModel)
+        case .MoneyAndFinance9View(let viewModel):
+            MoneyAndFinance9View(viewModel: viewModel)
+        case .MoneyAndFinance10View(let viewModel):
+            MoneyAndFinance10View(viewModel: viewModel)
+        case .MoneyAndFinance11View(let viewModel):
+            MoneyAndFinance11View(viewModel: viewModel)
+        case .MoneyAndFinance12View(let viewModel):
+            MoneyAndFinance12View(viewModel: viewModel)
+        case .MoneyAndFinance13View(let viewModel):
+            MoneyAndFinance13View(viewModel: viewModel)
+        case .MoneyAndFinance14View(let viewModel):
+            MoneyAndFinance14View(viewModel: viewModel)
+        case .MoneyAndFinance15View(let viewModel):
+            MoneyAndFinance15View(viewModel: viewModel)
+        case .MoneyAndFinance16View(let viewModel):
+            MoneyAndFinance16View(viewModel: viewModel)
+        case .MoneyAndFinance17View(let viewModel):
+            MoneyAndFinance17View(viewModel: viewModel)
+        case .MoneyAndFinance18View(let viewModel):
+            MoneyAndFinance18View(viewModel: viewModel)
+        case .MoneyAndFinance19View(let viewModel):
+            MoneyAndFinance19View(viewModel: viewModel)
+        case .MoneyAndFinance20View(let viewModel):
+            MoneyAndFinance20View(viewModel: viewModel)
+        case .MoneyAndFinance21View(let viewModel):
+            MoneyAndFinance21View(viewModel: viewModel)
+        case .MoneyAndFinance22View(let viewModel):
+            MoneyAndFinance22View(viewModel: viewModel)
+        case .MoneyAndFinance23View(let viewModel):
+            MoneyAndFinance23View(viewModel: viewModel)
         }
     }
     

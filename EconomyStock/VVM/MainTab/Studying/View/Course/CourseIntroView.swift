@@ -45,7 +45,7 @@ struct CourseIntroView: View {
                             if viewModel.course.lastPage == 0 {
                                 navigationRouter.navigate(.BasicEconomy1View(viewModel))
                                 
-                            } else if viewModel.course.lastPage == 5 {
+                            } else if viewModel.course.lastPage == 11 {
                                 alertFinishing = true
                                 
                             } else {
@@ -56,7 +56,7 @@ struct CourseIntroView: View {
                             if viewModel.course.lastPage == 0 {
                                 navigationRouter.navigate(.PriceLevel1View(viewModel))
                                 
-                            } else if viewModel.course.lastPage == 5 {
+                            } else if viewModel.course.lastPage == 10 {
                                 alertFinishing = true
                                 
                             } else {
@@ -67,7 +67,18 @@ struct CourseIntroView: View {
                             if viewModel.course.lastPage == 0 {
                                 navigationRouter.navigate(.UnEmployment1View(viewModel))
                                 
-                            } else if viewModel.course.lastPage == 5 {
+                            } else if viewModel.course.lastPage == 7 {
+                                alertFinishing = true
+                                
+                            } else {
+                                alertAskStartContinue = true
+                            }
+                            
+                        case .moneyAndFinance:
+                            if viewModel.course.lastPage == 0 {
+                                navigationRouter.navigate(.MoneyAndFinance1View(viewModel))
+                                
+                            } else if viewModel.course.lastPage == 23 {
                                 alertFinishing = true
                                 
                             } else {
@@ -405,6 +416,14 @@ struct CourseIntroView: View {
                                 default:
                                     navigationRouter.navigate(.UnEmployment1View(viewModel))
                                 }
+                                
+                            case .moneyAndFinance:
+                                switch viewModel.course.lastPage {
+                                case 1:
+                                    navigationRouter.navigate(.MoneyAndFinance1View(viewModel))
+                                default:
+                                    navigationRouter.navigate(.MoneyAndFinance1View(viewModel))
+                                }
                             }
                         } label: {
                             Text("확인")
@@ -421,13 +440,14 @@ struct CourseIntroView: View {
                         
                         Button {
                             switch viewModel.course.type {
-                                
                             case .basicEconomy:
                                 navigationRouter.navigate(.BasicEconomy1View(viewModel))
                             case .priceLevel:
                                 navigationRouter.navigate(.PriceLevel1View(viewModel))
                             case .unEmployment:
                                 navigationRouter.navigate(.UnEmployment1View(viewModel))
+                            case .moneyAndFinance:
+                                navigationRouter.navigate(.MoneyAndFinance1View(viewModel))
                             }
                         } label: {
                             Text("확인")
@@ -444,13 +464,14 @@ struct CourseIntroView: View {
                         
                         Button {
                             switch viewModel.course.type {
-                                
                             case .basicEconomy:
                                 navigationRouter.navigate(.BasicEconomy1View(viewModel))
                             case .priceLevel:
                                 navigationRouter.navigate(.PriceLevel1View(viewModel))
                             case .unEmployment:
                                 navigationRouter.navigate(.UnEmployment1View(viewModel))
+                            case .moneyAndFinance:
+                                navigationRouter.navigate(.MoneyAndFinance1View(viewModel))
                             }
                         } label: {
                             Text("확인")
@@ -484,6 +505,14 @@ struct CourseIntroView: View {
                             
                         case .unEmployment:
                             Text("경제학이 지향하는 경제 성장이라는 목표는 실업의 감소라고도 볼 수 있어요.\n\n이번 시간에는 실업의 의미에 대해 알아보아요.")
+                                .font(.system(size: 18))
+                                .fontWeight(.semibold)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal, 20)
+                                .padding(.top)
+                            
+                        case .moneyAndFinance:
+                            Text("수천년 전부터 사용되어 온 화폐는 지금까지도 경제생활에 있어서 필수적인 물건이에요.\n화폐는 단순하게 보면 그저 지불수단이지만, 경제에는 지불수단 그 이상의 영향력을 미쳐요.\n이번시간에는 화폐와 금융 전반에 대해서 배워보도록 할게요.")
                                 .font(.system(size: 18))
                                 .fontWeight(.semibold)
                                 .multilineTextAlignment(.center)
