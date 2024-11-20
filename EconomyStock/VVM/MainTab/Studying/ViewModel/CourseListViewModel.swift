@@ -44,7 +44,7 @@ class CourseListViewModel {
         let currentUser = AuthManager.shared.currentUser
         
         let gradient = LinearGradient(
-            gradient: Gradient(colors: [.yellow, .orange]),
+            gradient: Gradient(colors: [.orange, .yellow]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
@@ -65,7 +65,7 @@ class CourseListViewModel {
         let currentUser = AuthManager.shared.currentUser
         
         let gradient = LinearGradient(
-            gradient: Gradient(colors: [.blue, .cyan]),
+            gradient: Gradient(colors: [.blue, .mint]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
@@ -86,7 +86,7 @@ class CourseListViewModel {
         let currentUser = AuthManager.shared.currentUser
         
         let gradient = LinearGradient(
-            gradient: Gradient(colors: [.pink, .yellow]),
+            gradient: Gradient(colors: [.pink, .purple.opacity(0.6)]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
