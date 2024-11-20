@@ -13,13 +13,8 @@ struct MoneyAndFinance1View: View {
     
     @State private var progress: [Int] = []
     
-    @State private var contentImage1_1 = false
-    @State private var contentImage1_2 = false
-    @State private var contentText1 = false
-    @State private var contentImage2 = false
-    @State private var contentText2 = false
-    @State private var contentImage3 = false
-    @State private var contentText3 = false
+    @State private var contentImage = false
+    @State private var contentText2_2 = false
     
     @State private var nextButton = false
     
@@ -37,289 +32,51 @@ struct MoneyAndFinance1View: View {
                             .padding(.leading, 30)
                             .padding(.bottom, 3)
                         
-                        Text("인구의 분류")
+                        Text("통화")
                             .font(.system(size: 25))
                             .fontWeight(.bold)
                         
                         Spacer()
                     }
+                    .opacity(0.2)
                     .padding(.top)
                     
                     if progress.count >= 1 {
                         VStack {
-                            Text("한 나라의 인구는 다음과 같이 분류될 수 있어요")
+                            (Text("화폐는 경제 내에서 일어나는 여러가지 거래에서 사용되는 지불수단으로, 통화란 ")
+                            + Text("현재 유통되고 있는 화폐")
+                                .foregroundStyle(Color.ESTitle)
+                                .fontWeight(.bold)
+                            + Text("를 말해요"))
                                 .font(.system(size: 20))
                                 .fontWeight(.semibold)
                                 .multilineTextAlignment(.center)
                                 .padding(.horizontal)
                                 .padding(.top)
-                        }
-                    }
-                    
-                    if contentImage1_1 {
-                        Text("총인구")
-                            .font(.system(size: 18))
-                            .fontWeight(.semibold)
-                            .foregroundStyle(Color.ESTitle)
-                            .overlay {
-                                Ellipse()
-                                    .stroke(Color.ESTitle, lineWidth: 2)
-                                    .frame(width: 80, height: 40)
-                                    .foregroundStyle(Color.ESTitle)
-                                
-                            }
-                            .padding(.top)
-                        
-                        
-                        if contentImage1_2 {
-                            Image(systemName: "chevron.up")
-                                .resizable()
-                                .fontWeight(.ultraLight)
-                                .frame(width: 150, height: 30)
-                                .foregroundStyle(Color.ESTitle)
-                                .padding(.vertical, 5)
-                                .padding(.bottom, 5)
                             
-                            /*
-                             matchedGeometryEffect 수정자를 사용할 때, 뷰에 padding이 적용되어 있으면
-                             애니메이션 과정에서 끊김이 발생하므로 Spacer로 간격 조절
-                             */
-                            HStack(spacing: 30) {
-                                Spacer()
-                                
-                                Text("그 외")
-                                    .font(.system(size: 18))
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(Color.ESTitle)
-                                    .overlay {
-                                        Ellipse()
-                                            .stroke(Color.ESTitle, lineWidth: 2)
-                                            .frame(width: 70, height: 40)
-                                            .foregroundStyle(Color.ESTitle)
-                                        
-                                    }
-                                    .padding(.leading, 30)
-                                
-                                Spacer()
-                                
-                                Text("생산가능인구")
-                                    .font(.system(size: 18))
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(Color.ESTitle)
-                                    .overlay {
-                                        Ellipse()
-                                            .stroke(Color.ESTitle, lineWidth: 2)
-                                            .frame(width: 130, height: 40)
-                                            .foregroundStyle(Color.ESTitle)
-                                        
-                                    }
-                                    .matchedGeometryEffect(id: "animation1", in: animation)
-                                
-                                Spacer()
+                            if contentImage {
+                                LottieViewConverter(fileName: "MoneyAndFinance1_Money", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
                             }
+                            
+                            Spacer()
                         }
                     }
                     
-                    if contentText1 {
-                        VStack(spacing: 5) {
-                            Text("생산가능인구")
+                    if progress.count >= 2 {
+                        Text("예를 들어, 우리가 현재 사용하는 지폐는 화폐이면서 통화이지만,")
+                            .font(.system(size: 20))
+                            .fontWeight(.semibold)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+                            .padding(.top, 50)
+                        
+                        if contentText2_2 {
+                            Text("조선시대의 상평통보는 화폐이지만 현재 사용되지 않으므로 통화가 아니에요")
                                 .font(.system(size: 20))
                                 .fontWeight(.semibold)
                                 .multilineTextAlignment(.center)
                                 .padding(.horizontal)
-                                .foregroundStyle(Color.ESTitle)
-                                .fontWeight(.bold)
-                            
-                            Text("대한민국에 상주하는 만 15세 이상 인구 가운데 군인, 교도소 수감자 등을 제외한 인구를 말해요")
-                                .font(.system(size: 20))
-                                .fontWeight(.semibold)
-                                .multilineTextAlignment(.center)
-                                .padding(.horizontal)
-                        }
-                        .padding(.top, 50)
-                    }
-                    
-                    if progress.count == 2 {
-                        Text("생산가능인구")
-                            .font(.system(size: 18))
-                            .fontWeight(.semibold)
-                            .foregroundStyle(Color.ESTitle)
-                            .overlay {
-                                Ellipse()
-                                    .stroke(Color.ESTitle, lineWidth: 2)
-                                    .frame(width: 130, height: 40)
-                                    .foregroundStyle(Color.ESTitle)
-                                
-                            }
-                            .padding(.top)
-                            .matchedGeometryEffect(id: "animation1", in: animation)
-                        
-                        if contentImage2 {
-                            Image(systemName: "chevron.up")
-                                .resizable()
-                                .fontWeight(.ultraLight)
-                                .frame(width: 150, height: 30)
-                                .foregroundStyle(Color.ESTitle)
-                                .padding(.vertical, 5)
-                                .padding(.bottom, 5)
-                            
-                            HStack(spacing: 30) {
-                                Spacer()
-                                
-                                Text("비경제활동인구")
-                                    .font(.system(size: 18))
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(Color.ESTitle)
-                                    .overlay {
-                                        Ellipse()
-                                            .stroke(Color.ESTitle, lineWidth: 2)
-                                            .frame(width: 150, height: 40)
-                                            .foregroundStyle(Color.ESTitle)
-                                        
-                                    }
-                                
-                                Spacer()
-                                
-                                Text("경제활동인구")
-                                    .font(.system(size: 18))
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(Color.ESTitle)
-                                    .overlay {
-                                        Ellipse()
-                                            .stroke(Color.ESTitle, lineWidth: 2)
-                                            .frame(width: 130, height: 40)
-                                            .foregroundStyle(Color.ESTitle)
-                                        
-                                    }
-                                    .matchedGeometryEffect(id: "animation2", in: animation)
-                                
-                                Spacer()
-                            }
-                        }
-                        
-                        if contentText2 {
-                            VStack(spacing: 5) {
-                                Text("경제활동인구")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.semibold)
-                                    .multilineTextAlignment(.center)
-                                    .padding(.horizontal)
-                                    .foregroundStyle(Color.ESTitle)
-                                    .fontWeight(.bold)
-                                
-                                Text("생산가능인구 중 일할 의지와 능력이 모두 있는 사람을 말해요")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.semibold)
-                                    .multilineTextAlignment(.center)
-                                    .padding(.horizontal)
-                            }
-                            .padding(.top, 50)
-                            
-                            VStack(spacing: 5) {
-                                Text("비경제활동인구")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.semibold)
-                                    .multilineTextAlignment(.center)
-                                    .padding(.horizontal)
-                                    .foregroundStyle(Color.ESTitle)
-                                    .fontWeight(.bold)
-                                
-                                Text("생산가능인구 중 일할 의지와 능력이 없는 사람을 말해요")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.semibold)
-                                    .multilineTextAlignment(.center)
-                                    .padding(.horizontal)
-                            }
-                            .padding(.top, 10)
-                        }
-                    }
-                    
-                    if progress.count == 3 {
-                        Text("경제활동인구")
-                            .font(.system(size: 18))
-                            .fontWeight(.semibold)
-                            .foregroundStyle(Color.ESTitle)
-                            .overlay {
-                                Ellipse()
-                                    .stroke(Color.ESTitle, lineWidth: 2)
-                                    .frame(width: 130, height: 40)
-                                    .foregroundStyle(Color.ESTitle)
-                                
-                            }
-                            .padding(.top)
-                            .matchedGeometryEffect(id: "animation2", in: animation)
-                        
-                        if contentImage3 {
-                            Image(systemName: "chevron.up")
-                                .resizable()
-                                .fontWeight(.ultraLight)
-                                .frame(width: 150, height: 30)
-                                .foregroundStyle(Color.ESTitle)
-                                .padding(.vertical, 5)
-                                .padding(.bottom, 5)
-                            
-                            HStack(spacing: 30) {
-                                Text("실업자")
-                                    .font(.system(size: 18))
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(Color.ESTitle)
-                                    .overlay {
-                                        Ellipse()
-                                            .stroke(Color.ESTitle, lineWidth: 2)
-                                            .frame(width: 100, height: 40)
-                                            .foregroundStyle(Color.ESTitle)
-                                        
-                                    }
-                                
-                                Text("취업자")
-                                    .font(.system(size: 18))
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(Color.ESTitle)
-                                    .overlay {
-                                        Ellipse()
-                                            .stroke(Color.ESTitle, lineWidth: 2)
-                                            .frame(width: 100, height: 40)
-                                            .foregroundStyle(Color.ESTitle)
-                                        
-                                    }
-                                    .padding(.leading, 80)
-                            }
-                        }
-                        
-                        if contentText3 {
-                            VStack(spacing: 5) {
-                                Text("실업자")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.semibold)
-                                    .multilineTextAlignment(.center)
-                                    .padding(.horizontal)
-                                    .foregroundStyle(Color.ESTitle)
-                                    .fontWeight(.bold)
-                                
-                                Text("경제활동인구 중 일을 하지 못하고 있는 사람을 말해요")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.semibold)
-                                    .multilineTextAlignment(.center)
-                                    .padding(.horizontal)
-                            }
-                            .padding(.top, 50)
-                            
-                            VStack(spacing: 5) {
-                                Text("취업자")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.semibold)
-                                    .multilineTextAlignment(.center)
-                                    .padding(.horizontal)
-                                    .foregroundStyle(Color.ESTitle)
-                                    .fontWeight(.bold)
-                                
-                                Text("경제활동인구 중 일을 하고 있는 사람을 말해요")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.semibold)
-                                    .multilineTextAlignment(.center)
-                                    .padding(.horizontal)
-                            }
-                            .padding(.top, 10)
+                                .padding(.top)
                         }
                     }
                 }
@@ -333,7 +90,7 @@ struct MoneyAndFinance1View: View {
                             UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
                             
                             viewModel.currentPage += 1
-                            navigationRouter.navigate(.UnEmployment2View(viewModel))
+                            navigationRouter.navigate(.MoneyAndFinance2View(viewModel))
                         } label: {
                             LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                 .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
@@ -353,62 +110,19 @@ struct MoneyAndFinance1View: View {
                 if progress.count == 1 {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                         withAnimation(.smooth(duration: 1.0)) {
-                            contentImage1_1 = true
-                            
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                withAnimation(.smooth(duration: 1.0)) {
-                                    contentImage1_2 = true
-                                    
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                        withAnimation(.smooth(duration: 1.0)) {
-                                            contentText1 = true
-                                        }
-                                    }
-                                }
-                            }
+                            contentImage = true
                         }
                     }
                 }
                 
                 if progress.count == 2 {
-                    withAnimation(.smooth(duration: 1.0)) {
-                        contentImage1_1 = false
-                        contentImage1_2 = false
-                        contentText1 = false
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            withAnimation(.smooth(duration: 1.0)) {
-                                contentImage2 = true
-                                
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    withAnimation(.smooth(duration: 1.0)) {
-                                        contentText2 = true
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                
-                if progress.count == 3 {
-                    withAnimation(.smooth(duration: 1.0)) {
-                        contentImage2 = false
-                        contentText2 = false
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            withAnimation(.smooth(duration: 1.0)) {
-                                contentImage3 = true
-                                
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    withAnimation(.smooth(duration: 1.0)) {
-                                        contentText3 = true
-                                        
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                            withAnimation(.smooth(duration: 1.0)) {
-                                                nextButton = true
-                                            }
-                                        }
-                                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        withAnimation(.smooth(duration: 1.0)) {
+                            contentText2_2 = true
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                withAnimation(.smooth(duration: 1.0)) {
+                                    nextButton = true
                                 }
                             }
                         }

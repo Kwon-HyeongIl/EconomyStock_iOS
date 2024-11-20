@@ -58,6 +58,9 @@
 		CA4E71A82CB78B8400BAA70C /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E71A72CB78B8400BAA70C /* CourseViewModel.swift */; };
 		CA4E71AB2CB78DE900BAA70C /* CourseIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E71AA2CB78DE900BAA70C /* CourseIntroView.swift */; };
 		CA5389CF2CDCE3C2003DA62F /* QuestionMark.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5389CE2CDCE3C2003DA62F /* QuestionMark.json */; };
+		CA5577EE2CEDF4FA00F7C4A6 /* MoneyAndFinance1_Money.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5577ED2CEDF4FA00F7C4A6 /* MoneyAndFinance1_Money.json */; };
+		CA5577F12CEDF81C00F7C4A6 /* MoneyAndFinance2_MoneyReport.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5577F02CEDF81C00F7C4A6 /* MoneyAndFinance2_MoneyReport.json */; };
+		CA5577F42CEDFB7100F7C4A6 /* DotLottie in Frameworks */ = {isa = PBXBuildFile; productRef = CA5577F32CEDFB7100F7C4A6 /* DotLottie */; };
 		CA5855CD2CEC2BCF005AB472 /* UnEmployment6_MoneyBalance.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5855CC2CEC2BCF005AB472 /* UnEmployment6_MoneyBalance.json */; };
 		CA58A4ED2CB6D9E900DB91BD /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58A4EC2CB6D9E900DB91BD /* ProgressCircleView.swift */; };
 		CA5A4A9C2CDDC2F300E225F3 /* BasicEconomy4_Building.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5A4A9B2CDDC2F300E225F3 /* BasicEconomy4_Building.json */; };
@@ -253,6 +256,8 @@
 		CA4E71A72CB78B8400BAA70C /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		CA4E71AA2CB78DE900BAA70C /* CourseIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseIntroView.swift; sourceTree = "<group>"; };
 		CA5389CE2CDCE3C2003DA62F /* QuestionMark.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QuestionMark.json; sourceTree = "<group>"; };
+		CA5577ED2CEDF4FA00F7C4A6 /* MoneyAndFinance1_Money.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MoneyAndFinance1_Money.json; sourceTree = "<group>"; };
+		CA5577F02CEDF81C00F7C4A6 /* MoneyAndFinance2_MoneyReport.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MoneyAndFinance2_MoneyReport.json; sourceTree = "<group>"; };
 		CA5855CC2CEC2BCF005AB472 /* UnEmployment6_MoneyBalance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UnEmployment6_MoneyBalance.json; sourceTree = "<group>"; };
 		CA58A4EC2CB6D9E900DB91BD /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 		CA5A4A9B2CDDC2F300E225F3 /* BasicEconomy4_Building.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicEconomy4_Building.json; sourceTree = "<group>"; };
@@ -402,6 +407,7 @@
 				CAEE16552CAD0C8100210BD0 /* CryptoSwift in Frameworks */,
 				CA9BB9DE2CABAACF00886A1A /* FirebaseFirestore in Frameworks */,
 				CA6C54D42CB160A1008CF887 /* GoogleSignIn in Frameworks */,
+				CA5577F42CEDFB7100F7C4A6 /* DotLottie in Frameworks */,
 				CA662BCE2CAD72E6009E8D5F /* KakaoSDKUser in Frameworks */,
 				CA9BB9E02CABAACF00886A1A /* FirebaseStorage in Frameworks */,
 				CA662BCC2CAD72E6009E8D5F /* KakaoSDKCommon in Frameworks */,
@@ -675,14 +681,15 @@
 		CA3F36B52CE4D44900FF871E /* InCourse */ = {
 			isa = PBXGroup;
 			children = (
-				CA712CA52CD65B15002E7276 /* BasicEconomy */,
-				CA3F36B62CE4D45000FF871E /* PriceLevel */,
-				CA9633D32CE9979700D318D1 /* UnEmployment */,
+				CA712CA52CD65B15002E7276 /* 1_BasicEconomy */,
+				CA3F36B62CE4D45000FF871E /* 2_PriceLevel */,
+				CA9633D32CE9979700D318D1 /* 3_UnEmployment */,
+				CA5577EB2CEDF4B800F7C4A6 /* 4_MoneyAndFinance */,
 			);
 			path = InCourse;
 			sourceTree = "<group>";
 		};
-		CA3F36B62CE4D45000FF871E /* PriceLevel */ = {
+		CA3F36B62CE4D45000FF871E /* 2_PriceLevel */ = {
 			isa = PBXGroup;
 			children = (
 				CA3F36B92CE4D45B00FF871E /* Page1 */,
@@ -694,7 +701,7 @@
 				CAAA24F62CE8424A00F8C380 /* Page9 */,
 				CAAA24F92CE845BF00F8C380 /* Page10 */,
 			);
-			path = PriceLevel;
+			path = 2_PriceLevel;
 			sourceTree = "<group>";
 		};
 		CA3F36B92CE4D45B00FF871E /* Page1 */ = {
@@ -721,6 +728,31 @@
 				CAEDDAC12CB570710046162D /* BasicLoginFocusField.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		CA5577EB2CEDF4B800F7C4A6 /* 4_MoneyAndFinance */ = {
+			isa = PBXGroup;
+			children = (
+				CA5577EC2CEDF4F200F7C4A6 /* Page1 */,
+				CA5577EF2CEDF80900F7C4A6 /* Page2 */,
+			);
+			path = 4_MoneyAndFinance;
+			sourceTree = "<group>";
+		};
+		CA5577EC2CEDF4F200F7C4A6 /* Page1 */ = {
+			isa = PBXGroup;
+			children = (
+				CA5577ED2CEDF4FA00F7C4A6 /* MoneyAndFinance1_Money.json */,
+			);
+			path = Page1;
+			sourceTree = "<group>";
+		};
+		CA5577EF2CEDF80900F7C4A6 /* Page2 */ = {
+			isa = PBXGroup;
+			children = (
+				CA5577F02CEDF81C00F7C4A6 /* MoneyAndFinance2_MoneyReport.json */,
+			);
+			path = Page2;
 			sourceTree = "<group>";
 		};
 		CA5855CB2CEC2BB9005AB472 /* Page6 */ = {
@@ -806,7 +838,7 @@
 			path = Course;
 			sourceTree = "<group>";
 		};
-		CA712CA52CD65B15002E7276 /* BasicEconomy */ = {
+		CA712CA52CD65B15002E7276 /* 1_BasicEconomy */ = {
 			isa = PBXGroup;
 			children = (
 				CA712CAC2CD65EE1002E7276 /* Page1 */,
@@ -817,7 +849,7 @@
 				CA61CEB62CE0B045007BCF4E /* Page9 */,
 				CAF2C03A2CD9C53600D0E15D /* Page10 */,
 			);
-			path = BasicEconomy;
+			path = 1_BasicEconomy;
 			sourceTree = "<group>";
 		};
 		CA712CAC2CD65EE1002E7276 /* Page1 */ = {
@@ -910,7 +942,7 @@
 			path = 1_BasicEconomy;
 			sourceTree = "<group>";
 		};
-		CA9633D32CE9979700D318D1 /* UnEmployment */ = {
+		CA9633D32CE9979700D318D1 /* 3_UnEmployment */ = {
 			isa = PBXGroup;
 			children = (
 				CA9633D42CE997A600D318D1 /* Page2 */,
@@ -919,7 +951,7 @@
 				CA5855CB2CEC2BB9005AB472 /* Page6 */,
 				CAC1FE512CEC988400DA1D4B /* Page7 */,
 			);
-			path = UnEmployment;
+			path = 3_UnEmployment;
 			sourceTree = "<group>";
 		};
 		CA9633D42CE997A600D318D1 /* Page2 */ = {
@@ -1385,6 +1417,7 @@
 				CA6C54D32CB160A1008CF887 /* GoogleSignIn */,
 				CA6C54D52CB160A1008CF887 /* GoogleSignInSwift */,
 				CA7757672CE22BAC00A8F3DE /* PopupView */,
+				CA5577F32CEDFB7100F7C4A6 /* DotLottie */,
 			);
 			productName = EconomyStock;
 			productReference = CA83477C2CAAE28500BA1E4A /* EconomyStock.app */;
@@ -1421,6 +1454,7 @@
 				CA1DDD362CB0E75000C84D08 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				CA6C54D22CB160A1008CF887 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				CA7757662CE22BAC00A8F3DE /* XCRemoteSwiftPackageReference "PopupView" */,
+				CA5577F22CEDFB7100F7C4A6 /* XCRemoteSwiftPackageReference "dotlottie-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CA83477D2CAAE28500BA1E4A /* Products */;
@@ -1472,6 +1506,7 @@
 				CACF34402CEDDD9100ECC6FA /* MoneyAndFinanceCourseCover.json in Resources */,
 				CAAA24FD2CE84B2200F8C380 /* PriceLevel10_ScienceProgress.json in Resources */,
 				CA47F57A2CD9359D00DCAFCF /* MainTab_News.json in Resources */,
+				CA5577F12CEDF81C00F7C4A6 /* MoneyAndFinance2_MoneyReport.json in Resources */,
 				CA6927122CDF7FDD005F2A6B /* ArrowRight.json in Resources */,
 				CAAA24F82CE8425900F8C380 /* PriceLevel9_GDP.json in Resources */,
 				CA7AF5702CE5FC83006DA22F /* Warning.json in Resources */,
@@ -1491,6 +1526,7 @@
 				CA47D3AB2CD68909009FCE4F /* BasicEconomy1_Earth.json in Resources */,
 				CA712CA72CD65B30002E7276 /* BasicEconomy1_Home.json in Resources */,
 				CAAE54182CB8E34200B5352D /* PriceLevelCourseCover.json in Resources */,
+				CA5577EE2CEDF4FA00F7C4A6 /* MoneyAndFinance1_Money.json in Resources */,
 				CA9BB9D02CABA59A00886A1A /* Assets.xcassets in Resources */,
 				CA7AF56D2CE5F282006DA22F /* PriceLevel3_BubbleHeart.json in Resources */,
 				CA47F56B2CD933B100DCAFCF /* MainTab_Profile_On.json in Resources */,
@@ -1859,6 +1895,14 @@
 				minimumVersion = 4.5.0;
 			};
 		};
+		CA5577F22CEDFB7100F7C4A6 /* XCRemoteSwiftPackageReference "dotlottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LottieFiles/dotlottie-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		CA662BC82CAD72E6009E8D5F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
@@ -1911,6 +1955,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CA1DDD362CB0E75000C84D08 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		CA5577F32CEDFB7100F7C4A6 /* DotLottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA5577F22CEDFB7100F7C4A6 /* XCRemoteSwiftPackageReference "dotlottie-ios" */;
+			productName = DotLottie;
 		};
 		CA662BC92CAD72E6009E8D5F /* KakaoSDKAuth */ = {
 			isa = XCSwiftPackageProductDependency;
