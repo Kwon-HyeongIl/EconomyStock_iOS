@@ -68,7 +68,7 @@ struct PriceLevel3View: View {
                                             ZStack {
                                                 HStack {
                                                     VStack(spacing: 0) {
-                                                        LottieViewConverter(fileName: "PriceLevel3_BubbleHeart", loopMode: .playOnce, scale: 2.0, width: 40, height: 40)
+                                                        LottieView(fileName: "BubbleHeart", loopMode: .playOnce, scale: 2.0, width: 40, height: 40)
                                                             .scaleEffect(x: -1, y: 1, anchor: .center)
                                                             .padding(.leading, 60)
                                                         
@@ -78,12 +78,12 @@ struct PriceLevel3View: View {
                                                             .frame(width: 70)
                                                     }
                                                     
-                                                    LottieViewConverter(fileName: "PriceLevel3_PriceDown", loopMode: .playOnce, scale: 1.3, width: 150, height: 150)
+                                                    LottieView(fileName: "PriceLevel3_PriceDown", loopMode: .playOnce, scale: 1.3, width: 150, height: 150)
                                                 }
                                                 .opacity(progress.count >= 2 ? 0.4 : 1.0)
                                                 
                                                 if progress.count >= 2 {
-                                                    LottieViewConverter(fileName: "Warning", loopMode: .playOnce, scale: 1.3, width: 120, height: 120)
+                                                    LottieView(fileName: "Warning", loopMode: .playOnce, scale: 1.3, width: 120, height: 120)
                                                 }
                                             }
                                         }
@@ -132,9 +132,9 @@ struct PriceLevel3View: View {
                                     
                                     if contentImage2 {
                                         ZStack {
-                                            LottieViewConverter(fileName: "BasicEconomy4_Building", loopMode: .playOnce, toProgress: 0.5, scale: 1.1, width: 150, height: 150)
+                                            LottieView(fileName: "BasicEconomy4_Building", loopMode: .playOnce, toProgress: 0.5, scale: 1.1, width: 150, height: 150)
                                             
-                                            LottieViewConverter(fileName: "PriceLevel3_Rain", loopMode: .playOnce, speed: 0.7, width: 140, height: 140)
+                                            LottieView(fileName: "PriceLevel3_Rain", loopMode: .playOnce, speed: 0.7, width: 140, height: 140)
                                                 .padding(.bottom, 130)
                                         }
                                     }
@@ -153,7 +153,7 @@ struct PriceLevel3View: View {
                             if questionMark {
                                 VStack(spacing: 0) {
                                     HStack(spacing: 5) {
-                                        LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
+                                        LottieView(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
                                             .padding(.leading, 10)
                                             .padding(.top, questionMarkContent ? 5 : 0)
                                         
@@ -229,7 +229,7 @@ struct PriceLevel3View: View {
                                     viewModel.currentPage += 1
                                     navigationRouter.navigate(.PriceLevel4View(viewModel))
                                 } label: {
-                                    LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                    LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                                 }
                                 

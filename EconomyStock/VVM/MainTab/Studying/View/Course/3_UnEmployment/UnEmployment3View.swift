@@ -107,7 +107,7 @@ struct UnEmployment3View: View {
                                             
                                             ZStack {
                                                 if bubble {
-                                                    LottieViewConverter(fileName: "Bubble", loopMode: .playOnce, scale: 2.3, width: 100, height: 100)
+                                                    LottieView(fileName: "Bubble", loopMode: .playOnce, scale: 2.3, width: 100, height: 100)
                                                 }
                                                 
                                                 if bubbleContent {
@@ -158,7 +158,7 @@ struct UnEmployment3View: View {
                                         .padding(.top, 5)
                                     
                                     if contentImage2 {
-                                        LottieViewConverter(fileName: "UnEmployment3_CaffeWork", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
+                                        LottieView(fileName: "UnEmployment3_CaffeWork", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
                                     }
                                     
                                     Spacer()
@@ -189,7 +189,7 @@ struct UnEmployment3View: View {
                                     viewModel.currentPage += 1
                                     navigationRouter.navigate(.UnEmployment4View(viewModel))
                                 } label: {
-                                    LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                    LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                                 }
                                 

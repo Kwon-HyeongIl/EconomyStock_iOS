@@ -48,7 +48,7 @@ struct MoneyAndFinance2View: View {
                                 .padding(.top)
                          
                             if contentImage {
-                                LottieViewConverter(fileName: "MoneyAndFinance2_MoneyReport", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
+                                LottieView(fileName: "MoneyAndFinance2_MoneyReport", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
                             }
                             
                             Spacer()
@@ -68,7 +68,7 @@ struct MoneyAndFinance2View: View {
                                 viewModel.currentPage += 1
                                 navigationRouter.navigate(.UnEmployment3View(viewModel))
                             } label: {
-                                LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                     .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                             }
                             

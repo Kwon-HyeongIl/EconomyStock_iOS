@@ -67,7 +67,7 @@ struct PriceLevel4View: View {
                                         .padding(.horizontal)
                                     
                                     if contentImage1 {
-                                        LottieViewConverter(fileName: "PriceLevel4_PriceUp", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
+                                        LottieView(fileName: "PriceLevel4_PriceUp", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
                                     }
                                     
                                     Spacer()
@@ -109,7 +109,7 @@ struct PriceLevel4View: View {
                                         .padding(.leading, 30)
                                         
                                         if contentImage2 {
-                                            LottieViewConverter(fileName: "PriceLevel4_HotEconomy", loopMode: .playOnce, speed: 0.5, width: 150, height: 150)
+                                            LottieView(fileName: "PriceLevel4_HotEconomy", loopMode: .playOnce, speed: 0.5, width: 150, height: 150)
                                         }
                                     }
                                     
@@ -140,7 +140,7 @@ struct PriceLevel4View: View {
                                     .padding(.leading, 30)
                                     
                                     if contentImage3 {
-                                        LottieViewConverter(fileName: "PriceLevel4_OilPrice", loopMode: .playOnce, width: 150, height: 150)
+                                        LottieView(fileName: "PriceLevel4_OilPrice", loopMode: .playOnce, width: 150, height: 150)
                                     }
                                     
                                     Spacer()
@@ -157,7 +157,7 @@ struct PriceLevel4View: View {
                             if questionMark {
                                 VStack(spacing: 0) {
                                     HStack(spacing: 5) {
-                                        LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
+                                        LottieView(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
                                             .padding(.leading, 10)
                                             .padding(.top, questionMarkContent ? 5 : 0)
                                         
@@ -234,7 +234,7 @@ struct PriceLevel4View: View {
                                     viewModel.currentPage += 1
                                     navigationRouter.navigate(.PriceLevel5View(viewModel))
                                 } label: {
-                                    LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                    LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                                 }
                                 

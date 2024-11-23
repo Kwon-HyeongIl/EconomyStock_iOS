@@ -147,12 +147,12 @@ struct BasicEconomy5View: View {
                         ZStack {
                             if progress.count >= 2 {
                                 VStack {
-                                    LottieViewConverter(fileName: "BasicEconomy1_GovernmentBuilding", loopMode: .playOnce, width: 150, height: 150)
+                                    LottieView(fileName: "BasicEconomy1_GovernmentBuilding", loopMode: .playOnce, width: 150, height: 150)
                                         .padding(.trailing, 100)
                                     
                                     if bubble {
                                         ZStack {
-                                            LottieViewConverter(fileName: "Bubble", loopMode: .playOnce, scale: 2.7, width: 150, height: 150)
+                                            LottieView(fileName: "Bubble", loopMode: .playOnce, scale: 2.7, width: 150, height: 150)
                                                 .scaleEffect(x: 1, y: -1, anchor: .center)
                                             
                                             if bubbleContent {
@@ -204,9 +204,9 @@ struct BasicEconomy5View: View {
                                         
                                         if giveMoney {
                                             VStack(spacing: 0) {
-                                                LottieViewConverter(fileName: "BasicEconomy5_Money", loopMode: .playOnce, toProgress: 0.6, scale: 1.5, width: 100, height: 50)
+                                                LottieView(fileName: "BasicEconomy5_Money", loopMode: .playOnce, toProgress: 0.6, scale: 1.5, width: 100, height: 50)
                                                 
-                                                LottieViewConverter(fileName: "ArrowRight", loopMode: .playOnce, toProgress: 0.5, scale: 1.2, width: 100, height: 50)
+                                                LottieView(fileName: "ArrowRight", loopMode: .playOnce, toProgress: 0.5, scale: 1.2, width: 100, height: 50)
                                                     .padding(.leading, 10)
                                             }
                                             .padding(.horizontal)
@@ -242,7 +242,7 @@ struct BasicEconomy5View: View {
                             if questionMark {
                                 VStack(spacing: 0) {
                                     HStack(spacing: 5) {
-                                        LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
+                                        LottieView(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
                                             .padding(.leading, 10)
                                             .padding(.top, questionMarkContent ? 5 : 0)
                                         
@@ -319,7 +319,7 @@ struct BasicEconomy5View: View {
                                     viewModel.currentPage += 1
                                     navigationRouter.navigate(.BasicEconomy6View(viewModel))
                                 } label: {
-                                    LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                    LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                                 }
                                 

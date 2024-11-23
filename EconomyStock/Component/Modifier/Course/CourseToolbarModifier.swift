@@ -114,7 +114,7 @@ struct CourseToolbarModifier: ViewModifier {
             }
             .overlay {
                 if loadingBarState {
-                    LottieViewConverter(fileName: "Loading", loopMode: .loop, width: 180, height: 180)
+                    LottieView(fileName: "Loading", loopMode: .loop, width: 180, height: 180)
                         .padding(.bottom, 60)
                 }
             }

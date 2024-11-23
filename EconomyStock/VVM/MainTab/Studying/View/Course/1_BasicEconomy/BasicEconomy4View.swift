@@ -154,7 +154,7 @@ struct BasicEconomy4View: View {
                                 VStack {
                                     HStack {
                                         if building {
-                                            LottieViewConverter(fileName: "BasicEconomy4_Building", loopMode: .playOnce, toProgress: 0.5, width: 230, height: 230)
+                                            LottieView(fileName: "BasicEconomy4_Building", loopMode: .playOnce, toProgress: 0.5, width: 230, height: 230)
                                         }
                                         
                                         Image("TeachingSad_Toktok")
@@ -166,7 +166,7 @@ struct BasicEconomy4View: View {
                                     
                                     if bubble {
                                         ZStack {
-                                            LottieViewConverter(fileName: "Bubble", loopMode: .playOnce, scale: 3.0, width: 200, height: 200)
+                                            LottieView(fileName: "Bubble", loopMode: .playOnce, scale: 3.0, width: 200, height: 200)
                                                 .scaleEffect(x: -1, y: -1, anchor: .center)
                                                 .padding(.top, 25)
                                             
@@ -192,7 +192,7 @@ struct BasicEconomy4View: View {
                             if questionMark {
                                 VStack(spacing: 0) {
                                     HStack(spacing: 5) {
-                                        LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
+                                        LottieView(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
                                             .padding(.leading, 10)
                                             .padding(.top, questionMarkContent ? 5 : 0)
                                         
@@ -269,7 +269,7 @@ struct BasicEconomy4View: View {
                                     viewModel.currentPage += 1
                                     navigationRouter.navigate(.BasicEconomy5View(viewModel))
                                 } label: {
-                                    LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                    LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                                 }
                                 

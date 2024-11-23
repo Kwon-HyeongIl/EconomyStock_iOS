@@ -136,7 +136,7 @@ struct BasicEconomy10View: View {
                                         .padding(.horizontal)
                                     
                                     if contentPart1_1 {
-                                        LottieViewConverter(fileName: "BasicEconomy10_MoneyDistribution", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
+                                        LottieView(fileName: "BasicEconomy10_MoneyDistribution", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
                                     }
                                     
                                     Spacer()
@@ -162,7 +162,7 @@ struct BasicEconomy10View: View {
                                         ZStack {
                                             VStack {
                                                 VStack(spacing: 0) {
-                                                    LottieViewConverter(fileName: "BasicEconomy10_Distribution", loopMode: .playOnce, width: 110, height: 110)
+                                                    LottieView(fileName: "BasicEconomy10_Distribution", loopMode: .playOnce, width: 110, height: 110)
                                                     
                                                     Text("분배")
                                                         .font(.system(size: 15))
@@ -172,7 +172,7 @@ struct BasicEconomy10View: View {
                                                 
                                                 HStack {
                                                     VStack(spacing: 0) {
-                                                        LottieViewConverter(fileName: "BasicEconomy10_Factory", loopMode: .playOnce, width: 110, height: 110)
+                                                        LottieView(fileName: "BasicEconomy10_Factory", loopMode: .playOnce, width: 110, height: 110)
                                                             .padding(.leading, 30)
                                                         
                                                         Text("생산")
@@ -184,7 +184,7 @@ struct BasicEconomy10View: View {
                                                     Spacer()
                                                     
                                                     VStack(spacing: 0) {
-                                                        LottieViewConverter(fileName: "BasicEconomy10_Payment", loopMode: .playOnce, toProgress: 0.745, width: 110, height: 110)
+                                                        LottieView(fileName: "BasicEconomy10_Payment", loopMode: .playOnce, toProgress: 0.745, width: 110, height: 110)
                                                             .padding(.trailing, 30)
                                                         
                                                         Text("지출")
@@ -241,7 +241,7 @@ struct BasicEconomy10View: View {
                             if questionMark {
                                 VStack(spacing: 0) {
                                     HStack(spacing: 5) {
-                                        LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
+                                        LottieView(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
                                             .padding(.leading, 10)
                                             .padding(.top, questionMarkContent ? 5 : 0)
                                         
@@ -319,7 +319,7 @@ struct BasicEconomy10View: View {
                                     viewModel.currentPage += 1
                                     navigationRouter.navigate(.BasicEconomy11View(viewModel))
                                 } label: {
-                                    LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                    LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                                 }
                                 

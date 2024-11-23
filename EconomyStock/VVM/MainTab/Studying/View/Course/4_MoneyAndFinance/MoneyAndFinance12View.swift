@@ -94,7 +94,7 @@ struct MoneyAndFinance12View: View {
                                 }
                                 
                                 if contentImage {
-                                    LottieViewConverter(fileName: "UnEmployment2_Suit", loopMode: .playOnce, width: 180, height: 180)
+                                    LottieView(fileName: "UnEmployment2_Suit", loopMode: .playOnce, width: 180, height: 180)
                                 }
                                 
                                 Spacer()
@@ -124,7 +124,7 @@ struct MoneyAndFinance12View: View {
                                 viewModel.currentPage += 1
                                 navigationRouter.navigate(.UnEmployment3View(viewModel))
                             } label: {
-                                LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                     .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                             }
                             

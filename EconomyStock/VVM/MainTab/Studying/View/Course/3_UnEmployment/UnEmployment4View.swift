@@ -67,18 +67,18 @@ struct UnEmployment4View: View {
                             if contentImage {
                                 ZStack {
                                     HStack {
-                                        LottieViewConverter(fileName: "UnEmployment4_Factory", loopMode: .playOnce, width: 140, height: 140)
+                                        LottieView(fileName: "UnEmployment4_Factory", loopMode: .playOnce, width: 140, height: 140)
                                             .padding(.bottom, 150)
                                         
                                         Spacer()
                                         
-                                        LottieViewConverter(fileName: "UnEmployment4_Store", loopMode: .playOnce, width: 140, height: 140)
+                                        LottieView(fileName: "UnEmployment4_Store", loopMode: .playOnce, width: 140, height: 140)
                                             .padding(.top, 170)
                                     }
                                     
                                     if imageAndBubble {
                                         ZStack {
-                                            LottieViewConverter(fileName: "UnEmployment4_Road", loopMode: .playOnce, fromProgress: 0.0, toProgress: 0.0, width: 130, height: 130)
+                                            LottieView(fileName: "UnEmployment4_Road", loopMode: .playOnce, fromProgress: 0.0, toProgress: 0.0, width: 130, height: 130)
                                                 .rotationEffect(.degrees(-10.0))
                                                 .padding(.trailing, 60)
                                                 .padding(.top, 95)
@@ -92,7 +92,7 @@ struct UnEmployment4View: View {
                                                     .padding(.leading, 50)
                                                 
                                                 ZStack {
-                                                    LottieViewConverter(fileName: "Bubble", loopMode: .playOnce, scale: 3.2, width: 100, height: 100)
+                                                    LottieView(fileName: "Bubble", loopMode: .playOnce, scale: 3.2, width: 100, height: 100)
                                                         .padding(.bottom, 70)
                                                     
                                                     if bubbleContent {
@@ -126,7 +126,7 @@ struct UnEmployment4View: View {
                                 viewModel.currentPage += 1
                                 navigationRouter.navigate(.UnEmployment5View(viewModel))
                             } label: {
-                                LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                     .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                             }
                             

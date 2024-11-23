@@ -60,7 +60,7 @@ struct BasicEconomy1View: View {
                         VStack(spacing: 20) {
                             HStack(spacing: 60) {
                                 VStack {
-                                    LottieViewConverter(fileName: "BasicEconomy1_Home", loopMode: .playOnce, width: 100, height: 100)
+                                    LottieView(fileName: "BasicEconomy1_Home", loopMode: .playOnce, width: 100, height: 100)
                                         .padding(.bottom, 5)
                                     
                                     Text("가계")
@@ -71,7 +71,7 @@ struct BasicEconomy1View: View {
                                 
                                 if building {
                                     VStack {
-                                        LottieViewConverter(fileName: "BasicEconomy1_Building",  loopMode: .playOnce, toProgress: 0.8, width: 100, height: 100)
+                                        LottieView(fileName: "BasicEconomy1_Building",  loopMode: .playOnce, toProgress: 0.8, width: 100, height: 100)
                                             .padding(.bottom, 5)
                                         
                                         Text("기업")
@@ -97,7 +97,7 @@ struct BasicEconomy1View: View {
                             HStack(spacing: 60) {
                                 if governmentBuilding {
                                     VStack {
-                                        LottieViewConverter(fileName: "BasicEconomy1_GovernmentBuilding", loopMode: .playOnce, width: 100, height: 100)
+                                        LottieView(fileName: "BasicEconomy1_GovernmentBuilding", loopMode: .playOnce, width: 100, height: 100)
                                         
                                         Text("정부")
                                             .font(.system(size: 15))
@@ -108,7 +108,7 @@ struct BasicEconomy1View: View {
                                 
                                 if earth {
                                     VStack {
-                                        LottieViewConverter(fileName: "BasicEconomy1_Earth", loopMode: .playOnce, toProgress: 0.3, scale: 1.15, width: 100, height: 100)
+                                        LottieView(fileName: "BasicEconomy1_Earth", loopMode: .playOnce, toProgress: 0.3, scale: 1.15, width: 100, height: 100)
                                         
                                         Text("해외")
                                             .font(.system(size: 15))
@@ -133,7 +133,7 @@ struct BasicEconomy1View: View {
                             viewModel.currentPage += 1
                             navigationRouter.navigate(.BasicEconomy2View(viewModel))
                         } label: {
-                            LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                            LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                 .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                         }
                     }

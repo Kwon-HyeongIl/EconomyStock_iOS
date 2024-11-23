@@ -57,7 +57,7 @@ struct PriceLevel2View: View {
                                     .padding(.top)
                                     
                                     if contentImage1 {
-                                        LottieViewConverter(fileName: "PriceLevel2_PriceBalance", loopMode: .playOnce, speed:0.7, scale: 1.2, width: 150, height: 150)
+                                        LottieView(fileName: "PriceLevel2_PriceBalance", loopMode: .playOnce, speed:0.7, scale: 1.2, width: 150, height: 150)
                                             .padding(.top)
                                     }
                                 }
@@ -96,7 +96,7 @@ struct PriceLevel2View: View {
                                                 .scaledToFit()
                                                 .frame(width: 70)
                                             
-                                            LottieViewConverter(fileName: "PriceLevel2_Apple", loopMode: .playOnce, width: 100, height: 100)
+                                            LottieView(fileName: "PriceLevel2_Apple", loopMode: .playOnce, width: 100, height: 100)
                                         }
                                         .padding(.top)
                                     }
@@ -128,7 +128,7 @@ struct PriceLevel2View: View {
                                     viewModel.currentPage += 1
                                     navigationRouter.navigate(.PriceLevel3View(viewModel))
                                 } label: {
-                                    LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                    LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                                 }
                                 

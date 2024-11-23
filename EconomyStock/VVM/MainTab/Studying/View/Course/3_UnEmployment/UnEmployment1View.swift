@@ -335,7 +335,7 @@ struct UnEmployment1View: View {
                             viewModel.currentPage += 1
                             navigationRouter.navigate(.UnEmployment2View(viewModel))
                         } label: {
-                            LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                            LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                 .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                         }
                     }

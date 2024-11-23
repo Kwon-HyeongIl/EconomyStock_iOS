@@ -68,7 +68,7 @@ struct BasicEconomy8View: View {
                             }
                             
                             if contentPart1 {
-                                LottieViewConverter(fileName: "BasicEconomy8_MoneyPublish", loopMode: .playOnce, scale: 1.3, width: 150, height: 150)
+                                LottieView(fileName: "BasicEconomy8_MoneyPublish", loopMode: .playOnce, scale: 1.3, width: 150, height: 150)
                                 
                                 Text("화폐를 발행하여 자금을 조달하는 것은 가장 쉬운 방법이지만, 경제에 유통되는 화폐의 양이 많아지면 물가가 크게 상승해요")
                                     .font(.system(size: 20))
@@ -103,7 +103,7 @@ struct BasicEconomy8View: View {
                                 viewModel.currentPage += 1
                                 navigationRouter.navigate(.BasicEconomy9View(viewModel))
                             } label: {
-                                LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                     .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                             }
                             

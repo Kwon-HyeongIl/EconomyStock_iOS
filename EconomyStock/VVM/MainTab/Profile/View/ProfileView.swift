@@ -55,22 +55,22 @@ struct ProfileView: View {
                         switch percentage {
                             
                         case 0..<20:
-                            LottieViewConverter(fileName: "ProfilePlantLevel1", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
+                            LottieView(fileName: "ProfilePlantLevel1", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
                         case 20..<40:
-                            LottieViewConverter(fileName: "ProfilePlantLevel2", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
+                            LottieView(fileName: "ProfilePlantLevel2", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
                         case 40..<60:
-                            LottieViewConverter(fileName: "ProfilePlantLevel3", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
+                            LottieView(fileName: "ProfilePlantLevel3", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
                         case 60..<80:
-                            LottieViewConverter(fileName: "ProfilePlantLevel4", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
+                            LottieView(fileName: "ProfilePlantLevel4", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
                         case 80..<100:
-                            LottieViewConverter(fileName: "ProfilePlantLevel5", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
+                            LottieView(fileName: "ProfilePlantLevel5", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
                             
                         default:
-                            LottieViewConverter(fileName: "ProfilePlantLevel1", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
+                            LottieView(fileName: "ProfilePlantLevel1", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
                         }
                         
                     } else {
-                        LottieViewConverter(fileName: "ProfilePlantLevel5", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
+                        LottieView(fileName: "ProfilePlantLevel5", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
                     }
                 }
                 .frame(maxWidth: .infinity)

@@ -81,7 +81,7 @@ struct UnEmployment6View: View {
                                 }
                                 
                                 if contentImage {
-                                    LottieViewConverter(fileName: "UnEmployment6_MoneyBalance", loopMode: .playOnce, width: 150, height: 150)
+                                    LottieView(fileName: "UnEmployment6_MoneyBalance", loopMode: .playOnce, width: 150, height: 150)
                                 }
                                 
                                 Spacer()
@@ -135,7 +135,7 @@ struct UnEmployment6View: View {
                             if questionMark {
                                 VStack(spacing: 0) {
                                     HStack(spacing: 5) {
-                                        LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
+                                        LottieView(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
                                             .padding(.leading, 10)
                                             .padding(.top, questionMarkContent ? 5 : 0)
                                         
@@ -212,7 +212,7 @@ struct UnEmployment6View: View {
                                     viewModel.currentPage += 1
                                     navigationRouter.navigate(.UnEmployment7View(viewModel))
                                 } label: {
-                                    LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                    LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                                 }
                                 

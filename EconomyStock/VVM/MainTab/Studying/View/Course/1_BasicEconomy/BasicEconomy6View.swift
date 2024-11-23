@@ -67,7 +67,7 @@ struct BasicEconomy6View: View {
                             
                             if image {
                                 ZStack {
-                                    LottieViewConverter(fileName: "BasicEconomy6_MoneyStack", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
+                                    LottieView(fileName: "BasicEconomy6_MoneyStack", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
                                         .padding(.trailing, 150)
                                         .opacity(0.6)
                                     
@@ -84,7 +84,7 @@ struct BasicEconomy6View: View {
                                                 .frame(width: 80)
                                                 .scaleEffect(x: -1, y: 1, anchor: .center)
                                             
-                                            LottieViewConverter(fileName: "Sweat", loopMode: .playOnce, toProgress: 0.5, width: 50, height: 50)
+                                            LottieView(fileName: "Sweat", loopMode: .playOnce, toProgress: 0.5, width: 50, height: 50)
                                                 .padding(.bottom, 70)
                                                 .padding(.leading, 90)
                                         }
@@ -100,7 +100,7 @@ struct BasicEconomy6View: View {
                     
                     if progress.count >= 2 {
                         HStack {
-                            LottieViewConverter(fileName: "ArrowRight", loopMode: .playOnce, toProgress: 0.5, width: 80, height: 80)
+                            LottieView(fileName: "ArrowRight", loopMode: .playOnce, toProgress: 0.5, width: 80, height: 80)
                             
                             Text("저항이 심해요..!")
                                 .font(.system(size: 20))
@@ -123,7 +123,7 @@ struct BasicEconomy6View: View {
                                 viewModel.currentPage += 1
                                 navigationRouter.navigate(.BasicEconomy7View(viewModel))
                             } label: {
-                                LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                     .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                             }
                             

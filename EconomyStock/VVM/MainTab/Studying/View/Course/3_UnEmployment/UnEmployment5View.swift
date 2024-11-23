@@ -55,15 +55,15 @@ struct UnEmployment5View: View {
                                 }
                                 
                                 if contentImage1_1 {
-                                    LottieViewConverter(fileName: "BasicEconomy10_Distribution", loopMode: .playOnce, width: 130, height: 130)
+                                    LottieView(fileName: "BasicEconomy10_Distribution", loopMode: .playOnce, width: 130, height: 130)
                                 }
                                 
                                 if contentImage1_2 {
                                     HStack(spacing: 40) {
-                                        LottieViewConverter(fileName: "ArrowRight", loopMode: .playOnce, toProgress: 0.5, scale: 1.4, width: 60, height: 60)
+                                        LottieView(fileName: "ArrowRight", loopMode: .playOnce, toProgress: 0.5, scale: 1.4, width: 60, height: 60)
                                             .rotationEffect(.degrees(126))
                                         
-                                        LottieViewConverter(fileName: "ArrowRight", loopMode: .playOnce, toProgress: 0.5, scale: 1.4, width: 60, height: 60)
+                                        LottieView(fileName: "ArrowRight", loopMode: .playOnce, toProgress: 0.5, scale: 1.4, width: 60, height: 60)
                                             .rotationEffect(.degrees(52))
                                     }
                                 }
@@ -86,7 +86,7 @@ struct UnEmployment5View: View {
                                         .padding(.top, 30)
                                         
                                         VStack {
-                                            LottieViewConverter(fileName: "BasicEconomy4_Building", loopMode: .playOnce, toProgress: 0.5, width: 100, height: 100)
+                                            LottieView(fileName: "BasicEconomy4_Building", loopMode: .playOnce, toProgress: 0.5, width: 100, height: 100)
                                             
                                             Text("기업")
                                                 .font(.system(size: 18))
@@ -157,7 +157,7 @@ struct UnEmployment5View: View {
                                     viewModel.currentPage += 1
                                     navigationRouter.navigate(.UnEmployment6View(viewModel))
                                 } label: {
-                                    LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                    LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                                 }
                                 

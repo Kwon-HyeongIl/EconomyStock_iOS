@@ -87,7 +87,7 @@ struct PriceLevel7View: View {
                                         .padding(.top, 5)
                                     
                                     if contentImage {
-                                        LottieViewConverter(fileName: "PriceLevel7_Product", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
+                                        LottieView(fileName: "PriceLevel7_Product", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
                                     }
                                     
                                     Spacer()
@@ -122,7 +122,7 @@ struct PriceLevel7View: View {
                             if questionMark {
                                 VStack(spacing: 0) {
                                     HStack(spacing: 5) {
-                                        LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
+                                        LottieView(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
                                             .padding(.leading, 10)
                                         
                                         Text("CPI에 주택임대료는 포함되지만 주택가격은 포함되지 않는 이유는?")
@@ -197,9 +197,9 @@ struct PriceLevel7View: View {
                                     UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
                                     
                                     viewModel.currentPage += 1
-                                    navigationRouter.navigate(.BasicEconomy10View(viewModel))
+                                    navigationRouter.navigate(.PriceLevel8View(viewModel))
                                 } label: {
-                                    LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                    LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                                 }
                                 

@@ -169,7 +169,7 @@ struct BasicEconomy11View: View {
                                     
                                     popup = true
                                 } label: {
-                                    LottieViewConverter(fileName: "CourseCompleteButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                    LottieView(fileName: "CourseCompleteButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                                 }
                                 
@@ -248,9 +248,9 @@ struct BasicEconomy11View: View {
         .popup(isPresented: $popup) {
             VStack {
                 if popupComplete {
-                    LottieViewConverter(fileName: "CourseComplete", loopMode: .playOnce, scale: 1.3, width: 200, height: 200)
+                    LottieView(fileName: "CourseComplete", loopMode: .playOnce, scale: 1.3, width: 200, height: 200)
                 } else {
-                    LottieViewConverter(fileName: "BasicEconomyCourseCover", loopMode: .loop, width: 150, height: 150)
+                    LottieView(fileName: "BasicEconomyCourseCover", loopMode: .loop, width: 150, height: 150)
                     
                     Text("I 기초 경제")
                         .font(.system(size: 30, design: .serif))
@@ -327,7 +327,7 @@ struct BasicEconomy11View: View {
         }
         .overlay {
             if loadingBarState {
-                LottieViewConverter(fileName: "Loading", loopMode: .loop, width: 180, height: 180)
+                LottieView(fileName: "Loading", loopMode: .loop, width: 180, height: 180)
                     .padding(.bottom, 60)
             }
         }

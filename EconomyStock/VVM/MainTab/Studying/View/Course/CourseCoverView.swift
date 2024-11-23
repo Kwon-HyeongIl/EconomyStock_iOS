@@ -22,7 +22,7 @@ struct CourseCoverView: View {
             VStack {
                 ZStack {
                     ZStack {
-                        LottieViewConverter(fileName: viewModel.course.lottieFileName, loopMode: .loop, width: 140, height: 140)
+                        LottieView(fileName: viewModel.course.lottieFileName, loopMode: .loop, width: 140, height: 140)
                             .padding(.trailing, 190)
                         
                         HStack(spacing: 0) {

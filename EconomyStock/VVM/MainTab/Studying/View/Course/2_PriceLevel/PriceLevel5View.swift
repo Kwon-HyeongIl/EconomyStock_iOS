@@ -68,7 +68,7 @@ struct PriceLevel5View: View {
                                         .padding(.horizontal)
                                     
                                     if contentImage1 {
-                                        LottieViewConverter(fileName: "PriceLevel5_PriceDown", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
+                                        LottieView(fileName: "PriceLevel5_PriceDown", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
                                     }
                                     
                                     Spacer()
@@ -104,7 +104,7 @@ struct PriceLevel5View: View {
                                             
                                             if bubble {
                                                 ZStack {
-                                                    LottieViewConverter(fileName: "Bubble", loopMode: .playOnce, scale: 3.0, width: 160, height: 160)
+                                                    LottieView(fileName: "Bubble", loopMode: .playOnce, scale: 3.0, width: 160, height: 160)
                                                     
                                                     if bubbleContent {
                                                         Text("작년에는 사과를 이 정도 팔아서 100만원은 벌었는데, 올해는 80만원 밖에 못벌었네...")
@@ -148,7 +148,7 @@ struct PriceLevel5View: View {
                             if questionMark {
                                 VStack(spacing: 0) {
                                     HStack(spacing: 5) {
-                                        LottieViewConverter(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
+                                        LottieView(fileName: "QuestionMark", loopMode: .playOnce, scale: 2.0, width: 30, height: 30)
                                             .padding(.leading, 10)
                                         
                                         Text("물가가 하락하는데 왜 기업의 수익성이 약화될까요?")
@@ -224,7 +224,7 @@ struct PriceLevel5View: View {
                                     viewModel.currentPage += 1
                                     navigationRouter.navigate(.PriceLevel6View(viewModel))
                                 } label: {
-                                    LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                    LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                                 }
                                 

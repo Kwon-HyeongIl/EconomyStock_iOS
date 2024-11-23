@@ -20,7 +20,7 @@ struct CourseIntroView: View {
         GeometryReader { proxy in
             ScrollView {
                 VStack(spacing: 0) {
-                    LottieViewConverter(fileName: viewModel.course.lottieFileName, loopMode: .loop, width: 200, height: 200)
+                    LottieView(fileName: viewModel.course.lottieFileName, loopMode: .loop, width: 200, height: 200)
                     
                     HStack {
                         Text(viewModel.course.title)

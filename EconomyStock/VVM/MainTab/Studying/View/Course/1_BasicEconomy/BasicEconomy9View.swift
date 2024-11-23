@@ -68,7 +68,7 @@ struct BasicEconomy9View: View {
                             }
                             
                             if contentPart1 {
-                                LottieViewConverter(fileName: "BasicEconomy9_GlobalExport", loopMode: .playOnce, scale: 1.3, width: 150, height: 150)
+                                LottieView(fileName: "BasicEconomy9_GlobalExport", loopMode: .playOnce, scale: 1.3, width: 150, height: 150)
                             }
                             
                             if contentPart2 {
@@ -96,7 +96,7 @@ struct BasicEconomy9View: View {
                                 viewModel.currentPage += 1
                                 navigationRouter.navigate(.BasicEconomy10View(viewModel))
                             } label: {
-                                LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                     .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                             }
                             

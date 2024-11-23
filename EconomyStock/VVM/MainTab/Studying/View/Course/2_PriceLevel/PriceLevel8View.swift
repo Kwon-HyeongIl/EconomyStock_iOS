@@ -66,7 +66,7 @@ struct PriceLevel8View: View {
                             }
                             
                             if contentImage {
-                                LottieViewConverter(fileName: "PriceLevel4_OilPrice", loopMode: .playOnce, width: 150, height: 150)
+                                LottieView(fileName: "PriceLevel4_OilPrice", loopMode: .playOnce, width: 150, height: 150)
                             }
                             
                             Spacer()
@@ -93,9 +93,9 @@ struct PriceLevel8View: View {
                                 UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
                                 
                                 viewModel.currentPage += 1
-                                navigationRouter.navigate(.PriceLevel8View(viewModel))
+                                navigationRouter.navigate(.PriceLevel9View(viewModel))
                             } label: {
-                                LottieViewConverter(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
+                                LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                     .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                             }
                             
