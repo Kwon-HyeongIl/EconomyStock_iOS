@@ -72,14 +72,12 @@
 		CA6875BB2CF1842000DC819A /* CourseCompleteButton.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875BA2CF1842000DC819A /* CourseCompleteButton.lottie */; };
 		CA6875BD2CF1844B00DC819A /* BasicEconomyCourseCover.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875BC2CF1844B00DC819A /* BasicEconomyCourseCover.lottie */; };
 		CA6875BF2CF1847300DC819A /* PriceLevelCourseCover.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875BE2CF1847300DC819A /* PriceLevelCourseCover.lottie */; };
-		CA6875C12CF1849B00DC819A /* UnEmploymentCourseCover.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875C02CF1849B00DC819A /* UnEmploymentCourseCover.lottie */; };
 		CA6875C32CF184D300DC819A /* MoneyAndFinanceCourseCover.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875C22CF184D300DC819A /* MoneyAndFinanceCourseCover.lottie */; };
 		CA6875C52CF1851300DC819A /* BasicEconomy1_Home.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875C42CF1851300DC819A /* BasicEconomy1_Home.lottie */; };
 		CA6875C72CF1855300DC819A /* BasicEconomy1_Building.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875C62CF1855300DC819A /* BasicEconomy1_Building.lottie */; };
 		CA6875C92CF1858400DC819A /* BasicEconomy1_GovernmentBuilding.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875C82CF1858400DC819A /* BasicEconomy1_GovernmentBuilding.lottie */; };
 		CA6875CB2CF185AE00DC819A /* BasicEconomy1_Earth.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875CA2CF185AE00DC819A /* BasicEconomy1_Earth.lottie */; };
 		CA6875CD2CF185EF00DC819A /* BasicEconomy4_Building.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875CC2CF185EF00DC819A /* BasicEconomy4_Building.lottie */; };
-		CA6875CF2CF1862200DC819A /* BasicEconomy5_Money.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875CE2CF1862200DC819A /* BasicEconomy5_Money.lottie */; };
 		CA6875D12CF1864E00DC819A /* BasicEconomy6_MoneyStack.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875D02CF1864E00DC819A /* BasicEconomy6_MoneyStack.lottie */; };
 		CA6875D32CF186AC00DC819A /* BasicEconomy8_MoneyPublish.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875D22CF186AC00DC819A /* BasicEconomy8_MoneyPublish.lottie */; };
 		CA6875D52CF186D700DC819A /* BasicEconomy9_GlobalExport.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875D42CF186D700DC819A /* BasicEconomy9_GlobalExport.lottie */; };
@@ -92,7 +90,6 @@
 		CA6875E32CF1890500DC819A /* PriceLevel2_Apple.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875E22CF1890500DC819A /* PriceLevel2_Apple.lottie */; };
 		CA6875E52CF1893B00DC819A /* BubbleHeart.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875E42CF1893B00DC819A /* BubbleHeart.lottie */; };
 		CA6875E72CF18A5B00DC819A /* PriceLevel3_PriceDown.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875E62CF18A5B00DC819A /* PriceLevel3_PriceDown.lottie */; };
-		CA6875E92CF18A7B00DC819A /* PriceLevel3_Rain.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875E82CF18A7B00DC819A /* PriceLevel3_Rain.lottie */; };
 		CA6875EB2CF18AAA00DC819A /* PriceLevel4_PriceUp.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875EA2CF18AAA00DC819A /* PriceLevel4_PriceUp.lottie */; };
 		CA6875ED2CF18ACF00DC819A /* PriceLevel4_OilPrice.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875EC2CF18ACF00DC819A /* PriceLevel4_OilPrice.lottie */; };
 		CA6875EF2CF18AEC00DC819A /* PriceLevel4_HotEconomy.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875EE2CF18AEC00DC819A /* PriceLevel4_HotEconomy.lottie */; };
@@ -121,6 +118,8 @@
 		CA92DDB92CB7D7C300A7D2A4 /* BasicEconomy4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDB82CB7D7C300A7D2A4 /* BasicEconomy4View.swift */; };
 		CA92DDBB2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDBA2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift */; };
 		CA94BA712CD3C918006ED29A /* CourseListViewCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA94BA702CD3C918006ED29A /* CourseListViewCapsule.swift */; };
+		CA993A872CF1DBC0001C1DED /* PriceLevel3_BadEconomy.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA993A862CF1DBC0001C1DED /* PriceLevel3_BadEconomy.lottie */; };
+		CA993A8D2CF1E0B7001C1DED /* UnEmploymentCourseCover.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA993A8C2CF1E0B7001C1DED /* UnEmploymentCourseCover.lottie */; };
 		CA9BB9CC2CABA59A00886A1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9C82CABA59A00886A1A /* ContentView.swift */; };
 		CA9BB9CD2CABA59A00886A1A /* EconomyStockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9C92CABA59A00886A1A /* EconomyStockApp.swift */; };
 		CA9BB9CE2CABA59A00886A1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA9BB9C42CABA59A00886A1A /* Preview Assets.xcassets */; };
@@ -267,14 +266,12 @@
 		CA6875BA2CF1842000DC819A /* CourseCompleteButton.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = CourseCompleteButton.lottie; sourceTree = "<group>"; };
 		CA6875BC2CF1844B00DC819A /* BasicEconomyCourseCover.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = BasicEconomyCourseCover.lottie; sourceTree = "<group>"; };
 		CA6875BE2CF1847300DC819A /* PriceLevelCourseCover.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = PriceLevelCourseCover.lottie; sourceTree = "<group>"; };
-		CA6875C02CF1849B00DC819A /* UnEmploymentCourseCover.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = UnEmploymentCourseCover.lottie; sourceTree = "<group>"; };
 		CA6875C22CF184D300DC819A /* MoneyAndFinanceCourseCover.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinanceCourseCover.lottie; sourceTree = "<group>"; };
 		CA6875C42CF1851300DC819A /* BasicEconomy1_Home.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = BasicEconomy1_Home.lottie; sourceTree = "<group>"; };
 		CA6875C62CF1855300DC819A /* BasicEconomy1_Building.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = BasicEconomy1_Building.lottie; sourceTree = "<group>"; };
 		CA6875C82CF1858400DC819A /* BasicEconomy1_GovernmentBuilding.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = BasicEconomy1_GovernmentBuilding.lottie; sourceTree = "<group>"; };
 		CA6875CA2CF185AE00DC819A /* BasicEconomy1_Earth.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = BasicEconomy1_Earth.lottie; sourceTree = "<group>"; };
 		CA6875CC2CF185EF00DC819A /* BasicEconomy4_Building.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = BasicEconomy4_Building.lottie; sourceTree = "<group>"; };
-		CA6875CE2CF1862200DC819A /* BasicEconomy5_Money.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = BasicEconomy5_Money.lottie; sourceTree = "<group>"; };
 		CA6875D02CF1864E00DC819A /* BasicEconomy6_MoneyStack.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = BasicEconomy6_MoneyStack.lottie; sourceTree = "<group>"; };
 		CA6875D22CF186AC00DC819A /* BasicEconomy8_MoneyPublish.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = BasicEconomy8_MoneyPublish.lottie; sourceTree = "<group>"; };
 		CA6875D42CF186D700DC819A /* BasicEconomy9_GlobalExport.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = BasicEconomy9_GlobalExport.lottie; sourceTree = "<group>"; };
@@ -287,7 +284,6 @@
 		CA6875E22CF1890500DC819A /* PriceLevel2_Apple.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = PriceLevel2_Apple.lottie; sourceTree = "<group>"; };
 		CA6875E42CF1893B00DC819A /* BubbleHeart.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = BubbleHeart.lottie; sourceTree = "<group>"; };
 		CA6875E62CF18A5B00DC819A /* PriceLevel3_PriceDown.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = PriceLevel3_PriceDown.lottie; sourceTree = "<group>"; };
-		CA6875E82CF18A7B00DC819A /* PriceLevel3_Rain.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = PriceLevel3_Rain.lottie; sourceTree = "<group>"; };
 		CA6875EA2CF18AAA00DC819A /* PriceLevel4_PriceUp.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = PriceLevel4_PriceUp.lottie; sourceTree = "<group>"; };
 		CA6875EC2CF18ACF00DC819A /* PriceLevel4_OilPrice.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = PriceLevel4_OilPrice.lottie; sourceTree = "<group>"; };
 		CA6875EE2CF18AEC00DC819A /* PriceLevel4_HotEconomy.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = PriceLevel4_HotEconomy.lottie; sourceTree = "<group>"; };
@@ -314,6 +310,8 @@
 		CA92DDB82CB7D7C300A7D2A4 /* BasicEconomy4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy4View.swift; sourceTree = "<group>"; };
 		CA92DDBA2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy5View.swift; sourceTree = "<group>"; };
 		CA94BA702CD3C918006ED29A /* CourseListViewCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewCapsule.swift; sourceTree = "<group>"; };
+		CA993A862CF1DBC0001C1DED /* PriceLevel3_BadEconomy.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = PriceLevel3_BadEconomy.lottie; sourceTree = "<group>"; };
+		CA993A8C2CF1E0B7001C1DED /* UnEmploymentCourseCover.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = UnEmploymentCourseCover.lottie; sourceTree = "<group>"; };
 		CA9BB9C42CABA59A00886A1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA9BB9C62CABA59A00886A1A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CA9BB9C72CABA59A00886A1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -415,14 +413,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CA0835C02CDF22AD00B29607 /* Page5 */ = {
-			isa = PBXGroup;
-			children = (
-				CA6875CE2CF1862200DC819A /* BasicEconomy5_Money.lottie */,
-			);
-			path = Page5;
-			sourceTree = "<group>";
-		};
 		CA08F3962CB838620093117E /* 2_PriceLevel */ = {
 			isa = PBXGroup;
 			children = (
@@ -505,8 +495,8 @@
 			children = (
 				CA6875BC2CF1844B00DC819A /* BasicEconomyCourseCover.lottie */,
 				CA6875BE2CF1847300DC819A /* PriceLevelCourseCover.lottie */,
-				CA6875C02CF1849B00DC819A /* UnEmploymentCourseCover.lottie */,
 				CA6875C22CF184D300DC819A /* MoneyAndFinanceCourseCover.lottie */,
+				CA993A8C2CF1E0B7001C1DED /* UnEmploymentCourseCover.lottie */,
 			);
 			path = StudyingCover;
 			sourceTree = "<group>";
@@ -846,7 +836,6 @@
 			children = (
 				CA712CAC2CD65EE1002E7276 /* Page1 */,
 				CA5A4A982CDDBEC200E225F3 /* Page4 */,
-				CA0835C02CDF22AD00B29607 /* Page5 */,
 				CA6927172CDF8B59005F2A6B /* Page6 */,
 				CA61CEB12CE0994B007BCF4E /* Page8 */,
 				CA61CEB62CE0B045007BCF4E /* Page9 */,
@@ -889,7 +878,7 @@
 			isa = PBXGroup;
 			children = (
 				CA6875E62CF18A5B00DC819A /* PriceLevel3_PriceDown.lottie */,
-				CA6875E82CF18A7B00DC819A /* PriceLevel3_Rain.lottie */,
+				CA993A862CF1DBC0001C1DED /* PriceLevel3_BadEconomy.lottie */,
 			);
 			path = Page3;
 			sourceTree = "<group>";
@@ -1480,6 +1469,7 @@
 				CA6875A32CF182C100DC819A /* MainTab_Studying.lottie in Resources */,
 				CA6875A42CF182C100DC819A /* MainTab_Studying_On.lottie in Resources */,
 				CA6875A52CF182C100DC819A /* MainTab_News.lottie in Resources */,
+				CA993A8D2CF1E0B7001C1DED /* UnEmploymentCourseCover.lottie in Resources */,
 				CA6875A62CF182C100DC819A /* MainTab_Profile_On.lottie in Resources */,
 				CA6875A72CF182C100DC819A /* MainTab_Home.lottie in Resources */,
 				CA6875DB2CF1884500DC819A /* BasicEconomy10_Distribution.lottie in Resources */,
@@ -1487,17 +1477,16 @@
 				CA6875A82CF182C100DC819A /* MainTab_News_On.lottie in Resources */,
 				CA6875CB2CF185AE00DC819A /* BasicEconomy1_Earth.lottie in Resources */,
 				CA6876012CF18CB300DC819A /* UnEmployment4_Road.lottie in Resources */,
+				CA993A872CF1DBC0001C1DED /* PriceLevel3_BadEconomy.lottie in Resources */,
 				CA6875A92CF182C100DC819A /* MainTab_Home_On.lottie in Resources */,
 				CA6875B32CF1838C00DC819A /* ArrowRight.lottie in Resources */,
 				CA6875C72CF1855300DC819A /* BasicEconomy1_Building.lottie in Resources */,
 				CA6875DF2CF188AE00DC819A /* PriceLevel1_PriceProduct.lottie in Resources */,
 				CA6875E52CF1893B00DC819A /* BubbleHeart.lottie in Resources */,
 				CA6875C32CF184D300DC819A /* MoneyAndFinanceCourseCover.lottie in Resources */,
-				CA6875E92CF18A7B00DC819A /* PriceLevel3_Rain.lottie in Resources */,
 				CA6875D12CF1864E00DC819A /* BasicEconomy6_MoneyStack.lottie in Resources */,
 				CA6875BF2CF1847300DC819A /* PriceLevelCourseCover.lottie in Resources */,
 				CA6875DD2CF1886700DC819A /* BasicEconomy10_Payment.lottie in Resources */,
-				CA6875CF2CF1862200DC819A /* BasicEconomy5_Money.lottie in Resources */,
 				CA6875FF2CF18C9400DC819A /* UnEmployment4_Factory.lottie in Resources */,
 				CA6875922CF17FA900DC819A /* ProfilePlantLevel4.lottie in Resources */,
 				CA6875932CF17FA900DC819A /* ProfilePlantLevel3.lottie in Resources */,
@@ -1510,7 +1499,6 @@
 				CA6875952CF17FA900DC819A /* ProfilePlantLevel1.lottie in Resources */,
 				CA6875962CF17FA900DC819A /* ProfilePlantLevel2.lottie in Resources */,
 				CA6875F12CF18B0E00DC819A /* PriceLevel5_PriceDown.lottie in Resources */,
-				CA6875C12CF1849B00DC819A /* UnEmploymentCourseCover.lottie in Resources */,
 				CA6876072CF18D5C00DC819A /* UnEmployment7_Business.lottie in Resources */,
 				CA6875BD2CF1844B00DC819A /* BasicEconomyCourseCover.lottie in Resources */,
 				CA6875F92CF18BE700DC819A /* PriceLevel10_ScienceProgress.lottie in Resources */,

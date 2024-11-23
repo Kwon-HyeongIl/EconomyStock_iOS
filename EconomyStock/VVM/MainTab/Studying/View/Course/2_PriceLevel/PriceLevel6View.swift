@@ -87,14 +87,8 @@ struct PriceLevel6View: View {
                                                 .font(.system(size: 40))
                                                 .fontWeight(.bold)
                                                 .foregroundStyle(Color.ESTitle)
-                                                .padding(.trailing, 12)
                                             
-                                            ZStack {
-                                                LottieView(fileName: "BasicEconomy4_Building", loopMode: .playOnce, toProgress: 0.5, width: 120, height: 120)
-                                                
-                                                LottieView(fileName: "PriceLevel3_Rain", loopMode: .playOnce, speed: 0.7, width: 100, height: 100)
-                                                    .padding(.bottom, 110)
-                                            }
+                                            LottieView(fileName: "PriceLevel3_BadEconomy", loopMode: .playOnce, width: 150, height: 150)
                                         }
                                     }
                                     

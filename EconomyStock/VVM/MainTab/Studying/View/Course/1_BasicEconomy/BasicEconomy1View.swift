@@ -14,6 +14,7 @@ struct BasicEconomy1View: View {
     
     @State private var progress: [Int] = []
     
+    @State private var contentImage = false
     @State private var building = false
     @State private var governmentBuilding = false
     @State private var earth = false
@@ -54,71 +55,71 @@ struct BasicEconomy1View: View {
                         .padding(.top, 5)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal)
-                    }
-                    
-                    if progress.count >= 2 {
-                        VStack(spacing: 20) {
-                            HStack(spacing: 60) {
-                                VStack {
-                                    LottieView(fileName: "BasicEconomy1_Home", loopMode: .playOnce, width: 100, height: 100)
-                                        .padding(.bottom, 5)
-                                    
-                                    Text("가계")
-                                        .font(.system(size: 15))
-                                        .fontWeight(.semibold)
-                                        .foregroundStyle(Color.ESTitle)
-                                }
-                                
-                                if building {
+                        
+                        if contentImage {
+                            VStack(spacing: 5) {
+                                HStack(spacing: 60) {
                                     VStack {
-                                        LottieView(fileName: "BasicEconomy1_Building",  loopMode: .playOnce, toProgress: 0.8, width: 100, height: 100)
+                                        LottieView(fileName: "BasicEconomy1_Home", loopMode: .playOnce, width: 100, height: 100)
                                             .padding(.bottom, 5)
                                         
-                                        Text("기업")
+                                        Text("가계")
                                             .font(.system(size: 15))
                                             .fontWeight(.semibold)
                                             .foregroundStyle(Color.ESTitle)
                                     }
+                                    
+                                    if building {
+                                        VStack {
+                                            LottieView(fileName: "BasicEconomy1_Building",  loopMode: .playOnce, toProgress: 0.8, width: 100, height: 100)
+                                                .padding(.bottom, 5)
+                                            
+                                            Text("기업")
+                                                .font(.system(size: 15))
+                                                .fontWeight(.semibold)
+                                                .foregroundStyle(Color.ESTitle)
+                                        }
+                                    }
+                                    
                                 }
                                 
-                            }
-                            
-                            Ellipse()
-                                .frame(width: 90, height: 50)
-                                .foregroundStyle(Color.ESTitle)
-                                .overlay {
-                                    Text("경제")
-                                        .font(.system(size: 25))
-                                        .fontWeight(.semibold)
-                                        .foregroundStyle(.white)
-                                }
-                                .padding(.top, 20)
-                            
-                            HStack(spacing: 60) {
-                                if governmentBuilding {
-                                    VStack {
-                                        LottieView(fileName: "BasicEconomy1_GovernmentBuilding", loopMode: .playOnce, width: 100, height: 100)
-                                        
-                                        Text("정부")
-                                            .font(.system(size: 15))
+                                Ellipse()
+                                    .frame(width: 90, height: 50)
+                                    .foregroundStyle(Color.ESTitle)
+                                    .overlay {
+                                        Text("경제")
+                                            .font(.system(size: 25))
                                             .fontWeight(.semibold)
-                                            .foregroundStyle(Color.ESTitle)
+                                            .foregroundStyle(.white)
                                     }
-                                }
+                                    .padding(.top, 20)
                                 
-                                if earth {
-                                    VStack {
-                                        LottieView(fileName: "BasicEconomy1_Earth", loopMode: .playOnce, toProgress: 0.3, scale: 1.15, width: 100, height: 100)
-                                        
-                                        Text("해외")
-                                            .font(.system(size: 15))
-                                            .fontWeight(.semibold)
-                                            .foregroundStyle(Color.ESTitle)
+                                HStack(spacing: 60) {
+                                    if governmentBuilding {
+                                        VStack {
+                                            LottieView(fileName: "BasicEconomy1_GovernmentBuilding", loopMode: .playOnce, width: 100, height: 100)
+                                            
+                                            Text("정부")
+                                                .font(.system(size: 15))
+                                                .fontWeight(.semibold)
+                                                .foregroundStyle(Color.ESTitle)
+                                        }
+                                    }
+                                    
+                                    if earth {
+                                        VStack {
+                                            LottieView(fileName: "BasicEconomy1_Earth", loopMode: .playOnce, toProgress: 0.3, scale: 1.15, width: 100, height: 100)
+                                            
+                                            Text("해외")
+                                                .font(.system(size: 15))
+                                                .fontWeight(.semibold)
+                                                .foregroundStyle(Color.ESTitle)
+                                        }
                                     }
                                 }
                             }
+                            .padding(.top, 20)
                         }
-                        .padding(.top, 50)
                     }
                 }
                 
@@ -144,32 +145,38 @@ struct BasicEconomy1View: View {
         .contentShape(Rectangle())
         .onTapGesture {
             withAnimation(.smooth(duration: 1.0)) {
-                if progress.count < 3 {
+                if progress.count < 2 {
                     progress.append(1)
                 }
                 
-                if progress.count == 2 {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                if progress.count == 1 {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                         withAnimation(.smooth(duration: 1.0)) {
-                            building = true
+                            contentImage = true
                             
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                 withAnimation(.smooth(duration: 1.0)) {
-                                    governmentBuilding = true
+                                    building = true
                                     
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                         withAnimation(.smooth(duration: 1.0)) {
-                                            earth = true
+                                            governmentBuilding = true
+                                            
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                                withAnimation(.smooth(duration: 1.0)) {
+                                                    earth = true
+                                                    
+                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                                        withAnimation(.smooth(duration: 1.0)) {
+                                                            nextButton = true
+                                                        }
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
                             }
-                        }
-                    }
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                        withAnimation(.smooth(duration: 1.0)) {
-                            nextButton = true
                         }
                     }
                 }

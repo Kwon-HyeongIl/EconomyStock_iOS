@@ -38,7 +38,6 @@ struct MoneyAndFinance1View: View {
                         
                         Spacer()
                     }
-                    .opacity(0.2)
                     .padding(.top)
                     
                     if progress.count >= 1 {

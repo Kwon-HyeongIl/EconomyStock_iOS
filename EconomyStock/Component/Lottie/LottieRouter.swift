@@ -15,7 +15,7 @@ struct LottieRouter {
             0.7
             
         case "UnEmploymentCourseCover":
-            0.5
+            0.4
             
         default:
             speed
@@ -30,7 +30,10 @@ struct LottieRouter {
             0.9
             
         case "UnEmploymentCourseCover":
-            0.65
+            1.1
+            
+        case "MoneyAndFinanceCourseCover":
+            1.05
             
         default:
             scale

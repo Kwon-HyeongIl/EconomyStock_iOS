@@ -120,23 +120,18 @@ struct PriceLevel3View: View {
                             if nextScrollPart {
                                 VStack {
                                     (Text("적정 수준의 물가 상승은 경제 성장을 촉진할 수 있지만, 물가가 하락한다는 것은 ")
-                                    + Text("경기 침체의 ")
+                                    + Text("경기 침체")
                                         .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
                                         .fontWeight(.bold)
-                                    + Text("대표적인 현상 중 하나이기 때문이에요"))
+                                    + Text("의 대표적인 현상 중 하나이기 때문이에요"))
                                         .font(.system(size: 20))
                                         .fontWeight(.semibold)
                                         .multilineTextAlignment(.center)
                                         .padding(.horizontal)
-                                        .padding(.bottom)
+                                        .padding(.bottom, 5)
                                     
                                     if contentImage2 {
-                                        ZStack {
-                                            LottieView(fileName: "BasicEconomy4_Building", loopMode: .playOnce, toProgress: 0.5, scale: 1.1, width: 150, height: 150)
-                                            
-                                            LottieView(fileName: "PriceLevel3_Rain", loopMode: .playOnce, speed: 0.7, width: 140, height: 140)
-                                                .padding(.bottom, 130)
-                                        }
+                                        LottieView(fileName: "PriceLevel3_BadEconomy", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
                                     }
                                     
                                     Spacer()
@@ -145,7 +140,7 @@ struct PriceLevel3View: View {
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 400)
+                                .frame(width: 100, height: 300)
                         }
                         .padding(.top, 50)
                         
@@ -213,7 +208,7 @@ struct PriceLevel3View: View {
                         
                         Rectangle()
                             .fill(.clear)
-                            .frame(width: 100, height: 70)
+                            .frame(width: 100, height: 75)
                             .id("bottom")
                     }
                     

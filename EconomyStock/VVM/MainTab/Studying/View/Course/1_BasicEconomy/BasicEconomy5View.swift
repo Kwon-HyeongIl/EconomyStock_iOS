@@ -204,13 +204,12 @@ struct BasicEconomy5View: View {
                                         
                                         if giveMoney {
                                             VStack(spacing: 0) {
-                                                LottieView(fileName: "BasicEconomy5_Money", loopMode: .playOnce, toProgress: 0.6, scale: 1.5, width: 100, height: 50)
+                                                LottieView(fileName: "MoneyAndFinance1_Money", loopMode: .playOnce, toProgress: 0.6, scale: 1.5, width: 70, height: 70)
                                                 
                                                 LottieView(fileName: "ArrowRight", loopMode: .playOnce, toProgress: 0.5, scale: 1.2, width: 100, height: 50)
                                                     .padding(.leading, 10)
                                             }
-                                            .padding(.horizontal)
-                                            .padding(.bottom)
+                                            .padding(.bottom, 50)
                                         }
                                         
                                         Image("Front_Toktok")
