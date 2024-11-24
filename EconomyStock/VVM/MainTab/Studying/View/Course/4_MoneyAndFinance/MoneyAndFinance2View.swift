@@ -28,7 +28,7 @@ struct MoneyAndFinance2View: View {
                 ZStack {
                     ScrollView {
                         HStack {
-                            Text("2.")
+                            Text("1.")
                                 .font(.system(size: 35))
                                 .fontWeight(.bold)
                                 .foregroundStyle(Color.ESTitle)
@@ -41,6 +41,7 @@ struct MoneyAndFinance2View: View {
                             
                             Spacer()
                         }
+                        .opacity(0.2)
                         .padding(.top)
                         
                         ZStack {
@@ -98,7 +99,7 @@ struct MoneyAndFinance2View: View {
                                     }
                                     
                                     if contentImage2 {
-                                        LottieView(fileName: "MoneyAndFinance2_Balance", loopMode: .playOnce, width: 190, height: 190)
+                                        LottieView(fileName: "MoneyAndFinance2_Balance", loopMode: .loop, speed: 0.7, width: 190, height: 190)
                                     }
                                     
                                     Spacer()

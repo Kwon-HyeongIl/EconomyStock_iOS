@@ -27,10 +27,10 @@
 		CA17FC8A2CB01E820050250B /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC892CB01E820050250B /* CornerRadius.swift */; };
 		CA17FC8C2CB01EBF0050250B /* RoundCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC8B2CB01EBF0050250B /* RoundCorner.swift */; };
 		CA1DDD382CB0E75000C84D08 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CA1DDD372CB0E75000C84D08 /* Lottie */; };
-		CA241A472CF2EEB40057FCD3 /* MoneyAndFinance2_Balance.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA241A462CF2EEB40057FCD3 /* MoneyAndFinance2_Balance.lottie */; };
 		CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */; };
 		CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936B2CAFB05800A883F1 /* Notification.swift */; };
 		CA2E936E2CAFB0B300A883F1 /* NotificationManager+Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */; };
+		CA3439C52CF3899200D487F4 /* MoneyAndFinance4_BankMoney.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA3439C42CF3899200D487F4 /* MoneyAndFinance4_BankMoney.lottie */; };
 		CA3BBAA82CB50063007CA152 /* BasicSignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAA72CB50063007CA152 /* BasicSignupView.swift */; };
 		CA3BBAAE2CB50144007CA152 /* BasicSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAAD2CB50144007CA152 /* BasicSignupViewModel.swift */; };
 		CA3BBAB12CB5035E007CA152 /* LongButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */; };
@@ -181,6 +181,9 @@
 		CAE4C1E12CDE3F3E00CDD0CF /* BasicEconomy7View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE4C1E02CDE3F3E00CDD0CF /* BasicEconomy7View.swift */; };
 		CAE4C1E32CDE3F4A00CDD0CF /* BasicEconomy8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE4C1E22CDE3F4A00CDD0CF /* BasicEconomy8View.swift */; };
 		CAE4C1E52CDE3F5400CDD0CF /* BasicEconomy9View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE4C1E42CDE3F5400CDD0CF /* BasicEconomy9View.swift */; };
+		CAE84EA42CF36A20006FC09A /* MoneyAndFinance2_Balance.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAE84EA32CF36A20006FC09A /* MoneyAndFinance2_Balance.lottie */; };
+		CAE84EA92CF36C31006FC09A /* MoneyAndFinance3_Tissue.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAE84EA82CF36C31006FC09A /* MoneyAndFinance3_Tissue.lottie */; };
+		CAE84EAB2CF375FE006FC09A /* MoneyAndFinance4_PercentDown.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAE84EAA2CF375FE006FC09A /* MoneyAndFinance4_PercentDown.lottie */; };
 		CAEDDAB92CB53B3F0046162D /* BasicSignupFocusField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDAB82CB53B3E0046162D /* BasicSignupFocusField.swift */; };
 		CAEDDABD2CB56C330046162D /* BasicLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDABC2CB56C330046162D /* BasicLoginView.swift */; };
 		CAEDDABF2CB56C4D0046162D /* BasicLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDDABE2CB56C4D0046162D /* BasicLoginViewModel.swift */; };
@@ -223,10 +226,10 @@
 		CA17FC822CB00AD50050250B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CA17FC892CB01E820050250B /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		CA17FC8B2CB01EBF0050250B /* RoundCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCorner.swift; sourceTree = "<group>"; };
-		CA241A462CF2EEB40057FCD3 /* MoneyAndFinance2_Balance.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance2_Balance.lottie; sourceTree = "<group>"; };
 		CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		CA2E936B2CAFB05800A883F1 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationManager+Badge.swift"; sourceTree = "<group>"; };
+		CA3439C42CF3899200D487F4 /* MoneyAndFinance4_BankMoney.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance4_BankMoney.lottie; sourceTree = "<group>"; };
 		CA3BBAA72CB50063007CA152 /* BasicSignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSignupView.swift; sourceTree = "<group>"; };
 		CA3BBAAD2CB50144007CA152 /* BasicSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSignupViewModel.swift; sourceTree = "<group>"; };
 		CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButtonModifier.swift; sourceTree = "<group>"; };
@@ -371,6 +374,9 @@
 		CAE4C1E02CDE3F3E00CDD0CF /* BasicEconomy7View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy7View.swift; sourceTree = "<group>"; };
 		CAE4C1E22CDE3F4A00CDD0CF /* BasicEconomy8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy8View.swift; sourceTree = "<group>"; };
 		CAE4C1E42CDE3F5400CDD0CF /* BasicEconomy9View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy9View.swift; sourceTree = "<group>"; };
+		CAE84EA32CF36A20006FC09A /* MoneyAndFinance2_Balance.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance2_Balance.lottie; sourceTree = "<group>"; };
+		CAE84EA82CF36C31006FC09A /* MoneyAndFinance3_Tissue.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance3_Tissue.lottie; sourceTree = "<group>"; };
+		CAE84EAA2CF375FE006FC09A /* MoneyAndFinance4_PercentDown.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance4_PercentDown.lottie; sourceTree = "<group>"; };
 		CAEDDAB82CB53B3E0046162D /* BasicSignupFocusField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSignupFocusField.swift; sourceTree = "<group>"; };
 		CAEDDABC2CB56C330046162D /* BasicLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLoginView.swift; sourceTree = "<group>"; };
 		CAEDDABE2CB56C4D0046162D /* BasicLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLoginViewModel.swift; sourceTree = "<group>"; };
@@ -721,27 +727,14 @@
 		CA5577EB2CEDF4B800F7C4A6 /* 4_MoneyAndFinance */ = {
 			isa = PBXGroup;
 			children = (
-				CA5577EC2CEDF4F200F7C4A6 /* Page1 */,
-				CA5577EF2CEDF80900F7C4A6 /* Page2 */,
+				CA6876082CF18DA100DC819A /* MoneyAndFinance1_Money.lottie */,
+				CA68760A2CF18DEB00DC819A /* MoneyAndFinance2_MoneyReport.lottie */,
+				CAE84EA32CF36A20006FC09A /* MoneyAndFinance2_Balance.lottie */,
+				CAE84EA82CF36C31006FC09A /* MoneyAndFinance3_Tissue.lottie */,
+				CAE84EAA2CF375FE006FC09A /* MoneyAndFinance4_PercentDown.lottie */,
+				CA3439C42CF3899200D487F4 /* MoneyAndFinance4_BankMoney.lottie */,
 			);
 			path = 4_MoneyAndFinance;
-			sourceTree = "<group>";
-		};
-		CA5577EC2CEDF4F200F7C4A6 /* Page1 */ = {
-			isa = PBXGroup;
-			children = (
-				CA6876082CF18DA100DC819A /* MoneyAndFinance1_Money.lottie */,
-			);
-			path = Page1;
-			sourceTree = "<group>";
-		};
-		CA5577EF2CEDF80900F7C4A6 /* Page2 */ = {
-			isa = PBXGroup;
-			children = (
-				CA68760A2CF18DEB00DC819A /* MoneyAndFinance2_MoneyReport.lottie */,
-				CA241A462CF2EEB40057FCD3 /* MoneyAndFinance2_Balance.lottie */,
-			);
-			path = Page2;
 			sourceTree = "<group>";
 		};
 		CA5577FC2CEE042500F7C4A6 /* DotLottie */ = {
@@ -1469,6 +1462,7 @@
 				CAF2271D2CAE569B002868F4 /* GoogleService-Info.plist in Resources */,
 				CA6875F72CF18BBE00DC819A /* PriceLevel10_Balance.lottie in Resources */,
 				CA6875A22CF182C100DC819A /* MainTab_Profile.lottie in Resources */,
+				CA3439C52CF3899200D487F4 /* MoneyAndFinance4_BankMoney.lottie in Resources */,
 				CA6875A32CF182C100DC819A /* MainTab_Studying.lottie in Resources */,
 				CA6875A42CF182C100DC819A /* MainTab_Studying_On.lottie in Resources */,
 				CA6875A52CF182C100DC819A /* MainTab_News.lottie in Resources */,
@@ -1492,7 +1486,7 @@
 				CA6875DD2CF1886700DC819A /* BasicEconomy10_Payment.lottie in Resources */,
 				CA6875FF2CF18C9400DC819A /* UnEmployment4_Factory.lottie in Resources */,
 				CA6875922CF17FA900DC819A /* ProfilePlantLevel4.lottie in Resources */,
-				CA241A472CF2EEB40057FCD3 /* MoneyAndFinance2_Balance.lottie in Resources */,
+				CAE84EA42CF36A20006FC09A /* MoneyAndFinance2_Balance.lottie in Resources */,
 				CA6875932CF17FA900DC819A /* ProfilePlantLevel3.lottie in Resources */,
 				CA6875942CF17FA900DC819A /* ProfilePlantLevel5.lottie in Resources */,
 				CA6876032CF18D0500DC819A /* UnEmployment4_Store.lottie in Resources */,
@@ -1513,6 +1507,7 @@
 				CA6875AB2CF182F200DC819A /* Loading.lottie in Resources */,
 				CA6875E12CF188E600DC819A /* PriceLevel2_PriceBalance.lottie in Resources */,
 				CA6875E32CF1890500DC819A /* PriceLevel2_Apple.lottie in Resources */,
+				CAE84EAB2CF375FE006FC09A /* MoneyAndFinance4_PercentDown.lottie in Resources */,
 				CA6875F32CF18B3B00DC819A /* PriceLevel7_Product.lottie in Resources */,
 				CA6875EF2CF18AEC00DC819A /* PriceLevel4_HotEconomy.lottie in Resources */,
 				CA6875B12CF1836B00DC819A /* Warning.lottie in Resources */,
@@ -1521,6 +1516,7 @@
 				CA9BB9CF2CABA59A00886A1A /* .gitignore in Resources */,
 				CA6875AD2CF1831900DC819A /* Bubble.lottie in Resources */,
 				CA9BB9D02CABA59A00886A1A /* Assets.xcassets in Resources */,
+				CAE84EA92CF36C31006FC09A /* MoneyAndFinance3_Tissue.lottie in Resources */,
 				CA6875F52CF18B9900DC819A /* PriceLevel9_GDP.lottie in Resources */,
 				CA6875B72CF183D500DC819A /* CourseComplete.lottie in Resources */,
 				CA6875D52CF186D700DC819A /* BasicEconomy9_GlobalExport.lottie in Resources */,

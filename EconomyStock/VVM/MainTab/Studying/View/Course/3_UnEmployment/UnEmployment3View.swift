@@ -158,7 +158,7 @@ struct UnEmployment3View: View {
                                         .padding(.top, 5)
                                     
                                     if contentImage2 {
-                                        LottieView(fileName: "UnEmployment3_CaffeWork", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
+                                        LottieView(fileName: "UnEmployment3_CaffeWork", loopMode: .playOnce, speed: 0.5, scale: 1.2, width: 150, height: 150)
                                     }
                                     
                                     Spacer()
