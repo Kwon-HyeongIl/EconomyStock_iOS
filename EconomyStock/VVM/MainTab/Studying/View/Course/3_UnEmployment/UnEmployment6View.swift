@@ -270,7 +270,7 @@ struct UnEmployment6View: View {
                     
                     if progress.count == 2 {
                         withAnimation {
-                            proxy.scrollTo("bottom", anchor: .bottom)
+                            proxy.scrollTo("bottom", anchor: .top)
                         }
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
@@ -289,7 +289,7 @@ struct UnEmployment6View: View {
                                                     withAnimation(.smooth(duration: 1.0)) {
                                                         nextButton = true
                                                         
-                                                        proxy.scrollTo("bottom", anchor: .bottom)
+                                                        proxy.scrollTo("bottom", anchor: .top)
                                                         
                                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                                             withAnimation(.smooth(duration: 1.0)) {

@@ -57,7 +57,7 @@ struct PriceLevel2View: View {
                                     .padding(.top)
                                     
                                     if contentImage1 {
-                                        LottieView(fileName: "PriceLevel2_PriceBalance", loopMode: .playOnce, speed:0.7, scale: 1.2, width: 150, height: 150)
+                                        LottieView(fileName: "MoneyAndFinance2_Balance", loopMode: .playOnce, speed:0.7, scale: 1.2, width: 150, height: 150)
                                             .padding(.top)
                                     }
                                 }
@@ -174,7 +174,7 @@ struct PriceLevel2View: View {
                     
                     if progress.count == 2 {
                         withAnimation {
-                            proxy.scrollTo("bottom", anchor: .bottom)
+                            proxy.scrollTo("bottom", anchor: .top)
                         }
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
@@ -192,6 +192,8 @@ struct PriceLevel2View: View {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
                             withAnimation(.smooth(duration: 1.0)) {
                                 nextButton = true
+                                
+                                proxy.scrollTo("bottom", anchor: .top)
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                     withAnimation(.smooth(duration: 1.0)) {

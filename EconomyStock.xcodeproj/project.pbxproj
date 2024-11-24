@@ -27,6 +27,7 @@
 		CA17FC8A2CB01E820050250B /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC892CB01E820050250B /* CornerRadius.swift */; };
 		CA17FC8C2CB01EBF0050250B /* RoundCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC8B2CB01EBF0050250B /* RoundCorner.swift */; };
 		CA1DDD382CB0E75000C84D08 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CA1DDD372CB0E75000C84D08 /* Lottie */; };
+		CA241A472CF2EEB40057FCD3 /* MoneyAndFinance2_Balance.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA241A462CF2EEB40057FCD3 /* MoneyAndFinance2_Balance.lottie */; };
 		CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */; };
 		CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936B2CAFB05800A883F1 /* Notification.swift */; };
 		CA2E936E2CAFB0B300A883F1 /* NotificationManager+Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */; };
@@ -222,6 +223,7 @@
 		CA17FC822CB00AD50050250B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CA17FC892CB01E820050250B /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		CA17FC8B2CB01EBF0050250B /* RoundCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCorner.swift; sourceTree = "<group>"; };
+		CA241A462CF2EEB40057FCD3 /* MoneyAndFinance2_Balance.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance2_Balance.lottie; sourceTree = "<group>"; };
 		CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		CA2E936B2CAFB05800A883F1 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationManager+Badge.swift"; sourceTree = "<group>"; };
@@ -737,6 +739,7 @@
 			isa = PBXGroup;
 			children = (
 				CA68760A2CF18DEB00DC819A /* MoneyAndFinance2_MoneyReport.lottie */,
+				CA241A462CF2EEB40057FCD3 /* MoneyAndFinance2_Balance.lottie */,
 			);
 			path = Page2;
 			sourceTree = "<group>";
@@ -1489,6 +1492,7 @@
 				CA6875DD2CF1886700DC819A /* BasicEconomy10_Payment.lottie in Resources */,
 				CA6875FF2CF18C9400DC819A /* UnEmployment4_Factory.lottie in Resources */,
 				CA6875922CF17FA900DC819A /* ProfilePlantLevel4.lottie in Resources */,
+				CA241A472CF2EEB40057FCD3 /* MoneyAndFinance2_Balance.lottie in Resources */,
 				CA6875932CF17FA900DC819A /* ProfilePlantLevel3.lottie in Resources */,
 				CA6875942CF17FA900DC819A /* ProfilePlantLevel5.lottie in Resources */,
 				CA6876032CF18D0500DC819A /* UnEmployment4_Store.lottie in Resources */,

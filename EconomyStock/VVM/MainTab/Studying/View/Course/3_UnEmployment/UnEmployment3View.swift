@@ -269,6 +269,8 @@ struct UnEmployment3View: View {
                                             withAnimation(.smooth(duration: 1.0)) {
                                                 nextButton = true
                                                 
+                                                proxy.scrollTo("bottom", anchor: .top)
+                                                
                                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                                     withAnimation(.smooth(duration: 1.0)) {
                                                         beforeButton = true
