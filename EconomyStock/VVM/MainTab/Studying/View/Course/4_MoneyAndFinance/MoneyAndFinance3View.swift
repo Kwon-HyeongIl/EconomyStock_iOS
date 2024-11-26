@@ -97,7 +97,7 @@ struct MoneyAndFinance3View: View {
                                     .padding(.horizontal)
                                     
                                     if contentText2_2 {
-                                        Text("급격한 인플레이션으로 인해 햄버거 하나를 사먹기 위해 수천 달러가 필요한 짐바브웨에서는 돈이 휴지조각 만큼의 가치를 가져요")
+                                        Text("급격한 인플레이션으로 인해 계란 3알을 구입하기 위해 수천억의 짐바브웨 달러가 필요한 짐바브웨에서는 돈이 휴지조각 만큼의 가치를 가져요")
                                             .font(.system(size: 20))
                                             .fontWeight(.semibold)
                                             .multilineTextAlignment(.center)

@@ -47,7 +47,7 @@ struct MoneyAndFinance4View: View {
                         ZStack {
                             if progress.count >= 1 {
                                 VStack {
-                                    Text("이자율 또한 중요한 경제변수 중 하나에요")
+                                    Text("화폐 통화량 외에도, 이자율 또한 중요한 경제변수 중 하나에요")
                                         .font(.system(size: 20))
                                         .fontWeight(.semibold)
                                         .multilineTextAlignment(.center)

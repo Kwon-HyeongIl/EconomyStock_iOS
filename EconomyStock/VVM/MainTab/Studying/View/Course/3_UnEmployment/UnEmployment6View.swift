@@ -191,7 +191,7 @@ struct UnEmployment6View: View {
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 100)
+                                .frame(width: 100, height: questionMarkContent ? 200 : 100)
                         }
                         
                         Rectangle()
