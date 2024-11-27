@@ -13,7 +13,6 @@ struct MoneyAndFinance6View: View {
     
     @State private var progress: [Int] = []
     
-    @State private var contentText1_2 = false
     @State private var contentImage = false
     
     @State private var nextButton = false
@@ -24,14 +23,14 @@ struct MoneyAndFinance6View: View {
             ZStack {
                 ScrollView {
                     HStack {
-                        Text("2.")
+                        Text("3.")
                             .font(.system(size: 35))
                             .fontWeight(.bold)
                             .foregroundStyle(Color.ESTitle)
                             .padding(.leading, 30)
                             .padding(.bottom, 3)
                         
-                        Text("고용 지표")
+                        Text("중앙은행의 역할")
                             .font(.system(size: 25))
                             .fontWeight(.bold)
                         
@@ -39,77 +38,33 @@ struct MoneyAndFinance6View: View {
                     }
                     .padding(.top)
                     
-                    ZStack {
-                        if progress.count >= 1 {
-                            VStack {
-                                VStack(spacing: 5) {
-                                    Text("실업률")
-                                        .font(.system(size: 20))
-                                        .fontWeight(.semibold)
-                                        .multilineTextAlignment(.center)
-                                        .padding(.horizontal)
-                                        .foregroundStyle(Color.ESTitle)
-                                        .fontWeight(.bold)
-                                    
-                                    Text("경제활동인구 중 실업자가 차지하는 비율을 말해요")
-                                        .font(.system(size: 20))
-                                        .fontWeight(.semibold)
-                                        .multilineTextAlignment(.center)
-                                        .padding(.horizontal)
-                                }
-                                
-                                Text("(생산가능인구가 아니에요!)")
-                                    .font(.system(size: 17))
-                                    .fontWeight(.semibold)
-                                    .multilineTextAlignment(.center)
-                                    .foregroundStyle(Color.ESTitle)
-                                    .padding(.horizontal)
-                                    .padding(.top, 5)
-                                
-                                if contentText1_2 {
-                                    VStack(spacing: 5) {
-                                        Text("고용률")
-                                            .font(.system(size: 20))
-                                            .fontWeight(.semibold)
-                                            .multilineTextAlignment(.center)
-                                            .padding(.horizontal)
-                                            .foregroundStyle(Color.ESTitle)
-                                            .fontWeight(.bold)
-                                        
-                                        Text("생산가능인구 중 취업자가 차지하는 비율을 말해요")
-                                            .font(.system(size: 20))
-                                            .fontWeight(.semibold)
-                                            .multilineTextAlignment(.center)
-                                            .padding(.horizontal)
-                                    }
-                                    .padding(.top, 20)
-                                    
-                                    Text("(경제활동인구가 아니에요!)")
-                                        .font(.system(size: 17))
-                                        .fontWeight(.semibold)
-                                        .multilineTextAlignment(.center)
-                                        .foregroundStyle(Color.ESTitle)
-                                        .padding(.horizontal)
-                                        .padding(.top, 5)
-                                }
-                                
-                                if contentImage {
-                                    LottieView(fileName: "UnEmployment2_Suit", loopMode: .playOnce, width: 180, height: 180)
-                                }
-                                
-                                Spacer()
+                    if progress.count >= 1 {
+                        VStack {
+                            Text("중앙은행은 화폐발행 및 통화량 조절을 위해 운영되는 은행을 말해요")
+                                .font(.system(size: 20))
+                                .fontWeight(.semibold)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal)
+                                .padding(.top)
+                            
+                            if contentImage {
+                                LottieView(fileName: "MoneyAndFinance6_Bank", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
+                                    .padding(.top)
                             }
+                            
+                            Spacer()
                         }
-                        
-                        Rectangle()
-                            .fill(.clear)
-                            .frame(width: 100, height: 500)
                     }
                     
-                    Rectangle()
-                        .fill(.clear)
-                        .frame(width: 100, height: 85)
-                        .id("bottom")
+                    if progress.count >= 2 {
+                        Text("우리나리의 중앙은행은 한국은행이며, 미국의 중앙은행은 연방준비제도(FED)라고 해요")
+                            .font(.system(size: 20))
+                            .fontWeight(.semibold)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+                            .padding(.top, 50)
+                    }
+                    
                 }
                 
                 if nextButton {
@@ -122,7 +77,7 @@ struct MoneyAndFinance6View: View {
                                 UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
                                 
                                 viewModel.currentPage += 1
-                                navigationRouter.navigate(.UnEmployment3View(viewModel))
+                                navigationRouter.navigate(.MoneyAndFinance7View(viewModel))
                             } label: {
                                 LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                     .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
@@ -161,25 +116,21 @@ struct MoneyAndFinance6View: View {
                 }
                 
                 if progress.count == 1 {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                         withAnimation(.smooth(duration: 1.0)) {
-                            contentText1_2 = true
+                            contentImage = true
+                        }
+                    }
+                }
+                
+                if progress.count == 2 {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        withAnimation(.smooth(duration: 1.0)) {
+                            nextButton = true
                             
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                 withAnimation(.smooth(duration: 1.0)) {
-                                    contentImage = true
-                                    
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                        withAnimation(.smooth(duration: 1.0)) {
-                                            nextButton = true
-                                            
-                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                                withAnimation(.smooth(duration: 1.0)) {
-                                                    beforeButton = true
-                                                }
-                                            }
-                                        }
-                                    }
+                                    beforeButton = true
                                 }
                             }
                         }
