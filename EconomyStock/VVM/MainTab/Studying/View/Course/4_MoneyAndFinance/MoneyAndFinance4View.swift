@@ -81,7 +81,7 @@ struct MoneyAndFinance4View: View {
                                     }
                                     
                                     if contentImage1 {
-                                        LottieView(fileName: "MoneyAndFinance4_BankMoney", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
+                                        LottieView(fileName: "MoneyAndFinance4_InterestRate", loopMode: .playOnce, fromProgress: 0.4, scale: 1.2, width: 150, height: 150)
                                             .padding(.top, 10)
                                     }
                                     

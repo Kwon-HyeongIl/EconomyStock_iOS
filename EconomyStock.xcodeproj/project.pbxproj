@@ -26,12 +26,17 @@
 		CA17FC832CB00AD50050250B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC822CB00AD50050250B /* ProfileView.swift */; };
 		CA17FC8A2CB01E820050250B /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC892CB01E820050250B /* CornerRadius.swift */; };
 		CA17FC8C2CB01EBF0050250B /* RoundCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC8B2CB01EBF0050250B /* RoundCorner.swift */; };
+		CA1DAB312CF7667400683A4E /* MoneyAndFinance14_Podium.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA1DAB302CF7667400683A4E /* MoneyAndFinance14_Podium.lottie */; };
 		CA1DDD382CB0E75000C84D08 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CA1DDD372CB0E75000C84D08 /* Lottie */; };
 		CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */; };
 		CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936B2CAFB05800A883F1 /* Notification.swift */; };
 		CA2E936E2CAFB0B300A883F1 /* NotificationManager+Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */; };
 		CA31EA382CF6ED440005A475 /* MoneyAndFinance9_BankProduct.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA31EA372CF6ED440005A475 /* MoneyAndFinance9_BankProduct.lottie */; };
-		CA3439C52CF3899200D487F4 /* MoneyAndFinance4_BankMoney.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA3439C42CF3899200D487F4 /* MoneyAndFinance4_BankMoney.lottie */; };
+		CA31EA3A2CF6F5D70005A475 /* MoneyAndFinance4_InterestRate.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA31EA392CF6F5D70005A475 /* MoneyAndFinance4_InterestRate.lottie */; };
+		CA31EA3C2CF6F6D30005A475 /* MoneyAndFinance6_Bank.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA31EA3B2CF6F6D30005A475 /* MoneyAndFinance6_Bank.lottie */; };
+		CA31EA3E2CF6F8980005A475 /* MoneyAndFinance11_SavingMoney.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA31EA3D2CF6F8980005A475 /* MoneyAndFinance11_SavingMoney.lottie */; };
+		CA31EA402CF6FE880005A475 /* MoneyAndFinance12_MoneyReport.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA31EA3F2CF6FE880005A475 /* MoneyAndFinance12_MoneyReport.lottie */; };
+		CA31EA422CF706630005A475 /* MoneyAndFinance13_BankMoney.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA31EA412CF706630005A475 /* MoneyAndFinance13_BankMoney.lottie */; };
 		CA3BBAA82CB50063007CA152 /* BasicSignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAA72CB50063007CA152 /* BasicSignupView.swift */; };
 		CA3BBAAE2CB50144007CA152 /* BasicSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAAD2CB50144007CA152 /* BasicSignupViewModel.swift */; };
 		CA3BBAB12CB5035E007CA152 /* LongButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */; };
@@ -211,7 +216,6 @@
 		CAEE16632CAD0D7200210BD0 /* LoginViewModel+Kakao.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE16622CAD0D7200210BD0 /* LoginViewModel+Kakao.swift */; };
 		CAEE16652CAD0D7800210BD0 /* LoginViewModel+Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE16642CAD0D7800210BD0 /* LoginViewModel+Apple.swift */; };
 		CAF2271D2CAE569B002868F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAF2271C2CAE569B002868F4 /* GoogleService-Info.plist */; };
-		CAF2E6CD2CF5AFBA000643C7 /* MoneyAndFinance6_Bank.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAF2E6CC2CF5AFBA000643C7 /* MoneyAndFinance6_Bank.lottie */; };
 		CAF2E6CF2CF5B34F000643C7 /* MoneyAndFinance7_MoneyControl.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAF2E6CE2CF5B34F000643C7 /* MoneyAndFinance7_MoneyControl.lottie */; };
 /* End PBXBuildFile section */
 
@@ -235,11 +239,16 @@
 		CA17FC822CB00AD50050250B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CA17FC892CB01E820050250B /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		CA17FC8B2CB01EBF0050250B /* RoundCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCorner.swift; sourceTree = "<group>"; };
+		CA1DAB302CF7667400683A4E /* MoneyAndFinance14_Podium.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance14_Podium.lottie; sourceTree = "<group>"; };
 		CA2E93692CAFAEC000A883F1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		CA2E936B2CAFB05800A883F1 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		CA2E936D2CAFB0B300A883F1 /* NotificationManager+Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationManager+Badge.swift"; sourceTree = "<group>"; };
 		CA31EA372CF6ED440005A475 /* MoneyAndFinance9_BankProduct.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance9_BankProduct.lottie; sourceTree = "<group>"; };
-		CA3439C42CF3899200D487F4 /* MoneyAndFinance4_BankMoney.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance4_BankMoney.lottie; sourceTree = "<group>"; };
+		CA31EA392CF6F5D70005A475 /* MoneyAndFinance4_InterestRate.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance4_InterestRate.lottie; sourceTree = "<group>"; };
+		CA31EA3B2CF6F6D30005A475 /* MoneyAndFinance6_Bank.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance6_Bank.lottie; sourceTree = "<group>"; };
+		CA31EA3D2CF6F8980005A475 /* MoneyAndFinance11_SavingMoney.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance11_SavingMoney.lottie; sourceTree = "<group>"; };
+		CA31EA3F2CF6FE880005A475 /* MoneyAndFinance12_MoneyReport.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance12_MoneyReport.lottie; sourceTree = "<group>"; };
+		CA31EA412CF706630005A475 /* MoneyAndFinance13_BankMoney.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance13_BankMoney.lottie; sourceTree = "<group>"; };
 		CA3BBAA72CB50063007CA152 /* BasicSignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSignupView.swift; sourceTree = "<group>"; };
 		CA3BBAAD2CB50144007CA152 /* BasicSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSignupViewModel.swift; sourceTree = "<group>"; };
 		CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButtonModifier.swift; sourceTree = "<group>"; };
@@ -412,7 +421,6 @@
 		CAEE16622CAD0D7200210BD0 /* LoginViewModel+Kakao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Kakao.swift"; sourceTree = "<group>"; };
 		CAEE16642CAD0D7800210BD0 /* LoginViewModel+Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Apple.swift"; sourceTree = "<group>"; };
 		CAF2271C2CAE569B002868F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CAF2E6CC2CF5AFBA000643C7 /* MoneyAndFinance6_Bank.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance6_Bank.lottie; sourceTree = "<group>"; };
 		CAF2E6CE2CF5B34F000643C7 /* MoneyAndFinance7_MoneyControl.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance7_MoneyControl.lottie; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -749,9 +757,9 @@
 				CA68760A2CF18DEB00DC819A /* MoneyAndFinance2_MoneyReport.lottie */,
 				CAE84EA32CF36A20006FC09A /* MoneyAndFinance2_Balance.lottie */,
 				CAE84EA82CF36C31006FC09A /* MoneyAndFinance3_Tissue.lottie */,
+				CA31EA392CF6F5D70005A475 /* MoneyAndFinance4_InterestRate.lottie */,
 				CAE84EAA2CF375FE006FC09A /* MoneyAndFinance4_PercentDown.lottie */,
-				CA3439C42CF3899200D487F4 /* MoneyAndFinance4_BankMoney.lottie */,
-				CAF2E6CC2CF5AFBA000643C7 /* MoneyAndFinance6_Bank.lottie */,
+				CA31EA3B2CF6F6D30005A475 /* MoneyAndFinance6_Bank.lottie */,
 				CAF2E6CE2CF5B34F000643C7 /* MoneyAndFinance7_MoneyControl.lottie */,
 				CACA6EB42CF5D2CB002AFB61 /* MoneyAndFinance7_ATM.lottie */,
 				CACA6EB62CF5D513002AFB61 /* MoneyAndFinance7_MoneyBalance.lottie */,
@@ -760,6 +768,10 @@
 				CAA3A55C2CF6D9D3002C55A5 /* MoneyAndFinance9_BankWithBank.lottie */,
 				CAA3A55D2CF6D9D3002C55A5 /* MoneyAndFinance9_GlobalMoney.lottie */,
 				CA31EA372CF6ED440005A475 /* MoneyAndFinance9_BankProduct.lottie */,
+				CA31EA3D2CF6F8980005A475 /* MoneyAndFinance11_SavingMoney.lottie */,
+				CA31EA3F2CF6FE880005A475 /* MoneyAndFinance12_MoneyReport.lottie */,
+				CA31EA412CF706630005A475 /* MoneyAndFinance13_BankMoney.lottie */,
+				CA1DAB302CF7667400683A4E /* MoneyAndFinance14_Podium.lottie */,
 			);
 			path = 4_MoneyAndFinance;
 			sourceTree = "<group>";
@@ -1489,11 +1501,11 @@
 				CAF2271D2CAE569B002868F4 /* GoogleService-Info.plist in Resources */,
 				CA6875F72CF18BBE00DC819A /* PriceLevel10_Balance.lottie in Resources */,
 				CA6875A22CF182C100DC819A /* MainTab_Profile.lottie in Resources */,
-				CA3439C52CF3899200D487F4 /* MoneyAndFinance4_BankMoney.lottie in Resources */,
 				CA6875A32CF182C100DC819A /* MainTab_Studying.lottie in Resources */,
 				CA6875A42CF182C100DC819A /* MainTab_Studying_On.lottie in Resources */,
 				CA6875A52CF182C100DC819A /* MainTab_News.lottie in Resources */,
 				CA993A8D2CF1E0B7001C1DED /* UnEmploymentCourseCover.lottie in Resources */,
+				CA31EA3A2CF6F5D70005A475 /* MoneyAndFinance4_InterestRate.lottie in Resources */,
 				CA6875A62CF182C100DC819A /* MainTab_Profile_On.lottie in Resources */,
 				CA6875A72CF182C100DC819A /* MainTab_Home.lottie in Resources */,
 				CA6875DB2CF1884500DC819A /* BasicEconomy10_Distribution.lottie in Resources */,
@@ -1505,6 +1517,7 @@
 				CA6875A92CF182C100DC819A /* MainTab_Home_On.lottie in Resources */,
 				CA6875B32CF1838C00DC819A /* ArrowRight.lottie in Resources */,
 				CA6875C72CF1855300DC819A /* BasicEconomy1_Building.lottie in Resources */,
+				CA31EA3C2CF6F6D30005A475 /* MoneyAndFinance6_Bank.lottie in Resources */,
 				CA6875DF2CF188AE00DC819A /* PriceLevel1_PriceProduct.lottie in Resources */,
 				CA6875E52CF1893B00DC819A /* BubbleHeart.lottie in Resources */,
 				CA6875C32CF184D300DC819A /* MoneyAndFinanceCourseCover.lottie in Resources */,
@@ -1524,7 +1537,6 @@
 				CA6875AF2CF1833900DC819A /* QuestionMark.lottie in Resources */,
 				CA31EA382CF6ED440005A475 /* MoneyAndFinance9_BankProduct.lottie in Resources */,
 				CA68760B2CF18DEB00DC819A /* MoneyAndFinance2_MoneyReport.lottie in Resources */,
-				CAF2E6CD2CF5AFBA000643C7 /* MoneyAndFinance6_Bank.lottie in Resources */,
 				CA6875D32CF186AC00DC819A /* BasicEconomy8_MoneyPublish.lottie in Resources */,
 				CA6875BB2CF1842000DC819A /* CourseCompleteButton.lottie in Resources */,
 				CA6875952CF17FA900DC819A /* ProfilePlantLevel1.lottie in Resources */,
@@ -1536,9 +1548,13 @@
 				CA6875F92CF18BE700DC819A /* PriceLevel10_ScienceProgress.lottie in Resources */,
 				CA6875D92CF187F000DC819A /* BasicEconomy10_Factory.lottie in Resources */,
 				CA6875EB2CF18AAA00DC819A /* PriceLevel4_PriceUp.lottie in Resources */,
+				CA31EA422CF706630005A475 /* MoneyAndFinance13_BankMoney.lottie in Resources */,
+				CA1DAB312CF7667400683A4E /* MoneyAndFinance14_Podium.lottie in Resources */,
 				CA6875CD2CF185EF00DC819A /* BasicEconomy4_Building.lottie in Resources */,
 				CAF2E6CF2CF5B34F000643C7 /* MoneyAndFinance7_MoneyControl.lottie in Resources */,
+				CA31EA3E2CF6F8980005A475 /* MoneyAndFinance11_SavingMoney.lottie in Resources */,
 				CA6875ED2CF18ACF00DC819A /* PriceLevel4_OilPrice.lottie in Resources */,
+				CA31EA402CF6FE880005A475 /* MoneyAndFinance12_MoneyReport.lottie in Resources */,
 				CA6875AB2CF182F200DC819A /* Loading.lottie in Resources */,
 				CA6875E12CF188E600DC819A /* PriceLevel2_PriceBalance.lottie in Resources */,
 				CA6875E32CF1890500DC819A /* PriceLevel2_Apple.lottie in Resources */,

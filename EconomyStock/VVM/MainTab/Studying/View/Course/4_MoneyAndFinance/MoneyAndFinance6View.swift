@@ -48,7 +48,7 @@ struct MoneyAndFinance6View: View {
                                 .padding(.top)
                             
                             if contentImage {
-                                LottieView(fileName: "MoneyAndFinance6_Bank", loopMode: .playOnce, scale: 1.2, width: 150, height: 150)
+                                LottieView(fileName: "MoneyAndFinance6_Bank", loopMode: .playOnce, fromProgress: 0.35, scale: 1.2, width: 150, height: 150)
                                     .padding(.top)
                             }
                             
@@ -57,7 +57,11 @@ struct MoneyAndFinance6View: View {
                     }
                     
                     if progress.count >= 2 {
-                        Text("우리나리의 중앙은행은 한국은행이며, 미국의 중앙은행은 연방준비제도(FED)라고 해요")
+                        (Text("우리나리의 중앙은행은 ")
+                        + Text("한국은행")
+                            .foregroundStyle(Color.ESTitle)
+                            .fontWeight(.bold)
+                        + Text("이며, 미국의 중앙은행은 연방준비제도(FED)라고 해요"))
                             .font(.system(size: 20))
                             .fontWeight(.semibold)
                             .multilineTextAlignment(.center)
