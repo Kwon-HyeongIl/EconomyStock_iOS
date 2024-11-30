@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BasicSignupView: View {
     @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
-    @State private var viewModel = BasicSignupViewModel()
+    @Bindable var viewModel: LoginViewModel
     
     @FocusState private var focus: BasicSignupFocusField?
     
@@ -25,9 +25,9 @@ struct BasicSignupView: View {
     @State private var loadingBarState = false
     
     var body: some View {
-        ScrollView {
+        VStack {
             ZStack {
-                VStack {
+                ScrollView {
                     if isUsernameTextFieldShowing {
                         VStack(spacing: 0) {
                             HStack {
@@ -113,7 +113,19 @@ struct BasicSignupView: View {
                     .padding(.top, isPasswordTextFieldShowing ? 0 : 20)
                     
                     Spacer()
+                    
+                    
                 }
+                .onAppear {
+                    focus = .email
+                }
+                .overlay {
+                    if loadingBarState {
+                        LottieView(fileName: "Loading", loopMode: .loop, width: 180, height: 180)
+                            .padding(.bottom, 60)
+                    }
+                }
+                .modifier(NavigationBackTitleModifier(title: isUsernameTextFieldShowing ? "닉네임을 입력해주세요" : (isPasswordTextFieldShowing ? "비밀번호를 입력해주세요" : "이메일을 입력해주세요")))
                 
                 VStack {
                     Spacer()
@@ -246,21 +258,11 @@ struct BasicSignupView: View {
                     }
                 }
             }
-            .onAppear {
-                focus = .email
-            }
-            .overlay {
-                if loadingBarState {
-                    LottieView(fileName: "Loading", loopMode: .loop, width: 180, height: 180)
-                        .padding(.bottom, 60)
-                }
-            }
-            .modifier(NavigationBackTitleModifier(title: isUsernameTextFieldShowing ? "닉네임을 입력해주세요" : (isPasswordTextFieldShowing ? "비밀번호를 입력해주세요" : "이메일을 입력해주세요")))
         }
     }
 }
 
 #Preview {
-    BasicSignupView()
+    BasicSignupView(viewModel: LoginViewModel())
         .environment(NavigationRouter())
 }

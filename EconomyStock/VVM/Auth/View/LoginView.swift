@@ -117,7 +117,7 @@ struct LoginView: View {
                 }
                 
                 Button {
-                    navigationRouter.navigate(.BasicLoginView)
+                    navigationRouter.navigate(.BasicLoginView(viewModel))
                 } label: {
                     Text("또는 다른 방식으로 로그인")
                         .font(.system(size: 12))
@@ -127,6 +127,7 @@ struct LoginView: View {
                 }
             }
         }
+        .modifier(NavigationBackModifier())
         .onChange(of: viewModel.isLoginSuccess, {
             navigationRouter.popToRoot()
         })

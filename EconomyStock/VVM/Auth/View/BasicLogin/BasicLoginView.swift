@@ -105,7 +105,7 @@ struct BasicLoginView: View {
                 
                 VStack {
                     Button {
-                        navigationRouter.navigate(.BasicSignupView)
+                        navigationRouter.navigate(.BasicSignupView(viewModel))
                     } label: {
                         Text("아직 회원이 아니신가요?")
                             .font(.system(size: 14))
@@ -115,7 +115,7 @@ struct BasicLoginView: View {
                     }
                     
                     Button {
-                        navigationRouter.navigate(.FindPasswordView)
+                        
                     } label: {
                         Text("비밀번호를 잊어버리셨나요?")
                             .font(.system(size: 14))
@@ -125,7 +125,7 @@ struct BasicLoginView: View {
                     }
                     
                     Button {
-                        navigationRouter.navigate(.AccountSupportView)
+                        
                     } label: {
                         Text("계정 관련 문의")
                             .font(.system(size: 14))

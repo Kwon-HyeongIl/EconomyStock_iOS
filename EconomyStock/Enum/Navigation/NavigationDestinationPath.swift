@@ -11,10 +11,8 @@ enum NavigationDestinationPath: Hashable {
     
     // Auth
     case LoginView
-    case BasicLoginView
-    case BasicSignupView
-    case FindPasswordView
-    case AccountSupportView
+    case BasicLoginView(LoginViewModel)
+    case BasicSignupView(LoginViewModel)
     
     // Studying
     case CourseIntroView(CourseViewModel)

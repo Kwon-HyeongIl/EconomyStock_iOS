@@ -1,18 +1,13 @@
 //
-//  SignupViewModel.swift
+//  LoginViewModel+BasicSignup.swift
 //  EconomyStock
 //
-//  Created by 권형일 on 10/8/24.
+//  Created by 권형일 on 11/30/24.
 //
 
 import Foundation
 
-@Observable
-class BasicSignupViewModel {
-    var email = ""
-    var password = ""
-    var username = ""
-    
+extension LoginViewModel {
     func signup() async {
         await AuthManager.shared.createUser(email: self.email, password: self.password, username: self.username)
     }

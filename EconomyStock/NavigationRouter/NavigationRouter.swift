@@ -18,14 +18,10 @@ class NavigationRouter {
         // Auth
         case .LoginView:
             LoginView()
-        case .BasicLoginView:
-            BasicLoginView()
-        case .BasicSignupView:
-            BasicSignupView()
-        case .FindPasswordView:
-            FindPasswordView()
-        case .AccountSupportView:
-            AccountSupportView()
+        case .BasicLoginView(let viewModel):
+            BasicLoginView(viewModel: viewModel)
+        case .BasicSignupView(let viewModel):
+            BasicSignupView(viewModel: viewModel)
             
         // Studying
         case .CourseIntroView(let viewModel):
