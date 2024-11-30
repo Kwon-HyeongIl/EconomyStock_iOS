@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BasicLoginView: View {
     @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
-    @State private var viewModel = BasicLoginViewModel()
+    @Bindable var viewModel: LoginViewModel
     
     @State private var alertLogin = false
     
@@ -151,6 +151,6 @@ struct BasicLoginView: View {
 }
 
 #Preview {
-    BasicLoginView()
+    BasicLoginView(viewModel: LoginViewModel())
         .environment(NavigationRouter())
 }

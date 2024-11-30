@@ -132,14 +132,6 @@ class NavigationRouter {
             MoneyAndFinance18View(viewModel: viewModel)
         case .MoneyAndFinance19View(let viewModel):
             MoneyAndFinance19View(viewModel: viewModel)
-        case .MoneyAndFinance20View(let viewModel):
-            MoneyAndFinance20View(viewModel: viewModel)
-        case .MoneyAndFinance21View(let viewModel):
-            MoneyAndFinance21View(viewModel: viewModel)
-        case .MoneyAndFinance22View(let viewModel):
-            MoneyAndFinance22View(viewModel: viewModel)
-        case .MoneyAndFinance23View(let viewModel):
-            MoneyAndFinance23View(viewModel: viewModel)
         }
     }
     

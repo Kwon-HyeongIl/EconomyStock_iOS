@@ -13,7 +13,7 @@ struct MoneyAndFinance15View: View {
     
     @State private var progress: [Int] = []
     
-    @State private var contentText1_2 = false
+    @State private var contentText2_1 = false
     @State private var contentImage = false
     
     @State private var nextButton = false
@@ -24,92 +24,52 @@ struct MoneyAndFinance15View: View {
             ZStack {
                 ScrollView {
                     HStack {
-                        Text("2.")
+                        Text("5.")
                             .font(.system(size: 35))
                             .fontWeight(.bold)
                             .foregroundStyle(Color.ESTitle)
                             .padding(.leading, 30)
                             .padding(.bottom, 3)
                         
-                        Text("고용 지표")
+                        Text("중앙은행의 통화정책 수단")
                             .font(.system(size: 25))
                             .fontWeight(.bold)
                         
                         Spacer()
                     }
+                    .opacity(0.2)
                     .padding(.top)
                     
-                    ZStack {
-                        if progress.count >= 1 {
-                            VStack {
-                                VStack(spacing: 5) {
-                                    Text("실업률")
-                                        .font(.system(size: 20))
-                                        .fontWeight(.semibold)
-                                        .multilineTextAlignment(.center)
-                                        .padding(.horizontal)
-                                        .foregroundStyle(Color.ESTitle)
-                                        .fontWeight(.bold)
-                                    
-                                    Text("경제활동인구 중 실업자가 차지하는 비율을 말해요")
-                                        .font(.system(size: 20))
-                                        .fontWeight(.semibold)
-                                        .multilineTextAlignment(.center)
-                                        .padding(.horizontal)
-                                }
-                                
-                                Text("(생산가능인구가 아니에요!)")
-                                    .font(.system(size: 17))
-                                    .fontWeight(.semibold)
-                                    .multilineTextAlignment(.center)
-                                    .foregroundStyle(Color.ESTitle)
-                                    .padding(.horizontal)
-                                    .padding(.top, 5)
-                                
-                                if contentText1_2 {
-                                    VStack(spacing: 5) {
-                                        Text("고용률")
-                                            .font(.system(size: 20))
-                                            .fontWeight(.semibold)
-                                            .multilineTextAlignment(.center)
-                                            .padding(.horizontal)
-                                            .foregroundStyle(Color.ESTitle)
-                                            .fontWeight(.bold)
-                                        
-                                        Text("생산가능인구 중 취업자가 차지하는 비율을 말해요")
-                                            .font(.system(size: 20))
-                                            .fontWeight(.semibold)
-                                            .multilineTextAlignment(.center)
-                                            .padding(.horizontal)
-                                    }
-                                    .padding(.top, 20)
-                                    
-                                    Text("(경제활동인구가 아니에요!)")
-                                        .font(.system(size: 17))
-                                        .fontWeight(.semibold)
-                                        .multilineTextAlignment(.center)
-                                        .foregroundStyle(Color.ESTitle)
-                                        .padding(.horizontal)
-                                        .padding(.top, 5)
-                                }
-                                
-                                if contentImage {
-                                    LottieView(fileName: "UnEmployment2_Suit", loopMode: .playOnce, width: 180, height: 180)
-                                }
-                                
-                                Spacer()
-                            }
-                        }
-                        
-                        Rectangle()
-                            .fill(.clear)
-                            .frame(width: 100, height: 500)
+                    if progress.count >= 1 {
+                        Text("기준금리는 경제에 어떤 영향을 미칠까요?")
+                            .font(.system(size: 20))
+                            .fontWeight(.semibold)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+                            .padding(.top)
                     }
                     
-                    Rectangle()
-                        .fill(.clear)
-                        .frame(width: 100, height: 85)
-                        .id("bottom")
+                    if progress.count >= 2 {
+                        Text("기준금리의 변동은 경제에 다방면으로 영향을 미쳐요")
+                            .font(.system(size: 20))
+                            .fontWeight(.semibold)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+                            .padding(.top, 50)
+                        
+                        if contentText2_1 {
+                            Text("모든 영향들을 분석하는 데에는 한계가 있으므로 몇가지 대표적인 것들만 살펴볼게요")
+                                .font(.system(size: 20))
+                                .fontWeight(.semibold)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal)
+                                .padding(.top, 25)
+                        }
+                        
+                        if contentImage {
+                            LottieView(fileName: "MoneyAndFinance15_EconomySearch", loopMode: .playOnce, width: 180, height: 180)
+                        }
+                    }
                 }
                 
                 if nextButton {
@@ -122,7 +82,7 @@ struct MoneyAndFinance15View: View {
                                 UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
                                 
                                 viewModel.currentPage += 1
-                                navigationRouter.navigate(.UnEmployment3View(viewModel))
+                                navigationRouter.navigate(.MoneyAndFinance16View(viewModel))
                             } label: {
                                 LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                     .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
@@ -160,10 +120,10 @@ struct MoneyAndFinance15View: View {
                     progress.append(1)
                 }
                 
-                if progress.count == 1 {
+                if progress.count == 2 {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                         withAnimation(.smooth(duration: 1.0)) {
-                            contentText1_2 = true
+                            contentText2_1 = true
                             
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                 withAnimation(.smooth(duration: 1.0)) {

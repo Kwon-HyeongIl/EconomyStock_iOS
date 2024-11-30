@@ -124,7 +124,7 @@ struct ProfileView: View {
                 } label: {
                     Text("로그아웃")
                         .font(.system(size: 13))
-                        .padding(.top, 360)
+                        .padding(.top, 260)
                 }
             }
         }

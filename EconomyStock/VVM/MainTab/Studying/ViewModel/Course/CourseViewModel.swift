@@ -25,3 +25,4 @@ class CourseViewModel: Hashable, Equatable {
         hasher.combine(course.id)
     }
 }
+

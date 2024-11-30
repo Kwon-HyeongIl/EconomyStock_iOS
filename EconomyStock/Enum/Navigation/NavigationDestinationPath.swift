@@ -73,8 +73,4 @@ enum NavigationDestinationPath: Hashable {
     case MoneyAndFinance17View(CourseViewModel)
     case MoneyAndFinance18View(CourseViewModel)
     case MoneyAndFinance19View(CourseViewModel)
-    case MoneyAndFinance20View(CourseViewModel)
-    case MoneyAndFinance21View(CourseViewModel)
-    case MoneyAndFinance22View(CourseViewModel)
-    case MoneyAndFinance23View(CourseViewModel)
 }

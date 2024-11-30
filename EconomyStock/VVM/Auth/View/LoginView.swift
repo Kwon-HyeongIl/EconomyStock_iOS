@@ -35,11 +35,6 @@ struct LoginView: View {
                 Button {
                     viewModel.loginWithApple()
                     
-                    if AuthManager.shared.currentUser != nil {
-                        navigationRouter.popToRoot()
-                    } else {
-                        viewModel.loadingBarState = false
-                    }
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 12)
@@ -68,11 +63,6 @@ struct LoginView: View {
                 Button {
                     viewModel.loginWithGoogle()
                     
-                    if AuthManager.shared.currentUser != nil {
-                        navigationRouter.popToRoot()
-                    } else {
-                        viewModel.loadingBarState = false
-                    }
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 12)
@@ -101,12 +91,6 @@ struct LoginView: View {
                 
                 Button {
                     viewModel.loginWithKakao()
-                    
-                    if AuthManager.shared.currentUser != nil {
-                        navigationRouter.popToRoot()
-                    } else {
-                        viewModel.loadingBarState = false
-                    }
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 12)
@@ -143,10 +127,13 @@ struct LoginView: View {
                 }
             }
         }
+        .onChange(of: viewModel.isLoginSuccess, {
+            navigationRouter.popToRoot()
+        })
         .overlay {
             if viewModel.loadingBarState {
                 LottieView(fileName: "Loading", loopMode: .loop, width: 180, height: 180)
-                    .padding(.bottom, 60)
+                    .padding(.bottom, 80)
             }
         }
     }
