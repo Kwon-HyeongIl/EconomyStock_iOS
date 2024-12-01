@@ -86,6 +86,17 @@ struct CourseIntroView: View {
                                 } else {
                                     alertAskStartContinue = true
                                 }
+                                
+                            case .exchangeRateAndBalanceOfPayment:
+                                if viewModel.course.lastPage == 0 {
+                                    navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment1View(viewModel))
+                                    
+                                } else if viewModel.course.lastPage == 19 {
+                                    alertFinishing = true
+                                    
+                                } else {
+                                    alertAskStartContinue = true
+                                }
                             }
                         }
                     } label: {
@@ -140,6 +151,8 @@ struct CourseIntroView: View {
                                 navigationRouter.navigate(.UnEmployment1View(viewModel))
                             case .moneyAndFinance:
                                 navigationRouter.navigate(.MoneyAndFinance1View(viewModel))
+                            case .exchangeRateAndBalanceOfPayment:
+                                navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment1View(viewModel))
                             }
                         } label: {
                             Text("확인")
@@ -164,6 +177,8 @@ struct CourseIntroView: View {
                                 navigationRouter.navigate(.UnEmployment1View(viewModel))
                             case .moneyAndFinance:
                                 navigationRouter.navigate(.MoneyAndFinance1View(viewModel))
+                            case .exchangeRateAndBalanceOfPayment:
+                                navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment1View(viewModel))
                             }
                         } label: {
                             Text("확인")
@@ -205,6 +220,14 @@ struct CourseIntroView: View {
                             
                         case .moneyAndFinance:
                             Text("수천년 전부터 사용되어 온 화폐는 지금까지도 경제생활에 있어서 필수적인 물건이에요.\n화폐는 단순하게 보면 그저 지불수단이지만, 경제에는 지불수단 그 이상의 영향력을 미쳐요.\n이번시간에는 화폐와 금융 전반에 대해서 배워보도록 할게요.")
+                                .font(.system(size: 18))
+                                .fontWeight(.semibold)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal, 20)
+                                .padding(.top)
+                            
+                        case .exchangeRateAndBalanceOfPayment:
+                            Text("세계회가 급속도로 이루어지며 국가간의 재화와 서비스, 자본의 이동은 이전보다 훨씬 활발하게 이루어지고 있어요.\n\n무역이 활발해짐에 따라 환율과 국제수지를 적정수준으로 유지하는 것은 매우 중요하게 되는데요, 이번 시간에는 환율과 국제수지에 대해서 배워보도록 할게요.")
                                 .font(.system(size: 18))
                                 .fontWeight(.semibold)
                                 .multilineTextAlignment(.center)

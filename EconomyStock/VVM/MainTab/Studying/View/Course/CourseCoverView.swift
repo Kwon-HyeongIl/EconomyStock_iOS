@@ -25,23 +25,23 @@ struct CourseCoverView: View {
                         LottieView(fileName: viewModel.course.lottieFileName, loopMode: .loop, width: 140, height: 140)
                             .padding(.trailing, 190)
                         
-                        HStack(spacing: 0) {
-                            Text(viewModel.course.number)
-                                .font(.system(size: 38, design: .serif))
-                                .foregroundStyle(.white)
-                                .fontWeight(.semibold)
-                                .padding(.bottom, 2)
-                                
-                            
+                        Text(viewModel.course.number)
+                            .font(.system(size: 38, design: .serif))
+                            .foregroundStyle(.white)
+                            .fontWeight(.semibold)
+                            .padding(.bottom, 2)
+                        
+                        HStack {
                             Text(viewModel.course.title)
                                 .foregroundStyle(.white)
                                 .font(.system(size: 32))
                                 .fontWeight(.bold)
-                                .padding(.leading, 10)
                             
                             Spacer()
                         }
-                        .padding(.leading, 170)
+                        .frame(width: 140)
+                        .padding(.leading, 200)
+                        
                     }
                     
                     HStack {

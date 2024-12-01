@@ -16,6 +16,7 @@ class CourseListViewModel {
         initPriceLevelCourse()
         initUnEmploymentCourse()
         initMoneyAndFinanceCourse()
+        initExchangeRateAndBalanceOfPaymentCourse()
     }
     
     // I 기초 경제
@@ -44,7 +45,7 @@ class CourseListViewModel {
         let currentUser = AuthManager.shared.currentUser
         
         let gradient = LinearGradient(
-            gradient: Gradient(colors: [.orange, .yellow]),
+            gradient: Gradient(colors: [.orange, Color(hex: "D7DF01")]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
@@ -65,7 +66,7 @@ class CourseListViewModel {
         let currentUser = AuthManager.shared.currentUser
         
         let gradient = LinearGradient(
-            gradient: Gradient(colors: [.blue, .mint]),
+            gradient: Gradient(colors: [.blue, Color(hex: "01DFD7")]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
@@ -86,7 +87,7 @@ class CourseListViewModel {
         let currentUser = AuthManager.shared.currentUser
         
         let gradient = LinearGradient(
-            gradient: Gradient(colors: [.pink, .purple.opacity(0.6)]),
+            gradient: Gradient(colors: [.pink, Color(hex: "F781F3")]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
@@ -99,6 +100,27 @@ class CourseListViewModel {
         
         DispatchQueue.main.async {
             self.courses.append(Course(id: UUID().uuidString, type: .moneyAndFinance, title: "화폐와 금융", number: "IV", lottieFileName: "MoneyAndFinanceCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
+        }
+    }
+    
+    // 환율과 국제수지
+    func initExchangeRateAndBalanceOfPaymentCourse() {
+        let currentUser = AuthManager.shared.currentUser
+        
+        let gradient = LinearGradient(
+            gradient: Gradient(colors: [Color(hex: "8258FA"), .purple.opacity(0.6)]),
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
+        
+        let parmanentProgressPage = Double(currentUser?.studyingCourse.exchangeRateAndBalanceOfPaymentLastPage ?? 0)
+        let totalPage = 30.0
+        let progressRate = (parmanentProgressPage / totalPage) * 100.0
+        
+        let lastPage = currentUser?.studyingCourse.exchangeRateAndBalanceOfPaymentLastPage ?? 0
+        
+        DispatchQueue.main.async {
+            self.courses.append(Course(id: UUID().uuidString, type: .exchangeRateAndBalanceOfPayment, title: "환율과 국제수지", number: "V", lottieFileName: "ExchangeRateAndBalanceOfPaymentCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
         }
     }
 

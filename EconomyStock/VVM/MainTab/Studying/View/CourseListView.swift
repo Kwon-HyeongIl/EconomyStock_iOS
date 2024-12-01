@@ -17,6 +17,7 @@ struct CourseListView: View {
                 ForEach(viewModel.courses) { course in
                     CourseCoverView(course: course)
                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                        .padding(.bottom, course.type == CourseType.exchangeRateAndBalanceOfPayment ? 70 : 0)
                 }
             }
         }

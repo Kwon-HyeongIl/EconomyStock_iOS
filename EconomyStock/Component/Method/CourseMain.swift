@@ -601,6 +601,16 @@ struct CourseMain {
             default:
                 navigationRouter.navigate(.MoneyAndFinance1View(viewModel))
             }
+            
+        case .exchangeRateAndBalanceOfPayment:
+            switch viewModel.course.lastPage {
+                
+            case 1:
+                navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment1View(viewModel))
+                
+            default:
+                navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment1View(viewModel))
+            }
         }
     }
 }

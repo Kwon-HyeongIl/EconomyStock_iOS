@@ -71,4 +71,7 @@ enum NavigationDestinationPath: Hashable {
     case MoneyAndFinance17View(CourseViewModel)
     case MoneyAndFinance18View(CourseViewModel)
     case MoneyAndFinance19View(CourseViewModel)
+    
+        // 환율과 국제수지
+    case ExchangeRateAndBalanceOfPayment1View(CourseViewModel)
 }

@@ -24,6 +24,8 @@ extension AuthManager {
             courseTypeParmanentProgressPage = "unEmploymentParmanentProgressPage"
         case .moneyAndFinance:
             courseTypeParmanentProgressPage = "moneyAndFinanceParmanentProgressPage"
+        case .exchangeRateAndBalanceOfPayment:
+            courseTypeParmanentProgressPage = "exchangeRateAndBalanceOfPaymentParmanentProgressPage"
         }
         
         editedData["studyingCourse.\(courseTypeParmanentProgressPage)"] = parmanentProgressPage
@@ -55,6 +57,8 @@ extension AuthManager {
             courseTypeLastPage = "unEmploymentLastPage"
         case .moneyAndFinance:
             courseTypeLastPage = "moneyAndFinanceLastPage"
+        case .exchangeRateAndBalanceOfPayment:
+            courseTypeLastPage = "exchangeRateAndBalanceOfPaymentLastPage"
         }
         
         editedData["studyingCourse.\(courseTypeLastPage)"] = lastPage

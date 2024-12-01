@@ -95,6 +95,17 @@ struct CourseToolbarModifier: ViewModifier {
                         }
                         
                         AuthManager.shared.currentUser?.studyingCourse.moneyAndFinanceLastPage = currentPage
+                        
+                    case .exchangeRateAndBalanceOfPayment:
+                        if AuthManager.shared.currentUser?.studyingCourse.exchangeRateAndBalanceOfPaymentParmanentProgressPage ?? 0 < currentPage {
+                            AuthManager.shared.currentUser?.studyingCourse.exchangeRateAndBalanceOfPaymentParmanentProgressPage = currentPage
+                            
+                            Task {
+                                await AuthManager.shared.updateCourseParmanentProgressPage(courseType: viewModel.course.type, parmanentProgressPage: currentPage)
+                            }
+                        }
+                        
+                        AuthManager.shared.currentUser?.studyingCourse.exchangeRateAndBalanceOfPaymentLastPage = currentPage
                     }
                     
                     // CourseListViewModel의 updateAllCourses 메서드 호출 (중간 인터페이스로 연결)

@@ -128,6 +128,10 @@ class NavigationRouter {
             MoneyAndFinance18View(viewModel: viewModel)
         case .MoneyAndFinance19View(let viewModel):
             MoneyAndFinance19View(viewModel: viewModel)
+            
+            // 환율과 국제수지
+        case .ExchangeRateAndBalanceOfPayment1View(let viewModel):
+            ExchangeRateAndBalanceOfPayment1View(viewModel: viewModel)
         }
     }
     
