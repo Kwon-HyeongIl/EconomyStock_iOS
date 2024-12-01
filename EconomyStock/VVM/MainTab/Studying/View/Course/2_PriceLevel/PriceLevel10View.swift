@@ -89,7 +89,7 @@ struct PriceLevel10View: View {
                                         .fontWeight(.semibold)
                                         .multilineTextAlignment(.center)
                                         .padding(.horizontal)
-                                        .padding(.bottom, 30)
+                                        .padding(.bottom, 35)
                                     
                                     if contentText2_2 {
                                         Text("기술 진보를 통해 경제의 생산 능력이 향상된다면 물가를 안정적인 수준으로 유지하면서 경제가 성장하는 것이 가능해요")
@@ -125,7 +125,7 @@ struct PriceLevel10View: View {
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 200)
+                                .frame(width: 100, height: 240)
                         }
                         .padding(.top, 30)
                         

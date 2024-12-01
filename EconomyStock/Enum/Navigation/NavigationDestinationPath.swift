@@ -74,4 +74,16 @@ enum NavigationDestinationPath: Hashable {
     
         // 환율과 국제수지
     case ExchangeRateAndBalanceOfPayment1View(CourseViewModel)
+    case ExchangeRateAndBalanceOfPayment2View(CourseViewModel)
+    case ExchangeRateAndBalanceOfPayment3View(CourseViewModel)
+    case ExchangeRateAndBalanceOfPayment4View(CourseViewModel)
+    case ExchangeRateAndBalanceOfPayment5View(CourseViewModel)
+    case ExchangeRateAndBalanceOfPayment6View(CourseViewModel)
+    case ExchangeRateAndBalanceOfPayment7View(CourseViewModel)
+    case ExchangeRateAndBalanceOfPayment8View(CourseViewModel)
+    case ExchangeRateAndBalanceOfPayment9View(CourseViewModel)
+    case ExchangeRateAndBalanceOfPayment10View(CourseViewModel)
+    case ExchangeRateAndBalanceOfPayment11View(CourseViewModel)
+    case ExchangeRateAndBalanceOfPayment12View(CourseViewModel)
+    case ExchangeRateAndBalanceOfPayment13View(CourseViewModel)
 }

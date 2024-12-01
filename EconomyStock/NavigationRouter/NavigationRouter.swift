@@ -132,6 +132,30 @@ class NavigationRouter {
             // 환율과 국제수지
         case .ExchangeRateAndBalanceOfPayment1View(let viewModel):
             ExchangeRateAndBalanceOfPayment1View(viewModel: viewModel)
+        case .ExchangeRateAndBalanceOfPayment2View(let viewModel):
+            ExchangeRateAndBalanceOfPayment2View(viewModel: viewModel)
+        case .ExchangeRateAndBalanceOfPayment3View(let viewModel):
+            ExchangeRateAndBalanceOfPayment3View(viewModel: viewModel)
+        case .ExchangeRateAndBalanceOfPayment4View(let viewModel):
+            ExchangeRateAndBalanceOfPayment4View(viewModel: viewModel)
+        case .ExchangeRateAndBalanceOfPayment5View(let viewModel):
+            ExchangeRateAndBalanceOfPayment5View(viewModel: viewModel)
+        case .ExchangeRateAndBalanceOfPayment6View(let viewModel):
+            ExchangeRateAndBalanceOfPayment6View(viewModel: viewModel)
+        case .ExchangeRateAndBalanceOfPayment7View(let viewModel):
+            ExchangeRateAndBalanceOfPayment7View(viewModel: viewModel)
+        case .ExchangeRateAndBalanceOfPayment8View(let viewModel):
+            ExchangeRateAndBalanceOfPayment8View(viewModel: viewModel)
+        case .ExchangeRateAndBalanceOfPayment9View(let viewModel):
+            ExchangeRateAndBalanceOfPayment9View(viewModel: viewModel)
+        case .ExchangeRateAndBalanceOfPayment10View(let viewModel):
+            ExchangeRateAndBalanceOfPayment10View(viewModel: viewModel)
+        case .ExchangeRateAndBalanceOfPayment11View(let viewModel):
+            ExchangeRateAndBalanceOfPayment11View(viewModel: viewModel)
+        case .ExchangeRateAndBalanceOfPayment12View(let viewModel):
+            ExchangeRateAndBalanceOfPayment12View(viewModel: viewModel)
+        case .ExchangeRateAndBalanceOfPayment13View(let viewModel):
+            ExchangeRateAndBalanceOfPayment13View(viewModel: viewModel)
         }
     }
     

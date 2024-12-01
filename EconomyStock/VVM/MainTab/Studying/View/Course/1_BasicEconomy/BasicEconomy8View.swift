@@ -40,16 +40,12 @@ struct BasicEconomy8View: View {
                     .opacity(0.2)
                     .padding(.top)
                     
-                    HStack {
-                        Text("정부지출을 위한 재원은 어떻게 조달될까요?")
-                            .font(.system(size: 20))
-                            .fontWeight(.semibold)
-                            .padding(.leading, 30)
-                        
-                        Spacer()
-                    }
-                    .padding(.top, 5)
-                    .opacity(0.2)
+                    Text("정부지출을 위한 재원은 어떻게 조달될까요?")
+                        .font(.system(size: 20))
+                        .fontWeight(.semibold)
+                        .multilineTextAlignment(.center)
+                        .padding(.top, 5)
+                        .opacity(0.2)
                     
                     if progress.count >= 1 {
                         VStack {
@@ -84,7 +80,7 @@ struct BasicEconomy8View: View {
                                     .fontWeight(.semibold)
                                     .multilineTextAlignment(.center)
                                     .padding(.horizontal)
-                                    .padding(.top, 20)
+                                    .padding(.top, 35)
                             }
                         }
                         .padding(.top)

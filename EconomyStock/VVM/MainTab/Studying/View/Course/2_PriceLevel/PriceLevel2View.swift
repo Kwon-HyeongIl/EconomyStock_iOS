@@ -86,7 +86,7 @@ struct PriceLevel2View: View {
                                             .fontWeight(.semibold)
                                             .multilineTextAlignment(.center)
                                             .padding(.horizontal)
-                                            .padding(.top, 30)
+                                            .padding(.top, 35)
                                     }
                                     
                                     if contentImage2 {
@@ -107,7 +107,7 @@ struct PriceLevel2View: View {
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 500)
+                                .frame(width: 100, height: 510)
                         }
                         
                         Rectangle()

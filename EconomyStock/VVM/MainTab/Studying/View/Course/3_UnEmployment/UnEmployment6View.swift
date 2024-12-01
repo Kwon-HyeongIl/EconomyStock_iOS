@@ -64,7 +64,7 @@ struct UnEmployment6View: View {
                                         .fontWeight(.semibold)
                                         .multilineTextAlignment(.center)
                                         .padding(.horizontal)
-                                        .padding(.top, 20)
+                                        .padding(.top, 35)
                                 }
                                 
                                 if contentText1_3 {
@@ -77,7 +77,7 @@ struct UnEmployment6View: View {
                                     .fontWeight(.semibold)
                                     .multilineTextAlignment(.center)
                                     .padding(.horizontal)
-                                    .padding(.top, 20)
+                                    .padding(.top, 35)
                                 }
                                 
                                 if contentImage {
@@ -119,7 +119,7 @@ struct UnEmployment6View: View {
                                         .fontWeight(.semibold)
                                         .multilineTextAlignment(.center)
                                         .padding(.horizontal)
-                                        .padding(.top, 20)
+                                        .padding(.top, 35)
                                     }
                                     
                                     Spacer()

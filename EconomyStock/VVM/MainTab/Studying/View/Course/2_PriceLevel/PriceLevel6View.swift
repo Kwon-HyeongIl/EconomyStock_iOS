@@ -76,7 +76,7 @@ struct PriceLevel6View: View {
                                             .fontWeight(.semibold)
                                             .multilineTextAlignment(.center)
                                             .padding(.horizontal)
-                                            .padding(.top, 30)
+                                            .padding(.top, 35)
                                     }
                                     
                                     if contentImage {
@@ -98,7 +98,7 @@ struct PriceLevel6View: View {
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 400)
+                                .frame(width: 100, height: 350)
                         }
                         .padding(.top, 20)
                         

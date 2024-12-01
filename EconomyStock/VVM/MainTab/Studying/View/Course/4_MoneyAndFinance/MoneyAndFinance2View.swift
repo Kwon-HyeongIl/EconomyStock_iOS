@@ -82,7 +82,7 @@ struct MoneyAndFinance2View: View {
                                             .fontWeight(.semibold)
                                             .multilineTextAlignment(.center)
                                             .padding(.horizontal)
-                                            .padding(.top, 25)
+                                            .padding(.top, 35)
                                     }
                                     
                                     if contentText2_3 {
@@ -95,7 +95,7 @@ struct MoneyAndFinance2View: View {
                                             .fontWeight(.semibold)
                                             .multilineTextAlignment(.center)
                                             .padding(.horizontal)
-                                            .padding(.top, 25)
+                                            .padding(.top, 35)
                                     }
                                     
                                     if contentImage2 {

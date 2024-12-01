@@ -114,7 +114,7 @@ struct MoneyAndFinance11View: View {
                                             .fontWeight(.semibold)
                                             .multilineTextAlignment(.center)
                                             .padding(.horizontal)
-                                            .padding(.top, 30)
+                                            .padding(.top, 35)
                                     }
                                     
                                     Spacer()

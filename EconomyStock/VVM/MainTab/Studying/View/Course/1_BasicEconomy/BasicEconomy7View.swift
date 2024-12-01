@@ -44,16 +44,13 @@ struct BasicEconomy7View: View {
                         .opacity(0.2)
                         .padding(.top)
                         
-                        HStack {
-                            Text("정부지출을 위한 재원은 어떻게 조달될까요?")
-                                .font(.system(size: 20))
-                                .fontWeight(.semibold)
-                                .padding(.leading, 30)
-                            
-                            Spacer()
-                        }
-                        .padding(.top, 5)
-                        .opacity(0.2)
+                        
+                        Text("정부지출을 위한 재원은 어떻게 조달될까요?")
+                            .font(.system(size: 20))
+                            .fontWeight(.semibold)
+                            .multilineTextAlignment(.center)
+                            .padding(.top, 5)
+                            .opacity(0.2)
                         
                         ZStack {
                             if progress.count >= 1 {
@@ -95,7 +92,7 @@ struct BasicEconomy7View: View {
                                                 .font(.system(size: 20))
                                                 .fontWeight(.semibold)
                                                 .multilineTextAlignment(.center)
-                                                .padding(.top, 20)
+                                                .padding(.top, 35)
                                                 .padding(.horizontal)
                                         }
                                     }
@@ -166,7 +163,7 @@ struct BasicEconomy7View: View {
                                         }
                                     }
                                 }
-                                .padding(.top, 135)
+                                .padding(.top, 100)
                             }
                             
                             Rectangle()
@@ -176,7 +173,7 @@ struct BasicEconomy7View: View {
                         
                         Rectangle()
                             .fill(.clear)
-                            .frame(width: 300, height: 100)
+                            .frame(width: 300, height: 75)
                             .id("bottom")
                     }
                     

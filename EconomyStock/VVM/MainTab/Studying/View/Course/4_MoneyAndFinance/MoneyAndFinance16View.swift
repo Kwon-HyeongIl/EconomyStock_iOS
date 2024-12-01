@@ -83,7 +83,7 @@ struct MoneyAndFinance16View: View {
                                             .fontWeight(.semibold)
                                             .multilineTextAlignment(.center)
                                             .padding(.horizontal)
-                                            .padding(.top, 25)
+                                            .padding(.top, 35)
                                     }
                                     
                                     if contentText2_3 {
@@ -96,7 +96,7 @@ struct MoneyAndFinance16View: View {
                                         .fontWeight(.semibold)
                                         .multilineTextAlignment(.center)
                                         .padding(.horizontal)
-                                        .padding(.top, 25)
+                                        .padding(.top, 35)
                                         .padding(.bottom, 30)
                                     }
                                     
@@ -114,7 +114,7 @@ struct MoneyAndFinance16View: View {
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 400)
+                                .frame(width: 100, height: 440)
                         }
                         
                         Rectangle()

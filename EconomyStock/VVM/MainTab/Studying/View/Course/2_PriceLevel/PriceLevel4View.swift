@@ -105,7 +105,7 @@ struct PriceLevel4View: View {
                                             
                                             Spacer()
                                         }
-                                        .padding(.top, 20)
+                                        .padding(.top)
                                         .padding(.leading, 30)
                                         
                                         if contentImage2 {

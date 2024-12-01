@@ -104,7 +104,7 @@ struct MoneyAndFinance14View: View {
                                             .fontWeight(.semibold)
                                             .multilineTextAlignment(.center)
                                             .padding(.horizontal)
-                                            .padding(.top, 25)
+                                            .padding(.top, 35)
                                     }
                                     
                                     if contentImage {

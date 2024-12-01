@@ -61,7 +61,7 @@ struct UnEmployment3View: View {
                                             .fontWeight(.semibold)
                                             .multilineTextAlignment(.center)
                                             .padding(.horizontal)
-                                            .padding(.top, 5)
+                                            .padding(.top, 35)
                                     }
                                     
                                     Spacer()
@@ -70,7 +70,7 @@ struct UnEmployment3View: View {
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 150)
+                                .frame(width: 100, height: 200)
                         }
                         
                         ZStack {
