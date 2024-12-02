@@ -17,6 +17,8 @@ struct ExchangeRateAndBalanceOfPayment3View: View {
     @State private var contentImage = false
     @State private var nextScrollpart = false
     @State private var contentText2_2 = false
+    @State private var bubble = false
+    @State private var bubbleContent = false
     
     @State private var nextButton = false
     @State private var beforeButton = false
@@ -27,14 +29,14 @@ struct ExchangeRateAndBalanceOfPayment3View: View {
                 ZStack {
                     ScrollView {
                         HStack {
-                            Text("1.")
+                            Text("2.")
                                 .font(.system(size: 35))
                                 .fontWeight(.bold)
                                 .foregroundStyle(Color.ESTitle)
                                 .padding(.leading, 30)
                                 .padding(.bottom, 3)
                             
-                            Text("통화")
+                            Text("환율변동의 효과")
                                 .font(.system(size: 25))
                                 .fontWeight(.bold)
                             
@@ -43,29 +45,89 @@ struct ExchangeRateAndBalanceOfPayment3View: View {
                         .opacity(0.2)
                         .padding(.top)
                         
+                        HStack {
+                            Text("1)")
+                                .font(.system(size: 20))
+                                .fontWeight(.semibold)
+                                .padding(.bottom, 3)
+                            
+                            Text("환율의 상승")
+                                .font(.system(size: 20))
+                                .fontWeight(.semibold)
+                        }
+                        .opacity(0.2)
+                        .padding(.top)
+                        
                         ZStack {
                             if progress.count >= 1 {
                                 VStack {
-                                    Text("")
+                                    Text("그렇다면 순수출에는 어떠한 변화가 생길까요?")
                                         .font(.system(size: 20))
                                         .fontWeight(.semibold)
                                         .multilineTextAlignment(.center)
                                         .padding(.horizontal)
                                         .padding(.top)
                                     
+                                    if contentText1_2 {
+                                        Text("만약, 앞의 상황에서 국내 판매자가 2,000원짜리 사과를 미국에 수출한다면, 2$에 수출하던 사과를 1$에 수출해야 되는 상황이 생겨요")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.semibold)
+                                            .multilineTextAlignment(.center)
+                                            .padding(.horizontal)
+                                            .padding(.top, 30)
+                                    }
+                                    
+                                    if contentImage {
+                                        HStack {
+                                            Image("USA_Toktok")
+                                                .resizable()
+                                                .frame(width: 95, height: 70)
+                                                .padding(.top, 100)
+                                            
+                                            if bubble {
+                                                ZStack {
+                                                    LottieView(fileName: "Bubble", loopMode: .playOnce, scale: 5.3, width: 50, height: 50)
+                                                    
+                                                    if bubbleContent {
+                                                        Text("우와 싸다!")
+                                                            .font(.system(size: 15))
+                                                            .fontWeight(.semibold)
+                                                            .padding(.leading, 10)
+                                                            .padding(.bottom, 3)
+                                                    }
+                                                }
+                                                .padding(.bottom, 60)
+                                            }
+                                            
+                                            VStack {
+                                                LottieView(fileName: "PriceLevel2_Apple", loopMode: .playOnce, scale: 1.3, width: 100, height: 100)
+                                                    .padding(.top, 80)
+                                                
+                                                Text("1$")
+                                                    .font(.system(size: 20))
+                                                    .fontWeight(.semibold)
+                                                    .foregroundStyle(Color.ESTitle)
+                                            }
+                                        }
+                                    }
+                                    
                                     Spacer()
                                 }
                             }
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 400)
+                                .frame(width: 100, height: 470)
                         }
                         
                         ZStack {
                             if nextScrollpart {
                                 VStack {
-                                    
+                                    Text("따라서, 미국에서 사과의 가격이 하락하게 되므로 미국에서의 사과 구매량이 늘어나서 수출이 증가해요")
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                        .multilineTextAlignment(.center)
+                                        .padding(.horizontal)
                                     
                                     Spacer()
                                 }
@@ -73,7 +135,7 @@ struct ExchangeRateAndBalanceOfPayment3View: View {
                             
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: 100, height: 300)
+                                .frame(width: 100, height: 150)
                         }
                         
                         Rectangle()
@@ -92,7 +154,7 @@ struct ExchangeRateAndBalanceOfPayment3View: View {
                                     UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
                                     
                                     viewModel.currentPage += 1
-                                    navigationRouter.navigate(.MoneyAndFinance4View(viewModel))
+                                    navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment4View(viewModel))
                                 } label: {
                                     LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
@@ -138,6 +200,18 @@ struct ExchangeRateAndBalanceOfPayment3View: View {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                     withAnimation(.smooth(duration: 1.0)) {
                                         contentImage = true
+                                        
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                            withAnimation(.smooth(duration: 1.0)) {
+                                                bubble = true
+                                                
+                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                                    withAnimation(.smooth(duration: 1.0)) {
+                                                        bubbleContent = true
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }

@@ -14,12 +14,15 @@ struct ExchangeRateAndBalanceOfPayment6View: View {
     @State private var progress: [Int] = []
     
     @State private var contentText1_2 = false
-    @State private var contentImage = false
+    @State private var contentImage1_1 = false
+    @State private var contentImage1_2 = false
     @State private var nextScrollpart = false
     @State private var contentText2_2 = false
     
     @State private var nextButton = false
     @State private var beforeButton = false
+    
+    @Namespace private var animation
     
     var body: some View {
         ScrollViewReader { proxy in
@@ -27,31 +30,141 @@ struct ExchangeRateAndBalanceOfPayment6View: View {
                 ZStack {
                     ScrollView {
                         HStack {
-                            Text("1.")
+                            Text("3.")
                                 .font(.system(size: 35))
                                 .fontWeight(.bold)
                                 .foregroundStyle(Color.ESTitle)
                                 .padding(.leading, 30)
                                 .padding(.bottom, 3)
                             
-                            Text("통화")
+                            Text("국제수지")
                                 .font(.system(size: 25))
                                 .fontWeight(.bold)
                             
                             Spacer()
                         }
-                        .opacity(0.2)
                         .padding(.top)
                         
                         ZStack {
                             if progress.count >= 1 {
                                 VStack {
-                                    Text("")
+                                    Text("국제수지란 한 나라가 일정기간동안 다른 나라와 거래한 모든 것을 집계한 것으로,")
                                         .font(.system(size: 20))
                                         .fontWeight(.semibold)
                                         .multilineTextAlignment(.center)
                                         .padding(.horizontal)
                                         .padding(.top)
+                                    
+                                    if contentText1_2 {
+                                        (Text("거래의 형태에 따라 ")
+                                         + Text("경상수지")
+                                            .foregroundStyle(Color.ESTitle)
+                                            .fontWeight(.bold)
+                                         + Text("와 ")
+                                         + Text("자본수지")
+                                            .foregroundStyle(Color.ESTitle)
+                                            .fontWeight(.bold)
+                                         + Text("로 나뉘어요"))
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                        .multilineTextAlignment(.center)
+                                        .padding(.horizontal)
+                                        .padding(.top, 30)
+                                    }
+                                    
+                                    if contentImage1_1 {
+                                        VStack {
+                                            ZStack {
+                                                Ellipse()
+                                                    .frame(width: 110, height: 70)
+                                                    .foregroundStyle(Color.ESTitle)
+                                                    .overlay {
+                                                        Text("국제수지")
+                                                            .font(.system(size: 22))
+                                                            .fontWeight(.semibold)
+                                                            .foregroundStyle(.white)
+                                                    }
+                                                    .matchedGeometryEffect(id: "balanceOfPayment", in: animation)
+                                                
+                                                Ellipse()
+                                                    .frame(width: 90, height: 50)
+                                                    .foregroundStyle(Color.ESTitle)
+                                                    .overlay {
+                                                        Text("경상수지")
+                                                            .font(.system(size: 18))
+                                                            .fontWeight(.semibold)
+                                                            .foregroundStyle(.white)
+                                                    }
+                                                    .opacity(0.0)
+                                                    .matchedGeometryEffect(id: "currentAccountBalance", in: animation)
+                                                
+                                                Ellipse()
+                                                    .frame(width: 90, height: 50)
+                                                    .foregroundStyle(Color.ESTitle)
+                                                    .overlay {
+                                                        Text("자본수지")
+                                                            .font(.system(size: 18))
+                                                            .fontWeight(.semibold)
+                                                            .foregroundStyle(.white)
+                                                    }
+                                                    .opacity(0.0)
+                                                    .matchedGeometryEffect(id: "CapitalAccount", in: animation)
+                                            }
+                                        }
+                                        .frame(height: 150)
+                                        .padding(.top)
+                                        
+                                    } else if contentImage1_2 {
+                                        VStack {
+                                            Ellipse()
+                                                .frame(width: 90, height: 50)
+                                                .foregroundStyle(Color.ESTitle)
+                                                .overlay {
+                                                    Text("국제수지")
+                                                        .font(.system(size: 18))
+                                                        .fontWeight(.semibold)
+                                                        .foregroundStyle(.white)
+                                                }
+                                                .matchedGeometryEffect(id: "balanceOfPayment", in: animation)
+                                            
+                                            Image(systemName: "chevron.up")
+                                                .resizable()
+                                                .fontWeight(.ultraLight)
+                                                .frame(width: 150, height: 30)
+                                                .foregroundStyle(Color.ESTitle)
+                                                .padding(.top, 5)
+                                                .padding(.bottom, 5)
+                                            
+                                            HStack {
+                                                Ellipse()
+                                                    .frame(width: 90, height: 50)
+                                                    .foregroundStyle(Color.ESTitle)
+                                                    .overlay {
+                                                        Text("경상수지")
+                                                            .font(.system(size: 18))
+                                                            .fontWeight(.semibold)
+                                                            .foregroundStyle(.white)
+                                                    }
+                                                    .padding(.leading, 50)
+                                                    .matchedGeometryEffect(id: "currentAccountBalance", in: animation)
+                                                
+                                                Spacer()
+                                                
+                                                Ellipse()
+                                                    .frame(width: 90, height: 50)
+                                                    .foregroundStyle(Color.ESTitle)
+                                                    .overlay {
+                                                        Text("자본수지")
+                                                            .font(.system(size: 18))
+                                                            .fontWeight(.semibold)
+                                                            .foregroundStyle(.white)
+                                                    }
+                                                    .padding(.trailing, 50)
+                                                    .matchedGeometryEffect(id: "CapitalAccount", in: animation)
+                                            }
+                                        }
+                                        .padding(.top, 20)
+                                    }
                                     
                                     Spacer()
                                 }
@@ -92,7 +205,7 @@ struct ExchangeRateAndBalanceOfPayment6View: View {
                                     UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
                                     
                                     viewModel.currentPage += 1
-                                    navigationRouter.navigate(.MoneyAndFinance4View(viewModel))
+                                    navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment7View(viewModel))
                                 } label: {
                                     LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
@@ -137,35 +250,24 @@ struct ExchangeRateAndBalanceOfPayment6View: View {
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                     withAnimation(.smooth(duration: 1.0)) {
-                                        contentImage = true
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
-                    if progress.count == 2 {
-                        withAnimation {
-                            proxy.scrollTo("bottom", anchor: .top)
-                        }
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            withAnimation(.smooth(duration: 1.0)) {
-                                nextScrollpart = true
-                                
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    withAnimation(.smooth(duration: 1.0)) {
-                                        contentText2_2 = true
+                                        contentImage1_1 = true
                                         
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                                             withAnimation(.smooth(duration: 1.0)) {
-                                                nextButton = true
+                                                contentImage1_1 = false
+                                                contentImage1_2 = true
                                                 
-                                                proxy.scrollTo("bottom", anchor: .top)
-                                                
-                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                                     withAnimation(.smooth(duration: 1.0)) {
-                                                        beforeButton = true
+                                                        nextButton = true
+                                                        
+                                                        proxy.scrollTo("bottom", anchor: .top)
+                                                        
+                                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                                            withAnimation(.smooth(duration: 1.0)) {
+                                                                beforeButton = true
+                                                            }
+                                                        }
                                                     }
                                                 }
                                             }

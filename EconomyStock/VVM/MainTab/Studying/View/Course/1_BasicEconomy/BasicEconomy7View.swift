@@ -92,7 +92,7 @@ struct BasicEconomy7View: View {
                                                 .font(.system(size: 20))
                                                 .fontWeight(.semibold)
                                                 .multilineTextAlignment(.center)
-                                                .padding(.top, 35)
+                                                .padding(.top, 30)
                                                 .padding(.horizontal)
                                         }
                                     }

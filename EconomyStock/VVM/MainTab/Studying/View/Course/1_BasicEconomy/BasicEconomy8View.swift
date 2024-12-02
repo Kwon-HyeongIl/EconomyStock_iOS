@@ -80,7 +80,7 @@ struct BasicEconomy8View: View {
                                     .fontWeight(.semibold)
                                     .multilineTextAlignment(.center)
                                     .padding(.horizontal)
-                                    .padding(.top, 35)
+                                    .padding(.top, 30)
                             }
                         }
                         .padding(.top)

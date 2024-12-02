@@ -68,7 +68,7 @@ struct MoneyAndFinance5View: View {
                                         .fontWeight(.semibold)
                                         .multilineTextAlignment(.center)
                                         .padding(.horizontal, 30)
-                                        .padding(.top, 35)
+                                        .padding(.top, 30)
                                         .padding(.bottom, 25)
                                     }
                                     

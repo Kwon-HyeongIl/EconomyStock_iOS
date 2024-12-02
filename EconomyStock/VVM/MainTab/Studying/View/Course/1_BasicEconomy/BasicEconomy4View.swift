@@ -175,7 +175,7 @@ struct BasicEconomy4View: View {
                                                     .font(.system(size: 13))
                                                     .fontWeight(.semibold)
                                                     .multilineTextAlignment(.center)
-                                                    .padding(.top, 35)
+                                                    .padding(.top, 30)
                                                     .padding(.trailing, 5)
                                             }
                                         }
