@@ -76,11 +76,11 @@ struct ExchangeRateAndBalanceOfPayment6View: View {
                                         VStack {
                                             ZStack {
                                                 Ellipse()
-                                                    .frame(width: 110, height: 70)
+                                                    .frame(width: 90, height: 50)
                                                     .foregroundStyle(Color.ESTitle)
                                                     .overlay {
                                                         Text("국제수지")
-                                                            .font(.system(size: 22))
+                                                            .font(.system(size: 18))
                                                             .fontWeight(.semibold)
                                                             .foregroundStyle(.white)
                                                     }
@@ -175,24 +175,24 @@ struct ExchangeRateAndBalanceOfPayment6View: View {
                                 .frame(width: 100, height: 400)
                         }
                         
-                        ZStack {
-                            if nextScrollpart {
-                                VStack {
-                                    
-                                    
-                                    Spacer()
-                                }
-                            }
-                            
-                            Rectangle()
-                                .fill(.clear)
-                                .frame(width: 100, height: 300)
-                        }
-                        
-                        Rectangle()
-                            .fill(.clear)
-                            .frame(width: 100, height: 85)
-                            .id("bottom")
+//                        ZStack {
+//                            if nextScrollpart {
+//                                VStack {
+//                                    
+//                                    
+//                                    Spacer()
+//                                }
+//                            }
+//                            
+//                            Rectangle()
+//                                .fill(.clear)
+//                                .frame(width: 100, height: 300)
+//                        }
+//                        
+//                        Rectangle()
+//                            .fill(.clear)
+//                            .frame(width: 100, height: 85)
+//                            .id("bottom")
                     }
                     
                     if nextButton {
@@ -261,7 +261,7 @@ struct ExchangeRateAndBalanceOfPayment6View: View {
                                                     withAnimation(.smooth(duration: 1.0)) {
                                                         nextButton = true
                                                         
-                                                        proxy.scrollTo("bottom", anchor: .top)
+//                                                        proxy.scrollTo("bottom", anchor: .top)
                                                         
                                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                                             withAnimation(.smooth(duration: 1.0)) {
