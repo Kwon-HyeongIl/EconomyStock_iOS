@@ -12,6 +12,7 @@ struct CourseMain {
     static func courseContinueNavigationAdaptor(viewModel: CourseViewModel, navigationRouter: NavigationRouter) {
         switch viewModel.course.type {
             
+        // 1. 기초경제
         case .basicEconomy:
             switch viewModel.course.lastPage {
                 
@@ -137,6 +138,7 @@ struct CourseMain {
                 navigationRouter.navigate(.BasicEconomy1View(viewModel))
             }
             
+        // 2. 물가
         case .priceLevel:
             switch viewModel.course.lastPage {
                 
@@ -246,6 +248,7 @@ struct CourseMain {
                 navigationRouter.navigate(.PriceLevel1View(viewModel))
             }
             
+        // 3. 실업
         case .unEmployment:
             switch viewModel.course.lastPage {
                 
@@ -313,6 +316,7 @@ struct CourseMain {
                 navigationRouter.navigate(.UnEmployment1View(viewModel))
             }
             
+        // 4. 화폐와 금융
         case .moneyAndFinance:
             switch viewModel.course.lastPage {
                 
@@ -602,11 +606,127 @@ struct CourseMain {
                 navigationRouter.navigate(.MoneyAndFinance1View(viewModel))
             }
             
+        // 5. 환율과 국제수지
         case .exchangeRateAndBalanceOfPayment:
             switch viewModel.course.lastPage {
                 
             case 1:
                 navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment1View(viewModel))
+                
+            case 2:
+                viewModel.currentPage = 2
+                
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment1View(viewModel))
+                
+                navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment2View(viewModel))
+                
+            case 3:
+                viewModel.currentPage = 3
+                
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment1View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment2View(viewModel))
+                
+                navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment3View(viewModel))
+                
+            case 4:
+                viewModel.currentPage = 4
+                
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment1View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment2View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment3View(viewModel))
+                
+                navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment4View(viewModel))
+                
+            case 5:
+                viewModel.currentPage = 5
+                
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment1View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment2View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment3View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment4View(viewModel))
+                
+                navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment5View(viewModel))
+                
+            case 6:
+                viewModel.currentPage = 6
+                
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment1View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment2View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment3View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment4View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment5View(viewModel))
+                
+                navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment6View(viewModel))
+                
+            case 7:
+                viewModel.currentPage = 7
+                
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment1View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment2View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment3View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment4View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment5View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment6View(viewModel))
+                
+                navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment7View(viewModel))
+                
+            case 8:
+                viewModel.currentPage = 8
+                
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment1View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment2View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment3View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment4View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment5View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment6View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment7View(viewModel))
+                
+                navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment8View(viewModel))
+                
+            case 9:
+                viewModel.currentPage = 9
+                
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment1View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment2View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment3View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment4View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment5View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment6View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment7View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment8View(viewModel))
+                
+                navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment9View(viewModel))
+                
+            case 10:
+                viewModel.currentPage = 10
+                
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment1View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment2View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment3View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment4View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment5View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment6View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment7View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment8View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment9View(viewModel))
+                
+                navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment10View(viewModel))
+                
+            case 11:
+                viewModel.currentPage = 11
+                
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment1View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment2View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment3View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment4View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment5View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment6View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment7View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment8View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment9View(viewModel))
+                navigationRouter.path.append(NavigationDestinationPath.ExchangeRateAndBalanceOfPayment10View(viewModel))
+                
+                navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment11View(viewModel))
                 
             default:
                 navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment1View(viewModel))

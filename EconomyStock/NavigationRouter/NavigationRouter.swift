@@ -152,10 +152,6 @@ class NavigationRouter {
             ExchangeRateAndBalanceOfPayment10View(viewModel: viewModel)
         case .ExchangeRateAndBalanceOfPayment11View(let viewModel):
             ExchangeRateAndBalanceOfPayment11View(viewModel: viewModel)
-        case .ExchangeRateAndBalanceOfPayment12View(let viewModel):
-            ExchangeRateAndBalanceOfPayment12View(viewModel: viewModel)
-        case .ExchangeRateAndBalanceOfPayment13View(let viewModel):
-            ExchangeRateAndBalanceOfPayment13View(viewModel: viewModel)
         }
     }
     

@@ -84,6 +84,4 @@ enum NavigationDestinationPath: Hashable {
     case ExchangeRateAndBalanceOfPayment9View(CourseViewModel)
     case ExchangeRateAndBalanceOfPayment10View(CourseViewModel)
     case ExchangeRateAndBalanceOfPayment11View(CourseViewModel)
-    case ExchangeRateAndBalanceOfPayment12View(CourseViewModel)
-    case ExchangeRateAndBalanceOfPayment13View(CourseViewModel)
 }
