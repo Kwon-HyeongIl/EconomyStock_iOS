@@ -14,6 +14,7 @@ struct ExchangeRateAndBalanceOfPayment8View: View {
     @State private var progress: [Int] = []
     
     @State private var contentText1_2 = false
+    @State private var contentText1_3 = false
     @State private var contentImage = false
     @State private var nextScrollpart = false
     @State private var contentText2_2 = false
@@ -27,14 +28,14 @@ struct ExchangeRateAndBalanceOfPayment8View: View {
                 ZStack {
                     ScrollView {
                         HStack {
-                            Text("1.")
+                            Text("3.")
                                 .font(.system(size: 35))
                                 .fontWeight(.bold)
                                 .foregroundStyle(Color.ESTitle)
                                 .padding(.leading, 30)
                                 .padding(.bottom, 3)
                             
-                            Text("통화")
+                            Text("국제수지")
                                 .font(.system(size: 25))
                                 .fontWeight(.bold)
                             
@@ -46,12 +47,38 @@ struct ExchangeRateAndBalanceOfPayment8View: View {
                         ZStack {
                             if progress.count >= 1 {
                                 VStack {
-                                    Text("")
-                                        .font(.system(size: 20))
-                                        .fontWeight(.semibold)
-                                        .multilineTextAlignment(.center)
-                                        .padding(.horizontal)
-                                        .padding(.top)
+                                    HStack {
+                                        Text("2)")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.semibold)
+                                            .padding(.bottom, 3)
+                                        
+                                        Text("자본수지")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.semibold)
+                                    }
+                                    
+                                    if contentText1_2 {
+                                        Text("자본수자란 자본의 이동을 의미해요")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.semibold)
+                                            .multilineTextAlignment(.center)
+                                            .padding(.horizontal)
+                                            .padding(.top)
+                                    }
+                                    
+                                    if contentText1_3 {
+                                        Text("자본수지는 각국의 이자율 수준의 차이에 의해 결정돼요")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.semibold)
+                                            .multilineTextAlignment(.center)
+                                            .padding(.horizontal)
+                                            .padding(.top, 30)
+                                    }
+                                    
+                                    if contentImage {
+                                        LottieView(fileName: "MoneyAndFinance9_GlobalMoney", loopMode: .playOnce, fromProgress: 0.2, scale: 1.1, width: 180, height: 180)
+                                    }
                                     
                                     Spacer()
                                 }
@@ -92,7 +119,7 @@ struct ExchangeRateAndBalanceOfPayment8View: View {
                                     UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
                                     
                                     viewModel.currentPage += 1
-                                    navigationRouter.navigate(.MoneyAndFinance4View(viewModel))
+                                    navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment9View(viewModel))
                                 } label: {
                                     LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
@@ -135,9 +162,15 @@ struct ExchangeRateAndBalanceOfPayment8View: View {
                             withAnimation(.smooth(duration: 1.0)) {
                                 contentText1_2 = true
                                 
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                     withAnimation(.smooth(duration: 1.0)) {
-                                        contentImage = true
+                                        contentText1_3 = true
+                                        
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                            withAnimation(.smooth(duration: 1.0)) {
+                                                contentImage = true
+                                            }
+                                        }
                                     }
                                 }
                             }

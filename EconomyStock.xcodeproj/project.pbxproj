@@ -174,6 +174,8 @@
 		CAC86FDB2CE2E6C200785D4F /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC86FDA2CE2E6C200785D4F /* ProfileViewModel.swift */; };
 		CACA6EB52CF5D2CB002AFB61 /* MoneyAndFinance7_ATM.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CACA6EB42CF5D2CB002AFB61 /* MoneyAndFinance7_ATM.lottie */; };
 		CACA6EB72CF5D513002AFB61 /* MoneyAndFinance7_MoneyBalance.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CACA6EB62CF5D513002AFB61 /* MoneyAndFinance7_MoneyBalance.lottie */; };
+		CACD04942CFEBDA500B2DA28 /* ExchangeRateAndBalanceOfPayment7_CargoShip.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CACD04932CFEBDA500B2DA28 /* ExchangeRateAndBalanceOfPayment7_CargoShip.lottie */; };
+		CACD04962CFEC5EF00B2DA28 /* ExchangeRateAndBalanceOfPayment10_Union.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CACD04952CFEC5EF00B2DA28 /* ExchangeRateAndBalanceOfPayment10_Union.lottie */; };
 		CACF34122CEDD4AE00ECC6FA /* MoneyAndFinance1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF34112CEDD4AE00ECC6FA /* MoneyAndFinance1View.swift */; };
 		CACF34142CEDD4BF00ECC6FA /* MoneyAndFinance2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF34132CEDD4BF00ECC6FA /* MoneyAndFinance2View.swift */; };
 		CACF34162CEDD4C900ECC6FA /* MoneyAndFinance3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF34152CEDD4C900ECC6FA /* MoneyAndFinance3View.swift */; };
@@ -401,6 +403,8 @@
 		CAC86FDA2CE2E6C200785D4F /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		CACA6EB42CF5D2CB002AFB61 /* MoneyAndFinance7_ATM.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance7_ATM.lottie; sourceTree = "<group>"; };
 		CACA6EB62CF5D513002AFB61 /* MoneyAndFinance7_MoneyBalance.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance7_MoneyBalance.lottie; sourceTree = "<group>"; };
+		CACD04932CFEBDA500B2DA28 /* ExchangeRateAndBalanceOfPayment7_CargoShip.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExchangeRateAndBalanceOfPayment7_CargoShip.lottie; sourceTree = "<group>"; };
+		CACD04952CFEC5EF00B2DA28 /* ExchangeRateAndBalanceOfPayment10_Union.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExchangeRateAndBalanceOfPayment10_Union.lottie; sourceTree = "<group>"; };
 		CACF34112CEDD4AE00ECC6FA /* MoneyAndFinance1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAndFinance1View.swift; sourceTree = "<group>"; };
 		CACF34132CEDD4BF00ECC6FA /* MoneyAndFinance2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAndFinance2View.swift; sourceTree = "<group>"; };
 		CACF34152CEDD4C900ECC6FA /* MoneyAndFinance3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAndFinance3View.swift; sourceTree = "<group>"; };
@@ -1015,6 +1019,8 @@
 				CA7EFE4A2CFC749D0022C565 /* ExchangeRateAndBalanceOfPayment2_Dollar.lottie */,
 				CA39D5492CFDAC3B0009AD1C /* ExchangeRateAndBalanceOfPayment4_Banana.lottie */,
 				CA39D54B2CFDB19C0009AD1C /* ExchangeRateAndBalanceOfPayment5_WonCoin.lottie */,
+				CACD04932CFEBDA500B2DA28 /* ExchangeRateAndBalanceOfPayment7_CargoShip.lottie */,
+				CACD04952CFEC5EF00B2DA28 /* ExchangeRateAndBalanceOfPayment10_Union.lottie */,
 			);
 			path = 5_ExchangeRateAndBalanceOfPayment;
 			sourceTree = "<group>";
@@ -1582,6 +1588,7 @@
 				CA39D54A2CFDAC3B0009AD1C /* ExchangeRateAndBalanceOfPayment4_Banana.lottie in Resources */,
 				CA6875D12CF1864E00DC819A /* BasicEconomy6_MoneyStack.lottie in Resources */,
 				CA762CC72CF86BD100983308 /* MoneyAndFinance16_Wallet.lottie in Resources */,
+				CACD04962CFEC5EF00B2DA28 /* ExchangeRateAndBalanceOfPayment10_Union.lottie in Resources */,
 				CA6875BF2CF1847300DC819A /* PriceLevelCourseCover.lottie in Resources */,
 				CA6875DD2CF1886700DC819A /* BasicEconomy10_Payment.lottie in Resources */,
 				CAA3A55E2CF6D9D3002C55A5 /* MoneyAndFinance9_GlobalMoney.lottie in Resources */,
@@ -1629,6 +1636,7 @@
 				CAACCD0F2CF87D5B004156C9 /* ArrowDown.lottie in Resources */,
 				CA6875B12CF1836B00DC819A /* Warning.lottie in Resources */,
 				CA6875B52CF183AC00DC819A /* Sweat.lottie in Resources */,
+				CACD04942CFEBDA500B2DA28 /* ExchangeRateAndBalanceOfPayment7_CargoShip.lottie in Resources */,
 				CA6875C52CF1851300DC819A /* BasicEconomy1_Home.lottie in Resources */,
 				CAACCD0D2CF87D53004156C9 /* MoneyAndFinance17_HomePrice.lottie in Resources */,
 				CA9BB9CF2CABA59A00886A1A /* .gitignore in Resources */,
