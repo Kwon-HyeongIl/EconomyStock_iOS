@@ -49,5 +49,7 @@
 		<string>fetch</string>
 		<string>remote-notification</string>
 	</array>
+	<key>BANKOFKOREA_OPENAPI_KEY</key>
+	<string>${BANKOFKOREA_OPENAPI_KEY}</string>
 </dict>
 </plist>
