@@ -1,5 +1,5 @@
 //
-//  KeyStatisticList.swift
+//  EconomicIndicatorCycle.swift
 //  EconomyStock
 //
 //  Created by 권형일 on 12/4/24.
@@ -7,14 +7,12 @@
 
 import Foundation
 
-struct EconomicIndicatorList: Decodable {
+struct EconomicIndicatorCycle: Decodable {
     let listTotalCount: Int
-    let rowCount: Int
-    let row: [EconomicIndicator]
-
+    let cycle: [EconomicIndicatorCycleData]
+    
     enum CodingKeys: String, CodingKey {
         case listTotalCount = "list_total_count"
-        case rowCount = "row_count"
-        case row
+        case cycle = "row"
     }
 }

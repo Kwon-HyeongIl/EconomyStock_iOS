@@ -9,17 +9,24 @@ import Foundation
 
 @Observable
 class HomeViewModel {
-    var indicators = [EconomicIndicator]()
+    var baseRate = [EconomicIndicatorCycleData]()
     
     init() {
-        requestIndicators()
+        requestBaseRate()
     }
-    
-    func requestIndicators() {
-        EconomicIndicatorManager.requestEconomicIndicators { indicators in
+
+    // 기준금리
+    func requestBaseRate() {
+        EconomicIndicatorManager.requestBaseRate { baseRate in
             DispatchQueue.main.async {
-                self.indicators = indicators
+                self.baseRate = baseRate
             }
         }
+    }
+    
+    func getMaxValue() -> Double {
+        guard let maxValue = baseRate.map({ Double($0.dataValue) ?? 0 }).max() else { return 0 }
+        
+        return maxValue
     }
 }

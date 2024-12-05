@@ -123,7 +123,6 @@
 		CA68760B2CF18DEB00DC819A /* MoneyAndFinance2_MoneyReport.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA68760A2CF18DEB00DC819A /* MoneyAndFinance2_MoneyReport.lottie */; };
 		CA6C54D42CB160A1008CF887 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CA6C54D32CB160A1008CF887 /* GoogleSignIn */; };
 		CA6C54D62CB160A1008CF887 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CA6C54D52CB160A1008CF887 /* GoogleSignInSwift */; };
-		CA75F0D82D0019F80096FA25 /* EconomicIndicatorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA75F0D72D0019F80096FA25 /* EconomicIndicatorList.swift */; };
 		CA762CC12CF8637A00983308 /* MoneyAndFinance15_EconomySearch.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA762CC02CF8637A00983308 /* MoneyAndFinance15_EconomySearch.lottie */; };
 		CA762CC32CF8671A00983308 /* MoneyAndFinance16_MoneyPercentUp.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA762CC22CF8671A00983308 /* MoneyAndFinance16_MoneyPercentUp.lottie */; };
 		CA762CC52CF86B1700983308 /* MoneyAndFinance16_MoneyGraphDown.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA762CC42CF86B1700983308 /* MoneyAndFinance16_MoneyGraphDown.lottie */; };
@@ -137,8 +136,6 @@
 		CA7EFE4B2CFC749D0022C565 /* ExchangeRateAndBalanceOfPayment2_Dollar.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA7EFE4A2CFC749D0022C565 /* ExchangeRateAndBalanceOfPayment2_Dollar.lottie */; };
 		CA8B5DB72CFF23020070DB71 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B5DB62CFF23020070DB71 /* HomeViewModel.swift */; };
 		CA8B5DBF2CFF24650070DB71 /* EconomicIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B5DBE2CFF24650070DB71 /* EconomicIndicatorManager.swift */; };
-		CA8B5DC12CFF27A60070DB71 /* EconomicIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B5DC02CFF27A60070DB71 /* EconomicIndicator.swift */; };
-		CA8B5DC32CFF2B1A0070DB71 /* EconomicIndicatorListContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B5DC22CFF2B1A0070DB71 /* EconomicIndicatorListContainer.swift */; };
 		CA92DDB32CB7D7A600A7D2A4 /* BasicEconomy1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDB22CB7D7A600A7D2A4 /* BasicEconomy1View.swift */; };
 		CA92DDB52CB7D7AF00A7D2A4 /* BasicEconomy2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDB42CB7D7AF00A7D2A4 /* BasicEconomy2View.swift */; };
 		CA92DDB72CB7D7B900A7D2A4 /* BasicEconomy3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDB62CB7D7B900A7D2A4 /* BasicEconomy3View.swift */; };
@@ -159,6 +156,10 @@
 		CA9BB9E02CABAACF00886A1A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CA9BB9DF2CABAACF00886A1A /* FirebaseStorage */; };
 		CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */; };
 		CA9BB9E92CABB12700886A1A /* NavigationDestinationPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9E82CABB12700886A1A /* NavigationDestinationPath.swift */; };
+		CA9CF5742D0060D800114807 /* EconomicIndicatorCycleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CF5732D0060D800114807 /* EconomicIndicatorCycleData.swift */; };
+		CA9CF5762D0060E700114807 /* EconomicIndicatorCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CF5752D0060E700114807 /* EconomicIndicatorCycle.swift */; };
+		CA9CF5782D00613200114807 /* EconomicIndicatorCycleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CF5772D00613200114807 /* EconomicIndicatorCycleContainer.swift */; };
+		CA9CF57C2D00698900114807 /* DateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CF57B2D00698900114807 /* DateType.swift */; };
 		CAA3A55E2CF6D9D3002C55A5 /* MoneyAndFinance9_GlobalMoney.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAA3A55D2CF6D9D3002C55A5 /* MoneyAndFinance9_GlobalMoney.lottie */; };
 		CAA3A55F2CF6D9D3002C55A5 /* MoneyAndFinance9_BankWith.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAA3A55B2CF6D9D3002C55A5 /* MoneyAndFinance9_BankWith.lottie */; };
 		CAA3A5602CF6D9D3002C55A5 /* MoneyAndFinance9_BankWithBank.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAA3A55C2CF6D9D3002C55A5 /* MoneyAndFinance9_BankWithBank.lottie */; };
@@ -358,7 +359,6 @@
 		CA6876062CF18D5C00DC819A /* UnEmployment7_Business.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = UnEmployment7_Business.lottie; sourceTree = "<group>"; };
 		CA6876082CF18DA100DC819A /* MoneyAndFinance1_Money.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance1_Money.lottie; sourceTree = "<group>"; };
 		CA68760A2CF18DEB00DC819A /* MoneyAndFinance2_MoneyReport.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance2_MoneyReport.lottie; sourceTree = "<group>"; };
-		CA75F0D72D0019F80096FA25 /* EconomicIndicatorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndicatorList.swift; sourceTree = "<group>"; };
 		CA762CC02CF8637A00983308 /* MoneyAndFinance15_EconomySearch.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance15_EconomySearch.lottie; sourceTree = "<group>"; };
 		CA762CC22CF8671A00983308 /* MoneyAndFinance16_MoneyPercentUp.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance16_MoneyPercentUp.lottie; sourceTree = "<group>"; };
 		CA762CC42CF86B1700983308 /* MoneyAndFinance16_MoneyGraphDown.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance16_MoneyGraphDown.lottie; sourceTree = "<group>"; };
@@ -372,8 +372,6 @@
 		CA83477C2CAAE28500BA1E4A /* EconomyStock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EconomyStock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8B5DB62CFF23020070DB71 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CA8B5DBE2CFF24650070DB71 /* EconomicIndicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndicatorManager.swift; sourceTree = "<group>"; };
-		CA8B5DC02CFF27A60070DB71 /* EconomicIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndicator.swift; sourceTree = "<group>"; };
-		CA8B5DC22CFF2B1A0070DB71 /* EconomicIndicatorListContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndicatorListContainer.swift; sourceTree = "<group>"; };
 		CA92DDB22CB7D7A600A7D2A4 /* BasicEconomy1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy1View.swift; sourceTree = "<group>"; };
 		CA92DDB42CB7D7AF00A7D2A4 /* BasicEconomy2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy2View.swift; sourceTree = "<group>"; };
 		CA92DDB62CB7D7B900A7D2A4 /* BasicEconomy3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy3View.swift; sourceTree = "<group>"; };
@@ -391,6 +389,10 @@
 		CA9BB9D62CABA94400886A1A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		CA9BB9E62CABAF5D00886A1A /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		CA9BB9E82CABB12700886A1A /* NavigationDestinationPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestinationPath.swift; sourceTree = "<group>"; };
+		CA9CF5732D0060D800114807 /* EconomicIndicatorCycleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndicatorCycleData.swift; sourceTree = "<group>"; };
+		CA9CF5752D0060E700114807 /* EconomicIndicatorCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndicatorCycle.swift; sourceTree = "<group>"; };
+		CA9CF5772D00613200114807 /* EconomicIndicatorCycleContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndicatorCycleContainer.swift; sourceTree = "<group>"; };
+		CA9CF57B2D00698900114807 /* DateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateType.swift; sourceTree = "<group>"; };
 		CAA3A55B2CF6D9D3002C55A5 /* MoneyAndFinance9_BankWith.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance9_BankWith.lottie; sourceTree = "<group>"; };
 		CAA3A55C2CF6D9D3002C55A5 /* MoneyAndFinance9_BankWithBank.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance9_BankWithBank.lottie; sourceTree = "<group>"; };
 		CAA3A55D2CF6D9D3002C55A5 /* MoneyAndFinance9_GlobalMoney.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance9_GlobalMoney.lottie; sourceTree = "<group>"; };
@@ -988,16 +990,6 @@
 			path = Page1;
 			sourceTree = "<group>";
 		};
-		CA75F0D92D001DAF0096FA25 /* EconomicIndicator */ = {
-			isa = PBXGroup;
-			children = (
-				CA8B5DC22CFF2B1A0070DB71 /* EconomicIndicatorListContainer.swift */,
-				CA75F0D72D0019F80096FA25 /* EconomicIndicatorList.swift */,
-				CA8B5DC02CFF27A60070DB71 /* EconomicIndicator.swift */,
-			);
-			path = EconomicIndicator;
-			sourceTree = "<group>";
-		};
 		CA77DFCB2CB24D0100992829 /* DotLottieFile */ = {
 			isa = PBXGroup;
 			children = (
@@ -1223,8 +1215,27 @@
 				CAEDDAD02CB575E20046162D /* Notification */,
 				CAEDDAD12CB575EA0046162D /* Tab */,
 				CAEDDAC02CB570610046162D /* FocusField */,
+				CA9CF57D2D00698D00114807 /* Date */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		CA9CF5702D005FBC00114807 /* EconomicIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				CA9CF5772D00613200114807 /* EconomicIndicatorCycleContainer.swift */,
+				CA9CF5752D0060E700114807 /* EconomicIndicatorCycle.swift */,
+				CA9CF5732D0060D800114807 /* EconomicIndicatorCycleData.swift */,
+			);
+			path = EconomicIndicator;
+			sourceTree = "<group>";
+		};
+		CA9CF57D2D00698D00114807 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				CA9CF57B2D00698900114807 /* DateType.swift */,
+			);
+			path = Date;
 			sourceTree = "<group>";
 		};
 		CAAA24F62CE8424A00F8C380 /* Page9 */ = {
@@ -1394,7 +1405,7 @@
 		CAEE16492CAD081A00210BD0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CA75F0D92D001DAF0096FA25 /* EconomicIndicator */,
+				CA9CF5702D005FBC00114807 /* EconomicIndicator */,
 				CAEE164A2CAD082500210BD0 /* User.swift */,
 				CA2E936B2CAFB05800A883F1 /* Notification.swift */,
 				CAD101E32CB6959D00CA9C6A /* StudyingCourse.swift */,
@@ -1417,7 +1428,6 @@
 		CAEE16562CAD0C9B00210BD0 /* VVM */ = {
 			isa = PBXGroup;
 			children = (
-				CAEE165C2CAD0D2300210BD0 /* Auth */,
 				CAEE165D2CAD0D2F00210BD0 /* MainTab */,
 			);
 			path = VVM;
@@ -1443,6 +1453,7 @@
 		CAEE165D2CAD0D2F00210BD0 /* MainTab */ = {
 			isa = PBXGroup;
 			children = (
+				CAEE165C2CAD0D2300210BD0 /* Auth */,
 				CA17FC782CB00A7A0050250B /* Home */,
 				CA17FC792CB00A7E0050250B /* Studying */,
 				CA17FC7A2CB00A990050250B /* News */,
@@ -1690,7 +1701,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA75F0D82D0019F80096FA25 /* EconomicIndicatorList.swift in Sources */,
 				CAD9A1102CC515B000A4F70B /* CourseType.swift in Sources */,
 				CAE1999D2CFC1E92000CFAA2 /* ExchangeRateAndBalanceOfPayment8View.swift in Sources */,
 				CA3BBAB62CB50441007CA152 /* NavigationBackTitleModifier.swift in Sources */,
@@ -1702,6 +1712,7 @@
 				CAEE16652CAD0D7800210BD0 /* LoginViewModel+Apple.swift in Sources */,
 				CAE1999B2CFC1E7E000CFAA2 /* ExchangeRateAndBalanceOfPayment7View.swift in Sources */,
 				CA17FC752CB005DB0050250B /* MainTab.swift in Sources */,
+				CA9CF57C2D00698900114807 /* DateType.swift in Sources */,
 				CAEE164D2CAD08E600210BD0 /* FCMManager.swift in Sources */,
 				CACF34362CEDD52A00ECC6FA /* MoneyAndFinance19View.swift in Sources */,
 				CA92DDB52CB7D7AF00A7D2A4 /* BasicEconomy2View.swift in Sources */,
@@ -1713,6 +1724,7 @@
 				CAAA25062CE8555F00F8C380 /* UnEmployment3View.swift in Sources */,
 				CACF342E2CEDD51500ECC6FA /* MoneyAndFinance15View.swift in Sources */,
 				CAEDDAC22CB570710046162D /* BasicLoginFocusField.swift in Sources */,
+				CA9CF5782D00613200114807 /* EconomicIndicatorCycleContainer.swift in Sources */,
 				CAEE16632CAD0D7200210BD0 /* LoginViewModel+Kakao.swift in Sources */,
 				CAD255FA2CE6DE35008E7788 /* PriceLevel6View.swift in Sources */,
 				CA58A4ED2CB6D9E900DB91BD /* ProgressCircleView.swift in Sources */,
@@ -1739,6 +1751,7 @@
 				CAE199A12CFC1E9E000CFAA2 /* ExchangeRateAndBalanceOfPayment10View.swift in Sources */,
 				CA3BBAA82CB50063007CA152 /* BasicSignupView.swift in Sources */,
 				CA94BA712CD3C918006ED29A /* CourseListViewCapsule.swift in Sources */,
+				CA9CF5762D0060E700114807 /* EconomicIndicatorCycle.swift in Sources */,
 				CA77DFCF2CB256DD00992829 /* LoginViewModel+Google.swift in Sources */,
 				CAE199912CFC1E54000CFAA2 /* ExchangeRateAndBalanceOfPayment2View.swift in Sources */,
 				CA17FC7F2CB00ABE0050250B /* CourseListView.swift in Sources */,
@@ -1797,13 +1810,13 @@
 				CA114FDA2CB62E7D00AD5AD9 /* NavigationTitleModifier.swift in Sources */,
 				CAE4C1E52CDE3F5400CDD0CF /* BasicEconomy9View.swift in Sources */,
 				CA5577FE2CEE045000F7C4A6 /* LottieView.swift in Sources */,
+				CA9CF5742D0060D800114807 /* EconomicIndicatorCycleData.swift in Sources */,
 				CA5578022CEE04A200F7C4A6 /* LottieViewMain.swift in Sources */,
 				CAE199A32CFC1EA5000CFAA2 /* ExchangeRateAndBalanceOfPayment11View.swift in Sources */,
 				CAEDDAB92CB53B3F0046162D /* BasicSignupFocusField.swift in Sources */,
 				CAEE164F2CAD096C00210BD0 /* NotificationType.swift in Sources */,
 				CAAA25022CE8554200F8C380 /* UnEmployment1View.swift in Sources */,
 				CA4E71A82CB78B8400BAA70C /* CourseViewModel.swift in Sources */,
-				CA8B5DC12CFF27A60070DB71 /* EconomicIndicator.swift in Sources */,
 				CAE4C1E32CDE3F4A00CDD0CF /* BasicEconomy8View.swift in Sources */,
 				CAB77FD72CB8EC2900DF11D6 /* CourseToolbarModifier.swift in Sources */,
 				CAAA4B532CC9F2A00083F86C /* NavigationBaseView.swift in Sources */,
@@ -1811,7 +1824,6 @@
 				CA8B5DBF2CFF24650070DB71 /* EconomicIndicatorManager.swift in Sources */,
 				CA08F3A02CB839600093117E /* PriceLevel5View.swift in Sources */,
 				CA8B5DB72CFF23020070DB71 /* HomeViewModel.swift in Sources */,
-				CA8B5DC32CFF2B1A0070DB71 /* EconomicIndicatorListContainer.swift in Sources */,
 				CAD256002CE6DE4B008E7788 /* PriceLevel9View.swift in Sources */,
 				CA9BB9D72CABA94400886A1A /* MainTabView.swift in Sources */,
 				CA17FC8A2CB01E820050250B /* CornerRadius.swift in Sources */,
