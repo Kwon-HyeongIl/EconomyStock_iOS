@@ -11,6 +11,7 @@ import Foundation
 class HomeViewModel {
     var baseRate = [EconomicIndicatorCycleData]()
     
+    
     init() {
         requestBaseRate()
     }
@@ -24,9 +25,10 @@ class HomeViewModel {
         }
     }
     
-    func getMaxValue() -> Double {
-        guard let maxValue = baseRate.map({ Double($0.dataValue) ?? 0 }).max() else { return 0 }
-        
-        return maxValue
-    }
+    // 그래프의 최댓값 가져오기
+//    func getMaxValue() -> Double {
+//        guard let maxValue = baseRate.map({ Double($0.dataValue) ?? 0 }).max() else { return 0 }
+//        
+//        return maxValue
+//    }
 }

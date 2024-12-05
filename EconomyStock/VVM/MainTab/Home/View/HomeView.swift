@@ -19,6 +19,7 @@ struct HomeView: View {
 //            LazyVStack {
 //                ForEach(viewModel.baseRate, id: \.self) { cycleData in
 //                    Text("\(cycleData.statName)")
+//                    Text(cycleData.time)
 //                    Text("\(cycleData.dataValue)\(cycleData.unitName)")
 //                        .padding(.bottom)
 //                    
@@ -53,6 +54,10 @@ struct HomeView: View {
                                             .font(.caption)
                                             .foregroundStyle(.gray)
                                         
+                                        Text(currentActiveGestureItem.time)
+                                            .font(.caption)
+                                            .foregroundStyle(.gray)
+                                        
                                         Text("\(currentActiveGestureItem.dataValue)%")
                                             .font(.title3.bold())
                                     }
@@ -67,7 +72,10 @@ struct HomeView: View {
                         }
                     }
                 }
-                .chartYScale(domain: 0...(viewModel.getMaxValue() + 2))
+                .chartXAxis {
+                    AxisMarks(values: ["1월1일", "3월1일", "6월1일", "9월1일", "12월1일"])
+                }
+                .chartYScale(domain: 0...6)
                 .chartOverlay(content: { proxy in
                     GeometryReader{innerProxy in
                         Rectangle()
@@ -97,6 +105,7 @@ struct HomeView: View {
                         }
                     }
                 }
+                .padding(.top, 100)
             }
         }
     }

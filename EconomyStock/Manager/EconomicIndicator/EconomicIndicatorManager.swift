@@ -13,7 +13,7 @@ class EconomicIndicatorManager {
     static func requestBaseRate(completion: @escaping ([EconomicIndicatorCycleData]) -> Void) {
         guard let key = Bundle.main.infoDictionary?["BANKOFKOREA_OPENAPI_KEY"] as? String else { return }
         let nowDate = getNowDate(type: .day)
-        let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/1000/722Y001/D/20220617/\(nowDate)/0101000/?/?/?"
+        let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/1000/722Y001/D/20240101/\(nowDate)/0101000/?/?/?"
         
         AF.request(url)
             .validate()
