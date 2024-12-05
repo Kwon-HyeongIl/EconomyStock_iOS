@@ -14,31 +14,37 @@ struct HomeView: View {
     @State private var currentActiveGestureItem: EconomicIndicatorCycleData?
     @State private var plotWidth: CGFloat = 0
     
-    var xAxisValues: [String] {
-        viewModel.baseRate
-            .filter { $0.time.hasSuffix("0101") }
-            .map { $0.time }
-    }
-
-    
     var body: some View {
         ScrollView {
-//            LazyVStack {
-//                ForEach(viewModel.baseRate, id: \.self) { cycleData in
-//                    Text("\(cycleData.statName)")
-//                    Text(cycleData.time)
-//                    Text("\(cycleData.dataValue)\(cycleData.unitName)")
-//                        .padding(.bottom)
-//                    
-//                }
-//            }
-            
-            
             VStack {
                 VStack(alignment: .leading) {
-                    HStack {
+                    HStack(spacing: 0) {
                         Text("기준금리")
                             .font(.system(size: 30).bold())
+                        
+                        Text("\(viewModel.baseRate.last?.dataValue ?? "0")%")
+                            .font(.system(size: 25).bold())
+                            .padding(.leading)
+                            .padding(.trailing)
+                        
+                        if let diff = viewModel.calculateBaseRateRecentDataValueChangeDifference() {
+                            if diff > 0 {
+                                LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.5, width: 20, height: 20)
+                                    .rotationEffect(.degrees(180))
+                                
+                                Text("\(String(format: "%.2f", diff))%")
+                                    .font(.system(size: 15).bold())
+                                    .foregroundStyle(Color(hex: "D92B2B"))
+                            } else {
+                                LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.5, width: 20, height: 20)
+                                    .padding(.top, 3)
+                                
+                                Text("\(String(format: "%.2f", diff))%")
+                                    .font(.system(size: 15).bold())
+                                    .foregroundStyle(Color.ESTitle)
+                            }
+                        }
+                       
                     }
                     
                     Chart {
@@ -86,14 +92,19 @@ struct HomeView: View {
                         }
                     }
                     .chartXAxis {
-                        AxisMarks(values: xAxisValues) { value in
+                        AxisMarks(values: viewModel.baseRateYearFilter) { value in
                             if let dateString = value.as(String.self) {
+                                AxisGridLine()
+                                
                                 let year = String(dateString.prefix(4))
                                 AxisValueLabel("\(year)")
                             }
                         }
                     }
-                    .chartYScale(domain: 0...6)
+                    .chartYScale(domain: 0...5)
+                    .chartYAxis {
+                        AxisMarks(values: [0, 1, 2, 3, 4, 5])
+                    }
                     .chartOverlay(content: { proxy in
                         GeometryReader{innerProxy in
                             Rectangle()
@@ -123,7 +134,6 @@ struct HomeView: View {
                             }
                         }
                     }
-                    .padding(.top, 100)
                 }
                 .padding()
                 .background {

@@ -14,7 +14,7 @@ struct EconomicIndicatorCycleData: Decodable, Identifiable, Hashable, Equatable 
     let itemCode1: String
     let itemName1: String
     let unitName: String
-    let time: String
+    var time: String
     let dataValue: String
     
     enum CodingKeys: String, CodingKey {

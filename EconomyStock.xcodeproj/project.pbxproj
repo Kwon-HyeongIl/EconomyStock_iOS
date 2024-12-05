@@ -50,6 +50,8 @@
 		CA3BBAB42CB50414007CA152 /* NavigationBackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */; };
 		CA3BBAB62CB50441007CA152 /* NavigationBackTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */; };
 		CA4B4F072CB9577500C2D4E0 /* AuthManager+Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B4F062CB9577500C2D4E0 /* AuthManager+Course.swift */; };
+		CA4D3EFE2D01E9AF0087E55C /* EconomicIndicatorDown.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA4D3EFC2D01E9AF0087E55C /* EconomicIndicatorDown.lottie */; };
+		CA4D3EFF2D01E9AF0087E55C /* EconomicIndicatorUp.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA4D3EFD2D01E9AF0087E55C /* EconomicIndicatorUp.lottie */; };
 		CA4D88CE2CDC70210003DE3C /* BasicEconomy10View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D88CD2CDC70210003DE3C /* BasicEconomy10View.swift */; };
 		CA4E71A52CB78A8300BAA70C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E71A42CB78A8300BAA70C /* Course.swift */; };
 		CA4E71A82CB78B8400BAA70C /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E71A72CB78B8400BAA70C /* CourseViewModel.swift */; };
@@ -289,6 +291,8 @@
 		CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackModifier.swift; sourceTree = "<group>"; };
 		CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackTitleModifier.swift; sourceTree = "<group>"; };
 		CA4B4F062CB9577500C2D4E0 /* AuthManager+Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthManager+Course.swift"; sourceTree = "<group>"; };
+		CA4D3EFC2D01E9AF0087E55C /* EconomicIndicatorDown.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = EconomicIndicatorDown.lottie; sourceTree = "<group>"; };
+		CA4D3EFD2D01E9AF0087E55C /* EconomicIndicatorUp.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = EconomicIndicatorUp.lottie; sourceTree = "<group>"; };
 		CA4D88CD2CDC70210003DE3C /* BasicEconomy10View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy10View.swift; sourceTree = "<group>"; };
 		CA4E71A42CB78A8300BAA70C /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		CA4E71A72CB78B8400BAA70C /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
@@ -843,6 +847,15 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		CA4D3EFB2D01E99C0087E55C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CA4D3EFC2D01E9AF0087E55C /* EconomicIndicatorDown.lottie */,
+				CA4D3EFD2D01E9AF0087E55C /* EconomicIndicatorUp.lottie */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		CA5577EB2CEDF4B800F7C4A6 /* 4_MoneyAndFinance */ = {
 			isa = PBXGroup;
 			children = (
@@ -993,6 +1006,7 @@
 		CA77DFCB2CB24D0100992829 /* DotLottieFile */ = {
 			isa = PBXGroup;
 			children = (
+				CA4D3EFB2D01E99C0087E55C /* Home */,
 				CA6875992CF182B700DC819A /* MainTab */,
 				CAC86FCF2CE2E5A600785D4F /* Profile */,
 				CA712CA42CD65B00002E7276 /* Course */,
@@ -1673,6 +1687,8 @@
 				CA6875B12CF1836B00DC819A /* Warning.lottie in Resources */,
 				CA6875B52CF183AC00DC819A /* Sweat.lottie in Resources */,
 				CACD04942CFEBDA500B2DA28 /* ExchangeRateAndBalanceOfPayment7_CargoShip.lottie in Resources */,
+				CA4D3EFE2D01E9AF0087E55C /* EconomicIndicatorDown.lottie in Resources */,
+				CA4D3EFF2D01E9AF0087E55C /* EconomicIndicatorUp.lottie in Resources */,
 				CA6875C52CF1851300DC819A /* BasicEconomy1_Home.lottie in Resources */,
 				CAACCD0D2CF87D53004156C9 /* MoneyAndFinance17_HomePrice.lottie in Resources */,
 				CA9BB9CF2CABA59A00886A1A /* .gitignore in Resources */,
