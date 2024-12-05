@@ -22,10 +22,12 @@ struct HomeView: View {
                         Text("기준금리")
                             .font(.system(size: 30).bold())
                         
-                        Text("\(viewModel.baseRate.last?.dataValue ?? "0")%")
-                            .font(.system(size: 25).bold())
-                            .padding(.leading)
-                            .padding(.trailing)
+                        if let dataValue = viewModel.baseRate.last?.dataValue {
+                            Text("\(dataValue)%")
+                                .font(.system(size: 25).bold())
+                                .padding(.leading, 13)
+                                .padding(.trailing)
+                        }
                         
                         if let diff = viewModel.calculateBaseRateRecentDataValueChangeDifference() {
                             if diff > 0 {
@@ -97,7 +99,11 @@ struct HomeView: View {
                                 AxisGridLine()
                                 
                                 let year = String(dateString.prefix(4))
-                                AxisValueLabel("\(year)")
+                                AxisValueLabel {
+                                    Text("\(year)")
+                                        .fixedSize()
+                                        .padding(.leading, value.index == 0 ? 15 : 0)
+                                }
                             }
                         }
                     }
