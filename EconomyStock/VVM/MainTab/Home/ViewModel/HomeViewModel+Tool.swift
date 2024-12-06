@@ -75,4 +75,20 @@ extension HomeViewModel {
         
         return nil
     }
+    
+    // 원달러환율 이전 지표의 차이값 계산
+    func calculateWDERRecentDataValueChangeDifference() -> (difference: Double, date: String)? {
+        guard let last = WDER.last, let lastValue = Double(last.dataValue) else {
+            return nil
+        }
+        
+        for previousData in WDER.dropLast().reversed() {
+            if let previousValue = Double(previousData.dataValue), previousValue != lastValue {
+                let difference = lastValue - previousValue
+                return (difference, previousData.time)
+            }
+        }
+        
+        return nil
+    }
 }

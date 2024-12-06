@@ -11,6 +11,7 @@ import Foundation
 class HomeViewModel {
     var BR = [EconomicIndicatorCycleData]()
     var CPI = [EconomicIndicatorCycleData]()
+    var WDER = [EconomicIndicatorCycleData]()
     
     // 그래프 X축 연도 필터
     var BRYearFilter: [String] {
@@ -20,12 +21,13 @@ class HomeViewModel {
     }
     
     init() {
-        requestBR()
-        requestCPI()
+        initBR()
+        initCPI()
+        initWDER()
     }
 
     // 기준금리
-    func requestBR() {
+    func initBR() {
         EconomicIndicatorManager.requestBR { BR in
             DispatchQueue.main.async {
                 self.BR = BR.map { data in
@@ -39,7 +41,7 @@ class HomeViewModel {
     }
     
     // 소비자물가지수
-    func requestCPI() {
+    func initCPI() {
         EconomicIndicatorManager.requestCPI { CPI in
             DispatchQueue.main.async {
                 self.CPI = CPI.map { data in
@@ -52,4 +54,17 @@ class HomeViewModel {
         }
     }
     
+    // 원달러환율
+    func initWDER() {
+        EconomicIndicatorManager.requestWDER { WDER in
+            DispatchQueue.main.async {
+                self.WDER = WDER.map { data in
+                    var modifiedData = data
+                    modifiedData.time = self.formatDateString(data.time, type: .day)
+                    
+                    return modifiedData
+                }
+            }
+        }
+    }
 }

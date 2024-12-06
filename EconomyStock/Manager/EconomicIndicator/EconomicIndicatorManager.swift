@@ -52,5 +52,27 @@ class EconomicIndicatorManager {
                 }
             }
     }
+    
+    // 원달러환율
+    static func requestWDER(completion: @escaping ([EconomicIndicatorCycleData]) -> Void) {
+        guard let key = Bundle.main.infoDictionary?["BANKOFKOREA_OPENAPI_KEY"] as? String else { return }
+        let nowDate = getNowDate(type: .day)
+        let fiveYearsBeforeDate = getFiveYearsBeforeDate(type: .day)
+        let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/3000/731Y003/D/\(fiveYearsBeforeDate)/\(nowDate)/0000003/?/?"
+        
+        AF.request(url)
+            .validate()
+            .responseDecodable(of: EconomicIndicatorCycleContainer.self) { response in
+                switch response.result {
+                    
+                case .success(let data):
+                    completion(data.statisticSearch.cycle)
+                    
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    completion([])
+                }
+            }
+    }
 
 }

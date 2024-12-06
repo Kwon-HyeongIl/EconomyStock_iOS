@@ -55,6 +55,7 @@ struct HomeView: View {
                                     .font(.system(size: 7))
                                     .fontWeight(.semibold)
                                     .foregroundStyle(.gray)
+                                    .padding(.leading, 5)
                             }
                         }
 
@@ -182,14 +183,14 @@ struct HomeView: View {
                                         LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
                                             .rotationEffect(.degrees(180))
                                         
-                                        Text("\(String(format: "%.2f", diffData.difference))")
+                                        Text("\(String(format: "%.2f", diffData.difference))%")
                                             .font(.system(size: 13).bold())
                                             .foregroundStyle(Color(hex: "D92B2B"))
                                     } else {
                                         LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
                                             .padding(.top, 3)
                                         
-                                        Text("\(String(format: "%.2f", diffData.difference))")
+                                        Text("\(String(format: "%.2f", diffData.difference))%")
                                             .font(.system(size: 13).bold())
                                             .foregroundStyle(Color.ESTitle)
                                     }
@@ -199,6 +200,7 @@ struct HomeView: View {
                                     .font(.system(size: 7))
                                     .fontWeight(.semibold)
                                     .foregroundStyle(.gray)
+                                    .padding(.leading, 5)
                             }
                         }
                         
@@ -218,6 +220,42 @@ struct HomeView: View {
                     HStack {
                         Text("원달러환율")
                             .font(.system(size: 23).bold())
+                        
+                        if let dataValue = viewModel.WDER.last?.dataValue {
+                            Text("\(dataValue) 원")
+                                .font(.system(size: 20).bold())
+                                .padding(.leading, 13)
+                                .padding(.trailing, 5)
+                                .padding(.bottom, 2)
+                        }
+                        
+                        if let diffData = viewModel.calculateWDERRecentDataValueChangeDifference() {
+                            VStack {
+                                HStack(spacing: 0) {
+                                    if diffData.difference > 0 {
+                                        LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
+                                            .rotationEffect(.degrees(180))
+                                        
+                                        Text("\(String(format: "%.1f", diffData.difference)) 원")
+                                            .font(.system(size: 13).bold())
+                                            .foregroundStyle(Color(hex: "D92B2B"))
+                                    } else {
+                                        LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
+                                            .padding(.top, 3)
+                                        
+                                        Text("\(String(format: "%.1f", diffData.difference)) 원")
+                                            .font(.system(size: 13).bold())
+                                            .foregroundStyle(Color.ESTitle)
+                                    }
+                                }
+                                
+                                Text("(\(diffData.date) 대비)")
+                                    .font(.system(size: 7))
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.gray)
+                                    .padding(.leading, 5)
+                            }
+                        }
                         
                         Spacer()
                     }
