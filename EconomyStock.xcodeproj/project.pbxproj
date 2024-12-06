@@ -174,6 +174,8 @@
 		CAAA250E2CE8559300F8C380 /* UnEmployment7View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA250D2CE8559300F8C380 /* UnEmployment7View.swift */; };
 		CAAA4B532CC9F2A00083F86C /* NavigationBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA4B522CC9F2A00083F86C /* NavigationBaseView.swift */; };
 		CAAA4B552CC9F2F70083F86C /* AisleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA4B542CC9F2F70083F86C /* AisleView.swift */; };
+		CAAAC35D2D02A0450006D8DE /* EconomicIndicatorManager+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAAC35C2D02A0450006D8DE /* EconomicIndicatorManager+Date.swift */; };
+		CAAAC35F2D02A19D0006D8DE /* HomeViewModel+Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAAC35E2D02A19D0006D8DE /* HomeViewModel+Tool.swift */; };
 		CAACCD0B2CF87D4D004156C9 /* MoneyAndFinance17_FinancePaper.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAACCD0A2CF87D4D004156C9 /* MoneyAndFinance17_FinancePaper.lottie */; };
 		CAACCD0D2CF87D53004156C9 /* MoneyAndFinance17_HomePrice.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAACCD0C2CF87D53004156C9 /* MoneyAndFinance17_HomePrice.lottie */; };
 		CAACCD0F2CF87D5B004156C9 /* ArrowDown.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAACCD0E2CF87D5B004156C9 /* ArrowDown.lottie */; };
@@ -409,6 +411,8 @@
 		CAAA250D2CE8559300F8C380 /* UnEmployment7View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnEmployment7View.swift; sourceTree = "<group>"; };
 		CAAA4B522CC9F2A00083F86C /* NavigationBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBaseView.swift; sourceTree = "<group>"; };
 		CAAA4B542CC9F2F70083F86C /* AisleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AisleView.swift; sourceTree = "<group>"; };
+		CAAAC35C2D02A0450006D8DE /* EconomicIndicatorManager+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EconomicIndicatorManager+Date.swift"; sourceTree = "<group>"; };
+		CAAAC35E2D02A19D0006D8DE /* HomeViewModel+Tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewModel+Tool.swift"; sourceTree = "<group>"; };
 		CAACCD0A2CF87D4D004156C9 /* MoneyAndFinance17_FinancePaper.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance17_FinancePaper.lottie; sourceTree = "<group>"; };
 		CAACCD0C2CF87D53004156C9 /* MoneyAndFinance17_HomePrice.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance17_HomePrice.lottie; sourceTree = "<group>"; };
 		CAACCD0E2CF87D5B004156C9 /* ArrowDown.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ArrowDown.lottie; sourceTree = "<group>"; };
@@ -601,6 +605,7 @@
 			isa = PBXGroup;
 			children = (
 				CA8B5DB62CFF23020070DB71 /* HomeViewModel.swift */,
+				CAAAC35E2D02A19D0006D8DE /* HomeViewModel+Tool.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1074,6 +1079,7 @@
 			isa = PBXGroup;
 			children = (
 				CA8B5DBE2CFF24650070DB71 /* EconomicIndicatorManager.swift */,
+				CAAAC35C2D02A0450006D8DE /* EconomicIndicatorManager+Date.swift */,
 			);
 			path = EconomicIndicator;
 			sourceTree = "<group>";
@@ -1729,10 +1735,12 @@
 				CAE1999B2CFC1E7E000CFAA2 /* ExchangeRateAndBalanceOfPayment7View.swift in Sources */,
 				CA17FC752CB005DB0050250B /* MainTab.swift in Sources */,
 				CA9CF57C2D00698900114807 /* DateType.swift in Sources */,
+				CAAAC35D2D02A0450006D8DE /* EconomicIndicatorManager+Date.swift in Sources */,
 				CAEE164D2CAD08E600210BD0 /* FCMManager.swift in Sources */,
 				CACF34362CEDD52A00ECC6FA /* MoneyAndFinance19View.swift in Sources */,
 				CA92DDB52CB7D7AF00A7D2A4 /* BasicEconomy2View.swift in Sources */,
 				CA08F3982CB839460093117E /* PriceLevel1View.swift in Sources */,
+				CAAAC35F2D02A19D0006D8DE /* HomeViewModel+Tool.swift in Sources */,
 				CA92DDB32CB7D7A600A7D2A4 /* BasicEconomy1View.swift in Sources */,
 				CA4E71A52CB78A8300BAA70C /* Course.swift in Sources */,
 				CAEE16602CAD0D4D00210BD0 /* LoginViewModel.swift in Sources */,

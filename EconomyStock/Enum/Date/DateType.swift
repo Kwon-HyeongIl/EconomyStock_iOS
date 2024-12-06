@@ -9,7 +9,7 @@ import Foundation
 
 enum DateType {
     case annual
-    case quater
+    case quarter
     case month
     case day
 }

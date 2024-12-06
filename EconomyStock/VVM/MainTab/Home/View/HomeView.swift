@@ -20,44 +20,49 @@ struct HomeView: View {
                 VStack {
                     HStack(spacing: 0) {
                         Text("기준금리")
-                            .font(.system(size: 25).bold())
+                            .font(.system(size: 23).bold())
+                            .fixedSize()
                         
-                        if let dataValue = viewModel.baseRate.last?.dataValue {
+                        if let dataValue = viewModel.BR.last?.dataValue {
                             Text("\(dataValue)%")
-                                .font(.system(size: 23).bold())
+                                .font(.system(size: 20).bold())
                                 .padding(.leading, 13)
-                                .padding(.trailing, 10)
+                                .padding(.trailing, 8)
+                                .padding(.bottom, 2)
                         }
                         
                         if let diffData = viewModel.calculateBaseRateRecentDataValueChangeDifference() {
-                            if diffData.difference > 0 {
-                                LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.5, width: 20, height: 20)
-                                    .rotationEffect(.degrees(180))
+                            VStack {
+                                HStack {
+                                    if diffData.difference > 0 {
+                                        LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
+                                            .rotationEffect(.degrees(180))
+                                        
+                                        Text("\(String(format: "%.2f", diffData.difference))%")
+                                            .font(.system(size: 13).bold())
+                                            .foregroundStyle(Color(hex: "D92B2B"))
+                                    } else {
+                                        LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
+                                            .padding(.top, 3)
+                                        
+                                        Text("\(String(format: "%.2f", diffData.difference))%")
+                                            .font(.system(size: 13).bold())
+                                            .foregroundStyle(Color.ESTitle)
+                                    }
+                                }
                                 
-                                Text("\(String(format: "%.2f", diffData.difference))%")
-                                    .font(.system(size: 15).bold())
-                                    .foregroundStyle(Color(hex: "D92B2B"))
-                            } else {
-                                LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.5, width: 20, height: 20)
-                                    .padding(.top, 3)
-                                
-                                Text("\(String(format: "%.2f", diffData.difference))%")
-                                    .font(.system(size: 15).bold())
-                                    .foregroundStyle(Color.ESTitle)
+                                Text("(\(diffData.date) 대비)")
+                                    .font(.system(size: 7))
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.gray)
                             }
-
-                            Text("(\(diffData.date) 대비)")
-                                .font(.system(size: 10))
-                                .fontWeight(.semibold)
-                                .foregroundStyle(.gray)
-                                .padding(.leading, 5)
                         }
 
                        Spacer()
                     }
                     
                     Chart {
-                        ForEach(viewModel.baseRate) { cycleData in
+                        ForEach(viewModel.BR) { cycleData in
                             LineMark(
                                 x: .value("일", cycleData.time),
                                 y: .value("기준금리", chartAni ? (Double(cycleData.dataValue) ?? 0) : 0)
@@ -75,7 +80,7 @@ struct HomeView: View {
                             if let currentActiveGestureItem, currentActiveGestureItem.id == cycleData.id {
                                 RuleMark(x: .value("일", currentActiveGestureItem.time))
                                     .lineStyle(.init(lineWidth: 2, miterLimit: 2, dash: [2], dashPhase: 5))
-                                    .offset(x: (plotWidth / CGFloat(viewModel.baseRate.count)) / 2)
+                                    .offset(x: (plotWidth / CGFloat(viewModel.BR.count)) / 2)
                                     .annotation(position: .top) {
                                         VStack(alignment: .leading, spacing: 6) {
                                             Text("기준금리")
@@ -101,7 +106,7 @@ struct HomeView: View {
                         }
                     }
                     .chartXAxis {
-                        AxisMarks(values: viewModel.baseRateYearFilter) { value in
+                        AxisMarks(values: viewModel.BRYearFilter) { value in
                             if let dateString = value.as(String.self) {
                                 AxisGridLine()
                                 
@@ -127,7 +132,7 @@ struct HomeView: View {
                                         .onChanged { value in
                                             let location = value.location
                                             if let day: String = proxy.value(atX: location.x) {
-                                                if let currentItem = viewModel.baseRate.first(where: { $0.time == day }) {
+                                                if let currentItem = viewModel.BR.first(where: { $0.time == day }) {
                                                     self.currentActiveGestureItem = currentItem
                                                     self.plotWidth = proxy.plotSize.width
                                                 }
@@ -159,7 +164,43 @@ struct HomeView: View {
                 VStack {
                     HStack {
                         Text("소비자물가지수")
-                            .font(.system(size: 25).bold())
+                            .font(.system(size: 23).bold())
+                            .fixedSize()
+                        
+                        if let dataValue = viewModel.CPI.last?.dataValue {
+                            Text("\(dataValue)")
+                                .font(.system(size: 20).bold())
+                                .padding(.leading, 13)
+                                .padding(.trailing, 5)
+                                .padding(.bottom, 2)
+                        }
+                        
+                        if let diffData = viewModel.calculateCPIRecentDataValueChangeDifference() {
+                            VStack {
+                                HStack(spacing: 0) {
+                                    if diffData.difference > 0 {
+                                        LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
+                                            .rotationEffect(.degrees(180))
+                                        
+                                        Text("\(String(format: "%.2f", diffData.difference))")
+                                            .font(.system(size: 13).bold())
+                                            .foregroundStyle(Color(hex: "D92B2B"))
+                                    } else {
+                                        LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
+                                            .padding(.top, 3)
+                                        
+                                        Text("\(String(format: "%.2f", diffData.difference))")
+                                            .font(.system(size: 13).bold())
+                                            .foregroundStyle(Color.ESTitle)
+                                    }
+                                }
+                                
+                                Text("(\(diffData.date) 대비)")
+                                    .font(.system(size: 7))
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.gray)
+                            }
+                        }
                         
                         Spacer()
                     }
@@ -176,7 +217,7 @@ struct HomeView: View {
                 VStack {
                     HStack {
                         Text("원달러환율")
-                            .font(.system(size: 25).bold())
+                            .font(.system(size: 23).bold())
                         
                         Spacer()
                     }
@@ -194,7 +235,7 @@ struct HomeView: View {
                     VStack {
                         HStack {
                             Text("M1")
-                                .font(.system(size: 25).bold())
+                                .font(.system(size: 23).bold())
                             
                             Spacer()
                         }
@@ -211,7 +252,7 @@ struct HomeView: View {
                     VStack {
                         HStack {
                             Text("M2")
-                                .font(.system(size: 25).bold())
+                                .font(.system(size: 23).bold())
                             
                             Spacer()
                         }
@@ -229,7 +270,7 @@ struct HomeView: View {
                 VStack {
                     HStack {
                         Text("경제성장률")
-                            .font(.system(size: 25).bold())
+                            .font(.system(size: 23).bold())
                         
                         Spacer()
                     }
@@ -246,7 +287,7 @@ struct HomeView: View {
                 VStack {
                     HStack {
                         Text("실업률")
-                            .font(.system(size: 25).bold())
+                            .font(.system(size: 23).bold())
                         
                         Spacer()
                     }
@@ -260,6 +301,16 @@ struct HomeView: View {
                         .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                 }
                 .padding(.bottom, 50)
+                
+//                            LazyVStack {
+//                                ForEach(viewModel.CPI, id: \.self) { cycleData in
+//                                    Text("\(cycleData.statName)")
+//                                    Text("\(cycleData.dataValue)")
+//                                    Text(cycleData.time)
+//                                        .padding(.bottom)
+//                
+//                                }
+//                            }
             }
             .padding()
         }

@@ -9,26 +9,28 @@ import Foundation
 
 @Observable
 class HomeViewModel {
-    var baseRate = [EconomicIndicatorCycleData]()
+    var BR = [EconomicIndicatorCycleData]()
+    var CPI = [EconomicIndicatorCycleData]()
     
     // 그래프 X축 연도 필터
-    var baseRateYearFilter: [String] {
-        baseRate
+    var BRYearFilter: [String] {
+        BR
             .filter { $0.time.hasSuffix("01.01") }
             .map { $0.time }
     }
     
     init() {
-        requestBaseRate()
+        requestBR()
+        requestCPI()
     }
 
     // 기준금리
-    func requestBaseRate() {
-        EconomicIndicatorManager.requestBaseRate { baseRate in
+    func requestBR() {
+        EconomicIndicatorManager.requestBR { BR in
             DispatchQueue.main.async {
-                self.baseRate = baseRate.map { data in
+                self.BR = BR.map { data in
                     var modifiedData = data
-                    modifiedData.time = self.formatDateString(data.time)
+                    modifiedData.time = self.formatDateString(data.time, type: .day)
                     
                     return modifiedData
                 }
@@ -36,28 +38,18 @@ class HomeViewModel {
         }
     }
     
-    // yy.MM.dd 변환
-    private func formatDateString(_ dateString: String) -> String {
-        let year = dateString.prefix(4)
-        let month = dateString.dropFirst(4).prefix(2)
-        let day = dateString.suffix(2)
-        
-        return "\(year).\(month).\(day)"
-    }
-    
-    // 이전 지표의 차이값 계산
-    func calculateBaseRateRecentDataValueChangeDifference() -> (difference: Double, date: String)? {
-        guard let last = baseRate.last, let lastValue = Double(last.dataValue) else {
-            return nil
-        }
-        
-        for previousData in baseRate.dropLast().reversed() {
-            if let previousValue = Double(previousData.dataValue), previousValue != lastValue {
-                let difference = lastValue - previousValue
-                return (difference, previousData.time)
+    // 소비자물가지수
+    func requestCPI() {
+        EconomicIndicatorManager.requestCPI { CPI in
+            DispatchQueue.main.async {
+                self.CPI = CPI.map { data in
+                    var modifiedData = data
+                    modifiedData.time = self.formatDateString(data.time, type: .month)
+                    
+                    return modifiedData
+                }
             }
         }
-        
-        return nil
     }
+    
 }
