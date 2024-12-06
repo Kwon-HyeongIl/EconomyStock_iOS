@@ -220,26 +220,34 @@ struct HomeView: View {
                                     RoundedRectangle(cornerRadius: 10)
                                         .foregroundStyle(.white)
                                         .frame(width: BRInfo ? 230 : 0, height: BRInfo ? 130 : 0)
+                                        .overlay {
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .stroke(lineWidth: 1.5)
+                                                .frame(width: BRInfo ? 230 : 0, height: BRInfo ? 130 : 0)
+                                                .foregroundStyle(Color.ESTitle)
+                                            
+                                        }
                                         .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                                         .padding(.top, 25)
                                         .padding(.trailing, 25)
                                     
-                                    VStack {
-                                        Text("기준금리")
-                                            .font(.system(size: 18))
-                                            .fontWeight(.semibold)
-                                            .foregroundStyle(Color.ESTitle)
-                                            .padding(.bottom, 10)
-                                        
-                                        Text("기준금리는 금리 체계의 기준이 되는 금리를 의미하며, 매월 금융통화위원회에서 결정돼요.")
-                                            .font(.system(size: 15))
-                                            .fontWeight(.semibold)
-                                            .multilineTextAlignment(.center)
+                                    if BRInfoText {
+                                        VStack {
+                                            Text("기준금리")
+                                                .font(.system(size: 18))
+                                                .fontWeight(.semibold)
+                                                .foregroundStyle(Color.ESTitle)
+                                                .padding(.bottom, 10)
+                                            
+                                            Text("기준금리는 금리 체계의 기준이 되는 금리를 의미하며, 매월 금융통화위원회에서 결정돼요.")
+                                                .font(.system(size: 15))
+                                                .fontWeight(.semibold)
+                                                .multilineTextAlignment(.center)
+                                        }
+                                        .frame(width: 230, height: 130)
+                                        .padding(.top, 25)
+                                        .padding(.trailing, 25)
                                     }
-                                    .frame(width: 230, height: 130)
-                                    .opacity(BRInfoText ? 1.0 : 0.0)
-                                    .padding(.top, 25)
-                                    .padding(.trailing, 25)
                                 }
                             }
                             
