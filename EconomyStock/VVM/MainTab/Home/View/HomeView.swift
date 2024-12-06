@@ -15,170 +15,175 @@ struct HomeView: View {
     @State private var currentActiveGestureItem: EconomicIndicatorCycleData?
     @State private var plotWidth: CGFloat = 0
     
-    @State private var isRedacted = false
+    @State private var isRedacted = true
     
     var body: some View {
         ScrollView {
             VStack(spacing: 15) {
-                VStack {
-                    HStack {
-                        Text("기준금리")
-                            .font(.system(size: 23).bold())
-                            .fixedSize()
-                        
-                        if let dataValue = viewModel.BR.last?.dataValue {
-                            (Text("\(dataValue)")
-                             + Text(" ")
-                                .font(.system(size: 15))
-                             + Text("%")
-                                .font(.system(size: 15))
-                            )
-                            .font(.system(size: 21).bold())
-                            .padding(.leading, 13)
-                            .padding(.trailing, 5)
-                            .padding(.bottom, 2)
-                        }
-                        
-                        if let diffData = viewModel.calculateBRRecentDataValueChangeDifference() {
-                            VStack {
-                                HStack(spacing: 0) {
-                                    if diffData.difference > 0 {
-                                        LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
-                                            .rotationEffect(.degrees(180))
-                                        
-                                        (Text("\(String(format: "%.2f", diffData.difference))")
-                                         + Text(" ")
-                                            .font(.system(size: 11))
-                                         + Text("%")
-                                            .font(.system(size: 9))
-                                        )
-                                        .font(.system(size: 14).bold())
-                                        .foregroundStyle(Color(hex: "D92B2B"))
-                                        
-                                    } else {
-                                        LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
-                                            .padding(.top, 3)
-                                        
-                                        (Text("\(String(format: "%.2f", diffData.difference))")
-                                         + Text(" ")
-                                            .font(.system(size: 11))
-                                         + Text("%")
-                                            .font(.system(size: 9))
-                                        )
-                                        .font(.system(size: 14).bold())
-                                        .foregroundStyle(Color.ESTitle)
-                                    }
-                                }
-                                
-                                Text("(\(diffData.date) 대비)")
-                                    .font(.system(size: 8))
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(.gray)
-                                    .padding(.leading, 5)
+                if !isRedacted {
+                    VStack {
+                        HStack {
+                            Text("기준금리")
+                                .font(.system(size: 23).bold())
+                                .fixedSize()
+                            
+                            if let dataValue = viewModel.BR.last?.dataValue {
+                                (Text("\(dataValue)")
+                                 + Text(" ")
+                                    .font(.system(size: 15))
+                                 + Text("%")
+                                    .font(.system(size: 15))
+                                )
+                                .font(.system(size: 21).bold())
+                                .padding(.leading, 13)
+                                .padding(.trailing, 5)
+                                .padding(.bottom, 2)
                             }
-                        }
-
-                       Spacer()
-                    }
-                    
-                    Chart {
-                        ForEach(viewModel.BR) { cycleData in
-                            LineMark(
-                                x: .value("일", cycleData.time),
-                                y: .value("기준금리", chartAni ? (Double(cycleData.dataValue) ?? 0) : 0)
-                            )
-                            .foregroundStyle(Color.ESTitle)
-                            .interpolationMethod(.catmullRom)
                             
-                            AreaMark(
-                                x: .value("일", cycleData.time),
-                                y: .value("기준금리", chartAni ? (Double(cycleData.dataValue) ?? 0) : 0)
-                            )
-                            .foregroundStyle(Color.ESTitle.opacity(0.1).gradient)
-                            .interpolationMethod(.catmullRom)
-                            
-                            if let currentActiveGestureItem, currentActiveGestureItem.id == cycleData.id {
-                                RuleMark(x: .value("일", currentActiveGestureItem.time))
-                                    .lineStyle(.init(lineWidth: 2, miterLimit: 2, dash: [2], dashPhase: 5))
-                                    .offset(x: (plotWidth / CGFloat(viewModel.BR.count)) / 2)
-                                    .annotation(position: .top) {
-                                        VStack(alignment: .leading, spacing: 6) {
-                                            Text("기준금리")
-                                                .font(.caption)
-                                                .foregroundStyle(.gray)
+                            if let diffData = viewModel.calculateBRRecentDataValueChangeDifference() {
+                                VStack {
+                                    HStack(spacing: 0) {
+                                        if diffData.difference > 0 {
+                                            LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
+                                                .rotationEffect(.degrees(180))
                                             
-                                            Text(currentActiveGestureItem.time)
-                                                .font(.caption)
-                                                .foregroundStyle(.gray)
+                                            (Text("\(String(format: "%.2f", diffData.difference))")
+                                             + Text(" ")
+                                                .font(.system(size: 11))
+                                             + Text("%")
+                                                .font(.system(size: 9))
+                                            )
+                                            .font(.system(size: 14).bold())
+                                            .foregroundStyle(Color(hex: "D92B2B"))
                                             
-                                            Text("\(currentActiveGestureItem.dataValue)%")
-                                                .font(.title3.bold())
-                                        }
-                                        .padding(.horizontal, 10)
-                                        .padding(.vertical, 4)
-                                        .background {
-                                            RoundedRectangle(cornerRadius: 6, style: .continuous)
-                                                .fill(.white)
-                                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                        } else {
+                                            LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
+                                                .padding(.top, 3)
+                                            
+                                            (Text("\(String(format: "%.2f", diffData.difference))")
+                                             + Text(" ")
+                                                .font(.system(size: 11))
+                                             + Text("%")
+                                                .font(.system(size: 9))
+                                            )
+                                            .font(.system(size: 14).bold())
+                                            .foregroundStyle(Color.ESTitle)
                                         }
                                     }
-                            }
-                        }
-                    }
-                    .chartXAxis {
-                        AxisMarks(values: viewModel.BRYearFilter) { value in
-                            if let dateString = value.as(String.self) {
-                                AxisGridLine()
-                                
-                                let year = String(dateString.prefix(4))
-                                AxisValueLabel {
-                                    Text("\(year)")
-                                        .fixedSize()
-                                        .padding(.leading, value.index == 0 ? 15 : 0)
+                                    
+                                    Text("(\(diffData.date) 대비)")
+                                        .font(.system(size: 8))
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(.gray)
+                                        .padding(.leading, 5)
                                 }
                             }
+                            
+                            Spacer()
                         }
-                    }
-                    .chartYScale(domain: 0...5)
-                    .chartYAxis {
-                        AxisMarks(values: [0, 1, 2, 3, 4, 5])
-                    }
-                    .chartOverlay(content: { proxy in
-                        GeometryReader{innerProxy in
-                            Rectangle()
-                                .fill(.clear).contentShape(Rectangle())
-                                .gesture(
-                                    DragGesture()
-                                        .onChanged { value in
-                                            let location = value.location
-                                            if let day: String = proxy.value(atX: location.x) {
-                                                if let currentItem = viewModel.BR.first(where: { $0.time == day }) {
-                                                    self.currentActiveGestureItem = currentItem
-                                                    self.plotWidth = proxy.plotSize.width
-                                                }
+                        
+                        Chart {
+                            ForEach(viewModel.BR) { cycleData in
+                                LineMark(
+                                    x: .value("일", cycleData.time),
+                                    y: .value("기준금리", chartAni ? (Double(cycleData.dataValue) ?? 0) : 0)
+                                )
+                                .foregroundStyle(Color.ESTitle)
+                                .interpolationMethod(.catmullRom)
+                                
+                                AreaMark(
+                                    x: .value("일", cycleData.time),
+                                    y: .value("기준금리", chartAni ? (Double(cycleData.dataValue) ?? 0) : 0)
+                                )
+                                .foregroundStyle(Color.ESTitle.opacity(0.1).gradient)
+                                .interpolationMethod(.catmullRom)
+                                
+                                if let currentActiveGestureItem, currentActiveGestureItem.id == cycleData.id {
+                                    RuleMark(x: .value("일", currentActiveGestureItem.time))
+                                        .lineStyle(.init(lineWidth: 2, miterLimit: 2, dash: [2], dashPhase: 5))
+                                        .offset(x: (plotWidth / CGFloat(viewModel.BR.count)) / 2)
+                                        .annotation(position: .top) {
+                                            VStack(alignment: .leading, spacing: 6) {
+                                                Text("기준금리")
+                                                    .font(.caption)
+                                                    .foregroundStyle(.gray)
+                                                
+                                                Text(currentActiveGestureItem.time)
+                                                    .font(.caption)
+                                                    .foregroundStyle(.gray)
+                                                
+                                                Text("\(currentActiveGestureItem.dataValue)%")
+                                                    .font(.title3.bold())
+                                            }
+                                            .padding(.horizontal, 10)
+                                            .padding(.vertical, 4)
+                                            .background {
+                                                RoundedRectangle(cornerRadius: 6, style: .continuous)
+                                                    .fill(.white)
+                                                    .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                                             }
                                         }
-                                        .onEnded { value in
-                                            self.currentActiveGestureItem = nil
-                                        }
-                                )
+                                }
+                            }
                         }
-                    })
-                    .frame(height: 200)
-                    .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            withAnimation(.interactiveSpring(response: 0.8, dampingFraction: 0.8, blendDuration: 0.8)) {
-                                chartAni = true
+                        .chartXAxis {
+                            AxisMarks(values: viewModel.BRYearFilter) { value in
+                                if let dateString = value.as(String.self) {
+                                    AxisGridLine()
+                                    
+                                    let year = String(dateString.prefix(4))
+                                    AxisValueLabel {
+                                        Text("\(year)")
+                                            .fixedSize()
+                                            .padding(.leading, value.index == 0 ? 15 : 0)
+                                    }
+                                }
+                            }
+                        }
+                        .chartYScale(domain: 0...5)
+                        .chartYAxis {
+                            AxisMarks(values: [0, 1, 2, 3, 4, 5])
+                        }
+                        .chartOverlay(content: { proxy in
+                            GeometryReader{innerProxy in
+                                Rectangle()
+                                    .fill(.clear).contentShape(Rectangle())
+                                    .gesture(
+                                        DragGesture()
+                                            .onChanged { value in
+                                                let location = value.location
+                                                if let day: String = proxy.value(atX: location.x) {
+                                                    if let currentItem = viewModel.BR.first(where: { $0.time == day }) {
+                                                        self.currentActiveGestureItem = currentItem
+                                                        self.plotWidth = proxy.plotSize.width
+                                                    }
+                                                }
+                                            }
+                                            .onEnded { value in
+                                                self.currentActiveGestureItem = nil
+                                            }
+                                    )
+                            }
+                        })
+                        .frame(height: 200)
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                withAnimation(.interactiveSpring(response: 0.8, dampingFraction: 0.8, blendDuration: 0.8)) {
+                                    chartAni = true
+                                }
                             }
                         }
                     }
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .padding()
-                .background {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(.white)
-                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .padding()
+                    .background {
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(.white)
+                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                    }
+                    
+                } else {
+                    DummyGraphIndicatorView()
                 }
                 
                 VStack {
@@ -578,18 +583,15 @@ struct HomeView: View {
                         .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                 }
                 .padding(.bottom, 50)
-                
-//                            LazyVStack {
-//                                ForEach(viewModel.CPI, id: \.self) { cycleData in
-//                                    Text("\(cycleData.statName)")
-//                                    Text("\(cycleData.dataValue)")
-//                                    Text(cycleData.time)
-//                                        .padding(.bottom)
-//                
-//                                }
-//                            }
             }
             .padding()
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                withAnimation(.easeOut(duration: 0.3)) {
+                    isRedacted = false
+                }
+            }
         }
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {

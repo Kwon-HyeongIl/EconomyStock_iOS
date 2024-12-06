@@ -16,37 +16,20 @@ struct DummyGraphIndicatorView: View {
                     .font(.system(size: 23).bold())
                     .fixedSize()
                 
-                    (Text("DUMMY")
-                     + Text(" ")
-                        .font(.system(size: 15))
-                     + Text("%")
-                        .font(.system(size: 15))
-                    )
+                    Text("DUMMY")
                     .font(.system(size: 21).bold())
                     .padding(.leading, 13)
                     .padding(.trailing, 5)
                     .padding(.bottom, 2)
                 
                     VStack {
-                        HStack(spacing: 0) {
-                                LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
-                                    .rotationEffect(.degrees(180))
-                                
-                                (Text("DUMMY")
-                                 + Text(" ")
-                                    .font(.system(size: 11))
-                                 + Text("%")
-                                    .font(.system(size: 9))
-                                )
-                                .font(.system(size: 14).bold())
-                                .foregroundStyle(Color(hex: "D92B2B"))
-                        }
+                        Text("DUMMYDUMMY")
+                            .font(.system(size: 14))
                         
-                        Text("DUMMY DUM)")
+                        Text("DUMMYDUMMMYDUMMY")
                             .font(.system(size: 8))
                             .fontWeight(.semibold)
                             .foregroundStyle(.gray)
-                            .padding(.leading, 5)
                     }
 
                Spacer()
@@ -54,15 +37,21 @@ struct DummyGraphIndicatorView: View {
             
             RoundedRectangle(cornerRadius: 10)
                 .frame(height: 200)
+                .foregroundStyle(.black)
+                .opacity(0.15)
         }
+        .frame(height: 250)
+        .frame(maxWidth: .infinity)
+        .padding()
+        .background(.ultraThinMaterial)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .blur(radius: 1.0)
         .redacted(reason: .placeholder)
         .shimmering(bandSize: 0.4)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding()
-        .background {
-            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(.white)
-                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
-        }
     }
 }
+
+#Preview {
+    DummyGraphIndicatorView()
+}
+
