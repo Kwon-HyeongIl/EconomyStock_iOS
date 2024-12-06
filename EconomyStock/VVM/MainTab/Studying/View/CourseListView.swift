@@ -31,4 +31,6 @@ struct CourseListView: View {
 
 #Preview {
     CourseListView()
+        .environment(NavigationRouter())
+        .environment(CourseListViewCapsule())
 }
