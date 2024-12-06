@@ -10,9 +10,12 @@ import Charts
 
 struct HomeView: View {
     @State private var viewModel = HomeViewModel()
+    
     @State private var chartAni = false
     @State private var currentActiveGestureItem: EconomicIndicatorCycleData?
     @State private var plotWidth: CGFloat = 0
+    
+    @State private var isRedacted = false
     
     var body: some View {
         ScrollView {

@@ -176,6 +176,10 @@
 		CAAA4B552CC9F2F70083F86C /* AisleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA4B542CC9F2F70083F86C /* AisleView.swift */; };
 		CAAAC35D2D02A0450006D8DE /* EconomicIndicatorManager+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAAC35C2D02A0450006D8DE /* EconomicIndicatorManager+Date.swift */; };
 		CAAAC35F2D02A19D0006D8DE /* HomeViewModel+Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAAC35E2D02A19D0006D8DE /* HomeViewModel+Tool.swift */; };
+		CAAAC3622D02CC650006D8DE /* DummyGraphIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAAC3612D02CC640006D8DE /* DummyGraphIndicatorView.swift */; };
+		CAAAC3642D02CC790006D8DE /* DummyHorizontalIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAAC3632D02CC790006D8DE /* DummyHorizontalIndicatorView.swift */; };
+		CAAAC3662D02CC870006D8DE /* DummyVerticalInticatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAAC3652D02CC870006D8DE /* DummyVerticalInticatorView.swift */; };
+		CAAAC3692D02CEBA0006D8DE /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = CAAAC3682D02CEBA0006D8DE /* Shimmer */; };
 		CAACCD0B2CF87D4D004156C9 /* MoneyAndFinance17_FinancePaper.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAACCD0A2CF87D4D004156C9 /* MoneyAndFinance17_FinancePaper.lottie */; };
 		CAACCD0D2CF87D53004156C9 /* MoneyAndFinance17_HomePrice.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAACCD0C2CF87D53004156C9 /* MoneyAndFinance17_HomePrice.lottie */; };
 		CAACCD0F2CF87D5B004156C9 /* ArrowDown.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAACCD0E2CF87D5B004156C9 /* ArrowDown.lottie */; };
@@ -413,6 +417,9 @@
 		CAAA4B542CC9F2F70083F86C /* AisleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AisleView.swift; sourceTree = "<group>"; };
 		CAAAC35C2D02A0450006D8DE /* EconomicIndicatorManager+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EconomicIndicatorManager+Date.swift"; sourceTree = "<group>"; };
 		CAAAC35E2D02A19D0006D8DE /* HomeViewModel+Tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewModel+Tool.swift"; sourceTree = "<group>"; };
+		CAAAC3612D02CC640006D8DE /* DummyGraphIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyGraphIndicatorView.swift; sourceTree = "<group>"; };
+		CAAAC3632D02CC790006D8DE /* DummyHorizontalIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyHorizontalIndicatorView.swift; sourceTree = "<group>"; };
+		CAAAC3652D02CC870006D8DE /* DummyVerticalInticatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyVerticalInticatorView.swift; sourceTree = "<group>"; };
 		CAACCD0A2CF87D4D004156C9 /* MoneyAndFinance17_FinancePaper.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance17_FinancePaper.lottie; sourceTree = "<group>"; };
 		CAACCD0C2CF87D53004156C9 /* MoneyAndFinance17_HomePrice.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance17_HomePrice.lottie; sourceTree = "<group>"; };
 		CAACCD0E2CF87D5B004156C9 /* ArrowDown.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ArrowDown.lottie; sourceTree = "<group>"; };
@@ -499,6 +506,7 @@
 				CA9BB9DE2CABAACF00886A1A /* FirebaseFirestore in Frameworks */,
 				CA6C54D42CB160A1008CF887 /* GoogleSignIn in Frameworks */,
 				CA662BCE2CAD72E6009E8D5F /* KakaoSDKUser in Frameworks */,
+				CAAAC3692D02CEBA0006D8DE /* Shimmer in Frameworks */,
 				CA9BB9E02CABAACF00886A1A /* FirebaseStorage in Frameworks */,
 				CA662BCC2CAD72E6009E8D5F /* KakaoSDKCommon in Frameworks */,
 				CA662BCA2CAD72E6009E8D5F /* KakaoSDKAuth in Frameworks */,
@@ -694,6 +702,7 @@
 			isa = PBXGroup;
 			children = (
 				CA17FC7C2CB00AB90050250B /* HomeView.swift */,
+				CAAAC3602D02CC290006D8DE /* Dummy */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1289,6 +1298,16 @@
 			path = 3_UnEmployment;
 			sourceTree = "<group>";
 		};
+		CAAAC3602D02CC290006D8DE /* Dummy */ = {
+			isa = PBXGroup;
+			children = (
+				CAAAC3612D02CC640006D8DE /* DummyGraphIndicatorView.swift */,
+				CAAAC3632D02CC790006D8DE /* DummyHorizontalIndicatorView.swift */,
+				CAAAC3652D02CC870006D8DE /* DummyVerticalInticatorView.swift */,
+			);
+			path = Dummy;
+			sourceTree = "<group>";
+		};
 		CAB77FD52CB8EC1600DF11D6 /* Course */ = {
 			isa = PBXGroup;
 			children = (
@@ -1561,6 +1580,7 @@
 				CA6C54D32CB160A1008CF887 /* GoogleSignIn */,
 				CA6C54D52CB160A1008CF887 /* GoogleSignInSwift */,
 				CA7757672CE22BAC00A8F3DE /* PopupView */,
+				CAAAC3682D02CEBA0006D8DE /* Shimmer */,
 			);
 			productName = EconomyStock;
 			productReference = CA83477C2CAAE28500BA1E4A /* EconomyStock.app */;
@@ -1597,6 +1617,7 @@
 				CA1DDD362CB0E75000C84D08 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				CA6C54D22CB160A1008CF887 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				CA7757662CE22BAC00A8F3DE /* XCRemoteSwiftPackageReference "PopupView" */,
+				CAAAC3672D02CEBA0006D8DE /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CA83477D2CAAE28500BA1E4A /* Products */;
@@ -1753,6 +1774,7 @@
 				CAD255FA2CE6DE35008E7788 /* PriceLevel6View.swift in Sources */,
 				CA58A4ED2CB6D9E900DB91BD /* ProgressCircleView.swift in Sources */,
 				CA17FC722CB005A10050250B /* MainTabCapsule.swift in Sources */,
+				CAAAC3662D02CC870006D8DE /* DummyVerticalInticatorView.swift in Sources */,
 				CA61CEB52CE0A0C3007BCF4E /* BasicEconomy11View.swift in Sources */,
 				CAD255FC2CE6DE3C008E7788 /* PriceLevel7View.swift in Sources */,
 				CACF34262CEDD4FD00ECC6FA /* MoneyAndFinance11View.swift in Sources */,
@@ -1811,6 +1833,7 @@
 				CACF34282CEDD50500ECC6FA /* MoneyAndFinance12View.swift in Sources */,
 				CA08F39A2CB8394C0093117E /* PriceLevel2View.swift in Sources */,
 				CA08F39C2CB839520093117E /* PriceLevel3View.swift in Sources */,
+				CAAAC3622D02CC650006D8DE /* DummyGraphIndicatorView.swift in Sources */,
 				CA17FC702CB005800050250B /* MainCustomTabView.swift in Sources */,
 				CACF341A2CEDD4D500ECC6FA /* MoneyAndFinance5View.swift in Sources */,
 				CACF341E2CEDD4E300ECC6FA /* MoneyAndFinance7View.swift in Sources */,
@@ -1845,6 +1868,7 @@
 				CAB77FD72CB8EC2900DF11D6 /* CourseToolbarModifier.swift in Sources */,
 				CAAA4B532CC9F2A00083F86C /* NavigationBaseView.swift in Sources */,
 				CA92DDBB2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift in Sources */,
+				CAAAC3642D02CC790006D8DE /* DummyHorizontalIndicatorView.swift in Sources */,
 				CA8B5DBF2CFF24650070DB71 /* EconomicIndicatorManager.swift in Sources */,
 				CA08F3A02CB839600093117E /* PriceLevel5View.swift in Sources */,
 				CA8B5DB72CFF23020070DB71 /* HomeViewModel.swift in Sources */,
@@ -2115,6 +2139,14 @@
 				minimumVersion = 11.3.0;
 			};
 		};
+		CAAAC3672D02CEBA0006D8DE /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/markiv/SwiftUI-Shimmer";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.1;
+			};
+		};
 		CAEE16532CAD0C8100210BD0 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
@@ -2180,6 +2212,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CA9BB9DA2CABAACF00886A1A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		CAAAC3682D02CEBA0006D8DE /* Shimmer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAAAC3672D02CEBA0006D8DE /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */;
+			productName = Shimmer;
 		};
 		CAEE16542CAD0C8100210BD0 /* CryptoSwift */ = {
 			isa = XCSwiftPackageProductDependency;
