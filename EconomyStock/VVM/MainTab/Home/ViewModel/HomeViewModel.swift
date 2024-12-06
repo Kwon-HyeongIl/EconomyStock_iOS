@@ -17,6 +17,9 @@ class HomeViewModel {
     var EGR = [EconomicIndicatorCycleData]()
     var UR = [EconomicIndicatorCycleData]()
     
+    var isFirstLoad = true
+    var isRedacted = true
+    
     // 그래프 X축 연도 필터
     var BRYearFilter: [String] {
         BR

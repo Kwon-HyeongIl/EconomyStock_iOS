@@ -11,28 +11,20 @@ import Shimmer
 struct DummyGraphIndicatorView: View {
     var body: some View {
         VStack {
-            HStack {
-                Text("기준금리")
-                    .font(.system(size: 23).bold())
+            HStack(spacing: 15) {
+                Text("DUMMYDUMMY")
+                    .font(.system(size: 25).bold())
                     .fixedSize()
                 
-                    Text("DUMMY")
+                Text("DUMMY")
                     .font(.system(size: 21).bold())
                     .padding(.leading, 13)
                     .padding(.trailing, 5)
-                    .padding(.bottom, 2)
                 
-                    VStack {
-                        Text("DUMMYDUMMY")
-                            .font(.system(size: 14))
-                        
-                        Text("DUMMYDUMMMYDUMMY")
-                            .font(.system(size: 8))
-                            .fontWeight(.semibold)
-                            .foregroundStyle(.gray)
-                    }
-
-               Spacer()
+                Text("DUMMYDUM")
+                    .font(.system(size: 14))
+                
+                Spacer()
             }
             
             RoundedRectangle(cornerRadius: 10)
@@ -43,7 +35,7 @@ struct DummyGraphIndicatorView: View {
         .frame(height: 250)
         .frame(maxWidth: .infinity)
         .padding()
-        .background(.ultraThinMaterial)
+        .background(.gray.opacity(0.25))
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .blur(radius: 1.0)
         .redacted(reason: .placeholder)

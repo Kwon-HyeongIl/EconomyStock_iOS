@@ -15,12 +15,10 @@ struct HomeView: View {
     @State private var currentActiveGestureItem: EconomicIndicatorCycleData?
     @State private var plotWidth: CGFloat = 0
     
-    @State private var isRedacted = true
-    
     var body: some View {
         ScrollView {
             VStack(spacing: 15) {
-                if !isRedacted {
+                if !viewModel.isRedacted {
                     VStack {
                         HStack {
                             Text("기준금리")
@@ -37,7 +35,7 @@ struct HomeView: View {
                                 .font(.system(size: 21).bold())
                                 .padding(.leading, 13)
                                 .padding(.trailing, 5)
-                                .padding(.bottom, 2)
+                                .padding(.bottom, 1)
                             }
                             
                             if let diffData = viewModel.calculateBRRecentDataValueChangeDifference() {
@@ -186,195 +184,65 @@ struct HomeView: View {
                     DummyGraphIndicatorView()
                 }
                 
-                VStack {
-                    HStack {
-                        Text("소비자물가지수")
-                            .font(.system(size: 23).bold())
-                            .fixedSize()
-                        
-                        if let dataValue = viewModel.CPI.last?.dataValue {
-                            Text("\(dataValue)")
-                                .font(.system(size: 21).bold())
-                                .padding(.leading, 13)
-                                .padding(.trailing, 5)
-                                .padding(.bottom, 2)
-                        }
-                        
-                        if let diffData = viewModel.calculateCPIRecentDataValueChangeDifference() {
-                            VStack {
-                                HStack(spacing: 0) {
-                                    if diffData.difference > 0 {
-                                        LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
-                                            .rotationEffect(.degrees(180))
-                                        
-                                        (Text("\(String(format: "%.1f", diffData.difference))")
-                                         + Text(" ")
-                                            .font(.system(size: 11))
-                                         + Text("%")
-                                            .font(.system(size: 9))
-                                        )
-                                        .font(.system(size: 14).bold())
-                                        .foregroundStyle(Color(hex: "D92B2B"))
-                                        
-                                    } else {
-                                        LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
-                                            .padding(.top, 3)
-                                        
-                                        (Text("\(String(format: "%.1f", diffData.difference))")
-                                         + Text(" ")
-                                            .font(.system(size: 11))
-                                         + Text("%")
-                                            .font(.system(size: 9))
-                                        )
-                                        .font(.system(size: 14).bold())
-                                        .foregroundStyle(Color.ESTitle)
-                                    }
-                                }
-                                
-                                Text("(\(diffData.date) 대비)")
-                                    .font(.system(size: 8))
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(.gray)
-                                    .padding(.leading, 5)
-                            }
-                        }
-                        
-                        Spacer()
-                    }
-                }
-                .frame(maxWidth: .infinity)
-                .frame(height: 60)
-                .padding()
-                .background {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(.white)
-                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
-                }
-                
-                VStack {
-                    HStack {
-                        Text("원달러환율")
-                            .font(.system(size: 23).bold())
-                        
-                        if let dataValue = viewModel.WDER.last?.dataValue {
-                            (Text("\(dataValue)")
-                             + Text(" ")
-                                .font(.system(size: 15))
-                             + Text("원")
-                                .font(.system(size: 15))
-                            )
-                            .font(.system(size: 21).bold())
-                            .padding(.leading, 13)
-                            .padding(.trailing, 5)
-                            .padding(.bottom, 2)
-                        }
-                        
-                        if let diffData = viewModel.calculateWDERRecentDataValueChangeDifference() {
-                            VStack {
-                                HStack(spacing: 0) {
-                                    if diffData.difference > 0 {
-                                        LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
-                                            .rotationEffect(.degrees(180))
-                                        
-                                        (Text("\(String(format: "%.1f", diffData.difference))")
-                                         + Text(" ")
-                                            .font(.system(size: 11))
-                                         + Text("원")
-                                            .font(.system(size: 9))
-                                        )
-                                        .font(.system(size: 14).bold())
-                                        .foregroundStyle(Color(hex: "D92B2B"))
-                                    } else {
-                                        LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
-                                            .padding(.top, 3)
-                                        
-                                        (Text("\(String(format: "%.1f", diffData.difference))")
-                                         + Text(" ")
-                                            .font(.system(size: 11))
-                                         + Text("원")
-                                            .font(.system(size: 9))
-                                        )
-                                        .font(.system(size: 14).bold())
-                                        .foregroundStyle(Color.ESTitle)
-                                    }
-                                }
-                                
-                                Text("(\(diffData.date) 대비)")
-                                    .font(.system(size: 8))
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(.gray)
-                                    .padding(.leading, 5)
-                            }
-                        }
-                        
-                        Spacer()
-                    }
-                }
-                .frame(maxWidth: .infinity)
-                .frame(height: 60)
-                .padding()
-                .background {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(.white)
-                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
-                }
-                
-                HStack(spacing: 15) {
+                if !viewModel.isRedacted {
                     VStack {
-                        Text("M1")
-                            .font(.system(size: 23).bold())
-                            .padding(.bottom, 5)
-                        
-                        if let dataValue = viewModel.M1.last?.dataValue {
-                            (Text("\(dataValue)")
-                             + Text(" ")
-                                .font(.system(size: 15))
-                             + Text("십억원")
-                                .font(.system(size: 13))
-                            )
-                            .font(.system(size: 19).bold())
-                        }
+                        HStack {
+                            Text("소비자물가지수")
+                                .font(.system(size: 23).bold())
+                                .fixedSize()
                             
-                        if let diffData = viewModel.calculateM1RecentDataValueChangeDifference() {
-                            VStack {
-                                HStack(spacing: 0) {
-                                    if diffData.difference > 0 {
-                                        LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
-                                            .rotationEffect(.degrees(180))
-                                        
-                                        (Text("\(String(format: "%.1f", diffData.difference))")
-                                         + Text(" ")
-                                            .font(.system(size: 11))
-                                         + Text("십억원")
-                                            .font(.system(size: 7))
-                                        )
-                                        .font(.system(size: 11).bold())
-                                        .foregroundStyle(Color(hex: "D92B2B"))
-                                    } else {
-                                        LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
-                                            .padding(.top, 3)
-                                        
-                                        (Text("\(String(format: "%.1f", diffData.difference))")
-                                         + Text(" ")
-                                            .font(.system(size: 11))
-                                         + Text("십억원")
-                                            .font(.system(size: 7))
-                                        )
-                                        .font(.system(size: 12).bold())
-                                        .foregroundStyle(Color.ESTitle)
-                                    }
-                                }
-                                
-                                Text("(\(diffData.date) 대비)")
-                                    .font(.system(size: 7))
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(.gray)
-                                    .padding(.leading, 5)
+                            if let dataValue = viewModel.CPI.last?.dataValue {
+                                Text("\(dataValue)")
+                                    .font(.system(size: 21).bold())
+                                    .padding(.leading, 13)
+                                    .padding(.trailing, 5)
+                                    .padding(.bottom, 1)
                             }
+                            
+                            if let diffData = viewModel.calculateCPIRecentDataValueChangeDifference() {
+                                VStack {
+                                    HStack(spacing: 0) {
+                                        if diffData.difference > 0 {
+                                            LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
+                                                .rotationEffect(.degrees(180))
+                                            
+                                            (Text("\(String(format: "%.1f", diffData.difference))")
+                                             + Text(" ")
+                                                .font(.system(size: 11))
+                                             + Text("%")
+                                                .font(.system(size: 9))
+                                            )
+                                            .font(.system(size: 14).bold())
+                                            .foregroundStyle(Color(hex: "D92B2B"))
+                                            
+                                        } else {
+                                            LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
+                                                .padding(.top, 3)
+                                            
+                                            (Text("\(String(format: "%.1f", diffData.difference))")
+                                             + Text(" ")
+                                                .font(.system(size: 11))
+                                             + Text("%")
+                                                .font(.system(size: 9))
+                                            )
+                                            .font(.system(size: 14).bold())
+                                            .foregroundStyle(Color.ESTitle)
+                                        }
+                                    }
+                                    
+                                    Text("(\(diffData.date) 대비)")
+                                        .font(.system(size: 8))
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(.gray)
+                                        .padding(.leading, 5)
+                                }
+                            }
+                            
+                            Spacer()
                         }
                     }
                     .frame(maxWidth: .infinity)
-                    .frame(height: 120)
+                    .frame(height: 60)
                     .padding()
                     .background {
                         RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -382,215 +250,379 @@ struct HomeView: View {
                             .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                     }
                     
+                } else {
+                    DummyHorizontalIndicatorView()
+                }
+                
+                if !viewModel.isRedacted {
                     VStack {
-                        Text("M2")
-                            .font(.system(size: 23).bold())
-                            .padding(.bottom, 5)
-                        
-                        if let dataValue = viewModel.M2.last?.dataValue {
-                            (Text("\(dataValue)")
-                             + Text(" ")
-                                .font(.system(size: 15))
-                             + Text("십억원")
-                                .font(.system(size: 13))
-                            )
-                            .font(.system(size: 19).bold())
-                        }
+                        HStack {
+                            Text("원달러환율")
+                                .font(.system(size: 23).bold())
                             
-                        if let diffData = viewModel.calculateM2RecentDataValueChangeDifference() {
-                            VStack {
-                                HStack(spacing: 0) {
-                                    if diffData.difference > 0 {
-                                        LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
-                                            .rotationEffect(.degrees(180))
-                                        
-                                        (Text("\(String(format: "%.1f", diffData.difference))")
-                                         + Text(" ")
-                                            .font(.system(size: 11))
-                                         + Text("십억원")
-                                            .font(.system(size: 7))
-                                        )
-                                        .font(.system(size: 12).bold())
-                                        .foregroundStyle(Color(hex: "D92B2B"))
-                                    } else {
-                                        LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
-                                            .padding(.top, 3)
-                                        
-                                        (Text("\(String(format: "%.1f", diffData.difference))")
-                                         + Text(" ")
-                                            .font(.system(size: 11))
-                                         + Text("십억원")
-                                            .font(.system(size: 7))
-                                        )
-                                        .font(.system(size: 12).bold())
-                                        .foregroundStyle(Color.ESTitle)
-                                    }
-                                }
-                                
-                                Text("(\(diffData.date) 대비)")
-                                    .font(.system(size: 7))
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(.gray)
-                                    .padding(.leading, 5)
+                            if let dataValue = viewModel.WDER.last?.dataValue {
+                                (Text("\(dataValue)")
+                                 + Text(" ")
+                                    .font(.system(size: 15))
+                                 + Text("원")
+                                    .font(.system(size: 15))
+                                )
+                                .font(.system(size: 21).bold())
+                                .padding(.leading, 13)
+                                .padding(.trailing, 5)
+                                .padding(.bottom, 1)
                             }
+                            
+                            if let diffData = viewModel.calculateWDERRecentDataValueChangeDifference() {
+                                VStack {
+                                    HStack(spacing: 0) {
+                                        if diffData.difference > 0 {
+                                            LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
+                                                .rotationEffect(.degrees(180))
+                                            
+                                            (Text("\(String(format: "%.1f", diffData.difference))")
+                                             + Text(" ")
+                                                .font(.system(size: 11))
+                                             + Text("원")
+                                                .font(.system(size: 9))
+                                            )
+                                            .font(.system(size: 14).bold())
+                                            .foregroundStyle(Color(hex: "D92B2B"))
+                                        } else {
+                                            LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
+                                                .padding(.top, 3)
+                                            
+                                            (Text("\(String(format: "%.1f", diffData.difference))")
+                                             + Text(" ")
+                                                .font(.system(size: 11))
+                                             + Text("원")
+                                                .font(.system(size: 9))
+                                            )
+                                            .font(.system(size: 14).bold())
+                                            .foregroundStyle(Color.ESTitle)
+                                        }
+                                    }
+                                    
+                                    Text("(\(diffData.date) 대비)")
+                                        .font(.system(size: 8))
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(.gray)
+                                        .padding(.leading, 5)
+                                }
+                            }
+                            
+                            Spacer()
                         }
                     }
                     .frame(maxWidth: .infinity)
-                    .frame(height: 120)
+                    .frame(height: 60)
                     .padding()
                     .background {
                         RoundedRectangle(cornerRadius: 10, style: .continuous)
                             .fill(.white)
                             .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                     }
+                    
+                } else {
+                    DummyHorizontalIndicatorView()
                 }
                 
-                VStack {
-                    HStack {
-                        Text("경제성장률")
-                            .font(.system(size: 23).bold())
-                        
-                        if let dataValue = viewModel.EGR.last?.dataValue {
-                            (Text("\(dataValue)")
-                             + Text(" ")
-                                .font(.system(size: 15))
-                             + Text("%")
-                                .font(.system(size: 15))
-                            )
-                            .font(.system(size: 21).bold())
-                            .padding(.leading, 13)
-                            .padding(.trailing, 5)
-                            .padding(.bottom, 2)
-                        }
-                        
-                        if let diffData = viewModel.calculateEGRRecentDataValueChangeDifference() {
-                            VStack {
-                                HStack(spacing: 0) {
-                                    if diffData.difference > 0 {
-                                        LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
-                                            .rotationEffect(.degrees(180))
-                                        
-                                        (Text("\(String(format: "%.3f", diffData.difference))")
-                                         + Text(" ")
-                                            .font(.system(size: 11))
-                                         + Text("%")
-                                            .font(.system(size: 9))
-                                        )
-                                        .font(.system(size: 14).bold())
-                                        .foregroundStyle(Color(hex: "D92B2B"))
-                                        
-                                    } else {
-                                        LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
-                                            .padding(.top, 3)
-                                        
-                                        (Text("\(String(format: "%.3f", diffData.difference))")
-                                         + Text(" ")
-                                            .font(.system(size: 11))
-                                         + Text("%")
-                                            .font(.system(size: 9))
-                                        )
-                                        .font(.system(size: 14).bold())
-                                        .foregroundStyle(Color.ESTitle)
+                HStack(spacing: 15) {
+                    if !viewModel.isRedacted {
+                        VStack {
+                            Text("M1")
+                                .font(.system(size: 23).bold())
+                                .padding(.bottom, 5)
+                            
+                            if let dataValue = viewModel.M1.last?.dataValue {
+                                (Text("\(dataValue)")
+                                 + Text(" ")
+                                    .font(.system(size: 15))
+                                 + Text("십억원")
+                                    .font(.system(size: 13))
+                                )
+                                .font(.system(size: 19).bold())
+                            }
+                            
+                            if let diffData = viewModel.calculateM1RecentDataValueChangeDifference() {
+                                VStack {
+                                    HStack(spacing: 0) {
+                                        if diffData.difference > 0 {
+                                            LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
+                                                .rotationEffect(.degrees(180))
+                                            
+                                            (Text("\(String(format: "%.1f", diffData.difference))")
+                                             + Text(" ")
+                                                .font(.system(size: 11))
+                                             + Text("십억원")
+                                                .font(.system(size: 7))
+                                            )
+                                            .font(.system(size: 11).bold())
+                                            .foregroundStyle(Color(hex: "D92B2B"))
+                                        } else {
+                                            LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
+                                                .padding(.top, 3)
+                                            
+                                            (Text("\(String(format: "%.1f", diffData.difference))")
+                                             + Text(" ")
+                                                .font(.system(size: 11))
+                                             + Text("십억원")
+                                                .font(.system(size: 7))
+                                            )
+                                            .font(.system(size: 12).bold())
+                                            .foregroundStyle(Color.ESTitle)
+                                        }
                                     }
+                                    
+                                    Text("(\(diffData.date) 대비)")
+                                        .font(.system(size: 7))
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(.gray)
+                                        .padding(.leading, 5)
                                 }
-                                
-                                Text("(\(diffData.date) 대비)")
-                                    .font(.system(size: 8))
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(.gray)
-                                    .padding(.leading, 5)
                             }
                         }
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 120)
+                        .padding()
+                        .background {
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .fill(.white)
+                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                        }
                         
-                        Spacer()
+                    } else {
+                        DummyVerticalInticatorView()
                     }
-                }
-                .frame(maxWidth: .infinity)
-                .frame(height: 60)
-                .padding()
-                .background {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(.white)
-                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                    
+                    if !viewModel.isRedacted {
+                        VStack {
+                            Text("M2")
+                                .font(.system(size: 23).bold())
+                                .padding(.bottom, 5)
+                            
+                            if let dataValue = viewModel.M2.last?.dataValue {
+                                (Text("\(dataValue)")
+                                 + Text(" ")
+                                    .font(.system(size: 15))
+                                 + Text("십억원")
+                                    .font(.system(size: 13))
+                                )
+                                .font(.system(size: 19).bold())
+                            }
+                            
+                            if let diffData = viewModel.calculateM2RecentDataValueChangeDifference() {
+                                VStack {
+                                    HStack(spacing: 0) {
+                                        if diffData.difference > 0 {
+                                            LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
+                                                .rotationEffect(.degrees(180))
+                                            
+                                            (Text("\(String(format: "%.1f", diffData.difference))")
+                                             + Text(" ")
+                                                .font(.system(size: 11))
+                                             + Text("십억원")
+                                                .font(.system(size: 7))
+                                            )
+                                            .font(.system(size: 12).bold())
+                                            .foregroundStyle(Color(hex: "D92B2B"))
+                                        } else {
+                                            LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
+                                                .padding(.top, 3)
+                                            
+                                            (Text("\(String(format: "%.1f", diffData.difference))")
+                                             + Text(" ")
+                                                .font(.system(size: 11))
+                                             + Text("십억원")
+                                                .font(.system(size: 7))
+                                            )
+                                            .font(.system(size: 12).bold())
+                                            .foregroundStyle(Color.ESTitle)
+                                        }
+                                    }
+                                    
+                                    Text("(\(diffData.date) 대비)")
+                                        .font(.system(size: 7))
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(.gray)
+                                        .padding(.leading, 5)
+                                }
+                            }
+                        }
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 120)
+                        .padding()
+                        .background {
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .fill(.white)
+                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                        }
+                        
+                    } else {
+                        DummyVerticalInticatorView()
+                    }
                 }
                 
-                VStack {
-                    HStack {
-                        Text("실업률")
-                            .font(.system(size: 23).bold())
-                        
-                        if let dataValue = viewModel.UR.last?.dataValue {
-                            (Text("\(dataValue)")
-                             + Text(" ")
-                                .font(.system(size: 15))
-                             + Text("%")
-                                .font(.system(size: 15))
-                            )
-                            .font(.system(size: 21).bold())
-                            .padding(.leading, 13)
-                            .padding(.trailing, 5)
-                            .padding(.bottom, 2)
-                        }
-                        
-                        if let diffData = viewModel.calculateURRecentDataValueChangeDifference() {
-                            VStack {
-                                HStack(spacing: 0) {
-                                    if diffData.difference > 0 {
-                                        LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
-                                            .rotationEffect(.degrees(180))
-                                        
-                                        (Text("\(String(format: "%.1f", diffData.difference))")
-                                         + Text(" ")
-                                            .font(.system(size: 11))
-                                         + Text("%")
-                                            .font(.system(size: 9))
-                                        )
-                                        .font(.system(size: 14).bold())
-                                        .foregroundStyle(Color(hex: "D92B2B"))
-                                        
-                                    } else {
-                                        LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
-                                            .padding(.top, 3)
-                                        
-                                        (Text("\(String(format: "%.1f", diffData.difference))")
-                                         + Text(" ")
-                                            .font(.system(size: 11))
-                                         + Text("%")
-                                            .font(.system(size: 9))
-                                        )
-                                        .font(.system(size: 14).bold())
-                                        .foregroundStyle(Color.ESTitle)
-                                    }
-                                }
-                                
-                                Text("(\(diffData.date) 대비)")
-                                    .font(.system(size: 8))
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(.gray)
-                                    .padding(.leading, 5)
+                if !viewModel.isRedacted {
+                    VStack {
+                        HStack {
+                            Text("경제성장률")
+                                .font(.system(size: 23).bold())
+                            
+                            if let dataValue = viewModel.EGR.last?.dataValue {
+                                (Text("\(dataValue)")
+                                 + Text(" ")
+                                    .font(.system(size: 15))
+                                 + Text("%")
+                                    .font(.system(size: 15))
+                                )
+                                .font(.system(size: 21).bold())
+                                .padding(.leading, 13)
+                                .padding(.trailing, 5)
+                                .padding(.bottom, 1)
                             }
+                            
+                            if let diffData = viewModel.calculateEGRRecentDataValueChangeDifference() {
+                                VStack {
+                                    HStack(spacing: 0) {
+                                        if diffData.difference > 0 {
+                                            LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
+                                                .rotationEffect(.degrees(180))
+                                            
+                                            (Text("\(String(format: "%.3f", diffData.difference))")
+                                             + Text(" ")
+                                                .font(.system(size: 11))
+                                             + Text("%")
+                                                .font(.system(size: 9))
+                                            )
+                                            .font(.system(size: 14).bold())
+                                            .foregroundStyle(Color(hex: "D92B2B"))
+                                            
+                                        } else {
+                                            LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
+                                                .padding(.top, 3)
+                                            
+                                            (Text("\(String(format: "%.3f", diffData.difference))")
+                                             + Text(" ")
+                                                .font(.system(size: 11))
+                                             + Text("%")
+                                                .font(.system(size: 9))
+                                            )
+                                            .font(.system(size: 14).bold())
+                                            .foregroundStyle(Color.ESTitle)
+                                        }
+                                    }
+                                    
+                                    Text("(\(diffData.date) 대비)")
+                                        .font(.system(size: 8))
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(.gray)
+                                        .padding(.leading, 5)
+                                }
+                            }
+                            
+                            Spacer()
                         }
-                        
-                        Spacer()
                     }
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 60)
+                    .padding()
+                    .background {
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(.white)
+                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                    }
+                    
+                } else {
+                    DummyHorizontalIndicatorView()
                 }
-                .frame(maxWidth: .infinity)
-                .frame(height: 60)
-                .padding()
-                .background {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(.white)
-                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                
+                if !viewModel.isRedacted {
+                    VStack {
+                        HStack {
+                            Text("실업률")
+                                .font(.system(size: 23).bold())
+                            
+                            if let dataValue = viewModel.UR.last?.dataValue {
+                                (Text("\(dataValue)")
+                                 + Text(" ")
+                                    .font(.system(size: 15))
+                                 + Text("%")
+                                    .font(.system(size: 15))
+                                )
+                                .font(.system(size: 21).bold())
+                                .padding(.leading, 13)
+                                .padding(.trailing, 5)
+                                .padding(.bottom, 1)
+                            }
+                            
+                            if let diffData = viewModel.calculateURRecentDataValueChangeDifference() {
+                                VStack {
+                                    HStack(spacing: 0) {
+                                        if diffData.difference > 0 {
+                                            LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
+                                                .rotationEffect(.degrees(180))
+                                            
+                                            (Text("\(String(format: "%.1f", diffData.difference))")
+                                             + Text(" ")
+                                                .font(.system(size: 11))
+                                             + Text("%")
+                                                .font(.system(size: 9))
+                                            )
+                                            .font(.system(size: 14).bold())
+                                            .foregroundStyle(Color(hex: "D92B2B"))
+                                            
+                                        } else {
+                                            LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
+                                                .padding(.top, 3)
+                                            
+                                            (Text("\(String(format: "%.1f", diffData.difference))")
+                                             + Text(" ")
+                                                .font(.system(size: 11))
+                                             + Text("%")
+                                                .font(.system(size: 9))
+                                            )
+                                            .font(.system(size: 14).bold())
+                                            .foregroundStyle(Color.ESTitle)
+                                        }
+                                    }
+                                    
+                                    Text("(\(diffData.date) 대비)")
+                                        .font(.system(size: 8))
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(.gray)
+                                        .padding(.leading, 5)
+                                }
+                            }
+                            
+                            Spacer()
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 60)
+                    .padding()
+                    .background {
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(.white)
+                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                    }
+                    .padding(.bottom, 50)
+                    
+                } else {
+                    DummyHorizontalIndicatorView()
                 }
-                .padding(.bottom, 50)
             }
             .padding()
         }
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                withAnimation(.easeOut(duration: 0.3)) {
-                    isRedacted = false
+            if viewModel.isFirstLoad {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                    withAnimation(.easeOut(duration: 0.3)) {
+                        viewModel.isRedacted = false
+                    }
                 }
+                
+                viewModel.isFirstLoad = false
             }
         }
         .toolbar {
