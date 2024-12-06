@@ -44,109 +44,13 @@ extension HomeViewModel {
     }
 
     
-    // 기준금리 이전 지표의 차이값 계산
-    func calculateBRRecentDataValueChangeDifference() -> (difference: Double, date: String)? {
-        guard let last = BR.last, let lastValue = Double(last.dataValue) else {
+    // 이전 지표의 차이값 계산
+    func calculateRecentDataValueChangeDifference(for dataArray: [EconomicIndicatorCycleData]) -> (difference: Double, date: String)? {
+        guard let last = dataArray.last, let lastValue = Double(last.dataValue) else {
             return nil
         }
         
-        for previousData in BR.dropLast().reversed() {
-            if let previousValue = Double(previousData.dataValue), previousValue != lastValue {
-                let difference = lastValue - previousValue
-                return (difference, previousData.time)
-            }
-        }
-        
-        return nil
-    }
-    
-    // 소비자물가지수 이전 지표의 차이값 계산
-    func calculateCPIRecentDataValueChangeDifference() -> (difference: Double, date: String)? {
-        guard let last = CPI.last, let lastValue = Double(last.dataValue) else {
-            return nil
-        }
-        
-        for previousData in CPI.dropLast().reversed() {
-            if let previousValue = Double(previousData.dataValue), previousValue != lastValue {
-                let difference = lastValue - previousValue
-                return (difference, previousData.time)
-            }
-        }
-        
-        return nil
-    }
-    
-    // 원달러환율 이전 지표의 차이값 계산
-    func calculateWDERRecentDataValueChangeDifference() -> (difference: Double, date: String)? {
-        guard let last = WDER.last, let lastValue = Double(last.dataValue) else {
-            return nil
-        }
-        
-        for previousData in WDER.dropLast().reversed() {
-            if let previousValue = Double(previousData.dataValue), previousValue != lastValue {
-                let difference = lastValue - previousValue
-                return (difference, previousData.time)
-            }
-        }
-        
-        return nil
-    }
-    
-    // M1
-    func calculateM1RecentDataValueChangeDifference() -> (difference: Double, date: String)? {
-        guard let last = M1.last, let lastValue = Double(last.dataValue) else {
-            return nil
-        }
-        
-        for previousData in M1.dropLast().reversed() {
-            if let previousValue = Double(previousData.dataValue), previousValue != lastValue {
-                let difference = lastValue - previousValue
-                return (difference, previousData.time)
-            }
-        }
-        
-        return nil
-    }
-    
-    // M2
-    func calculateM2RecentDataValueChangeDifference() -> (difference: Double, date: String)? {
-        guard let last = M2.last, let lastValue = Double(last.dataValue) else {
-            return nil
-        }
-        
-        for previousData in M2.dropLast().reversed() {
-            if let previousValue = Double(previousData.dataValue), previousValue != lastValue {
-                let difference = lastValue - previousValue
-                return (difference, previousData.time)
-            }
-        }
-        
-        return nil
-    }
-    
-    // EGR
-    func calculateEGRRecentDataValueChangeDifference() -> (difference: Double, date: String)? {
-        guard let last = EGR.last, let lastValue = Double(last.dataValue) else {
-            return nil
-        }
-        
-        for previousData in EGR.dropLast().reversed() {
-            if let previousValue = Double(previousData.dataValue), previousValue != lastValue {
-                let difference = lastValue - previousValue
-                return (difference, previousData.time)
-            }
-        }
-        
-        return nil
-    }
-    
-    // UR
-    func calculateURRecentDataValueChangeDifference() -> (difference: Double, date: String)? {
-        guard let last = UR.last, let lastValue = Double(last.dataValue) else {
-            return nil
-        }
-        
-        for previousData in UR.dropLast().reversed() {
+        for previousData in dataArray.dropLast().reversed() {
             if let previousValue = Double(previousData.dataValue), previousValue != lastValue {
                 let difference = lastValue - previousValue
                 return (difference, previousData.time)

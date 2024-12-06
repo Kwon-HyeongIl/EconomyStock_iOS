@@ -38,7 +38,7 @@ struct HomeView: View {
                                 .padding(.bottom, 1)
                             }
                             
-                            if let diffData = viewModel.calculateBRRecentDataValueChangeDifference() {
+                            if let diffData = viewModel.calculateRecentDataValueChangeDifference(for: viewModel.BR) {
                                 VStack {
                                     HStack(spacing: 0) {
                                         if diffData.difference > 0 {
@@ -199,7 +199,7 @@ struct HomeView: View {
                                     .padding(.bottom, 1)
                             }
                             
-                            if let diffData = viewModel.calculateCPIRecentDataValueChangeDifference() {
+                            if let diffData = viewModel.calculateRecentDataValueChangeDifference(for: viewModel.CPI) {
                                 VStack {
                                     HStack(spacing: 0) {
                                         if diffData.difference > 0 {
@@ -273,7 +273,7 @@ struct HomeView: View {
                                 .padding(.bottom, 1)
                             }
                             
-                            if let diffData = viewModel.calculateWDERRecentDataValueChangeDifference() {
+                            if let diffData = viewModel.calculateRecentDataValueChangeDifference(for: viewModel.WDER) {
                                 VStack {
                                     HStack(spacing: 0) {
                                         if diffData.difference > 0 {
@@ -344,7 +344,7 @@ struct HomeView: View {
                                 .font(.system(size: 19).bold())
                             }
                             
-                            if let diffData = viewModel.calculateM1RecentDataValueChangeDifference() {
+                            if let diffData = viewModel.calculateRecentDataValueChangeDifference(for: viewModel.M1) {
                                 VStack {
                                     HStack(spacing: 0) {
                                         if diffData.difference > 0 {
@@ -411,7 +411,7 @@ struct HomeView: View {
                                 .font(.system(size: 19).bold())
                             }
                             
-                            if let diffData = viewModel.calculateM2RecentDataValueChangeDifference() {
+                            if let diffData = viewModel.calculateRecentDataValueChangeDifference(for: viewModel.M2) {
                                 VStack {
                                     HStack(spacing: 0) {
                                         if diffData.difference > 0 {
@@ -482,7 +482,7 @@ struct HomeView: View {
                                 .padding(.bottom, 1)
                             }
                             
-                            if let diffData = viewModel.calculateEGRRecentDataValueChangeDifference() {
+                            if let diffData = viewModel.calculateRecentDataValueChangeDifference(for: viewModel.EGR) {
                                 VStack {
                                     HStack(spacing: 0) {
                                         if diffData.difference > 0 {
@@ -556,7 +556,7 @@ struct HomeView: View {
                                 .padding(.bottom, 1)
                             }
                             
-                            if let diffData = viewModel.calculateURRecentDataValueChangeDifference() {
+                            if let diffData = viewModel.calculateRecentDataValueChangeDifference(for: viewModel.UR) {
                                 VStack {
                                     HStack(spacing: 0) {
                                         if diffData.difference > 0 {
