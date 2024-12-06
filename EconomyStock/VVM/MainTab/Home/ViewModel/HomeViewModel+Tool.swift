@@ -45,7 +45,7 @@ extension HomeViewModel {
 
     
     // 기준금리 이전 지표의 차이값 계산
-    func calculateBaseRateRecentDataValueChangeDifference() -> (difference: Double, date: String)? {
+    func calculateBRRecentDataValueChangeDifference() -> (difference: Double, date: String)? {
         guard let last = BR.last, let lastValue = Double(last.dataValue) else {
             return nil
         }
@@ -115,6 +115,22 @@ extension HomeViewModel {
         }
         
         for previousData in M2.dropLast().reversed() {
+            if let previousValue = Double(previousData.dataValue), previousValue != lastValue {
+                let difference = lastValue - previousValue
+                return (difference, previousData.time)
+            }
+        }
+        
+        return nil
+    }
+    
+    // EGR
+    func calculateEGRRecentDataValueChangeDifference() -> (difference: Double, date: String)? {
+        guard let last = EGR.last, let lastValue = Double(last.dataValue) else {
+            return nil
+        }
+        
+        for previousData in EGR.dropLast().reversed() {
             if let previousValue = Double(previousData.dataValue), previousValue != lastValue {
                 let difference = lastValue - previousValue
                 return (difference, previousData.time)

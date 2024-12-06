@@ -118,5 +118,27 @@ class EconomicIndicatorManager {
                 }
             }
     }
+    
+    // 경제성장률
+    static func requestEGR(completion: @escaping ([EconomicIndicatorCycleData]) -> Void) {
+        guard let key = Bundle.main.infoDictionary?["BANKOFKOREA_OPENAPI_KEY"] as? String else { return }
+        let nowDate = getNowDate(type: .quarter)
+        let fiveYearsBeforeDate = getFiveYearsBeforeDate(type: .quarter)
+        let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/3000/902Y015/Q/\(fiveYearsBeforeDate)/\(nowDate)/KOR/?/?"
+        
+        AF.request(url)
+            .validate()
+            .responseDecodable(of: EconomicIndicatorCycleContainer.self) { response in
+                switch response.result {
+                    
+                case .success(let data):
+                    completion(data.statisticSearch.cycle)
+                    
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    completion([])
+                }
+            }
+    }
 
 }
