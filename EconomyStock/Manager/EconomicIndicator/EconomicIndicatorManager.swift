@@ -96,5 +96,27 @@ class EconomicIndicatorManager {
                 }
             }
     }
+    
+    // M2
+    static func requestM2(completion: @escaping ([EconomicIndicatorCycleData]) -> Void) {
+        guard let key = Bundle.main.infoDictionary?["BANKOFKOREA_OPENAPI_KEY"] as? String else { return }
+        let nowDate = getNowDate(type: .month)
+        let fiveYearsBeforeDate = getFiveYearsBeforeDate(type: .month)
+        let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/3000/101Y004/M/\(fiveYearsBeforeDate)/\(nowDate)/BBHA00/?/?"
+        
+        AF.request(url)
+            .validate()
+            .responseDecodable(of: EconomicIndicatorCycleContainer.self) { response in
+                switch response.result {
+                    
+                case .success(let data):
+                    completion(data.statisticSearch.cycle)
+                    
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    completion([])
+                }
+            }
+    }
 
 }

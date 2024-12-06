@@ -374,12 +374,56 @@ struct HomeView: View {
                     }
                     
                     VStack {
-
                         Text("M2")
                             .font(.system(size: 23).bold())
+                            .padding(.bottom, 5)
                         
-                        HStack {
-                            Spacer()
+                        if let dataValue = viewModel.M2.last?.dataValue {
+                            (Text("\(dataValue)")
+                             + Text(" ")
+                                .font(.system(size: 15))
+                             + Text("십억원")
+                                .font(.system(size: 13))
+                            )
+                            .font(.system(size: 18).bold())
+                        }
+                            
+                        if let diffData = viewModel.calculateM2RecentDataValueChangeDifference() {
+                            VStack {
+                                HStack(spacing: 0) {
+                                    if diffData.difference > 0 {
+                                        LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
+                                            .rotationEffect(.degrees(180))
+                                        
+                                        (Text("\(String(format: "%.1f", diffData.difference))")
+                                         + Text(" ")
+                                            .font(.system(size: 10))
+                                         + Text("십억원")
+                                            .font(.system(size: 6))
+                                        )
+                                        .font(.system(size: 11).bold())
+                                        .foregroundStyle(Color(hex: "D92B2B"))
+                                    } else {
+                                        LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
+                                            .padding(.top, 3)
+                                        
+                                        (Text("\(String(format: "%.1f", diffData.difference))")
+                                         + Text(" ")
+                                            .font(.system(size: 10))
+                                         + Text("십억원")
+                                            .font(.system(size: 6))
+                                        )
+                                        .font(.system(size: 11).bold())
+                                        .foregroundStyle(Color.ESTitle)
+                                    }
+                                }
+                                
+                                Text("(\(diffData.date) 대비)")
+                                    .font(.system(size: 7))
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.gray)
+                                    .padding(.leading, 5)
+                            }
                         }
                     }
                     .frame(maxWidth: .infinity)
