@@ -16,17 +16,17 @@ struct HomeView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
-                VStack(alignment: .leading) {
+            VStack(spacing: 15) {
+                VStack {
                     HStack(spacing: 0) {
                         Text("기준금리")
-                            .font(.system(size: 30).bold())
+                            .font(.system(size: 25).bold())
                         
                         if let dataValue = viewModel.baseRate.last?.dataValue {
                             Text("\(dataValue)%")
-                                .font(.system(size: 25).bold())
+                                .font(.system(size: 23).bold())
                                 .padding(.leading, 13)
-                                .padding(.trailing)
+                                .padding(.trailing, 10)
                         }
                         
                         if let diffData = viewModel.calculateBaseRateRecentDataValueChangeDifference() {
@@ -53,7 +53,7 @@ struct HomeView: View {
                                 .padding(.leading, 5)
                         }
 
-                       
+                       Spacer()
                     }
                     
                     Chart {
@@ -141,22 +141,163 @@ struct HomeView: View {
                     })
                     .frame(height: 200)
                     .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                             withAnimation(.interactiveSpring(response: 0.8, dampingFraction: 0.8, blendDuration: 0.8)) {
                                 chartAni = true
                             }
                         }
                     }
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .padding()
                 .background {
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                         .fill(.white)
                         .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                 }
+                
+                VStack {
+                    HStack {
+                        Text("소비자물가지수")
+                            .font(.system(size: 25).bold())
+                        
+                        Spacer()
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: 60)
+                .padding()
+                .background {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .fill(.white)
+                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                }
+                
+                VStack {
+                    HStack {
+                        Text("원달러환율")
+                            .font(.system(size: 25).bold())
+                        
+                        Spacer()
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: 60)
+                .padding()
+                .background {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .fill(.white)
+                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                }
+                
+                HStack(spacing: 15) {
+                    VStack {
+                        HStack {
+                            Text("M1")
+                                .font(.system(size: 25).bold())
+                            
+                            Spacer()
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 60)
+                    .padding()
+                    .background {
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(.white)
+                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                    }
+                    
+                    VStack {
+                        HStack {
+                            Text("M2")
+                                .font(.system(size: 25).bold())
+                            
+                            Spacer()
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 60)
+                    .padding()
+                    .background {
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(.white)
+                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                    }
+                }
+                
+                VStack {
+                    HStack {
+                        Text("경제성장률")
+                            .font(.system(size: 25).bold())
+                        
+                        Spacer()
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: 60)
+                .padding()
+                .background {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .fill(.white)
+                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                }
+                
+                VStack {
+                    HStack {
+                        Text("실업률")
+                            .font(.system(size: 25).bold())
+                        
+                        Spacer()
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: 60)
+                .padding()
+                .background {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .fill(.white)
+                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                }
+                .padding(.bottom, 50)
             }
             .padding()
         }
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Image("ES_TitleLogo_Blue")
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(Rectangle())
+                    .frame(width: 120)
+                    .padding(.leading, 5)
+            }
+            
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    
+                } label: {
+                    ZStack {
+                        Image(systemName: "bell")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 21)
+                            .foregroundStyle(Color.ESTitle)
+                            .padding(.trailing, 5)
+                        
+//                        if viewModel.isNotificationBadge {
+//                            Circle()
+//                                .scaledToFit()
+//                                .frame(width: 7)
+//                                .foregroundStyle(.red)
+//                                .padding(.leading, 18)
+//                                .padding(.bottom, 24)
+//                        }
+                    }
+                }
+            }
+        }
+        .toolbarBackground(.visible, for: .navigationBar)
     }
 }
 

@@ -38,7 +38,7 @@ struct MainCustomTabView: View {
                         let view = UIView(frame: .zero)
                         UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
                         
-                        withAnimation(.easeInOut(duration: 0.2)) {
+                        withAnimation(.easeInOut(duration: 0.05)) {
                             mainTabCapsule.selectedTab = tab
                         }
                     }
