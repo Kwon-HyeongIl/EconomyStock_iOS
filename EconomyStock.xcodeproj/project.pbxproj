@@ -136,6 +136,7 @@
 		CA7EFE472CFC52A00022C565 /* ExchangeRateAndBalanceOfPayment1_MoneyExchange.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA7EFE462CFC52A00022C565 /* ExchangeRateAndBalanceOfPayment1_MoneyExchange.lottie */; };
 		CA7EFE492CFC6FF20022C565 /* ExchangeRateAndBalanceOfPayment2_MoneyGraphUp.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA7EFE482CFC6FF20022C565 /* ExchangeRateAndBalanceOfPayment2_MoneyGraphUp.lottie */; };
 		CA7EFE4B2CFC749D0022C565 /* ExchangeRateAndBalanceOfPayment2_Dollar.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA7EFE4A2CFC749D0022C565 /* ExchangeRateAndBalanceOfPayment2_Dollar.lottie */; };
+		CA8526E52D030E800042B6F9 /* BeforeYearType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8526E42D030E800042B6F9 /* BeforeYearType.swift */; };
 		CA8B5DB72CFF23020070DB71 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B5DB62CFF23020070DB71 /* HomeViewModel.swift */; };
 		CA8B5DBF2CFF24650070DB71 /* EconomicIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B5DBE2CFF24650070DB71 /* EconomicIndicatorManager.swift */; };
 		CA92DDB32CB7D7A600A7D2A4 /* BasicEconomy1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDB22CB7D7A600A7D2A4 /* BasicEconomy1View.swift */; };
@@ -380,6 +381,7 @@
 		CA7EFE482CFC6FF20022C565 /* ExchangeRateAndBalanceOfPayment2_MoneyGraphUp.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExchangeRateAndBalanceOfPayment2_MoneyGraphUp.lottie; sourceTree = "<group>"; };
 		CA7EFE4A2CFC749D0022C565 /* ExchangeRateAndBalanceOfPayment2_Dollar.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExchangeRateAndBalanceOfPayment2_Dollar.lottie; sourceTree = "<group>"; };
 		CA83477C2CAAE28500BA1E4A /* EconomyStock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EconomyStock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA8526E42D030E800042B6F9 /* BeforeYearType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeYearType.swift; sourceTree = "<group>"; };
 		CA8B5DB62CFF23020070DB71 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CA8B5DBE2CFF24650070DB71 /* EconomicIndicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndicatorManager.swift; sourceTree = "<group>"; };
 		CA92DDB22CB7D7A600A7D2A4 /* BasicEconomy1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy1View.swift; sourceTree = "<group>"; };
@@ -1263,6 +1265,7 @@
 			isa = PBXGroup;
 			children = (
 				CA9CF57B2D00698900114807 /* DateType.swift */,
+				CA8526E42D030E800042B6F9 /* BeforeYearType.swift */,
 			);
 			path = Date;
 			sourceTree = "<group>";
@@ -1759,6 +1762,7 @@
 				CAAAC35D2D02A0450006D8DE /* EconomicIndicatorManager+Date.swift in Sources */,
 				CAEE164D2CAD08E600210BD0 /* FCMManager.swift in Sources */,
 				CACF34362CEDD52A00ECC6FA /* MoneyAndFinance19View.swift in Sources */,
+				CA8526E52D030E800042B6F9 /* BeforeYearType.swift in Sources */,
 				CA92DDB52CB7D7AF00A7D2A4 /* BasicEconomy2View.swift in Sources */,
 				CA08F3982CB839460093117E /* PriceLevel1View.swift in Sources */,
 				CAAAC35F2D02A19D0006D8DE /* HomeViewModel+Tool.swift in Sources */,

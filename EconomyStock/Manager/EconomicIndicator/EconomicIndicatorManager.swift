@@ -13,7 +13,7 @@ class EconomicIndicatorManager {
     static func requestBR(completion: @escaping ([EconomicIndicatorCycleData]) -> Void) {
         guard let key = Bundle.main.infoDictionary?["BANKOFKOREA_OPENAPI_KEY"] as? String else { return }
         let nowDate = getNowDate(type: .day)
-        let fireYearsBeforeDate = getFiveYearsBeforeDate(type: .day)
+        let fireYearsBeforeDate = getBeforeDate(year: .five, type: .day)
         let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/3000/722Y001/D/\(fireYearsBeforeDate)/\(nowDate)/0101000/?/?/?"
         
         AF.request(url)
@@ -35,8 +35,8 @@ class EconomicIndicatorManager {
     static func requestCPI(completion: @escaping ([EconomicIndicatorCycleData]) -> Void) {
         guard let key = Bundle.main.infoDictionary?["BANKOFKOREA_OPENAPI_KEY"] as? String else { return }
         let nowDate = getNowDate(type: .month)
-        let fiveYearsBeforeDate = getFiveYearsBeforeDate(type: .month)
-        let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/3000/901Y009/M/\(fiveYearsBeforeDate)/\(nowDate)/0/?/?/?"
+        let oneYearBeforeDate = getBeforeDate(year: .one, type: .month)
+        let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/3000/901Y009/M/\(oneYearBeforeDate)/\(nowDate)/0/?/?/?"
         
         AF.request(url)
             .validate()
@@ -57,8 +57,8 @@ class EconomicIndicatorManager {
     static func requestWDER(completion: @escaping ([EconomicIndicatorCycleData]) -> Void) {
         guard let key = Bundle.main.infoDictionary?["BANKOFKOREA_OPENAPI_KEY"] as? String else { return }
         let nowDate = getNowDate(type: .day)
-        let fiveYearsBeforeDate = getFiveYearsBeforeDate(type: .day)
-        let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/3000/731Y003/D/\(fiveYearsBeforeDate)/\(nowDate)/0000003/?/?"
+        let oneYearBeforeDate = getBeforeDate(year: .one, type: .day)
+        let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/3000/731Y003/D/\(oneYearBeforeDate)/\(nowDate)/0000003/?/?"
         
         AF.request(url)
             .validate()
@@ -79,8 +79,8 @@ class EconomicIndicatorManager {
     static func requestM1(completion: @escaping ([EconomicIndicatorCycleData]) -> Void) {
         guard let key = Bundle.main.infoDictionary?["BANKOFKOREA_OPENAPI_KEY"] as? String else { return }
         let nowDate = getNowDate(type: .month)
-        let fiveYearsBeforeDate = getFiveYearsBeforeDate(type: .month)
-        let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/3000/101Y019/M/\(fiveYearsBeforeDate)/\(nowDate)/BBLA00/?/?"
+        let oneYearBeforeDate = getBeforeDate(year: .one, type: .month)
+        let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/3000/101Y019/M/\(oneYearBeforeDate)/\(nowDate)/BBLA00/?/?"
         
         AF.request(url)
             .validate()
@@ -101,8 +101,8 @@ class EconomicIndicatorManager {
     static func requestM2(completion: @escaping ([EconomicIndicatorCycleData]) -> Void) {
         guard let key = Bundle.main.infoDictionary?["BANKOFKOREA_OPENAPI_KEY"] as? String else { return }
         let nowDate = getNowDate(type: .month)
-        let fiveYearsBeforeDate = getFiveYearsBeforeDate(type: .month)
-        let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/3000/101Y004/M/\(fiveYearsBeforeDate)/\(nowDate)/BBHA00/?/?"
+        let oneYearBeforeDate = getBeforeDate(year: .one, type: .month)
+        let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/3000/101Y004/M/\(oneYearBeforeDate)/\(nowDate)/BBHA00/?/?"
         
         AF.request(url)
             .validate()
@@ -123,8 +123,8 @@ class EconomicIndicatorManager {
     static func requestEGR(completion: @escaping ([EconomicIndicatorCycleData]) -> Void) {
         guard let key = Bundle.main.infoDictionary?["BANKOFKOREA_OPENAPI_KEY"] as? String else { return }
         let nowDate = getNowDate(type: .quarter)
-        let fiveYearsBeforeDate = getFiveYearsBeforeDate(type: .quarter)
-        let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/3000/902Y015/Q/\(fiveYearsBeforeDate)/\(nowDate)/KOR/?/?"
+        let oneYearBeforeDate = getBeforeDate(year: .one, type: .quarter)
+        let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/3000/902Y015/Q/\(oneYearBeforeDate)/\(nowDate)/KOR/?/?"
         
         AF.request(url)
             .validate()
@@ -145,8 +145,8 @@ class EconomicIndicatorManager {
     static func requestUR(completion: @escaping ([EconomicIndicatorCycleData]) -> Void) {
         guard let key = Bundle.main.infoDictionary?["BANKOFKOREA_OPENAPI_KEY"] as? String else { return }
         let nowDate = getNowDate(type: .month)
-        let fiveYearsBeforeDate = getFiveYearsBeforeDate(type: .month)
-        let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/3000/901Y027/M/\(fiveYearsBeforeDate)/\(nowDate)/I61BC/I28A/?/?"
+        let oneYearBeforeDate = getBeforeDate(year: .one, type: .month)
+        let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/3000/901Y027/M/\(oneYearBeforeDate)/\(nowDate)/I61BC/I28A/?/?"
         
         AF.request(url)
             .validate()

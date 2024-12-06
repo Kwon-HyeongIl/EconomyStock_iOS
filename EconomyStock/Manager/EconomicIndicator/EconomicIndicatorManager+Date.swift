@@ -50,21 +50,30 @@ extension EconomicIndicatorManager {
         
         return formatter.string(from: now)
     }
-
-    static func getFiveYearsBeforeDate(type: DateType) -> String {
+    
+    static func getBeforeDate(year: BeforeYearType, type: DateType) -> String {
         let formatter = DateFormatter()
         let now = Date()
         let calendar = Calendar.current
 
-        guard let fiveYearsAgo = calendar.date(byAdding: .year, value: -5, to: now) else { return "" }
+        var yearValue = 0
+        
+        switch year {
+            
+        case .one:
+            yearValue = -1
+        case .five:
+            yearValue = -5
+        }
+        guard let beforeDate = calendar.date(byAdding: .year, value: yearValue, to: now) else { return "" }
 
         switch type {
         case .annual:
             formatter.dateFormat = "yyyy"
 
         case .quarter:
-            let year = calendar.component(.year, from: fiveYearsAgo)
-            let month = calendar.component(.month, from: fiveYearsAgo)
+            let year = calendar.component(.year, from: beforeDate)
+            let month = calendar.component(.month, from: beforeDate)
 
             let quarter: String
 
@@ -90,6 +99,6 @@ extension EconomicIndicatorManager {
             formatter.dateFormat = "yyyyMMdd"
         }
 
-        return formatter.string(from: fiveYearsAgo)
+        return formatter.string(from: beforeDate)
     }
 }
