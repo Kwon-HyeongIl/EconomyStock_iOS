@@ -91,4 +91,20 @@ extension HomeViewModel {
         
         return nil
     }
+    
+    // M1
+    func calculateM1RecentDataValueChangeDifference() -> (difference: Double, date: String)? {
+        guard let last = M1.last, let lastValue = Double(last.dataValue) else {
+            return nil
+        }
+        
+        for previousData in M1.dropLast().reversed() {
+            if let previousValue = Double(previousData.dataValue), previousValue != lastValue {
+                let difference = lastValue - previousValue
+                return (difference, previousData.time)
+            }
+        }
+        
+        return nil
+    }
 }

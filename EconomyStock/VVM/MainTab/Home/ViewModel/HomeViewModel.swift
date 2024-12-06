@@ -12,6 +12,7 @@ class HomeViewModel {
     var BR = [EconomicIndicatorCycleData]()
     var CPI = [EconomicIndicatorCycleData]()
     var WDER = [EconomicIndicatorCycleData]()
+    var M1 = [EconomicIndicatorCycleData]()
     
     // 그래프 X축 연도 필터
     var BRYearFilter: [String] {
@@ -24,6 +25,7 @@ class HomeViewModel {
         initBR()
         initCPI()
         initWDER()
+        initM1()
     }
 
     // 기준금리
@@ -61,6 +63,20 @@ class HomeViewModel {
                 self.WDER = WDER.map { data in
                     var modifiedData = data
                     modifiedData.time = self.formatDateString(data.time, type: .day)
+                    
+                    return modifiedData
+                }
+            }
+        }
+    }
+    
+    // M1
+    func initM1() {
+        EconomicIndicatorManager.requestM1 { M1 in
+            DispatchQueue.main.async {
+                self.M1 = M1.map { data in
+                    var modifiedData = data
+                    modifiedData.time = self.formatDateString(data.time, type: .month)
                     
                     return modifiedData
                 }
