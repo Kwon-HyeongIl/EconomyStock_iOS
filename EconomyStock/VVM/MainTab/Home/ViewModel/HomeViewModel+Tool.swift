@@ -139,4 +139,20 @@ extension HomeViewModel {
         
         return nil
     }
+    
+    // UR
+    func calculateURRecentDataValueChangeDifference() -> (difference: Double, date: String)? {
+        guard let last = UR.last, let lastValue = Double(last.dataValue) else {
+            return nil
+        }
+        
+        for previousData in UR.dropLast().reversed() {
+            if let previousValue = Double(previousData.dataValue), previousValue != lastValue {
+                let difference = lastValue - previousValue
+                return (difference, previousData.time)
+            }
+        }
+        
+        return nil
+    }
 }

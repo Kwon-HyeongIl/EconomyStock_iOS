@@ -15,6 +15,7 @@ class HomeViewModel {
     var M1 = [EconomicIndicatorCycleData]()
     var M2 = [EconomicIndicatorCycleData]()
     var EGR = [EconomicIndicatorCycleData]()
+    var UR = [EconomicIndicatorCycleData]()
     
     // 그래프 X축 연도 필터
     var BRYearFilter: [String] {
@@ -30,6 +31,7 @@ class HomeViewModel {
         initM1()
         initM2()
         initEGR()
+        initUR()
     }
 
     // 기준금리
@@ -107,6 +109,20 @@ class HomeViewModel {
         EconomicIndicatorManager.requestEGR { EGR in
             DispatchQueue.main.async {
                 self.EGR = EGR.map { data in
+                    var modifiedData = data
+                    modifiedData.time = self.formatDateString(data.time, type: .month)
+                    
+                    return modifiedData
+                }
+            }
+        }
+    }
+    
+    // UR
+    func initUR() {
+        EconomicIndicatorManager.requestUR { UR in
+            DispatchQueue.main.async {
+                self.UR = UR.map { data in
                     var modifiedData = data
                     modifiedData.time = self.formatDateString(data.time, type: .month)
                     
