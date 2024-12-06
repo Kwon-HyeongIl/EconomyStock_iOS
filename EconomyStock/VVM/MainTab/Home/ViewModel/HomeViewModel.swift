@@ -36,7 +36,8 @@ class HomeViewModel {
         }
     }
     
-    func formatDateString(_ dateString: String) -> String {
+    // yy.MM.dd 변환
+    private func formatDateString(_ dateString: String) -> String {
         let year = dateString.prefix(4)
         let month = dateString.dropFirst(4).prefix(2)
         let day = dateString.suffix(2)
@@ -44,18 +45,16 @@ class HomeViewModel {
         return "\(year).\(month).\(day)"
     }
     
-    func calculateBaseRateRecentDataValueChangeDifference() -> Double? {
-        guard let last = baseRate.last else {
-            return nil
-        }
-        
-        guard let lastValue = Double(last.dataValue) else {
+    // 이전 지표의 차이값 계산
+    func calculateBaseRateRecentDataValueChangeDifference() -> (difference: Double, date: String)? {
+        guard let last = baseRate.last, let lastValue = Double(last.dataValue) else {
             return nil
         }
         
         for previousData in baseRate.dropLast().reversed() {
             if let previousValue = Double(previousData.dataValue), previousValue != lastValue {
-                return lastValue - previousValue
+                let difference = lastValue - previousValue
+                return (difference, previousData.time)
             }
         }
         

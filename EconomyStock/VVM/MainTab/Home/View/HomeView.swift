@@ -29,23 +29,30 @@ struct HomeView: View {
                                 .padding(.trailing)
                         }
                         
-                        if let diff = viewModel.calculateBaseRateRecentDataValueChangeDifference() {
-                            if diff > 0 {
+                        if let diffData = viewModel.calculateBaseRateRecentDataValueChangeDifference() {
+                            if diffData.difference > 0 {
                                 LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.5, width: 20, height: 20)
                                     .rotationEffect(.degrees(180))
                                 
-                                Text("\(String(format: "%.2f", diff))%")
+                                Text("\(String(format: "%.2f", diffData.difference))%")
                                     .font(.system(size: 15).bold())
                                     .foregroundStyle(Color(hex: "D92B2B"))
                             } else {
                                 LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.5, width: 20, height: 20)
                                     .padding(.top, 3)
                                 
-                                Text("\(String(format: "%.2f", diff))%")
+                                Text("\(String(format: "%.2f", diffData.difference))%")
                                     .font(.system(size: 15).bold())
                                     .foregroundStyle(Color.ESTitle)
                             }
+
+                            Text("(\(diffData.date) 대비)")
+                                .font(.system(size: 10))
+                                .fontWeight(.semibold)
+                                .foregroundStyle(.gray)
+                                .padding(.leading, 5)
                         }
+
                        
                     }
                     
@@ -134,7 +141,7 @@ struct HomeView: View {
                     })
                     .frame(height: 200)
                     .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                             withAnimation(.interactiveSpring(response: 0.8, dampingFraction: 0.8, blendDuration: 0.8)) {
                                 chartAni = true
                             }
