@@ -44,11 +44,18 @@ struct CourseCoverView: View {
                         
                     }
                     
-                    HStack {
-                        ProgressCircleView(progressRate: viewModel.course.progressRate)
-                            .padding(.leading, 320)
-                            .padding(.bottom, 110)
+                    VStack {
+                        HStack {
+                            Spacer()
+                            
+                            ProgressCircleView(progressRate: viewModel.course.progressRate)
+                                .padding(.top, 10)
+                                .padding(.trailing, 10)
+                        }
+                        
+                        Spacer()
                     }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
                 
             }
