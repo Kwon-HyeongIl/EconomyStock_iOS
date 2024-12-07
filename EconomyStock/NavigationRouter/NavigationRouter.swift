@@ -30,6 +30,10 @@ class NavigationRouter {
         // Studying
         case .CourseIntroView(let viewModel):
             CourseIntroView(viewModel: viewModel)
+            
+        // Profile
+        case .AccountInfoView(let viewModel):
+            AccountInfoView(viewModel: viewModel)
         
             // 기초 경제
         case .BasicEconomy1View(let viewModel):

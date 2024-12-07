@@ -19,6 +19,9 @@ enum NavigationDestinationPath: Hashable {
     // Studying
     case CourseIntroView(CourseViewModel)
     
+    // Profile
+    case AccountInfoView(ProfileViewModel)
+    
         // 기초 경제
     case BasicEconomy1View(CourseViewModel)
     case BasicEconomy2View(CourseViewModel)
