@@ -278,7 +278,7 @@ struct HomeView: View {
                     }
                     
                     if !viewModel.isRedacted {
-                        ZStack {
+                        ZStack(alignment: .top) {
                             VStack {
                                 HStack {
                                     Text("소비자물가지수")
@@ -424,7 +424,7 @@ struct HomeView: View {
                     }
                     
                     if !viewModel.isRedacted {
-                        ZStack {
+                        ZStack(alignment: .top) {
                             VStack {
                                 HStack {
                                     Text("원달러환율")
@@ -574,7 +574,7 @@ struct HomeView: View {
                     
                     HStack(spacing: 15) {
                         if !viewModel.isRedacted {
-                            ZStack {
+                            ZStack(alignment: .top) {
                                 VStack {
                                     Text("M1")
                                         .font(.system(size: 23).bold())
@@ -674,11 +674,11 @@ struct HomeView: View {
                                         ZStack {
                                             RoundedRectangle(cornerRadius: 10)
                                                 .foregroundStyle(.white)
-                                                .frame(width: M1Info ? 130 : 0, height: M1Info ? 130 : 0)
+                                                .frame(width: M1Info ? 130 : 0, height: M1Info ? 120 : 0)
                                                 .overlay {
                                                     RoundedRectangle(cornerRadius: 10)
                                                         .stroke(lineWidth: 1.5)
-                                                        .frame(width: M1Info ? 130 : 0, height: M1Info ? 130 : 0)
+                                                        .frame(width: M1Info ? 130 : 0, height: M1Info ? 120 : 0)
                                                         .foregroundStyle(Color.ESTitle)
                                                     
                                                 }
@@ -700,7 +700,7 @@ struct HomeView: View {
                                                         .multilineTextAlignment(.center)
                                                 }
                                                 .padding(5)
-                                                .frame(width: 130, height: 130)
+                                                .frame(width: 130, height: 120)
                                                 .padding(.top, 25)
                                                 .padding(.trailing, 25)
                                             }
@@ -717,7 +717,7 @@ struct HomeView: View {
                         }
                         
                         if !viewModel.isRedacted {
-                            ZStack {
+                            ZStack(alignment: .top) {
                                 VStack {
                                     Text("M2")
                                         .font(.system(size: 23).bold())
@@ -817,11 +817,11 @@ struct HomeView: View {
                                         ZStack {
                                             RoundedRectangle(cornerRadius: 10)
                                                 .foregroundStyle(.white)
-                                                .frame(width: M2Info ? 130 : 0, height: M2Info ? 130 : 0)
+                                                .frame(width: M2Info ? 130 : 0, height: M2Info ? 120 : 0)
                                                 .overlay {
                                                     RoundedRectangle(cornerRadius: 10)
                                                         .stroke(lineWidth: 1.5)
-                                                        .frame(width: M2Info ? 130 : 0, height: M2Info ? 130 : 0)
+                                                        .frame(width: M2Info ? 130 : 0, height: M2Info ? 120 : 0)
                                                         .foregroundStyle(Color.ESTitle)
                                                     
                                                 }
@@ -843,7 +843,7 @@ struct HomeView: View {
                                                         .multilineTextAlignment(.center)
                                                 }
                                                 .padding(5)
-                                                .frame(width: 130, height: 130)
+                                                .frame(width: 130, height: 120)
                                                 .padding(.top, 25)
                                                 .padding(.trailing, 25)
                                             }
@@ -861,7 +861,7 @@ struct HomeView: View {
                     }
                     
                     if !viewModel.isRedacted {
-                        ZStack {
+                        ZStack(alignment: .top) {
                             VStack {
                                 HStack {
                                     Text("경제성장률")
@@ -1011,7 +1011,7 @@ struct HomeView: View {
                     }
                     
                     if !viewModel.isRedacted {
-                        ZStack {
+                        ZStack(alignment: .top) {
                             VStack {
                                 HStack {
                                     Text("실업률")
