@@ -113,7 +113,7 @@ class HomeViewModel {
             DispatchQueue.main.async {
                 self.EGR = EGR.map { data in
                     var modifiedData = data
-                    modifiedData.time = self.formatDateString(data.time, type: .month)
+                    modifiedData.time = self.formatDateString(data.time, type: .quarter)
                     
                     return modifiedData
                 }

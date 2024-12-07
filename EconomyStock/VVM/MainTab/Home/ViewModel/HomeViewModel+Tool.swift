@@ -11,37 +11,51 @@ extension HomeViewModel {
     // yy.MM.dd 변환
     func formatDateString(_ dateString: String, type: DateType) -> String {
         let year = dateString.prefix(4)
-        let month = dateString.dropFirst(4).prefix(2)
-        let day = dateString.suffix(2)
         
         switch type {
+            
         case .annual:
             return "\(year)"
             
         case .quarter:
-            guard let monthInt = Int(month) else { return "\(year)" }
-            let quarter: String
-            switch monthInt {
-            case 1...3:
-                quarter = "Q1"
-            case 4...6:
-                quarter = "Q2"
-            case 7...9:
-                quarter = "Q3"
-            case 10...12:
-                quarter = "Q4"
-            default:
-                quarter = ""
+            let quarterString = dateString.dropFirst(4)
+            
+            guard quarterString.first == "Q",
+                  let qNum = Int(quarterString.dropFirst()),
+                  (1...4).contains(qNum) else {
+                
+                return "\(year)"
             }
-            return "\(year)\(quarter)"
+            
+            let quarterText: String
+            switch qNum {
+            case 1:
+                quarterText = "1분기"
+            case 2:
+                quarterText = "2분기"
+            case 3:
+                quarterText = "3분기"
+            case 4:
+                quarterText = "4분기"
+            default:
+                quarterText = ""
+            }
+            
+            return "\(year).\(quarterText)"
             
         case .month:
+            let month = dateString.dropFirst(4).prefix(2)
+            
             return "\(year).\(month)"
             
         case .day:
+            let month = dateString.dropFirst(4).prefix(2)
+            let day = dateString.suffix(2)
+            
             return "\(year).\(month).\(day)"
         }
     }
+
 
     
     // 이전 지표의 차이값 계산
