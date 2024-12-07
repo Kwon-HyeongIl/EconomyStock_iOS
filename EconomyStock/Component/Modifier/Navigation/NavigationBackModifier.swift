@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NavigationBackModifier: ViewModifier {
-    @Environment(NavigationRouter.self) var navigationRouter
+    @Environment(NavigationRouter.self) var navRouter
     
     func body(content: Content) -> some View {
         content
@@ -17,7 +17,7 @@ struct NavigationBackModifier: ViewModifier {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
-                        navigationRouter.back()
+                        navRouter.back()
                     } label: {
                         Image(systemName: "chevron.left")
                             .scaledToFit()

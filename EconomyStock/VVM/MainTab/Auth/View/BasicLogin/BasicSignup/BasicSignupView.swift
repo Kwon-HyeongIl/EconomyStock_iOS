@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BasicSignupView: View {
-    @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
+    @Environment(NavigationRouter.self) var navRouter
     @Bindable var viewModel: AuthViewModel
     
     @FocusState private var focus: BasicSignupFocusField?
@@ -211,7 +211,7 @@ struct BasicSignupView: View {
                                     }
                                     
                                     await viewModel.signup()
-                                    navigationRouter.popToRoot()
+                                    navRouter.popToRoot()
                                 }
                                 
                             } else {

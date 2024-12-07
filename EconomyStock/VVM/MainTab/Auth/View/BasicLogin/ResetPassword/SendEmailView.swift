@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SendEmailView: View {
-    @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
+    @Environment(NavigationRouter.self) var navRouter
     @Bindable var viewModel: AuthViewModel
     
     @State private var contentShowing = false
@@ -16,7 +16,7 @@ struct SendEmailView: View {
     var body: some View {
         ScrollView {
             VStack {
-                LottieView(fileName: "SendingEmail", loopMode: .playOnce, speed: 0.5, width: 250, height: 250)
+                LottieView(fileName: "SendingEmail", loopMode: .playOnce, speed: 0.5, width: 200, height: 200)
                     .padding(.top, 100)
                 
                 if contentShowing {
@@ -28,7 +28,7 @@ struct SendEmailView: View {
                         .padding(.bottom, 20)
                     
                     Button {
-                        navigationRouter.popToRoot()
+                        navRouter.popToRoot()
                     } label: {
                         Text("돌아가기")
                             .modifier(LongButtonModifier())

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MoneyAndFinance19View: View {
-    @Environment(NavigationRouter.self) var navigationRouter
+    @Environment(NavigationRouter.self) var navRouter
     @Environment(CourseListViewCapsule.self) var courseListViewCapule
     @Bindable var viewModel: CourseViewModel
     
@@ -121,7 +121,7 @@ struct MoneyAndFinance19View: View {
                                     HStack {
                                         Button {
                                             viewModel.currentPage -= 1
-                                            navigationRouter.back()
+                                            navRouter.back()
                                         } label: {
                                             Image(systemName: "chevron.left")
                                                 .font(.system(size: 25))
@@ -224,7 +224,7 @@ struct MoneyAndFinance19View: View {
                             await AuthManager.shared.updateCourseLastPage(courseType: viewModel.course.type, lastPage: 1)
                         }
             
-                        navigationRouter.popToRoot()
+                        navRouter.popToRoot()
                     } label: {
                         RoundedRectangle(cornerRadius: 20)
                             .frame(width: 80, height: 40)

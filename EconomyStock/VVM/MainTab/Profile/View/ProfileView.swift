@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @Environment(NavigationRouter.self) var navigationRouter
+    @Environment(NavigationRouter.self) var navRouter
     @State private var viewModel = ProfileViewModel()
     
     var body: some View {

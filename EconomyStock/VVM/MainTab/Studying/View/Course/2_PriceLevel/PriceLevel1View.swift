@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PriceLevel1View: View {
-    @Environment(NavigationRouter.self) var navigationRouter
+    @Environment(NavigationRouter.self) var navRouter
     @Bindable var viewModel: CourseViewModel
     
     @State private var progress: [Int] = []
@@ -70,7 +70,7 @@ struct PriceLevel1View: View {
                             UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
                             
                             viewModel.currentPage += 1
-                            navigationRouter.navigate(.PriceLevel2View(viewModel))
+                            navRouter.navigate(.PriceLevel2View(viewModel))
                         } label: {
                             LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                 .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)

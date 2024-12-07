@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ResetPasswordView: View {
-    @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
+    @Environment(NavigationRouter.self) var navRouter
     @Bindable var viewModel: AuthViewModel
     
     @State private var alertEmailFormValidation = false
@@ -63,7 +63,7 @@ struct ResetPasswordView: View {
                     
                     viewModel.sendPasswordResetEmail()
                     
-                    navigationRouter.navigate(.SendEmailView(viewModel))
+                    navRouter.navigate(.SendEmailView(viewModel))
                 } label: {
                     Text("확인")
                         .modifier(LongButtonModifier())

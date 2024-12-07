@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CourseIntroView: View {
-    @Environment(NavigationRouter.self) var navigationRouter
+    @Environment(NavigationRouter.self) var navRouter
     @Bindable var viewModel: CourseViewModel
     
     @State private var alertAskLogin = false
@@ -17,7 +17,7 @@ struct CourseIntroView: View {
     @State private var alertFinishing = false
     
     var body: some View {
-        @Bindable var navigationRouter = navigationRouter
+        @Bindable var navRouter = navRouter
         
         GeometryReader { proxy in
             ScrollView {
@@ -45,7 +45,7 @@ struct CourseIntroView: View {
                                 
                             case .basicEconomy:
                                 if viewModel.course.lastPage == 0 {
-                                    navigationRouter.navigate(.BasicEconomy1View(viewModel))
+                                    navRouter.navigate(.BasicEconomy1View(viewModel))
                                     
                                 } else if viewModel.course.lastPage == 11 {
                                     alertFinishing = true
@@ -56,7 +56,7 @@ struct CourseIntroView: View {
                                 
                             case .priceLevel:
                                 if viewModel.course.lastPage == 0 {
-                                    navigationRouter.navigate(.PriceLevel1View(viewModel))
+                                    navRouter.navigate(.PriceLevel1View(viewModel))
                                     
                                 } else if viewModel.course.lastPage == 10 {
                                     alertFinishing = true
@@ -67,7 +67,7 @@ struct CourseIntroView: View {
                                 
                             case .unEmployment:
                                 if viewModel.course.lastPage == 0 {
-                                    navigationRouter.navigate(.UnEmployment1View(viewModel))
+                                    navRouter.navigate(.UnEmployment1View(viewModel))
                                     
                                 } else if viewModel.course.lastPage == 7 {
                                     alertFinishing = true
@@ -78,7 +78,7 @@ struct CourseIntroView: View {
                                 
                             case .moneyAndFinance:
                                 if viewModel.course.lastPage == 0 {
-                                    navigationRouter.navigate(.MoneyAndFinance1View(viewModel))
+                                    navRouter.navigate(.MoneyAndFinance1View(viewModel))
                                     
                                 } else if viewModel.course.lastPage == 19 {
                                     alertFinishing = true
@@ -89,7 +89,7 @@ struct CourseIntroView: View {
                                 
                             case .exchangeRateAndBalanceOfPayment:
                                 if viewModel.course.lastPage == 0 {
-                                    navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment1View(viewModel))
+                                    navRouter.navigate(.ExchangeRateAndBalanceOfPayment1View(viewModel))
                                     
                                 } else if viewModel.course.lastPage == 19 {
                                     alertFinishing = true
@@ -112,7 +112,7 @@ struct CourseIntroView: View {
                         }
                         
                         Button {
-                            navigationRouter.navigate(.LoginView)
+                            navRouter.navigate(.LoginView)
                         } label: {
                             Text("확인")
                         }
@@ -127,7 +127,7 @@ struct CourseIntroView: View {
                         }
                         
                         Button {
-                            CourseMain.courseContinueNavigationAdaptor(viewModel: viewModel, navigationRouter: navigationRouter)
+                            CourseMain.courseContinueNavigationAdaptor(viewModel: viewModel, navRouter: navRouter)
                         } label: {
                             Text("확인")
                         }
@@ -144,15 +144,15 @@ struct CourseIntroView: View {
                         Button {
                             switch viewModel.course.type {
                             case .basicEconomy:
-                                navigationRouter.navigate(.BasicEconomy1View(viewModel))
+                                navRouter.navigate(.BasicEconomy1View(viewModel))
                             case .priceLevel:
-                                navigationRouter.navigate(.PriceLevel1View(viewModel))
+                                navRouter.navigate(.PriceLevel1View(viewModel))
                             case .unEmployment:
-                                navigationRouter.navigate(.UnEmployment1View(viewModel))
+                                navRouter.navigate(.UnEmployment1View(viewModel))
                             case .moneyAndFinance:
-                                navigationRouter.navigate(.MoneyAndFinance1View(viewModel))
+                                navRouter.navigate(.MoneyAndFinance1View(viewModel))
                             case .exchangeRateAndBalanceOfPayment:
-                                navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment1View(viewModel))
+                                navRouter.navigate(.ExchangeRateAndBalanceOfPayment1View(viewModel))
                             }
                         } label: {
                             Text("확인")
@@ -170,15 +170,15 @@ struct CourseIntroView: View {
                         Button {
                             switch viewModel.course.type {
                             case .basicEconomy:
-                                navigationRouter.navigate(.BasicEconomy1View(viewModel))
+                                navRouter.navigate(.BasicEconomy1View(viewModel))
                             case .priceLevel:
-                                navigationRouter.navigate(.PriceLevel1View(viewModel))
+                                navRouter.navigate(.PriceLevel1View(viewModel))
                             case .unEmployment:
-                                navigationRouter.navigate(.UnEmployment1View(viewModel))
+                                navRouter.navigate(.UnEmployment1View(viewModel))
                             case .moneyAndFinance:
-                                navigationRouter.navigate(.MoneyAndFinance1View(viewModel))
+                                navRouter.navigate(.MoneyAndFinance1View(viewModel))
                             case .exchangeRateAndBalanceOfPayment:
-                                navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment1View(viewModel))
+                                navRouter.navigate(.ExchangeRateAndBalanceOfPayment1View(viewModel))
                             }
                         } label: {
                             Text("확인")

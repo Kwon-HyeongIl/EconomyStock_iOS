@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BasicLoginView: View {
-    @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
+    @Environment(NavigationRouter.self) var navRouter
     @Bindable var viewModel: AuthViewModel
     
     @State private var alertLogin = false
@@ -86,7 +86,7 @@ struct BasicLoginView: View {
                             return
                         }
                         
-                        navigationRouter.popToRoot()
+                        navRouter.popToRoot()
                     }
                 } label: {
                     Text("로그인")
@@ -105,7 +105,7 @@ struct BasicLoginView: View {
                 
                 VStack {
                     Button {
-                        navigationRouter.navigate(.BasicSignupView(viewModel))
+                        navRouter.navigate(.BasicSignupView(viewModel))
                     } label: {
                         Text("아직 회원이 아니신가요?")
                             .font(.system(size: 14))
@@ -115,7 +115,7 @@ struct BasicLoginView: View {
                     }
                     
                     Button {
-                        navigationRouter.navigate(.ResetPasswordView(viewModel))
+                        navRouter.navigate(.ResetPasswordView(viewModel))
                     } label: {
                         Text("비밀번호를 잊어버리셨나요?")
                             .font(.system(size: 14))

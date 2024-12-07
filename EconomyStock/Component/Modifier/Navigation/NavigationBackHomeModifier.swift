@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NavigationBackHomeModifier: ViewModifier {
-    @Environment(NavigationRouter.self) var navigationRouter
+    @Environment(NavigationRouter.self) var navRouter
     @Environment(MainTabCapsule.self) var mainTabCapsule
     
     func body(content: Content) -> some View {
@@ -18,7 +18,7 @@ struct NavigationBackHomeModifier: ViewModifier {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
-                        navigationRouter.back()
+                        navRouter.back()
                     } label: {
                         Image(systemName: "chevron.left")
                             .scaledToFit()
@@ -30,7 +30,7 @@ struct NavigationBackHomeModifier: ViewModifier {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        navigationRouter.popToRoot()
+                        navRouter.popToRoot()
                         mainTabCapsule.selectedTab = .home
                     } label: {
                         Image(systemName: "house")

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CourseToolbarModifier: ViewModifier {
-    @Environment(NavigationRouter.self) var navigationRouter
+    @Environment(NavigationRouter.self) var navRouter
     @Environment(CourseListViewCapsule.self) var courseListViewCapule
     @Bindable var viewModel: CourseViewModel
     
@@ -116,7 +116,7 @@ struct CourseToolbarModifier: ViewModifier {
                         await AuthManager.shared.updateCourseLastPage(courseType: viewModel.course.type, lastPage: currentPage)
                     }
         
-                    navigationRouter.popToRoot()
+                    navRouter.popToRoot()
                 } label: {
                     Text("확인")
                 }

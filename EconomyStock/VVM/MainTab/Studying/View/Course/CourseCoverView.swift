@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CourseCoverView: View {
-    @Environment(NavigationRouter.self) var navigationRouter
+    @Environment(NavigationRouter.self) var navRouter
     @State private var viewModel: CourseViewModel
     
     init(course: Course) {
@@ -17,7 +17,7 @@ struct CourseCoverView: View {
     
     var body: some View {
         Button {
-            navigationRouter.navigate(.CourseIntroView(viewModel))
+            navRouter.navigate(.CourseIntroView(viewModel))
         } label: {
             VStack {
                 ZStack {

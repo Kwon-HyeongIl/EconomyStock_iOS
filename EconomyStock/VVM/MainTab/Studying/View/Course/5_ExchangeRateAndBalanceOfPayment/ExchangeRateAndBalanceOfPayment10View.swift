@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ExchangeRateAndBalanceOfPayment10View: View {
-    @Environment(NavigationRouter.self) var navigationRouter
+    @Environment(NavigationRouter.self) var navRouter
     @Bindable var viewModel: CourseViewModel
     
     @State private var progress: [Int] = []
@@ -117,7 +117,7 @@ struct ExchangeRateAndBalanceOfPayment10View: View {
                                     UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
                                     
                                     viewModel.currentPage += 1
-                                    navigationRouter.navigate(.ExchangeRateAndBalanceOfPayment11View(viewModel))
+                                    navRouter.navigate(.ExchangeRateAndBalanceOfPayment11View(viewModel))
                                 } label: {
                                     LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
                                         .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
@@ -127,7 +127,7 @@ struct ExchangeRateAndBalanceOfPayment10View: View {
                                     HStack {
                                         Button {
                                             viewModel.currentPage -= 1
-                                            navigationRouter.back()
+                                            navRouter.back()
                                         } label: {
                                             Image(systemName: "chevron.left")
                                                 .font(.system(size: 25))
