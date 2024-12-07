@@ -16,7 +16,7 @@ struct SendEmailView: View {
     var body: some View {
         ScrollView {
             VStack {
-                LottieView(fileName: "SendingEmail", loopMode: .playOnce, speed: 0.5, width: 200, height: 200)
+                LottieView(fileName: "SendingEmail", loopMode: .playOnce, speed: 0.5, width: 150, height: 150)
                     .padding(.top, 100)
                 
                 if contentShowing {
@@ -24,8 +24,8 @@ struct SendEmailView: View {
                         .font(.system(size: 22))
                         .multilineTextAlignment(.center)
                         .fontWeight(.semibold)
-                        .padding(.top, 30)
-                        .padding(.bottom, 20)
+                        .padding(.top, 40)
+                        .padding(.bottom, 30)
                     
                     Button {
                         navRouter.popToRoot()
