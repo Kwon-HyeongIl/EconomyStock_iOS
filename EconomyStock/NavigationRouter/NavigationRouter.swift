@@ -22,6 +22,10 @@ class NavigationRouter {
             BasicLoginView(viewModel: viewModel)
         case .BasicSignupView(let viewModel):
             BasicSignupView(viewModel: viewModel)
+        case .ResetPasswordView(let viewModel):
+            ResetPasswordView(viewModel: viewModel)
+        case .SendEmailView(let viewModel):
+            SendEmailView(viewModel: viewModel)
             
         // Studying
         case .CourseIntroView(let viewModel):

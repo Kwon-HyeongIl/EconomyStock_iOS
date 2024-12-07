@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension LoginViewModel {
+extension AuthViewModel {
     func login() async -> Bool {
         return await AuthManager.shared.login(email: self.email, password: self.password)
     }

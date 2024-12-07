@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BasicSignupView: View {
     @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
-    @Bindable var viewModel: LoginViewModel
+    @Bindable var viewModel: AuthViewModel
     
     @FocusState private var focus: BasicSignupFocusField?
     
@@ -236,7 +236,7 @@ struct BasicSignupView: View {
                             Text("확인")
                         }
                     } message: {
-                        Text("~@~.com 형식을 지켜주세요.")
+                        Text("이메일 형식을 지켜주세요.")
                     }
                     .alert("중복된 이메일", isPresented: $alertEmailDulication) {
                         Button {
@@ -263,6 +263,6 @@ struct BasicSignupView: View {
 }
 
 #Preview {
-    BasicSignupView(viewModel: LoginViewModel())
+    BasicSignupView(viewModel: AuthViewModel())
         .environment(NavigationRouter())
 }

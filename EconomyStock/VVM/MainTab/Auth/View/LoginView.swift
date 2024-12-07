@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
-    @State private var viewModel = LoginViewModel()
+    @State private var viewModel = AuthViewModel()
     
     var body: some View {
         ZStack {

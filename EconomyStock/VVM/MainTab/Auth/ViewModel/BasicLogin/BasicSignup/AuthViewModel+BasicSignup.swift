@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension LoginViewModel {
+extension AuthViewModel {
     func signup() async {
         await AuthManager.shared.createUser(email: self.email, password: self.password, username: self.username)
     }

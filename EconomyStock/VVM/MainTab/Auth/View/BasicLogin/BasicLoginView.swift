@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BasicLoginView: View {
     @Environment(NavigationRouter.self) var navigationRouter: NavigationRouter
-    @Bindable var viewModel: LoginViewModel
+    @Bindable var viewModel: AuthViewModel
     
     @State private var alertLogin = false
     
@@ -115,7 +115,7 @@ struct BasicLoginView: View {
                     }
                     
                     Button {
-                        
+                        navigationRouter.navigate(.ResetPasswordView(viewModel))
                     } label: {
                         Text("비밀번호를 잊어버리셨나요?")
                             .font(.system(size: 14))
@@ -145,12 +145,12 @@ struct BasicLoginView: View {
                         .padding(.top, 280)
                 }
             }
-            .modifier(NavigationBackTitleModifier(title: "로그인"))
         }
+        .modifier(NavigationBackTitleModifier(title: "로그인"))
     }
 }
 
 #Preview {
-    BasicLoginView(viewModel: LoginViewModel())
+    BasicLoginView(viewModel: AuthViewModel())
         .environment(NavigationRouter())
 }

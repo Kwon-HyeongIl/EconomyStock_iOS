@@ -8,7 +8,7 @@
 import Foundation
 
 @Observable
-class LoginViewModel: NSObject {
+class AuthViewModel: NSObject {
     var email = "" // 로그인 및 회원가입 용도
     var password = "" // 로그인 및 회원가입 용도
     var username = "" // 회원가입 용도
@@ -17,6 +17,3 @@ class LoginViewModel: NSObject {
     
     var loadingBarState = false // 소셜 로그인 뷰모델 내에서 컨트롤하기 위해 뷰모델 내에 선언
 }
-
-
-
