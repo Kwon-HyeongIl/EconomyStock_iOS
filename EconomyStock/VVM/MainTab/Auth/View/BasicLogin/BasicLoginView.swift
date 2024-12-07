@@ -91,7 +91,7 @@ struct BasicLoginView: View {
                 } label: {
                     Text("로그인")
                         .modifier(LongButtonModifier())
-                        .padding(.bottom)
+                        .padding(.bottom, 30)
                 }
                 .alert("로그인 실패", isPresented: $alertLogin) {
                     Button {
@@ -123,28 +123,22 @@ struct BasicLoginView: View {
                             .opacity(0.6)
                             .padding(.bottom, 15)
                     }
-                    
-                    Button {
-                        
-                    } label: {
-                        Text("계정 관련 문의")
-                            .font(.system(size: 14))
-                            .foregroundStyle(.black)
-                            .opacity(0.6)
-                    }
                 }
                 
                 Spacer()
             }
-            .onAppear {
-                focus = .email
+        }
+        .onAppear {
+            focus = .email
+        }
+        .overlay {
+            if loadingBarState {
+                LottieView(fileName: "Loading", loopMode: .loop, width: 200, height: 200)
+                    .padding(.top, 280)
             }
-            .overlay {
-                if loadingBarState {
-                    LottieView(fileName: "Loading", loopMode: .loop, width: 200, height: 200)
-                        .padding(.top, 280)
-                }
-            }
+        }
+        .onTapGesture {
+            focus = nil
         }
         .modifier(NavigationBackTitleModifier(title: "로그인"))
     }

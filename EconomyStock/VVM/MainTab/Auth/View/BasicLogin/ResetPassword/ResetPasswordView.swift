@@ -84,6 +84,9 @@ struct ResetPasswordView: View {
         .onAppear {
             focus = .email
         }
+        .onTapGesture {
+            focus = nil
+        }
         .modifier(NavigationBackTitleModifier(title: "비밀번호 재설정"))
     }
 }
