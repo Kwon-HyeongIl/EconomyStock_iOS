@@ -60,35 +60,35 @@ struct HomeView: View {
                                         VStack {
                                             HStack(spacing: 0) {
                                                 if diffData.difference > 0 {
-                                                    LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
+                                                    LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.5, width: 20, height: 20)
                                                         .rotationEffect(.degrees(180))
                                                     
                                                     (Text("\(String(format: "%.2f", diffData.difference))")
                                                      + Text(" ")
                                                         .font(.system(size: 11))
                                                      + Text("%")
-                                                        .font(.system(size: 9))
+                                                        .font(.system(size: 10))
                                                     )
-                                                    .font(.system(size: 14).bold())
+                                                    .font(.system(size: 15).bold())
                                                     .foregroundStyle(Color(hex: "D92B2B"))
                                                     
                                                 } else {
-                                                    LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
+                                                    LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.5, width: 20, height: 20)
                                                         .padding(.top, 3)
                                                     
                                                     (Text("\(String(format: "%.2f", diffData.difference))")
                                                      + Text(" ")
                                                         .font(.system(size: 11))
                                                      + Text("%")
-                                                        .font(.system(size: 9))
+                                                        .font(.system(size: 10))
                                                     )
-                                                    .font(.system(size: 14).bold())
+                                                    .font(.system(size: 15).bold())
                                                     .foregroundStyle(Color.ESTitle)
                                                 }
                                             }
                                             
                                             Text("(\(diffData.date) 대비)")
-                                                .font(.system(size: 8))
+                                                .font(.system(size: 9))
                                                 .fontWeight(.semibold)
                                                 .foregroundStyle(.gray)
                                                 .padding(.leading, 5)
@@ -209,7 +209,7 @@ struct HomeView: View {
                                             self.BRInfo = true
                                         }
                                         
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                             withAnimation {
                                                 self.BRInfoText = true
                                             }
@@ -297,35 +297,35 @@ struct HomeView: View {
                                         VStack {
                                             HStack(spacing: 0) {
                                                 if diffData.difference > 0 {
-                                                    LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
+                                                    LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.5, width: 20, height: 20)
                                                         .rotationEffect(.degrees(180))
                                                     
                                                     (Text("\(String(format: "%.1f", diffData.difference))")
                                                      + Text(" ")
                                                         .font(.system(size: 11))
                                                      + Text("%")
-                                                        .font(.system(size: 9))
+                                                        .font(.system(size: 10))
                                                     )
-                                                    .font(.system(size: 14).bold())
+                                                    .font(.system(size: 15).bold())
                                                     .foregroundStyle(Color(hex: "D92B2B"))
                                                     
                                                 } else {
-                                                    LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
+                                                    LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.5, width: 20, height: 20)
                                                         .padding(.top, 3)
                                                     
                                                     (Text("\(String(format: "%.1f", diffData.difference))")
                                                      + Text(" ")
                                                         .font(.system(size: 11))
                                                      + Text("%")
-                                                        .font(.system(size: 9))
+                                                        .font(.system(size: 10))
                                                     )
-                                                    .font(.system(size: 14).bold())
+                                                    .font(.system(size: 15).bold())
                                                     .foregroundStyle(Color.ESTitle)
                                                 }
                                             }
                                             
                                             Text("(\(diffData.date) 대비)")
-                                                .font(.system(size: 8))
+                                                .font(.system(size: 9))
                                                 .fontWeight(.semibold)
                                                 .foregroundStyle(.gray)
                                                 .padding(.leading, 5)
@@ -355,7 +355,7 @@ struct HomeView: View {
                                             self.CPIInfo = true
                                         }
                                         
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                             withAnimation {
                                                 self.CPIInfoText = true
                                             }
@@ -447,34 +447,34 @@ struct HomeView: View {
                                         VStack {
                                             HStack(spacing: 0) {
                                                 if diffData.difference > 0 {
-                                                    LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
+                                                    LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.5, width: 20, height: 20)
                                                         .rotationEffect(.degrees(180))
                                                     
                                                     (Text("\(String(format: "%.1f", diffData.difference))")
                                                      + Text(" ")
                                                         .font(.system(size: 11))
                                                      + Text("원")
-                                                        .font(.system(size: 9))
+                                                        .font(.system(size: 10))
                                                     )
-                                                    .font(.system(size: 14).bold())
+                                                    .font(.system(size: 15).bold())
                                                     .foregroundStyle(Color(hex: "D92B2B"))
                                                 } else {
-                                                    LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
+                                                    LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.5, width: 20, height: 20)
                                                         .padding(.top, 3)
                                                     
                                                     (Text("\(String(format: "%.1f", diffData.difference))")
                                                      + Text(" ")
                                                         .font(.system(size: 11))
                                                      + Text("원")
-                                                        .font(.system(size: 9))
+                                                        .font(.system(size: 10))
                                                     )
-                                                    .font(.system(size: 14).bold())
+                                                    .font(.system(size: 15).bold())
                                                     .foregroundStyle(Color.ESTitle)
                                                 }
                                             }
                                             
                                             Text("(\(diffData.date) 대비)")
-                                                .font(.system(size: 8))
+                                                .font(.system(size: 9))
                                                 .fontWeight(.semibold)
                                                 .foregroundStyle(.gray)
                                                 .padding(.leading, 5)
@@ -504,7 +504,7 @@ struct HomeView: View {
                                             self.WDERInfo = true
                                         }
                                         
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                             withAnimation {
                                                 self.WDERInfoText = true
                                             }
@@ -585,43 +585,43 @@ struct HomeView: View {
                                          + Text(" ")
                                             .font(.system(size: 15))
                                          + Text("십억원")
-                                            .font(.system(size: 13))
+                                            .font(.system(size: 12))
                                         )
-                                        .font(.system(size: 19).bold())
+                                        .font(.system(size: 18).bold())
                                     }
                                     
                                     if let diffData = viewModel.calculateRecentDataValueChangeDifference(for: viewModel.M1) {
                                         VStack {
                                             HStack(spacing: 0) {
                                                 if diffData.difference > 0 {
-                                                    LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
+                                                    LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
                                                         .rotationEffect(.degrees(180))
                                                     
                                                     (Text("\(String(format: "%.1f", diffData.difference))")
                                                      + Text(" ")
                                                         .font(.system(size: 11))
                                                      + Text("십억원")
-                                                        .font(.system(size: 7))
+                                                        .font(.system(size: 8))
                                                     )
-                                                    .font(.system(size: 11).bold())
+                                                    .font(.system(size: 13).bold())
                                                     .foregroundStyle(Color(hex: "D92B2B"))
                                                 } else {
-                                                    LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
+                                                    LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
                                                         .padding(.top, 3)
                                                     
                                                     (Text("\(String(format: "%.1f", diffData.difference))")
                                                      + Text(" ")
                                                         .font(.system(size: 11))
                                                      + Text("십억원")
-                                                        .font(.system(size: 7))
+                                                        .font(.system(size: 8))
                                                     )
-                                                    .font(.system(size: 12).bold())
+                                                    .font(.system(size: 13).bold())
                                                     .foregroundStyle(Color.ESTitle)
                                                 }
                                             }
                                             
                                             Text("(\(diffData.date) 대비)")
-                                                .font(.system(size: 7))
+                                                .font(.system(size: 8))
                                                 .fontWeight(.semibold)
                                                 .foregroundStyle(.gray)
                                                 .padding(.leading, 5)
@@ -648,7 +648,7 @@ struct HomeView: View {
                                                 self.M1Info = true
                                             }
                                             
-                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                                 withAnimation {
                                                     self.M1InfoText = true
                                                 }
@@ -728,43 +728,43 @@ struct HomeView: View {
                                          + Text(" ")
                                             .font(.system(size: 15))
                                          + Text("십억원")
-                                            .font(.system(size: 13))
+                                            .font(.system(size: 12))
                                         )
-                                        .font(.system(size: 19).bold())
+                                        .font(.system(size: 18).bold())
                                     }
                                     
                                     if let diffData = viewModel.calculateRecentDataValueChangeDifference(for: viewModel.M2) {
                                         VStack {
                                             HStack(spacing: 0) {
                                                 if diffData.difference > 0 {
-                                                    LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
+                                                    LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
                                                         .rotationEffect(.degrees(180))
                                                     
                                                     (Text("\(String(format: "%.1f", diffData.difference))")
                                                      + Text(" ")
                                                         .font(.system(size: 11))
                                                      + Text("십억원")
-                                                        .font(.system(size: 7))
+                                                        .font(.system(size: 8))
                                                     )
-                                                    .font(.system(size: 12).bold())
+                                                    .font(.system(size: 13).bold())
                                                     .foregroundStyle(Color(hex: "D92B2B"))
                                                 } else {
-                                                    LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
+                                                    LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
                                                         .padding(.top, 3)
                                                     
                                                     (Text("\(String(format: "%.1f", diffData.difference))")
                                                      + Text(" ")
                                                         .font(.system(size: 11))
                                                      + Text("십억원")
-                                                        .font(.system(size: 7))
+                                                        .font(.system(size: 8))
                                                     )
-                                                    .font(.system(size: 12).bold())
+                                                    .font(.system(size: 13).bold())
                                                     .foregroundStyle(Color.ESTitle)
                                                 }
                                             }
                                             
                                             Text("(\(diffData.date) 대비)")
-                                                .font(.system(size: 7))
+                                                .font(.system(size: 8))
                                                 .fontWeight(.semibold)
                                                 .foregroundStyle(.gray)
                                                 .padding(.leading, 5)
@@ -791,7 +791,7 @@ struct HomeView: View {
                                                 self.M2Info = true
                                             }
                                             
-                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                                 withAnimation {
                                                     self.M2InfoText = true
                                                 }
@@ -884,35 +884,35 @@ struct HomeView: View {
                                         VStack {
                                             HStack(spacing: 0) {
                                                 if diffData.difference > 0 {
-                                                    LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
+                                                    LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.5, width: 20, height: 20)
                                                         .rotationEffect(.degrees(180))
                                                     
                                                     (Text("\(String(format: "%.3f", diffData.difference))")
                                                      + Text(" ")
                                                         .font(.system(size: 11))
                                                      + Text("%")
-                                                        .font(.system(size: 9))
+                                                        .font(.system(size: 10))
                                                     )
-                                                    .font(.system(size: 14).bold())
+                                                    .font(.system(size: 15).bold())
                                                     .foregroundStyle(Color(hex: "D92B2B"))
                                                     
                                                 } else {
-                                                    LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
+                                                    LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.5, width: 20, height: 20)
                                                         .padding(.top, 3)
                                                     
                                                     (Text("\(String(format: "%.3f", diffData.difference))")
                                                      + Text(" ")
                                                         .font(.system(size: 11))
                                                      + Text("%")
-                                                        .font(.system(size: 9))
+                                                        .font(.system(size: 10))
                                                     )
-                                                    .font(.system(size: 14).bold())
+                                                    .font(.system(size: 15).bold())
                                                     .foregroundStyle(Color.ESTitle)
                                                 }
                                             }
                                             
                                             Text("(\(diffData.date) 대비)")
-                                                .font(.system(size: 8))
+                                                .font(.system(size: 9))
                                                 .fontWeight(.semibold)
                                                 .foregroundStyle(.gray)
                                                 .padding(.leading, 5)
@@ -942,7 +942,7 @@ struct HomeView: View {
                                             self.EGRInfo = true
                                         }
                                         
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                             withAnimation {
                                                 self.EGRInfoText = true
                                             }
@@ -1034,35 +1034,35 @@ struct HomeView: View {
                                         VStack {
                                             HStack(spacing: 0) {
                                                 if diffData.difference > 0 {
-                                                    LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.4, width: 20, height: 20)
+                                                    LottieView(fileName: "EconomicIndicatorUp", loopMode: .playOnce, scale: 2.5, width: 20, height: 20)
                                                         .rotationEffect(.degrees(180))
                                                     
                                                     (Text("\(String(format: "%.1f", diffData.difference))")
                                                      + Text(" ")
                                                         .font(.system(size: 11))
                                                      + Text("%")
-                                                        .font(.system(size: 9))
+                                                        .font(.system(size: 10))
                                                     )
-                                                    .font(.system(size: 14).bold())
+                                                    .font(.system(size: 15).bold())
                                                     .foregroundStyle(Color(hex: "D92B2B"))
                                                     
                                                 } else {
-                                                    LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.3, width: 20, height: 20)
+                                                    LottieView(fileName: "EconomicIndicatorDown", loopMode: .playOnce, scale: 2.5, width: 20, height: 20)
                                                         .padding(.top, 3)
                                                     
                                                     (Text("\(String(format: "%.1f", diffData.difference))")
                                                      + Text(" ")
                                                         .font(.system(size: 11))
                                                      + Text("%")
-                                                        .font(.system(size: 9))
+                                                        .font(.system(size: 10))
                                                     )
-                                                    .font(.system(size: 14).bold())
+                                                    .font(.system(size: 15).bold())
                                                     .foregroundStyle(Color.ESTitle)
                                                 }
                                             }
                                             
                                             Text("(\(diffData.date) 대비)")
-                                                .font(.system(size: 8))
+                                                .font(.system(size: 9))
                                                 .fontWeight(.semibold)
                                                 .foregroundStyle(.gray)
                                                 .padding(.leading, 5)
@@ -1092,7 +1092,7 @@ struct HomeView: View {
                                             self.URInfo = true
                                         }
                                         
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                             withAnimation {
                                                 self.URInfoText = true
                                             }
