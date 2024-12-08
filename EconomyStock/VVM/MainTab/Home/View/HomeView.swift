@@ -1249,8 +1249,9 @@ struct HomeView: View {
                         navRouter.navigate(.ChatbotAIView)
                     } label: {
                         ZStack {
-                            LottieView(fileName: "AIOrb", loopMode: .loop, speed: 1.3, width: 95, height: 95)
+                            LottieView(fileName: "AIOrb", loopMode: .loop, speed: 1.4, width: 90, height: 90)
                                 .blur(radius: 1.5)
+                                .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                             
                             Image("Chatbot_Toktok")
                                 .resizable()

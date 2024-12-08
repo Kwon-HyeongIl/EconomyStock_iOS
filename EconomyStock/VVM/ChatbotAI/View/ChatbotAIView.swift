@@ -15,8 +15,9 @@ struct ChatbotAIView: View {
             ScrollView {
                 VStack {
                     ZStack {
-                        LottieView(fileName: "AIOrb", loopMode: .loop, speed: 1.3, width: 160, height: 160)
+                        LottieView(fileName: "AIOrb", loopMode: .loop, speed: 1.4, width: 160, height: 160)
                             .blur(radius: 1.5)
+                            .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                         
                         Image("Chatbot_Toktok")
                             .resizable()
@@ -31,10 +32,12 @@ struct ChatbotAIView: View {
                                     
                                     ChatBubbleView(text: message.text)
                                         .padding(.trailing)
+                                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                                     
                                 } else {
                                     ChatBubbleView(text: message.text)
                                         .padding(.leading)
+                                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                                     
                                     Spacer()
                                 }
@@ -45,20 +48,11 @@ struct ChatbotAIView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
             
+            
             HStack {
-                HStack {
-                    TextField("질문을 입력하세요", text: $viewModel.prompt)
-                        .font(.system(size: 15))
-                        .padding(.horizontal)
-                }
-                .frame(maxWidth: .infinity)
-                .frame(height: 40)
-                .clipShape(RoundedRectangle(cornerRadius: 30))
-                .overlay {
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(.gray.opacity(0.2), lineWidth: 4)
-                }
-                .padding(.leading, 30)
+                TextField("질문을 입력하세요", text: $viewModel.prompt)
+                    .font(.system(size: 15))
+                    .padding(.horizontal)
                 
                 Button {
                     Task {
@@ -66,20 +60,25 @@ struct ChatbotAIView: View {
                     }
                 } label: {
                     Circle()
-                        .stroke(Color.aiGradient, lineWidth: 4)
-                        .frame(width: 40, height: 40)
+                        .frame(width: 35, height: 35)
+                        .foregroundStyle(Color.aiGradient)
                         .overlay {
                             Image(systemName: "arrow.up")
-                                .foregroundStyle(Color.aiGradient)
+                                .foregroundStyle(.white)
                                 .fontWeight(.black)
-                                .scaleEffect(1.2)
+                                .scaleEffect(1.1)
                         }
                         .padding(.leading, 5)
                         .padding(.trailing, 20)
+                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                 }
             }
-            .background(.thinMaterial)
+            .frame(height: 50)
+            .background(.regularMaterial)
+            .cornerRadius(20, corners: .allCorners)
+            .padding(.horizontal)
             .padding(.bottom, 10)
+
         }
         .modifier(NavigationBackModifier())
         .background(LottieView(fileName: "AIBackground", loopMode: .loop, scale: 1.75, width: 300, height: 525)
