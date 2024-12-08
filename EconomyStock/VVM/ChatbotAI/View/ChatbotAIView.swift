@@ -32,12 +32,12 @@ struct ChatbotAIView: View {
                                     
                                     ChatBubbleView(text: message.text)
                                         .padding(.trailing)
-                                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                        .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
                                     
                                 } else {
                                     ChatBubbleView(text: message.text)
                                         .padding(.leading)
-                                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                        .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
                                     
                                     Spacer()
                                 }
