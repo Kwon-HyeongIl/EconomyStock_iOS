@@ -32,18 +32,20 @@ class ChatbotAIViewModel {
     }
     
     func requestChatbot() async {
+        let tempPrompt = self.prompt
+        
+        DispatchQueue.main.async {
+            self.prompt = ""
+        }
+        
         DispatchQueue.main.async {
             withAnimation(.smooth(duration: 1.0)) {
-                self.messages.append(ChatMessage(text: self.prompt, isUser: true))
+                self.messages.append(ChatMessage(text: tempPrompt, isUser: true))
             }
         }
         
         do {
-            let response = try await chatbotAIModel.generateContent(self.prompt)
-            
-            DispatchQueue.main.async {
-                self.prompt = ""
-            }
+            let response = try await chatbotAIModel.generateContent(tempPrompt)
             
             if let text = response.text {
                 DispatchQueue.main.async {
