@@ -23,17 +23,21 @@ struct ChatbotAIView: View {
                             .frame(width: 95, height: 90)
                     }
                     
-                    ForEach(viewModel.messages) { message in
-                        HStack {
-                            if message.isUser {
-                                Spacer()
-                                
-                                ChatBubbleView(text: message.text)
-                                
-                            } else {
-                                ChatBubbleView(text: message.text)
-                                
-                                Spacer()
+                    VStack(spacing: 20) {
+                        ForEach(viewModel.messages) { message in
+                            HStack {
+                                if message.isUser {
+                                    Spacer()
+                                    
+                                    ChatBubbleView(text: message.text)
+                                        .padding(.trailing)
+                                    
+                                } else {
+                                    ChatBubbleView(text: message.text)
+                                        .padding(.leading)
+                                    
+                                    Spacer()
+                                }
                             }
                         }
                     }
@@ -74,6 +78,7 @@ struct ChatbotAIView: View {
                         .padding(.trailing, 20)
                 }
             }
+            .background(.thinMaterial)
             .padding(.bottom, 10)
         }
         .modifier(NavigationBackModifier())

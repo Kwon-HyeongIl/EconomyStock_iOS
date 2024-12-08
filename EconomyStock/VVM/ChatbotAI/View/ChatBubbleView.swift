@@ -13,11 +13,11 @@ struct ChatBubbleView: View {
     var body: some View {
         HStack {
             Text(text)
-                .font(.system(size: 18))
+                .font(.system(size: 16))
                 .padding()
         }
         .frame(width: 270)
-        .background(.ultraThickMaterial)
+        .background(.regularMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 30))
     }
 }

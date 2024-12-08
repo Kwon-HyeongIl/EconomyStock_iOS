@@ -18,6 +18,17 @@ class ChatbotAIViewModel {
     init() {
         let key = Bundle.main.infoDictionary?["GOOGLE_AI_STUDIO_KEY"] as? String ?? ""
         self.chatbotAIModel = GenerativeModel(name: "gemini-1.5-flash", apiKey: key)
+        self.addBasicMessge()
+    }
+    
+    private func addBasicMessge() {
+        let basicChatMessage = ChatMessage(text: "안녕하세요! 여러분의 경제 선생님 AI 톡톡이에요.\n\n공부와 관련해서 궁금한 것이 있다면 편하게 질문해주세요😆", isUser: false)
+        
+        DispatchQueue.main.async {
+            withAnimation(.smooth(duration: 1.0)) {
+                self.messages.append(basicChatMessage)
+            }
+        }
     }
     
     func requestChatbot() async {
