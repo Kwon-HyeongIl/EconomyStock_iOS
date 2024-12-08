@@ -27,6 +27,10 @@
 		CA07D78B2D052DED00ECD3E4 /* AIBackground.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA07D78A2D052DED00ECD3E4 /* AIBackground.lottie */; };
 		CA07D7902D053C0400ECD3E4 /* AISparkle.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA07D78F2D053C0400ECD3E4 /* AISparkle.lottie */; };
 		CA07D7912D053C0400ECD3E4 /* AIOrb.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA07D78E2D053C0400ECD3E4 /* AIOrb.lottie */; };
+		CA07D7972D055BC100ECD3E4 /* Color+AIGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07D7962D055BC100ECD3E4 /* Color+AIGradient.swift */; };
+		CA07D7992D05986C00ECD3E4 /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07D7982D05986C00ECD3E4 /* ChatBubbleView.swift */; };
+		CA07D79B2D059B4200ECD3E4 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07D79A2D059B4200ECD3E4 /* ChatMessage.swift */; };
+		CA07D79D2D059EF000ECD3E4 /* ChatbotError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07D79C2D059EF000ECD3E4 /* ChatbotError.swift */; };
 		CA08F3982CB839460093117E /* PriceLevel1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F3972CB839460093117E /* PriceLevel1View.swift */; };
 		CA08F39A2CB8394C0093117E /* PriceLevel2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F3992CB8394C0093117E /* PriceLevel2View.swift */; };
 		CA08F39C2CB839520093117E /* PriceLevel3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F39B2CB839520093117E /* PriceLevel3View.swift */; };
@@ -39,7 +43,7 @@
 		CA17FC702CB005800050250B /* MainCustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC6F2CB005800050250B /* MainCustomTabView.swift */; };
 		CA17FC722CB005A10050250B /* MainTabCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC712CB005A10050250B /* MainTabCapsule.swift */; };
 		CA17FC752CB005DB0050250B /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC742CB005DB0050250B /* MainTab.swift */; };
-		CA17FC772CB009680050250B /* TitleColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC762CB009680050250B /* TitleColor.swift */; };
+		CA17FC772CB009680050250B /* Color+ESTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC762CB009680050250B /* Color+ESTitle.swift */; };
 		CA17FC7D2CB00AB90050250B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC7C2CB00AB90050250B /* HomeView.swift */; };
 		CA17FC7F2CB00ABE0050250B /* CourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC7E2CB00ABE0050250B /* CourseListView.swift */; };
 		CA17FC812CB00AC60050250B /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC802CB00AC60050250B /* NewsView.swift */; };
@@ -289,6 +293,10 @@
 		CA07D78A2D052DED00ECD3E4 /* AIBackground.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = AIBackground.lottie; sourceTree = "<group>"; };
 		CA07D78E2D053C0400ECD3E4 /* AIOrb.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = AIOrb.lottie; sourceTree = "<group>"; };
 		CA07D78F2D053C0400ECD3E4 /* AISparkle.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = AISparkle.lottie; sourceTree = "<group>"; };
+		CA07D7962D055BC100ECD3E4 /* Color+AIGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AIGradient.swift"; sourceTree = "<group>"; };
+		CA07D7982D05986C00ECD3E4 /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
+		CA07D79A2D059B4200ECD3E4 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		CA07D79C2D059EF000ECD3E4 /* ChatbotError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotError.swift; sourceTree = "<group>"; };
 		CA08F3972CB839460093117E /* PriceLevel1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel1View.swift; sourceTree = "<group>"; };
 		CA08F3992CB8394C0093117E /* PriceLevel2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel2View.swift; sourceTree = "<group>"; };
 		CA08F39B2CB839520093117E /* PriceLevel3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel3View.swift; sourceTree = "<group>"; };
@@ -301,7 +309,7 @@
 		CA17FC6F2CB005800050250B /* MainCustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCustomTabView.swift; sourceTree = "<group>"; };
 		CA17FC712CB005A10050250B /* MainTabCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCapsule.swift; sourceTree = "<group>"; };
 		CA17FC742CB005DB0050250B /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
-		CA17FC762CB009680050250B /* TitleColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleColor.swift; sourceTree = "<group>"; };
+		CA17FC762CB009680050250B /* Color+ESTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+ESTitle.swift"; sourceTree = "<group>"; };
 		CA17FC7C2CB00AB90050250B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CA17FC7E2CB00ABE0050250B /* CourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListView.swift; sourceTree = "<group>"; };
 		CA17FC802CB00AC60050250B /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
@@ -637,6 +645,7 @@
 			isa = PBXGroup;
 			children = (
 				CA07D77B2D046A7900ECD3E4 /* ChatbotAIView.swift */,
+				CA07D7982D05986C00ECD3E4 /* ChatBubbleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1145,6 +1154,7 @@
 			isa = PBXGroup;
 			children = (
 				CA77DFD12CB26D0100992829 /* CustomError.swift */,
+				CA07D79C2D059EF000ECD3E4 /* ChatbotError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -1322,8 +1332,9 @@
 		CA9BB9D52CABA8DD00886A1A /* Color */ = {
 			isa = PBXGroup;
 			children = (
-				CA17FC762CB009680050250B /* TitleColor.swift */,
+				CA17FC762CB009680050250B /* Color+ESTitle.swift */,
 				CAE1998E2CFBF790000CFAA2 /* Color+Hex.swift */,
+				CA07D7962D055BC100ECD3E4 /* Color+AIGradient.swift */,
 			);
 			path = Color;
 			sourceTree = "<group>";
@@ -1564,6 +1575,7 @@
 				CA2E936B2CAFB05800A883F1 /* Notification.swift */,
 				CAD101E32CB6959D00CA9C6A /* StudyingCourse.swift */,
 				CA4E71A42CB78A8300BAA70C /* Course.swift */,
+				CA07D79A2D059B4200ECD3E4 /* ChatMessage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1936,6 +1948,7 @@
 				CA07D7632D04309D00ECD3E4 /* AuthViewModel+ResetPassword.swift in Sources */,
 				CA07D7672D04371200ECD3E4 /* SendEmailView.swift in Sources */,
 				CA17FC7D2CB00AB90050250B /* HomeView.swift in Sources */,
+				CA07D7972D055BC100ECD3E4 /* Color+AIGradient.swift in Sources */,
 				CA77DFD22CB26D0100992829 /* CustomError.swift in Sources */,
 				CAEDDABD2CB56C330046162D /* BasicLoginView.swift in Sources */,
 				CA17FC812CB00AC60050250B /* NewsView.swift in Sources */,
@@ -1947,6 +1960,7 @@
 				CACF34162CEDD4C900ECC6FA /* MoneyAndFinance3View.swift in Sources */,
 				CACF34122CEDD4AE00ECC6FA /* MoneyAndFinance1View.swift in Sources */,
 				CAD101DA2CB6853200CA9C6A /* NavigationGestureEnable.swift in Sources */,
+				CA07D79B2D059B4200ECD3E4 /* ChatMessage.swift in Sources */,
 				CA07D77E2D046A8800ECD3E4 /* ChatbotAIViewModel.swift in Sources */,
 				CAD101E22CB6905F00CA9C6A /* ShortButtonModifier.swift in Sources */,
 				CA3BBAB42CB50414007CA152 /* NavigationBackModifier.swift in Sources */,
@@ -1958,6 +1972,7 @@
 				CAE199992CFC1E76000CFAA2 /* ExchangeRateAndBalanceOfPayment6View.swift in Sources */,
 				CAAA250C2CE8558D00F8C380 /* UnEmployment6View.swift in Sources */,
 				CA9BB9E92CABB12700886A1A /* NavigationDestinationPath.swift in Sources */,
+				CA07D7992D05986C00ECD3E4 /* ChatBubbleView.swift in Sources */,
 				CAE1999F2CFC1E99000CFAA2 /* ExchangeRateAndBalanceOfPayment9View.swift in Sources */,
 				CACF34282CEDD50500ECC6FA /* MoneyAndFinance12View.swift in Sources */,
 				CA08F39A2CB8394C0093117E /* PriceLevel2View.swift in Sources */,
@@ -1974,6 +1989,7 @@
 				CA0679232CFB22680043E974 /* ExchangeRateAndBalanceOfPayment1View.swift in Sources */,
 				CAE1998F2CFBF790000CFAA2 /* Color+Hex.swift in Sources */,
 				CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */,
+				CA07D79D2D059EF000ECD3E4 /* ChatbotError.swift in Sources */,
 				CACF34222CEDD4F000ECC6FA /* MoneyAndFinance9View.swift in Sources */,
 				CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */,
 				CA07D7652D0433A800ECD3E4 /* ResetPasswordFocusField.swift in Sources */,
@@ -1981,7 +1997,7 @@
 				CA4E71AB2CB78DE900BAA70C /* CourseIntroView.swift in Sources */,
 				CAAA250A2CE8558700F8C380 /* UnEmployment5View.swift in Sources */,
 				CAC86FDB2CE2E6C200785D4F /* ProfileViewModel.swift in Sources */,
-				CA17FC772CB009680050250B /* TitleColor.swift in Sources */,
+				CA17FC772CB009680050250B /* Color+ESTitle.swift in Sources */,
 				CAD256022CE6DE50008E7788 /* PriceLevel10View.swift in Sources */,
 				CA114FD72CB62D2A00AD5AD9 /* CourseListViewModel.swift in Sources */,
 				CA114FDA2CB62E7D00AD5AD9 /* NavigationTitleModifier.swift in Sources */,
