@@ -27,6 +27,10 @@ class NavigationRouter {
         case .SendEmailView(let viewModel):
             SendEmailView(viewModel: viewModel)
             
+        // Chatbot
+        case .ChatbotAIView:
+            ChatbotAIView()
+            
         // Studying
         case .CourseIntroView(let viewModel):
             CourseIntroView(viewModel: viewModel)

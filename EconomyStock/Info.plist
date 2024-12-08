@@ -51,5 +51,7 @@
 	</array>
 	<key>BANKOFKOREA_OPENAPI_KEY</key>
 	<string>${BANKOFKOREA_OPENAPI_KEY}</string>
+	<key>GOOGLE_AI_STUDIO_KEY</key>
+	<string>${GOOGLE_AI_STUDIO_KEY}</string>
 </dict>
 </plist>

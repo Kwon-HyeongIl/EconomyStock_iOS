@@ -20,6 +20,13 @@
 		CA07D76C2D043A7B00ECD3E4 /* SendingEmail.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA07D76B2D043A7B00ECD3E4 /* SendingEmail.lottie */; };
 		CA07D7712D044F2100ECD3E4 /* AccountInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07D7702D044F2100ECD3E4 /* AccountInfoView.swift */; };
 		CA07D7742D044F5200ECD3E4 /* ProfileViewModel+AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07D7732D044F5200ECD3E4 /* ProfileViewModel+AccountInfo.swift */; };
+		CA07D7772D0467A400ECD3E4 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = CA07D7762D0467A400ECD3E4 /* GoogleGenerativeAI */; };
+		CA07D77C2D046A7900ECD3E4 /* ChatbotAIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07D77B2D046A7900ECD3E4 /* ChatbotAIView.swift */; };
+		CA07D77E2D046A8800ECD3E4 /* ChatbotAIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07D77D2D046A8800ECD3E4 /* ChatbotAIViewModel.swift */; };
+		CA07D7822D04702A00ECD3E4 /* Bubble2.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA07D7812D04702A00ECD3E4 /* Bubble2.lottie */; };
+		CA07D78B2D052DED00ECD3E4 /* AIBackground.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA07D78A2D052DED00ECD3E4 /* AIBackground.lottie */; };
+		CA07D7902D053C0400ECD3E4 /* AISparkle.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA07D78F2D053C0400ECD3E4 /* AISparkle.lottie */; };
+		CA07D7912D053C0400ECD3E4 /* AIOrb.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA07D78E2D053C0400ECD3E4 /* AIOrb.lottie */; };
 		CA08F3982CB839460093117E /* PriceLevel1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F3972CB839460093117E /* PriceLevel1View.swift */; };
 		CA08F39A2CB8394C0093117E /* PriceLevel2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F3992CB8394C0093117E /* PriceLevel2View.swift */; };
 		CA08F39C2CB839520093117E /* PriceLevel3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F39B2CB839520093117E /* PriceLevel3View.swift */; };
@@ -276,6 +283,12 @@
 		CA07D76B2D043A7B00ECD3E4 /* SendingEmail.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = SendingEmail.lottie; sourceTree = "<group>"; };
 		CA07D7702D044F2100ECD3E4 /* AccountInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoView.swift; sourceTree = "<group>"; };
 		CA07D7732D044F5200ECD3E4 /* ProfileViewModel+AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewModel+AccountInfo.swift"; sourceTree = "<group>"; };
+		CA07D77B2D046A7900ECD3E4 /* ChatbotAIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotAIView.swift; sourceTree = "<group>"; };
+		CA07D77D2D046A8800ECD3E4 /* ChatbotAIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotAIViewModel.swift; sourceTree = "<group>"; };
+		CA07D7812D04702A00ECD3E4 /* Bubble2.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bubble2.lottie; sourceTree = "<group>"; };
+		CA07D78A2D052DED00ECD3E4 /* AIBackground.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = AIBackground.lottie; sourceTree = "<group>"; };
+		CA07D78E2D053C0400ECD3E4 /* AIOrb.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = AIOrb.lottie; sourceTree = "<group>"; };
+		CA07D78F2D053C0400ECD3E4 /* AISparkle.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = AISparkle.lottie; sourceTree = "<group>"; };
 		CA08F3972CB839460093117E /* PriceLevel1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel1View.swift; sourceTree = "<group>"; };
 		CA08F3992CB8394C0093117E /* PriceLevel2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel2View.swift; sourceTree = "<group>"; };
 		CA08F39B2CB839520093117E /* PriceLevel3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel3View.swift; sourceTree = "<group>"; };
@@ -525,6 +538,7 @@
 				CAAAC3692D02CEBA0006D8DE /* Shimmer in Frameworks */,
 				CA9BB9E02CABAACF00886A1A /* FirebaseStorage in Frameworks */,
 				CA662BCC2CAD72E6009E8D5F /* KakaoSDKCommon in Frameworks */,
+				CA07D7772D0467A400ECD3E4 /* GoogleGenerativeAI in Frameworks */,
 				CA662BCA2CAD72E6009E8D5F /* KakaoSDKAuth in Frameworks */,
 				CA6C54D62CB160A1008CF887 /* GoogleSignInSwift in Frameworks */,
 			);
@@ -608,6 +622,41 @@
 				CA07D7732D044F5200ECD3E4 /* ProfileViewModel+AccountInfo.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		CA07D7782D046A3800ECD3E4 /* ChatbotAI */ = {
+			isa = PBXGroup;
+			children = (
+				CA07D7792D046A5900ECD3E4 /* View */,
+				CA07D77A2D046A5F00ECD3E4 /* ViewModel */,
+			);
+			path = ChatbotAI;
+			sourceTree = "<group>";
+		};
+		CA07D7792D046A5900ECD3E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA07D77B2D046A7900ECD3E4 /* ChatbotAIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA07D77A2D046A5F00ECD3E4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA07D77D2D046A8800ECD3E4 /* ChatbotAIViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA07D7832D05259B00ECD3E4 /* Chatbot */ = {
+			isa = PBXGroup;
+			children = (
+				CA07D78A2D052DED00ECD3E4 /* AIBackground.lottie */,
+				CA07D78E2D053C0400ECD3E4 /* AIOrb.lottie */,
+				CA07D78F2D053C0400ECD3E4 /* AISparkle.lottie */,
+			);
+			path = Chatbot;
 			sourceTree = "<group>";
 		};
 		CA08F3962CB838620093117E /* 2_PriceLevel */ = {
@@ -1081,6 +1130,7 @@
 		CA77DFCB2CB24D0100992829 /* DotLottieFile */ = {
 			isa = PBXGroup;
 			children = (
+				CA07D7832D05259B00ECD3E4 /* Chatbot */,
 				CA07D7682D0438CC00ECD3E4 /* Auth */,
 				CA4D3EFB2D01E99C0087E55C /* Home */,
 				CA6875992CF182B700DC819A /* MainTab */,
@@ -1444,6 +1494,7 @@
 			isa = PBXGroup;
 			children = (
 				CA6875AC2CF1831900DC819A /* Bubble.lottie */,
+				CA07D7812D04702A00ECD3E4 /* Bubble2.lottie */,
 				CA6875AE2CF1833900DC819A /* QuestionMark.lottie */,
 				CA6875B02CF1836B00DC819A /* Warning.lottie */,
 				CA6875B22CF1838C00DC819A /* ArrowRight.lottie */,
@@ -1532,6 +1583,7 @@
 			isa = PBXGroup;
 			children = (
 				CAEE165D2CAD0D2F00210BD0 /* MainTab */,
+				CA07D7782D046A3800ECD3E4 /* ChatbotAI */,
 			);
 			path = VVM;
 			sourceTree = "<group>";
@@ -1645,6 +1697,7 @@
 				CA6C54D52CB160A1008CF887 /* GoogleSignInSwift */,
 				CA7757672CE22BAC00A8F3DE /* PopupView */,
 				CAAAC3682D02CEBA0006D8DE /* Shimmer */,
+				CA07D7762D0467A400ECD3E4 /* GoogleGenerativeAI */,
 			);
 			productName = EconomyStock;
 			productReference = CA83477C2CAAE28500BA1E4A /* EconomyStock.app */;
@@ -1682,6 +1735,7 @@
 				CA6C54D22CB160A1008CF887 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				CA7757662CE22BAC00A8F3DE /* XCRemoteSwiftPackageReference "PopupView" */,
 				CAAAC3672D02CEBA0006D8DE /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
+				CA07D7752D0467A400ECD3E4 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CA83477D2CAAE28500BA1E4A /* Products */;
@@ -1725,6 +1779,8 @@
 				CA6875C72CF1855300DC819A /* BasicEconomy1_Building.lottie in Resources */,
 				CA31EA3C2CF6F6D30005A475 /* MoneyAndFinance6_Bank.lottie in Resources */,
 				CA6875DF2CF188AE00DC819A /* PriceLevel1_PriceProduct.lottie in Resources */,
+				CA07D7902D053C0400ECD3E4 /* AISparkle.lottie in Resources */,
+				CA07D7912D053C0400ECD3E4 /* AIOrb.lottie in Resources */,
 				CA6875E52CF1893B00DC819A /* BubbleHeart.lottie in Resources */,
 				CA6875C32CF184D300DC819A /* MoneyAndFinanceCourseCover.lottie in Resources */,
 				CA39D54A2CFDAC3B0009AD1C /* ExchangeRateAndBalanceOfPayment4_Banana.lottie in Resources */,
@@ -1748,6 +1804,7 @@
 				CA68760B2CF18DEB00DC819A /* MoneyAndFinance2_MoneyReport.lottie in Resources */,
 				CA0291C52CF978CA00E7323E /* MoneyAndFinance18_PriceDown.lottie in Resources */,
 				CA6875D32CF186AC00DC819A /* BasicEconomy8_MoneyPublish.lottie in Resources */,
+				CA07D78B2D052DED00ECD3E4 /* AIBackground.lottie in Resources */,
 				CA7EFE492CFC6FF20022C565 /* ExchangeRateAndBalanceOfPayment2_MoneyGraphUp.lottie in Resources */,
 				CA6875BB2CF1842000DC819A /* CourseCompleteButton.lottie in Resources */,
 				CA6875952CF17FA900DC819A /* ProfilePlantLevel1.lottie in Resources */,
@@ -1779,6 +1836,7 @@
 				CA6875B12CF1836B00DC819A /* Warning.lottie in Resources */,
 				CA6875B52CF183AC00DC819A /* Sweat.lottie in Resources */,
 				CACD04942CFEBDA500B2DA28 /* ExchangeRateAndBalanceOfPayment7_CargoShip.lottie in Resources */,
+				CA07D7822D04702A00ECD3E4 /* Bubble2.lottie in Resources */,
 				CA4D3EFE2D01E9AF0087E55C /* EconomicIndicatorDown.lottie in Resources */,
 				CA4D3EFF2D01E9AF0087E55C /* EconomicIndicatorUp.lottie in Resources */,
 				CA6875C52CF1851300DC819A /* BasicEconomy1_Home.lottie in Resources */,
@@ -1889,6 +1947,7 @@
 				CACF34162CEDD4C900ECC6FA /* MoneyAndFinance3View.swift in Sources */,
 				CACF34122CEDD4AE00ECC6FA /* MoneyAndFinance1View.swift in Sources */,
 				CAD101DA2CB6853200CA9C6A /* NavigationGestureEnable.swift in Sources */,
+				CA07D77E2D046A8800ECD3E4 /* ChatbotAIViewModel.swift in Sources */,
 				CAD101E22CB6905F00CA9C6A /* ShortButtonModifier.swift in Sources */,
 				CA3BBAB42CB50414007CA152 /* NavigationBackModifier.swift in Sources */,
 				CA9BB9CD2CABA59A00886A1A /* EconomyStockApp.swift in Sources */,
@@ -1945,6 +2004,7 @@
 				CA07D7742D044F5200ECD3E4 /* ProfileViewModel+AccountInfo.swift in Sources */,
 				CA8B5DB72CFF23020070DB71 /* HomeViewModel.swift in Sources */,
 				CAD256002CE6DE4B008E7788 /* PriceLevel9View.swift in Sources */,
+				CA07D77C2D046A7900ECD3E4 /* ChatbotAIView.swift in Sources */,
 				CA9BB9D72CABA94400886A1A /* MainTabView.swift in Sources */,
 				CA17FC8A2CB01E820050250B /* CornerRadius.swift in Sources */,
 				CA17FC8C2CB01EBF0050250B /* RoundCorner.swift in Sources */,
@@ -2171,6 +2231,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CA07D7752D0467A400ECD3E4 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/generative-ai-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.6;
+			};
+		};
 		CA1DDD362CB0E75000C84D08 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
@@ -2230,6 +2298,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CA07D7762D0467A400ECD3E4 /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA07D7752D0467A400ECD3E4 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
+		};
 		CA10C02D2CAF85C1007DAB3A /* FirebaseMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CA9BB9DA2CABAACF00886A1A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

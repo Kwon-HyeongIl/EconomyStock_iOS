@@ -16,6 +16,9 @@ enum NavigationDestinationPath: Hashable {
     case ResetPasswordView(AuthViewModel)
     case SendEmailView(AuthViewModel)
     
+    // Chatbot
+    case ChatbotAIView
+    
     // Studying
     case CourseIntroView(CourseViewModel)
     
