@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ChatbotAIView: View {
     @State private var viewModel = ChatbotAIViewModel()
     
     @State private var position = ScrollPosition()
     @State private var isAtBottom = false
+    @State private var keyboardHeight: CGFloat = 0
     
     var body: some View {
         VStack {
@@ -56,7 +58,7 @@ struct ChatbotAIView: View {
                                         .onChange(of: geometry.frame(in: .named("scroll")).maxY) {
                                             let contentHeight = geometry.size.height
                                             
-                                            let scrollViewHeight = UIScreen.main.bounds.height - 50
+                                            let scrollViewHeight = UIScreen.main.bounds.height - keyboardHeight - 50
                                             
                                             let isCurrentlyAtBottom = geometry.frame(in: .global).maxY <= scrollViewHeight
                                             
@@ -128,6 +130,13 @@ struct ChatbotAIView: View {
         .modifier(NavigationBackModifier())
         .background(LottieView(fileName: "AIBackground", loopMode: .loop, scale: 1.8, width: 300, height: 530)
             .opacity(0.4))
+        .onReceive(Publishers.keyboardHeight) { height in
+            self.keyboardHeight = height
+        }
+        .onTapGesture {
+            // 키보드 내리기
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        }
     }
 }
 

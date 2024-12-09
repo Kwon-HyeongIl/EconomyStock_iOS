@@ -163,6 +163,7 @@
 		CA92DDB92CB7D7C300A7D2A4 /* BasicEconomy4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDB82CB7D7C300A7D2A4 /* BasicEconomy4View.swift */; };
 		CA92DDBB2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDBA2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift */; };
 		CA94BA712CD3C918006ED29A /* CourseListViewCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA94BA702CD3C918006ED29A /* CourseListViewCapsule.swift */; };
+		CA9936CD2D06ABE500B2F89F /* Publishers+KeyboardHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9936CC2D06ABE500B2F89F /* Publishers+KeyboardHeight.swift */; };
 		CA993A872CF1DBC0001C1DED /* PriceLevel3_BadEconomy.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA993A862CF1DBC0001C1DED /* PriceLevel3_BadEconomy.lottie */; };
 		CA993A8D2CF1E0B7001C1DED /* UnEmploymentCourseCover.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA993A8C2CF1E0B7001C1DED /* UnEmploymentCourseCover.lottie */; };
 		CA9BB9CC2CABA59A00886A1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9C82CABA59A00886A1A /* ContentView.swift */; };
@@ -425,6 +426,7 @@
 		CA92DDB82CB7D7C300A7D2A4 /* BasicEconomy4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy4View.swift; sourceTree = "<group>"; };
 		CA92DDBA2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy5View.swift; sourceTree = "<group>"; };
 		CA94BA702CD3C918006ED29A /* CourseListViewCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewCapsule.swift; sourceTree = "<group>"; };
+		CA9936CC2D06ABE500B2F89F /* Publishers+KeyboardHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publishers+KeyboardHeight.swift"; sourceTree = "<group>"; };
 		CA993A862CF1DBC0001C1DED /* PriceLevel3_BadEconomy.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = PriceLevel3_BadEconomy.lottie; sourceTree = "<group>"; };
 		CA993A8C2CF1E0B7001C1DED /* UnEmploymentCourseCover.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = UnEmploymentCourseCover.lottie; sourceTree = "<group>"; };
 		CA9BB9C42CABA59A00886A1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -1271,9 +1273,18 @@
 			path = Page4;
 			sourceTree = "<group>";
 		};
+		CA9936CB2D06ABA100B2F89F /* Publishers */ = {
+			isa = PBXGroup;
+			children = (
+				CA9936CC2D06ABE500B2F89F /* Publishers+KeyboardHeight.swift */,
+			);
+			path = Publishers;
+			sourceTree = "<group>";
+		};
 		CA9BB9C32CABA59A00886A1A /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				CA9936CB2D06ABA100B2F89F /* Publishers */,
 				CA0679122CFAAA4B0043E974 /* Method */,
 				CAD101D82CB6851200CA9C6A /* NavigationGesture */,
 				CA3BBAAF2CB502AC007CA152 /* Modifier */,
@@ -2019,6 +2030,7 @@
 				CA08F3A02CB839600093117E /* PriceLevel5View.swift in Sources */,
 				CA07D7742D044F5200ECD3E4 /* ProfileViewModel+AccountInfo.swift in Sources */,
 				CA8B5DB72CFF23020070DB71 /* HomeViewModel.swift in Sources */,
+				CA9936CD2D06ABE500B2F89F /* Publishers+KeyboardHeight.swift in Sources */,
 				CAD256002CE6DE4B008E7788 /* PriceLevel9View.swift in Sources */,
 				CA07D77C2D046A7900ECD3E4 /* ChatbotAIView.swift in Sources */,
 				CA9BB9D72CABA94400886A1A /* MainTabView.swift in Sources */,

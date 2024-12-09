@@ -66,6 +66,7 @@ class ChatbotAIViewModel {
                 }
             }
             
+            // 마지막 줄바꿈 문자 제거
             DispatchQueue.main.async {
                 if let index = self.messages.lastIndex(where: { $0.id == messageID }) {
                     let currentText = self.messages[index].text
