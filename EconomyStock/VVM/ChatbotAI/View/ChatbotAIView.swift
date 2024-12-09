@@ -95,36 +95,42 @@ struct ChatbotAIView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
             
-            HStack {
-                TextField("질문을 입력하세요", text: $viewModel.prompt)
-                    .font(.system(size: 15))
-                    .padding(.horizontal)
+            VStack {
+                Spacer()
                 
-                Button {
-                    Task {
-                        await viewModel.requestChatbot()
-                    }
-                } label: {
-                    Circle()
-                        .frame(width: 35, height: 35)
-                        .foregroundStyle(Color.aiGradient)
-                        .overlay {
-                            Image(systemName: "arrow.up")
-                                .foregroundStyle(.white)
-                                .fontWeight(.black)
-                                .scaleEffect(1.1)
+                HStack {
+                    TextField("질문을 입력해주세요", text: $viewModel.prompt, axis: .vertical)
+                        .font(.system(size: 15))
+                        .padding(.vertical)
+                        .padding(.leading)
+                    
+                    Button {
+                        Task {
+                            await viewModel.requestChatbot()
                         }
-                        .padding(.leading, 5)
-                        .padding(.trailing, 20)
-                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                    } label: {
+                        Circle()
+                            .frame(width: 35, height: 35)
+                            .foregroundStyle(Color.aiGradient)
+                            .overlay {
+                                Image(systemName: "arrow.up")
+                                    .foregroundStyle(.white)
+                                    .fontWeight(.black)
+                                    .scaleEffect(1.1)
+                            }
+                            .padding(.leading, 5)
+                            .padding(.trailing)
+                            .padding(.vertical, 9)
+                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                    }
                 }
+                .background(.regularMaterial)
+                .cornerRadius(20, corners: .allCorners)
+                .padding(.horizontal)
+                .padding(.bottom, 10)
+                .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
             }
-            .frame(height: 50)
-            .background(.regularMaterial)
-            .cornerRadius(20, corners: .allCorners)
-            .padding(.horizontal)
-            .padding(.bottom, 10)
-            .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
+            .frame(height: 150)
 
         }
         .modifier(NavigationBackModifier())

@@ -1258,7 +1258,8 @@ struct HomeView: View {
                                 .frame(width: 55, height: 50)
                                 .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                         }
-                        .padding(.trailing)
+                        .padding(.trailing, 10)
+                        .padding(.bottom, 10)
                     }
                 }
                 .padding(.bottom, 50)
