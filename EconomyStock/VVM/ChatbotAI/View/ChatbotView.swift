@@ -60,9 +60,7 @@ struct ChatbotView: View {
                                 GeometryReader { geometry in
                                     Color.clear
                                         .onChange(of: geometry.frame(in: .named("scroll")).maxY) {
-//                                            let contentHeight = geometry.size.height
-                                            
-                                            let scrollViewHeight = UIScreen.main.bounds.height - keyboardHeight - 50
+                                            let scrollViewHeight = UIScreen.main.bounds.height - keyboardHeight - 20
                                             
                                             let isCurrentlyAtBottom = geometry.frame(in: .global).maxY <= scrollViewHeight
                                             
@@ -98,44 +96,38 @@ struct ChatbotView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
-            
-            VStack {
-                Spacer()
+
+            HStack {
+                TextField("질문을 입력해주세요", text: $viewModel.prompt, axis: .vertical)
+                    .font(.system(size: 15))
+                    .padding(.vertical)
+                    .padding(.leading)
                 
-                HStack {
-                    TextField("질문을 입력해주세요", text: $viewModel.prompt, axis: .vertical)
-                        .font(.system(size: 15))
-                        .padding(.vertical)
-                        .padding(.leading)
-                    
-                    Button {
-                        Task {
-                            await viewModel.requestChatbot()
-                        }
-                    } label: {
-                        Circle()
-                            .frame(width: 35, height: 35)
-                            .foregroundStyle(Color.aiGradient)
-                            .overlay {
-                                Image(systemName: "arrow.up")
-                                    .foregroundStyle(.white)
-                                    .fontWeight(.black)
-                                    .scaleEffect(1.1)
-                            }
-                            .padding(.leading, 5)
-                            .padding(.trailing)
-                            .padding(.vertical, 9)
-                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                Button {
+                    Task {
+                        await viewModel.requestChatbot()
                     }
+                } label: {
+                    Circle()
+                        .frame(width: 35, height: 35)
+                        .foregroundStyle(Color.aiGradient)
+                        .overlay {
+                            Image(systemName: "arrow.up")
+                                .foregroundStyle(.white)
+                                .fontWeight(.black)
+                                .scaleEffect(1.1)
+                        }
+                        .padding(.leading, 5)
+                        .padding(.trailing)
+                        .padding(.vertical, 5)
+                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                 }
-                .background(.regularMaterial)
-                .cornerRadius(20, corners: .allCorners)
-                .padding(.horizontal)
-                .padding(.bottom, 10)
-                .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
             }
-            .frame(height: 150)
-            .border(.black)
+            .background(.regularMaterial)
+            .cornerRadius(20, corners: .allCorners)
+            .padding(.horizontal)
+            .padding(.bottom, 10)
+            .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
 
         }
         .modifier(NavigationBackModifier())
