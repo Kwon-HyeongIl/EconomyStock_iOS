@@ -10,6 +10,8 @@ import SwiftUI
 struct ChatbotAIView: View {
     @State private var viewModel = ChatbotAIViewModel()
     
+    @State var position = ScrollPosition()
+    
     var body: some View {
         VStack {
             ScrollView {
@@ -22,6 +24,7 @@ struct ChatbotAIView: View {
                         Image("Chatbot_Toktok")
                             .resizable()
                             .frame(width: 95, height: 90)
+                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                     }
                     
                     VStack(spacing: 20) {
@@ -30,12 +33,12 @@ struct ChatbotAIView: View {
                                 if message.isUser {
                                     Spacer()
                                     
-                                    ChatBubbleView(text: message.text)
+                                    ChatBubbleView(text: message.text, isUser: true)
                                         .padding(.trailing)
                                         .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
                                     
                                 } else {
-                                    ChatBubbleView(text: message.text)
+                                    ChatBubbleView(text: message.text, isUser: false)
                                         .padding(.leading)
                                         .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
                                     
@@ -44,10 +47,17 @@ struct ChatbotAIView: View {
                             }
                         }
                     }
+                    .onChange(of: viewModel.messages.count) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            withAnimation {
+                                position.scrollTo(edge: .bottom)
+                            }
+                        }
+                    }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
-            
+            .scrollPosition($position)
             
             HStack {
                 TextField("질문을 입력하세요", text: $viewModel.prompt)
@@ -81,7 +91,7 @@ struct ChatbotAIView: View {
 
         }
         .modifier(NavigationBackModifier())
-        .background(LottieView(fileName: "AIBackground", loopMode: .loop, scale: 1.75, width: 300, height: 525)
+        .background(LottieView(fileName: "AIBackground", loopMode: .loop, scale: 1.8, width: 300, height: 530)
             .opacity(0.4))
     }
 }

@@ -45,17 +45,34 @@ class ChatbotAIViewModel {
         }
         
         do {
-            let response = try await chatbotAIModel.generateContent(tempPrompt)
+            let contentStream = chatbotAIModel.generateContentStream(tempPrompt)
             
-            if let text = response.text {
-                DispatchQueue.main.async {
-                    withAnimation(.smooth(duration: 1.0)) {
-                        self.messages.append(ChatMessage(text: text, isUser: false))
+            let messageID = UUID()
+            
+            DispatchQueue.main.async {
+                let streamedMessage = ChatMessage(id: messageID, text: "", isUser: false)
+                self.messages.append(streamedMessage)
+            }
+            
+            for try await chunk in contentStream {
+                if let text = chunk.text {
+                    DispatchQueue.main.async {
+                        withAnimation(.smooth(duration: 0.5)) {
+                            if let index = self.messages.lastIndex(where: { $0.id == messageID }) {
+                                self.messages[index].text += text
+                            }
+                        }
                     }
                 }
-                
-            } else {
-                throw ChatbotError.emptyResponse
+            }
+            
+            DispatchQueue.main.async {
+                if let index = self.messages.lastIndex(where: { $0.id == messageID }) {
+                    let currentText = self.messages[index].text
+                    if currentText.hasSuffix("\n") {
+                        self.messages[index].text = String(currentText.dropLast())
+                    }
+                }
             }
             
         } catch {

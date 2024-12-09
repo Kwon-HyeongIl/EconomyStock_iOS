@@ -9,19 +9,30 @@ import SwiftUI
 
 struct ChatBubbleView: View {
     let text: String
+    let isUser: Bool
     
     var body: some View {
         HStack {
-            Text(text)
-                .font(.system(size: 16))
-                .padding()
+            if isUser {
+                Spacer()
+            }
+            
+            HStack {
+                Text(text)
+                    .font(.system(size: 16))
+                    .padding()
+            }
+            .background(.regularMaterial)
+            .clipShape(RoundedRectangle(cornerRadius: 30))
+            
+            if !isUser {
+                Spacer()
+            }
         }
         .frame(width: 270)
-        .background(.regularMaterial)
-        .clipShape(RoundedRectangle(cornerRadius: 30))
     }
 }
 
 #Preview {
-    ChatBubbleView(text: "Hello, World Hello, World Hello, World Hello, World Hello, World Hello, World Hello, World Hello, World Hello, World Hello, World Hello, World")
+    ChatBubbleView(text: "Hello, World", isUser: true)
 }
