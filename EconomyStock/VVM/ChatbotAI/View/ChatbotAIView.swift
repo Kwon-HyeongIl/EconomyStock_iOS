@@ -10,64 +10,84 @@ import SwiftUI
 struct ChatbotAIView: View {
     @State private var viewModel = ChatbotAIViewModel()
     
-    @State var position = ScrollPosition()
+    @State private var position = ScrollPosition()
+    @State private var isAtBottom = false
     
     var body: some View {
         VStack {
             ZStack {
-                ScrollView {
-                    VStack {
-                        ZStack {
-                            LottieView(fileName: "AIOrb", loopMode: .loop, speed: 1.4, width: 160, height: 160)
-                                .blur(radius: 1.5)
-                                .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                ScrollViewReader { proxy in
+                    ScrollView {
+                        VStack {
+                            ZStack {
+                                LottieView(fileName: "AIOrb", loopMode: .loop, speed: 1.4, width: 160, height: 160)
+                                    .blur(radius: 1.5)
+                                    .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                                
+                                Image("Chatbot_Toktok")
+                                    .resizable()
+                                    .frame(width: 95, height: 90)
+                                    .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                            }
                             
-                            Image("Chatbot_Toktok")
-                                .resizable()
-                                .frame(width: 95, height: 90)
-                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
-                        }
-                        
-                        VStack(spacing: 20) {
-                            ForEach(viewModel.messages) { message in
-                                HStack {
-                                    if message.isUser {
-                                        Spacer()
-                                        
-                                        ChatBubbleView(text: message.text, isUser: true)
-                                            .padding(.trailing)
-                                            .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
-                                        
-                                    } else {
-                                        ChatBubbleView(text: message.text, isUser: false)
-                                            .padding(.leading)
-                                            .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
-                                        
-                                        Spacer()
+                            VStack(spacing: 20) {
+                                ForEach(viewModel.messages) { message in
+                                    HStack {
+                                        if message.isUser {
+                                            Spacer()
+                                            
+                                            ChatBubbleView(text: message.text, isUser: true)
+                                                .padding(.trailing)
+                                                .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
+                                            
+                                        } else {
+                                            ChatBubbleView(text: message.text, isUser: false)
+                                                .padding(.leading)
+                                                .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
+                                            
+                                            Spacer()
+                                        }
                                     }
                                 }
                             }
+                            .background(
+                                GeometryReader { geometry in
+                                    Color.clear
+                                        .onChange(of: geometry.frame(in: .named("scroll")).maxY) {
+                                            let contentHeight = geometry.size.height
+                                            
+                                            let scrollViewHeight = UIScreen.main.bounds.height - 50
+                                            
+                                            let isCurrentlyAtBottom = geometry.frame(in: .global).maxY <= scrollViewHeight
+                                            
+                                            isAtBottom = isCurrentlyAtBottom
+                                        }
+                                }
+                            )
                         }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .coordinateSpace(name: "scroll")
+                    .scrollIndicators(.never)
+                    .scrollPosition($position)
                 }
-                .scrollIndicators(.never)
-                .scrollPosition($position)
                 
                 VStack {
                     Spacer()
                     
-                    Button {
-                        withAnimation {
-                            position.scrollTo(edge: .bottom)
+                    if !isAtBottom {
+                        Button {
+                            withAnimation {
+                                position.scrollTo(edge: .bottom)
+                            }
+                        } label: {
+                            Image(systemName: "arrowshape.down.circle.fill")
+                                .resizable()
+                                .frame(width: 35, height: 35)
+                                .foregroundStyle(.regularMaterial)
+                                .padding(.bottom, 5)
+                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                         }
-                    } label: {
-                        Image(systemName: "arrowshape.down.circle.fill")
-                            .resizable()
-                            .frame(width: 35, height: 35)
-                            .foregroundStyle(.regularMaterial)
-                            .padding(.bottom, 5)
-                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
