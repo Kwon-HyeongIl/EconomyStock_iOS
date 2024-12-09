@@ -257,7 +257,7 @@ struct HomeView: View {
                                                         .foregroundStyle(Color.ESTitle)
                                                         .padding(.bottom, 10)
                                                     
-                                                    Text("기준금리는 금리 체계의 기준이 되는 금리를 의미하며, 매월 금융통화위원회에서 결정돼요")
+                                                    Text("금리 체계의 기준이 되는 금리를 의미하며, 매월 금융통화위원회에서 결정돼요")
                                                         .font(.system(size: 15))
                                                         .fontWeight(.semibold)
                                                         .multilineTextAlignment(.center)
@@ -383,11 +383,11 @@ struct HomeView: View {
                                         ZStack {
                                             RoundedRectangle(cornerRadius: 10)
                                                 .foregroundStyle(.white)
-                                                .frame(width: CPIInfo ? 300 : 0, height: CPIInfo ? 140 : 0)
+                                                .frame(width: CPIInfo ? 300 : 0, height: CPIInfo ? 125 : 0)
                                                 .overlay {
                                                     RoundedRectangle(cornerRadius: 10)
                                                         .stroke(lineWidth: 1.5)
-                                                        .frame(width: CPIInfo ? 300 : 0, height: CPIInfo ? 140 : 0)
+                                                        .frame(width: CPIInfo ? 300 : 0, height: CPIInfo ? 125 : 0)
                                                         .foregroundStyle(Color.ESTitle)
                                                     
                                                 }
@@ -403,13 +403,13 @@ struct HomeView: View {
                                                         .foregroundStyle(Color.ESTitle)
                                                         .padding(.bottom, 10)
                                                     
-                                                    Text("소비자물가지수는 소비자가 소비하는 재화나 서비스의 가격 수준을 나타내는 지수로, 기준연도를 100으로 놓고 현재의 물가 수준을 나타내며, 매월 산출돼요")
+                                                    Text("소비자가 소비하는 재화나 서비스의 가격 수준을 나타내는 지수로, 기준연도를 100으로 놓고 현재의 물가 수준을 나타내며, 매월 산출돼요")
                                                         .font(.system(size: 15))
                                                         .fontWeight(.semibold)
                                                         .multilineTextAlignment(.center)
                                                 }
                                                 .padding(10)
-                                                .frame(width: 300, height: 140)
+                                                .frame(width: 300, height: 125)
                                                 .padding(.top, 25)
                                                 .padding(.trailing, 25)
                                             }
