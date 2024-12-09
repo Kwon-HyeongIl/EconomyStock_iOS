@@ -60,6 +60,7 @@ struct PriceLevel1View: View {
                             .padding(.top, 120)
                     }
                 }
+                .scrollIndicators(.never)
                 
                 if nextButton {
                     VStack {

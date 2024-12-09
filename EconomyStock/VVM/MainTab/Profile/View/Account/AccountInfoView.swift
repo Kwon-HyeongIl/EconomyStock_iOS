@@ -15,6 +15,7 @@ struct AccountInfoView: View {
         ScrollView {
             
         }
+        .scrollIndicators(.never)
         .modifier(NavigationBackTitleModifier(title: "계정 정보"))
     }
 }

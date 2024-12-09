@@ -151,6 +151,7 @@ struct BasicEconomy2View: View {
                         }
                     }
                 }
+                .scrollIndicators(.never)
                 
                 if nextButton {
                     VStack {

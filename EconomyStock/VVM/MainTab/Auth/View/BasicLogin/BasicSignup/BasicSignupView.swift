@@ -116,6 +116,7 @@ struct BasicSignupView: View {
                     
                     
                 }
+                .scrollIndicators(.never)
                 .onAppear {
                     focus = .email
                 }

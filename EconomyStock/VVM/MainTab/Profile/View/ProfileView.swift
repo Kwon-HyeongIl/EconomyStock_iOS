@@ -128,6 +128,7 @@ struct ProfileView: View {
                 }
             }
         }
+        .scrollIndicators(.never)
         .modifier(NavigationTitleModifier(title: "프로필"))
     }
 }

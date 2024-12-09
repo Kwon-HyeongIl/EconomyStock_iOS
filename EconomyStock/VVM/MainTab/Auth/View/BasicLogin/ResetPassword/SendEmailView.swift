@@ -36,6 +36,7 @@ struct SendEmailView: View {
                 }
             }
         }
+        .scrollIndicators(.never)
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 withAnimation(.smooth(duration: 1.0)) {

@@ -171,6 +171,7 @@ struct MoneyAndFinance17View: View {
                             .frame(width: 100, height: 80)
                             .id("bottom")
                     }
+                    .scrollIndicators(.never)
                     
                     if nextButton {
                         VStack {

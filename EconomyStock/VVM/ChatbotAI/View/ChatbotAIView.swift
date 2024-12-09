@@ -14,50 +14,64 @@ struct ChatbotAIView: View {
     
     var body: some View {
         VStack {
-            ScrollView {
-                VStack {
-                    ZStack {
-                        LottieView(fileName: "AIOrb", loopMode: .loop, speed: 1.4, width: 160, height: 160)
-                            .blur(radius: 1.5)
-                            .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+            ZStack {
+                ScrollView {
+                    VStack {
+                        ZStack {
+                            LottieView(fileName: "AIOrb", loopMode: .loop, speed: 1.4, width: 160, height: 160)
+                                .blur(radius: 1.5)
+                                .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                            
+                            Image("Chatbot_Toktok")
+                                .resizable()
+                                .frame(width: 95, height: 90)
+                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                        }
                         
-                        Image("Chatbot_Toktok")
-                            .resizable()
-                            .frame(width: 95, height: 90)
-                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
-                    }
-                    
-                    VStack(spacing: 20) {
-                        ForEach(viewModel.messages) { message in
-                            HStack {
-                                if message.isUser {
-                                    Spacer()
-                                    
-                                    ChatBubbleView(text: message.text, isUser: true)
-                                        .padding(.trailing)
-                                        .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
-                                    
-                                } else {
-                                    ChatBubbleView(text: message.text, isUser: false)
-                                        .padding(.leading)
-                                        .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
-                                    
-                                    Spacer()
+                        VStack(spacing: 20) {
+                            ForEach(viewModel.messages) { message in
+                                HStack {
+                                    if message.isUser {
+                                        Spacer()
+                                        
+                                        ChatBubbleView(text: message.text, isUser: true)
+                                            .padding(.trailing)
+                                            .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
+                                        
+                                    } else {
+                                        ChatBubbleView(text: message.text, isUser: false)
+                                            .padding(.leading)
+                                            .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
+                                        
+                                        Spacer()
+                                    }
                                 }
                             }
                         }
                     }
-                    .onChange(of: viewModel.messages.count) {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                            withAnimation {
-                                position.scrollTo(edge: .bottom)
-                            }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
+                .scrollIndicators(.never)
+                .scrollPosition($position)
+                
+                VStack {
+                    Spacer()
+                    
+                    Button {
+                        withAnimation {
+                            position.scrollTo(edge: .bottom)
                         }
+                    } label: {
+                        Image(systemName: "arrowshape.down.circle.fill")
+                            .resizable()
+                            .frame(width: 35, height: 35)
+                            .foregroundStyle(.regularMaterial)
+                            .padding(.bottom, 5)
+                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
-            .scrollPosition($position)
             
             HStack {
                 TextField("질문을 입력하세요", text: $viewModel.prompt)
@@ -88,6 +102,7 @@ struct ChatbotAIView: View {
             .cornerRadius(20, corners: .allCorners)
             .padding(.horizontal)
             .padding(.bottom, 10)
+            .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
 
         }
         .modifier(NavigationBackModifier())

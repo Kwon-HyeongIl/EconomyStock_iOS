@@ -106,6 +106,7 @@ struct BasicEconomy6View: View {
                         .padding(.top)
                     }
                 }
+                .scrollIndicators(.never)
                 
                 if nextButton {
                     VStack {

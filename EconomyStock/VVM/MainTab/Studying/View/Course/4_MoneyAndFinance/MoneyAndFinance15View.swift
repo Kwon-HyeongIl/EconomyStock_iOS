@@ -71,6 +71,7 @@ struct MoneyAndFinance15View: View {
                         }
                     }
                 }
+                .scrollIndicators(.never)
                 
                 if nextButton {
                     VStack {

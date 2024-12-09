@@ -86,6 +86,7 @@ struct BasicEconomy8View: View {
                         .padding(.top)
                     }
                 }
+                .scrollIndicators(.never)
                 
                 if nextButton {
                     VStack {

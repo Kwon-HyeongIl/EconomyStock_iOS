@@ -81,6 +81,7 @@ struct ResetPasswordView: View {
                 Spacer()
             }
         }
+        .scrollIndicators(.never)
         .onAppear {
             focus = .email
         }

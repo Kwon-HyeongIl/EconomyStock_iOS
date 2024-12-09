@@ -70,6 +70,7 @@ struct MoneyAndFinance6View: View {
                     }
                     
                 }
+                .scrollIndicators(.never)
                 
                 if nextButton {
                     VStack {

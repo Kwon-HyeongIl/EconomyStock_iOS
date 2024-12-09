@@ -186,6 +186,7 @@ struct PriceLevel7View: View {
                             .frame(width: 100, height: 100)
                             .id("bottom")
                     }
+                    .scrollIndicators(.never)
                     
                     if nextButton {
                         VStack {

@@ -157,6 +157,7 @@ struct BasicEconomy11View: View {
                             .padding(.top, 50)
                         }
                     }
+                    .scrollIndicators(.never)
                     
                     if completeButton {
                         VStack {

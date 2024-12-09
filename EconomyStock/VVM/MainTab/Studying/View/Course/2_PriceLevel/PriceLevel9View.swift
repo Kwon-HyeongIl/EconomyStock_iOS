@@ -92,6 +92,7 @@ struct PriceLevel9View: View {
                             .padding(.top, 70)
                     }
                 }
+                .scrollIndicators(.never)
                 
                 if nextButton {
                     VStack {

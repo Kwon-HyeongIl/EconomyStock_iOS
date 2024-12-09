@@ -176,6 +176,7 @@ struct BasicEconomy7View: View {
                             .frame(width: 300, height: 75)
                             .id("bottom")
                     }
+                    .scrollIndicators(.never)
                     
                     if nextButton {
                         VStack {

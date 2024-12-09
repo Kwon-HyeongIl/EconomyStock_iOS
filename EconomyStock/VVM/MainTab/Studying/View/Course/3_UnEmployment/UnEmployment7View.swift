@@ -75,6 +75,7 @@ struct UnEmployment7View: View {
                     }
                     
                 }
+                .scrollIndicators(.never)
                 
                 if completeButton {
                     VStack {

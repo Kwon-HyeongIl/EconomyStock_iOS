@@ -113,6 +113,7 @@ struct MoneyAndFinance8View: View {
                             .frame(width: 100, height: 75)
                             .id("bottom")
                     }
+                    .scrollIndicators(.never)
                     
                     if nextButton {
                         VStack {

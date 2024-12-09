@@ -323,6 +323,7 @@ struct UnEmployment1View: View {
                         }
                     }
                 }
+                .scrollIndicators(.never)
                 
                 if nextButton {
                     VStack {

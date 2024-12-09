@@ -128,6 +128,7 @@ struct BasicLoginView: View {
                 Spacer()
             }
         }
+        .scrollIndicators(.never)
         .onAppear {
             focus = .email
         }

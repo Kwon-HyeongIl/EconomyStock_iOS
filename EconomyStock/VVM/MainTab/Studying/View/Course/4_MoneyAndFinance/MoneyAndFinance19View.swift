@@ -101,6 +101,7 @@ struct MoneyAndFinance19View: View {
                         }
                         
                     }
+                    .scrollIndicators(.never)
                     
                     if completeButton {
                         VStack {

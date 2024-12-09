@@ -98,6 +98,7 @@ struct ExchangeRateAndBalanceOfPayment11View: View {
 //                            .frame(width: 100, height: 85)
 //                            .id("bottom")
                     }
+                    .scrollIndicators(.never)
                     
                     if completeButton {
                         VStack {
