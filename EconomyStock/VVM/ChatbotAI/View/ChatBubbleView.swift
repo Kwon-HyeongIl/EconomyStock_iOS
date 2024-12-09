@@ -20,7 +20,6 @@ struct ChatBubbleView: View {
             HStack {
                 if text.isEmpty {
                     LottieView(fileName: "AISparkle", loopMode: .loop, scale: 1.2, width: 40, height: 40)
-                        .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                         .padding()
                     
                 } else {

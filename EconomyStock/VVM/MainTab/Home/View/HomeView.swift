@@ -1246,7 +1246,7 @@ struct HomeView: View {
                     Spacer()
                     
                     Button {
-                        navRouter.navigate(.ChatbotAIView(.main))
+                        navRouter.navigate(.ChatbotView(.main))
                     } label: {
                         ZStack {
                             LottieView(fileName: "AIOrb", loopMode: .loop, speed: 1.4, width: 90, height: 90)

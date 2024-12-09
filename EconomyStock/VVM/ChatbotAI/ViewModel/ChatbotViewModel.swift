@@ -18,6 +18,8 @@ class ChatbotViewModel {
     let config = GenerationConfig(maxOutputTokens: 300)
     var prompt = ""
     
+    let commonInitText = "너는 지금부터 \"경제STOCK\"이라는 기초 경제 학습 앱의 이름이 \"톡톡이\"라는 메인 캐릭터야. 앞으로 경제 관련된 질문에 답을 하고, 혹시 경제와 관련 있지 않은 질문이 들어오면 경제와 관련된 질문을 하도록 유도해. 다음 요청부터 사용자가 질문을 할건데, 이 사용자의 질문에 활기찬 말투의 존댓말을 사용해서 짧게 답변을 해줘. 참고로 더이상 인사는 하지마."
+    
     init(type: ChatbotEntranceType) {
         let key = Bundle.main.infoDictionary?["GOOGLE_AI_STUDIO_KEY"] as? String ?? ""
         self.model = GenerativeModel(name: "gemini-1.5-flash", apiKey: key, generationConfig: config)
