@@ -8,12 +8,16 @@
 import SwiftUI
 import Combine
 
-struct ChatbotAIView: View {
-    @State private var viewModel = ChatbotAIViewModel()
+struct ChatbotView: View {
+    @State private var viewModel: ChatbotViewModel
     
     @State private var position = ScrollPosition()
     @State private var isAtBottom = false
     @State private var keyboardHeight: CGFloat = 0
+    
+    init(type: ChatbotEntranceType) {
+        self.viewModel = ChatbotViewModel(type: type)
+    }
     
     var body: some View {
         VStack {
@@ -56,7 +60,7 @@ struct ChatbotAIView: View {
                                 GeometryReader { geometry in
                                     Color.clear
                                         .onChange(of: geometry.frame(in: .named("scroll")).maxY) {
-                                            let contentHeight = geometry.size.height
+//                                            let contentHeight = geometry.size.height
                                             
                                             let scrollViewHeight = UIScreen.main.bounds.height - keyboardHeight - 50
                                             
@@ -131,6 +135,7 @@ struct ChatbotAIView: View {
                 .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
             }
             .frame(height: 150)
+            .border(.black)
 
         }
         .modifier(NavigationBackModifier())
@@ -147,6 +152,6 @@ struct ChatbotAIView: View {
 }
 
 #Preview {
-    ChatbotAIView()
+    ChatbotView(type: .main)
         .environment(NavigationRouter())
 }

@@ -9,30 +9,28 @@ import SwiftUI
 import GoogleGenerativeAI
 
 @Observable
-class ChatbotAIViewModel {
-    var chatbotAIModel: GenerativeModel
+class ChatbotViewModel {
+    var model: GenerativeModel
     
+    let type: ChatbotEntranceType
     var messages = [ChatMessage]()
     var prompt = ""
+    var initText = ""
     
-    init() {
-        let key = Bundle.main.infoDictionary?["GOOGLE_AI_STUDIO_KEY"] as? String ?? ""
-        self.chatbotAIModel = GenerativeModel(name: "gemini-1.5-flash", apiKey: key)
-        self.addBasicMessge()
+    var convertPrompt: String {
+        "\(self.initText)\n\n#\(self.prompt)#"
     }
     
-    private func addBasicMessge() {
-        let basicChatMessage = ChatMessage(text: "안녕하세요, 여러분의 경제 선생님 AI 톡톡이에요!\n\n공부와 관련해서 궁금한 것이 있다면 편하게 질문해주세요😆", isUser: false)
-        
-        DispatchQueue.main.async {
-            withAnimation(.smooth(duration: 1.0)) {
-                self.messages.append(basicChatMessage)
-            }
-        }
+    init(type: ChatbotEntranceType) {
+        let key = Bundle.main.infoDictionary?["GOOGLE_AI_STUDIO_KEY"] as? String ?? ""
+        self.model = GenerativeModel(name: "gemini-1.5-flash", apiKey: key)
+        self.type = type
+        self.entranceRouter()
     }
     
     func requestChatbot() async {
-        let tempPrompt = self.prompt
+        let userPrompt = self.prompt
+        let convertedPrompt = self.convertPrompt
         
         DispatchQueue.main.async {
             self.prompt = ""
@@ -40,12 +38,12 @@ class ChatbotAIViewModel {
         
         DispatchQueue.main.async {
             withAnimation(.smooth(duration: 1.0)) {
-                self.messages.append(ChatMessage(text: tempPrompt, isUser: true))
+                self.messages.append(ChatMessage(text: userPrompt, isUser: true))
             }
         }
         
         do {
-            let contentStream = chatbotAIModel.generateContentStream(tempPrompt)
+            let contentStream = model.generateContentStream(convertedPrompt)
             
             let messageID = UUID()
             

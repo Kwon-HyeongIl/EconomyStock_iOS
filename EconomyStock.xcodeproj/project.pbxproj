@@ -21,8 +21,8 @@
 		CA07D7712D044F2100ECD3E4 /* AccountInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07D7702D044F2100ECD3E4 /* AccountInfoView.swift */; };
 		CA07D7742D044F5200ECD3E4 /* ProfileViewModel+AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07D7732D044F5200ECD3E4 /* ProfileViewModel+AccountInfo.swift */; };
 		CA07D7772D0467A400ECD3E4 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = CA07D7762D0467A400ECD3E4 /* GoogleGenerativeAI */; };
-		CA07D77C2D046A7900ECD3E4 /* ChatbotAIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07D77B2D046A7900ECD3E4 /* ChatbotAIView.swift */; };
-		CA07D77E2D046A8800ECD3E4 /* ChatbotAIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07D77D2D046A8800ECD3E4 /* ChatbotAIViewModel.swift */; };
+		CA07D77C2D046A7900ECD3E4 /* ChatbotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07D77B2D046A7900ECD3E4 /* ChatbotView.swift */; };
+		CA07D77E2D046A8800ECD3E4 /* ChatbotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07D77D2D046A8800ECD3E4 /* ChatbotViewModel.swift */; };
 		CA07D7822D04702A00ECD3E4 /* Bubble2.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA07D7812D04702A00ECD3E4 /* Bubble2.lottie */; };
 		CA07D78B2D052DED00ECD3E4 /* AIBackground.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA07D78A2D052DED00ECD3E4 /* AIBackground.lottie */; };
 		CA07D7902D053C0400ECD3E4 /* AISparkle.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA07D78F2D053C0400ECD3E4 /* AISparkle.lottie */; };
@@ -164,6 +164,8 @@
 		CA92DDBB2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDBA2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift */; };
 		CA94BA712CD3C918006ED29A /* CourseListViewCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA94BA702CD3C918006ED29A /* CourseListViewCapsule.swift */; };
 		CA9936CD2D06ABE500B2F89F /* Publishers+KeyboardHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9936CC2D06ABE500B2F89F /* Publishers+KeyboardHeight.swift */; };
+		CA9936D02D06B9CE00B2F89F /* ChatbotEntranceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9936CF2D06B9CE00B2F89F /* ChatbotEntranceType.swift */; };
+		CA9936D22D06D62300B2F89F /* ChatbotViewModel+Entrance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9936D12D06D62300B2F89F /* ChatbotViewModel+Entrance.swift */; };
 		CA993A872CF1DBC0001C1DED /* PriceLevel3_BadEconomy.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA993A862CF1DBC0001C1DED /* PriceLevel3_BadEconomy.lottie */; };
 		CA993A8D2CF1E0B7001C1DED /* UnEmploymentCourseCover.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA993A8C2CF1E0B7001C1DED /* UnEmploymentCourseCover.lottie */; };
 		CA9BB9CC2CABA59A00886A1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9C82CABA59A00886A1A /* ContentView.swift */; };
@@ -288,8 +290,8 @@
 		CA07D76B2D043A7B00ECD3E4 /* SendingEmail.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = SendingEmail.lottie; sourceTree = "<group>"; };
 		CA07D7702D044F2100ECD3E4 /* AccountInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoView.swift; sourceTree = "<group>"; };
 		CA07D7732D044F5200ECD3E4 /* ProfileViewModel+AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewModel+AccountInfo.swift"; sourceTree = "<group>"; };
-		CA07D77B2D046A7900ECD3E4 /* ChatbotAIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotAIView.swift; sourceTree = "<group>"; };
-		CA07D77D2D046A8800ECD3E4 /* ChatbotAIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotAIViewModel.swift; sourceTree = "<group>"; };
+		CA07D77B2D046A7900ECD3E4 /* ChatbotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotView.swift; sourceTree = "<group>"; };
+		CA07D77D2D046A8800ECD3E4 /* ChatbotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotViewModel.swift; sourceTree = "<group>"; };
 		CA07D7812D04702A00ECD3E4 /* Bubble2.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bubble2.lottie; sourceTree = "<group>"; };
 		CA07D78A2D052DED00ECD3E4 /* AIBackground.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = AIBackground.lottie; sourceTree = "<group>"; };
 		CA07D78E2D053C0400ECD3E4 /* AIOrb.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = AIOrb.lottie; sourceTree = "<group>"; };
@@ -427,6 +429,8 @@
 		CA92DDBA2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy5View.swift; sourceTree = "<group>"; };
 		CA94BA702CD3C918006ED29A /* CourseListViewCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewCapsule.swift; sourceTree = "<group>"; };
 		CA9936CC2D06ABE500B2F89F /* Publishers+KeyboardHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publishers+KeyboardHeight.swift"; sourceTree = "<group>"; };
+		CA9936CF2D06B9CE00B2F89F /* ChatbotEntranceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotEntranceType.swift; sourceTree = "<group>"; };
+		CA9936D12D06D62300B2F89F /* ChatbotViewModel+Entrance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatbotViewModel+Entrance.swift"; sourceTree = "<group>"; };
 		CA993A862CF1DBC0001C1DED /* PriceLevel3_BadEconomy.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = PriceLevel3_BadEconomy.lottie; sourceTree = "<group>"; };
 		CA993A8C2CF1E0B7001C1DED /* UnEmploymentCourseCover.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = UnEmploymentCourseCover.lottie; sourceTree = "<group>"; };
 		CA9BB9C42CABA59A00886A1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -646,7 +650,7 @@
 		CA07D7792D046A5900ECD3E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CA07D77B2D046A7900ECD3E4 /* ChatbotAIView.swift */,
+				CA07D77B2D046A7900ECD3E4 /* ChatbotView.swift */,
 				CA07D7982D05986C00ECD3E4 /* ChatBubbleView.swift */,
 			);
 			path = View;
@@ -655,7 +659,8 @@
 		CA07D77A2D046A5F00ECD3E4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				CA07D77D2D046A8800ECD3E4 /* ChatbotAIViewModel.swift */,
+				CA07D77D2D046A8800ECD3E4 /* ChatbotViewModel.swift */,
+				CA9936D12D06D62300B2F89F /* ChatbotViewModel+Entrance.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1281,6 +1286,14 @@
 			path = Publishers;
 			sourceTree = "<group>";
 		};
+		CA9936CE2D06B9BC00B2F89F /* Chatbot */ = {
+			isa = PBXGroup;
+			children = (
+				CA9936CF2D06B9CE00B2F89F /* ChatbotEntranceType.swift */,
+			);
+			path = Chatbot;
+			sourceTree = "<group>";
+		};
 		CA9BB9C32CABA59A00886A1A /* Component */ = {
 			isa = PBXGroup;
 			children = (
@@ -1372,6 +1385,7 @@
 		CA9BB9E52CABAF1B00886A1A /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				CA9936CE2D06B9BC00B2F89F /* Chatbot */,
 				CAD9A10E2CC515A300A4F70B /* Course */,
 				CA77DFD02CB26CF100992829 /* Error */,
 				CAEDDACF2CB575DB0046162D /* Navigation */,
@@ -1895,6 +1909,7 @@
 				CA3BBAB62CB50441007CA152 /* NavigationBackTitleModifier.swift in Sources */,
 				CAEE16482CAD07B900210BD0 /* AuthManager.swift in Sources */,
 				CAE199952CFC1E5F000CFAA2 /* ExchangeRateAndBalanceOfPayment4View.swift in Sources */,
+				CA9936D02D06B9CE00B2F89F /* ChatbotEntranceType.swift in Sources */,
 				CAE4C1DF2CDE3F2E00CDD0CF /* BasicEconomy6View.swift in Sources */,
 				CAAA25042CE8555300F8C380 /* UnEmployment2View.swift in Sources */,
 				CAEE165A2CAD0CBA00210BD0 /* AuthManager+Hash.swift in Sources */,
@@ -1972,7 +1987,7 @@
 				CACF34122CEDD4AE00ECC6FA /* MoneyAndFinance1View.swift in Sources */,
 				CAD101DA2CB6853200CA9C6A /* NavigationGestureEnable.swift in Sources */,
 				CA07D79B2D059B4200ECD3E4 /* ChatMessage.swift in Sources */,
-				CA07D77E2D046A8800ECD3E4 /* ChatbotAIViewModel.swift in Sources */,
+				CA07D77E2D046A8800ECD3E4 /* ChatbotViewModel.swift in Sources */,
 				CAD101E22CB6905F00CA9C6A /* ShortButtonModifier.swift in Sources */,
 				CA3BBAB42CB50414007CA152 /* NavigationBackModifier.swift in Sources */,
 				CA9BB9CD2CABA59A00886A1A /* EconomyStockApp.swift in Sources */,
@@ -2007,6 +2022,7 @@
 				CAEE164B2CAD082500210BD0 /* User.swift in Sources */,
 				CA4E71AB2CB78DE900BAA70C /* CourseIntroView.swift in Sources */,
 				CAAA250A2CE8558700F8C380 /* UnEmployment5View.swift in Sources */,
+				CA9936D22D06D62300B2F89F /* ChatbotViewModel+Entrance.swift in Sources */,
 				CAC86FDB2CE2E6C200785D4F /* ProfileViewModel.swift in Sources */,
 				CA17FC772CB009680050250B /* Color+ESTitle.swift in Sources */,
 				CAD256022CE6DE50008E7788 /* PriceLevel10View.swift in Sources */,
@@ -2032,7 +2048,7 @@
 				CA8B5DB72CFF23020070DB71 /* HomeViewModel.swift in Sources */,
 				CA9936CD2D06ABE500B2F89F /* Publishers+KeyboardHeight.swift in Sources */,
 				CAD256002CE6DE4B008E7788 /* PriceLevel9View.swift in Sources */,
-				CA07D77C2D046A7900ECD3E4 /* ChatbotAIView.swift in Sources */,
+				CA07D77C2D046A7900ECD3E4 /* ChatbotView.swift in Sources */,
 				CA9BB9D72CABA94400886A1A /* MainTabView.swift in Sources */,
 				CA17FC8A2CB01E820050250B /* CornerRadius.swift in Sources */,
 				CA17FC8C2CB01EBF0050250B /* RoundCorner.swift in Sources */,

@@ -32,7 +32,7 @@ struct CourseToolbarModifier: ViewModifier {
                 ToolbarItem(placement: .topBarTrailing) {
                     HStack {
                         Button {
-                            navRouter.navigate(.ChatbotAIView)
+                            navRouter.navigate(.ChatbotAIView(.basicEconomyCourse))
                         } label: {
                             ZStack {
                                 LottieView(fileName: "AIOrb", loopMode: .loop, speed: 1.4, width: 50, height: 50)

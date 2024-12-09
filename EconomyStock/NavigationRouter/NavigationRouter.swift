@@ -28,8 +28,8 @@ class NavigationRouter {
             SendEmailView(viewModel: viewModel)
             
         // Chatbot
-        case .ChatbotAIView:
-            ChatbotAIView()
+        case .ChatbotAIView(let type):
+            ChatbotView(type: type)
             
         // Studying
         case .CourseIntroView(let viewModel):
