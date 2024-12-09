@@ -40,7 +40,7 @@ extension ChatbotViewModel {
     private func initMainEntrance() -> (String, ChatMessage) {
         let initText = self.commonInitText
         
-        let messageText = "안녕하세요, 여러분의 경제 선생님 톡톡이에요!\n\n공부와 관련해서 궁금한 것이 있다면 편하게 질문해주세요😆"
+        let messageText = "안녕하세요, 여러분의 경제 선생님 AI 톡톡이에요!\n\n공부와 관련해서 궁금한 것이 있다면 편하게 질문해주세요😆"
         let defaultChatMessage = ChatMessage(text: messageText, isUser: false)
         
         return (initText, defaultChatMessage)
