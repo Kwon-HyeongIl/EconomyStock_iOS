@@ -14,23 +14,19 @@ class ChatbotViewModel {
     
     let type: ChatbotEntranceType
     var messages = [ChatMessage]()
+    var history = [ModelContent]()
+    let config = GenerationConfig(maxOutputTokens: 300)
     var prompt = ""
-    var initText = ""
-    
-    var convertPrompt: String {
-        "\(self.initText)\n\n#\(self.prompt)#"
-    }
     
     init(type: ChatbotEntranceType) {
         let key = Bundle.main.infoDictionary?["GOOGLE_AI_STUDIO_KEY"] as? String ?? ""
-        self.model = GenerativeModel(name: "gemini-1.5-flash", apiKey: key)
+        self.model = GenerativeModel(name: "gemini-1.5-flash", apiKey: key, generationConfig: config)
         self.type = type
         self.entranceRouter()
     }
     
     func requestChatbot() async {
         let userPrompt = self.prompt
-        let convertedPrompt = self.convertPrompt
         
         DispatchQueue.main.async {
             self.prompt = ""
@@ -43,7 +39,8 @@ class ChatbotViewModel {
         }
         
         do {
-            let contentStream = model.generateContentStream(convertedPrompt)
+            let chat = model.startChat(history: history)
+            let contentStream = chat.sendMessageStream(userPrompt)
             
             let messageID = UUID()
             
@@ -73,6 +70,10 @@ class ChatbotViewModel {
                     }
                 }
             }
+            
+            // 채팅 내역 기록
+            self.history.append(ModelContent(role: "user", parts: userPrompt))
+            self.history.append(ModelContent(role: "model", parts: messages.last?.text ?? ""))
             
         } catch {
             DispatchQueue.main.async {
