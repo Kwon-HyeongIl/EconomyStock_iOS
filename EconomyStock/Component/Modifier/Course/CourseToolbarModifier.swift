@@ -30,14 +30,30 @@ struct CourseToolbarModifier: ViewModifier {
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        alertExit = true
-                    } label: {
-                        Image(systemName: "rectangle.portrait.and.arrow.right")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 25)
-                            .foregroundStyle(Color.ESTitle)
+                    HStack {
+                        Button {
+                            navRouter.navigate(.ChatbotAIView)
+                        } label: {
+                            ZStack {
+                                LottieView(fileName: "AIOrb", loopMode: .loop, speed: 1.4, width: 50, height: 50)
+                                    .blur(radius: 1.5)
+                                
+                                Text("AI")
+                                    .font(.system(size: 20, design: .rounded).bold())
+                                    .foregroundStyle(.white)
+                                    .shadow(color: .gray.opacity(0.8), radius: 1, x: 1, y: 1)
+                            }
+                        }
+                        
+                        Button {
+                            alertExit = true
+                        } label: {
+                            Image(systemName: "rectangle.portrait.and.arrow.right")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 25)
+                                .foregroundStyle(Color.ESTitle)
+                        }
                     }
                 }
             }
