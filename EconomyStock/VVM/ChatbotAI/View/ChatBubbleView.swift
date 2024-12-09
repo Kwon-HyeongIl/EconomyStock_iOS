@@ -18,9 +18,15 @@ struct ChatBubbleView: View {
             }
             
             HStack {
-                Text(text)
-                    .font(.system(size: 16))
-                    .padding()
+                if text.isEmpty {
+                    LottieView(fileName: "AISparkle", loopMode: .loop, scale: 1.2, width: 40, height: 40)
+                        .padding()
+                    
+                } else {
+                    Text(text)
+                        .font(.system(size: 16))
+                        .padding()
+                }
             }
             .background(.regularMaterial)
             .clipShape(RoundedRectangle(cornerRadius: 30))
@@ -34,5 +40,5 @@ struct ChatBubbleView: View {
 }
 
 #Preview {
-    ChatBubbleView(text: "Hello, World", isUser: true)
+    ChatBubbleView(text: "", isUser: true)
 }
