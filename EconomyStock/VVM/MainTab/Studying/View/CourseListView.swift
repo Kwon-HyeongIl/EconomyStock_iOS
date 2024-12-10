@@ -27,7 +27,7 @@ struct CourseListView: View {
             viewModel.updateAllCourses()
         }
 //        .onAppear {
-            // 임시
+//            // 임시
 //            viewModel.updateAllCourses()
 //        }
     }

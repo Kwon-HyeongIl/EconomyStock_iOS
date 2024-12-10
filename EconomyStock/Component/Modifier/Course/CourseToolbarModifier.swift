@@ -75,78 +75,15 @@ struct CourseToolbarModifier: ViewModifier {
                         loadingBarState = true
                     }
                     
-                    // 로컬 currentUser의 parmanentProgressPage 값 바꾸고 (기존의 값보다 큰 경우에만), 로컬 basicEconomyLastPage 값 변경
-                    switch viewModel.course.type {
-                        
-                    case .basicEconomy:
-                        if AuthManager.shared.currentUser?.studyingCourse.basicEconomyParmanentProgressPage ?? 0 < currentPage {
-                            AuthManager.shared.currentUser?.studyingCourse.basicEconomyParmanentProgressPage = currentPage
-                            
-                            // DB User의 parmanentProgressPage 값 바꾸기 (기존의 값보다 큰 경우에만)
-                            Task {
-                                await AuthManager.shared.updateCourseParmanentProgressPage(courseType: viewModel.course.type, parmanentProgressPage: currentPage)
-                            }
-                        }
-                        
-                        // CurrentUser의 lastPage 값 바꾸기
-                        AuthManager.shared.currentUser?.studyingCourse.basicEconomyLastPage = currentPage
-                        
-                    case .priceLevel:
-                        print("priceLevelParmanentProgressPage", AuthManager.shared.currentUser?.studyingCourse.priceLevelParmanentProgressPage ?? 50)
-                        print("currentPage", currentPage)
-                        if AuthManager.shared.currentUser?.studyingCourse.priceLevelParmanentProgressPage ?? 0 < currentPage {
-                            AuthManager.shared.currentUser?.studyingCourse.priceLevelParmanentProgressPage = currentPage
-                            
-                            Task {
-                                await AuthManager.shared.updateCourseParmanentProgressPage(courseType: viewModel.course.type, parmanentProgressPage: currentPage)
-                            }
-                        }
-                        
-                        AuthManager.shared.currentUser?.studyingCourse.priceLevelLastPage = currentPage
-                        
-                    case .unEmployment:
-                        print("unempParmanentProgressPage", AuthManager.shared.currentUser?.studyingCourse.unEmploymentParmanentProgressPage ?? 50)
-                        print("currentPage", currentPage)
-                        if AuthManager.shared.currentUser?.studyingCourse.unEmploymentParmanentProgressPage ?? 0 < currentPage {
-                            AuthManager.shared.currentUser?.studyingCourse.unEmploymentParmanentProgressPage = currentPage
-                            
-                            Task {
-                                await AuthManager.shared.updateCourseParmanentProgressPage(courseType: viewModel.course.type, parmanentProgressPage: currentPage)
-                            }
-                        }
-                        
-                        AuthManager.shared.currentUser?.studyingCourse.unEmploymentLastPage = currentPage
-                        
-                    case .moneyAndFinance:
-                        if AuthManager.shared.currentUser?.studyingCourse.moneyAndFinanceParmanentProgressPage ?? 0 < currentPage {
-                            AuthManager.shared.currentUser?.studyingCourse.moneyAndFinanceParmanentProgressPage = currentPage
-                            
-                            Task {
-                                await AuthManager.shared.updateCourseParmanentProgressPage(courseType: viewModel.course.type, parmanentProgressPage: currentPage)
-                            }
-                        }
-                        
-                        AuthManager.shared.currentUser?.studyingCourse.moneyAndFinanceLastPage = currentPage
-                        
-                    case .exchangeRateAndBalanceOfPayment:
-                        if AuthManager.shared.currentUser?.studyingCourse.exchangeRateAndBalanceOfPaymentParmanentProgressPage ?? 0 < currentPage {
-                            AuthManager.shared.currentUser?.studyingCourse.exchangeRateAndBalanceOfPaymentParmanentProgressPage = currentPage
-                            
-                            Task {
-                                await AuthManager.shared.updateCourseParmanentProgressPage(courseType: viewModel.course.type, parmanentProgressPage: currentPage)
-                            }
-                        }
-                        
-                        AuthManager.shared.currentUser?.studyingCourse.exchangeRateAndBalanceOfPaymentLastPage = currentPage
+                    CourseManager.updateUserCoursePageRoute(type: viewModel.course.type, isEnd: false, currentPage: currentPage)
+                    
+                    // DB User의 lastPage 값 바꾸기
+                    Task {
+                        await CourseManager.updateUserCourseLastPage(courseType: viewModel.course.type, lastPage: currentPage)
                     }
                     
                     // CourseListViewModel의 updateAllCourses 메서드 호출 (중간 인터페이스로 연결)
                     courseListViewCapule.isUpdate.toggle()
-                    
-                    // DB User의 lastPage 값 바꾸기
-                    Task {
-                        await AuthManager.shared.updateCourseLastPage(courseType: viewModel.course.type, lastPage: currentPage)
-                    }
         
                     navRouter.popToRoot()
                 } label: {

@@ -69,7 +69,8 @@
 		CA3BBAB12CB5035E007CA152 /* LongButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */; };
 		CA3BBAB42CB50414007CA152 /* NavigationBackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */; };
 		CA3BBAB62CB50441007CA152 /* NavigationBackTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */; };
-		CA4B4F072CB9577500C2D4E0 /* AuthManager+Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B4F062CB9577500C2D4E0 /* AuthManager+Course.swift */; };
+		CA41026C2D082343000579C6 /* CourseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41026B2D082343000579C6 /* CourseManager.swift */; };
+		CA4102702D082C1F000579C6 /* CourseManager+Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41026F2D082C1F000579C6 /* CourseManager+Router.swift */; };
 		CA4D3EFE2D01E9AF0087E55C /* EconomicIndicatorDown.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA4D3EFC2D01E9AF0087E55C /* EconomicIndicatorDown.lottie */; };
 		CA4D3EFF2D01E9AF0087E55C /* EconomicIndicatorUp.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA4D3EFD2D01E9AF0087E55C /* EconomicIndicatorUp.lottie */; };
 		CA4D88CE2CDC70210003DE3C /* BasicEconomy10View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D88CD2CDC70210003DE3C /* BasicEconomy10View.swift */; };
@@ -339,7 +340,8 @@
 		CA3BBAB02CB5035E007CA152 /* LongButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButtonModifier.swift; sourceTree = "<group>"; };
 		CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackModifier.swift; sourceTree = "<group>"; };
 		CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackTitleModifier.swift; sourceTree = "<group>"; };
-		CA4B4F062CB9577500C2D4E0 /* AuthManager+Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthManager+Course.swift"; sourceTree = "<group>"; };
+		CA41026B2D082343000579C6 /* CourseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseManager.swift; sourceTree = "<group>"; };
+		CA41026F2D082C1F000579C6 /* CourseManager+Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseManager+Router.swift"; sourceTree = "<group>"; };
 		CA4D3EFC2D01E9AF0087E55C /* EconomicIndicatorDown.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = EconomicIndicatorDown.lottie; sourceTree = "<group>"; };
 		CA4D3EFD2D01E9AF0087E55C /* EconomicIndicatorUp.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = EconomicIndicatorUp.lottie; sourceTree = "<group>"; };
 		CA4D88CD2CDC70210003DE3C /* BasicEconomy10View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy10View.swift; sourceTree = "<group>"; };
@@ -904,7 +906,6 @@
 			isa = PBXGroup;
 			children = (
 				CA3338A62D07D6230061A6F5 /* View */,
-				CA3338A72D07D62C0061A6F5 /* ViewModel */,
 			);
 			path = Completion;
 			sourceTree = "<group>";
@@ -912,7 +913,6 @@
 		CA3338A52D07D5F10061A6F5 /* AISummary */ = {
 			isa = PBXGroup;
 			children = (
-				CA3338A92D07D6340061A6F5 /* ViewModel */,
 				CA3338A82D07D6300061A6F5 /* View */,
 			);
 			path = AISummary;
@@ -1037,6 +1037,31 @@
 				CA6875E22CF1890500DC819A /* PriceLevel2_Apple.lottie */,
 			);
 			path = Page2;
+			sourceTree = "<group>";
+		};
+		CA41026A2D082314000579C6 /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				CA41026B2D082343000579C6 /* CourseManager.swift */,
+				CA41026F2D082C1F000579C6 /* CourseManager+Router.swift */,
+			);
+			path = Course;
+			sourceTree = "<group>";
+		};
+		CA41026D2D082400000579C6 /* Completion */ = {
+			isa = PBXGroup;
+			children = (
+				CA3338A72D07D62C0061A6F5 /* ViewModel */,
+			);
+			path = Completion;
+			sourceTree = "<group>";
+		};
+		CA41026E2D08240D000579C6 /* AISummary */ = {
+			isa = PBXGroup;
+			children = (
+				CA3338A92D07D6340061A6F5 /* ViewModel */,
+			);
+			path = AISummary;
 			sourceTree = "<group>";
 		};
 		CA424BBC2CDA6AC300209C2F /* Auth */ = {
@@ -1287,6 +1312,8 @@
 		CA92DDB02CB7D5B900A7D2A4 /* Course */ = {
 			isa = PBXGroup;
 			children = (
+				CA41026E2D08240D000579C6 /* AISummary */,
+				CA41026D2D082400000579C6 /* Completion */,
 				CA4E71A72CB78B8400BAA70C /* CourseViewModel.swift */,
 			);
 			path = Course;
@@ -1431,6 +1458,7 @@
 				CAEE16502CAD0C2E00210BD0 /* Auth */,
 				CAEE165B2CAD0D1400210BD0 /* FCM */,
 				CA2E93682CAFAEB000A883F1 /* Notification */,
+				CA41026A2D082314000579C6 /* Course */,
 				CA8B5DBD2CFF24400070DB71 /* EconomicIndicator */,
 			);
 			path = Manager;
@@ -1673,7 +1701,6 @@
 				CAEE16472CAD07B900210BD0 /* AuthManager.swift */,
 				CAEE16512CAD0C3F00210BD0 /* AuthManager+SocialLogin.swift */,
 				CAEE16592CAD0CBA00210BD0 /* AuthManager+Hash.swift */,
-				CA4B4F062CB9577500C2D4E0 /* AuthManager+Course.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -2004,6 +2031,7 @@
 				CA61CEB52CE0A0C3007BCF4E /* BasicEconomy11View.swift in Sources */,
 				CAD255FC2CE6DE3C008E7788 /* PriceLevel7View.swift in Sources */,
 				CACF34262CEDD4FD00ECC6FA /* MoneyAndFinance11View.swift in Sources */,
+				CA4102702D082C1F000579C6 /* CourseManager+Router.swift in Sources */,
 				CA06791B2CFABA0E0043E974 /* AuthViewModel+BasicSignup.swift in Sources */,
 				CACF34182CEDD4D000ECC6FA /* MoneyAndFinance4View.swift in Sources */,
 				CA07D75E2D04304900ECD3E4 /* ResetPasswordView.swift in Sources */,
@@ -2046,7 +2074,6 @@
 				CAE199972CFC1E66000CFAA2 /* ExchangeRateAndBalanceOfPayment5View.swift in Sources */,
 				CA114FDD2CB631A500AD5AD9 /* CourseCoverView.swift in Sources */,
 				CA4D88CE2CDC70210003DE3C /* BasicEconomy10View.swift in Sources */,
-				CA4B4F072CB9577500C2D4E0 /* AuthManager+Course.swift in Sources */,
 				CACF34162CEDD4C900ECC6FA /* MoneyAndFinance3View.swift in Sources */,
 				CACF34122CEDD4AE00ECC6FA /* MoneyAndFinance1View.swift in Sources */,
 				CAD101DA2CB6853200CA9C6A /* NavigationGestureEnable.swift in Sources */,
@@ -2097,6 +2124,7 @@
 				CA9CF5742D0060D800114807 /* EconomicIndicatorCycleData.swift in Sources */,
 				CA5578022CEE04A200F7C4A6 /* LottieViewMain.swift in Sources */,
 				CAE199A32CFC1EA5000CFAA2 /* ExchangeRateAndBalanceOfPayment11View.swift in Sources */,
+				CA41026C2D082343000579C6 /* CourseManager.swift in Sources */,
 				CAEDDAB92CB53B3F0046162D /* BasicSignupFocusField.swift in Sources */,
 				CAEE164F2CAD096C00210BD0 /* NotificationType.swift in Sources */,
 				CAAA25022CE8554200F8C380 /* UnEmployment1View.swift in Sources */,

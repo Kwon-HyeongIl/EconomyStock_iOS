@@ -48,15 +48,12 @@ struct CourseCompletionView: View {
                         loadingBarState = true
                     }
                     
-                    viewModel.updateLastPage()
-                    
-                    courseListViewCapule.isUpdate.toggle()
-                    
-                    // DB User의 lastPage 값 바꾸기 (1페이지로 초기화)
                     Task {
-                        await AuthManager.shared.updateCourseLastPage(courseType: viewModel.type, lastPage: 1)
+                        await viewModel.updateUserCoursePage()
+                        
+                        courseListViewCapule.isUpdate.toggle()
                     }
-        
+                    
                     navRouter.popToRoot()
                 } label: {
                     RoundedRectangle(cornerRadius: 20)

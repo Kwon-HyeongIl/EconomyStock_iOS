@@ -1,15 +1,15 @@
 //
-//  AuthManager+Course.swift
+//  CourseManager.swift
 //  EconomyStock
 //
-//  Created by 권형일 on 10/11/24.
+//  Created by 권형일 on 12/10/24.
 //
 
 import Foundation
 import FirebaseFirestore
 
-extension AuthManager {
-    func updateCourseParmanentProgressPage(courseType: CourseType, parmanentProgressPage: Int) async {
+class CourseManager {
+    static func updateUserCourseParmanentProgressPage(courseType: CourseType, parmanentProgressPage: Int) async {
         var editedData: [String: Any] = [:]
         
         let courseTypeParmanentProgressPage: String
@@ -42,7 +42,7 @@ extension AuthManager {
         }
     }
     
-    func updateCourseLastPage(courseType: CourseType, lastPage: Int) async {
+    static func updateUserCourseLastPage(courseType: CourseType, lastPage: Int) async {
         var editedData: [String: Any] = [:]
         
         let courseTypeLastPage: String
