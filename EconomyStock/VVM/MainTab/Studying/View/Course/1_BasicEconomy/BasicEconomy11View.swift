@@ -24,6 +24,7 @@ struct BasicEconomy11View: View {
     
     @State private var popup = false
     @State private var isPopupLoading = true
+    @State private var isCompletePopupAppear = false
     
     @State private var loadingBarState = false
     
@@ -241,19 +242,25 @@ struct BasicEconomy11View: View {
             }
         }
         .popup(isPresented: $popup) {
-            CourseCompletionView(type: .basicEconomy, currentPage: viewModel.currentPage, isPopupLoading: $isPopupLoading, loadingBarState: $loadingBarState)
-            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
-            .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3.6) {
-                    withAnimation(.smooth(duration: 1.0)) {
-                        self.isPopupLoading = false
+            if !isCompletePopupAppear {
+                AICourseSummaryView(type: .basicEconomy, isCompletePopupAppear: $isCompletePopupAppear)
+                    .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                
+            } else if isCompletePopupAppear {
+                CourseCompletionView(type: .basicEconomy, currentPage: viewModel.currentPage, isPopupLoading: $isPopupLoading, loadingBarState: $loadingBarState)
+                    .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3.6) {
+                            withAnimation(.smooth(duration: 1.0)) {
+                                self.isPopupLoading = false
+                            }
+                        }
                     }
-                }
             }
         } customize: {
             $0
                 .animation(.spring(duration: 0.7))
-                .closeOnTapOutside(true)
+                .closeOnTapOutside(false)
                 .closeOnTap(false)
                 .backgroundColor(.gray.opacity(0.8))
         }

@@ -153,6 +153,8 @@
 		CA7757682CE22BAC00A8F3DE /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = CA7757672CE22BAC00A8F3DE /* PopupView */; };
 		CA77DFCF2CB256DD00992829 /* AuthViewModel+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77DFCE2CB256DD00992829 /* AuthViewModel+Google.swift */; };
 		CA77DFD22CB26D0100992829 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77DFD12CB26D0100992829 /* CustomError.swift */; };
+		CA78C3092D084E4100E89532 /* AICourseSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78C3082D084E4100E89532 /* AICourseSummaryView.swift */; };
+		CA78C30D2D08518600E89532 /* AICourseSummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78C30C2D08518600E89532 /* AICourseSummaryViewModel.swift */; };
 		CA7CE31C2CF5DB9900F2B011 /* MoneyAndFinance8_Money.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA7CE31B2CF5DB9800F2B011 /* MoneyAndFinance8_Money.lottie */; };
 		CA7EFE472CFC52A00022C565 /* ExchangeRateAndBalanceOfPayment1_MoneyExchange.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA7EFE462CFC52A00022C565 /* ExchangeRateAndBalanceOfPayment1_MoneyExchange.lottie */; };
 		CA7EFE492CFC6FF20022C565 /* ExchangeRateAndBalanceOfPayment2_MoneyGraphUp.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA7EFE482CFC6FF20022C565 /* ExchangeRateAndBalanceOfPayment2_MoneyGraphUp.lottie */; };
@@ -420,6 +422,8 @@
 		CA762CC62CF86BD100983308 /* MoneyAndFinance16_Wallet.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance16_Wallet.lottie; sourceTree = "<group>"; };
 		CA77DFCE2CB256DD00992829 /* AuthViewModel+Google.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthViewModel+Google.swift"; sourceTree = "<group>"; };
 		CA77DFD12CB26D0100992829 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		CA78C3082D084E4100E89532 /* AICourseSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICourseSummaryView.swift; sourceTree = "<group>"; };
+		CA78C30C2D08518600E89532 /* AICourseSummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICourseSummaryViewModel.swift; sourceTree = "<group>"; };
 		CA7CE31B2CF5DB9800F2B011 /* MoneyAndFinance8_Money.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance8_Money.lottie; sourceTree = "<group>"; };
 		CA7EFE462CFC52A00022C565 /* ExchangeRateAndBalanceOfPayment1_MoneyExchange.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExchangeRateAndBalanceOfPayment1_MoneyExchange.lottie; sourceTree = "<group>"; };
 		CA7EFE482CFC6FF20022C565 /* ExchangeRateAndBalanceOfPayment2_MoneyGraphUp.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExchangeRateAndBalanceOfPayment2_MoneyGraphUp.lottie; sourceTree = "<group>"; };
@@ -913,6 +917,7 @@
 		CA3338A52D07D5F10061A6F5 /* AISummary */ = {
 			isa = PBXGroup;
 			children = (
+				CA78C3082D084E4100E89532 /* AICourseSummaryView.swift */,
 			);
 			path = AISummary;
 			sourceTree = "<group>";
@@ -1028,6 +1033,7 @@
 		CA41026E2D08240D000579C6 /* AISummary */ = {
 			isa = PBXGroup;
 			children = (
+				CA78C30C2D08518600E89532 /* AICourseSummaryViewModel.swift */,
 			);
 			path = AISummary;
 			sourceTree = "<group>";
@@ -2017,12 +2023,14 @@
 				CA0679142CFAAB4A0043E974 /* CourseMain.swift in Sources */,
 				CAB77FD92CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift in Sources */,
 				CACF34142CEDD4BF00ECC6FA /* MoneyAndFinance2View.swift in Sources */,
+				CA78C3092D084E4100E89532 /* AICourseSummaryView.swift in Sources */,
 				CAE199A12CFC1E9E000CFAA2 /* ExchangeRateAndBalanceOfPayment10View.swift in Sources */,
 				CA3BBAA82CB50063007CA152 /* BasicSignupView.swift in Sources */,
 				CA07D7712D044F2100ECD3E4 /* AccountInfoView.swift in Sources */,
 				CA94BA712CD3C918006ED29A /* CourseListViewCapsule.swift in Sources */,
 				CA9CF5762D0060E700114807 /* EconomicIndicatorCycle.swift in Sources */,
 				CA77DFCF2CB256DD00992829 /* AuthViewModel+Google.swift in Sources */,
+				CA78C30D2D08518600E89532 /* AICourseSummaryViewModel.swift in Sources */,
 				CAE199912CFC1E54000CFAA2 /* ExchangeRateAndBalanceOfPayment2View.swift in Sources */,
 				CA17FC7F2CB00ABE0050250B /* CourseListView.swift in Sources */,
 				CAE4C1E12CDE3F3E00CDD0CF /* BasicEconomy7View.swift in Sources */,

@@ -116,6 +116,7 @@ struct ChatbotView: View {
                                 .foregroundStyle(.white)
                                 .fontWeight(.black)
                                 .scaleEffect(1.1)
+                                .shadow(color: .gray.opacity(0.8), radius: 1, x: 1, y: 1)
                         }
                         .padding(.leading, 5)
                         .padding(.trailing)

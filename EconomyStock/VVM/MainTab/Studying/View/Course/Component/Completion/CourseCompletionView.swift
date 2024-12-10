@@ -71,7 +71,7 @@ struct CourseCompletionView: View {
                 }
             }
         }
-        .frame(width: 300, height: 500)
+        .frame(width: 320, height: 520)
         .background(.ultraThickMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 20))
     }
