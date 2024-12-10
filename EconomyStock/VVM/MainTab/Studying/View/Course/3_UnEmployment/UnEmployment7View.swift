@@ -22,6 +22,7 @@ struct UnEmployment7View: View {
     
     @State private var popup = false
     @State private var isPopupLoading = true
+    @State private var isCompletePopupAppear = false
     
     @State private var loadingBarState = false
     
@@ -152,14 +153,20 @@ struct UnEmployment7View: View {
             }
         }
         .popup(isPresented: $popup) {
-            CourseCompletionView(type: .unEmployment, currentPage: viewModel.currentPage, isPopupLoading: $isPopupLoading, loadingBarState: $loadingBarState)
-            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
-            .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3.6) {
-                    withAnimation(.smooth(duration: 1.0)) {
-                        self.isPopupLoading = false
+            if !isCompletePopupAppear {
+                AICourseSummaryView(type: .unEmployment, isCompletePopupAppear: $isCompletePopupAppear)
+                    .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                
+            } else if isCompletePopupAppear {
+                CourseCompletionView(type: .unEmployment, currentPage: viewModel.currentPage, isPopupLoading: $isPopupLoading, loadingBarState: $loadingBarState)
+                    .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3.6) {
+                            withAnimation(.smooth(duration: 1.0)) {
+                                self.isPopupLoading = false
+                            }
+                        }
                     }
-                }
             }
         } customize: {
             $0
