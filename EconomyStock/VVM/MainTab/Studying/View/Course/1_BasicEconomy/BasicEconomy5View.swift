@@ -245,7 +245,7 @@ struct BasicEconomy5View: View {
                                             .padding(.leading, 10)
                                             .padding(.top, questionMarkContent ? 5 : 0)
                                         
-                                        Text("이전지출이란?")
+                                        Text("이전지출은 정부지출에 포함될까요?")
                                             .font(.system(size: 15))
                                             .foregroundStyle(Color(red:128/255, green:0/255, blue:128/255))
                                             .fontWeight(.semibold)

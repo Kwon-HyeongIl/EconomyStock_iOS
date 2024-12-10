@@ -47,45 +47,45 @@ extension ChatbotViewModel {
     }
     
     private func initBasicEconomyCourseEntrance() -> (String, ChatMessage) {
-        let initText = "\(commonInitText) 그리고, 지금 사용자는 현재 1강 \"기초 경제\"에 대해 학습하고 있는 상황이야."
+        let initText = "\(commonInitText) 그리고, 지금 사용자는 현재 1장 \"기초 경제\"에 대해 학습하고 있는 상황이야."
         
-        let messageText = "안녕하세요, 1강 \"기초 경제\" 강의 내용에 대해 더 궁금하신 부분이 있으신가요?🧐"
+        let messageText = "안녕하세요, 1장 \"기초 경제\" 강의 내용에 대해 더 궁금하신 부분이 있으신가요?🧐"
         let defaultChatMessage = ChatMessage(text: messageText, isUser: false)
         
         return (initText, defaultChatMessage)
     }
     
     private func initPriceLevelCourseEntrance() -> (String, ChatMessage) {
-        let initText = "\(commonInitText) 그리고, 지금 사용자는 현재 2강 \"환율\"에 대해 학습하고 있는 상황이야."
+        let initText = "\(commonInitText) 그리고, 지금 사용자는 현재 2장 \"환율\"에 대해 학습하고 있는 상황이야."
         
-        let messageText = "안녕하세요, 2강 \"환율\" 강의 내용에 대해 더 궁금하신 부분이 있으신가요?🧐"
+        let messageText = "안녕하세요, 2장 \"환율\" 강의 내용에 대해 더 궁금하신 부분이 있으신가요?🧐"
         let defaultChatMessage = ChatMessage(text: messageText, isUser: false)
         
         return (initText, defaultChatMessage)
     }
     
     private func initUnEmploymentCourseEntrance() -> (String, ChatMessage) {
-        let initText = "\(commonInitText) 그리고, 지금 사용자는 현재 3강 \"실업\"에 대해 학습하고 있는 상황이야."
+        let initText = "\(commonInitText) 그리고, 지금 사용자는 현재 3장 \"실업\"에 대해 학습하고 있는 상황이야."
         
-        let messageText = "안녕하세요, 3강 \"실업\" 강의 내용에 대해 더 궁금하신 부분이 있으신가요?🧐"
+        let messageText = "안녕하세요, 3장 \"실업\" 강의 내용에 대해 더 궁금하신 부분이 있으신가요?🧐"
         let defaultChatMessage = ChatMessage(text: messageText, isUser: false)
         
         return (initText, defaultChatMessage)
     }
     
     private func initMoneyAndFinanceCourseEntrance() -> (String, ChatMessage) {
-        let initText = "\(commonInitText) 그리고, 지금 사용자는 현재 4강 \"화폐와 금융\"에 대해 학습하고 있는 상황이야."
+        let initText = "\(commonInitText) 그리고, 지금 사용자는 현재 4장 \"화폐와 금융\"에 대해 학습하고 있는 상황이야."
         
-        let messageText = "안녕하세요, 4강 \"화폐와 금융\" 강의 내용에 대해 더 궁금하신 부분이 있으신가요?🧐"
+        let messageText = "안녕하세요, 4장 \"화폐와 금융\" 강의 내용에 대해 더 궁금하신 부분이 있으신가요?🧐"
         let defaultChatMessage = ChatMessage(text: messageText, isUser: false)
         
         return (initText, defaultChatMessage)
     }
     
     private func initExchangeRateAndBalanceOfPaymentCourseEntrance() -> (String, ChatMessage) {
-        let initText = "\(commonInitText) 그리고, 지금 사용자는 현재 5강 \"환율과 국제수지\"에 대해 학습하고 있는 상황이야."
+        let initText = "\(commonInitText) 그리고, 지금 사용자는 현재 5장 \"환율과 국제수지\"에 대해 학습하고 있는 상황이야."
         
-        let messageText = "안녕하세요, 5강 \"환율과 국제수지\" 강의 내용에 대해 더 궁금하신 부분이 있으신가요?🧐"
+        let messageText = "안녕하세요, 5장 \"환율과 국제수지\" 강의 내용에 대해 더 궁금하신 부분이 있으신가요?🧐"
         let defaultChatMessage = ChatMessage(text: messageText, isUser: false)
         
         return (initText, defaultChatMessage)
