@@ -92,6 +92,8 @@ struct CourseToolbarModifier: ViewModifier {
                         AuthManager.shared.currentUser?.studyingCourse.basicEconomyLastPage = currentPage
                         
                     case .priceLevel:
+                        print("priceLevelParmanentProgressPage", AuthManager.shared.currentUser?.studyingCourse.priceLevelParmanentProgressPage ?? 50)
+                        print("currentPage", currentPage)
                         if AuthManager.shared.currentUser?.studyingCourse.priceLevelParmanentProgressPage ?? 0 < currentPage {
                             AuthManager.shared.currentUser?.studyingCourse.priceLevelParmanentProgressPage = currentPage
                             
@@ -103,6 +105,8 @@ struct CourseToolbarModifier: ViewModifier {
                         AuthManager.shared.currentUser?.studyingCourse.priceLevelLastPage = currentPage
                         
                     case .unEmployment:
+                        print("unempParmanentProgressPage", AuthManager.shared.currentUser?.studyingCourse.unEmploymentParmanentProgressPage ?? 50)
+                        print("currentPage", currentPage)
                         if AuthManager.shared.currentUser?.studyingCourse.unEmploymentParmanentProgressPage ?? 0 < currentPage {
                             AuthManager.shared.currentUser?.studyingCourse.unEmploymentParmanentProgressPage = currentPage
                             

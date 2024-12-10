@@ -91,7 +91,7 @@ struct CourseIntroView: View {
                                 if viewModel.course.lastPage == 0 {
                                     navRouter.navigate(.ExchangeRateAndBalanceOfPayment1View(viewModel))
                                     
-                                } else if viewModel.course.lastPage == 19 {
+                                } else if viewModel.course.lastPage == 11 {
                                     alertFinishing = true
                                     
                                 } else {

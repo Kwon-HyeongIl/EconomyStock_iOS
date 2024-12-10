@@ -23,7 +23,6 @@ struct ProgressCircleView: View {
             
         } else {
             ZStack {
-                // 배경 원 테두리
                 Circle()
                     .stroke(Color.gray.opacity(0.2), lineWidth: 4)
                     .frame(width: 30, height: 30)
@@ -35,7 +34,6 @@ struct ProgressCircleView: View {
                     .frame(width: 30, height: 30)
                     .rotationEffect(Angle(degrees: -90))
                 
-                // 진행률 텍스트
                 AnimatableNumberText(value: animatedProgressRate)
             }
             .onAppear {

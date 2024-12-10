@@ -21,7 +21,7 @@ struct UnEmployment7View: View {
     @State private var beforeButton = false
     
     @State private var popup = false
-    @State private var popupComplete = true
+    @State private var isPopupLoading = true
     
     @State private var loadingBarState = false
     
@@ -152,75 +152,12 @@ struct UnEmployment7View: View {
             }
         }
         .popup(isPresented: $popup) {
-            VStack {
-                if popupComplete {
-                    LottieView(fileName: "CourseComplete", loopMode: .playOnce, scale: 1.3, width: 200, height: 200)
-                } else {
-                    LottieView(fileName: "UnEmploymentCourseCover", loopMode: .loop, width: 150, height: 150)
-                    
-                    Text("III 실업")
-                        .font(.system(size: 30, design: .serif))
-                        .fontWeight(.bold)
-                    
-                    Text("축하드려요!")
-                        .font(.system(size: 20))
-                        .fontWeight(.semibold)
-                        .padding(.top)
-                    
-                    Text("강의를 성공적으로 마쳤어요!")
-                        .font(.system(size: 20))
-                        .fontWeight(.semibold)
-                        .multilineTextAlignment(.center)
-                        .padding(.top, 5)
-                    
-                    Button {
-                        withAnimation(.smooth(duration: 0.2)) {
-                            loadingBarState = true
-                        }
-                        
-                        if AuthManager.shared.currentUser?.studyingCourse.unEmploymentParmanentProgressPage ?? 0 < viewModel.currentPage {
-                            AuthManager.shared.currentUser?.studyingCourse.unEmploymentParmanentProgressPage = viewModel.currentPage
-                            
-                            Task {
-                                await AuthManager.shared.updateCourseParmanentProgressPage(courseType: viewModel.course.type, parmanentProgressPage: viewModel.currentPage)
-                            }
-                        }
-                        
-                        // CurrentUser의 lastPage 값 바꾸기 (1페이지로 초기화)
-                        AuthManager.shared.currentUser?.studyingCourse.unEmploymentLastPage = 1
-                        
-                        courseListViewCapule.isUpdate.toggle()
-                        
-                        // DB User의 lastPage 값 바꾸기 (1페이지로 초기화)
-                        Task {
-                            await AuthManager.shared.updateCourseLastPage(courseType: viewModel.course.type, lastPage: 1)
-                        }
-                        
-                        navRouter.popToRoot()
-                    } label: {
-                        RoundedRectangle(cornerRadius: 20)
-                            .frame(width: 80, height: 40)
-                            .foregroundStyle(Color.ESTitle)
-                            .overlay {
-                                Text("돌아가기")
-                                    .foregroundStyle(.white)
-                                    .font(.system(size: 15))
-                                    .fontWeight(.semibold)
-                            }
-                            .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
-                            .padding(.top, 30)
-                        
-                    }
-                }
-            }
-            .frame(width: 300, height: 500)
-            .background(.ultraThickMaterial)
-            .clipShape(RoundedRectangle(cornerRadius: 20))
+            CourseCompletionView(type: .unEmployment, currentPage: viewModel.currentPage, isPopupLoading: $isPopupLoading, loadingBarState: $loadingBarState)
             .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3.6) {
                     withAnimation(.smooth(duration: 1.0)) {
-                        popupComplete = false
+                        self.isPopupLoading = false
                     }
                 }
             }

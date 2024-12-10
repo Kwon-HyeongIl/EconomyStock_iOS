@@ -50,7 +50,7 @@ class CourseListViewModel {
             endPoint: .bottomTrailing
         )
         
-        let parmanentProgressPage = Double(currentUser?.studyingCourse.priceLevelLastPage ?? 0)
+        let parmanentProgressPage = Double(currentUser?.studyingCourse.priceLevelParmanentProgressPage ?? 0)
         let totalPage = 10.0
         let progressRate = (parmanentProgressPage / totalPage) * 100.0
         
@@ -61,7 +61,7 @@ class CourseListViewModel {
         }
     }
     
-    // 실업
+    // III 실업
     func initUnEmploymentCourse() {
         let currentUser = AuthManager.shared.currentUser
         
@@ -71,7 +71,7 @@ class CourseListViewModel {
             endPoint: .bottomTrailing
         )
         
-        let parmanentProgressPage = Double(currentUser?.studyingCourse.unEmploymentLastPage ?? 0)
+        let parmanentProgressPage = Double(currentUser?.studyingCourse.unEmploymentParmanentProgressPage ?? 0)
         let totalPage = 7.0
         let progressRate = (parmanentProgressPage / totalPage) * 100.0
         
@@ -82,7 +82,7 @@ class CourseListViewModel {
         }
     }
     
-    // 화폐와 금융
+    // IV 화폐와 금융
     func initMoneyAndFinanceCourse() {
         let currentUser = AuthManager.shared.currentUser
         
@@ -92,7 +92,7 @@ class CourseListViewModel {
             endPoint: .bottomTrailing
         )
         
-        let parmanentProgressPage = Double(currentUser?.studyingCourse.moneyAndFinanceLastPage ?? 0)
+        let parmanentProgressPage = Double(currentUser?.studyingCourse.moneyAndFinanceParmanentProgressPage ?? 0)
         let totalPage = 19.0
         let progressRate = (parmanentProgressPage / totalPage) * 100.0
         
@@ -103,7 +103,7 @@ class CourseListViewModel {
         }
     }
     
-    // 환율과 국제수지
+    // V 환율과 국제수지
     func initExchangeRateAndBalanceOfPaymentCourse() {
         let currentUser = AuthManager.shared.currentUser
         
@@ -113,7 +113,7 @@ class CourseListViewModel {
             endPoint: .bottomTrailing
         )
         
-        let parmanentProgressPage = Double(currentUser?.studyingCourse.exchangeRateAndBalanceOfPaymentLastPage ?? 0)
+        let parmanentProgressPage = Double(currentUser?.studyingCourse.exchangeRateAndBalanceOfPaymentParmanentProgressPage ?? 0)
         let totalPage = 30.0
         let progressRate = (parmanentProgressPage / totalPage) * 100.0
         
