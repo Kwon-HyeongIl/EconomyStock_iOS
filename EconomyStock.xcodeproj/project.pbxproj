@@ -1521,6 +1521,40 @@
 			path = Dummy;
 			sourceTree = "<group>";
 		};
+		CAACA1122D0D60D20048BB73 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				CAEE164A2CAD082500210BD0 /* User.swift */,
+				CAD101E32CB6959D00CA9C6A /* StudyingCourse.swift */,
+				CA2E936B2CAFB05800A883F1 /* Notification.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		CAACA1132D0D610C0048BB73 /* HttpDecode */ = {
+			isa = PBXGroup;
+			children = (
+				CA9CF5702D005FBC00114807 /* EconomicIndicator */,
+			);
+			path = HttpDecode;
+			sourceTree = "<group>";
+		};
+		CAACA1142D0D613F0048BB73 /* Inner */ = {
+			isa = PBXGroup;
+			children = (
+				CA4E71A42CB78A8300BAA70C /* Course.swift */,
+				CA07D79A2D059B4200ECD3E4 /* ChatMessage.swift */,
+			);
+			path = Inner;
+			sourceTree = "<group>";
+		};
+		CAACA1152D0D615B0048BB73 /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SwiftData;
+			sourceTree = "<group>";
+		};
 		CAB77FD52CB8EC1600DF11D6 /* Course */ = {
 			isa = PBXGroup;
 			children = (
@@ -1659,12 +1693,10 @@
 		CAEE16492CAD081A00210BD0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CA9CF5702D005FBC00114807 /* EconomicIndicator */,
-				CAEE164A2CAD082500210BD0 /* User.swift */,
-				CA2E936B2CAFB05800A883F1 /* Notification.swift */,
-				CAD101E32CB6959D00CA9C6A /* StudyingCourse.swift */,
-				CA4E71A42CB78A8300BAA70C /* Course.swift */,
-				CA07D79A2D059B4200ECD3E4 /* ChatMessage.swift */,
+				CAACA1122D0D60D20048BB73 /* Firebase */,
+				CAACA1152D0D615B0048BB73 /* SwiftData */,
+				CAACA1132D0D610C0048BB73 /* HttpDecode */,
+				CAACA1142D0D613F0048BB73 /* Inner */,
 			);
 			path = Model;
 			sourceTree = "<group>";
