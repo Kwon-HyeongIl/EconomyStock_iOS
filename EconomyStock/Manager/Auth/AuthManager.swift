@@ -16,14 +16,57 @@ class AuthManager {
     
     // 원격
     var currentUser: User?
+    var localUser: LocalUser?
     
-    // 로컬
     let modelContainer = try! ModelContainer(for: LocalUser.self)
     
     init() {
         Task {
             await loadCurrentUserData()
         }
+    }
+    
+    func loadCurrentUserData() async {
+        do {
+            // 원격 저장소
+            if Auth.auth().currentUser != nil {
+                guard let userId = Auth.auth().currentUser?.uid else { return }
+                
+                let remoteUserSnapshot = try await Firestore.firestore()
+                    .collection("User").document(userId).getDocument()
+                
+                try await MainActor.run {
+                    self.currentUser = try remoteUserSnapshot.data(as: User.self)
+                }
+                
+            // 로컬 저장소
+            } else {
+                try await MainActor.run {
+                    let user = try modelContainer.mainContext.fetch(FetchDescriptor<LocalUser>())
+                    
+                    if !user.isEmpty {
+                        self.localUser = user.first
+                        
+                    // 처음 앱을 시작한 경우
+                    } else {
+                        initLocalUser()
+                    }
+                }
+            }
+            
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    @MainActor
+    private func initLocalUser() {
+        let deviceToken = FCMManager.shared.myDeviceToken ?? ""
+        let user = LocalUser(id: UUID(), deviceToken: deviceToken, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse())
+        
+        modelContainer.mainContext.insert(user)
+        
+        try? modelContainer.mainContext.save()
     }
     
     func createUser(email: String, password: String, username: String, appleHashedUid: String = "", googleHashedUid: String = "", kakaoHashedUid: String = "") async {
@@ -88,50 +131,6 @@ class AuthManager {
         await loadCurrentUserData()
         
         return true
-    }
-    
-    func loadCurrentUserData() async {
-        do {
-            guard let userId = Auth.auth().currentUser?.uid else { return }
-            let remoteUserSnapshot = try await Firestore.firestore()
-                .collection("User").document(userId).getDocument()
-            
-            // 원격 저장소 (Firebase)
-            if remoteUserSnapshot.exists {
-                try await MainActor.run {
-                    self.currentUser = try remoteUserSnapshot.data(as: User.self)
-                }
-                
-            // 로컬 저장소 (SwiftData)
-            } else {
-                try await MainActor.run {
-                    let localUser = try modelContainer.mainContext.fetch(FetchDescriptor<LocalUser>())
-                    
-                    // 로컬에 기본 회원 정보 저장
-                    if localUser.isEmpty {
-                        initLocalUser()
-                    }
-                }
-            }
-            
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    
-    @MainActor
-    private func initLocalUser() {
-        let deviceToken = FCMManager.shared.myDeviceToken ?? ""
-        let user = LocalUser(id: UUID(), deviceToken: deviceToken, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse())
-        
-        modelContainer.mainContext.insert(user)
-        
-        do {
-            try modelContainer.mainContext.save()
-            
-        } catch {
-            print(error.localizedDescription)
-        }
     }
     
     func updateDeviceToken() async {

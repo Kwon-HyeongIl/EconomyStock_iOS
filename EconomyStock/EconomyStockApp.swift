@@ -37,7 +37,7 @@ struct EconomyStockApp: App {
                     GIDSignIn.sharedInstance.handle(url)
                 }
         }
-        .modelContainer(for: LocalUser.self)
+        .modelContainer(for: LocalUser.self, isAutosaveEnabled: true)
     }
 }
 
