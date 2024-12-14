@@ -10,10 +10,21 @@ import SwiftUI
 struct AccountInfoView: View {
     @Environment(NavigationRouter.self) var navRouter
     @Bindable var viewModel: ProfileViewModel
+    @State var tempViewModel = TempViewModel()
+    
+    @State private var text = ""
     
     var body: some View {
         ScrollView {
+            Text(String(tempViewModel.user?.totalStudyingPercentage ?? 99.9))
             
+            TextField("text", text: $text)
+            
+            Button {
+                tempViewModel.updatePercentage(num: Double(text) ?? 89.9)
+            } label: {
+                Text("수정")
+            }
         }
         .scrollIndicators(.never)
         .modifier(NavigationBackTitleModifier(title: "계정 정보"))

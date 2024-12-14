@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 import FirebaseCore
 import KakaoSDKCommon
 import KakaoSDKAuth
@@ -36,6 +37,7 @@ struct EconomyStockApp: App {
                     GIDSignIn.sharedInstance.handle(url)
                 }
         }
+        .modelContainer(for: LocalUser.self)
     }
 }
 

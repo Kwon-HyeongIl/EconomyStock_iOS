@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftData
 import FirebaseAuth
 import FirebaseFirestore
 
@@ -13,7 +14,11 @@ import FirebaseFirestore
 class AuthManager {
     static let shared = AuthManager()
     
+    // 원격
     var currentUser: User?
+    
+    // 로컬
+    let modelContainer = try! ModelContainer(for: LocalUser.self)
     
     init() {
         Task {
@@ -88,12 +93,41 @@ class AuthManager {
     func loadCurrentUserData() async {
         do {
             guard let userId = Auth.auth().currentUser?.uid else { return }
-            let loadedCurrentUser = try await Firestore.firestore()
-                .collection("User").document(userId).getDocument(as: User.self)
+            let remoteUserSnapshot = try await Firestore.firestore()
+                .collection("User").document(userId).getDocument()
             
-            await MainActor.run {
-                self.currentUser = loadedCurrentUser
+            // 원격 저장소 (Firebase)
+            if remoteUserSnapshot.exists {
+                try await MainActor.run {
+                    self.currentUser = try remoteUserSnapshot.data(as: User.self)
+                }
+                
+            // 로컬 저장소 (SwiftData)
+            } else {
+                try await MainActor.run {
+                    let localUser = try modelContainer.mainContext.fetch(FetchDescriptor<LocalUser>())
+                    
+                    // 로컬에 기본 회원 정보 저장
+                    if localUser.isEmpty {
+                        initLocalUser()
+                    }
+                }
             }
+            
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    @MainActor
+    private func initLocalUser() {
+        let deviceToken = FCMManager.shared.myDeviceToken ?? ""
+        let user = LocalUser(id: UUID(), deviceToken: deviceToken, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse())
+        
+        modelContainer.mainContext.insert(user)
+        
+        do {
+            try modelContainer.mainContext.save()
             
         } catch {
             print(error.localizedDescription)

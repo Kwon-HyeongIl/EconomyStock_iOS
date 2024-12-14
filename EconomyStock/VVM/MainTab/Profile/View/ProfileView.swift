@@ -82,20 +82,24 @@ struct ProfileView: View {
                 .padding(.top, 20)
                 
                 VStack(spacing: 0) {
-                    HStack {
-                        Image(systemName: "person")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 20)
-                            .padding(.leading, 30)
-                        
-                        Text("계정 정보")
-                            .font(.system(size: 15))
-                            .padding(.leading, 10)
-                        
-                        Spacer()
-                        
-                        Image(systemName: "chevron.right").padding(.trailing, 30)
+                    Button {
+                        navRouter.navigate(.AccountInfoView(viewModel))
+                    } label: {
+                        HStack {
+                            Image(systemName: "person")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 20)
+                                .padding(.leading, 30)
+                            
+                            Text("계정 정보")
+                                .font(.system(size: 15))
+                                .padding(.leading, 10)
+                            
+                            Spacer()
+                            
+                            Image(systemName: "chevron.right").padding(.trailing, 30)
+                        }
                     }
                     
                     Divider()
