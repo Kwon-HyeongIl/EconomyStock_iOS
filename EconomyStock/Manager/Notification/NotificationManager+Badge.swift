@@ -24,7 +24,7 @@ extension NotificationManager {
     }
     
     static func notificationBadgeOff() async {
-        guard let userId = AuthManager.shared.currentUser?.id else { return }
+        guard let userId = AuthManager.shared.remoteUser?.id else { return }
         
         var editedData: [String : Any] = [:]
         editedData["isNotificationBadge"] = false

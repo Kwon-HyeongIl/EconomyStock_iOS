@@ -15,7 +15,7 @@ class AuthManager {
     static let shared = AuthManager()
     
     // 원격
-    var currentUser: User?
+    var remoteUser: User?
     var localUser: LocalUser?
     
     let modelContainer = try! ModelContainer(for: LocalUser.self)
@@ -36,7 +36,7 @@ class AuthManager {
                     .collection("User").document(userId).getDocument()
                 
                 try await MainActor.run {
-                    self.currentUser = try remoteUserSnapshot.data(as: User.self)
+                    self.remoteUser = try remoteUserSnapshot.data(as: User.self)
                 }
                 
             // 로컬 저장소
@@ -98,24 +98,24 @@ class AuthManager {
         await MainActor.run {
             if appleHashedUid.isEmpty && googleHashedUid.isEmpty && kakaoHashedUid.isEmpty {
                 // 베이직 회원가입
-                self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse())
+                self.remoteUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse())
                 
             } else if !appleHashedUid.isEmpty {
                 // 애플 회원가입
-                self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, appleHashedUid: appleHashedUid, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse())
+                self.remoteUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, appleHashedUid: appleHashedUid, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse())
                 
             } else if !googleHashedUid.isEmpty {
                 // 구글 회원가입
-                self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, googleHashedUid: googleHashedUid, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse())
+                self.remoteUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, googleHashedUid: googleHashedUid, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse())
                 
             } else if !kakaoHashedUid.isEmpty {
                 // 카카오 회원가입
-                self.currentUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, kakaoHashedUid: kakaoHashedUid, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse())
+                self.remoteUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, kakaoHashedUid: kakaoHashedUid, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse())
             }
         }
         
         do {
-            let encodedUser = try Firestore.Encoder().encode(currentUser)
+            let encodedUser = try Firestore.Encoder().encode(remoteUser)
             try await Firestore.firestore()
                 .collection("User").document(userId).setData(encodedUser)
             
@@ -193,7 +193,7 @@ class AuthManager {
             try Auth.auth().signOut()
             
             DispatchQueue.main.async {
-                self.currentUser = nil
+                self.remoteUser = nil
             }
             
         } catch {

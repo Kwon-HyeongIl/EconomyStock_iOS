@@ -12,7 +12,7 @@ class ProfileViewModel: Hashable, Equatable {
     let user: User?
     
     init() {
-        user = AuthManager.shared.currentUser
+        user = AuthManager.shared.remoteUser
     }
     
     func singOut() {

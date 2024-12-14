@@ -26,7 +26,7 @@ class NotificationManager {
     }
     
     static func loadAllMyNotifications() async -> [Notification] {
-        guard let userId = AuthManager.shared.currentUser?.id else { return [] }
+        guard let userId = AuthManager.shared.remoteUser?.id else { return [] }
         
         do {
             let notificationDocuments = try await Firestore.firestore()
@@ -59,7 +59,7 @@ class NotificationManager {
     }
     
     static func editNotificationType(editedData: [String: Any]) async {
-        guard let userId = AuthManager.shared.currentUser?.id else { return }
+        guard let userId = AuthManager.shared.remoteUser?.id else { return }
         
         do {
             try await Firestore.firestore()

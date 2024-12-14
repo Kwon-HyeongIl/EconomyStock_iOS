@@ -30,7 +30,7 @@ class CourseManager {
         
         editedData["studyingCourse.\(courseTypeParmanentProgressPage)"] = parmanentProgressPage
         
-        guard let userId = AuthManager.shared.currentUser?.id else { return }
+        guard let userId = AuthManager.shared.remoteUser?.id else { return }
         
         do {
             try await Firestore.firestore()
@@ -63,7 +63,7 @@ class CourseManager {
         
         editedData["studyingCourse.\(courseTypeLastPage)"] = lastPage
         
-        guard let userId = AuthManager.shared.currentUser?.id else { return }
+        guard let userId = AuthManager.shared.remoteUser?.id else { return }
         
         do {
             try await Firestore.firestore()

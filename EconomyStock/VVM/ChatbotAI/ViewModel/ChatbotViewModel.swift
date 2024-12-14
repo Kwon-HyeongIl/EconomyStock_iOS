@@ -27,17 +27,14 @@ class ChatbotViewModel {
         self.entranceRouter()
     }
     
+    @MainActor
     func requestChatbot() async {
         let userPrompt = self.prompt
         
-        DispatchQueue.main.async {
-            self.prompt = ""
-        }
+        self.prompt = ""
         
-        DispatchQueue.main.async {
-            withAnimation(.smooth(duration: 1.0)) {
-                self.messages.append(ChatMessage(text: userPrompt, isUser: true))
-            }
+        withAnimation(.smooth(duration: 1.0)) {
+            self.messages.append(ChatMessage(text: userPrompt, isUser: true))
         }
         
         do {
@@ -46,30 +43,24 @@ class ChatbotViewModel {
             
             let messageID = UUID()
             
-            DispatchQueue.main.async {
-                let streamedMessage = ChatMessage(id: messageID, text: "", isUser: false)
-                self.messages.append(streamedMessage)
-            }
+            let streamedMessage = ChatMessage(id: messageID, text: "", isUser: false)
+            self.messages.append(streamedMessage)
             
             for try await chunk in contentStream {
                 if let text = chunk.text {
-                    DispatchQueue.main.async {
-                        withAnimation(.smooth(duration: 0.5)) {
-                            if let index = self.messages.lastIndex(where: { $0.id == messageID }) {
-                                self.messages[index].text += text
-                            }
+                    withAnimation(.smooth(duration: 0.5)) {
+                        if let index = self.messages.lastIndex(where: { $0.id == messageID }) {
+                            self.messages[index].text += text
                         }
                     }
                 }
             }
             
             // 마지막 줄바꿈 문자 제거
-            DispatchQueue.main.async {
-                if let index = self.messages.lastIndex(where: { $0.id == messageID }) {
-                    let currentText = self.messages[index].text
-                    if currentText.hasSuffix("\n") {
-                        self.messages[index].text = String(currentText.dropLast())
-                    }
+            if let index = self.messages.lastIndex(where: { $0.id == messageID }) {
+                let currentText = self.messages[index].text
+                if currentText.hasSuffix("\n") {
+                    self.messages[index].text = String(currentText.dropLast())
                 }
             }
             
@@ -78,10 +69,8 @@ class ChatbotViewModel {
             self.history.append(ModelContent(role: "model", parts: messages.last?.text ?? ""))
             
         } catch {
-            DispatchQueue.main.async {
-                withAnimation(.smooth(duration: 1.0)) {
-                    self.messages.append(ChatMessage(text: "Error", isUser: false))
-                }
+            withAnimation(.smooth(duration: 1.0)) {
+                self.messages.append(ChatMessage(text: "Error", isUser: false))
             }
         }
     }

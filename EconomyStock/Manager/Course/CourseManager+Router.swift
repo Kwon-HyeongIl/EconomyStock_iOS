@@ -13,8 +13,8 @@ extension CourseManager {
         switch type {
         case .basicEconomy:
             // DB User의 parmanentProgressPage 값 바꾸기 (기존의 값보다 큰 경우에만)
-            if AuthManager.shared.currentUser?.studyingCourse.basicEconomyParmanentProgressPage ?? 0 < currentPage {
-                AuthManager.shared.currentUser?.studyingCourse.basicEconomyParmanentProgressPage = currentPage
+            if AuthManager.shared.remoteUser?.studyingCourse.basicEconomyParmanentProgressPage ?? 0 < currentPage {
+                AuthManager.shared.remoteUser?.studyingCourse.basicEconomyParmanentProgressPage = currentPage
                 
                 Task {
                     await self.updateUserCourseParmanentProgressPage(courseType: type, parmanentProgressPage: currentPage)
@@ -22,51 +22,51 @@ extension CourseManager {
             }
             
             // CurrentUser의 lastPage 값 바꾸기 (1페이지로 초기화)
-            AuthManager.shared.currentUser?.studyingCourse.basicEconomyLastPage = (isEnd ? 1 : currentPage)
+            AuthManager.shared.remoteUser?.studyingCourse.basicEconomyLastPage = (isEnd ? 1 : currentPage)
             
         case .priceLevel:
-            if AuthManager.shared.currentUser?.studyingCourse.priceLevelParmanentProgressPage ?? 0 < currentPage {
-                AuthManager.shared.currentUser?.studyingCourse.priceLevelParmanentProgressPage = currentPage
+            if AuthManager.shared.remoteUser?.studyingCourse.priceLevelParmanentProgressPage ?? 0 < currentPage {
+                AuthManager.shared.remoteUser?.studyingCourse.priceLevelParmanentProgressPage = currentPage
                 
                 Task {
                     await self.updateUserCourseParmanentProgressPage(courseType: type, parmanentProgressPage: currentPage)
                 }
             }
             
-            AuthManager.shared.currentUser?.studyingCourse.priceLevelLastPage = (isEnd ? 1 : currentPage)
+            AuthManager.shared.remoteUser?.studyingCourse.priceLevelLastPage = (isEnd ? 1 : currentPage)
             
         case .unEmployment:
-            if AuthManager.shared.currentUser?.studyingCourse.unEmploymentParmanentProgressPage ?? 0 < currentPage {
-                AuthManager.shared.currentUser?.studyingCourse.unEmploymentParmanentProgressPage = currentPage
+            if AuthManager.shared.remoteUser?.studyingCourse.unEmploymentParmanentProgressPage ?? 0 < currentPage {
+                AuthManager.shared.remoteUser?.studyingCourse.unEmploymentParmanentProgressPage = currentPage
                 
                 Task {
                     await self.updateUserCourseParmanentProgressPage(courseType: type, parmanentProgressPage: currentPage)
                 }
             }
             
-            AuthManager.shared.currentUser?.studyingCourse.unEmploymentLastPage = (isEnd ? 1 : currentPage)
+            AuthManager.shared.remoteUser?.studyingCourse.unEmploymentLastPage = (isEnd ? 1 : currentPage)
             
         case .moneyAndFinance:
-            if AuthManager.shared.currentUser?.studyingCourse.moneyAndFinanceParmanentProgressPage ?? 0 < currentPage {
-                AuthManager.shared.currentUser?.studyingCourse.moneyAndFinanceParmanentProgressPage = currentPage
+            if AuthManager.shared.remoteUser?.studyingCourse.moneyAndFinanceParmanentProgressPage ?? 0 < currentPage {
+                AuthManager.shared.remoteUser?.studyingCourse.moneyAndFinanceParmanentProgressPage = currentPage
                 
                 Task {
                     await self.updateUserCourseParmanentProgressPage(courseType: type, parmanentProgressPage: currentPage)
                 }
             }
             
-            AuthManager.shared.currentUser?.studyingCourse.moneyAndFinanceLastPage = (isEnd ? 1 : currentPage)
+            AuthManager.shared.remoteUser?.studyingCourse.moneyAndFinanceLastPage = (isEnd ? 1 : currentPage)
             
         case .exchangeRateAndBalanceOfPayment:
-            if AuthManager.shared.currentUser?.studyingCourse.exchangeRateAndBalanceOfPaymentParmanentProgressPage ?? 0 < currentPage {
-                AuthManager.shared.currentUser?.studyingCourse.exchangeRateAndBalanceOfPaymentParmanentProgressPage = currentPage
+            if AuthManager.shared.remoteUser?.studyingCourse.exchangeRateAndBalanceOfPaymentParmanentProgressPage ?? 0 < currentPage {
+                AuthManager.shared.remoteUser?.studyingCourse.exchangeRateAndBalanceOfPaymentParmanentProgressPage = currentPage
                 
                 Task {
                     await self.updateUserCourseParmanentProgressPage(courseType: type, parmanentProgressPage: currentPage)
                 }
             }
             
-            AuthManager.shared.currentUser?.studyingCourse.exchangeRateAndBalanceOfPaymentLastPage = (isEnd ? 1 : currentPage)
+            AuthManager.shared.remoteUser?.studyingCourse.exchangeRateAndBalanceOfPaymentLastPage = (isEnd ? 1 : currentPage)
         }
     }
 }

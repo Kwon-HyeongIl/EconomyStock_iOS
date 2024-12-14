@@ -21,7 +21,7 @@ class CourseListViewModel {
     
     // I 기초 경제
     func initBasicEconomyCourse() {
-        let currentUser = AuthManager.shared.currentUser
+        let currentUser = AuthManager.shared.remoteUser
         
         let gradient = LinearGradient(
             gradient: Gradient(colors: [.green, Color(red: 0.75, green: 1.0, blue: 0.0)]),
@@ -42,7 +42,7 @@ class CourseListViewModel {
     
     // II 물가
     func initPriceLevelCourse() {
-        let currentUser = AuthManager.shared.currentUser
+        let currentUser = AuthManager.shared.remoteUser
         
         let gradient = LinearGradient(
             gradient: Gradient(colors: [.orange, Color(hex: "D7DF01")]),
@@ -63,7 +63,7 @@ class CourseListViewModel {
     
     // III 실업
     func initUnEmploymentCourse() {
-        let currentUser = AuthManager.shared.currentUser
+        let currentUser = AuthManager.shared.remoteUser
         
         let gradient = LinearGradient(
             gradient: Gradient(colors: [.blue, Color(hex: "01DFD7")]),
@@ -84,7 +84,7 @@ class CourseListViewModel {
     
     // IV 화폐와 금융
     func initMoneyAndFinanceCourse() {
-        let currentUser = AuthManager.shared.currentUser
+        let currentUser = AuthManager.shared.remoteUser
         
         let gradient = LinearGradient(
             gradient: Gradient(colors: [.pink, Color(hex: "F781F3")]),
@@ -105,7 +105,7 @@ class CourseListViewModel {
     
     // V 환율과 국제수지
     func initExchangeRateAndBalanceOfPaymentCourse() {
-        let currentUser = AuthManager.shared.currentUser
+        let currentUser = AuthManager.shared.remoteUser
         
         let gradient = LinearGradient(
             gradient: Gradient(colors: [Color(hex: "8258FA"), .purple.opacity(0.6)]),
