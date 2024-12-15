@@ -25,6 +25,13 @@ struct AccountInfoView: View {
             } label: {
                 Text("수정")
             }
+            
+            Button {
+                viewModel.singOut()
+            } label: {
+                Text("로그아웃")
+                    .font(.system(size: 13))
+            }
         }
         .scrollIndicators(.never)
         .modifier(NavigationBackTitleModifier(title: "계정 정보"))

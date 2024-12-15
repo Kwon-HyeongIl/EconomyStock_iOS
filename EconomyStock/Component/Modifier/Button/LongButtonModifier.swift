@@ -18,7 +18,7 @@ struct LongButtonModifier: ViewModifier {
             .frame(height: 45)
             .background(bgColor)
             .clipShape(RoundedRectangle(cornerRadius: 10))
-            .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+            .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
             .padding(.horizontal)
     }
 }

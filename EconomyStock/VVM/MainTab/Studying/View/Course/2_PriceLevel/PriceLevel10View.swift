@@ -149,7 +149,7 @@ struct PriceLevel10View: View {
                                     popup = true
                                 } label: {
                                     LottieView(fileName: "CourseCompleteButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
-                                        .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                                        .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                 }
                                 
                                 if beforeButton {
@@ -163,7 +163,7 @@ struct PriceLevel10View: View {
                                                 .fontWeight(.semibold)
                                                 .foregroundStyle(Color.ESTitle)
                                                 .padding()
-                                                .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                                                .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                         
                                         Spacer()
@@ -237,11 +237,11 @@ struct PriceLevel10View: View {
         .popup(isPresented: $popup) {
             if !isCompletePopupAppear {
                 AICourseSummaryView(type: .priceLevel, isCompletePopupAppear: $isCompletePopupAppear)
-                    .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                    .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                 
             } else if isCompletePopupAppear {
                 CourseCompletionView(type: .priceLevel, currentPage: viewModel.currentPage, isPopupLoading: $isPopupLoading, loadingBarState: $loadingBarState)
-                    .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                    .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                     .onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 3.6) {
                             withAnimation(.smooth(duration: 1.0)) {

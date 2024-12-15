@@ -138,7 +138,7 @@ struct HomeView: View {
                                                         .background {
                                                             RoundedRectangle(cornerRadius: 6, style: .continuous)
                                                                 .fill(.white)
-                                                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                                                .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                                         }
                                                     }
                                             }
@@ -197,7 +197,7 @@ struct HomeView: View {
                                 .background {
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                                         .fill(.white)
-                                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                        .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                 }
                                 
                                 VStack {
@@ -245,7 +245,7 @@ struct HomeView: View {
                                                         .foregroundStyle(Color.ESTitle)
                                                     
                                                 }
-                                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                                .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                                 .padding(.top, 25)
                                                 .padding(.trailing, 25)
                                             
@@ -343,7 +343,7 @@ struct HomeView: View {
                                 .background {
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                                         .fill(.white)
-                                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                        .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                 }
                                 
                                 VStack {
@@ -391,7 +391,7 @@ struct HomeView: View {
                                                         .foregroundStyle(Color.ESTitle)
                                                     
                                                 }
-                                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                                .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                                 .padding(.top, 25)
                                                 .padding(.trailing, 25)
                                             
@@ -492,7 +492,7 @@ struct HomeView: View {
                                 .background {
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                                         .fill(.white)
-                                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                        .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                 }
                                 
                                 VStack {
@@ -540,7 +540,7 @@ struct HomeView: View {
                                                         .foregroundStyle(Color.ESTitle)
                                                     
                                                 }
-                                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                                .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                                 .padding(.top, 25)
                                                 .padding(.trailing, 25)
                                             
@@ -636,7 +636,7 @@ struct HomeView: View {
                                     .background {
                                         RoundedRectangle(cornerRadius: 10, style: .continuous)
                                             .fill(.white)
-                                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                            .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                     }
                                     
                                     VStack {
@@ -684,7 +684,7 @@ struct HomeView: View {
                                                             .foregroundStyle(Color.ESTitle)
                                                         
                                                     }
-                                                    .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                                    .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                                     .padding(.top, 25)
                                                     .padding(.trailing, 25)
                                                 
@@ -779,7 +779,7 @@ struct HomeView: View {
                                     .background {
                                         RoundedRectangle(cornerRadius: 10, style: .continuous)
                                             .fill(.white)
-                                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                            .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                     }
                                     
                                     VStack {
@@ -827,7 +827,7 @@ struct HomeView: View {
                                                             .foregroundStyle(Color.ESTitle)
                                                         
                                                     }
-                                                    .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                                    .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                                     .padding(.top, 25)
                                                     .padding(.trailing, 25)
                                                 
@@ -930,7 +930,7 @@ struct HomeView: View {
                                 .background {
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                                         .fill(.white)
-                                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                        .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                 }
                                 
                                 VStack {
@@ -978,7 +978,7 @@ struct HomeView: View {
                                                         .foregroundStyle(Color.ESTitle)
                                                     
                                                 }
-                                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                                .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                                 .padding(.top, 25)
                                                 .padding(.trailing, 25)
                                             
@@ -1080,7 +1080,7 @@ struct HomeView: View {
                                 .background {
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                                         .fill(.white)
-                                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                        .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                 }
                                 
                                 VStack {
@@ -1128,7 +1128,7 @@ struct HomeView: View {
                                                         .foregroundStyle(Color.ESTitle)
                                                     
                                                 }
-                                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                                .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                                 .padding(.top, 25)
                                                 .padding(.trailing, 25)
                                             
@@ -1251,12 +1251,11 @@ struct HomeView: View {
                         ZStack {
                             LottieView(fileName: "AIOrb", loopMode: .loop, speed: 1.4, width: 90, height: 90)
                                 .blur(radius: 1.5)
-                                .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                             
                             Image("Chatbot_Toktok")
                                 .resizable()
                                 .frame(width: 55, height: 50)
-                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                         }
                         .padding(.trailing, 10)
                         .padding(.bottom, 10)

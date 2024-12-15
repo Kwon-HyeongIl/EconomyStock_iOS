@@ -194,7 +194,7 @@ struct PriceLevel4View: View {
                                 .background(.purple.opacity(0.1))
                                 .clipShape(RoundedRectangle(cornerRadius: 20))
                                 .padding(.horizontal)
-                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                 .padding(.top, 30)
                                 .onTapGesture {
                                     withAnimation(.smooth(duration: 0.7)) {
@@ -236,7 +236,7 @@ struct PriceLevel4View: View {
                                     navRouter.navigate(.PriceLevel5View(viewModel))
                                 } label: {
                                     LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
-                                        .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                                        .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                 }
                                 
                                 if beforeButton {
@@ -250,7 +250,7 @@ struct PriceLevel4View: View {
                                                 .fontWeight(.semibold)
                                                 .foregroundStyle(Color.ESTitle)
                                                 .padding()
-                                                .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                                                .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                         
                                         Spacer()

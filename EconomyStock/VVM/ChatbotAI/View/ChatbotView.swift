@@ -28,12 +28,11 @@ struct ChatbotView: View {
                             ZStack {
                                 LottieView(fileName: "AIOrb", loopMode: .loop, speed: 1.4, width: 160, height: 160)
                                     .blur(radius: 1.5)
-                                    .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                                    .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                 
                                 Image("Chatbot_Toktok")
                                     .resizable()
                                     .frame(width: 95, height: 90)
-                                    .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                             }
                             
                             VStack(spacing: 20) {
@@ -44,12 +43,12 @@ struct ChatbotView: View {
                                             
                                             ChatBubbleView(text: message.text, isUser: true)
                                                 .padding(.trailing)
-                                                .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
+                                                .shadow(color: .gray.opacity(0.1), radius: 5, x: 5, y: 5)
                                             
                                         } else {
                                             ChatBubbleView(text: message.text, isUser: false)
                                                 .padding(.leading)
-                                                .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
+                                                .shadow(color: .gray.opacity(0.1), radius: 5, x: 5, y: 5)
                                             
                                             Spacer()
                                         }
@@ -90,7 +89,7 @@ struct ChatbotView: View {
                                 .frame(width: 35, height: 35)
                                 .foregroundStyle(.regularMaterial)
                                 .padding(.bottom, 5)
-                                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                         }
                     }
                 }
@@ -121,14 +120,14 @@ struct ChatbotView: View {
                         .padding(.leading, 5)
                         .padding(.trailing)
                         .padding(.vertical, 5)
-                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                        .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                 }
             }
             .background(.regularMaterial)
             .cornerRadius(20, corners: .allCorners)
             .padding(.horizontal)
             .padding(.bottom, 10)
-            .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
+            .shadow(color: .gray.opacity(0.1), radius: 5, x: 5, y: 5)
 
         }
         .modifier(NavigationBackModifier())

@@ -14,70 +14,97 @@ struct ProfileView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
-                HStack(spacing: 0) {
-                    Image(systemName: "person.crop.circle")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50)
-                        .padding(.leading, 10)
-                    
-                    VStack {
-                        HStack {
-                            Text(viewModel.user?.username ?? "nickname")
-                                .font(.system(size: 25))
-                                .fontWeight(.semibold)
+                VStack {
+                    if viewModel.isLogin {
+                        VStack(spacing: 5) {
+                            HStack {
+                                Text(viewModel.userName)
+                                    .font(.system(size: 23))
+                                    .fontWeight(.semibold)
+                                    .padding(.leading)
+                                
+                                Spacer()
+                            }
                             
-                            Spacer()
-                        }
-                        
-                        HStack {
-                            Text("처음 함께한 0000년 00월 00일")
-                                .font(.system(size: 13))
-                                .foregroundStyle(Color.ESTitle)
-                            
-                            Spacer()
-                        }
-                    }
-                    .padding(.leading, 10)
-                        
-                    Spacer()
-                }
-                
-                HStack {
-                    Image("Basic_Toktok")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50)
-                        .padding(.top, 70)
-                        .padding(.leading)
-                    
-                    if let percentage = viewModel.user?.totalStudyingPercentage {
-                        switch percentage {
-                            
-                        case 0..<20:
-                            LottieView(fileName: "ProfilePlantLevel1", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
-                        case 20..<40:
-                            LottieView(fileName: "ProfilePlantLevel2", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
-                        case 40..<60:
-                            LottieView(fileName: "ProfilePlantLevel3", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
-                        case 60..<80:
-                            LottieView(fileName: "ProfilePlantLevel4", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
-                        case 80..<100:
-                            LottieView(fileName: "ProfilePlantLevel5", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
-                            
-                        default:
-                            LottieView(fileName: "ProfilePlantLevel1", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
+                            HStack(spacing: 0) {
+                                Text("경제스톡과 함께한지")
+                                    .font(.system(size: 10))
+                                    .foregroundStyle(.gray)
+                                    .padding(.leading)
+                                
+                                Text("+52")
+                                    .font(.system(size: 13))
+                                    .foregroundStyle(Color.ESTitle)
+                                    .padding(.bottom, 2)
+                                    .padding(.leading, 8)
+                                
+                                Text("일")
+                                    .font(.system(size: 10))
+                                    .foregroundStyle(Color.ESTitle)
+                                    .padding(.leading, 2)
+                                
+                                Spacer()
+                            }
                         }
                         
                     } else {
-                        LottieView(fileName: "ProfilePlantLevel5", loopMode: .playOnce, scale: 1.2, width: 100, height: 100)
+                        Button {
+                            navRouter.navigate(.LoginView)
+                        } label: {
+                            ZStack {
+                                VStack(spacing: 5) {
+                                    HStack {
+                                        Text("로그인")
+                                            .font(.system(size: 19).bold())
+                                            .foregroundStyle(Color.ESTitle)
+                                            .padding(.leading)
+                                        
+                                        Spacer()
+                                    }
+                                    
+                                    HStack {
+                                        Text("로그인하여 진행상황을 안전하게 저장하세요")
+                                            .font(.system(size: 11))
+                                            .foregroundStyle(.gray)
+                                            .padding(.leading)
+                                        
+                                        Spacer()
+                                    }
+                                }
+                                
+                                HStack {
+                                    Spacer()
+                                    
+                                    Image(systemName: "chevron.right")
+                                        .foregroundStyle(.gray)
+                                        .padding(.trailing, 20)
+                                }
+                            }
+                        }
                     }
                 }
+                .frame(height: 80)
                 .frame(maxWidth: .infinity)
-                .frame(height: 150)
+                .background(.ultraThickMaterial)
+                .cornerRadius(20.0, corners: .allCorners)
+                .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
+                .padding(.horizontal, 10)
+                
+                
+                HStack {
+                    Text("전체 학습 진행률")
+                        .font(.system(size: 20).bold())
+                        .opacity(0.8)
+                        .padding(.trailing, 50)
+                        
+                    ProgressCircleView(progressRate: viewModel.totalStudyingPercentage)
+                        .scaleEffect(2.5)
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: 120)
                 .background(.ultraThickMaterial)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
-                .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                 .padding(.horizontal, 10)
                 .padding(.top, 20)
                 
@@ -100,6 +127,7 @@ struct ProfileView: View {
                             
                             Image(systemName: "chevron.right").padding(.trailing, 30)
                         }
+                        .foregroundStyle(.black)
                     }
                     
                     Divider()
@@ -122,14 +150,6 @@ struct ProfileView: View {
                     }
                 }
                 .padding(.top, 30)
-                
-                Button {
-                    viewModel.singOut()
-                } label: {
-                    Text("로그아웃")
-                        .font(.system(size: 13))
-                        .padding(.top, 260)
-                }
             }
         }
         .scrollIndicators(.never)

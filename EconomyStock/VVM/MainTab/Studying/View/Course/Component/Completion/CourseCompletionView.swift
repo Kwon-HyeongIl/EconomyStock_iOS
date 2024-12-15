@@ -65,7 +65,7 @@ struct CourseCompletionView: View {
                                 .font(.system(size: 15))
                                 .fontWeight(.semibold)
                         }
-                        .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                        .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                         .padding(.top, 30)
                         
                 }

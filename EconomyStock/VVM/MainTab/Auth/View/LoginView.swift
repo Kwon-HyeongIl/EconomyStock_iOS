@@ -27,7 +27,7 @@ struct LoginView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200)
-                    .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                    .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                     .padding(.top, 90)
                 
                 Spacer()
@@ -41,7 +41,7 @@ struct LoginView: View {
                             .frame(height: 50)
                             .foregroundStyle(.black)
                             .padding(.horizontal, 150)
-                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                            .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                         
                         HStack {
                             Image("Apple_Logo")
@@ -69,7 +69,7 @@ struct LoginView: View {
                             .frame(height: 50)
                             .foregroundStyle(.white)
                             .padding(.horizontal, 150)
-                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                            .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                         
                         HStack {
                             Image("Google_Logo")
@@ -97,7 +97,7 @@ struct LoginView: View {
                             .frame(height: 50)
                             .foregroundStyle(Color(red: 254/255, green: 229/255, blue: 0/255))
                             .padding(.horizontal, 150)
-                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                            .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                         
                         HStack {
                             Image("Kakao_Logo")

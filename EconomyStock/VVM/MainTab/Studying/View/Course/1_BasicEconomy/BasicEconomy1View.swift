@@ -136,7 +136,7 @@ struct BasicEconomy1View: View {
                             navRouter.navigate(.BasicEconomy2View(viewModel))
                         } label: {
                             LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
-                                .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                                .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                         }
                     }
                 }
@@ -198,7 +198,7 @@ struct BasicEconomy1View: View {
             .frame(width: 300, height: 80)
             .background(.ultraThickMaterial)
             .clipShape(RoundedRectangle(cornerRadius: 20))
-            .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
+            .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
             .padding(.bottom, 50)
         } customize: {
             $0

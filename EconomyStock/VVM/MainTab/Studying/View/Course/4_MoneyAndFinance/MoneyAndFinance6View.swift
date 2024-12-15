@@ -85,7 +85,7 @@ struct MoneyAndFinance6View: View {
                                 navRouter.navigate(.MoneyAndFinance7View(viewModel))
                             } label: {
                                 LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.0, width: 100, height: 100)
-                                    .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                                    .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                             }
                             
                             if beforeButton {
@@ -99,7 +99,7 @@ struct MoneyAndFinance6View: View {
                                             .fontWeight(.semibold)
                                             .foregroundStyle(Color.ESTitle)
                                             .padding()
-                                            .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                                            .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                     
                                     Spacer()

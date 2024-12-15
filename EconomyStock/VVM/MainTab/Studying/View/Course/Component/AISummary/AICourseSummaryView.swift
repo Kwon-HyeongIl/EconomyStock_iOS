@@ -35,7 +35,6 @@ struct AICourseSummaryView: View {
                                     Image("Chatbot_Toktok")
                                         .resizable()
                                         .frame(width: 50, height: 45)
-                                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                                 }
                                 .padding(.top, 13)
                                 
@@ -48,7 +47,7 @@ struct AICourseSummaryView: View {
                                 }
                                 .background(.regularMaterial)
                                 .cornerRadius(20, corners: .allCorners)
-                                .shadow(color: .gray.opacity(0.1), radius: 10, x: 5, y: 5)
+                                .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                 .padding(.top)
                                 .padding(.trailing)
                             }
@@ -85,7 +84,7 @@ struct AICourseSummaryView: View {
                                                 .fontWeight(.semibold)
                                                 .shadow(color: .gray.opacity(0.8), radius: 1, x: 1, y: 1)
                                         }
-                                        .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                                        .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                 }
                                 
                                 Button {
@@ -102,7 +101,7 @@ struct AICourseSummaryView: View {
                                                 .foregroundStyle(.white)
                                                 .fontWeight(.semibold)
                                         }
-                                        .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                                        .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                 }
                             }
                             .padding(.bottom)
