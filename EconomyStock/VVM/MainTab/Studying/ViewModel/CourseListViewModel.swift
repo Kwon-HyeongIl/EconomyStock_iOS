@@ -11,29 +11,38 @@ import SwiftUI
 class CourseListViewModel {
     var courses: [Course] = []
     
+    var remoteUser: User?
+    var localUser: LocalUser?
+    
     init() {
-        initBasicEconomyCourse()
-        initPriceLevelCourse()
-        initUnEmploymentCourse()
-        initMoneyAndFinanceCourse()
-        initExchangeRateAndBalanceOfPaymentCourse()
+        let isLogin = AuthManager.shared.isLogin ?? false
+        
+        if isLogin {
+            self.remoteUser = AuthManager.shared.remoteUser
+        } else {
+            self.localUser = AuthManager.shared.localUser
+        }
+        
+        initBasicEconomyCourse(isLogin: isLogin)
+        initPriceLevelCourse(isLogin: isLogin)
+        initUnEmploymentCourse(isLogin: isLogin)
+        initMoneyAndFinanceCourse(isLogin: isLogin)
+        initExchangeRateAndBalanceOfPaymentCourse(isLogin: isLogin)
     }
     
     // I 기초 경제
-    func initBasicEconomyCourse() {
-        let currentUser = AuthManager.shared.remoteUser
-        
+    func initBasicEconomyCourse(isLogin: Bool) {
         let gradient = LinearGradient(
             gradient: Gradient(colors: [.green, Color(red: 0.75, green: 1.0, blue: 0.0)]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
         
-        let parmanentProgressPage = Double(currentUser?.studyingCourse.basicEconomyParmanentProgressPage ?? 0)
+        let parmanentProgressPage = Double(isLogin ? remoteUser?.studyingCourse.basicEconomyParmanentProgressPage ?? 0 : localUser?.studyingCourse.basicEconomyParmanentProgressPage ?? 0)
         let totalPage = 11.0
         let progressRate = (parmanentProgressPage / totalPage) * 100.0
         
-        let lastPage = currentUser?.studyingCourse.basicEconomyLastPage ?? 0
+        let lastPage = isLogin ? remoteUser?.studyingCourse.basicEconomyLastPage ?? 0 : localUser?.studyingCourse.basicEconomyLastPage ?? 0
         
         DispatchQueue.main.async {
             self.courses.append(Course(id: UUID().uuidString, type: .basicEconomy, title: "기초 경제", number: "I", lottieFileName: "BasicEconomyCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
@@ -41,20 +50,18 @@ class CourseListViewModel {
     }
     
     // II 물가
-    func initPriceLevelCourse() {
-        let currentUser = AuthManager.shared.remoteUser
-        
+    func initPriceLevelCourse(isLogin: Bool) {
         let gradient = LinearGradient(
             gradient: Gradient(colors: [.orange, Color(hex: "D7DF01")]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
         
-        let parmanentProgressPage = Double(currentUser?.studyingCourse.priceLevelParmanentProgressPage ?? 0)
+        let parmanentProgressPage = Double(isLogin ? remoteUser?.studyingCourse.priceLevelParmanentProgressPage ?? 0 : localUser?.studyingCourse.priceLevelParmanentProgressPage ?? 0)
         let totalPage = 10.0
         let progressRate = (parmanentProgressPage / totalPage) * 100.0
         
-        let lastPage = currentUser?.studyingCourse.priceLevelLastPage ?? 0
+        let lastPage = isLogin ? remoteUser?.studyingCourse.priceLevelLastPage ?? 0 : localUser?.studyingCourse.priceLevelLastPage ?? 0
         
         DispatchQueue.main.async {
             self.courses.append(Course(id: UUID().uuidString, type: .priceLevel, title: "물가", number: "II", lottieFileName: "PriceLevelCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
@@ -62,20 +69,18 @@ class CourseListViewModel {
     }
     
     // III 실업
-    func initUnEmploymentCourse() {
-        let currentUser = AuthManager.shared.remoteUser
-        
+    func initUnEmploymentCourse(isLogin: Bool) {
         let gradient = LinearGradient(
             gradient: Gradient(colors: [.blue, Color(hex: "01DFD7")]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
         
-        let parmanentProgressPage = Double(currentUser?.studyingCourse.unEmploymentParmanentProgressPage ?? 0)
+        let parmanentProgressPage = Double(isLogin ? remoteUser?.studyingCourse.unEmploymentParmanentProgressPage ?? 0 : localUser?.studyingCourse.unEmploymentParmanentProgressPage ?? 0)
         let totalPage = 7.0
         let progressRate = (parmanentProgressPage / totalPage) * 100.0
         
-        let lastPage = currentUser?.studyingCourse.unEmploymentLastPage ?? 0
+        let lastPage = isLogin ? remoteUser?.studyingCourse.unEmploymentLastPage ?? 0 : localUser?.studyingCourse.unEmploymentLastPage ?? 0
         
         DispatchQueue.main.async {
             self.courses.append(Course(id: UUID().uuidString, type: .unEmployment, title: "실업", number: "III", lottieFileName: "UnEmploymentCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
@@ -83,20 +88,18 @@ class CourseListViewModel {
     }
     
     // IV 화폐와 금융
-    func initMoneyAndFinanceCourse() {
-        let currentUser = AuthManager.shared.remoteUser
-        
+    func initMoneyAndFinanceCourse(isLogin: Bool) {
         let gradient = LinearGradient(
             gradient: Gradient(colors: [.pink, Color(hex: "F781F3")]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
         
-        let parmanentProgressPage = Double(currentUser?.studyingCourse.moneyAndFinanceParmanentProgressPage ?? 0)
+        let parmanentProgressPage = Double(isLogin ? remoteUser?.studyingCourse.moneyAndFinanceParmanentProgressPage ?? 0 : localUser?.studyingCourse.moneyAndFinanceParmanentProgressPage ?? 0)
         let totalPage = 19.0
         let progressRate = (parmanentProgressPage / totalPage) * 100.0
         
-        let lastPage = currentUser?.studyingCourse.moneyAndFinanceLastPage ?? 0
+        let lastPage = isLogin ? remoteUser?.studyingCourse.moneyAndFinanceLastPage ?? 0 : localUser?.studyingCourse.moneyAndFinanceLastPage ?? 0
         
         DispatchQueue.main.async {
             self.courses.append(Course(id: UUID().uuidString, type: .moneyAndFinance, title: "화폐와 금융", number: "IV", lottieFileName: "MoneyAndFinanceCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
@@ -104,20 +107,18 @@ class CourseListViewModel {
     }
     
     // V 환율과 국제수지
-    func initExchangeRateAndBalanceOfPaymentCourse() {
-        let currentUser = AuthManager.shared.remoteUser
-        
+    func initExchangeRateAndBalanceOfPaymentCourse(isLogin: Bool) {
         let gradient = LinearGradient(
             gradient: Gradient(colors: [Color(hex: "8258FA"), .purple.opacity(0.6)]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
         
-        let parmanentProgressPage = Double(currentUser?.studyingCourse.exchangeRateAndBalanceOfPaymentParmanentProgressPage ?? 0)
+        let parmanentProgressPage = Double(isLogin ? remoteUser?.studyingCourse.exchangeRateAndBalanceOfPaymentParmanentProgressPage ?? 0 : localUser?.studyingCourse.exchangeRateAndBalanceOfPaymentParmanentProgressPage ?? 0)
         let totalPage = 30.0
         let progressRate = (parmanentProgressPage / totalPage) * 100.0
         
-        let lastPage = currentUser?.studyingCourse.exchangeRateAndBalanceOfPaymentLastPage ?? 0
+        let lastPage = isLogin ? remoteUser?.studyingCourse.exchangeRateAndBalanceOfPaymentLastPage ?? 0 : localUser?.studyingCourse.exchangeRateAndBalanceOfPaymentLastPage ?? 0
         
         DispatchQueue.main.async {
             self.courses.append(Course(id: UUID().uuidString, type: .exchangeRateAndBalanceOfPayment, title: "환율과 국제수지", number: "V", lottieFileName: "ExchangeRateAndBalanceOfPaymentCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
@@ -125,11 +126,12 @@ class CourseListViewModel {
     }
 
     func updateAllCourses() {
+        let isLogin = AuthManager.shared.isLogin ?? false
         courses.removeAll()
         
-        initBasicEconomyCourse()
-        initPriceLevelCourse()
-        initUnEmploymentCourse()
-        initMoneyAndFinanceCourse()
+        initBasicEconomyCourse(isLogin: isLogin)
+        initPriceLevelCourse(isLogin: isLogin)
+        initUnEmploymentCourse(isLogin: isLogin)
+        initMoneyAndFinanceCourse(isLogin: isLogin)
     }
 }
