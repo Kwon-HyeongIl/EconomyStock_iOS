@@ -69,7 +69,7 @@
 		CA3BBAB42CB50414007CA152 /* NavigationBackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */; };
 		CA3BBAB62CB50441007CA152 /* NavigationBackTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */; };
 		CA41026C2D082343000579C6 /* CourseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41026B2D082343000579C6 /* CourseManager.swift */; };
-		CA4102702D082C1F000579C6 /* CourseManager+ProgressState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41026F2D082C1F000579C6 /* CourseManager+ProgressState.swift */; };
+		CA4102702D082C1F000579C6 /* CourseManager+ProgressSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41026F2D082C1F000579C6 /* CourseManager+ProgressSave.swift */; };
 		CA4D3EFE2D01E9AF0087E55C /* EconomicIndicatorDown.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA4D3EFC2D01E9AF0087E55C /* EconomicIndicatorDown.lottie */; };
 		CA4D3EFF2D01E9AF0087E55C /* EconomicIndicatorUp.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA4D3EFD2D01E9AF0087E55C /* EconomicIndicatorUp.lottie */; };
 		CA4D88CE2CDC70210003DE3C /* BasicEconomy10View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D88CD2CDC70210003DE3C /* BasicEconomy10View.swift */; };
@@ -344,7 +344,7 @@
 		CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackModifier.swift; sourceTree = "<group>"; };
 		CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackTitleModifier.swift; sourceTree = "<group>"; };
 		CA41026B2D082343000579C6 /* CourseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseManager.swift; sourceTree = "<group>"; };
-		CA41026F2D082C1F000579C6 /* CourseManager+ProgressState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseManager+ProgressState.swift"; sourceTree = "<group>"; };
+		CA41026F2D082C1F000579C6 /* CourseManager+ProgressSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseManager+ProgressSave.swift"; sourceTree = "<group>"; };
 		CA4D3EFC2D01E9AF0087E55C /* EconomicIndicatorDown.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = EconomicIndicatorDown.lottie; sourceTree = "<group>"; };
 		CA4D3EFD2D01E9AF0087E55C /* EconomicIndicatorUp.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = EconomicIndicatorUp.lottie; sourceTree = "<group>"; };
 		CA4D88CD2CDC70210003DE3C /* BasicEconomy10View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy10View.swift; sourceTree = "<group>"; };
@@ -1014,7 +1014,7 @@
 			isa = PBXGroup;
 			children = (
 				CA41026B2D082343000579C6 /* CourseManager.swift */,
-				CA41026F2D082C1F000579C6 /* CourseManager+ProgressState.swift */,
+				CA41026F2D082C1F000579C6 /* CourseManager+ProgressSave.swift */,
 				CAB6E7332D0EE66600B4AE82 /* CourseManager+Entrance.swift */,
 			);
 			path = Course;
@@ -2037,7 +2037,7 @@
 				CA61CEB52CE0A0C3007BCF4E /* BasicEconomy11View.swift in Sources */,
 				CAD255FC2CE6DE3C008E7788 /* PriceLevel7View.swift in Sources */,
 				CACF34262CEDD4FD00ECC6FA /* MoneyAndFinance11View.swift in Sources */,
-				CA4102702D082C1F000579C6 /* CourseManager+ProgressState.swift in Sources */,
+				CA4102702D082C1F000579C6 /* CourseManager+ProgressSave.swift in Sources */,
 				CA06791B2CFABA0E0043E974 /* AuthViewModel+BasicSignup.swift in Sources */,
 				CACF34182CEDD4D000ECC6FA /* MoneyAndFinance4View.swift in Sources */,
 				CA07D75E2D04304900ECD3E4 /* ResetPasswordView.swift in Sources */,

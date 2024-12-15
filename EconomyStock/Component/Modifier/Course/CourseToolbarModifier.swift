@@ -77,11 +77,6 @@ struct CourseToolbarModifier: ViewModifier {
                     
                     CourseManager.updateUserCoursePageRoute(type: viewModel.course.type, isEnd: false, currentPage: currentPage)
                     
-                    // DB User의 lastPage 값 바꾸기
-                    Task {
-                        await CourseManager.updateUserCourseLastPage(courseType: viewModel.course.type, lastPage: currentPage)
-                    }
-                    
                     // CourseListViewModel의 updateAllCourses 메서드 호출 (중간 인터페이스로 연결)
                     courseListViewCapule.isUpdate.toggle()
         

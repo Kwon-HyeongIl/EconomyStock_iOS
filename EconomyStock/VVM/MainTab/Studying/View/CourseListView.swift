@@ -26,10 +26,10 @@ struct CourseListView: View {
         .onChange(of: capsule.isUpdate) {
             viewModel.updateAllCourses()
         }
-//        .onAppear {
-//            // 임시
-//            viewModel.updateAllCourses()
-//        }
+        .onAppear {
+            // 임시
+            viewModel.updateAllCourses()
+        }
     }
 }
 

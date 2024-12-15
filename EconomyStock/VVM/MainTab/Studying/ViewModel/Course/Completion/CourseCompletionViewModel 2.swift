@@ -48,8 +48,5 @@ class CourseCompletionViewModel {
     
     func updateUserCoursePage() async {
         CourseManager.updateUserCoursePageRoute(type: type, isEnd: true, currentPage: currentPage)
-        
-        // DB User의 lastPage 값 바꾸기 (1페이지로 초기화)
-        await CourseManager.updateUserCourseLastPage(courseType: type, lastPage: 1)
     }
 }
