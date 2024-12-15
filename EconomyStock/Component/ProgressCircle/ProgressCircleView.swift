@@ -11,9 +11,14 @@ struct ProgressCircleView: View {
     @State private var animatedProgressRate: Double = 0
 
     let progressRate: Double
+    let isFinishMark: Bool
+    let circleSize: CGFloat
+    let circleOutStrokeSize: CGFloat
+    let circleInStrokeSize: CGFloat
+    let textSize: CGFloat
 
     var body: some View {
-        if progressRate == 100.0 {
+        if isFinishMark && progressRate == 100.0 {
             Image(systemName: "checkmark.seal")
                 .resizable()
                 .scaledToFit()
@@ -24,17 +29,16 @@ struct ProgressCircleView: View {
         } else {
             ZStack {
                 Circle()
-                    .stroke(Color.gray.opacity(0.2), lineWidth: 4)
-                    .frame(width: 30, height: 30)
+                    .stroke(isFinishMark ? .gray.opacity(0.2) : Color.ESTitle.opacity(0.2), lineWidth: circleOutStrokeSize)
+                    .frame(width: circleSize, height: circleSize)
                 
-                // 진행률 원 테두리
                 Circle()
                     .trim(from: 0, to: animatedProgressRate / 100)
-                    .stroke(Color.gray, lineWidth: 3)
-                    .frame(width: 30, height: 30)
+                    .stroke(isFinishMark ? .gray : Color.ESTitle, lineWidth: circleInStrokeSize)
+                    .frame(width: circleSize, height: circleSize)
                     .rotationEffect(Angle(degrees: -90))
                 
-                AnimatableNumberText(value: animatedProgressRate)
+                AnimatableNumberText(value: animatedProgressRate, isFinishMark: isFinishMark, textSize: textSize)
             }
             .onAppear {
                 withAnimation(.easeOut(duration: 1.5)) {
@@ -45,9 +49,10 @@ struct ProgressCircleView: View {
     }
 }
 
-// 숫자가 1 ~ target number 까지 차례대로 변하기 위해서 Animatable 구조체 사용
 struct AnimatableNumberText: Animatable, View {
     var value: Double
+    let isFinishMark: Bool
+    let textSize: CGFloat
 
     // Animatable 프로토콜 필수 구현 연산 프로퍼티 (네이밍 고정)
     var animatableData: Double {
@@ -57,12 +62,12 @@ struct AnimatableNumberText: Animatable, View {
 
     var body: some View {
         Text("\(Int(value))%")
-            .font(.system(size: 8))
-            .foregroundColor(.gray)
+            .font(.system(size: textSize))
+            .foregroundColor(isFinishMark ? .gray : Color.ESTitle)
             .fontWeight(.semibold)
     }
 }
 
 #Preview {
-    ProgressCircleView(progressRate: 90)
+    ProgressCircleView(progressRate: 90, isFinishMark: true, circleSize: 30, circleOutStrokeSize: 4, circleInStrokeSize: 3, textSize: 8)
 }

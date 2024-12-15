@@ -48,7 +48,7 @@ struct CourseCoverView: View {
                         HStack {
                             Spacer()
                             
-                            ProgressCircleView(progressRate: viewModel.course.progressRate)
+                            ProgressCircleView(progressRate: viewModel.course.progressRate, isFinishMark: true, circleSize: 30, circleOutStrokeSize: 4, circleInStrokeSize: 3, textSize: 8)
                                 .padding(.top, 10)
                                 .padding(.trailing, 10)
                         }

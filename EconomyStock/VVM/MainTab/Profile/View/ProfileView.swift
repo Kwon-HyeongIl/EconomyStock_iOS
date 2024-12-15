@@ -95,10 +95,9 @@ struct ProfileView: View {
                     Text("전체 학습 진행률")
                         .font(.system(size: 20).bold())
                         .opacity(0.8)
-                        .padding(.trailing, 50)
+                        .padding(.trailing, 25)
                         
-                    ProgressCircleView(progressRate: viewModel.totalStudyingPercentage)
-                        .scaleEffect(2.5)
+                    ProgressCircleView(progressRate: viewModel.totalStudyingPercentage, isFinishMark: false, circleSize: 70, circleOutStrokeSize: 8, circleInStrokeSize: 6, textSize: 20)
                 }
                 .frame(maxWidth: .infinity)
                 .frame(height: 120)
