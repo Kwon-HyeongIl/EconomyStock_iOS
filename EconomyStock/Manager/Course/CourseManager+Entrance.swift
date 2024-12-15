@@ -1,14 +1,14 @@
 //
-//  CourseMain.swift
+//  CourseManager+Entrance.swift
 //  EconomyStock
 //
-//  Created by 권형일 on 11/30/24.
+//  Created by 권형일 on 12/15/24.
 //
 
-import SwiftUI
+import Foundation
 
-struct CourseMain {
-    @MainActor
+@MainActor
+extension CourseManager {
     static func courseContinueNavigationAdaptor(viewModel: CourseViewModel, navRouter: NavigationRouter) {
         switch viewModel.course.type {
             

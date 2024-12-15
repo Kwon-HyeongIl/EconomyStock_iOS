@@ -105,7 +105,7 @@ struct CourseIntroView: View {
                         }
                         
                         Button {
-                            CourseMain.courseContinueNavigationAdaptor(viewModel: viewModel, navRouter: navRouter)
+                            viewModel.courseContinue(viewModel: viewModel, navRouter: navRouter)
                         } label: {
                             Text("확인")
                         }

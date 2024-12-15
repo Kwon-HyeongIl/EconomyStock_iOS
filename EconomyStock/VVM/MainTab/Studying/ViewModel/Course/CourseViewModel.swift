@@ -17,6 +17,13 @@ class CourseViewModel: Hashable, Equatable {
         self.course = course
     }
     
+    @MainActor
+    func courseContinue(viewModel: CourseViewModel, navRouter: NavigationRouter) {
+        CourseManager.courseContinueNavigationAdaptor(viewModel: viewModel, navRouter: navRouter)
+    }
+    
+    
+    
     static func == (lhs: CourseViewModel, rhs: CourseViewModel) -> Bool {
         lhs.course.id == rhs.course.id
     }
