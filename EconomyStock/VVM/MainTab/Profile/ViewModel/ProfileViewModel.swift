@@ -18,21 +18,20 @@ class ProfileViewModel: Hashable, Equatable {
     var totalStudyingPercentage: Double
     
     init() {
-        let remoteUser = AuthManager.shared.remoteUser
-        
-        if remoteUser != nil {
-            self.remoteUser = remoteUser
+        if AuthManager.shared.isLogin ?? false {
+            let user = AuthManager.shared.remoteUser
+            self.remoteUser = user
             
             self.isLogin = true
-            self.userName = remoteUser?.username ?? ""
-            self.totalStudyingPercentage = remoteUser?.totalStudyingPercentage ?? 0.0
+            self.userName = user?.username ?? ""
+            self.totalStudyingPercentage = user?.totalStudyingPercentage ?? 0.0
             
         } else {
-            let localUser = AuthManager.shared.localUser
+            let user = AuthManager.shared.localUser
             
-            self.localUser = localUser
+            self.localUser = user
             
-            self.totalStudyingPercentage = localUser?.totalStudyingPercentage ?? 0.0
+            self.totalStudyingPercentage = user?.totalStudyingPercentage ?? 0.0
         }
     }
     

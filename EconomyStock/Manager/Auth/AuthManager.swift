@@ -20,6 +20,8 @@ class AuthManager {
     
     let modelContainer = try! ModelContainer(for: LocalUser.self)
     
+    var isLogin: Bool?
+    
     init() {
         Task {
             await loadCurrentUserData()
@@ -37,6 +39,8 @@ class AuthManager {
                 
                 try await MainActor.run {
                     self.remoteUser = try remoteUserSnapshot.data(as: User.self)
+                    
+                    self.isLogin = true
                 }
                 
             // 로컬 저장소
@@ -51,6 +55,8 @@ class AuthManager {
                     } else {
                         initLocalUser()
                     }
+                    
+                    self.isLogin = false
                 }
             }
             
