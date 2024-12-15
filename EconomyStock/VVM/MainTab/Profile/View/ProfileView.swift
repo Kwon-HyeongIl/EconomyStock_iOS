@@ -109,7 +109,11 @@ struct ProfileView: View {
                 
                 VStack(spacing: 0) {
                     Button {
-                        navRouter.navigate(.AccountInfoView(viewModel))
+                        if viewModel.isLogin {
+                            navRouter.navigate(.AccountInfoView(viewModel))
+                        } else {
+                            navRouter.navigate(.LoginView)
+                        }
                     } label: {
                         HStack {
                             Image(systemName: "person")
