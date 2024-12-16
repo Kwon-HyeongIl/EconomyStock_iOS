@@ -1088,13 +1088,6 @@
 			path = 4_MoneyAndFinance;
 			sourceTree = "<group>";
 		};
-		CA5577FC2CEE042500F7C4A6 /* DotLottie */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DotLottie;
-			sourceTree = "<group>";
-		};
 		CA5855CB2CEC2BB9005AB472 /* Page6 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1362,7 +1355,6 @@
 				CAD101D82CB6851200CA9C6A /* NavigationGesture */,
 				CA3BBAAF2CB502AC007CA152 /* Modifier */,
 				CA1DDD392CB0E79900C84D08 /* Lottie */,
-				CA5577FC2CEE042500F7C4A6 /* DotLottie */,
 				CA17FC732CB005C50050250B /* Capsule */,
 				CA17FC6E2CB0056B0050250B /* Tab */,
 				CA9BB9D52CABA8DD00886A1A /* Color */,
