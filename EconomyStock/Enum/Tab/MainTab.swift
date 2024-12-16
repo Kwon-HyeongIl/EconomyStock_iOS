@@ -9,7 +9,7 @@ import Foundation
 
 enum MainTab: String, CaseIterable {
     case home = "MainTab_Home"
-    case studying = "MainTab_Studying"
+    case course = "MainTab_Course"
     case news = "MainTab_News"
     case profile = "MainTab_Profile"
 }

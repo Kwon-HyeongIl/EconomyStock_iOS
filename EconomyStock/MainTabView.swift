@@ -23,7 +23,7 @@ struct MainTabView: View {
                         .tag(MainTab.home)
                     
                     CourseListView()
-                        .tag(MainTab.studying)
+                        .tag(MainTab.course)
                     
                     NewsView()
                         .tag(MainTab.news)

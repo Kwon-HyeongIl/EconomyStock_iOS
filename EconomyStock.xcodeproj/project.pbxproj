@@ -90,8 +90,8 @@
 		CA6875952CF17FA900DC819A /* ProfilePlantLevel1.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA68758D2CF17FA900DC819A /* ProfilePlantLevel1.lottie */; };
 		CA6875962CF17FA900DC819A /* ProfilePlantLevel2.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA68758E2CF17FA900DC819A /* ProfilePlantLevel2.lottie */; };
 		CA6875A22CF182C100DC819A /* MainTab_Profile.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA68759E2CF182C100DC819A /* MainTab_Profile.lottie */; };
-		CA6875A32CF182C100DC819A /* MainTab_Studying.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875A02CF182C100DC819A /* MainTab_Studying.lottie */; };
-		CA6875A42CF182C100DC819A /* MainTab_Studying_On.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875A12CF182C100DC819A /* MainTab_Studying_On.lottie */; };
+		CA6875A32CF182C100DC819A /* MainTab_Course.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875A02CF182C100DC819A /* MainTab_Course.lottie */; };
+		CA6875A42CF182C100DC819A /* MainTab_Course_On.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA6875A12CF182C100DC819A /* MainTab_Course_On.lottie */; };
 		CA6875A52CF182C100DC819A /* MainTab_News.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA68759C2CF182C100DC819A /* MainTab_News.lottie */; };
 		CA6875A62CF182C100DC819A /* MainTab_Profile_On.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA68759F2CF182C100DC819A /* MainTab_Profile_On.lottie */; };
 		CA6875A72CF182C100DC819A /* MainTab_Home.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA68759A2CF182C100DC819A /* MainTab_Home.lottie */; };
@@ -369,8 +369,8 @@
 		CA68759D2CF182C100DC819A /* MainTab_News_On.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainTab_News_On.lottie; sourceTree = "<group>"; };
 		CA68759E2CF182C100DC819A /* MainTab_Profile.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainTab_Profile.lottie; sourceTree = "<group>"; };
 		CA68759F2CF182C100DC819A /* MainTab_Profile_On.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainTab_Profile_On.lottie; sourceTree = "<group>"; };
-		CA6875A02CF182C100DC819A /* MainTab_Studying.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainTab_Studying.lottie; sourceTree = "<group>"; };
-		CA6875A12CF182C100DC819A /* MainTab_Studying_On.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainTab_Studying_On.lottie; sourceTree = "<group>"; };
+		CA6875A02CF182C100DC819A /* MainTab_Course.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainTab_Course.lottie; sourceTree = "<group>"; };
+		CA6875A12CF182C100DC819A /* MainTab_Course_On.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainTab_Course_On.lottie; sourceTree = "<group>"; };
 		CA6875AA2CF182F200DC819A /* Loading.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = Loading.lottie; sourceTree = "<group>"; };
 		CA6875AC2CF1831900DC819A /* Bubble.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bubble.lottie; sourceTree = "<group>"; };
 		CA6875AE2CF1833900DC819A /* QuestionMark.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuestionMark.lottie; sourceTree = "<group>"; };
@@ -803,13 +803,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		CA17FC792CB00A7E0050250B /* Studying */ = {
+		CA17FC792CB00A7E0050250B /* Course */ = {
 			isa = PBXGroup;
 			children = (
 				CA17FC852CB00AE00050250B /* View */,
 				CA114FD42CB6248C00AD5AD9 /* ViewModel */,
 			);
-			path = Studying;
+			path = Course;
 			sourceTree = "<group>";
 		};
 		CA17FC7A2CB00A990050250B /* News */ = {
@@ -1146,8 +1146,8 @@
 				CA68759D2CF182C100DC819A /* MainTab_News_On.lottie */,
 				CA68759E2CF182C100DC819A /* MainTab_Profile.lottie */,
 				CA68759F2CF182C100DC819A /* MainTab_Profile_On.lottie */,
-				CA6875A02CF182C100DC819A /* MainTab_Studying.lottie */,
-				CA6875A12CF182C100DC819A /* MainTab_Studying_On.lottie */,
+				CA6875A02CF182C100DC819A /* MainTab_Course.lottie */,
+				CA6875A12CF182C100DC819A /* MainTab_Course_On.lottie */,
 			);
 			path = MainTab;
 			sourceTree = "<group>";
@@ -1732,7 +1732,7 @@
 			children = (
 				CAEE165C2CAD0D2300210BD0 /* Auth */,
 				CA17FC782CB00A7A0050250B /* Home */,
-				CA17FC792CB00A7E0050250B /* Studying */,
+				CA17FC792CB00A7E0050250B /* Course */,
 				CA17FC7A2CB00A990050250B /* News */,
 				CA17FC7B2CB00AA90050250B /* Profile */,
 			);
@@ -1883,8 +1883,8 @@
 				CA6875F72CF18BBE00DC819A /* PriceLevel10_Balance.lottie in Resources */,
 				CA6875A22CF182C100DC819A /* MainTab_Profile.lottie in Resources */,
 				CA7EFE472CFC52A00022C565 /* ExchangeRateAndBalanceOfPayment1_MoneyExchange.lottie in Resources */,
-				CA6875A32CF182C100DC819A /* MainTab_Studying.lottie in Resources */,
-				CA6875A42CF182C100DC819A /* MainTab_Studying_On.lottie in Resources */,
+				CA6875A32CF182C100DC819A /* MainTab_Course.lottie in Resources */,
+				CA6875A42CF182C100DC819A /* MainTab_Course_On.lottie in Resources */,
 				CA6875A52CF182C100DC819A /* MainTab_News.lottie in Resources */,
 				CA993A8D2CF1E0B7001C1DED /* UnEmploymentCourseCover.lottie in Resources */,
 				CA31EA3A2CF6F5D70005A475 /* MoneyAndFinance4_InterestRate.lottie in Resources */,
