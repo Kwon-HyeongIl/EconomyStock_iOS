@@ -34,44 +34,46 @@ struct HomeView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            HStack {
-                Image("ES_TitleLogo_Blue")
-                    .resizable()
-                    .scaledToFit()
-                    .clipShape(Rectangle())
-                    .frame(width: 120)
-                    .padding(.leading, 10)
-                
+            VStack {
                 Spacer()
                 
-                Button {
+                HStack {
+                    Image("ES_TitleLogo_Blue")
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(Rectangle())
+                        .frame(width: 120)
+                        .padding(.leading, 10)
                     
-                } label: {
-                    ZStack {
-                        Image(systemName: "bell")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 21)
-                            .foregroundStyle(Color.ESTitle)
-                            .padding(.trailing, 10)
+                    Spacer()
+                    
+                    Button {
                         
-//                        if viewModel.isNotificationBadge {
-//                            Circle()
-//                                .scaledToFit()
-//                                .frame(width: 7)
-//                                .foregroundStyle(.red)
-//                                .padding(.leading, 18)
-//                                .padding(.bottom, 24)
-//                        }
+                    } label: {
+                        ZStack {
+                            Image(systemName: "bell")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 21)
+                                .foregroundStyle(Color.ESTitle)
+                                .padding(.trailing, 10)
+                            
+                            //                        if viewModel.isNotificationBadge {
+                            //                            Circle()
+                            //                                .scaledToFit()
+                            //                                .frame(width: 7)
+                            //                                .foregroundStyle(.red)
+                            //                                .padding(.leading, 18)
+                            //                                .padding(.bottom, 24)
+                            //                        }
+                        }
                     }
                 }
+                .padding(.bottom, 5)
             }
-            .frame(maxWidth: .infinity)
-            .frame(height: 50)
-//            .ignoresSafeArea()
+            .frame(height: 120)
             .background(.ultraThinMaterial)
-//            .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
-            
+//            .shadow(color: .gray.opacity(0.2), radius: 3, x: 0, y: 5)
             
             ZStack {
                 ScrollView {
@@ -1232,17 +1234,6 @@ struct HomeView: View {
                     }
                 }
                 .scrollIndicators(.never)
-                .onAppear {
-                    if viewModel.isFirstLoad {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                            withAnimation(.easeOut(duration: 0.3)) {
-                                viewModel.isRedacted = false
-                            }
-                        }
-                        
-                        viewModel.isFirstLoad = false
-                    }
-                }
                 
                 VStack {
                     Spacer()
@@ -1268,6 +1259,18 @@ struct HomeView: View {
                     }
                     .padding(.bottom, 50)
                 }
+            }
+        }
+        .ignoresSafeArea(edges: .top)
+        .onAppear {
+            if viewModel.isFirstLoad {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                    withAnimation(.easeOut(duration: 0.3)) {
+                        viewModel.isRedacted = false
+                    }
+                }
+                
+                viewModel.isFirstLoad = false
             }
         }
     }

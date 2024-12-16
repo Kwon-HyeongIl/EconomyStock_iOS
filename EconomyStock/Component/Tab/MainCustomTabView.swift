@@ -53,6 +53,7 @@ struct MainCustomTabView: View {
         .frame(height: 150)
         .background(.regularMaterial)
         .cornerRadius(20, corners: [.topLeft, .topRight])
+        .shadow(color: .gray.opacity(0.15), radius: 3, x: 0, y: -5)
     }
 }
 
