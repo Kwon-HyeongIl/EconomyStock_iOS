@@ -9,7 +9,28 @@ import SwiftUI
 
 struct NewsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            VStack {
+                Spacer()
+                
+                HStack {
+                    Text("뉴스")
+                        .font(.system(size: 25))
+                        .fontWeight(.semibold)
+                        .padding(.leading)
+                    
+                    Spacer()
+                }
+                .padding(.bottom, 5)
+            }
+            .frame(height: 100)
+            
+            ScrollView {
+                
+            }
+            .scrollIndicators(.never)
+        }
+        .ignoresSafeArea(edges: .top)
     }
 }
 

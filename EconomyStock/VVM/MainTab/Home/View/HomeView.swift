@@ -43,7 +43,7 @@ struct HomeView: View {
                         .scaledToFit()
                         .clipShape(Rectangle())
                         .frame(width: 120)
-                        .padding(.leading, 10)
+                        .padding(.leading)
                     
                     Spacer()
                     
@@ -56,7 +56,7 @@ struct HomeView: View {
                                 .scaledToFit()
                                 .frame(width: 21)
                                 .foregroundStyle(Color.ESTitle)
-                                .padding(.trailing, 10)
+                                .padding(.trailing)
                             
                             //                        if viewModel.isNotificationBadge {
                             //                            Circle()
@@ -72,8 +72,7 @@ struct HomeView: View {
                 .padding(.bottom, 5)
             }
             .frame(height: 120)
-            .background(.ultraThinMaterial)
-//            .shadow(color: .gray.opacity(0.2), radius: 3, x: 0, y: 5)
+            .background(.regularMaterial)
             
             ZStack {
                 ScrollView {
