@@ -214,6 +214,7 @@
 		CAB6E7342D0EE66600B4AE82 /* CourseManager+Entrance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB6E7332D0EE66600B4AE82 /* CourseManager+Entrance.swift */; };
 		CAB77FD72CB8EC2900DF11D6 /* CourseToolbarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */; };
 		CAB77FD92CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */; };
+		CAC288282D108AF3006B6415 /* AuthManager+Migrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC288272D108AF3006B6415 /* AuthManager+Migrate.swift */; };
 		CAC86FDB2CE2E6C200785D4F /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC86FDA2CE2E6C200785D4F /* ProfileViewModel.swift */; };
 		CACA6EB52CF5D2CB002AFB61 /* MoneyAndFinance7_ATM.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CACA6EB42CF5D2CB002AFB61 /* MoneyAndFinance7_ATM.lottie */; };
 		CACA6EB72CF5D513002AFB61 /* MoneyAndFinance7_MoneyBalance.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CACA6EB62CF5D513002AFB61 /* MoneyAndFinance7_MoneyBalance.lottie */; };
@@ -482,6 +483,7 @@
 		CAB6E7332D0EE66600B4AE82 /* CourseManager+Entrance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseManager+Entrance.swift"; sourceTree = "<group>"; };
 		CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseToolbarModifier.swift; sourceTree = "<group>"; };
 		CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackHomeModifier.swift; sourceTree = "<group>"; };
+		CAC288272D108AF3006B6415 /* AuthManager+Migrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthManager+Migrate.swift"; sourceTree = "<group>"; };
 		CAC86FDA2CE2E6C200785D4F /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		CACA6EB42CF5D2CB002AFB61 /* MoneyAndFinance7_ATM.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance7_ATM.lottie; sourceTree = "<group>"; };
 		CACA6EB62CF5D513002AFB61 /* MoneyAndFinance7_MoneyBalance.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance7_MoneyBalance.lottie; sourceTree = "<group>"; };
@@ -1697,6 +1699,7 @@
 				CAEE16472CAD07B900210BD0 /* AuthManager.swift */,
 				CAEE16512CAD0C3F00210BD0 /* AuthManager+SocialLogin.swift */,
 				CAEE16592CAD0CBA00210BD0 /* AuthManager+Hash.swift */,
+				CAC288272D108AF3006B6415 /* AuthManager+Migrate.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -1704,6 +1707,7 @@
 		CAEE16562CAD0C9B00210BD0 /* VVM */ = {
 			isa = PBXGroup;
 			children = (
+				CAEE165C2CAD0D2300210BD0 /* Auth */,
 				CAEE165D2CAD0D2F00210BD0 /* MainTab */,
 				CA07D7782D046A3800ECD3E4 /* ChatbotAI */,
 			);
@@ -1730,7 +1734,6 @@
 		CAEE165D2CAD0D2F00210BD0 /* MainTab */ = {
 			isa = PBXGroup;
 			children = (
-				CAEE165C2CAD0D2300210BD0 /* Auth */,
 				CA17FC782CB00A7A0050250B /* Home */,
 				CA17FC792CB00A7E0050250B /* Course */,
 				CA17FC7A2CB00A990050250B /* News */,
@@ -2046,6 +2049,7 @@
 				CA9BB9CC2CABA59A00886A1A /* ContentView.swift in Sources */,
 				CAB77FD92CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift in Sources */,
 				CACF34142CEDD4BF00ECC6FA /* MoneyAndFinance2View.swift in Sources */,
+				CAC288282D108AF3006B6415 /* AuthManager+Migrate.swift in Sources */,
 				CA78C3092D084E4100E89532 /* AICourseSummaryView.swift in Sources */,
 				CAE199A12CFC1E9E000CFAA2 /* ExchangeRateAndBalanceOfPayment10View.swift in Sources */,
 				CA3BBAA82CB50063007CA152 /* BasicSignupView.swift in Sources */,

@@ -11,7 +11,7 @@ extension CourseManager {
     static func updateUserCoursePageRoute(type: CourseType, isEnd: Bool, currentPage: Int) {
         let isLogin = AuthManager.shared.isLogin ?? false
         
-        var localUser = AuthManager.shared.localUser
+        let localUser = AuthManager.shared.localUser
         
         // 로컬 currentUser의 parmanentProgressPage 값 바꾸고 (기존의 값보다 큰 경우에만), 로컬 basicEconomyLastPage 값 변경
         switch type {

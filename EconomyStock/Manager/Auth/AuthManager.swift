@@ -104,19 +104,19 @@ class AuthManager {
         await MainActor.run {
             if appleHashedUid.isEmpty && googleHashedUid.isEmpty && kakaoHashedUid.isEmpty {
                 // 베이직 회원가입
-                self.remoteUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse())
+                self.remoteUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, notificationType: self.localUser?.notificationType ?? [.empty], totalStudyingPercentage: self.localUser?.totalStudyingPercentage ?? 0.0, studyingCourse: self.localUser?.studyingCourse ?? StudyingCourse())
                 
             } else if !appleHashedUid.isEmpty {
                 // 애플 회원가입
-                self.remoteUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, appleHashedUid: appleHashedUid, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse())
+                self.remoteUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, appleHashedUid: appleHashedUid, notificationType: self.localUser?.notificationType ?? [.empty], totalStudyingPercentage: self.localUser?.totalStudyingPercentage ?? 0.0, studyingCourse: self.localUser?.studyingCourse ?? StudyingCourse())
                 
             } else if !googleHashedUid.isEmpty {
                 // 구글 회원가입
-                self.remoteUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, googleHashedUid: googleHashedUid, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse())
+                self.remoteUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, googleHashedUid: googleHashedUid, notificationType: self.localUser?.notificationType ?? [.empty], totalStudyingPercentage: self.localUser?.totalStudyingPercentage ?? 0.0, studyingCourse: self.localUser?.studyingCourse ?? StudyingCourse())
                 
             } else if !kakaoHashedUid.isEmpty {
                 // 카카오 회원가입
-                self.remoteUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, kakaoHashedUid: kakaoHashedUid, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse())
+                self.remoteUser = User(id: userId, deviceToken: deviceToken, username: username, authEmail: email, kakaoHashedUid: kakaoHashedUid, notificationType: self.localUser?.notificationType ?? [.empty], totalStudyingPercentage: self.localUser?.totalStudyingPercentage ?? 0.0, studyingCourse: self.localUser?.studyingCourse ?? StudyingCourse())
             }
         }
         
@@ -125,9 +125,19 @@ class AuthManager {
             try await Firestore.firestore()
                 .collection("User").document(userId).setData(encodedUser)
             
+            try await deleteLocalUser()
+            
         } catch {
             print(error.localizedDescription)
         }
+    }
+    
+    @MainActor
+    private func deleteLocalUser() throws {
+        try self.modelContainer.mainContext.delete(model: LocalUser.self)
+        try modelContainer.mainContext.save()
+        
+        self.localUser = nil
     }
     
     func login(email: String, password: String) async -> Bool {

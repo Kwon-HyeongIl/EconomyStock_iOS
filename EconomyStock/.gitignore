@@ -67,9 +67,9 @@ Config.xcconfig
 
 ### .swift
 AuthManager+Hash.swift
-LoginViewModel+Kakao.swift
-LoginViewModel+Apple.swift
-LoginViewModel+Google.swift
+AuthViewModel+Kakao.swift
+AuthViewModel+Apple.swift
+AuthViewModel+Google.swift
 
 ### Key File
 GoogleService-Info.plist
