@@ -44,14 +44,8 @@ struct CourseListView: View {
         .onChange(of: courseListCapsule.isUpdateToggle) {
             viewModel.updateAllCourses()
         }
-        .onAppear {
-            print("courseListCapsule", courseListCapsule.isUpdateToggle)
-            print("t1")
-            print(loginCapsule.isLogin)
-            if loginCapsule.isLogin {
-                viewModel.updateAllCourses()
-                print("로그인 후 코스 다시 로드")
-            }
+        .onChange(of: loginCapsule.isLoginToggle) {
+            viewModel.updateAllCourses()
         }
         .onAppear {
             if viewModel.isFirstLoad {

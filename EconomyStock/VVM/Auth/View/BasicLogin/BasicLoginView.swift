@@ -87,7 +87,7 @@ struct BasicLoginView: View {
                             return
                         }
                         
-                        self.capsule.isLogin = true
+                        self.capsule.isLoginToggle.toggle()
                         
                         navRouter.popToRoot()
                     }

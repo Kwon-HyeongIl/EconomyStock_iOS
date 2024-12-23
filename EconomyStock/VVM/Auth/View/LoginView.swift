@@ -35,10 +35,6 @@ struct LoginView: View {
                 
                 Button {
                     viewModel.loginWithApple()
-                    
-                    if viewModel.isLoginSuccess {
-                        self.capsule.isLogin = true
-                    }
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 12)
@@ -66,10 +62,6 @@ struct LoginView: View {
                 
                 Button {
                     viewModel.loginWithGoogle()
-                    
-                    if viewModel.isLoginSuccess {
-                        self.capsule.isLogin = true
-                    }
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 12)
@@ -98,10 +90,6 @@ struct LoginView: View {
                 
                 Button {
                     viewModel.loginWithKakao()
-                    
-                    if viewModel.isLoginSuccess {
-                        self.capsule.isLogin = true
-                    }
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 12)
@@ -140,6 +128,7 @@ struct LoginView: View {
         }
         .modifier(NavigationBackModifier())
         .onChange(of: viewModel.isLoginSuccess, {
+            self.capsule.isLoginToggle.toggle()
             navRouter.popToRoot()
         })
         .overlay {

@@ -131,6 +131,8 @@ class AuthManager {
             try await Firestore.firestore()
                 .collection("User").document(userId).setData(encodedUser)
             
+            self.isLogin = true
+            
             try await deleteLocalUser()
             
         } catch {

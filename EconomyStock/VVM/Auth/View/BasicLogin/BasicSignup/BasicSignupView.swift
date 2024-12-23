@@ -214,7 +214,7 @@ struct BasicSignupView: View {
                                     
                                     await viewModel.signup()
                                     
-                                    self.capsule.isLogin = true
+                                    self.capsule.isLoginToggle.toggle()
                                     
                                     navRouter.popToRoot()
                                 }

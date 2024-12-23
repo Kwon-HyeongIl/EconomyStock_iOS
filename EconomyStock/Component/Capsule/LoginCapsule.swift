@@ -9,5 +9,5 @@ import Foundation
 
 @Observable
 class LoginCapsule {
-    var isLogin = false
+    var isLoginToggle = false
 }
