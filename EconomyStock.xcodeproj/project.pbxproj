@@ -217,6 +217,8 @@
 		CAC288282D108AF3006B6415 /* AuthManager+Migrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC288272D108AF3006B6415 /* AuthManager+Migrate.swift */; };
 		CAC86FDB2CE2E6C200785D4F /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC86FDA2CE2E6C200785D4F /* ProfileViewModel.swift */; };
 		CAC9650C2D19107200B7EAF1 /* LoginCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC9650B2D19107200B7EAF1 /* LoginCapsule.swift */; };
+		CAC965112D19943F00B7EAF1 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = CAC965102D19943F00B7EAF1 /* GoogleMobileAds */; };
+		CAC965142D19A2B800B7EAF1 /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC965132D19A2B800B7EAF1 /* BannerAd.swift */; };
 		CACA6EB52CF5D2CB002AFB61 /* MoneyAndFinance7_ATM.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CACA6EB42CF5D2CB002AFB61 /* MoneyAndFinance7_ATM.lottie */; };
 		CACA6EB72CF5D513002AFB61 /* MoneyAndFinance7_MoneyBalance.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CACA6EB62CF5D513002AFB61 /* MoneyAndFinance7_MoneyBalance.lottie */; };
 		CACD04942CFEBDA500B2DA28 /* ExchangeRateAndBalanceOfPayment7_CargoShip.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CACD04932CFEBDA500B2DA28 /* ExchangeRateAndBalanceOfPayment7_CargoShip.lottie */; };
@@ -487,6 +489,7 @@
 		CAC288272D108AF3006B6415 /* AuthManager+Migrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthManager+Migrate.swift"; sourceTree = "<group>"; };
 		CAC86FDA2CE2E6C200785D4F /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		CAC9650B2D19107200B7EAF1 /* LoginCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCapsule.swift; sourceTree = "<group>"; };
+		CAC965132D19A2B800B7EAF1 /* BannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
 		CACA6EB42CF5D2CB002AFB61 /* MoneyAndFinance7_ATM.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance7_ATM.lottie; sourceTree = "<group>"; };
 		CACA6EB62CF5D513002AFB61 /* MoneyAndFinance7_MoneyBalance.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance7_MoneyBalance.lottie; sourceTree = "<group>"; };
 		CACD04932CFEBDA500B2DA28 /* ExchangeRateAndBalanceOfPayment7_CargoShip.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExchangeRateAndBalanceOfPayment7_CargoShip.lottie; sourceTree = "<group>"; };
@@ -571,6 +574,7 @@
 				CA9BB9E02CABAACF00886A1A /* FirebaseStorage in Frameworks */,
 				CA662BCC2CAD72E6009E8D5F /* KakaoSDKCommon in Frameworks */,
 				CA07D7772D0467A400ECD3E4 /* GoogleGenerativeAI in Frameworks */,
+				CAC965112D19943F00B7EAF1 /* GoogleMobileAds in Frameworks */,
 				CA662BCA2CAD72E6009E8D5F /* KakaoSDKAuth in Frameworks */,
 				CA6C54D62CB160A1008CF887 /* GoogleSignInSwift in Frameworks */,
 			);
@@ -1356,6 +1360,7 @@
 		CA9BB9C32CABA59A00886A1A /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				CAC965122D19A08600B7EAF1 /* Ad */,
 				CA9936CB2D06ABA100B2F89F /* Publishers */,
 				CAD101D82CB6851200CA9C6A /* NavigationGesture */,
 				CA3BBAAF2CB502AC007CA152 /* Modifier */,
@@ -1576,6 +1581,14 @@
 				CA6875912CF17FA900DC819A /* ProfilePlantLevel5.lottie */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		CAC965122D19A08600B7EAF1 /* Ad */ = {
+			isa = PBXGroup;
+			children = (
+				CAC965132D19A2B800B7EAF1 /* BannerAd.swift */,
+			);
+			path = Ad;
 			sourceTree = "<group>";
 		};
 		CACF34102CEDD49100ECC6FA /* 4_MoneyAndFinance */ = {
@@ -1826,6 +1839,7 @@
 				CA7757672CE22BAC00A8F3DE /* PopupView */,
 				CAAAC3682D02CEBA0006D8DE /* Shimmer */,
 				CA07D7762D0467A400ECD3E4 /* GoogleGenerativeAI */,
+				CAC965102D19943F00B7EAF1 /* GoogleMobileAds */,
 			);
 			productName = EconomyStock;
 			productReference = CA83477C2CAAE28500BA1E4A /* EconomyStock.app */;
@@ -1864,6 +1878,7 @@
 				CA7757662CE22BAC00A8F3DE /* XCRemoteSwiftPackageReference "PopupView" */,
 				CAAAC3672D02CEBA0006D8DE /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
 				CA07D7752D0467A400ECD3E4 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+				CAC9650F2D19943F00B7EAF1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CA83477D2CAAE28500BA1E4A /* Products */;
@@ -2099,6 +2114,7 @@
 				CAE1999F2CFC1E99000CFAA2 /* ExchangeRateAndBalanceOfPayment9View.swift in Sources */,
 				CACF34282CEDD50500ECC6FA /* MoneyAndFinance12View.swift in Sources */,
 				CA08F39A2CB8394C0093117E /* PriceLevel2View.swift in Sources */,
+				CAC965142D19A2B800B7EAF1 /* BannerAd.swift in Sources */,
 				CA08F39C2CB839520093117E /* PriceLevel3View.swift in Sources */,
 				CAAAC3622D02CC650006D8DE /* DummyGraphIndicatorView.swift in Sources */,
 				CA17FC702CB005800050250B /* MainCustomTabView.swift in Sources */,
@@ -2431,6 +2447,14 @@
 				minimumVersion = 1.5.1;
 			};
 		};
+		CAC9650F2D19943F00B7EAF1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.13.0;
+			};
+		};
 		CAEE16532CAD0C8100210BD0 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
@@ -2506,6 +2530,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CAAAC3672D02CEBA0006D8DE /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */;
 			productName = Shimmer;
+		};
+		CAC965102D19943F00B7EAF1 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAC9650F2D19943F00B7EAF1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
 		};
 		CAEE16542CAD0C8100210BD0 /* CryptoSwift */ = {
 			isa = XCSwiftPackageProductDependency;

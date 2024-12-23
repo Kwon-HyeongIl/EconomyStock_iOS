@@ -12,6 +12,7 @@ import KakaoSDKCommon
 import KakaoSDKAuth
 import FirebaseMessaging
 import GoogleSignIn
+import GoogleMobileAds
 
 @main
 struct EconomyStockApp: App {
@@ -20,8 +21,9 @@ struct EconomyStockApp: App {
     let kakaoAppKey = Bundle.main.infoDictionary?["KAKAO_NATIVE_APP_KEY"] ?? ""
     
     init() {
-        // Kakao 로그인 관련 초기화
         KakaoSDK.initSDK(appKey: kakaoAppKey as! String)
+        
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
     }
     
     var body: some Scene {

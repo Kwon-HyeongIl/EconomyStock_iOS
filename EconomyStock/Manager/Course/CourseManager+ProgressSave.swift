@@ -9,7 +9,7 @@ import Foundation
 
 extension CourseManager {
     static func updateUserCoursePageRoute(type: CourseType, isEnd: Bool, currentPage: Int) {
-        let isLogin = AuthManager.shared.isLogin ?? false
+        let isLogin = AuthManager.shared.isLogin
         
         let localUser = AuthManager.shared.localUser
         

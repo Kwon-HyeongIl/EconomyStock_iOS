@@ -27,7 +27,7 @@ struct DummyHorizontalIndicatorView: View {
                 Spacer()
             }
         }
-        .frame(height: 60)
+        .frame(height: 45)
         .frame(maxWidth: .infinity)
         .padding()
         .background(.gray.opacity(0.25))

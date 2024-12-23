@@ -12,7 +12,6 @@ class ProfileViewModel: Hashable, Equatable {
     var remoteUser: User? {
         AuthManager.shared.remoteUser
     }
-    
     var localUser: LocalUser? {
         AuthManager.shared.localUser
     }

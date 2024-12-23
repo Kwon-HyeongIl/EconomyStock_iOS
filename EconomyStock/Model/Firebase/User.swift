@@ -19,6 +19,8 @@ struct User: Codable, Identifiable, Hashable, Equatable {
     var googleHashedUid: String?
     var kakaoHashedUid: String?
     
+    var isStockPass: Bool?
+    
     var contactEmail: String?
     var profileImageUrl: String?
     

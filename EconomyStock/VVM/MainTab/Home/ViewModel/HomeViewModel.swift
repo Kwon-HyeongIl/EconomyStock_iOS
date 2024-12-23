@@ -9,6 +9,19 @@ import Foundation
 
 @Observable
 class HomeViewModel {
+    var remoteUserStockPass: Bool {
+        AuthManager.shared.remoteUser?.isStockPass ?? false
+    }
+    var localUserStockPass: Bool {
+        AuthManager.shared.localUser?.isStockPass ?? false
+    }
+    
+    var isLogin: Bool {
+        AuthManager.shared.isLogin
+    }
+    
+    var bannerUnitId = Bundle.main.infoDictionary?["GOOGLE_ADMOB_BANNER_AD_UNIT_ID"] as? String
+    
     var BR = [EconomicIndicatorCycleData]()
     var CPI = [EconomicIndicatorCycleData]()
     var WDER = [EconomicIndicatorCycleData]()

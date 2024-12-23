@@ -13,6 +13,8 @@ class LocalUser {
     var id: UUID
     var deviceToken: String
     
+    var isStockPass: Bool?
+    
     var isNotificationBadge: Bool?
     var notificationType: [NotificationType]
     

@@ -14,7 +14,6 @@ class CourseListViewModel {
     var remoteUser: User? {
         AuthManager.shared.remoteUser
     }
-    
     var localUser: LocalUser? {
         AuthManager.shared.localUser
     }

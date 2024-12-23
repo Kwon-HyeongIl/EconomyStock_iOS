@@ -320,6 +320,27 @@ struct HomeView: View {
                                 DummyGraphIndicatorView()
                             }
                             
+                            // 배너 AD
+                            if !viewModel.isRedacted {
+                                if viewModel.isLogin {
+                                    if !viewModel.remoteUserStockPass {
+                                        BannerAd(unitId: "ca-app-pub-3940256099942544/2435281174")
+                                            .frame(height: 80)
+                                            .frame(maxWidth: .infinity)
+                                            .cornerRadius(15, corners: .allCorners)
+                                            .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
+                                    }
+                                } else {
+                                    if !viewModel.localUserStockPass {
+                                        BannerAd(unitId: "ca-app-pub-3940256099942544/2435281174")
+                                            .frame(height: 80)
+                                            .frame(maxWidth: .infinity)
+                                            .cornerRadius(15, corners: .allCorners)
+                                            .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
+                                    }
+                                }
+                            }
+                            
                             if !viewModel.isRedacted {
                                 ZStack(alignment: .top) {
                                     VStack {
@@ -379,7 +400,7 @@ struct HomeView: View {
                                         }
                                     }
                                     .frame(maxWidth: .infinity)
-                                    .frame(height: 60)
+                                    .frame(height: 45)
                                     .padding()
                                     .background {
                                         RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -528,7 +549,7 @@ struct HomeView: View {
                                         }
                                     }
                                     .frame(maxWidth: .infinity)
-                                    .frame(height: 60)
+                                    .frame(height: 45)
                                     .padding()
                                     .background {
                                         RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -966,7 +987,7 @@ struct HomeView: View {
                                         }
                                     }
                                     .frame(maxWidth: .infinity)
-                                    .frame(height: 60)
+                                    .frame(height: 45)
                                     .padding()
                                     .background {
                                         RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -1116,7 +1137,7 @@ struct HomeView: View {
                                         }
                                     }
                                     .frame(maxWidth: .infinity)
-                                    .frame(height: 60)
+                                    .frame(height: 45)
                                     .padding()
                                     .background {
                                         RoundedRectangle(cornerRadius: 10, style: .continuous)
