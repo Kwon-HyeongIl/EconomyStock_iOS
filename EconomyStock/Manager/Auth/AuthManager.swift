@@ -218,9 +218,8 @@ class AuthManager {
         do {
             try Auth.auth().signOut()
             
-            DispatchQueue.main.async {
-                self.remoteUser = nil
-            }
+            self.remoteUser = nil
+            self.isLogin = false
             
         } catch {
             print(error.localizedDescription)

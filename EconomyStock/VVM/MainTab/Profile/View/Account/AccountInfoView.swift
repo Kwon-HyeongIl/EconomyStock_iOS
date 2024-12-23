@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AccountInfoView: View {
     @Environment(NavigationRouter.self) var navRouter
+    @Environment(LoginCapsule.self) var capsule
     @Bindable var viewModel: ProfileViewModel
     @State var tempViewModel = TempViewModel()
     
@@ -16,18 +17,11 @@ struct AccountInfoView: View {
     
     var body: some View {
         ScrollView {
-            Text(String(tempViewModel.user?.totalStudyingPercentage ?? 99.9))
             
-            TextField("text", text: $text)
-            
-            Button {
-                tempViewModel.updatePercentage(num: Double(text) ?? 89.9)
-            } label: {
-                Text("수정")
-            }
             
             Button {
                 viewModel.singOut()
+                capsule.isLoginToggle.toggle()
             } label: {
                 Text("로그아웃")
                     .font(.system(size: 13))
@@ -41,4 +35,5 @@ struct AccountInfoView: View {
 #Preview {
     AccountInfoView(viewModel: ProfileViewModel())
         .environment(NavigationRouter())
+        .environment(LoginCapsule())
 }

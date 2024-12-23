@@ -167,12 +167,6 @@ struct ProfileView: View {
                             
                             Image(systemName: "chevron.right").padding(.trailing, 30)
                         }
-                        
-                        Button {
-                            viewModel.singOut()
-                        } label: {
-                            Text("로그아웃")
-                        }
                     }
                     .padding(.top, 30)
                 }
