@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UnEmployment7View: View {
     @Environment(NavigationRouter.self) var navRouter
-    @Environment(CourseListViewCapsule.self) var courseListViewCapule
+    @Environment(CourseListCapsule.self) var courseListViewCapule
     @Bindable var viewModel: CourseViewModel
     
     @State private var progress: [Int] = []
@@ -187,5 +187,5 @@ struct UnEmployment7View: View {
 #Preview {
     UnEmployment7View(viewModel: CourseViewModel(course: Course.DUMMY_COURSE))
         .environment(NavigationRouter())
-        .environment(CourseListViewCapsule())
+        .environment(CourseListCapsule())
 }

@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct CourseListView: View {
-    @Environment(CourseListViewCapsule.self) var capsule
+    @Environment(LoginCapsule.self) var loginCapsule
+    @Environment(CourseListCapsule.self) var courseListCapsule
     @State private var viewModel = CourseListViewModel()
     
     var body: some View {
@@ -40,8 +41,23 @@ struct CourseListView: View {
             .scrollIndicators(.never)
         }
         .ignoresSafeArea(edges: .top)
-        .onChange(of: capsule.isUpdate) {
+        .onChange(of: courseListCapsule.isUpdateToggle) {
             viewModel.updateAllCourses()
+        }
+        .onAppear {
+            print("courseListCapsule", courseListCapsule.isUpdateToggle)
+            print("t1")
+            print(loginCapsule.isLogin)
+            if loginCapsule.isLogin {
+                viewModel.updateAllCourses()
+                print("로그인 후 코스 다시 로드")
+            }
+        }
+        .onAppear {
+            if viewModel.isFirstLoad {
+                viewModel.updateAllCourses()
+                viewModel.isFirstLoad = false
+            }
         }
     }
 }
@@ -49,5 +65,6 @@ struct CourseListView: View {
 #Preview {
     CourseListView()
         .environment(NavigationRouter())
-        .environment(CourseListViewCapsule())
+        .environment(LoginCapsule())
+        .environment(CourseListCapsule())
 }

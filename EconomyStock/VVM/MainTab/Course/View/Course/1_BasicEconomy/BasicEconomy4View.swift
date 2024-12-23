@@ -364,5 +364,5 @@ struct BasicEconomy4View: View {
 #Preview {
     BasicEconomy4View(viewModel: CourseViewModel(course: .DUMMY_COURSE))
         .environment(NavigationRouter())
-        .environment(CourseListViewCapsule())
+        .environment(CourseListCapsule())
 }

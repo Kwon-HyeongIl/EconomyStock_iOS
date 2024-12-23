@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BasicLoginView: View {
     @Environment(NavigationRouter.self) var navRouter
+    @Environment(LoginCapsule.self) var capsule
     @Bindable var viewModel: AuthViewModel
     
     @State private var alertLogin = false
@@ -86,6 +87,8 @@ struct BasicLoginView: View {
                             return
                         }
                         
+                        self.capsule.isLogin = true
+                        
                         navRouter.popToRoot()
                     }
                 } label: {
@@ -148,4 +151,5 @@ struct BasicLoginView: View {
 #Preview {
     BasicLoginView(viewModel: AuthViewModel())
         .environment(NavigationRouter())
+        .environment(LoginCapsule())
 }

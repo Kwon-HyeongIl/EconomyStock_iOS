@@ -8,6 +8,6 @@
 import Foundation
 
 @Observable
-class CourseListViewCapsule {
-    var isUpdate = false
+class CourseListCapsule {
+    var isUpdateToggle = false
 }

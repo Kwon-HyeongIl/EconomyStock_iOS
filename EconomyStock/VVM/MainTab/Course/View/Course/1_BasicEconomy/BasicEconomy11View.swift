@@ -10,7 +10,7 @@ import PopupView
 
 struct BasicEconomy11View: View {
     @Environment(NavigationRouter.self) var navRouter
-    @Environment(CourseListViewCapsule.self) var courseListViewCapule
+    @Environment(CourseListCapsule.self) var courseListViewCapule
     @Bindable var viewModel: CourseViewModel
     
     @State private var progress: [Int] = []
@@ -276,5 +276,5 @@ struct BasicEconomy11View: View {
 #Preview {
     BasicEconomy11View(viewModel: CourseViewModel(course: .DUMMY_COURSE))
         .environment(NavigationRouter())
-        .environment(CourseListViewCapsule())
+        .environment(CourseListCapsule())
 }

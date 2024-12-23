@@ -32,6 +32,8 @@ class AuthManager {
         do {
             // 원격 저장소
             if Auth.auth().currentUser != nil {
+                print("RemoteUser 존재")
+                
                 guard let userId = Auth.auth().currentUser?.uid else { return }
                 
                 let remoteUserSnapshot = try await Firestore.firestore()
@@ -47,12 +49,16 @@ class AuthManager {
             } else {
                 try await MainActor.run {
                     let user = try modelContainer.mainContext.fetch(FetchDescriptor<LocalUser>())
-                    
+
                     if !user.isEmpty {
+                        print("LocalUser 로드")
+                        
                         self.localUser = user.first
                         
                     // 처음 앱을 시작한 경우
                     } else {
+                        print("LocalUser init")
+                        
                         initLocalUser()
                     }
                     

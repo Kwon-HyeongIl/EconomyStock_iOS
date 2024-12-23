@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CourseToolbarModifier: ViewModifier {
     @Environment(NavigationRouter.self) var navRouter
-    @Environment(CourseListViewCapsule.self) var courseListViewCapule
+    @Environment(CourseListCapsule.self) var courseListViewCapule
     @Bindable var viewModel: CourseViewModel
     
     @State private var alertExit = false
@@ -78,7 +78,7 @@ struct CourseToolbarModifier: ViewModifier {
                     CourseManager.updateUserCoursePageRoute(type: viewModel.course.type, isEnd: false, currentPage: currentPage)
                     
                     // CourseListViewModel의 updateAllCourses 메서드 호출 (중간 인터페이스로 연결)
-                    courseListViewCapule.isUpdate.toggle()
+                    courseListViewCapule.isUpdateToggle.toggle()
         
                     navRouter.popToRoot()
                 } label: {

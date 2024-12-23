@@ -166,5 +166,5 @@ struct ExchangeRateAndBalanceOfPayment1View: View {
 #Preview {
     ExchangeRateAndBalanceOfPayment1View(viewModel: CourseViewModel(course: Course.DUMMY_COURSE))
         .environment(NavigationRouter())
-        .environment(CourseListViewCapsule())
+        .environment(CourseListCapsule())
 }

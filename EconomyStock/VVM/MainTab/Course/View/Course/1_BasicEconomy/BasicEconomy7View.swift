@@ -274,5 +274,5 @@ struct BasicEconomy7View: View {
 #Preview {
     BasicEconomy7View(viewModel: CourseViewModel(course: .DUMMY_COURSE))
         .environment(NavigationRouter())
-        .environment(CourseListViewCapsule())
+        .environment(CourseListCapsule())
 }

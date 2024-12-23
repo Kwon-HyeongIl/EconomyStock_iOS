@@ -14,6 +14,8 @@ class CourseListViewModel {
     var remoteUser: User?
     var localUser: LocalUser?
     
+    var isFirstLoad = true
+    
     init() {
         let isLogin = AuthManager.shared.isLogin ?? false
         
@@ -127,7 +129,16 @@ class CourseListViewModel {
 
     func updateAllCourses() {
         let isLogin = AuthManager.shared.isLogin ?? false
-        courses.removeAll()
+        
+        if isLogin {
+            self.remoteUser = AuthManager.shared.remoteUser
+        } else {
+            self.localUser = AuthManager.shared.localUser
+        }
+        
+        DispatchQueue.main.async {
+            self.courses.removeAll()
+        }
         
         initBasicEconomyCourse(isLogin: isLogin)
         initPriceLevelCourse(isLogin: isLogin)

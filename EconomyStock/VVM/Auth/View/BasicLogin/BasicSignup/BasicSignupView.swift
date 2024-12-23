@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BasicSignupView: View {
     @Environment(NavigationRouter.self) var navRouter
+    @Environment(LoginCapsule.self) var capsule
     @Bindable var viewModel: AuthViewModel
     
     @FocusState private var focus: BasicSignupFocusField?
@@ -212,6 +213,9 @@ struct BasicSignupView: View {
                                     }
                                     
                                     await viewModel.signup()
+                                    
+                                    self.capsule.isLogin = true
+                                    
                                     navRouter.popToRoot()
                                 }
                                 
@@ -266,4 +270,5 @@ struct BasicSignupView: View {
 #Preview {
     BasicSignupView(viewModel: AuthViewModel())
         .environment(NavigationRouter())
+        .environment(LoginCapsule())
 }

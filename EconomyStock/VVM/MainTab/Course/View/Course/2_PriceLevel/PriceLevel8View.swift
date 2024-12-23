@@ -167,5 +167,5 @@ struct PriceLevel8View: View {
 #Preview {
     PriceLevel8View(viewModel: CourseViewModel(course: Course.DUMMY_COURSE))
         .environment(NavigationRouter())
-        .environment(CourseListViewCapsule())
+        .environment(CourseListCapsule())
 }

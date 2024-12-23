@@ -154,5 +154,5 @@ struct MoneyAndFinance15View: View {
 #Preview {
     MoneyAndFinance15View(viewModel: CourseViewModel(course: Course.DUMMY_COURSE))
         .environment(NavigationRouter())
-        .environment(CourseListViewCapsule())
+        .environment(CourseListCapsule())
 }

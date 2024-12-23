@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     @Environment(NavigationRouter.self) var navRouter
+    @Environment(LoginCapsule.self) var capsule
     @State private var viewModel = AuthViewModel()
     
     var body: some View {
@@ -35,6 +36,9 @@ struct LoginView: View {
                 Button {
                     viewModel.loginWithApple()
                     
+                    if viewModel.isLoginSuccess {
+                        self.capsule.isLogin = true
+                    }
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 12)
@@ -63,6 +67,9 @@ struct LoginView: View {
                 Button {
                     viewModel.loginWithGoogle()
                     
+                    if viewModel.isLoginSuccess {
+                        self.capsule.isLogin = true
+                    }
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 12)
@@ -91,6 +98,10 @@ struct LoginView: View {
                 
                 Button {
                     viewModel.loginWithKakao()
+                    
+                    if viewModel.isLoginSuccess {
+                        self.capsule.isLogin = true
+                    }
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 12)
@@ -143,4 +154,5 @@ struct LoginView: View {
 #Preview {
     LoginView()
         .environment(NavigationRouter())
+        .environment(LoginCapsule())
 }

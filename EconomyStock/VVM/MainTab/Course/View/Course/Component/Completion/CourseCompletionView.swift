@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CourseCompletionView: View {
     @Environment(NavigationRouter.self) var navRouter
-    @Environment(CourseListViewCapsule.self) var courseListViewCapule
+    @Environment(CourseListCapsule.self) var courseListViewCapule
     @State private var viewModel: CourseCompletionViewModel
     
     @Binding var isPopupLoading: Bool
@@ -51,7 +51,7 @@ struct CourseCompletionView: View {
                     Task {
                         await viewModel.updateUserCoursePage()
                         
-                        courseListViewCapule.isUpdate.toggle()
+                        courseListViewCapule.isUpdateToggle.toggle()
                     }
                     
                     navRouter.popToRoot()
@@ -80,5 +80,5 @@ struct CourseCompletionView: View {
 #Preview {
     CourseCompletionView(type: .basicEconomy, currentPage: 1, isPopupLoading: .constant(false), loadingBarState: .constant(false))
         .environment(NavigationRouter())
-        .environment(CourseListViewCapsule())
+        .environment(CourseListCapsule())
 }

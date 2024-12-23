@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MoneyAndFinance19View: View {
     @Environment(NavigationRouter.self) var navRouter
-    @Environment(CourseListViewCapsule.self) var courseListViewCapule
+    @Environment(CourseListCapsule.self) var courseListViewCapule
     @Bindable var viewModel: CourseViewModel
     
     @State private var progress: [Int] = []
@@ -216,5 +216,5 @@ struct MoneyAndFinance19View: View {
 #Preview {
     MoneyAndFinance19View(viewModel: CourseViewModel(course: Course.DUMMY_COURSE))
         .environment(NavigationRouter())
-        .environment(CourseListViewCapsule())
+        .environment(CourseListCapsule())
 }

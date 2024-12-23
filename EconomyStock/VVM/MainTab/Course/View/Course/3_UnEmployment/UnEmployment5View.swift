@@ -254,5 +254,5 @@ struct UnEmployment5View: View {
 #Preview {
     UnEmployment5View(viewModel: CourseViewModel(course: Course.DUMMY_COURSE))
         .environment(NavigationRouter())
-        .environment(CourseListViewCapsule())
+        .environment(CourseListCapsule())
 }
