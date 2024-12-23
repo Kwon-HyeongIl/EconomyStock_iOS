@@ -11,19 +11,18 @@ import SwiftUI
 class CourseListViewModel {
     var courses: [Course] = []
     
-    var remoteUser: User?
-    var localUser: LocalUser?
+    var remoteUser: User? {
+        AuthManager.shared.remoteUser
+    }
+    
+    var localUser: LocalUser? {
+        AuthManager.shared.localUser
+    }
     
     var isFirstLoad = true
     
     init() {
-        let isLogin = AuthManager.shared.isLogin ?? false
-        
-        if isLogin {
-            self.remoteUser = AuthManager.shared.remoteUser
-        } else {
-            self.localUser = AuthManager.shared.localUser
-        }
+        let isLogin = AuthManager.shared.isLogin
         
         initBasicEconomyCourse(isLogin: isLogin)
         initPriceLevelCourse(isLogin: isLogin)
@@ -128,13 +127,7 @@ class CourseListViewModel {
     }
 
     func updateAllCourses() {
-        let isLogin = AuthManager.shared.isLogin ?? false
-        
-        if isLogin {
-            self.remoteUser = AuthManager.shared.remoteUser
-        } else {
-            self.localUser = AuthManager.shared.localUser
-        }
+        let isLogin = AuthManager.shared.isLogin
         
         DispatchQueue.main.async {
             self.courses.removeAll()

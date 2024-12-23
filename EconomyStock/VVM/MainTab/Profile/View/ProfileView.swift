@@ -34,7 +34,7 @@ struct ProfileView: View {
                         if viewModel.isLogin {
                             VStack(spacing: 5) {
                                 HStack {
-                                    Text(viewModel.userName)
+                                    Text(viewModel.remoteUser?.username ?? "")
                                         .font(.system(size: 23))
                                         .fontWeight(.semibold)
                                         .padding(.leading)
@@ -113,7 +113,7 @@ struct ProfileView: View {
                             .opacity(0.8)
                             .padding(.trailing, 25)
                         
-                        ProgressCircleView(progressRate: viewModel.totalStudyingPercentage, isFinishMark: false, circleSize: 70, circleOutStrokeSize: 8, circleInStrokeSize: 6, textSize: 20)
+                        ProgressCircleView(progressRate: viewModel.isLogin ? viewModel.remoteUser?.totalStudyingPercentage ?? 0.0: viewModel.localUser?.totalStudyingPercentage ?? 0.0, isFinishMark: false, circleSize: 70, circleOutStrokeSize: 8, circleInStrokeSize: 6, textSize: 20)
                     }
                     .frame(maxWidth: .infinity)
                     .frame(height: 120)

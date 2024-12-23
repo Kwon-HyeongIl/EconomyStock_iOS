@@ -9,35 +9,23 @@ import Foundation
 
 @Observable
 class ProfileViewModel: Hashable, Equatable {
-    var remoteUser: User?
-    var localUser: LocalUser?
+    var remoteUser: User? {
+        AuthManager.shared.remoteUser
+    }
     
-    var isLogin = false
+    var localUser: LocalUser? {
+        AuthManager.shared.localUser
+    }
     
-    var userName = ""
-    var totalStudyingPercentage: Double
-    
-    init() {
-        if AuthManager.shared.isLogin ?? false {
-            let user = AuthManager.shared.remoteUser
-            self.remoteUser = user
-            
-            self.isLogin = true
-            self.userName = user?.username ?? ""
-            self.totalStudyingPercentage = user?.totalStudyingPercentage ?? 0.0
-            
-        } else {
-            let user = AuthManager.shared.localUser
-            
-            self.localUser = user
-            
-            self.totalStudyingPercentage = user?.totalStudyingPercentage ?? 0.0
-        }
+    var isLogin: Bool {
+        AuthManager.shared.isLogin
     }
     
     func singOut() {
         AuthManager.shared.signOut()
     }
+    
+    
     
     static func == (lhs: ProfileViewModel, rhs: ProfileViewModel) -> Bool {
         lhs.remoteUser?.id == rhs.remoteUser?.id

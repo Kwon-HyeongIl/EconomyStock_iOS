@@ -20,7 +20,7 @@ class AuthManager {
     
     let modelContainer = try! ModelContainer(for: LocalUser.self)
     
-    var isLogin: Bool?
+    var isLogin = false
     
     init() {
         Task {
@@ -61,8 +61,6 @@ class AuthManager {
                         
                         try initLocalUser()
                     }
-                    
-                    self.isLogin = false
                 }
             }
             
@@ -155,6 +153,8 @@ class AuthManager {
         
         await updateDeviceToken()
         await loadCurrentUserData()
+        
+        self.isLogin = true
         
         return true
     }
