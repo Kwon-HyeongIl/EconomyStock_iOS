@@ -59,7 +59,7 @@ class AuthManager {
                     } else {
                         print("LocalUser init")
                         
-                        initLocalUser()
+                        try initLocalUser()
                     }
                     
                     self.isLogin = false
@@ -72,13 +72,15 @@ class AuthManager {
     }
     
     @MainActor
-    private func initLocalUser() {
+    private func initLocalUser() throws {
         let deviceToken = FCMManager.shared.myDeviceToken ?? ""
         let user = LocalUser(id: UUID(), deviceToken: deviceToken, notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse())
         
         modelContainer.mainContext.insert(user)
         
         try? modelContainer.mainContext.save()
+        
+        self.localUser = try modelContainer.mainContext.fetch(FetchDescriptor<LocalUser>()).first
     }
     
     func createUser(email: String, password: String, username: String, appleHashedUid: String = "", googleHashedUid: String = "", kakaoHashedUid: String = "") async {
