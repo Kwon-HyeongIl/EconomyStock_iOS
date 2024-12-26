@@ -71,7 +71,7 @@ struct HomeView: View {
                 }
                 .padding(.bottom, 5)
             }
-            .frame(height: 120)
+            .frame(height: 105)
             .background(.regularMaterial)
             
             ZStack {
