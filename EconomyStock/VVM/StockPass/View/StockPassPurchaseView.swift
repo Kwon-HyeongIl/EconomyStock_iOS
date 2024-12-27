@@ -30,14 +30,15 @@ struct StockPassPurchaseView: View {
                             .scaledToFit()
                             .frame(width: 350)
                         
-                        VStack {
+                        VStack(spacing: 5) {
                             Text("스톡패스")
                                 .font(.system(size: 30).bold())
                                 .foregroundStyle(Color(hex: "e2bf55"))
                                 .padding(.top, 220)
                             
                             Text("출시 기념 50% 할인")
-                                .font(.system(size: 14))
+                                .font(.system(size: 15))
+                                .fontWeight(.semibold)
                                 .foregroundStyle(.red)
                         }
                     }
@@ -96,7 +97,7 @@ struct StockPassPurchaseView: View {
                         }
                     }
                     .padding(.vertical, 20)
-                    .background(.ultraThickMaterial)
+                    .background(.white)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                     .overlay {
                         RoundedRectangle(cornerRadius: 20)
@@ -174,13 +175,39 @@ struct StockPassPurchaseView: View {
             VStack {
                 Spacer()
                 
-                RoundedRectangle(cornerRadius: 30)
-                    .frame(width: 150, height: 50)
-                    .foregroundStyle(Color.ESTitle)
-                    .padding(.bottom, 50)
+                VStack {
+                    ZStack {
+                        VStack {
+                            Text("3,800원")
+                                .font(.system(size: 10))
+                                .foregroundStyle(.gray)
+                                .strikethrough(true, color: .red)
+                            
+                            Text("1,900원")
+                                .font(.system(size: 17).bold())
+                                .foregroundStyle(.red)
+                        }
+                        
+                        LottieView(fileName: "50PercentDiscount", loopMode: .loop, width: 20, height: 20)
+                            .scaleEffect(3.5)
+                            .padding(.leading, 100)
+                    }
+                }
+                .frame(width: 180, height: 50)
+                .background(.white)
+                .cornerRadius(30, corners: .allCorners)
+                .overlay {
+                    RoundedRectangle(cornerRadius: 30)
+                        .stroke(lineWidth: 3)
+                        .foregroundStyle(.yellow)
+                }
+                .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
+                .padding(.bottom, 30)
+                    
             }
         }
         .ignoresSafeArea(edges: .vertical)
+        .modifier(NavigationBackModifier())
     }
 }
 

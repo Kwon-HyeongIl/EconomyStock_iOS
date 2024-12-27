@@ -37,7 +37,6 @@
 		CA08F3A02CB839600093117E /* PriceLevel5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08F39F2CB839600093117E /* PriceLevel5View.swift */; };
 		CA10C02E2CAF85C1007DAB3A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CA10C02D2CAF85C1007DAB3A /* FirebaseMessaging */; };
 		CA114FD72CB62D2A00AD5AD9 /* CourseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA114FD62CB62D2A00AD5AD9 /* CourseListViewModel.swift */; };
-		CA114FDA2CB62E7D00AD5AD9 /* NavigationTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA114FD92CB62E7D00AD5AD9 /* NavigationTitleModifier.swift */; };
 		CA114FDD2CB631A500AD5AD9 /* CourseCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA114FDC2CB631A500AD5AD9 /* CourseCoverView.swift */; };
 		CA17FC702CB005800050250B /* MainCustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC6F2CB005800050250B /* MainCustomTabView.swift */; };
 		CA17FC722CB005A10050250B /* MainTabCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17FC712CB005A10050250B /* MainTabCapsule.swift */; };
@@ -323,7 +322,6 @@
 		CA08F39F2CB839600093117E /* PriceLevel5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevel5View.swift; sourceTree = "<group>"; };
 		CA10C02C2CAF782E007DAB3A /* EconomyStock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EconomyStock.entitlements; sourceTree = "<group>"; };
 		CA114FD62CB62D2A00AD5AD9 /* CourseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewModel.swift; sourceTree = "<group>"; };
-		CA114FD92CB62E7D00AD5AD9 /* NavigationTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleModifier.swift; sourceTree = "<group>"; };
 		CA114FDC2CB631A500AD5AD9 /* CourseCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCoverView.swift; sourceTree = "<group>"; };
 		CA17FC6F2CB005800050250B /* MainCustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCustomTabView.swift; sourceTree = "<group>"; };
 		CA17FC712CB005A10050250B /* MainTabCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCapsule.swift; sourceTree = "<group>"; };
@@ -972,7 +970,6 @@
 				CA3BBAB32CB50414007CA152 /* NavigationBackModifier.swift */,
 				CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */,
 				CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */,
-				CA114FD92CB62E7D00AD5AD9 /* NavigationTitleModifier.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -2205,7 +2202,6 @@
 				CA17FC772CB009680050250B /* Color+ESTitle.swift in Sources */,
 				CAD256022CE6DE50008E7788 /* PriceLevel10View.swift in Sources */,
 				CA114FD72CB62D2A00AD5AD9 /* CourseListViewModel.swift in Sources */,
-				CA114FDA2CB62E7D00AD5AD9 /* NavigationTitleModifier.swift in Sources */,
 				CAE4C1E52CDE3F5400CDD0CF /* BasicEconomy9View.swift in Sources */,
 				CA5577FE2CEE045000F7C4A6 /* LottieView.swift in Sources */,
 				CAACA1192D0D623F0048BB73 /* LocalUser.swift in Sources */,

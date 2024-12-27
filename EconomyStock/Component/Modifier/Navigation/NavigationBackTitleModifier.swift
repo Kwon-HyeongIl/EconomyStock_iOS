@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// 뒤로가기 + 제목
 struct NavigationBackTitleModifier: ViewModifier {
     @Environment(NavigationRouter.self) var navRouter
     let title: String

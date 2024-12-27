@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// 뒤로가기만 존재
 struct NavigationBackModifier: ViewModifier {
     @Environment(NavigationRouter.self) var navRouter
     
