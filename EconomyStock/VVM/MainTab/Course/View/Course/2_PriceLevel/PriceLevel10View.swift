@@ -14,6 +14,7 @@ struct PriceLevel10View: View {
     
     @State private var progress: [Int] = []
     
+    @State private var contentText1_2 = false
     @State private var contentImage1 = false
     @State private var nextScrollPart = false
     @State private var contentText2_2 = false
@@ -54,19 +55,28 @@ struct PriceLevel10View: View {
                         ZStack {
                             if progress.count >= 1 {
                                 VStack {
-                                    (Text("일반적으로 물가의 변동과 경기의 변동은 서로 다른 방향으로 나타나기 때문에 ")
-                                     + Text("물가 안정")
-                                        .foregroundStyle(Color.ESTitle)
-                                        .fontWeight(.bold)
-                                     + Text("과 ")
-                                     + Text("경기 성장")
-                                        .foregroundStyle(Color.ESTitle)
-                                        .fontWeight(.bold)
-                                     + Text("을 동시에 달성하는 것은 매우 어려운 일이에요"))
+                                    Text("일반적으로 경제가 성장할 때 물가는 상승하고 경제성장이 둔화될 때 물가가 하락해요")
                                     .font(.system(size: 20))
                                     .fontWeight(.semibold)
                                     .multilineTextAlignment(.center)
                                     .padding(.horizontal)
+                                    
+                                    if contentText1_2 {
+                                        (Text("따라서, ")
+                                        + Text("물가안정")
+                                            .foregroundStyle(Color.ESTitle)
+                                            .fontWeight(.bold)
+                                        + Text("과 ")
+                                        + Text("경제성장")
+                                            .foregroundStyle(Color.ESTitle)
+                                            .fontWeight(.bold)
+                                        + Text("을 동시에 달성하는 것은 매우 어려워요"))
+                                        .font(.system(size: 20))
+                                        .fontWeight(.semibold)
+                                        .multilineTextAlignment(.center)
+                                        .padding(.horizontal)
+                                        .padding(.top, 30)
+                                    }
                                     
                                     if contentImage1 {
                                         LottieView(fileName: "PriceLevel10_Balance", loopMode: .playOnce, width: 150, height: 150)
@@ -113,7 +123,7 @@ struct PriceLevel10View: View {
                                 .fill(.clear)
                                 .frame(width: 100, height: 300)
                         }
-                        .padding(.top, 50)
+                        .padding(.top, 60)
                         
                         ZStack {
                             if progress.count >= 3 {
@@ -185,9 +195,15 @@ struct PriceLevel10View: View {
                     }
                     
                     if progress.count == 1 {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                             withAnimation(.smooth(duration: 1.0)) {
-                                contentImage1 = true
+                                contentText1_2 = true
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                    withAnimation(.smooth(duration: 1.0)) {
+                                        contentImage1 = true
+                                    }
+                                }
                             }
                         }
                     }

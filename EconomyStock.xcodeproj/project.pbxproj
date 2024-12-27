@@ -207,10 +207,11 @@
 		CAAAC3662D02CC870006D8DE /* DummyVerticalInticatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAAC3652D02CC870006D8DE /* DummyVerticalInticatorView.swift */; };
 		CAAAC3692D02CEBA0006D8DE /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = CAAAC3682D02CEBA0006D8DE /* Shimmer */; };
 		CAACA1192D0D623F0048BB73 /* LocalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACA1182D0D623F0048BB73 /* LocalUser.swift */; };
-		CAACA11B2D0D94AD0048BB73 /* TempViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACA11A2D0D94AD0048BB73 /* TempViewModel.swift */; };
 		CAACCD0B2CF87D4D004156C9 /* MoneyAndFinance17_FinancePaper.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAACCD0A2CF87D4D004156C9 /* MoneyAndFinance17_FinancePaper.lottie */; };
 		CAACCD0D2CF87D53004156C9 /* MoneyAndFinance17_HomePrice.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAACCD0C2CF87D53004156C9 /* MoneyAndFinance17_HomePrice.lottie */; };
 		CAACCD0F2CF87D5B004156C9 /* ArrowDown.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAACCD0E2CF87D5B004156C9 /* ArrowDown.lottie */; };
+		CAB155922D1CF9D500A6594C /* InAppPurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB155912D1CF9D500A6594C /* InAppPurchaseManager.swift */; };
+		CAB155952D1D184A00A6594C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB155942D1D184A00A6594C /* StoreKit.framework */; };
 		CAB6E7342D0EE66600B4AE82 /* CourseManager+Entrance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB6E7332D0EE66600B4AE82 /* CourseManager+Entrance.swift */; };
 		CAB77FD72CB8EC2900DF11D6 /* CourseToolbarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */; };
 		CAB77FD92CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */; };
@@ -479,10 +480,11 @@
 		CAAAC3632D02CC790006D8DE /* DummyHorizontalIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyHorizontalIndicatorView.swift; sourceTree = "<group>"; };
 		CAAAC3652D02CC870006D8DE /* DummyVerticalInticatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyVerticalInticatorView.swift; sourceTree = "<group>"; };
 		CAACA1182D0D623F0048BB73 /* LocalUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUser.swift; sourceTree = "<group>"; };
-		CAACA11A2D0D94AD0048BB73 /* TempViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewModel.swift; sourceTree = "<group>"; };
 		CAACCD0A2CF87D4D004156C9 /* MoneyAndFinance17_FinancePaper.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance17_FinancePaper.lottie; sourceTree = "<group>"; };
 		CAACCD0C2CF87D53004156C9 /* MoneyAndFinance17_HomePrice.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance17_HomePrice.lottie; sourceTree = "<group>"; };
 		CAACCD0E2CF87D5B004156C9 /* ArrowDown.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ArrowDown.lottie; sourceTree = "<group>"; };
+		CAB155912D1CF9D500A6594C /* InAppPurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseManager.swift; sourceTree = "<group>"; };
+		CAB155942D1D184A00A6594C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CAB6E7332D0EE66600B4AE82 /* CourseManager+Entrance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseManager+Entrance.swift"; sourceTree = "<group>"; };
 		CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseToolbarModifier.swift; sourceTree = "<group>"; };
 		CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackHomeModifier.swift; sourceTree = "<group>"; };
@@ -565,6 +567,7 @@
 				CA7757682CE22BAC00A8F3DE /* PopupView in Frameworks */,
 				CA10C02E2CAF85C1007DAB3A /* FirebaseMessaging in Frameworks */,
 				CA9BB9DC2CABAACF00886A1A /* FirebaseAuth in Frameworks */,
+				CAB155952D1D184A00A6594C /* StoreKit.framework in Frameworks */,
 				CA1DDD382CB0E75000C84D08 /* Lottie in Frameworks */,
 				CAEE16552CAD0C8100210BD0 /* CryptoSwift in Frameworks */,
 				CA9BB9DE2CABAACF00886A1A /* FirebaseFirestore in Frameworks */,
@@ -648,7 +651,6 @@
 			isa = PBXGroup;
 			children = (
 				CA07D7732D044F5200ECD3E4 /* ProfileViewModel+AccountInfo.swift */,
-				CAACA11A2D0D94AD0048BB73 /* TempViewModel.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -1254,6 +1256,7 @@
 			isa = PBXGroup;
 			children = (
 				CA9BB9CA2CABA59A00886A1A /* EconomyStock */,
+				CAB155932D1D184A00A6594C /* Frameworks */,
 				CA83477D2CAAE28500BA1E4A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -1429,6 +1432,7 @@
 			isa = PBXGroup;
 			children = (
 				CAEE16502CAD0C2E00210BD0 /* Auth */,
+				CAB155902D1CF9A700A6594C /* Purchase */,
 				CAEE165B2CAD0D1400210BD0 /* FCM */,
 				CA2E93682CAFAEB000A883F1 /* Notification */,
 				CA41026A2D082314000579C6 /* Course */,
@@ -1553,6 +1557,22 @@
 				CAACA1182D0D623F0048BB73 /* LocalUser.swift */,
 			);
 			path = SwiftData;
+			sourceTree = "<group>";
+		};
+		CAB155902D1CF9A700A6594C /* Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				CAB155912D1CF9D500A6594C /* InAppPurchaseManager.swift */,
+			);
+			path = Purchase;
+			sourceTree = "<group>";
+		};
+		CAB155932D1D184A00A6594C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAB155942D1D184A00A6594C /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CAB77FD52CB8EC1600DF11D6 /* Course */ = {
@@ -2043,7 +2063,6 @@
 				CAEE16632CAD0D7200210BD0 /* AuthViewModel+Kakao.swift in Sources */,
 				CAD255FA2CE6DE35008E7788 /* PriceLevel6View.swift in Sources */,
 				CA3338AD2D07D6520061A6F5 /* CourseCompletionViewModel 2.swift in Sources */,
-				CAACA11B2D0D94AD0048BB73 /* TempViewModel.swift in Sources */,
 				CA58A4ED2CB6D9E900DB91BD /* ProgressCircleView.swift in Sources */,
 				CA17FC722CB005A10050250B /* MainTabCapsule.swift in Sources */,
 				CAAAC3662D02CC870006D8DE /* DummyVerticalInticatorView.swift in Sources */,
@@ -2087,6 +2106,7 @@
 				CA07D7632D04309D00ECD3E4 /* AuthViewModel+ResetPassword.swift in Sources */,
 				CA07D7672D04371200ECD3E4 /* SendEmailView.swift in Sources */,
 				CA17FC7D2CB00AB90050250B /* HomeView.swift in Sources */,
+				CAB155922D1CF9D500A6594C /* InAppPurchaseManager.swift in Sources */,
 				CA07D7972D055BC100ECD3E4 /* Color+AIGradient.swift in Sources */,
 				CA77DFD22CB26D0100992829 /* CustomError.swift in Sources */,
 				CAEDDABD2CB56C330046162D /* BasicLoginView.swift in Sources */,

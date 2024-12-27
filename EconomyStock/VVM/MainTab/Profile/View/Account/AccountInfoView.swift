@@ -11,12 +11,22 @@ struct AccountInfoView: View {
     @Environment(NavigationRouter.self) var navRouter
     @Environment(LoginCapsule.self) var capsule
     @Bindable var viewModel: ProfileViewModel
-    @State var tempViewModel = TempViewModel()
     
-    @State private var text = ""
+    @State private var inAppPurchaseViewModel = InAppPurchaseManager()
     
     var body: some View {
         ScrollView {
+            
+            Text("isPurchased: \(inAppPurchaseViewModel.isPurchased)")
+            
+            Button {
+                Task {
+                    print("결제 버튼 눌림")
+                    await inAppPurchaseViewModel.purchase()
+                }
+            } label: {
+                Text("결제")
+            }
             
             
             Button {
