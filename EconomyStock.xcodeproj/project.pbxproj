@@ -243,6 +243,10 @@
 		CACF34322CEDD51F00ECC6FA /* MoneyAndFinance17View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF34312CEDD51F00ECC6FA /* MoneyAndFinance17View.swift */; };
 		CACF34342CEDD52500ECC6FA /* MoneyAndFinance18View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF34332CEDD52500ECC6FA /* MoneyAndFinance18View.swift */; };
 		CACF34362CEDD52A00ECC6FA /* MoneyAndFinance19View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF34352CEDD52A00ECC6FA /* MoneyAndFinance19View.swift */; };
+		CAD05E382D1E3F7D00B836E4 /* CampingBackground.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAD05E362D1E3F7D00B836E4 /* CampingBackground.lottie */; };
+		CAD05E392D1E3F7D00B836E4 /* StageLightEffect.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAD05E372D1E3F7D00B836E4 /* StageLightEffect.lottie */; };
+		CAD05E402D1E3FF600B836E4 /* StockPassPurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E3F2D1E3FF600B836E4 /* StockPassPurchaseViewModel.swift */; };
+		CAD05E422D1E400800B836E4 /* StockPassPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E412D1E400800B836E4 /* StockPassPurchaseView.swift */; };
 		CAD101DA2CB6853200CA9C6A /* NavigationGestureEnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */; };
 		CAD101E22CB6905F00CA9C6A /* ShortButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */; };
 		CAD101E42CB6959D00CA9C6A /* StudyingCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101E32CB6959D00CA9C6A /* StudyingCourse.swift */; };
@@ -515,6 +519,10 @@
 		CACF34312CEDD51F00ECC6FA /* MoneyAndFinance17View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAndFinance17View.swift; sourceTree = "<group>"; };
 		CACF34332CEDD52500ECC6FA /* MoneyAndFinance18View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAndFinance18View.swift; sourceTree = "<group>"; };
 		CACF34352CEDD52A00ECC6FA /* MoneyAndFinance19View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAndFinance19View.swift; sourceTree = "<group>"; };
+		CAD05E362D1E3F7D00B836E4 /* CampingBackground.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = CampingBackground.lottie; sourceTree = "<group>"; };
+		CAD05E372D1E3F7D00B836E4 /* StageLightEffect.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = StageLightEffect.lottie; sourceTree = "<group>"; };
+		CAD05E3F2D1E3FF600B836E4 /* StockPassPurchaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPassPurchaseViewModel.swift; sourceTree = "<group>"; };
+		CAD05E412D1E400800B836E4 /* StockPassPurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPassPurchaseView.swift; sourceTree = "<group>"; };
 		CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationGestureEnable.swift; sourceTree = "<group>"; };
 		CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortButtonModifier.swift; sourceTree = "<group>"; };
 		CAD101E32CB6959D00CA9C6A /* StudyingCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyingCourse.swift; sourceTree = "<group>"; };
@@ -1209,6 +1217,7 @@
 		CA77DFCB2CB24D0100992829 /* DotLottieFile */ = {
 			isa = PBXGroup;
 			children = (
+				CAD05E352D1E3F7000B836E4 /* StockPass */,
 				CA07D7832D05259B00ECD3E4 /* Chatbot */,
 				CA07D7682D0438CC00ECD3E4 /* Auth */,
 				CA4D3EFB2D01E99C0087E55C /* Home */,
@@ -1637,6 +1646,40 @@
 			path = 4_MoneyAndFinance;
 			sourceTree = "<group>";
 		};
+		CAD05E352D1E3F7000B836E4 /* StockPass */ = {
+			isa = PBXGroup;
+			children = (
+				CAD05E362D1E3F7D00B836E4 /* CampingBackground.lottie */,
+				CAD05E372D1E3F7D00B836E4 /* StageLightEffect.lottie */,
+			);
+			path = StockPass;
+			sourceTree = "<group>";
+		};
+		CAD05E3A2D1E3FB700B836E4 /* StockPass */ = {
+			isa = PBXGroup;
+			children = (
+				CAD05E3D2D1E3FE000B836E4 /* View */,
+				CAD05E3E2D1E3FE400B836E4 /* ViewModel */,
+			);
+			path = StockPass;
+			sourceTree = "<group>";
+		};
+		CAD05E3D2D1E3FE000B836E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CAD05E412D1E400800B836E4 /* StockPassPurchaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CAD05E3E2D1E3FE400B836E4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CAD05E3F2D1E3FF600B836E4 /* StockPassPurchaseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		CAD101D82CB6851200CA9C6A /* NavigationGesture */ = {
 			isa = PBXGroup;
 			children = (
@@ -1745,6 +1788,7 @@
 			children = (
 				CAEE165C2CAD0D2300210BD0 /* Auth */,
 				CAEE165D2CAD0D2F00210BD0 /* MainTab */,
+				CAD05E3A2D1E3FB700B836E4 /* StockPass */,
 				CA07D7782D046A3800ECD3E4 /* ChatbotAI */,
 			);
 			path = VVM;
@@ -1950,6 +1994,8 @@
 				CA6875D12CF1864E00DC819A /* BasicEconomy6_MoneyStack.lottie in Resources */,
 				CA762CC72CF86BD100983308 /* MoneyAndFinance16_Wallet.lottie in Resources */,
 				CACD04962CFEC5EF00B2DA28 /* ExchangeRateAndBalanceOfPayment10_Union.lottie in Resources */,
+				CAD05E382D1E3F7D00B836E4 /* CampingBackground.lottie in Resources */,
+				CAD05E392D1E3F7D00B836E4 /* StageLightEffect.lottie in Resources */,
 				CA6875BF2CF1847300DC819A /* PriceLevelCourseCover.lottie in Resources */,
 				CA6875DD2CF1886700DC819A /* BasicEconomy10_Payment.lottie in Resources */,
 				CAA3A55E2CF6D9D3002C55A5 /* MoneyAndFinance9_GlobalMoney.lottie in Resources */,
@@ -2101,6 +2147,7 @@
 				CACF34302CEDD51900ECC6FA /* MoneyAndFinance16View.swift in Sources */,
 				CAEE16522CAD0C3F00210BD0 /* AuthManager+SocialLogin.swift in Sources */,
 				CACF341C2CEDD4DC00ECC6FA /* MoneyAndFinance6View.swift in Sources */,
+				CAD05E422D1E400800B836E4 /* StockPassPurchaseView.swift in Sources */,
 				CAEE16582CAD0CA700210BD0 /* LoginView.swift in Sources */,
 				CA5578002CEE048700F7C4A6 /* LottieRouter.swift in Sources */,
 				CA07D7632D04309D00ECD3E4 /* AuthViewModel+ResetPassword.swift in Sources */,
@@ -2151,6 +2198,7 @@
 				CA2E936A2CAFAEC000A883F1 /* NotificationManager.swift in Sources */,
 				CA07D79D2D059EF000ECD3E4 /* ChatbotError.swift in Sources */,
 				CACF34222CEDD4F000ECC6FA /* MoneyAndFinance9View.swift in Sources */,
+				CAD05E402D1E3FF600B836E4 /* StockPassPurchaseViewModel.swift in Sources */,
 				CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */,
 				CA07D7652D0433A800ECD3E4 /* ResetPasswordFocusField.swift in Sources */,
 				CAEE164B2CAD082500210BD0 /* User.swift in Sources */,
