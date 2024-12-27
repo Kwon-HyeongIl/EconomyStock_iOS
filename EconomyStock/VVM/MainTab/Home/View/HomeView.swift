@@ -334,9 +334,9 @@ struct HomeView: View {
                                                     .frame(height: 80)
                                                     .frame(maxWidth: .infinity)
                                                     .cornerRadius(10, corners: .allCorners)
-                                                    
                                             }
                                     }
+                                    
                                 } else {
                                     if !viewModel.localUserStockPass {
                                         RoundedRectangle(cornerRadius: 10, style: .continuous)
