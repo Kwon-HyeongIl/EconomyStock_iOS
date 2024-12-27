@@ -70,6 +70,7 @@
 		CA3BBAB62CB50441007CA152 /* NavigationBackTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */; };
 		CA41026C2D082343000579C6 /* CourseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41026B2D082343000579C6 /* CourseManager.swift */; };
 		CA4102702D082C1F000579C6 /* CourseManager+ProgressSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41026F2D082C1F000579C6 /* CourseManager+ProgressSave.swift */; };
+		CA4AD4A72D1EBA5C00BA98BC /* GoldGradientBackground.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA4AD4A62D1EBA5C00BA98BC /* GoldGradientBackground.lottie */; };
 		CA4D3EFE2D01E9AF0087E55C /* EconomicIndicatorDown.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA4D3EFC2D01E9AF0087E55C /* EconomicIndicatorDown.lottie */; };
 		CA4D3EFF2D01E9AF0087E55C /* EconomicIndicatorUp.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA4D3EFD2D01E9AF0087E55C /* EconomicIndicatorUp.lottie */; };
 		CA4D88CE2CDC70210003DE3C /* BasicEconomy10View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D88CD2CDC70210003DE3C /* BasicEconomy10View.swift */; };
@@ -354,6 +355,7 @@
 		CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackTitleModifier.swift; sourceTree = "<group>"; };
 		CA41026B2D082343000579C6 /* CourseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseManager.swift; sourceTree = "<group>"; };
 		CA41026F2D082C1F000579C6 /* CourseManager+ProgressSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseManager+ProgressSave.swift"; sourceTree = "<group>"; };
+		CA4AD4A62D1EBA5C00BA98BC /* GoldGradientBackground.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = GoldGradientBackground.lottie; sourceTree = "<group>"; };
 		CA4D3EFC2D01E9AF0087E55C /* EconomicIndicatorDown.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = EconomicIndicatorDown.lottie; sourceTree = "<group>"; };
 		CA4D3EFD2D01E9AF0087E55C /* EconomicIndicatorUp.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = EconomicIndicatorUp.lottie; sourceTree = "<group>"; };
 		CA4D88CD2CDC70210003DE3C /* BasicEconomy10View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy10View.swift; sourceTree = "<group>"; };
@@ -960,7 +962,6 @@
 				CAB77FD52CB8EC1600DF11D6 /* Course */,
 				CA3BBAB22CB50403007CA152 /* Navigation */,
 				CA3BBAB72CB50497007CA152 /* Button */,
-				CAD101DC2CB68DEB00CA9C6A /* Tile */,
 			);
 			path = Modifier;
 			sourceTree = "<group>";
@@ -1651,6 +1652,7 @@
 			children = (
 				CAD05E362D1E3F7D00B836E4 /* CampingBackground.lottie */,
 				CAD05E372D1E3F7D00B836E4 /* StageLightEffect.lottie */,
+				CA4AD4A62D1EBA5C00BA98BC /* GoldGradientBackground.lottie */,
 			);
 			path = StockPass;
 			sourceTree = "<group>";
@@ -1686,13 +1688,6 @@
 				CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */,
 			);
 			path = NavigationGesture;
-			sourceTree = "<group>";
-		};
-		CAD101DC2CB68DEB00CA9C6A /* Tile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tile;
 			sourceTree = "<group>";
 		};
 		CAD1CD322CDCD4CC00E89FA7 /* Etc */ = {
@@ -1959,6 +1954,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA4AD4A72D1EBA5C00BA98BC /* GoldGradientBackground.lottie in Resources */,
 				CA07D76C2D043A7B00ECD3E4 /* SendingEmail.lottie in Resources */,
 				CA9BB9CE2CABA59A00886A1A /* Preview Assets.xcassets in Resources */,
 				CA6875FD2CF18C5B00DC819A /* UnEmployment3_CaffeWork.lottie in Resources */,

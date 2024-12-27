@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StockPassPurchaseView: View {
-    
+    @State private var viewModel = StockPassPurchaseViewModel()
     
     var body: some View {
         ZStack {
@@ -30,63 +30,71 @@ struct StockPassPurchaseView: View {
                             .frame(width: 350)
                     }
                     
-                    HStack {
-                        Text("구매하면 받으시는 혜택")
-                            .fontWeight(.semibold)
-                            .padding(.leading)
-                            .padding(.bottom, 2)
+                    VStack {
+                        HStack {
+                            Text("구매하면 받으시는 혜택")
+                                .fontWeight(.semibold)
+                                .padding(.leading)
+                                .padding(.bottom, 2)
+                            
+                            Spacer()
+                        }
                         
-                        Spacer()
+                        HStack {
+                            Text("●")
+                                .font(.system(size: 10))
+                                .padding(.leading)
+                            
+                            Text("현재 모든 강의 및 뉴스 수강 가능")
+                            
+                            Spacer()
+                        }
+                        .padding(.bottom, 2)
+                        
+                        HStack {
+                            Text("●")
+                                .font(.system(size: 10))
+                                .padding(.leading)
+                            
+                            Text("앞으로 추가되는 모든 강의 및 뉴스 수강 가능")
+                            
+                            Spacer()
+                        }
+                        .padding(.bottom, 2)
+                        
+                        HStack {
+                            Text("●")
+                                .font(.system(size: 10))
+                                .padding(.leading)
+                            
+                            Text("앱 내의 모든 광고 제거")
+                            
+                            Spacer()
+                        }
+                        .padding(.bottom, 2)
+                        
+                        HStack {
+                            Text("●")
+                                .font(.system(size: 10))
+                                .padding(.leading)
+                            
+                            Text("한번 구매시 영구적으로 혜택")
+                            
+                            Spacer()
+                        }
                     }
-                    
-                    HStack {
-                        Text("●")
-                            .font(.system(size: 10))
-                            .padding(.leading)
-                        
-                        Text("현재 모든 강의 및 뉴스 수강 가능")
-                        
-                        Spacer()
-                    }
-                    .padding(.bottom, 2)
-                    
-                    HStack {
-                        Text("●")
-                            .font(.system(size: 10))
-                            .padding(.leading)
-                        
-                        Text("앞으로 추가되는 모든 강의 및 뉴스 수강 가능")
-                        
-                        Spacer()
-                    }
-                    .padding(.bottom, 2)
-                    
-                    HStack {
-                        Text("●")
-                            .font(.system(size: 10))
-                            .padding(.leading)
-                        
-                        Text("앱 내의 모든 광고 제거")
-                        
-                        Spacer()
-                    }
-                    .padding(.bottom, 2)
-                    
-                    HStack {
-                        Text("●")
-                            .font(.system(size: 10))
-                            .padding(.leading)
-                        
-                        Text("한번 구매시 영구적으로 혜택")
-                        
-                        Spacer()
-                    }
+                    .padding(.vertical, 20)
+                    .background(.ultraThickMaterial)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .padding(.horizontal)
+                    .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                     .padding(.bottom, 30)
                     
                     VStack {
                         HStack {
                             Text("유의사항")
-                                .padding(.leading)
+                                .font(.system(size: 15))
+                                .padding(.leading, 30)
                             
                             Spacer()
                         }
@@ -95,15 +103,15 @@ struct StockPassPurchaseView: View {
                         HStack {
                             VStack {
                                 Text("●")
-                                    .font(.system(size: 8))
-                                    .padding(.leading)
+                                    .font(.system(size: 6))
+                                    .padding(.leading, 30)
                                     .padding(.top, 2)
                                 
                                 Spacer()
                             }
                             
                             Text("구매 내역을 저장하기위해 반드시 로그인을 수행한 후 결제를 진행해야 합니다.")
-                                .font(.system(size: 14))
+                                .font(.system(size: 12))
                             
                             Spacer()
                         }
@@ -112,15 +120,15 @@ struct StockPassPurchaseView: View {
                         HStack {
                             VStack {
                                 Text("●")
-                                    .font(.system(size: 8))
-                                    .padding(.leading)
+                                    .font(.system(size: 6))
+                                    .padding(.leading, 30)
                                     .padding(.top, 2)
                                 
                                 Spacer()
                             }
                             
                             Text("경제STOCK 출시 기념 스톡패스 할인은 별도의 고지 없이 종료될 수 있습니다.")
-                                .font(.system(size: 14))
+                                .font(.system(size: 12))
                             
                             Spacer()
                         }
@@ -128,15 +136,15 @@ struct StockPassPurchaseView: View {
                         HStack {
                             VStack {
                                 Text("●")
-                                    .font(.system(size: 8))
-                                    .padding(.leading)
+                                    .font(.system(size: 6))
+                                    .padding(.leading, 30)
                                     .padding(.top, 2)
                                 
                                 Spacer()
                             }
                             
                             Text("스톡패스는 1회만 구매할 수 있으며, 구매 기록이 로그인한 계정에 영구적으로 보관됩니다.")
-                                .font(.system(size: 14))
+                                .font(.system(size: 12))
                             
                             Spacer()
                         }
