@@ -31,6 +31,10 @@ class NavigationRouter {
         case .ChatbotView(let type):
             ChatbotView(type: type)
             
+        // StockPass
+        case .StockPassPurchaseView:
+            StockPassPurchaseView()
+            
         // Studying
         case .CourseIntroView(let viewModel):
             CourseIntroView(viewModel: viewModel)

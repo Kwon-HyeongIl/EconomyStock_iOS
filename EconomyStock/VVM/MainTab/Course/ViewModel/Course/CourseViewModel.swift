@@ -13,6 +13,14 @@ class CourseViewModel: Hashable, Equatable {
     
     var currentPage = 1
     
+    var isLogin: Bool {
+        AuthManager.shared.isLogin
+    }
+    
+    var remoteUserStockPass: Bool {
+        AuthManager.shared.remoteUser?.isStockPass ?? false
+    }
+    
     init(course: Course) {
         self.course = course
     }

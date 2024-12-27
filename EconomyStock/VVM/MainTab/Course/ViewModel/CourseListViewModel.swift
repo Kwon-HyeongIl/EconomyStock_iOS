@@ -136,5 +136,6 @@ class CourseListViewModel {
         initPriceLevelCourse(isLogin: isLogin)
         initUnEmploymentCourse(isLogin: isLogin)
         initMoneyAndFinanceCourse(isLogin: isLogin)
+        initExchangeRateAndBalanceOfPaymentCourse(isLogin: isLogin)
     }
 }

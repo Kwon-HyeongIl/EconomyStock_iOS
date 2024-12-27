@@ -9,15 +9,12 @@ import Foundation
 
 @Observable
 class HomeViewModel {
-    var remoteUserStockPass: Bool {
-        AuthManager.shared.remoteUser?.isStockPass ?? false
-    }
-    var localUserStockPass: Bool {
-        AuthManager.shared.localUser?.isStockPass ?? false
-    }
-    
     var isLogin: Bool {
         AuthManager.shared.isLogin
+    }
+    
+    var remoteUserStockPass: Bool {
+        AuthManager.shared.remoteUser?.isStockPass ?? false
     }
     
     var bannerUnitId = Bundle.main.infoDictionary?["GOOGLE_ADMOB_BANNER_AD_UNIT_ID"] as? String

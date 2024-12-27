@@ -17,7 +17,22 @@ struct CourseCoverView: View {
     
     var body: some View {
         Button {
-            navRouter.navigate(.CourseIntroView(viewModel))
+            if [.moneyAndFinance, .exchangeRateAndBalanceOfPayment].contains(viewModel.course.type) {
+                if viewModel.isLogin {
+                    if viewModel.remoteUserStockPass {
+                        navRouter.navigate(.CourseIntroView(viewModel))
+                    } else {
+                        navRouter.navigate(.StockPassPurchaseView)
+                    }
+                    
+                } else {
+                    navRouter.navigate(.StockPassPurchaseView)
+                }
+                
+            } else {
+                navRouter.navigate(.CourseIntroView(viewModel))
+            }
+            
         } label: {
             VStack {
                 ZStack {
@@ -63,6 +78,16 @@ struct CourseCoverView: View {
             .frame(height: 170)
             .background(viewModel.course.backgroundGradient)
             .clipShape(RoundedRectangle(cornerRadius: 10))
+            .opacity([.moneyAndFinance, .exchangeRateAndBalanceOfPayment].contains(viewModel.course.type) && (!viewModel.isLogin || !viewModel.remoteUserStockPass) ? 0.5 : 1.0)
+            .overlay {
+                if [.moneyAndFinance, .exchangeRateAndBalanceOfPayment].contains(viewModel.course.type) && (!viewModel.isLogin || !viewModel.remoteUserStockPass) {
+                    Image(systemName: "lock.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 25)
+                        .foregroundStyle(.gray)
+                }
+            }
             .padding(.horizontal, 10)
             .environment(viewModel)
         }

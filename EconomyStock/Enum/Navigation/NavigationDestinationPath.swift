@@ -19,7 +19,10 @@ enum NavigationDestinationPath: Hashable {
     // Chatbot
     case ChatbotView(ChatbotEntranceType)
     
-    // Studying
+    // StockPass
+    case StockPassPurchaseView
+    
+    // Course
     case CourseIntroView(CourseViewModel)
     
     // Profile
