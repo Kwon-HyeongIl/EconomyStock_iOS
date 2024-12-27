@@ -12,17 +12,17 @@ struct AccountInfoView: View {
     @Environment(LoginCapsule.self) var capsule
     @Bindable var viewModel: ProfileViewModel
     
-    @State private var inAppPurchaseViewModel = InAppPurchaseManager()
+    @State private var iAPViewModel = IAPManager()
     
     var body: some View {
         ScrollView {
             
-            Text("isPurchased: \(inAppPurchaseViewModel.isPurchased)")
+            Text("isPurchased: \(iAPViewModel.isPurchased)")
             
             Button {
                 Task {
                     print("결제 버튼 눌림")
-                    await inAppPurchaseViewModel.purchase()
+//                    await iAPViewModel.purchase()
                 }
             } label: {
                 Text("결제")

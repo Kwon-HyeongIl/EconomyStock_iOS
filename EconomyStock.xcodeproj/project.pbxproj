@@ -70,6 +70,8 @@
 		CA41026C2D082343000579C6 /* CourseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41026B2D082343000579C6 /* CourseManager.swift */; };
 		CA4102702D082C1F000579C6 /* CourseManager+ProgressSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41026F2D082C1F000579C6 /* CourseManager+ProgressSave.swift */; };
 		CA4AD4A92D1EC15700BA98BC /* 50PercentDiscount.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA4AD4A82D1EC15700BA98BC /* 50PercentDiscount.lottie */; };
+		CA4AD4AB2D1ED7DD00BA98BC /* IAPManager+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4AD4AA2D1ED7DD00BA98BC /* IAPManager+Firebase.swift */; };
+		CA4AD4AD2D1EDEA300BA98BC /* StockPassPurchaseCompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4AD4AC2D1EDEA300BA98BC /* StockPassPurchaseCompletionView.swift */; };
 		CA4D3EFE2D01E9AF0087E55C /* EconomicIndicatorDown.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA4D3EFC2D01E9AF0087E55C /* EconomicIndicatorDown.lottie */; };
 		CA4D3EFF2D01E9AF0087E55C /* EconomicIndicatorUp.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA4D3EFD2D01E9AF0087E55C /* EconomicIndicatorUp.lottie */; };
 		CA4D88CE2CDC70210003DE3C /* BasicEconomy10View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D88CD2CDC70210003DE3C /* BasicEconomy10View.swift */; };
@@ -210,7 +212,7 @@
 		CAACCD0B2CF87D4D004156C9 /* MoneyAndFinance17_FinancePaper.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAACCD0A2CF87D4D004156C9 /* MoneyAndFinance17_FinancePaper.lottie */; };
 		CAACCD0D2CF87D53004156C9 /* MoneyAndFinance17_HomePrice.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAACCD0C2CF87D53004156C9 /* MoneyAndFinance17_HomePrice.lottie */; };
 		CAACCD0F2CF87D5B004156C9 /* ArrowDown.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAACCD0E2CF87D5B004156C9 /* ArrowDown.lottie */; };
-		CAB155922D1CF9D500A6594C /* InAppPurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB155912D1CF9D500A6594C /* InAppPurchaseManager.swift */; };
+		CAB155922D1CF9D500A6594C /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB155912D1CF9D500A6594C /* IAPManager.swift */; };
 		CAB155952D1D184A00A6594C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB155942D1D184A00A6594C /* StoreKit.framework */; };
 		CAB6E7342D0EE66600B4AE82 /* CourseManager+Entrance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB6E7332D0EE66600B4AE82 /* CourseManager+Entrance.swift */; };
 		CAB77FD72CB8EC2900DF11D6 /* CourseToolbarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */; };
@@ -354,6 +356,8 @@
 		CA41026B2D082343000579C6 /* CourseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseManager.swift; sourceTree = "<group>"; };
 		CA41026F2D082C1F000579C6 /* CourseManager+ProgressSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseManager+ProgressSave.swift"; sourceTree = "<group>"; };
 		CA4AD4A82D1EC15700BA98BC /* 50PercentDiscount.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = 50PercentDiscount.lottie; sourceTree = "<group>"; };
+		CA4AD4AA2D1ED7DD00BA98BC /* IAPManager+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IAPManager+Firebase.swift"; sourceTree = "<group>"; };
+		CA4AD4AC2D1EDEA300BA98BC /* StockPassPurchaseCompletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPassPurchaseCompletionView.swift; sourceTree = "<group>"; };
 		CA4D3EFC2D01E9AF0087E55C /* EconomicIndicatorDown.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = EconomicIndicatorDown.lottie; sourceTree = "<group>"; };
 		CA4D3EFD2D01E9AF0087E55C /* EconomicIndicatorUp.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = EconomicIndicatorUp.lottie; sourceTree = "<group>"; };
 		CA4D88CD2CDC70210003DE3C /* BasicEconomy10View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy10View.swift; sourceTree = "<group>"; };
@@ -487,7 +491,7 @@
 		CAACCD0A2CF87D4D004156C9 /* MoneyAndFinance17_FinancePaper.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance17_FinancePaper.lottie; sourceTree = "<group>"; };
 		CAACCD0C2CF87D53004156C9 /* MoneyAndFinance17_HomePrice.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance17_HomePrice.lottie; sourceTree = "<group>"; };
 		CAACCD0E2CF87D5B004156C9 /* ArrowDown.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ArrowDown.lottie; sourceTree = "<group>"; };
-		CAB155912D1CF9D500A6594C /* InAppPurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseManager.swift; sourceTree = "<group>"; };
+		CAB155912D1CF9D500A6594C /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		CAB155942D1D184A00A6594C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CAB6E7332D0EE66600B4AE82 /* CourseManager+Entrance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseManager+Entrance.swift"; sourceTree = "<group>"; };
 		CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseToolbarModifier.swift; sourceTree = "<group>"; };
@@ -1439,7 +1443,7 @@
 			isa = PBXGroup;
 			children = (
 				CAEE16502CAD0C2E00210BD0 /* Auth */,
-				CAB155902D1CF9A700A6594C /* Purchase */,
+				CAB155902D1CF9A700A6594C /* IAP */,
 				CAEE165B2CAD0D1400210BD0 /* FCM */,
 				CA2E93682CAFAEB000A883F1 /* Notification */,
 				CA41026A2D082314000579C6 /* Course */,
@@ -1566,12 +1570,13 @@
 			path = SwiftData;
 			sourceTree = "<group>";
 		};
-		CAB155902D1CF9A700A6594C /* Purchase */ = {
+		CAB155902D1CF9A700A6594C /* IAP */ = {
 			isa = PBXGroup;
 			children = (
-				CAB155912D1CF9D500A6594C /* InAppPurchaseManager.swift */,
+				CAB155912D1CF9D500A6594C /* IAPManager.swift */,
+				CA4AD4AA2D1ED7DD00BA98BC /* IAPManager+Firebase.swift */,
 			);
-			path = Purchase;
+			path = IAP;
 			sourceTree = "<group>";
 		};
 		CAB155932D1D184A00A6594C /* Frameworks */ = {
@@ -1667,6 +1672,7 @@
 			isa = PBXGroup;
 			children = (
 				CAD05E412D1E400800B836E4 /* StockPassPurchaseView.swift */,
+				CA4AD4AC2D1EDEA300BA98BC /* StockPassPurchaseCompletionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2083,6 +2089,7 @@
 				CAEE16652CAD0D7800210BD0 /* AuthViewModel+Apple.swift in Sources */,
 				CAE1999B2CFC1E7E000CFAA2 /* ExchangeRateAndBalanceOfPayment7View.swift in Sources */,
 				CA17FC752CB005DB0050250B /* MainTab.swift in Sources */,
+				CA4AD4AD2D1EDEA300BA98BC /* StockPassPurchaseCompletionView.swift in Sources */,
 				CA9CF57C2D00698900114807 /* DateType.swift in Sources */,
 				CAAAC35D2D02A0450006D8DE /* EconomicIndicatorManager+Date.swift in Sources */,
 				CAEE164D2CAD08E600210BD0 /* FCMManager.swift in Sources */,
@@ -2146,7 +2153,7 @@
 				CA07D7632D04309D00ECD3E4 /* AuthViewModel+ResetPassword.swift in Sources */,
 				CA07D7672D04371200ECD3E4 /* SendEmailView.swift in Sources */,
 				CA17FC7D2CB00AB90050250B /* HomeView.swift in Sources */,
-				CAB155922D1CF9D500A6594C /* InAppPurchaseManager.swift in Sources */,
+				CAB155922D1CF9D500A6594C /* IAPManager.swift in Sources */,
 				CA07D7972D055BC100ECD3E4 /* Color+AIGradient.swift in Sources */,
 				CA77DFD22CB26D0100992829 /* CustomError.swift in Sources */,
 				CAEDDABD2CB56C330046162D /* BasicLoginView.swift in Sources */,
@@ -2218,6 +2225,7 @@
 				CAAA4B532CC9F2A00083F86C /* NavigationBaseView.swift in Sources */,
 				CA92DDBB2CB7D7CD00A7D2A4 /* BasicEconomy5View.swift in Sources */,
 				CAAAC3642D02CC790006D8DE /* DummyHorizontalIndicatorView.swift in Sources */,
+				CA4AD4AB2D1ED7DD00BA98BC /* IAPManager+Firebase.swift in Sources */,
 				CA8B5DBF2CFF24650070DB71 /* EconomicIndicatorManager.swift in Sources */,
 				CA08F3A02CB839600093117E /* PriceLevel5View.swift in Sources */,
 				CA07D7742D044F5200ECD3E4 /* ProfileViewModel+AccountInfo.swift in Sources */,

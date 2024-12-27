@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct StockPassPurchaseView: View {
+    @Environment(NavigationRouter.self) var navRouter
     @State private var viewModel = StockPassPurchaseViewModel()
+    
+    @State private var alertLogin = false
+    @State private var alertPurchaseFail = false
     
     var body: some View {
         ZStack {
@@ -175,35 +179,69 @@ struct StockPassPurchaseView: View {
             VStack {
                 Spacer()
                 
-                VStack {
-                    ZStack {
-                        VStack {
-                            Text("3,800원")
-                                .font(.system(size: 10))
-                                .foregroundStyle(.gray)
-                                .strikethrough(true, color: .red)
-                            
-                            Text("1,900원")
-                                .font(.system(size: 17).bold())
-                                .foregroundStyle(.red)
-                        }
-                        
-                        LottieView(fileName: "50PercentDiscount", loopMode: .loop, width: 20, height: 20)
-                            .scaleEffect(3.5)
-                            .padding(.leading, 100)
+                Button {
+                    if !viewModel.isLogin {
+                        self.alertLogin = true
+                        return
                     }
-                }
-                .frame(width: 180, height: 50)
-                .background(.white)
-                .cornerRadius(30, corners: .allCorners)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 30)
-                        .stroke(lineWidth: 3)
-                        .foregroundStyle(.yellow)
-                }
-                .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
-                .padding(.bottom, 30)
                     
+                    Task {
+                        let result = await viewModel.purchase()
+                        
+                        if result {
+                            // 결제 완료 창으로 이동
+                        } else {
+                            self.alertPurchaseFail = true
+                        }
+                    }
+                } label: {
+                    VStack {
+                        ZStack {
+                            VStack {
+                                Text("3,800원")
+                                    .font(.system(size: 10))
+                                    .foregroundStyle(.gray)
+                                    .strikethrough(true, color: .red)
+                                
+                                Text("1,900원")
+                                    .font(.system(size: 17).bold())
+                                    .foregroundStyle(.red)
+                            }
+                            
+                            LottieView(fileName: "50PercentDiscount", loopMode: .loop, width: 20, height: 20)
+                                .scaleEffect(3.5)
+                                .padding(.leading, 100)
+                        }
+                    }
+                    .frame(width: 180, height: 50)
+                    .background(.white)
+                    .cornerRadius(30, corners: .allCorners)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 30)
+                            .stroke(lineWidth: 3)
+                            .foregroundStyle(.yellow)
+                    }
+                    .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
+                    .padding(.bottom, 30)
+                }
+                .alert("결제 실패", isPresented: $alertPurchaseFail) {
+                    Button {
+                        
+                    } label: {
+                        Text("확인")
+                    }
+                } message: {
+                    Text("결제하는 과정에서 문제가 발생하였습니다.")
+                }
+                .alert("주의", isPresented: $alertPurchaseFail) {
+                    Button {
+                        navRouter.navigate(.LoginView)
+                    } label: {
+                        Text("확인")
+                    }
+                } message: {
+                    Text("로그인이 필요한 서비스입니다.")
+                }
             }
         }
         .ignoresSafeArea(edges: .vertical)
@@ -213,4 +251,5 @@ struct StockPassPurchaseView: View {
 
 #Preview {
     StockPassPurchaseView()
+        .environment(NavigationRouter())
 }

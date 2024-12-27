@@ -8,9 +8,10 @@
 import SwiftUI
 import StoreKit
 
-@MainActor
 @Observable
-class InAppPurchaseManager {
+class IAPManager {
+    static let shared = IAPManager()
+    
     private let productID = "KHI.stockpass.product"
 
     /// 실제 StoreKit2 Product
@@ -60,8 +61,8 @@ class InAppPurchaseManager {
         isPurchased = false
     }
     
-    func purchase() async {
-        guard let product = myProduct else { return }
+    func purchase() async -> Bool {
+        guard let product = myProduct else { return false }
         do {
             let result = try await product.purchase()
             
@@ -70,22 +71,28 @@ class InAppPurchaseManager {
             case .success(let verification):
                 if let transaction = checkVerified(verification) {
                     await updatePurchasedState()
-
                     await transaction.finish()
+                    
+                    return true
                 }
                 
             case .userCancelled:
                 print("사용자가 구매를 취소했습니다.")
+                return false
                 
             case .pending:
                 print("거래가 보류(Pending) 상태입니다.")
+                return false
                 
             @unknown default:
                 break
             }
             
+            return false
+            
         } catch {
             print("구매 도중 에러 발생: \(error.localizedDescription)")
+            return false
         }
     }
     
