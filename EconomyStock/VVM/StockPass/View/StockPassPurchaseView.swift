@@ -17,22 +17,34 @@ struct StockPassPurchaseView: View {
                     ZStack {
                         Rectangle()
                             .frame(maxWidth: .infinity)
-                            .frame(height: 380)
+                            .frame(height: 350)
                             .foregroundStyle(Color.ESTitle)
+                            .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                             .padding(.bottom, 20)
                             .shadow(color: .gray.opacity(0.8), radius: 8, x: 0, y: 10)
                         
-                        LottieView(fileName: "StageLightEffect", loopMode: .loop, width: 300, height: 300)
+                        LottieView(fileName: "StageLightEffect", loopMode: .loop, width: 280, height: 280)
                         
                         Image("StockPass_Ticket")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 350)
+                        
+                        VStack {
+                            Text("스톡패스")
+                                .font(.system(size: 30).bold())
+                                .foregroundStyle(Color(hex: "e2bf55"))
+                                .padding(.top, 220)
+                            
+                            Text("출시 기념 50% 할인")
+                                .font(.system(size: 14))
+                                .foregroundStyle(.red)
+                        }
                     }
                     
                     VStack {
                         HStack {
-                            Text("구매하면 받으시는 혜택")
+                            Text("구매하면 받으실 혜택")
                                 .fontWeight(.semibold)
                                 .padding(.leading)
                                 .padding(.bottom, 2)
@@ -42,7 +54,7 @@ struct StockPassPurchaseView: View {
                         
                         HStack {
                             Text("●")
-                                .font(.system(size: 10))
+                                .font(.system(size: 9))
                                 .padding(.leading)
                             
                             Text("현재 모든 강의 및 뉴스 수강 가능")
@@ -53,7 +65,7 @@ struct StockPassPurchaseView: View {
                         
                         HStack {
                             Text("●")
-                                .font(.system(size: 10))
+                                .font(.system(size: 9))
                                 .padding(.leading)
                             
                             Text("앞으로 추가되는 모든 강의 및 뉴스 수강 가능")
@@ -64,7 +76,7 @@ struct StockPassPurchaseView: View {
                         
                         HStack {
                             Text("●")
-                                .font(.system(size: 10))
+                                .font(.system(size: 9))
                                 .padding(.leading)
                             
                             Text("앱 내의 모든 광고 제거")
@@ -75,7 +87,7 @@ struct StockPassPurchaseView: View {
                         
                         HStack {
                             Text("●")
-                                .font(.system(size: 10))
+                                .font(.system(size: 9))
                                 .padding(.leading)
                             
                             Text("한번 구매시 영구적으로 혜택")
@@ -86,6 +98,11 @@ struct StockPassPurchaseView: View {
                     .padding(.vertical, 20)
                     .background(.ultraThickMaterial)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(lineWidth: 3)
+                            .foregroundStyle(.yellow)
+                    }
                     .padding(.horizontal)
                     .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                     .padding(.bottom, 30)
@@ -152,6 +169,7 @@ struct StockPassPurchaseView: View {
                     .foregroundStyle(.gray)
                 }
             }
+            .scrollIndicators(.never)
             
             VStack {
                 Spacer()
