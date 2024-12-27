@@ -40,10 +40,16 @@ struct StockPassPurchaseView: View {
                                 .foregroundStyle(Color(hex: "e2bf55"))
                                 .padding(.top, 220)
                             
-                            Text("출시 기념 50% 할인")
-                                .font(.system(size: 15))
-                                .fontWeight(.semibold)
-                                .foregroundStyle(.red)
+                            VStack {
+                                Text("3,800원")
+                                    .font(.system(size: 14))
+                                    .foregroundStyle(.gray)
+                                    .strikethrough(true, color: .red)
+                                
+                                Text("1,900원")
+                                    .font(.system(size: 22).bold())
+                                    .foregroundStyle(.red)
+                            }
                         }
                     }
                     
@@ -154,6 +160,7 @@ struct StockPassPurchaseView: View {
                             
                             Spacer()
                         }
+                        .padding(.bottom, 5)
                         
                         HStack {
                             VStack {
@@ -170,6 +177,7 @@ struct StockPassPurchaseView: View {
                             
                             Spacer()
                         }
+                        .padding(.bottom, 100)
                     }
                     .foregroundStyle(.gray)
                 }
