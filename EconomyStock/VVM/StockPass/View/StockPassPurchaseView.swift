@@ -13,6 +13,10 @@ struct StockPassPurchaseView: View {
     
     @State private var alertLogin = false
     @State private var alertPurchaseFail = false
+    @State private var isPurchased = false
+    @State private var purchaseAfterContent = false
+    
+    @Namespace private var animation
     
     var body: some View {
         ZStack {
@@ -26,13 +30,17 @@ struct StockPassPurchaseView: View {
                             .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                             .padding(.bottom, 20)
                             .shadow(color: .gray.opacity(0.8), radius: 8, x: 0, y: 10)
+                            .blur(radius: isPurchased ? 4.0 : 0)
+                            .opacity(isPurchased ? 0.6 : 1)
                         
                         LottieView(fileName: "StageLightEffect", loopMode: .loop, width: 280, height: 280)
+                            .matchedGeometryEffect(id: "StockPassTicket_BGEffect", in: animation)
                         
                         Image("StockPass_Ticket")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 350)
+                            .matchedGeometryEffect(id: "StockPassTicket", in: animation)
                         
                         VStack(spacing: 5) {
                             Text("스톡패스")
@@ -51,6 +59,8 @@ struct StockPassPurchaseView: View {
                                     .foregroundStyle(.red)
                             }
                         }
+                        .blur(radius: isPurchased ? 4.0 : 0)
+                        .opacity(isPurchased ? 0.6 : 1)
                     }
                     
                     VStack {
@@ -68,7 +78,7 @@ struct StockPassPurchaseView: View {
                                 .font(.system(size: 9))
                                 .padding(.leading)
                             
-                            Text("현재 모든 강의 및 뉴스 수강 가능")
+                            Text("잠겨있는 모든 강의 및 뉴스 수강 가능")
                             
                             Spacer()
                         }
@@ -79,7 +89,7 @@ struct StockPassPurchaseView: View {
                                 .font(.system(size: 9))
                                 .padding(.leading)
                             
-                            Text("앞으로 추가되는 모든 강의 및 뉴스 수강 가능")
+                            Text("이후 추가되는 모든 잠긴 강의 및 뉴스 수강 가능")
                             
                             Spacer()
                         }
@@ -117,6 +127,8 @@ struct StockPassPurchaseView: View {
                     .padding(.horizontal)
                     .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                     .padding(.bottom, 30)
+                    .blur(radius: isPurchased ? 4.0 : 0)
+                    .opacity(isPurchased ? 0.6 : 1)
                     
                     VStack {
                         HStack {
@@ -180,9 +192,59 @@ struct StockPassPurchaseView: View {
                         .padding(.bottom, 100)
                     }
                     .foregroundStyle(.gray)
+                    .blur(radius: isPurchased ? 4.0 : 0)
+                    .opacity(isPurchased ? 0.6 : 1)
                 }
             }
             .scrollIndicators(.never)
+            
+            if isPurchased {
+                ZStack {
+                    LottieView(fileName: "StageLightEffect", loopMode: .loop, width: 280, height: 280)
+                        .matchedGeometryEffect(id: "StockPassTicket_BGEffect", in: animation)
+                        .padding(.bottom, 100)
+                    
+                    Image("StockPass_Ticket")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 350)
+                        .matchedGeometryEffect(id: "StockPassTicket", in: animation)
+                        .padding(.bottom, 100)
+                    
+                    if purchaseAfterContent {
+                        VStack {
+                            (Text("스톡패스")
+                                .font(.system(size: 25).bold())
+                                .foregroundStyle(Color(hex: "e2bf55"))
+                             + Text("를 성공적으로 구매하였습니다!")
+                                .font(.system(size: 20))
+                                .fontWeight(.semibold)
+                            )
+                            .padding(.bottom)
+                            
+                            Button {
+                                navRouter.popToRoot()
+                            } label: {
+                                VStack {
+                                    Text("확인")
+                                        .font(.system(size: 20))
+                                        .foregroundStyle(Color.ESTitle)
+                                }
+                                .frame(width: 150, height: 40)
+                                .background(.white)
+                                .cornerRadius(30, corners: .allCorners)
+                                .overlay {
+                                    RoundedRectangle(cornerRadius: 30)
+                                        .stroke(lineWidth: 3)
+                                        .foregroundStyle(.yellow)
+                                }
+                                .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
+                            }
+                        }
+                        .padding(.top, 150)
+                    }
+                }
+            }
             
             VStack {
                 Spacer()
@@ -197,7 +259,16 @@ struct StockPassPurchaseView: View {
                         let result = await viewModel.purchase()
                         
                         if result {
-                            // 결제 완료 창으로 이동
+                            withAnimation(.smooth(duration: 1.0)) {
+                                self.isPurchased = true
+                            }
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
+                                withAnimation(.smooth(duration: 1.0)) {
+                                    self.purchaseAfterContent = true
+                                }
+                            }
+                            
                         } else {
                             self.alertPurchaseFail = true
                         }
@@ -241,7 +312,7 @@ struct StockPassPurchaseView: View {
                 } message: {
                     Text("결제하는 과정에서 문제가 발생하였습니다.")
                 }
-                .alert("주의", isPresented: $alertPurchaseFail) {
+                .alert("주의", isPresented: $alertLogin) {
                     Button {
                         navRouter.navigate(.LoginView)
                     } label: {
@@ -251,6 +322,8 @@ struct StockPassPurchaseView: View {
                     Text("로그인이 필요한 서비스입니다.")
                 }
             }
+            .blur(radius: isPurchased ? 4.0 : 0)
+            .opacity(isPurchased ? 0.6 : 1)
         }
         .ignoresSafeArea(edges: .vertical)
         .modifier(NavigationBackModifier())
