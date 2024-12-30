@@ -25,7 +25,7 @@ struct MainTabView: View {
                     CourseListView()
                         .tag(MainTab.course)
                     
-                    NewsView()
+                    NewsListView()
                         .tag(MainTab.news)
                     
                     ProfileView()

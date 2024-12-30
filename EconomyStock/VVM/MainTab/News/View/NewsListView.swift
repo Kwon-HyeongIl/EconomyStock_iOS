@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NewsView: View {
+struct NewsListView: View {
     var body: some View {
         VStack {
             VStack {
@@ -35,5 +35,5 @@ struct NewsView: View {
 }
 
 #Preview {
-    NewsView()
+    NewsListView()
 }
