@@ -49,7 +49,7 @@ struct StockPassPurchaseView: View {
                                 .padding(.top, 220)
                             
                             VStack {
-                                Text("3,800원")
+                                Text("7,500원")
                                     .font(.system(size: 14))
                                     .foregroundStyle(.gray)
                                     .strikethrough(true, color: .red)
@@ -275,22 +275,14 @@ struct StockPassPurchaseView: View {
                     }
                 } label: {
                     VStack {
-                        ZStack {
-                            VStack {
-                                Text("3,800원")
-                                    .font(.system(size: 10))
-                                    .foregroundStyle(.gray)
-                                    .strikethrough(true, color: .red)
-                                
-                                Text("1,900원")
-                                    .font(.system(size: 17).bold())
-                                    .foregroundStyle(.red)
-                            }
-                            
-                            LottieView(fileName: "50PercentDiscount", loopMode: .loop, width: 20, height: 20)
-                                .scaleEffect(3.5)
-                                .padding(.leading, 100)
-                        }
+                        Text("7,500원")
+                            .font(.system(size: 10))
+                            .foregroundStyle(.gray)
+                            .strikethrough(true, color: .red)
+                        
+                        Text("1,900원")
+                            .font(.system(size: 17).bold())
+                            .foregroundStyle(.red)
                     }
                     .frame(width: 180, height: 50)
                     .background(.white)
