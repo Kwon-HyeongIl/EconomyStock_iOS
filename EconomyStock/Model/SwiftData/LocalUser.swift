@@ -18,13 +18,15 @@ class LocalUser {
     
     var totalStudyingPercentage: Double
     var studyingCourse: StudyingCourse
+    var studyingNews: StudyingNews
     
-    init(id: UUID, deviceToken: String, isNotificationBadge: Bool? = nil, notificationType: [NotificationType], totalStudyingPercentage: Double, studyingCourse: StudyingCourse) {
+    init(id: UUID, deviceToken: String, isNotificationBadge: Bool? = nil, notificationType: [NotificationType], totalStudyingPercentage: Double, studyingCourse: StudyingCourse, studyingNews: StudyingNews) {
         self.id = id
         self.deviceToken = deviceToken
         self.isNotificationBadge = isNotificationBadge
         self.notificationType = notificationType
         self.totalStudyingPercentage = totalStudyingPercentage
         self.studyingCourse = studyingCourse
+        self.studyingNews = studyingNews
     }
 }

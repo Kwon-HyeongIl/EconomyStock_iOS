@@ -10,7 +10,8 @@ import SwiftUI
 struct NavigationBaseView: View {
     @State private var navRouter = NavigationRouter()
     @State private var mainTabCapsule = MainTabCapsule()
-    @State private var courseListViewCapsule = CourseListCapsule()
+    @State private var courseListCapsule = CourseListCapsule()
+    @State private var newsListCapsule = NewsListCapsule()
     @State private var loginCapsule = LoginCapsule()
     
     var body: some View {
@@ -23,7 +24,8 @@ struct NavigationBaseView: View {
         }
         .environment(navRouter)
         .environment(mainTabCapsule)
-        .environment(courseListViewCapsule)
+        .environment(courseListCapsule)
+        .environment(newsListCapsule)
         .environment(loginCapsule)
     }
 }

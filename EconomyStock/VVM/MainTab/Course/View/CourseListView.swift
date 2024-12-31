@@ -18,7 +18,7 @@ struct CourseListView: View {
                 Spacer()
                 
                 HStack {
-                    Text("학습")
+                    Text("강의")
                         .font(.system(size: 25))
                         .fontWeight(.semibold)
                         .padding(.leading)

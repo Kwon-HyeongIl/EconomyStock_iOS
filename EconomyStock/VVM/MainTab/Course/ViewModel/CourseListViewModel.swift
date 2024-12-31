@@ -11,6 +11,10 @@ import SwiftUI
 class CourseListViewModel {
     var courses: [Course] = []
     
+    var isLogin: Bool {
+        AuthManager.shared.isLogin
+    }
+    
     var remoteUser: User? {
         AuthManager.shared.remoteUser
     }
@@ -18,20 +22,18 @@ class CourseListViewModel {
         AuthManager.shared.localUser
     }
     
-    var isFirstLoad = true
+    var isFirstLoad = true // 한번 더 값을 안불러오면 아무것도 없는 초기값이 장착 됨
     
     init() {
-        let isLogin = AuthManager.shared.isLogin
-        
-        initBasicEconomyCourse(isLogin: isLogin)
-        initPriceLevelCourse(isLogin: isLogin)
-        initUnEmploymentCourse(isLogin: isLogin)
-        initMoneyAndFinanceCourse(isLogin: isLogin)
-        initExchangeRateAndBalanceOfPaymentCourse(isLogin: isLogin)
+        initBasicEconomyCourse()
+        initPriceLevelCourse()
+        initUnEmploymentCourse()
+        initMoneyAndFinanceCourse()
+        initExchangeRateAndBalanceOfPaymentCourse()
     }
     
     // I 기초 경제
-    func initBasicEconomyCourse(isLogin: Bool) {
+    func initBasicEconomyCourse() {
         let gradient = LinearGradient(
             gradient: Gradient(colors: [.green, Color(red: 0.75, green: 1.0, blue: 0.0)]),
             startPoint: .topLeading,
@@ -50,7 +52,7 @@ class CourseListViewModel {
     }
     
     // II 물가
-    func initPriceLevelCourse(isLogin: Bool) {
+    func initPriceLevelCourse() {
         let gradient = LinearGradient(
             gradient: Gradient(colors: [.orange, Color(hex: "D7DF01")]),
             startPoint: .topLeading,
@@ -69,7 +71,7 @@ class CourseListViewModel {
     }
     
     // III 실업
-    func initUnEmploymentCourse(isLogin: Bool) {
+    func initUnEmploymentCourse() {
         let gradient = LinearGradient(
             gradient: Gradient(colors: [.blue, Color(hex: "01DFD7")]),
             startPoint: .topLeading,
@@ -88,7 +90,7 @@ class CourseListViewModel {
     }
     
     // IV 화폐와 금융
-    func initMoneyAndFinanceCourse(isLogin: Bool) {
+    func initMoneyAndFinanceCourse() {
         let gradient = LinearGradient(
             gradient: Gradient(colors: [.pink, Color(hex: "F781F3")]),
             startPoint: .topLeading,
@@ -107,7 +109,7 @@ class CourseListViewModel {
     }
     
     // V 환율과 국제수지
-    func initExchangeRateAndBalanceOfPaymentCourse(isLogin: Bool) {
+    func initExchangeRateAndBalanceOfPaymentCourse() {
         let gradient = LinearGradient(
             gradient: Gradient(colors: [Color(hex: "8258FA"), .purple.opacity(0.6)]),
             startPoint: .topLeading,
@@ -126,16 +128,14 @@ class CourseListViewModel {
     }
 
     func updateAllCourses() {
-        let isLogin = AuthManager.shared.isLogin
-        
         DispatchQueue.main.async {
             self.courses.removeAll()
         }
         
-        initBasicEconomyCourse(isLogin: isLogin)
-        initPriceLevelCourse(isLogin: isLogin)
-        initUnEmploymentCourse(isLogin: isLogin)
-        initMoneyAndFinanceCourse(isLogin: isLogin)
-        initExchangeRateAndBalanceOfPaymentCourse(isLogin: isLogin)
+        initBasicEconomyCourse()
+        initPriceLevelCourse()
+        initUnEmploymentCourse()
+        initMoneyAndFinanceCourse()
+        initExchangeRateAndBalanceOfPaymentCourse()
     }
 }
