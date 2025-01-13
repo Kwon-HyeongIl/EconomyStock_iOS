@@ -61,6 +61,7 @@
 		CA31EA422CF706630005A475 /* MoneyAndFinance13_BankMoney.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA31EA412CF706630005A475 /* MoneyAndFinance13_BankMoney.lottie */; };
 		CA3338AB2D07D6440061A6F5 /* CourseCompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3338AA2D07D6440061A6F5 /* CourseCompletionView.swift */; };
 		CA3338AD2D07D6520061A6F5 /* CourseCompletionViewModel 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3338AC2D07D6520061A6F5 /* CourseCompletionViewModel 2.swift */; };
+		CA363E1B2D3529AF00C3DF0D /* JustifiedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA363E1A2D3529AF00C3DF0D /* JustifiedText.swift */; };
 		CA39D54A2CFDAC3B0009AD1C /* ExchangeRateAndBalanceOfPayment4_Banana.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA39D5492CFDAC3B0009AD1C /* ExchangeRateAndBalanceOfPayment4_Banana.lottie */; };
 		CA39D54C2CFDB19C0009AD1C /* ExchangeRateAndBalanceOfPayment5_WonCoin.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA39D54B2CFDB19C0009AD1C /* ExchangeRateAndBalanceOfPayment5_WonCoin.lottie */; };
 		CA3BBAA82CB50063007CA152 /* BasicSignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAA72CB50063007CA152 /* BasicSignupView.swift */; };
@@ -353,6 +354,7 @@
 		CA31EA412CF706630005A475 /* MoneyAndFinance13_BankMoney.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance13_BankMoney.lottie; sourceTree = "<group>"; };
 		CA3338AA2D07D6440061A6F5 /* CourseCompletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCompletionView.swift; sourceTree = "<group>"; };
 		CA3338AC2D07D6520061A6F5 /* CourseCompletionViewModel 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseCompletionViewModel 2.swift"; sourceTree = "<group>"; };
+		CA363E1A2D3529AF00C3DF0D /* JustifiedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifiedText.swift; sourceTree = "<group>"; };
 		CA39D5492CFDAC3B0009AD1C /* ExchangeRateAndBalanceOfPayment4_Banana.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExchangeRateAndBalanceOfPayment4_Banana.lottie; sourceTree = "<group>"; };
 		CA39D54B2CFDB19C0009AD1C /* ExchangeRateAndBalanceOfPayment5_WonCoin.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExchangeRateAndBalanceOfPayment5_WonCoin.lottie; sourceTree = "<group>"; };
 		CA3BBAA72CB50063007CA152 /* BasicSignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSignupView.swift; sourceTree = "<group>"; };
@@ -958,6 +960,14 @@
 			path = AISummary;
 			sourceTree = "<group>";
 		};
+		CA363E172D35243500C3DF0D /* String */ = {
+			isa = PBXGroup;
+			children = (
+				CA363E1A2D3529AF00C3DF0D /* JustifiedText.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
 		CA3BBAA92CB50083007CA152 /* BasicSignup */ = {
 			isa = PBXGroup;
 			children = (
@@ -1426,6 +1436,7 @@
 		CA9BB9C32CABA59A00886A1A /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				CA363E172D35243500C3DF0D /* String */,
 				CAC965122D19A08600B7EAF1 /* Ad */,
 				CA9936CB2D06ABA100B2F89F /* Publishers */,
 				CAD101D82CB6851200CA9C6A /* NavigationGesture */,
@@ -2167,6 +2178,7 @@
 				CAB77FD92CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift in Sources */,
 				CA4DCE002D23F6110003F14C /* NewsCoverView.swift in Sources */,
 				CACF34142CEDD4BF00ECC6FA /* MoneyAndFinance2View.swift in Sources */,
+				CA363E1B2D3529AF00C3DF0D /* JustifiedText.swift in Sources */,
 				CAC288282D108AF3006B6415 /* AuthManager+Migrate.swift in Sources */,
 				CA78C3092D084E4100E89532 /* AICourseSummaryView.swift in Sources */,
 				CAE199A12CFC1E9E000CFAA2 /* ExchangeRateAndBalanceOfPayment10View.swift in Sources */,
