@@ -322,35 +322,17 @@ struct HomeView: View {
                             
                             // 배너 AD
                             if !viewModel.isRedacted {
-                                if viewModel.isLogin {
-                                    if !viewModel.remoteUserStockPass {
-                                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                            .frame(maxWidth: .infinity)
+                                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                    .frame(maxWidth: .infinity)
+                                    .frame(height: 80)
+                                    .foregroundStyle(.white)
+                                    .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
+                                    .overlay {
+                                        BannerAd(unitId: "ca-app-pub-3940256099942544/2435281174")
                                             .frame(height: 80)
-                                            .foregroundStyle(.white)
-                                            .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
-                                            .overlay {
-                                                BannerAd(unitId: "ca-app-pub-3940256099942544/2435281174")
-                                                    .frame(height: 80)
-                                                    .frame(maxWidth: .infinity)
-                                                    .cornerRadius(10, corners: .allCorners)
-                                            }
+                                            .frame(maxWidth: .infinity)
+                                            .cornerRadius(10, corners: .allCorners)
                                     }
-                                    
-                                } else {
-                                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                        .frame(maxWidth: .infinity)
-                                        .frame(height: 80)
-                                        .foregroundStyle(.white)
-                                        .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
-                                        .overlay {
-                                            BannerAd(unitId: "ca-app-pub-3940256099942544/2435281174")
-                                                .frame(height: 80)
-                                                .frame(maxWidth: .infinity)
-                                                .cornerRadius(10, corners: .allCorners)
-                                            
-                                        }
-                                }
                             }
                             
                             if !viewModel.isRedacted {

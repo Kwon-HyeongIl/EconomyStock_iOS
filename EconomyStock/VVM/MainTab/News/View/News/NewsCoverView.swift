@@ -23,17 +23,10 @@ struct NewsCoverView: View {
                 ZStack {
                     HStack {
                         ZStack {
-                            Image("Suit_Toktok")
+                            Image("News_Toktok")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 80)
-                                .padding(.bottom, 35)
-                            
-                            Image("TempAnnounceStage")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 90)
-                                .padding(.top, 50)
+                                .frame(width: 100)
                             
                             Image("ES_TitleLogo")
                                 .resizable()
@@ -103,16 +96,6 @@ struct NewsCoverView: View {
             .frame(height: 170)
             .background(viewModel.news.backgroundGradient)
             .clipShape(RoundedRectangle(cornerRadius: 10))
-            .opacity([.moneyAndFinance, .exchangeRateAndBalanceOfPayment].contains(viewModel.news.type) && (!viewModel.isLogin || !viewModel.remoteUserStockPass) ? 0.5 : 1.0)
-            .overlay {
-                if [.moneyAndFinance, .exchangeRateAndBalanceOfPayment].contains(viewModel.news.type) && (!viewModel.isLogin || !viewModel.remoteUserStockPass) {
-                    Image(systemName: "lock.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 25)
-                        .foregroundStyle(.gray)
-                }
-            }
             .padding(.horizontal, 10)
             .environment(viewModel)
         }

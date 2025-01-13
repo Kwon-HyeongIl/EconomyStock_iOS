@@ -13,10 +13,6 @@ class HomeViewModel {
         AuthManager.shared.isLogin
     }
     
-    var remoteUserStockPass: Bool {
-        AuthManager.shared.remoteUser?.isStockPass ?? false
-    }
-    
     var bannerUnitId = Bundle.main.infoDictionary?["GOOGLE_ADMOB_BANNER_AD_UNIT_ID"] as? String
     
     var BR = [EconomicIndicatorCycleData]()

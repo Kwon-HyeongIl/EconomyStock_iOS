@@ -17,10 +17,6 @@ class CourseViewModel: Hashable, Equatable {
         AuthManager.shared.isLogin
     }
     
-    var remoteUserStockPass: Bool {
-        AuthManager.shared.remoteUser?.isStockPass ?? false
-    }
-    
     init(course: Course) {
         self.course = course
     }

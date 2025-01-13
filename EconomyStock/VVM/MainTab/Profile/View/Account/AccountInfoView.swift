@@ -12,22 +12,9 @@ struct AccountInfoView: View {
     @Environment(LoginCapsule.self) var capsule
     @Bindable var viewModel: ProfileViewModel
     
-    @State private var iAPViewModel = IAPManager()
     
     var body: some View {
         ScrollView {
-            
-            Text("isPurchased: \(iAPViewModel.isPurchased)")
-            
-            Button {
-                Task {
-                    print("결제 버튼 눌림")
-//                    await iAPViewModel.purchase()
-                }
-            } label: {
-                Text("결제")
-            }
-            
             
             Button {
                 viewModel.singOut()

@@ -17,13 +17,11 @@ class NewsViewModel: Hashable, Equatable {
         AuthManager.shared.isLogin
     }
     
-    var remoteUserStockPass: Bool {
-        AuthManager.shared.remoteUser?.isStockPass ?? false
-    }
-    
     init(news: News) {
         self.news = news
     }
+    
+    
     
     static func == (lhs: NewsViewModel, rhs: NewsViewModel) -> Bool {
         lhs.news.id == rhs.news.id
