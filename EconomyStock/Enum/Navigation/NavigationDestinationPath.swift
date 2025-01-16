@@ -22,9 +22,6 @@ enum NavigationDestinationPath: Hashable {
     // Course
     case CourseIntroView(CourseViewModel)
     
-    // Profile
-    case AccountInfoView(ProfileViewModel)
-    
         // 기초 경제
     case BasicEconomy1View(CourseViewModel)
     case BasicEconomy2View(CourseViewModel)
@@ -92,4 +89,14 @@ enum NavigationDestinationPath: Hashable {
     case ExchangeRateAndBalanceOfPayment9View(CourseViewModel)
     case ExchangeRateAndBalanceOfPayment10View(CourseViewModel)
     case ExchangeRateAndBalanceOfPayment11View(CourseViewModel)
+    
+    
+    // News
+    case NewsIntroView(NewsViewModel)
+    
+        // 기초 경제
+    case BasicEconomyNewsView(NewsViewModel)
+    
+    // Profile
+    case AccountInfoView(ProfileViewModel)
 }

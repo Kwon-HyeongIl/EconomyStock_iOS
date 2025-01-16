@@ -226,6 +226,7 @@
 		CAB77FD72CB8EC2900DF11D6 /* CourseToolbarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */; };
 		CAB77FD92CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */; };
 		CAC288282D108AF3006B6415 /* AuthManager+Migrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC288272D108AF3006B6415 /* AuthManager+Migrate.swift */; };
+		CAC4E5BC2D38C45D002D209B /* PannelModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4E5BB2D38C45D002D209B /* PannelModifier.swift */; };
 		CAC86FDB2CE2E6C200785D4F /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC86FDA2CE2E6C200785D4F /* ProfileViewModel.swift */; };
 		CAC9650C2D19107200B7EAF1 /* LoginCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC9650B2D19107200B7EAF1 /* LoginCapsule.swift */; };
 		CAC965112D19943F00B7EAF1 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = CAC965102D19943F00B7EAF1 /* GoogleMobileAds */; };
@@ -512,6 +513,7 @@
 		CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseToolbarModifier.swift; sourceTree = "<group>"; };
 		CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackHomeModifier.swift; sourceTree = "<group>"; };
 		CAC288272D108AF3006B6415 /* AuthManager+Migrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthManager+Migrate.swift"; sourceTree = "<group>"; };
+		CAC4E5BB2D38C45D002D209B /* PannelModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PannelModifier.swift; sourceTree = "<group>"; };
 		CAC86FDA2CE2E6C200785D4F /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		CAC9650B2D19107200B7EAF1 /* LoginCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCapsule.swift; sourceTree = "<group>"; };
 		CAC965132D19A2B800B7EAF1 /* BannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
@@ -1550,6 +1552,7 @@
 			isa = PBXGroup;
 			children = (
 				CA9CA7A32D3403E300EEF9D3 /* NewsToolbarModifier.swift */,
+				CAC4E5BB2D38C45D002D209B /* PannelModifier.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -2163,6 +2166,7 @@
 				CA06791B2CFABA0E0043E974 /* AuthViewModel+BasicSignup.swift in Sources */,
 				CACF34182CEDD4D000ECC6FA /* MoneyAndFinance4View.swift in Sources */,
 				CA07D75E2D04304900ECD3E4 /* ResetPasswordView.swift in Sources */,
+				CAC4E5BC2D38C45D002D209B /* PannelModifier.swift in Sources */,
 				CA9BB9D42CABA8C300886A1A /* SplashView.swift in Sources */,
 				CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */,
 				CAD255FE2CE6DE44008E7788 /* PriceLevel8View.swift in Sources */,

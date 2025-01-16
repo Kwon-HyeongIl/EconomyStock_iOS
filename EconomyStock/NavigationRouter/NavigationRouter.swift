@@ -35,9 +35,7 @@ class NavigationRouter {
         case .CourseIntroView(let viewModel):
             CourseIntroView(viewModel: viewModel)
             
-        // Profile
-        case .AccountInfoView(let viewModel):
-            AccountInfoView(viewModel: viewModel)
+        
         
             // 기초 경제
         case .BasicEconomy1View(let viewModel):
@@ -164,6 +162,17 @@ class NavigationRouter {
             ExchangeRateAndBalanceOfPayment10View(viewModel: viewModel)
         case .ExchangeRateAndBalanceOfPayment11View(let viewModel):
             ExchangeRateAndBalanceOfPayment11View(viewModel: viewModel)
+            
+        // News
+        case .NewsIntroView(let viewModel):
+            NewsIntroView(viewModel: viewModel)
+        
+        case .BasicEconomyNewsView(let viewModel):
+            BasicEconomyNewsView(viewModel: viewModel)
+            
+        // Profile
+        case .AccountInfoView(let viewModel):
+            AccountInfoView(viewModel: viewModel)
         }
     }
     

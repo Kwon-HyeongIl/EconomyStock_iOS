@@ -17,7 +17,7 @@ struct NewsCoverView: View {
     
     var body: some View {
         Button {
-            
+            navRouter.navigate(.BasicEconomyNewsView(viewModel))
         } label: {
             HStack {
                 ZStack {
