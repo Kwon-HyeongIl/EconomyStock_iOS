@@ -519,8 +519,8 @@ struct BasicEconomyNewsView: View {
                             Rectangle()
                                 .fill(.clear)
                                 .frame(width: 100, height: 250)
-                                .id("bottom")
                         }
+                        .id("bottom")
                     }
                     .scrollIndicators(.never)
                 }
@@ -529,9 +529,9 @@ struct BasicEconomyNewsView: View {
             .onTapGesture {
                 withAnimation(.smooth(duration: 1.0)) {
                     if touchPermission {
-                        scrollProxy.scrollTo("bottom", anchor: .top)
                         self.progress.append(0)
                         self.touchPermission = false
+                        scrollProxy.scrollTo("bottom", anchor: .top)
                     }
                 }
             }
