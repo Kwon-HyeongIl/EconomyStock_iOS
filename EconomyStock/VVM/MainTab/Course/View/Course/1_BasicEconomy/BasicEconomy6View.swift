@@ -151,14 +151,14 @@ struct BasicEconomy6View: View {
         .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
         .contentShape(Rectangle())
         .onTapGesture {
-            withAnimation(.smooth(duration: 1.0)) {
+            withAnimation {
                 if progress.count < 3 {
                     progress.append(1)
                 }
                 
                 if progress.count == 1 {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                        withAnimation(.smooth(duration: 1.0)) {
+                        withAnimation {
                             image = true
                         }
                     }
@@ -166,11 +166,11 @@ struct BasicEconomy6View: View {
                 
                 if progress.count == 2 {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
-                        withAnimation(.smooth(duration: 1.0)) {
+                        withAnimation {
                             nextButton = true
                             
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                withAnimation(.smooth(duration: 1.0)) {
+                                withAnimation {
                                     beforeButton = true
                                 }
                             }

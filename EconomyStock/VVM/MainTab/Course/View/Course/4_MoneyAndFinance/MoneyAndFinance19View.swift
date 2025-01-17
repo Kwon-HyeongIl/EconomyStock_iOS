@@ -146,28 +146,28 @@ struct MoneyAndFinance19View: View {
             .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
             .contentShape(Rectangle())
             .onTapGesture {
-                withAnimation(.smooth(duration: 1.0)) {
+                withAnimation {
                     if progress.count < 2 {
                         progress.append(1)
                     }
                     
                     if progress.count == 2 {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 contentImage1_1 = true
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
-                                    withAnimation(.smooth(duration: 1.0)) {
+                                    withAnimation {
                                         contentImage1_2 = true
                                         
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                            withAnimation(.smooth(duration: 1.0)) {
+                                            withAnimation {
                                                 completeButton = true
                                                 
                                                 proxy.scrollTo("bottom", anchor: .top)
                                                 
                                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                                    withAnimation(.smooth(duration: 1.0)) {
+                                                    withAnimation {
                                                         beforeButton = true
                                                     }
                                                 }

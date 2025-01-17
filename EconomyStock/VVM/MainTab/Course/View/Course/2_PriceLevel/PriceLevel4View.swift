@@ -266,14 +266,14 @@ struct PriceLevel4View: View {
             .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
             .contentShape(Rectangle())
             .onTapGesture {
-                withAnimation(.smooth(duration: 1.0)) {
+                withAnimation {
                     if progress.count < 4 {
                         progress.append(1)
                     }
                     
                     if progress.count == 1 {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 contentImage1 = true
                             }
                         }
@@ -285,15 +285,15 @@ struct PriceLevel4View: View {
                         }
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 nextScrollPart = true
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                    withAnimation(.smooth(duration: 1.0)) {
+                                    withAnimation {
                                         contentText2 = true
                                         
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                            withAnimation(.smooth(duration: 1.0)) {
+                                            withAnimation {
                                                 contentImage2 = true
                                             }
                                         }
@@ -305,7 +305,7 @@ struct PriceLevel4View: View {
                     
                     if progress.count == 3 {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 contentImage3 = true
                             }
                         }
@@ -317,19 +317,19 @@ struct PriceLevel4View: View {
                         }
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 questionMark = true
                             }
                         }
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.4) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 nextButton = true
                                 
                                 proxy.scrollTo("bottom", anchor: .top)
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    withAnimation(.smooth(duration: 1.0)) {
+                                    withAnimation {
                                         beforeButton = true
                                     }
                                 }

@@ -15,6 +15,8 @@ struct BasicEconomyNewsView: View {
     @State private var selected_O = false
     @State private var selected_X = false
     
+    @State private var animationOpacity = 0.0
+    
     var body: some View {
         ScrollViewReader { scrollProxy in
             VStack {
@@ -80,6 +82,12 @@ struct BasicEconomyNewsView: View {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.yellow.opacity(0.3))
                                                     .padding(.horizontal, 7)
+                                                    .opacity(animationOpacity)
+                                                    .onAppear {
+                                                        withAnimation(.smooth(duration: 0.5)) {
+                                                            animationOpacity = 1.0
+                                                        }
+                                                    }
                                             }
                                         }
                                 }
@@ -93,6 +101,12 @@ struct BasicEconomyNewsView: View {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.yellow.opacity(0.3))
                                                     .padding(.horizontal, 7)
+                                                    .opacity(animationOpacity)
+                                                    .onAppear {
+                                                        withAnimation(.smooth(duration: 0.5)) {
+                                                            animationOpacity = 1.0
+                                                        }
+                                                    }
                                             }
                                         }
                                 }
@@ -106,6 +120,12 @@ struct BasicEconomyNewsView: View {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.red.opacity(0.3))
                                                     .padding(.horizontal, 7)
+                                                    .opacity(animationOpacity)
+                                                    .onAppear {
+                                                        withAnimation(.smooth(duration: 0.5)) {
+                                                            animationOpacity = 1.0
+                                                        }
+                                                    }
                                             }
                                         }
                                 }
@@ -120,6 +140,19 @@ struct BasicEconomyNewsView: View {
                                     JustifiedText("한편, 기업들의 설비투자와 연구개발(R&D) 투자도 큰 폭으로 증가했다. 3분기 기업 설비투자는 전년 동기 대비 8.1% 증가하며 6년 만에 가장 높은 성장률을 기록했다. 특히 반도체, 자동차, 배터리 등 첨단 제조업 분야에서의 대규모 투자 확대가 국민소득 증가에 기여했다.")
                                         .frame(height: geometryProxy.size.width > 380 ? 109 : 125)
                                         .padding(.horizontal, 10)
+                                        .overlay {
+                                            if progress.count == 5 {
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .foregroundStyle(.red.opacity(0.3))
+                                                    .padding(.horizontal, 7)
+                                                    .opacity(animationOpacity)
+                                                    .onAppear {
+                                                        withAnimation(.smooth(duration: 0.5)) {
+                                                            animationOpacity = 1.0
+                                                        }
+                                                    }
+                                            }
+                                        }
                                 }
                                 
                                 if progress.count >= 6 {
@@ -175,7 +208,7 @@ struct BasicEconomyNewsView: View {
                         }
                         .padding()
                         
-                        ZStack {
+                        VStack {
                             if progress.count == 1 {
                                 VStack {
                                     HStack {
@@ -214,16 +247,23 @@ struct BasicEconomyNewsView: View {
                                     .padding(.horizontal, 10)
                                     
                                     Button {
-                                        withAnimation(.smooth(duration: 0.5)) {
-                                            self.progress.append(0)
-                                        }
+                                        self.progress.append(0)
+                                        self.animationOpacity = 0.0
                                     } label: {
                                         LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
                                             .padding(.top, 10)
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier())
+                                .modifier(PannelModifier(height: 280))
+                                .opacity(animationOpacity)
+                                .onAppear {
+                                    withAnimation(.smooth(duration: 0.8)) {
+                                        animationOpacity = 1.0
+                                    }
+                                }
+                                .padding(.bottom, 20)
+                                
                             } else if progress.count == 2 {
                                 VStack {
                                     HStack {
@@ -254,8 +294,10 @@ struct BasicEconomyNewsView: View {
                                     .padding(.horizontal, 10)
                                     
                                     Button {
-                                        withAnimation(.smooth(duration: 0.5)) {
-                                            self.progress.append(0)
+                                        self.progress.append(0)
+                                        self.animationOpacity = 0.0
+                                        withAnimation {
+                                            scrollProxy.scrollTo("bottom", anchor: .top)
                                         }
                                     } label: {
                                         LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
@@ -263,7 +305,15 @@ struct BasicEconomyNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier())
+                                .modifier(PannelModifier(height: 250))
+                                .opacity(animationOpacity)
+                                .onAppear {
+                                    withAnimation(.smooth(duration: 0.8)) {
+                                        animationOpacity = 1.0
+                                    }
+                                }
+                                .padding(.bottom, 20)
+                                
                             } else if progress.count == 3 {
                                 if !selected_O && !selected_X {
                                     VStack {
@@ -291,8 +341,10 @@ struct BasicEconomyNewsView: View {
                                         
                                         HStack {
                                             Button {
-                                                withAnimation(.smooth(duration: 1.0)) {
-                                                    self.selected_O = true
+                                                self.selected_O = true
+                                                self.animationOpacity = 0.0
+                                                withAnimation {
+                                                    scrollProxy.scrollTo("bottom", anchor: .top)
                                                 }
                                             } label: {
                                                 LottieView(fileName: "CourseCompleteButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
@@ -312,8 +364,10 @@ struct BasicEconomyNewsView: View {
                                             }
                                             
                                             Button {
-                                                withAnimation(.smooth(duration: 1.0)) {
-                                                    self.selected_X = true
+                                                self.selected_X = true
+                                                self.animationOpacity = 0.0
+                                                withAnimation {
+                                                    scrollProxy.scrollTo("bottom", anchor: .top)
                                                 }
                                             } label: {
                                                 LottieView(fileName: "CourseCompleteButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
@@ -333,7 +387,14 @@ struct BasicEconomyNewsView: View {
                                             }
                                         }
                                     }
-                                    .modifier(PannelModifier())
+                                    .modifier(PannelModifier(height: 230))
+                                    .opacity(animationOpacity)
+                                    .onAppear {
+                                        withAnimation(.smooth(duration: 0.8)) {
+                                            animationOpacity = 1.0
+                                        }
+                                    }
+                                    .padding(.bottom, 20)
                                     
                                 } else if selected_O {
                                     VStack {
@@ -349,18 +410,26 @@ struct BasicEconomyNewsView: View {
                                             .padding(.horizontal, 10)
                                         
                                         Button {
-                                            withAnimation(.smooth(duration: 0.5)) {
+                                            withAnimation {
                                                 self.progress.append(0)
-                                                self.selected_O = false
-                                                self.touchPermission = true
                                             }
+                                            self.selected_O = false
+                                            self.touchPermission = true
+                                            self.animationOpacity = 0.0
                                         } label: {
                                             LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
                                                 .padding(.top, 10)
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier())
+                                    .modifier(PannelModifier(height: 280))
+                                    .opacity(animationOpacity)
+                                    .onAppear {
+                                        withAnimation(.smooth(duration: 0.8)) {
+                                            animationOpacity = 1.0
+                                        }
+                                    }
+                                    .padding(.bottom, 20)
                                     
                                 } else if selected_X {
                                     VStack {
@@ -376,19 +445,28 @@ struct BasicEconomyNewsView: View {
                                             .padding(.horizontal, 10)
                                         
                                         Button {
-                                            withAnimation(.smooth(duration: 0.5)) {
+                                            withAnimation {
                                                 self.progress.append(0)
-                                                self.selected_X = false
-                                                self.touchPermission = true
                                             }
+                                            self.selected_X = false
+                                            self.touchPermission = true
+                                            self.animationOpacity = 0.0
                                         } label: {
                                             LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
                                                 .padding(.top, 10)
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier())
+                                    .modifier(PannelModifier(height: 280))
+                                    .opacity(animationOpacity)
+                                    .onAppear {
+                                        withAnimation(.smooth(duration: 0.8)) {
+                                            animationOpacity = 1.0
+                                        }
+                                    }
+                                    .padding(.bottom, 20)
                                 }
+                                
                             } else if progress.count == 5 {
                                 if !selected_O && !selected_X {
                                     VStack {
@@ -416,8 +494,10 @@ struct BasicEconomyNewsView: View {
                                         
                                         HStack {
                                             Button {
-                                                withAnimation(.smooth(duration: 1.0)) {
-                                                    self.selected_O = true
+                                                self.selected_O = true
+                                                self.animationOpacity = 0.0
+                                                withAnimation {
+                                                    scrollProxy.scrollTo("bottom", anchor: .top)
                                                 }
                                             } label: {
                                                 LottieView(fileName: "CourseCompleteButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
@@ -437,8 +517,10 @@ struct BasicEconomyNewsView: View {
                                             }
                                             
                                             Button {
-                                                withAnimation(.smooth(duration: 1.0)) {
-                                                    self.selected_X = true
+                                                self.selected_X = true
+                                                self.animationOpacity = 0.0
+                                                withAnimation {
+                                                    scrollProxy.scrollTo("bottom", anchor: .top)
                                                 }
                                             } label: {
                                                 LottieView(fileName: "CourseCompleteButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
@@ -458,7 +540,14 @@ struct BasicEconomyNewsView: View {
                                             }
                                         }
                                     }
-                                    .modifier(PannelModifier())
+                                    .modifier(PannelModifier(height: 230))
+                                    .opacity(animationOpacity)
+                                    .onAppear {
+                                        withAnimation(.smooth(duration: 0.8)) {
+                                            animationOpacity = 1.0
+                                        }
+                                    }
+                                    .padding(.bottom, 20)
                                     
                                 } else if selected_O {
                                     VStack {
@@ -474,18 +563,24 @@ struct BasicEconomyNewsView: View {
                                             .padding(.horizontal, 10)
                                         
                                         Button {
-                                            withAnimation(.smooth(duration: 0.5)) {
-                                                self.progress.append(0)
-                                                self.selected_O = false
-                                                self.touchPermission = true
-                                            }
+                                            self.progress.append(0)
+                                            self.selected_O = false
+                                            self.touchPermission = true
+                                            self.animationOpacity = 0.0
                                         } label: {
                                             LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
                                                 .padding(.top, 10)
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier())
+                                    .modifier(PannelModifier(height: 280))
+                                    .opacity(animationOpacity)
+                                    .onAppear {
+                                        withAnimation(.smooth(duration: 0.8)) {
+                                            animationOpacity = 1.0
+                                        }
+                                    }
+                                    .padding(.bottom, 20)
                                     
                                 } else if selected_X {
                                     VStack {
@@ -501,24 +596,26 @@ struct BasicEconomyNewsView: View {
                                             .padding(.horizontal, 10)
                                         
                                         Button {
-                                            withAnimation(.smooth(duration: 0.5)) {
-                                                self.progress.append(0)
-                                                self.selected_X = false
-                                                self.touchPermission = true
-                                            }
+                                            self.progress.append(0)
+                                            self.selected_X = false
+                                            self.touchPermission = true
+                                            self.animationOpacity = 0.0
                                         } label: {
                                             LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
                                                 .padding(.top, 10)
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier())
+                                    .modifier(PannelModifier(height: 280))
+                                    .opacity(animationOpacity)
+                                    .onAppear {
+                                        withAnimation(.smooth(duration: 0.8)) {
+                                            animationOpacity = 1.0
+                                        }
+                                    }
+                                    .padding(.bottom, 20)
                                 }
                             }
-                            
-                            Rectangle()
-                                .fill(.clear)
-                                .frame(width: 100, height: 250)
                         }
                         .id("bottom")
                     }
@@ -527,10 +624,10 @@ struct BasicEconomyNewsView: View {
             }
             .modifier(NewsToolbarModifier(viewModel: viewModel))
             .onTapGesture {
-                withAnimation(.smooth(duration: 1.0)) {
-                    if touchPermission {
-                        self.progress.append(0)
-                        self.touchPermission = false
+                if touchPermission {
+                    self.progress.append(0)
+                    self.touchPermission = false
+                    withAnimation {
                         scrollProxy.scrollTo("bottom", anchor: .top)
                     }
                 }

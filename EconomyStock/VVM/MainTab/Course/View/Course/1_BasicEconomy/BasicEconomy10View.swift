@@ -351,14 +351,14 @@ struct BasicEconomy10View: View {
             .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
             .contentShape(Rectangle())
             .onTapGesture {
-                withAnimation(.smooth(duration: 1.0)) {
+                withAnimation {
                     if progress.count < 3 {
                         if progress.count == 1 {
                             withAnimation {
                                 proxy.scrollTo("bottom", anchor: .bottom)
                             }
                             
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 progress.append(1)
                             }
                             
@@ -369,7 +369,7 @@ struct BasicEconomy10View: View {
                     
                     if progress.count == 1 {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 contentPart1_1 = true
                             }
                         }
@@ -377,15 +377,15 @@ struct BasicEconomy10View: View {
                     
                     if progress.count == 2 {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 contentPart2 = true
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    withAnimation(.smooth(duration: 1.0)) {
+                                    withAnimation {
                                         contentPart2_1 = true
                                         
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                                            withAnimation(.smooth(duration: 1.0)) {
+                                            withAnimation {
                                                 contentPart2_2 = true
                                                 
                                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
@@ -401,19 +401,19 @@ struct BasicEconomy10View: View {
                         }
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 questionMark = true
                             }
                         }
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2.4) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 nextButton = true
                                 
                                 proxy.scrollTo("bottom", anchor: .top)
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    withAnimation(.smooth(duration: 1.0)) {
+                                    withAnimation {
                                         beforeButton = true
                                     }
                                 }

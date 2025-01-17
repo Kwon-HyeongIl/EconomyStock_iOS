@@ -346,22 +346,22 @@ struct UnEmployment1View: View {
         .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
         .contentShape(Rectangle())
         .onTapGesture {
-            withAnimation(.smooth(duration: 1.0)) {
+            withAnimation {
                 if progress.count < 3 {
                     progress.append(1)
                 }
                 
                 if progress.count == 1 {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                        withAnimation(.smooth(duration: 1.0)) {
+                        withAnimation {
                             contentImage1_1 = true
                             
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                withAnimation(.smooth(duration: 1.0)) {
+                                withAnimation {
                                     contentImage1_2 = true
                                     
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                        withAnimation(.smooth(duration: 1.0)) {
+                                        withAnimation {
                                             contentText1 = true
                                         }
                                     }
@@ -372,17 +372,17 @@ struct UnEmployment1View: View {
                 }
                 
                 if progress.count == 2 {
-                    withAnimation(.smooth(duration: 1.0)) {
+                    withAnimation {
                         contentImage1_1 = false
                         contentImage1_2 = false
                         contentText1 = false
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 contentImage2 = true
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    withAnimation(.smooth(duration: 1.0)) {
+                                    withAnimation {
                                         contentText2 = true
                                     }
                                 }
@@ -392,20 +392,20 @@ struct UnEmployment1View: View {
                 }
                 
                 if progress.count == 3 {
-                    withAnimation(.smooth(duration: 1.0)) {
+                    withAnimation {
                         contentImage2 = false
                         contentText2 = false
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 contentImage3 = true
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    withAnimation(.smooth(duration: 1.0)) {
+                                    withAnimation {
                                         contentText3 = true
                                         
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                            withAnimation(.smooth(duration: 1.0)) {
+                                            withAnimation {
                                                 nextButton = true
                                             }
                                         }

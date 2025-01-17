@@ -124,18 +124,18 @@ struct BasicEconomy9View: View {
         .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
         .contentShape(Rectangle())
         .onTapGesture {
-            withAnimation(.smooth(duration: 1.0)) {
+            withAnimation {
                 if progress.count < 2 {
                     progress.append(1)
                 }
                 
                 if progress.count == 1 {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                        withAnimation(.smooth(duration: 1.0)) {
+                        withAnimation {
                             contentPart1 = true
                             
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                withAnimation(.smooth(duration: 1.0)) {
+                                withAnimation {
                                     contentPart2 = true
                                 }
                             }
@@ -143,11 +143,11 @@ struct BasicEconomy9View: View {
                     }
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
-                        withAnimation(.smooth(duration: 1.0)) {
+                        withAnimation {
                             nextButton = true
                             
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                withAnimation(.smooth(duration: 1.0)) {
+                                withAnimation {
                                     beforeButton = true
                                 }
                             }

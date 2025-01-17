@@ -183,7 +183,7 @@ struct MoneyAndFinance13View: View {
             .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
             .contentShape(Rectangle())
             .onTapGesture {
-                withAnimation(.smooth(duration: 1.0)) {
+                withAnimation {
                     if progress.count < 4 {
                         progress.append(1)
                     }
@@ -194,27 +194,27 @@ struct MoneyAndFinance13View: View {
                         }
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 nextScrollPart = true
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                    withAnimation(.smooth(duration: 1.0)) {
+                                    withAnimation {
                                         contentImage = true
                                         
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                            withAnimation(.smooth(duration: 1.0)) {
+                                            withAnimation {
                                                 bubble = true
                                                 
                                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                                    withAnimation(.smooth(duration: 1.0)) {
+                                                    withAnimation {
                                                         bubbleContent = true
                                                         
                                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                                            withAnimation(.smooth(duration: 1.0)) {
+                                                            withAnimation {
                                                                 nextButton = true
                                                                 
                                                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                                                    withAnimation(.smooth(duration: 1.0)) {
+                                                                    withAnimation {
                                                                         beforeButton = true
                                                                     }
                                                                 }

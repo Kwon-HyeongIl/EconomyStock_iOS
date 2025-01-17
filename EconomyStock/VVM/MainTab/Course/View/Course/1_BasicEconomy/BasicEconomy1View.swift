@@ -145,30 +145,30 @@ struct BasicEconomy1View: View {
         .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
         .contentShape(Rectangle())
         .onTapGesture {
-            withAnimation(.smooth(duration: 1.0)) {
+            withAnimation {
                 if progress.count < 2 {
                     progress.append(1)
                 }
                 
                 if progress.count == 1 {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                        withAnimation(.smooth(duration: 1.0)) {
+                        withAnimation {
                             contentImage = true
                             
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                withAnimation(.smooth(duration: 1.0)) {
+                                withAnimation {
                                     building = true
                                     
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                        withAnimation(.smooth(duration: 1.0)) {
+                                        withAnimation {
                                             governmentBuilding = true
                                             
                                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                                withAnimation(.smooth(duration: 1.0)) {
+                                                withAnimation {
                                                     earth = true
                                                     
                                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                                        withAnimation(.smooth(duration: 1.0)) {
+                                                        withAnimation {
                                                             nextButton = true
                                                         }
                                                     }

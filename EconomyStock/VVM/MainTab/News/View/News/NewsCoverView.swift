@@ -26,13 +26,13 @@ struct NewsCoverView: View {
                             Image("News_Toktok")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 100)
+                                .frame(width: 85)
                             
                             Image("ES_TitleLogo")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 60)
-                                .padding(.top, 50)
+                                .frame(width: 50)
+                                .padding(.top, 43)
                             
                         }
                         .padding(.leading, 20)

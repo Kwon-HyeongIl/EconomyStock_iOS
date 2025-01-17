@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct PannelModifier: ViewModifier {
+    let height: CGFloat
+    
     func body(content: Content) -> some View {
         content
             .frame(maxWidth: .infinity)
-            .frame(height: 250)
+            .frame(height: height)
             .background(.ultraThickMaterial)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .padding(.horizontal)

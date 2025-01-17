@@ -350,18 +350,18 @@ struct BasicEconomy5View: View {
             .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
             .contentShape(Rectangle())
             .onTapGesture {
-                withAnimation(.smooth(duration: 1.0)) {
+                withAnimation {
                     if progress.count < 5 {
                         progress.append(1)
                     }
                     
                     if progress.count == 2 {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 bubble = true
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    withAnimation(.smooth(duration: 1.0)) {
+                                    withAnimation {
                                         bubbleContent = true
                                     }
                                 }
@@ -375,7 +375,7 @@ struct BasicEconomy5View: View {
                         }
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 nextScrollPart = true
                             }
                         }
@@ -384,25 +384,25 @@ struct BasicEconomy5View: View {
                     
                     if progress.count == 4 {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 giveMoney = true
                             }
                         }
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 questionMark = true
                             }
                         }
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 nextButton = true
                                 
                                 proxy.scrollTo("bottom", anchor: .top)
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    withAnimation(.smooth(duration: 1.0)) {
+                                    withAnimation {
                                         beforeButton = true
                                     }
                                 }

@@ -294,30 +294,30 @@ struct MoneyAndFinance9View: View {
             .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
             .contentShape(Rectangle())
             .onTapGesture {
-                withAnimation(.smooth(duration: 1.0)) {
+                withAnimation {
                     if progress.count < 5 {
                         progress.append(1)
                     }
                     
                     if progress.count == 1 {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 contentText2_1 = true
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    withAnimation(.smooth(duration: 1.0)) {
+                                    withAnimation {
                                         contentText2_2 = true
                                         
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                            withAnimation(.smooth(duration: 1.0)) {
+                                            withAnimation {
                                                 contentImage1_1 = true
                                                 
                                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                                                    withAnimation(.smooth(duration: 1.0)) {
+                                                    withAnimation {
                                                         contentImage1_2 = true
                                                         
                                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                                            withAnimation(.smooth(duration: 1.0)) {
+                                                            withAnimation {
                                                                 contentImage1_2 = false
                                                                 contentImage1_3 = true
                                                             }
@@ -338,15 +338,15 @@ struct MoneyAndFinance9View: View {
                         }
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 nextScrollPart1 = true
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    withAnimation(.smooth(duration: 1.0)) {
+                                    withAnimation {
                                         contentText3_2 = true
                                         
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                            withAnimation(.smooth(duration: 1.0)) {
+                                            withAnimation {
                                                 contentImage2 = true
                                             }
                                         }
@@ -362,15 +362,15 @@ struct MoneyAndFinance9View: View {
                         }
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 nextScrollPart2 = true
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    withAnimation(.smooth(duration: 1.0)) {
+                                    withAnimation {
                                         contentText4_2 = true
                                         
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                            withAnimation(.smooth(duration: 1.0)) {
+                                            withAnimation {
                                                 contentImage3 = true
                                             }
                                         }
@@ -386,25 +386,25 @@ struct MoneyAndFinance9View: View {
                         }
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                            withAnimation {
                                 nextScrollPart3 = true
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    withAnimation(.smooth(duration: 1.0)) {
+                                    withAnimation {
                                         contentText5_2 = true
                                         
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                            withAnimation(.smooth(duration: 1.0)) {
+                                            withAnimation {
                                                 contentImage4 = true
                                                 
                                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                                    withAnimation(.smooth(duration: 1.0)) {
+                                                    withAnimation {
                                                         nextButton = true
                                                         
                                                         proxy.scrollTo("bottom", anchor: .top)
                                                         
                                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                                            withAnimation(.smooth(duration: 1.0)) {
+                                                            withAnimation {
                                                                 beforeButton = true
                                                             }
                                                         }

@@ -156,26 +156,26 @@ struct UnEmployment2View: View {
         .modifier(CourseToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.course.totalPage))
         .contentShape(Rectangle())
         .onTapGesture {
-            withAnimation(.smooth(duration: 1.0)) {
+            withAnimation {
                 if progress.count < 3 {
                     progress.append(1)
                 }
                 
                 if progress.count == 1 {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                        withAnimation(.smooth(duration: 1.0)) {
+                        withAnimation {
                             contentText1_2 = true
                             
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                withAnimation(.smooth(duration: 1.0)) {
+                                withAnimation {
                                     contentImage = true
                                     
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                        withAnimation(.smooth(duration: 1.0)) {
+                                        withAnimation {
                                             nextButton = true
                                             
                                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                                withAnimation(.smooth(duration: 1.0)) {
+                                                withAnimation {
                                                     beforeButton = true
                                                 }
                                             }
