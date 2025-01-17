@@ -14,9 +14,10 @@ struct PannelModifier: ViewModifier {
         content
             .frame(maxWidth: .infinity)
             .frame(height: height)
-            .background(.ultraThickMaterial)
+            .background(.thinMaterial)
             .clipShape(RoundedRectangle(cornerRadius: 10))
-            .padding(.horizontal)
+            .padding(.horizontal, 20)
+            .padding(.bottom, 10)
             .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
     }
 }
