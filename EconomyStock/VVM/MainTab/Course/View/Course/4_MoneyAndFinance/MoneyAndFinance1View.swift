@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PopupView
 
 struct MoneyAndFinance1View: View {
     @Environment(NavigationRouter.self) var navRouter
@@ -18,6 +19,8 @@ struct MoneyAndFinance1View: View {
     @State private var contentText2_2 = false
     
     @State private var nextButton = false
+    
+    @State private var popup = false
     
     @Namespace private var animation
     
@@ -162,6 +165,29 @@ struct MoneyAndFinance1View: View {
                         }
                     }
                 }
+            }
+            .onAppear {
+                popup = true
+            }
+            .popup(isPresented: $popup) {
+                HStack {
+                    (Text("진행하시려면 화면을 ")
+                    + Text("터치 ")
+                        .foregroundStyle(Color.ESTitle)
+                    + Text("해주세요"))
+                        .font(.system(size: 17))
+                        .fontWeight(.semibold)
+                }
+                .frame(width: 300, height: 80)
+                .background(.ultraThickMaterial)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
+                .padding(.bottom, 50)
+            } customize: {
+                $0
+                    .type(.toast)
+                    .closeOnTap(true)
+                    .closeOnTapOutside(true)
             }
         }
     }

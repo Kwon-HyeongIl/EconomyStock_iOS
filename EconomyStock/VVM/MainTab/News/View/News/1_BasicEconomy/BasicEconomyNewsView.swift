@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PopupView
 
 struct BasicEconomyNewsView: View {
     @Bindable var viewModel: NewsViewModel
@@ -16,6 +17,8 @@ struct BasicEconomyNewsView: View {
     @State private var bottomHeight = 0.0
     
     @State private var animationOpacity = 0.0
+    
+    @State private var popup = false
     
     var body: some View {
         ScrollViewReader { scrollProxy in
@@ -437,7 +440,7 @@ struct BasicEconomyNewsView: View {
                                                 scrollProxy.scrollTo("3", anchor: .top)
                                             }
                                             self.progress.append(0)
-                                            self.selected_X = false
+                                            self.selected_O = false
                                             self.animationOpacity = 0.0
                                         } label: {
                                             LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
@@ -957,6 +960,29 @@ struct BasicEconomyNewsView: View {
                 if progress.count == 0 {
                     self.progress.append(0)
                 }
+            }
+            .onAppear {
+                popup = true
+            }
+            .popup(isPresented: $popup) {
+                HStack {
+                    (Text("진행하시려면 화면을 ")
+                    + Text("터치 ")
+                        .foregroundStyle(Color.ESTitle)
+                    + Text("해주세요"))
+                        .font(.system(size: 17))
+                        .fontWeight(.semibold)
+                }
+                .frame(width: 300, height: 80)
+                .background(.ultraThickMaterial)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
+                .padding(.bottom, 50)
+            } customize: {
+                $0
+                    .type(.toast)
+                    .closeOnTap(true)
+                    .closeOnTapOutside(true)
             }
         }
     }
