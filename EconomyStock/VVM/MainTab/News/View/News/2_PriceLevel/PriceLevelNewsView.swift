@@ -85,8 +85,8 @@ struct PriceLevelNewsView: View {
                                     }
                                     .id("1")
                                 
-                                JustifiedText("국제 원자재 가격 급등, 공급망 병목 현상, 에너지 가격 상승 등 복합적 요인이 이번 인플레이션의 주된 원인으로 분석된다. 팬데믹 이후 회복 과정에서 발생한 혼란과 지정학적 갈등으로 원유 및 천연가스 가격이 불안정해지면서 국내 물가에 직접적인 영향을 주고 있다. 동시에 코로나19 이후 변화된 소비 패턴과 수요 급증도 가격 상승 압력을 높이고 있다.")
-                                    .frame(height: 123)
+                                JustifiedText("국제 원자재 급등, 공급망 병목, 에너지 가격 상승 등 복합 요인이 인플레이션의 주 원인이다. 팬데믹 복구 혼란과 지정학 갈등으로 원유·천연가스 가격 불안정이 국내 물가에 영향을 미치며, 코로나19 이후 소비 패턴 변화와 수요 급증도 가격 상승 압력을 높이고 있다.")
+                                    .frame(height: 106)
                                     .padding(.horizontal, 10)
                                     .overlay {
                                         if progress.count == 2 {
@@ -340,7 +340,7 @@ struct PriceLevelNewsView: View {
                                         Spacer()
                                         
                                         Button {
-                                            self.bottomHeight = 290
+                                            self.bottomHeight = 250
                                             withAnimation {
                                                 scrollProxy.scrollTo("2", anchor: .top)
                                             }
@@ -382,7 +382,7 @@ struct PriceLevelNewsView: View {
                                         Spacer()
                                         
                                         Button {
-                                            self.bottomHeight = 290
+                                            self.bottomHeight = 250
                                             withAnimation {
                                                 scrollProxy.scrollTo("2", anchor: .top)
                                             }
@@ -445,7 +445,7 @@ struct PriceLevelNewsView: View {
                                     Spacer()
                                     
                                     Button {
-                                        self.bottomHeight = 150
+                                        self.bottomHeight = 160
                                         withAnimation {
                                             scrollProxy.scrollTo("4", anchor: .top)
                                         }
@@ -638,7 +638,7 @@ struct PriceLevelNewsView: View {
                                     Spacer()
                                     
                                     Button {
-                                        self.bottomHeight = 270
+                                        self.bottomHeight = 265
                                         withAnimation {
                                             scrollProxy.scrollTo("4", anchor: .top)
                                         }
@@ -745,7 +745,7 @@ struct PriceLevelNewsView: View {
                                         Button {
                                             
                                         } label: {
-                                            LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
+                                            LottieView(fileName: "CourseCompleteButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
                                                 .padding(.top, 10)
                                                 .padding(.bottom, 10)
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
