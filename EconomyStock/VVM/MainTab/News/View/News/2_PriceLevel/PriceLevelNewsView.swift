@@ -1,14 +1,14 @@
 //
-//  BasicEconomyNewsView.swift
+//  PriceLevelNewsView.swift
 //  EconomyStock
 //
-//  Created by 권형일 on 1/12/25.
+//  Created by 권형일 on 2/5/25.
 //
 
 import SwiftUI
 import PopupView
 
-struct BasicEconomyNewsView: View {
+struct PriceLevelNewsView: View {
     @Bindable var viewModel: NewsViewModel
     
     @State private var progress: [Int] = []
@@ -61,14 +61,14 @@ struct BasicEconomyNewsView: View {
                                     }
                                 }
                                 
-                                Text("소비•투자 활황... 국민소득 5% 증가")
+                                Text("고공행진 인플레이션, 서민 경제 직격탄")
                                     .font(.system(size: 20).bold())
                                     .foregroundStyle(.black)
                                     .padding(.top, 10)
                                 
                                 
-                                JustifiedText("최근 국내 경제가 소비와 투자 증가를 기반으로 견고한 성장세를 보이고 있으며, 이로 인해 국민 소득이 크게 증가했다.")
-                                    .frame(height: geometryProxy.size.width > 380 ? 50 : 70)
+                                JustifiedText("최근 국내 물가 상승률이 지속되면서 소비자와 기업 모두 큰 부담을 겪고 있다. 생활비 부담 증가는 국민의 실질 구매력 감소와 생활 수준 하락 우려를 낳고 있으며, 정부와 중앙은행은 물가 안정을 위해 다양한 대응 전략을 펼치고 있다.")
+                                    .frame(height: geometryProxy.size.width > 380 ? 88 : 70)
                                     .padding(.horizontal, 10)
                                     .overlay {
                                         if progress.count == 1 {
@@ -85,29 +85,11 @@ struct BasicEconomyNewsView: View {
                                     }
                                     .id("1")
                                 
-                                JustifiedText("통계청과 한국은행이 발표한 자료에 따르면, 올해 3분기 국민총소득(GNI)은 전년 동기 대비 5.2% 증가했다. 이는 소비 회복과 기업 투자 확대가 맞물려 경제 활력이 되살아난 결과로 분석된다.")
-                                    .frame(height: 88)
+                                JustifiedText("국제 원자재 가격 급등, 공급망 병목 현상, 에너지 가격 상승 등 복합적 요인이 이번 인플레이션의 주된 원인으로 분석된다. 팬데믹 이후 회복 과정에서 발생한 혼란과 지정학적 갈등으로 원유 및 천연가스 가격이 불안정해지면서 국내 물가에 직접적인 영향을 주고 있다. 동시에 코로나19 이후 변화된 소비 패턴과 수요 급증도 가격 상승 압력을 높이고 있다.")
+                                    .frame(height: 123)
                                     .padding(.horizontal, 10)
                                     .overlay {
                                         if progress.count == 2 {
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .foregroundStyle(.yellow.opacity(0.3))
-                                                .padding(.horizontal, 7)
-                                                .opacity(animationOpacity)
-                                                .onAppear {
-                                                    withAnimation {
-                                                        animationOpacity = 1.0
-                                                    }
-                                                }
-                                        }
-                                    }
-                                    .id("2")
-                                
-                                JustifiedText("가계 소비는 팬데믹 이후 안정적인 고용 상황과 정부의 경기 부양 정책에 힘입어 꾸준히 증가하고 있다. 3분기 민간소비는 전년 대비 4.8% 상승했으며, 특히 여행, 외식, 의류 등 서비스 부문에서 두드러진 증가세를 보였다.")
-                                    .frame(height: geometryProxy.size.width > 370 ? 91 : 106)
-                                    .padding(.horizontal, 10)
-                                    .overlay {
-                                        if progress.count == 3 {
                                             RoundedRectangle(cornerRadius: 10)
                                                 .foregroundStyle(.red.opacity(0.3))
                                                 .padding(.horizontal, 7)
@@ -119,15 +101,28 @@ struct BasicEconomyNewsView: View {
                                                 }
                                         }
                                     }
+                                    .id("2")
+                                
+                                JustifiedText("소비자 물가 지수는 전년 대비 6% 이상의 상승률을 기록하며 식료품, 에너지, 주거비 등 주요 품목의 가격 인상이 두드러진다. 이로 인해 특히 저소득층과 중산층 가구에 큰 부담이 발생해 사회적 불평등 심화 문제도 제기되고 있다.")
+                                    .frame(height: geometryProxy.size.width > 370 ? 88 : 106)
+                                    .padding(.horizontal, 10)
+                                    .overlay {
+                                        if progress.count == 3 {
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .foregroundStyle(.yellow.opacity(0.3))
+                                                .padding(.horizontal, 7)
+                                                .opacity(animationOpacity)
+                                                .onAppear {
+                                                    withAnimation {
+                                                        animationOpacity = 1.0
+                                                    }
+                                                }
+                                        }
+                                    }
                                     .id("3")
                                 
-                                JustifiedText("서울에 거주하는 톡톡씨는 “소득이 늘고 경제 상황에 대한 불안이 줄어들면서 가족과 함께 해외여행을 다녀왔다”며 “이제는 돈을 쓰는 데 있어 예전만큼 신중하지 않아도 될 것 같다”고 말했다.")
+                                JustifiedText("기업들은 원자재와 운송비 상승으로 인한 비용 부담을 제품 가격에 전가하는 상황이다. 단기적으로는 마진 축소와 소비자 부담 증가가 우려되지만, 장기적으로는 기술 혁신과 생산성 향상을 통해 비용 구조 개선을 시도하고 있다.")
                                     .frame(height: 88)
-                                    .padding(.horizontal, 10)
-                                    .id("4")
-                                
-                                JustifiedText("한편, 기업들의 설비투자와 연구개발(R&D) 투자도 큰 폭으로 증가했다. 3분기 기업 설비투자는 전년 동기 대비 8.1% 증가하며 6년 만에 가장 높은 성장률을 기록했다. 특히 반도체, 자동차, 배터리 등 첨단 제조업 분야에서의 대규모 투자 확대가 국민소득 증가에 기여했다.")
-                                    .frame(height: 109)
                                     .padding(.horizontal, 10)
                                     .overlay {
                                         if progress.count == 4 {
@@ -142,15 +137,10 @@ struct BasicEconomyNewsView: View {
                                                 }
                                         }
                                     }
-                                    .id("5")
+                                    .id("4")
                                 
-                                JustifiedText("한국경제연구원 관계자는 “글로벌 수요 회복과 기업의 기술 경쟁력 강화 노력으로 투자 규모가 커졌다”며 “향후에도 지속적인 경제 성장 동력을 제공할 것”이라고 평가했다.")
-                                    .frame(height: geometryProxy.size.width > 380 ? 73 : 88)
-                                    .padding(.horizontal, 10)
-                                    .id("6")
-                                
-                                JustifiedText("정부의 적극적인 정책 지원도 국민소득 증가를 뒷받침하고 있다. 정부는 소비 진작을 위해 재난지원금을 지급하고 저소득층 지원을 확대했다. 또한 중소기업을 위한 투자 세제 혜택과 같은 다양한 정책을 통해 내수와 투자 확대를 견인했다.")
-                                    .frame(height: geometryProxy.size.width > 380 ? 91 : 106)
+                                JustifiedText("정부는 필수 생활품 가격 안정을 위한 모니터링과 긴급 지원 대책을 마련하며 단기 대응에 주력하고 있다. 동시에 공급망 안정화와 에너지 자원 확보를 통한 중장기 대책도 추진 중이다. 중앙은행 역시 금리와 유동성 조절로 인플레이션 억제에 힘쓰고 있다.")
+                                    .frame(height: 106)
                                     .padding(.horizontal, 10)
                                     .overlay {
                                         if progress.count == 5 {
@@ -165,15 +155,10 @@ struct BasicEconomyNewsView: View {
                                                 }
                                         }
                                     }
-                                    .id("7")
+                                    .id("5")
                                 
-                                JustifiedText("기획재정부는 “경제의 선순환 구조가 점차 자리 잡고 있다”며 “소비와 투자가 성장의 중심축으로 자리 잡는 것이 긍정적 신호”라고 밝혔다.")
-                                    .frame(height: 70)
-                                    .padding(.horizontal, 10)
-                                    .id("8")
-                                
-                                JustifiedText("국민소득 증가로 인해 개인 소득이 상승하면서 저축률도 함께 높아지고 있다. 전문가들은 이러한 선순환 구조가 중장기적으로 국가 경제에 긍정적인 영향을 미칠 것으로 내다보고 있다.")
-                                    .frame(height: geometryProxy.size.width > 380 ? 73 : 88)
+                                JustifiedText("경제 전문가들은 이번 물가 상승이 외부 요인과 내부 구조적 문제의 복합 결과임을 지적하며, 정부와 중앙은행의 신속한 정책 대응이 중장기적으로 안정된 가격 수준 회복에 기여할 것이라고 전망한다.")
+                                    .frame(height: geometryProxy.size.width > 380 ? 88 : 88)
                                     .padding(.horizontal, 10)
                                     .overlay {
                                         if progress.count == 6 {
@@ -188,44 +173,13 @@ struct BasicEconomyNewsView: View {
                                                 }
                                         }
                                     }
-                                    .id("9")
+                                    .id("6")
                                 
-                                JustifiedText("하지만 일각에서는 소비와 투자 증가가 환율 변동, 원자재 가격 상승 등 외부 요인에 취약할 수 있다는 점을 경고하고 있다. 전문가들은 “지속 가능한 성장을 위해 소비와 투자의 질적 향상이 중요하다”며 “특히 투자 효율성과 내수 기반 강화를 위한 정책이 필요하다”고 강조했다.")
-                                    .frame(height: geometryProxy.size.width > 380 ? 109 : 125)
+                                JustifiedText("이처럼 물가 상승은 국민 생활과 경제 전반에 복합적 영향을 미치고 있으며, 정부, 중앙은행, 기업이 협력하여 구조적 문제를 해결한다면 안정된 경제 환경을 회복할 수 있을 것으로 보인다.")
+                                    .frame(height: geometryProxy.size.width > 380 ? 88 : 106)
                                     .padding(.horizontal, 10)
-                                    .overlay {
-                                        if progress.count == 7 {
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .foregroundStyle(.yellow.opacity(0.3))
-                                                .padding(.horizontal, 7)
-                                                .opacity(animationOpacity)
-                                                .onAppear {
-                                                    withAnimation {
-                                                        animationOpacity = 1.0
-                                                    }
-                                                }
-                                        }
-                                    }
-                                    .id("10")
-                                
-                                JustifiedText("현재 경제가 소비와 투자 활황으로 인해 활력을 되찾고 있는 가운데, 이를 유지하고 확대하기 위해 정부와 기업의 지속적인 노력이 중요해지고 있다. 경제 성장의 동력을 유지하기 위해 장기적인 정책과 계획이 필요하며, 이를 통해 국가 경제의 지속 가능성을 확보하는 것이 관건이 될 것이다.")
-                                    .frame(height: geometryProxy.size.width > 380 ? 109 : 125)
-                                    .padding(.horizontal, 10)
-                                    .overlay {
-                                        if progress.count == 8 {
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .foregroundStyle(.yellow.opacity(0.3))
-                                                .padding(.horizontal, 7)
-                                                .opacity(animationOpacity)
-                                                .onAppear {
-                                                    withAnimation {
-                                                        animationOpacity = 1.0
-                                                    }
-                                                }
-                                        }
-                                    }
                                     .padding(.bottom, 10)
-                                    .id("11")
+                                    .id("7")
                             }
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                             .background(Color(hex: "A4A4A4"))
@@ -267,19 +221,19 @@ struct BasicEconomyNewsView: View {
                                     
                                     Spacer()
                                     
-                                    (Text("소비와 투자 증가는 GDP의 구성 요소로, 경제 성장의 핵심 동력이에요. 소비 증가는 ")
-                                     + Text("내수 진작")
+                                    (Text("지속적인 물가 상승은 인플레이션 압력으로 작용해 소비자와 기업의 비용 부담을 증가시켜요. 이로 인해 국민의 실질 소득이 잠식되고, 소비가 위축되어")
+                                     + Text("내수 경기 둔화")
                                         .foregroundStyle(Color.ESTitle)
                                         .fontWeight(.bold)
-                                     + Text("을, 투자 증가는 ")
-                                     + Text("자본 축척과 생산성 향상")
+                                     + Text("로 이어질 가능성이 있어요.\n\n정부와 중앙은행이 재정 및 통화 정책 등 다양한 대응 전략을 펼치는 것은 ")
+                                     + Text("인플레이션 기대를 안정")
                                         .foregroundStyle(Color.ESTitle)
                                         .fontWeight(.bold)
-                                     + Text("을 통해 장기적인 경제 성장을 지원해요.\n\n국민소득의 증가는 ")
-                                     + Text("경제가 확장 국면")
+                                     + Text("시키고 ")
+                                     + Text("경제 전반의 균형을 회복")
                                         .foregroundStyle(Color.ESTitle)
                                         .fontWeight(.bold)
-                                     + Text("에 있다는 신호로 해석할 수 있어요.")
+                                     + Text("하기 위한 시도로 볼 수 있습니다.")
                                     )
                                     .font(.system(size: 16))
                                     .multilineTextAlignment(.center)
@@ -290,6 +244,9 @@ struct BasicEconomyNewsView: View {
                                     Spacer()
                                     
                                     Button {
+                                        withAnimation {
+                                            scrollProxy.scrollTo("1", anchor: .top)
+                                        }
                                         self.progress.append(0)
                                         self.animationOpacity = 0.0
                                     } label: {
@@ -299,7 +256,7 @@ struct BasicEconomyNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 320))
+                                .modifier(PannelModifier(height: 350))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
@@ -308,59 +265,6 @@ struct BasicEconomyNewsView: View {
                                 }
                                 
                             } else if progress.count == 2 {
-                                VStack {
-                                    Spacer()
-                                    
-                                    HStack {
-                                        Image(systemName: "pencil.circle")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 16)
-                                        
-                                        Text("분석")
-                                            .font(.system(size: 16))
-                                        
-                                        Spacer()
-                                    }
-                                    .foregroundStyle(Color.ESTitle)
-                                    .fontWeight(.bold)
-                                    .padding(.leading)
-                                    
-                                    Spacer()
-                                    
-                                    (Text("GNI는 국내 총생산(GDP)에 국외 순수취 요소소득을 더한 지표로, ")
-                                     + Text("국민의 실질 소득 수준")
-                                        .foregroundStyle(Color.ESTitle)
-                                        .fontWeight(.bold)
-                                     + Text("을 나타내요.\n\n5.2% 증가는 경제 활동의 활력뿐만 아니라 국제 무역 및 해외 투자로부터의 소득 증가도 반영된 결과로 볼 수 있어요.")
-                                    )
-                                    .font(.system(size: 16))
-                                    .multilineTextAlignment(.center)
-                                    .fontWeight(.semibold)
-                                    .padding(.top, 10)
-                                    .padding(.horizontal, 10)
-                                    
-                                    Spacer()
-                                    
-                                    Button {
-                                        self.progress.append(0)
-                                        self.animationOpacity = 0.0
-                                    } label: {
-                                        LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
-                                            .padding(.top, 10)
-                                            .padding(.bottom, 10)
-                                            .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
-                                    }
-                                }
-                                .modifier(PannelModifier(height: 305))
-                                .opacity(animationOpacity)
-                                .onAppear {
-                                    withAnimation {
-                                        animationOpacity = 1.0
-                                    }
-                                }
-                                
-                            } else if progress.count == 3 {
                                 if !selected_O && !selected_X {
                                     VStack {
                                         Spacer()
@@ -382,7 +286,208 @@ struct BasicEconomyNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("서비스 부문의 소비 증가는 경제 성장률에 직접적인 영향을 미치며, 이는 GDP 구성 요소 중 정부 지출에 포함된다.")
+                                        Text("공급망 병목 현상은 기업의 생산성과 재고 관리 효율성을 저해하여, 상품 공급의 지연과 부족으로 이어지며, 이로 인해 가격 상승 압력이 증가한다.")
+                                            .font(.system(size: 16))
+                                            .multilineTextAlignment(.center)
+                                            .fontWeight(.semibold)
+                                            .padding(.top, 5)
+                                            .padding(.horizontal, 10)
+                                        
+                                        Spacer()
+                                        
+                                        HStack {
+                                            Button {
+                                                self.selected_O = true
+                                                self.animationOpacity = 0.0
+                                            } label: {
+                                                LottieOButton()
+                                            }
+                                            
+                                            Button {
+                                                self.selected_X = true
+                                                self.animationOpacity = 0.0
+                                            } label: {
+                                                LottieXButton()
+                                            }
+                                        }
+                                        .padding(.bottom, 10)
+                                    }
+                                    .modifier(PannelModifier(height: 260))
+                                    .opacity(animationOpacity)
+                                    .onAppear {
+                                        withAnimation {
+                                            animationOpacity = 1.0
+                                        }
+                                    }
+                                    
+                                } else if selected_O {
+                                    VStack {
+                                        Spacer()
+                                        
+                                        Text("정답이에요😊")
+                                            .font(.system(size: 18).bold())
+                                            .foregroundStyle(.green)
+                                        
+                                        Spacer()
+                                        
+                                        Text("공급망 병목 현상은 생산 및 유통 과정에서 제약을 발생시켜, 제품의 공급이 원활하지 못하게 만들어요.\n\n이로 인해 수요 대비 공급 부족 현상이 발생하면, 시장에서는 가격 상승 압력이 커지게 되어 인플레이션에 기여하는 결과를 낳아요.")
+                                            .font(.system(size: 16))
+                                            .multilineTextAlignment(.center)
+                                            .fontWeight(.semibold)
+                                            .padding(.top, 5)
+                                            .padding(.horizontal, 10)
+                                        
+                                        Spacer()
+                                        
+                                        Button {
+                                            self.bottomHeight = 290
+                                            withAnimation {
+                                                scrollProxy.scrollTo("2", anchor: .top)
+                                            }
+                                            self.progress.append(0)
+                                            self.selected_O = false
+                                            self.animationOpacity = 0.0
+                                        } label: {
+                                            LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
+                                                .padding(.top, 10)
+                                                .padding(.bottom, 10)
+                                                .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
+                                        }
+                                    }
+                                    .modifier(PannelModifier(height: 320))
+                                    .opacity(animationOpacity)
+                                    .onAppear {
+                                        withAnimation {
+                                            animationOpacity = 1.0
+                                        }
+                                    }
+                                    
+                                } else if selected_X {
+                                    VStack {
+                                        Spacer()
+                                        
+                                        Text("틀렸어요🥲")
+                                            .font(.system(size: 18).bold())
+                                            .foregroundStyle(.red)
+                                        
+                                        Spacer()
+                                        
+                                        Text("공급망 병목 현상은 생산 및 유통 과정에서 제약을 발생시켜, 제품의 공급이 원활하지 못하게 만들어요.\n\n이로 인해 수요 대비 공급 부족 현상이 발생하면, 시장에서는 가격 상승 압력이 커지게 되어 인플레이션에 기여하는 결과를 낳아요.")
+                                            .font(.system(size: 16))
+                                            .multilineTextAlignment(.center)
+                                            .fontWeight(.semibold)
+                                            .padding(.top, 5)
+                                            .padding(.horizontal, 10)
+                                        
+                                        Spacer()
+                                        
+                                        Button {
+                                            self.bottomHeight = 290
+                                            withAnimation {
+                                                scrollProxy.scrollTo("2", anchor: .top)
+                                            }
+                                            self.progress.append(0)
+                                            self.selected_X = false
+                                            self.animationOpacity = 0.0
+                                        } label: {
+                                            LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
+                                                .padding(.top, 10)
+                                                .padding(.bottom, 10)
+                                                .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
+                                        }
+                                    }
+                                    .modifier(PannelModifier(height: 320))
+                                    .opacity(animationOpacity)
+                                    .onAppear {
+                                        withAnimation {
+                                            animationOpacity = 1.0
+                                        }
+                                    }
+                                }
+                                
+                            } else if progress.count == 3 {
+                                VStack {
+                                    Spacer()
+                                    
+                                    HStack {
+                                        Image(systemName: "pencil.circle")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 16)
+                                        
+                                        Text("분석")
+                                            .font(.system(size: 16))
+                                        
+                                        Spacer()
+                                    }
+                                    .foregroundStyle(Color.ESTitle)
+                                    .fontWeight(.bold)
+                                    .padding(.leading)
+                                    
+                                    Spacer()
+                                    
+                                    (Text("소비자 물가 지수의 급격한 상승은 필수 생활품 가격 인상을 반영하며, 이는 ")
+                                     + Text("국민의 실질 구매력을 급격히 감소")
+                                        .foregroundStyle(Color.ESTitle)
+                                        .fontWeight(.bold)
+                                     + Text("시켜요.\n\n특히, 소득 대비 지출 비중이 큰 저소득층과 중산층에게 더 큰 경제적 부담을 주어 ")
+                                     + Text("소득 재분배와 사회적 불평등 문제를 심화")
+                                        .foregroundStyle(Color.ESTitle)
+                                        .fontWeight(.bold)
+                                     + Text("시킬 위험이 있어요.")
+                                    )
+                                    .font(.system(size: 16))
+                                    .multilineTextAlignment(.center)
+                                    .fontWeight(.semibold)
+                                    .padding(.top, 10)
+                                    .padding(.horizontal, 10)
+                                    
+                                    Spacer()
+                                    
+                                    Button {
+                                        self.bottomHeight = 150
+                                        withAnimation {
+                                            scrollProxy.scrollTo("4", anchor: .top)
+                                        }
+                                        self.progress.append(0)
+                                        self.animationOpacity = 0.0
+                                    } label: {
+                                        LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
+                                            .padding(.top, 10)
+                                            .padding(.bottom, 10)
+                                            .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
+                                    }
+                                }
+                                .modifier(PannelModifier(height: 320))
+                                .opacity(animationOpacity)
+                                .onAppear {
+                                    withAnimation {
+                                        animationOpacity = 1.0
+                                    }
+                                }
+                            } else if progress.count == 4 {
+                                if !selected_O && !selected_X {
+                                    VStack {
+                                        Spacer()
+                                        
+                                        HStack {
+                                            Image(systemName: "questionmark.circle")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 16)
+                                            
+                                            Text("문제")
+                                                .font(.system(size: 16))
+                                            
+                                            Spacer()
+                                        }
+                                        .foregroundStyle(.red)
+                                        .fontWeight(.bold)
+                                        .padding(.leading)
+                                        
+                                        Spacer()
+                                        
+                                        Text("기업들이 비용 상승을 소비자 가격에 전가하는 것은 단기적으로 기업 이윤을 보호하는 동시에 소비자 물가 지수를 하락시키는 효과를 가져온다.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
@@ -426,7 +531,7 @@ struct BasicEconomyNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("서비스 부문의 소비 증가는 경제 성장률에 직접적인 영향을 미치지만, 이는 GDP의 민간소비 항목에 포함돼요.\n\n정부 지출은 별도의 GDP 구성 요소로, 공공서비스나 사회간접자본 투자와 관련된 지출을 의미해요. 따라서 틀린 문장이에요.")
+                                        Text("비용 상승을 소비자 가격에 전가하면 기업은 단기적으로 이윤 압박을 피할 수 있으나, 소비자 가격 상승으로 인해 소비자 물가 지수는 오히려 상승해요.\n\n따라서 소비자 물가 지수 하락 효과는 발생하지 않아요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
@@ -436,146 +541,7 @@ struct BasicEconomyNewsView: View {
                                         Spacer()
                                         
                                         Button {
-                                            withAnimation {
-                                                scrollProxy.scrollTo("3", anchor: .top)
-                                            }
-                                            self.progress.append(0)
-                                            self.selected_O = false
-                                            self.animationOpacity = 0.0
-                                        } label: {
-                                            LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
-                                                .padding(.top, 10)
-                                                .padding(.bottom, 10)
-                                                .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
-                                        }
-                                    }
-                                    .modifier(PannelModifier(height: 320))
-                                    .opacity(animationOpacity)
-                                    .onAppear {
-                                        withAnimation {
-                                            animationOpacity = 1.0
-                                        }
-                                    }
-                                    
-                                } else if selected_X {
-                                    VStack {
-                                        Spacer()
-                                        
-                                        Text("정답이에요😊")
-                                            .font(.system(size: 18).bold())
-                                            .foregroundStyle(.green)
-                                        
-                                        Spacer()
-                                        
-                                        Text("서비스 부문의 소비 증가는 경제 성장률에 직접적인 영향을 미치지만, 이는 GDP의 민간소비 항목에 포함돼요.\n\n정부 지출은 별도의 GDP 구성 요소로, 공공서비스나 사회간접자본 투자와 관련된 지출을 의미해요. 따라서 틀린 문장이에요.")
-                                            .font(.system(size: 16))
-                                            .multilineTextAlignment(.center)
-                                            .fontWeight(.semibold)
-                                            .padding(.top, 5)
-                                            .padding(.horizontal, 10)
-                                        
-                                        Spacer()
-                                        
-                                        Button {
-                                            withAnimation {
-                                                scrollProxy.scrollTo("3", anchor: .top)
-                                            }
-                                            self.progress.append(0)
-                                            self.selected_X = false
-                                            self.animationOpacity = 0.0
-                                        } label: {
-                                            LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
-                                                .padding(.top, 10)
-                                                .padding(.bottom, 10)
-                                                .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
-                                        }
-                                    }
-                                    .modifier(PannelModifier(height: 320))
-                                    .opacity(animationOpacity)
-                                    .onAppear {
-                                        withAnimation {
-                                            animationOpacity = 1.0
-                                        }
-                                    }
-                                }
-                                
-                            } else if progress.count == 4 {
-                                if !selected_O && !selected_X {
-                                    VStack {
-                                        Spacer()
-                                        
-                                        HStack {
-                                            Image(systemName: "questionmark.circle")
-                                                .resizable()
-                                                .scaledToFit()
-                                                .frame(width: 16)
-                                            
-                                            Text("문제")
-                                                .font(.system(size: 16))
-                                            
-                                            Spacer()
-                                        }
-                                        .foregroundStyle(.red)
-                                        .fontWeight(.bold)
-                                        .padding(.leading)
-                                        
-                                        Spacer()
-                                        
-                                        Text("설비투자의 증가는 단기적으로 생산성을 낮추지만, 장기적으로는 GDP의 공급 측면을 강화하는 데 기여한다.")
-                                            .font(.system(size: 16))
-                                            .multilineTextAlignment(.center)
-                                            .fontWeight(.semibold)
-                                            .padding(.top, 5)
-                                            .padding(.horizontal, 10)
-                                        
-                                        Spacer()
-                                        
-                                        HStack {
-                                            Button {
-                                                self.selected_O = true
-                                                self.animationOpacity = 0.0
-                                            } label: {
-                                                LottieOButton()
-                                            }
-                                            
-                                            Button {
-                                                self.selected_X = true
-                                                self.animationOpacity = 0.0
-                                            } label: {
-                                                LottieXButton()
-                                            }
-                                        }
-                                        .padding(.bottom, 10)
-                                    }
-                                    .modifier(PannelModifier(height: 260))
-                                    .opacity(animationOpacity)
-                                    .onAppear {
-                                        withAnimation {
-                                            animationOpacity = 1.0
-                                        }
-                                    }
-                                    
-                                } else if selected_O {
-                                    VStack {
-                                        Spacer()
-                                        
-                                        Text("정답이에요😊")
-                                            .font(.system(size: 18).bold())
-                                            .foregroundStyle(.green)
-                                        
-                                        Spacer()
-                                        
-                                        Text("설비투자는 생산설비 확충을 목적으로 하므로 초기에는 비용이 발생해 단기 생산성에 부담이 될 수 있어요.\n\n하지만, 장기적으로는 생산 능력을 증대시키고 기술 혁신을 통해 GDP의 공급 측면을 강화해요. 따라서, 올바른 문장이에요.")
-                                            .font(.system(size: 16))
-                                            .multilineTextAlignment(.center)
-                                            .fontWeight(.semibold)
-                                            .padding(.top, 5)
-                                            .padding(.horizontal, 10)
-                                        
-                                        Spacer()
-                                        
-                                        Button {
-                                            self.bottomHeight = 100
+                                            self.bottomHeight = 250
                                             withAnimation {
                                                 scrollProxy.scrollTo("5", anchor: .top)
                                             }
@@ -601,13 +567,13 @@ struct BasicEconomyNewsView: View {
                                     VStack {
                                         Spacer()
                                         
-                                        Text("틀렸어요🥲")
+                                        Text("정답이에요😊")
                                             .font(.system(size: 18).bold())
-                                            .foregroundStyle(.red)
+                                            .foregroundStyle(.green)
                                         
                                         Spacer()
                                         
-                                        Text("설비투자는 생산설비 확충을 목적으로 하므로 초기에는 비용이 발생해 단기 생산성에 부담이 될 수 있어요.\n\n하지만, 장기적으로는 생산 능력을 증대시키고 기술 혁신을 통해 GDP의 공급 측면을 강화해요. 따라서, 올바른 문장이에요.")
+                                        Text("비용 상승을 소비자 가격에 전가하면 기업은 단기적으로 이윤 압박을 피할 수 있으나, 소비자 가격 상승으로 인해 소비자 물가 지수는 오히려 상승해요.\n\n따라서 소비자 물가 지수 하락 효과는 발생하지 않아요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
@@ -617,7 +583,7 @@ struct BasicEconomyNewsView: View {
                                         Spacer()
                                         
                                         Button {
-                                            self.bottomHeight = 100
+                                            self.bottomHeight = 250
                                             withAnimation {
                                                 scrollProxy.scrollTo("5", anchor: .top)
                                             }
@@ -661,11 +627,7 @@ struct BasicEconomyNewsView: View {
                                     
                                     Spacer()
                                     
-                                    (Text("재난지원금과 저소득층 지원은 ")
-                                     + Text("소득 재분배 효과")
-                                        .foregroundStyle(Color.ESTitle)
-                                        .fontWeight(.bold)
-                                     + Text("를 통해 소비 성향이 높은 계층의 소비를 촉진하는 데 효과적이에요.\n\n이는 단기적으로 내수 활성화를 이끌고, 경기 하강을 방어하는 수단으로 작용해요.")
+                                    (Text("정부는 단기적으로 필수품 가격 억제로 소비자 부담을 줄이고, 중장기적으로 공급망 안정과 에너지 확보로 인플레이션 구조 문제를 해결해요.\n\n중앙은행의 금리 인상과 유동성 조절은 인플레이션 기대를 관리하며, 과열된 수요를 진정시켜 경제 전반의 안정성을 회복하려는 통화 정책의 핵심 수단이라고 볼 수 있어요.")
                                     )
                                     .font(.system(size: 16))
                                     .multilineTextAlignment(.center)
@@ -676,9 +638,9 @@ struct BasicEconomyNewsView: View {
                                     Spacer()
                                     
                                     Button {
-                                        self.bottomHeight = 200
+                                        self.bottomHeight = 270
                                         withAnimation {
-                                            scrollProxy.scrollTo("7", anchor: .top)
+                                            scrollProxy.scrollTo("4", anchor: .top)
                                         }
                                         self.progress.append(0)
                                         self.animationOpacity = 0.0
@@ -689,7 +651,7 @@ struct BasicEconomyNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 320))
+                                .modifier(PannelModifier(height: 340))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
@@ -719,7 +681,7 @@ struct BasicEconomyNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("국민소득이 증가하면 소비 성향이 감소하는 경향이 있으며, 이는 저축률 증가로 이어질 가능성이 높다.")
+                                        Text("정부와 중앙은행의 신속한 정책 대응은 중장기적으로 가격 안정에 기여할 뿐만 아니라, 단기적으로 물가 상승 압력을 완전히 제거하는 효과도 있다.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
@@ -730,6 +692,10 @@ struct BasicEconomyNewsView: View {
                                         
                                         HStack {
                                             Button {
+                                                self.bottomHeight = 325
+                                                withAnimation {
+                                                    scrollProxy.scrollTo("7", anchor: .top)
+                                                }
                                                 self.selected_O = true
                                                 self.animationOpacity = 0.0
                                             } label: {
@@ -737,6 +703,10 @@ struct BasicEconomyNewsView: View {
                                             }
                                             
                                             Button {
+                                                self.bottomHeight = 325
+                                                withAnimation {
+                                                    scrollProxy.scrollTo("7", anchor: .top)
+                                                }
                                                 self.selected_X = true
                                                 self.animationOpacity = 0.0
                                             } label: {
@@ -757,13 +727,13 @@ struct BasicEconomyNewsView: View {
                                     VStack {
                                         Spacer()
                                         
-                                        Text("정답이에요😊")
+                                        Text("틀렸어요🥲")
                                             .font(.system(size: 18).bold())
-                                            .foregroundStyle(.green)
+                                            .foregroundStyle(.red)
                                         
                                         Spacer()
                                         
-                                        Text("국민소득이 증가하면 추가 소득 중 일부는 소비로 사용되지만, 한계소비성향이 감소하는 경향이 있어요. n즉, 소득이 높아질수록 저축에 할당되는 비율이 증가한다는 뜻이에요.\n\n이는 경제 이론에서 저축률 증가와 연관되는 일반적인 현상으로 분석된다. 따라서 올바른 문장이에요.")
+                                        Text("정부와 중앙은행의 정책 대응은 중장기적으로 가격 수준을 안정시키는 데 기여할 수 있으나, 단기적으로는 물가 상승 압력을 완전히 제거하기 어려워요.\n\n단기적 효과는 제한적이며, 즉각적인 인플레이션 완화는 기대하기 어렵다고 볼 수 있어요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
@@ -773,13 +743,7 @@ struct BasicEconomyNewsView: View {
                                         Spacer()
                                         
                                         Button {
-                                            self.bottomHeight = 290
-                                            withAnimation {
-                                                scrollProxy.scrollTo("11", anchor: .top)
-                                            }
-                                            self.progress.append(0)
-                                            self.selected_O = false
-                                            self.animationOpacity = 0.0
+                                            
                                         } label: {
                                             LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
                                                 .padding(.top, 10)
@@ -799,13 +763,13 @@ struct BasicEconomyNewsView: View {
                                     VStack {
                                         Spacer()
                                         
-                                        Text("틀렸어요🥲")
+                                        Text("정답이에요😊")
                                             .font(.system(size: 18).bold())
-                                            .foregroundStyle(.red)
+                                            .foregroundStyle(.green)
                                         
                                         Spacer()
                                         
-                                        Text("국민소득이 증가하면 추가 소득 중 일부는 소비로 사용되지만, 한계소비성향이 감소하는 경향이 있어요. n즉, 소득이 높아질수록 저축에 할당되는 비율이 증가한다는 뜻이에요.\n\n이는 경제 이론에서 저축률 증가와 연관되는 일반적인 현상으로 분석된다. 따라서 올바른 문장이에요.")
+                                        Text("정부와 중앙은행의 정책 대응은 중장기적으로 가격 수준을 안정시키는 데 기여할 수 있으나, 단기적으로는 물가 상승 압력을 완전히 제거하기 어려워요.\n\n단기적 효과는 제한적이며, 즉각적인 인플레이션 완화는 기대하기 어렵다고 볼 수 있어요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
@@ -815,15 +779,9 @@ struct BasicEconomyNewsView: View {
                                         Spacer()
                                         
                                         Button {
-                                            self.bottomHeight = 290
-                                            withAnimation {
-                                                scrollProxy.scrollTo("11", anchor: .top)
-                                            }
-                                            self.progress.append(0)
-                                            self.selected_X = false
-                                            self.animationOpacity = 0.0
+                                            
                                         } label: {
-                                            LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
+                                            LottieView(fileName: "CourseCompleteButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
                                                 .padding(.top, 10)
                                                 .padding(.bottom, 10)
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
@@ -835,119 +793,6 @@ struct BasicEconomyNewsView: View {
                                         withAnimation {
                                             animationOpacity = 1.0
                                         }
-                                    }
-                                }
-                                
-                            } else if progress.count == 7 {
-                                VStack {
-                                    Spacer()
-                                    
-                                    HStack {
-                                        Image(systemName: "pencil.circle")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 16)
-                                        
-                                        Text("분석")
-                                            .font(.system(size: 16))
-                                        
-                                        Spacer()
-                                    }
-                                    .foregroundStyle(Color.ESTitle)
-                                    .fontWeight(.bold)
-                                    .padding(.leading)
-                                    
-                                    Spacer()
-                                    
-                                    (Text("질적 성장은 단순한 경제 규모의 확대가 아닌, ")
-                                     + Text("생산성 향상과 기술 발전을 동반하는 성장")
-                                        .foregroundStyle(Color.ESTitle)
-                                        .fontWeight(.bold)
-                                     + Text("을 의미하며, 고부가가치 산업으로의 전환과 효율적인 자원 배분이 핵심이 돼요.")
-                                    )
-                                    .font(.system(size: 16))
-                                    .multilineTextAlignment(.center)
-                                    .fontWeight(.semibold)
-                                    .padding(.top, 10)
-                                    .padding(.horizontal, 10)
-                                    
-                                    Spacer()
-                                    
-                                    Button {
-                                        self.bottomHeight = 335
-                                        withAnimation {
-                                            scrollProxy.scrollTo("11", anchor: .top)
-                                        }
-                                        self.progress.append(0)
-                                        self.animationOpacity = 0.0
-                                    } label: {
-                                        LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
-                                            .padding(.top, 10)
-                                            .padding(.bottom, 10)
-                                            .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
-                                    }
-                                }
-                                .modifier(PannelModifier(height: 270))
-                                .opacity(animationOpacity)
-                                .onAppear {
-                                    withAnimation {
-                                        animationOpacity = 1.0
-                                    }
-                                }
-                                
-                            } else if progress.count == 8 {
-                                VStack {
-                                    Spacer()
-                                    
-                                    HStack {
-                                        Image(systemName: "pencil.circle")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 16)
-                                        
-                                        Text("분석")
-                                            .font(.system(size: 16))
-                                        
-                                        Spacer()
-                                    }
-                                    .foregroundStyle(Color.ESTitle)
-                                    .fontWeight(.bold)
-                                    .padding(.leading)
-                                    
-                                    Spacer()
-                                    
-                                    (Text("소비와 투자는 경제의 단기 성장 동력으로 작용하지만, 장기적 경제 안정성과 지속 가능성을 위해 ")
-                                     + Text("정책적 지원")
-                                        .foregroundStyle(Color.ESTitle)
-                                        .fontWeight(.bold)
-                                     + Text("과 ")
-                                     + Text("구조적 개혁")
-                                        .foregroundStyle(Color.ESTitle)
-                                        .fontWeight(.bold)
-                                     + Text("이 필요해요.\n\n이는 외부 충격에 대한 경제의 회복 탄력성을 강화하는 데 기여한다고 볼 수 있어요.")
-                                    )
-                                    .font(.system(size: 16))
-                                    .multilineTextAlignment(.center)
-                                    .fontWeight(.semibold)
-                                    .padding(.top, 10)
-                                    .padding(.horizontal, 10)
-                                    
-                                    Spacer()
-                                    
-                                    Button {
-                                        
-                                    } label: {
-                                        LottieView(fileName: "CourseCompleteButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
-                                            .padding(.top, 10)
-                                            .padding(.bottom, 10)
-                                            .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
-                                    }
-                                }
-                                .modifier(PannelModifier(height: 320))
-                                .opacity(animationOpacity)
-                                .onAppear {
-                                    withAnimation {
-                                        animationOpacity = 1.0
                                     }
                                 }
                             }
@@ -989,7 +834,7 @@ struct BasicEconomyNewsView: View {
 }
 
 #Preview {
-    BasicEconomyNewsView(viewModel: NewsViewModel(news: News.DUMMY_NEWS))
+    PriceLevelNewsView(viewModel: NewsViewModel(news: News.DUMMY_NEWS))
         .environment(NavigationRouter())
         .environment(NewsListCapsule())
 }
