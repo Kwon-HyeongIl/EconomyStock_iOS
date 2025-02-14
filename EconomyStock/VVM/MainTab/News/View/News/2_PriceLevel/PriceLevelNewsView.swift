@@ -68,7 +68,7 @@ struct PriceLevelNewsView: View {
                                 
                                 
                                 JustifiedText("최근 국내 물가 상승률이 지속되면서 소비자와 기업 모두 큰 부담을 겪고 있다. 생활비 부담 증가는 국민의 실질 구매력 감소와 생활 수준 하락 우려를 낳고 있으며, 정부와 중앙은행은 물가 안정을 위해 다양한 대응 전략을 펼치고 있다.")
-                                    .frame(height: geometryProxy.size.width > 380 ? 91 : 75)
+                                    .frame(height: geometryProxy.size.width > 380 ? 91 : 73)
                                     .padding(.horizontal, 10)
                                     .overlay {
                                         if progress.count == 1 {
