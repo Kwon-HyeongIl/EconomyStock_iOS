@@ -226,6 +226,7 @@
 		CAACCD0F2CF87D5B004156C9 /* ArrowDown.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAACCD0E2CF87D5B004156C9 /* ArrowDown.lottie */; };
 		CAB155952D1D184A00A6594C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB155942D1D184A00A6594C /* StoreKit.framework */; };
 		CAB1CA492D5C67390026CB51 /* UnEmploymentNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1CA482D5C67390026CB51 /* UnEmploymentNewsView.swift */; };
+		CAB1CA4C2D5F47D10026CB51 /* MoneyAndFinanceNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1CA4B2D5F47D10026CB51 /* MoneyAndFinanceNewsView.swift */; };
 		CAB6E7342D0EE66600B4AE82 /* CourseManager+Entrance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB6E7332D0EE66600B4AE82 /* CourseManager+Entrance.swift */; };
 		CAB77FD72CB8EC2900DF11D6 /* CourseToolbarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */; };
 		CAB77FD92CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */; };
@@ -517,6 +518,7 @@
 		CAACCD0E2CF87D5B004156C9 /* ArrowDown.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ArrowDown.lottie; sourceTree = "<group>"; };
 		CAB155942D1D184A00A6594C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CAB1CA482D5C67390026CB51 /* UnEmploymentNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnEmploymentNewsView.swift; sourceTree = "<group>"; };
+		CAB1CA4B2D5F47D10026CB51 /* MoneyAndFinanceNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAndFinanceNewsView.swift; sourceTree = "<group>"; };
 		CAB6E7332D0EE66600B4AE82 /* CourseManager+Entrance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseManager+Entrance.swift"; sourceTree = "<group>"; };
 		CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseToolbarModifier.swift; sourceTree = "<group>"; };
 		CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackHomeModifier.swift; sourceTree = "<group>"; };
@@ -1130,6 +1132,7 @@
 				CA9CA79F2D33FDC500EEF9D3 /* 1_BasicEconomy */,
 				CA37DE4D2D5325DA00C5F090 /* 2_PriceLevel */,
 				CAB1CA472D5C67150026CB51 /* 3_UnEmployment */,
+				CAB1CA4A2D5F478C0026CB51 /* 4_MoneyAndFinance */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -1690,6 +1693,14 @@
 			path = 3_UnEmployment;
 			sourceTree = "<group>";
 		};
+		CAB1CA4A2D5F478C0026CB51 /* 4_MoneyAndFinance */ = {
+			isa = PBXGroup;
+			children = (
+				CAB1CA4B2D5F47D10026CB51 /* MoneyAndFinanceNewsView.swift */,
+			);
+			path = 4_MoneyAndFinance;
+			sourceTree = "<group>";
+		};
 		CAB77FD52CB8EC1600DF11D6 /* Course */ = {
 			isa = PBXGroup;
 			children = (
@@ -2180,6 +2191,7 @@
 				CAAA25062CE8555F00F8C380 /* UnEmployment3View.swift in Sources */,
 				CACF342E2CEDD51500ECC6FA /* MoneyAndFinance15View.swift in Sources */,
 				CAEDDAC22CB570710046162D /* BasicLoginFocusField.swift in Sources */,
+				CAB1CA4C2D5F47D10026CB51 /* MoneyAndFinanceNewsView.swift in Sources */,
 				CA9CF5782D00613200114807 /* EconomicIndicatorCycleContainer.swift in Sources */,
 				CAEE16632CAD0D7200210BD0 /* AuthViewModel+Kakao.swift in Sources */,
 				CAD255FA2CE6DE35008E7788 /* PriceLevel6View.swift in Sources */,
