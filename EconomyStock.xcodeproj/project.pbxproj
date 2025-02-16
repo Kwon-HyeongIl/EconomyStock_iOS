@@ -301,8 +301,8 @@
 		CAEE16652CAD0D7800210BD0 /* AuthViewModel+Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE16642CAD0D7800210BD0 /* AuthViewModel+Apple.swift */; };
 		CAF2271D2CAE569B002868F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAF2271C2CAE569B002868F4 /* GoogleService-Info.plist */; };
 		CAF2E6CF2CF5B34F000643C7 /* MoneyAndFinance7_MoneyControl.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAF2E6CE2CF5B34F000643C7 /* MoneyAndFinance7_MoneyControl.lottie */; };
-		CAFC58432D61B5B300F7EEB3 /* CompletionEffect.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAFC58422D61B5B300F7EEB3 /* CompletionEffect.lottie */; };
 		CAFC58452D61B73900F7EEB3 /* NewsCompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFC58442D61B73900F7EEB3 /* NewsCompletionView.swift */; };
+		CAFC584A2D61C25300F7EEB3 /* CompletionEffect.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAFC58492D61C25300F7EEB3 /* CompletionEffect.lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -589,8 +589,8 @@
 		CAEE16642CAD0D7800210BD0 /* AuthViewModel+Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthViewModel+Apple.swift"; sourceTree = "<group>"; };
 		CAF2271C2CAE569B002868F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAF2E6CE2CF5B34F000643C7 /* MoneyAndFinance7_MoneyControl.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance7_MoneyControl.lottie; sourceTree = "<group>"; };
-		CAFC58422D61B5B300F7EEB3 /* CompletionEffect.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = CompletionEffect.lottie; sourceTree = "<group>"; };
 		CAFC58442D61B73900F7EEB3 /* NewsCompletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCompletionView.swift; sourceTree = "<group>"; };
+		CAFC58492D61C25300F7EEB3 /* CompletionEffect.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = CompletionEffect.lottie; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1954,7 +1954,7 @@
 		CAFC58412D61B5AB00F7EEB3 /* Effect */ = {
 			isa = PBXGroup;
 			children = (
-				CAFC58422D61B5B300F7EEB3 /* CompletionEffect.lottie */,
+				CAFC58492D61C25300F7EEB3 /* CompletionEffect.lottie */,
 			);
 			path = Effect;
 			sourceTree = "<group>";
@@ -2063,7 +2063,7 @@
 				CA6875A62CF182C100DC819A /* MainTab_Profile_On.lottie in Resources */,
 				CA6875A72CF182C100DC819A /* MainTab_Home.lottie in Resources */,
 				CA6875DB2CF1884500DC819A /* BasicEconomy10_Distribution.lottie in Resources */,
-				CAFC58432D61B5B300F7EEB3 /* CompletionEffect.lottie in Resources */,
+				CAFC584A2D61C25300F7EEB3 /* CompletionEffect.lottie in Resources */,
 				CA6876092CF18DA100DC819A /* MoneyAndFinance1_Money.lottie in Resources */,
 				CA6875A82CF182C100DC819A /* MainTab_News_On.lottie in Resources */,
 				CA6875CB2CF185AE00DC819A /* BasicEconomy1_Earth.lottie in Resources */,

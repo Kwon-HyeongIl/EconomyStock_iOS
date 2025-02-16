@@ -1121,7 +1121,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                     .closeOnTapOutside(true)
             }
             .popup(isPresented: $endPopup) {
-                CourseCompletionView(type: .basicEconomy, currentPage: viewModel.currentPage, isPopupLoading: $isPopupLoading, loadingBarState: $loadingBarState)
+                NewsCompletionView(type: .exchangeRateAndBalanceOfPayment, currentPage: viewModel.currentPage, isPopupLoading: $isPopupLoading, loadingBarState: $loadingBarState)
                     .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                     .onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {

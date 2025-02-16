@@ -26,16 +26,16 @@ struct CourseCompletionView: View {
             if isPopupLoading {
                 LottieView(fileName: "CompletionEffect", loopMode: .playOnce, width: 120, height: 120)
             } else {
-                LottieView(fileName: viewModel.courseCover, loopMode: .loop, width: 150, height: 150)
+                LottieView(fileName: viewModel.courseCover, loopMode: .loop, width: 140, height: 140)
                 
                 Text(viewModel.courseName)
                     .font(.system(size: 30, design: .serif))
                     .fontWeight(.bold)
+                    .padding(.bottom, 30)
                 
                 Text("축하드려요!")
                     .font(.system(size: 20))
                     .fontWeight(.semibold)
-                    .padding(.top)
                 
                 Text("강의를 성공적으로 마쳤어요!")
                     .font(.system(size: 20))
@@ -71,7 +71,7 @@ struct CourseCompletionView: View {
                 }
             }
         }
-        .frame(width: 320, height: 520)
+        .frame(width: 320, height: 500)
         .background(.ultraThickMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 20))
     }

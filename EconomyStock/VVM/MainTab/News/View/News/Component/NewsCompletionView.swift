@@ -26,11 +26,35 @@ struct NewsCompletionView: View {
             if isPopupLoading {
                 LottieView(fileName: "CompletionEffect", loopMode: .playOnce, width: 120, height: 120)
             } else {
-                LottieView(fileName: viewModel.courseCover, loopMode: .loop, width: 150, height: 150)
-                
-                Text(viewModel.courseName)
-                    .font(.system(size: 30, design: .serif))
-                    .fontWeight(.bold)
+                VStack {
+                    HStack {
+                        LottieView(fileName: viewModel.courseCover, loopMode: .loop, width: 20, height: 20)
+                            .scaleEffect(2.5)
+                            .padding(.bottom)
+                            .padding(.trailing, 5)
+                        
+                        Text(viewModel.courseName)
+                            .font(.system(size: 18, design: .serif))
+                            .fontWeight(.bold)
+                    }
+                    
+                    HStack {
+                        Text(viewModel.newsName)
+                            .foregroundStyle(.white)
+                            .font(.system(size: 15).bold())
+                            .padding(.horizontal, 10)
+                    }
+                    .frame(width: 190, height: 80)
+                    .background(NewsBackgroundView())
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(lineWidth: 3)
+                            .foregroundStyle(Color(hex: "4d4d4d"))
+                    }
+                }
+                .scaleEffect(1.2)
+                .padding(.bottom, 30)
                 
                 Text("축하드려요!")
                     .font(.system(size: 20))
@@ -44,17 +68,17 @@ struct NewsCompletionView: View {
                     .padding(.top, 5)
                 
                 Button {
-//                    withAnimation(.smooth(duration: 0.2)) {
-//                        loadingBarState = true
-//                    }
-//                    
-//                    Task {
+                    withAnimation(.smooth(duration: 0.2)) {
+                        loadingBarState = true
+                    }
+                    
+                    Task {
 //                        await viewModel.updateUserCoursePage()
-//                        
-//                        newsListCapule.isUpdateToggle.toggle()
-//                    }
-//                    
-//                    navRouter.popToRoot()
+                        
+                        newsListCapule.isUpdateToggle.toggle()
+                    }
+                    
+                    navRouter.popToRoot()
                 } label: {
                     RoundedRectangle(cornerRadius: 20)
                         .frame(width: 80, height: 40)
@@ -71,7 +95,7 @@ struct NewsCompletionView: View {
                 }
             }
         }
-        .frame(width: 320, height: 520)
+        .frame(width: 320, height: 500)
         .background(.ultraThickMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 20))
     }
@@ -80,5 +104,5 @@ struct NewsCompletionView: View {
 #Preview {
     NewsCompletionView(type: .basicEconomy, currentPage: 1, isPopupLoading: .constant(false), loadingBarState: .constant(false))
         .environment(NavigationRouter())
-        .environment(CourseListCapsule())
+        .environment(NewsListCapsule())
 }
