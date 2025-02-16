@@ -59,7 +59,7 @@ struct NewsCoverView: View {
                             .padding(.leading, 20)
                             
                             HStack {
-                                Text(viewModel.news.articleTitle)
+                                Text(viewModel.news.newsTitle)
                                     .foregroundStyle(.white)
                                     .font(.system(size: 15).bold())
                                     .padding(.horizontal, 10)

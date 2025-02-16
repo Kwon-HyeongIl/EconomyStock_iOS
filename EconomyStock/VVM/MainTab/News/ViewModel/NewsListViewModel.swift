@@ -47,7 +47,7 @@ class NewsListViewModel {
         let lastPage = isLogin ? remoteUser?.studyingNews.basicEconomyLastPage ?? 0 : localUser?.studyingNews.basicEconomyLastPage ?? 0
         
         DispatchQueue.main.async {
-            self.newsList.append(News(id: UUID().uuidString, type: .basicEconomy, title: "기초 경제", articleTitle: "소비 투자 활황... 국민소득 5% 증가", number: "I", lottieFileName: "BasicEconomyCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
+            self.newsList.append(News(id: UUID().uuidString, type: .basicEconomy, title: "기초 경제", newsTitle: "소비 투자 활황... 국민소득 5% 증가", number: "I", lottieFileName: "BasicEconomyCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
         }
     }
     
@@ -66,7 +66,7 @@ class NewsListViewModel {
         let lastPage = isLogin ? remoteUser?.studyingNews.priceLevelLastPage ?? 0 : localUser?.studyingNews.priceLevelLastPage ?? 0
         
         DispatchQueue.main.async {
-            self.newsList.append(News(id: UUID().uuidString, type: .priceLevel, title: "물가", articleTitle: "고공행진 인플레이션, 서민 경제 직격탄", number: "II", lottieFileName: "PriceLevelCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
+            self.newsList.append(News(id: UUID().uuidString, type: .priceLevel, title: "물가", newsTitle: "고공행진 인플레이션, 서민 경제 직격탄", number: "II", lottieFileName: "PriceLevelCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
         }
     }
     
@@ -85,7 +85,7 @@ class NewsListViewModel {
         let lastPage = isLogin ? remoteUser?.studyingNews.unEmploymentLastPage ?? 0 : localUser?.studyingNews.unEmploymentLastPage ?? 0
         
         DispatchQueue.main.async {
-            self.newsList.append(News(id: UUID().uuidString, type: .unEmployment, title: "실업", articleTitle: "실망노동자 증가... 실업률 통계에 잡히지 않는 '보이지 않는 위기'", number: "III", lottieFileName: "UnEmploymentCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
+            self.newsList.append(News(id: UUID().uuidString, type: .unEmployment, title: "실업", newsTitle: "실망노동자 증가... 실업률 통계에 잡히지 않는 '보이지 않는 위기'", number: "III", lottieFileName: "UnEmploymentCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
         }
     }
     
@@ -104,7 +104,7 @@ class NewsListViewModel {
         let lastPage = isLogin ? remoteUser?.studyingNews.moneyAndFinanceLastPage ?? 0 : localUser?.studyingNews.moneyAndFinanceLastPage ?? 0
         
         DispatchQueue.main.async {
-            self.newsList.append(News(id: UUID().uuidString, type: .moneyAndFinance, title: "화폐와 금융", articleTitle: "한국은행, 화폐공급 확대... 경기 부양 속 물가 우려", number: "IV", lottieFileName: "MoneyAndFinanceCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
+            self.newsList.append(News(id: UUID().uuidString, type: .moneyAndFinance, title: "화폐와 금융", newsTitle: "한국은행, 화폐공급 확대... 경기 부양 속 물가 우려", number: "IV", lottieFileName: "MoneyAndFinanceCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
         }
     }
     
@@ -123,7 +123,7 @@ class NewsListViewModel {
         let lastPage = isLogin ? remoteUser?.studyingNews.exchangeRateAndBalanceOfPaymentLastPage ?? 0 : localUser?.studyingNews.exchangeRateAndBalanceOfPaymentLastPage ?? 0
         
         DispatchQueue.main.async {
-            self.newsList.append(News(id: UUID().uuidString, type: .exchangeRateAndBalanceOfPayment, title: "환율과 국제수지", articleTitle: "환율 폭등 속 금리 인하... 시장 불안 가중", number: "V", lottieFileName: "ExchangeRateAndBalanceOfPaymentCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
+            self.newsList.append(News(id: UUID().uuidString, type: .exchangeRateAndBalanceOfPayment, title: "환율과 국제수지", newsTitle: "환율 폭등 속 금리 인하... 시장 불안 가중", number: "V", lottieFileName: "ExchangeRateAndBalanceOfPaymentCourseCover", backgroundGradient: gradient, parmanentProgressPage: Int(parmanentProgressPage), progressRate: progressRate, lastPage: lastPage, totalPage: Int(totalPage)))
         }
     }
 

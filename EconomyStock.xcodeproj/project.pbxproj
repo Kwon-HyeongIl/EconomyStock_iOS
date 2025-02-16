@@ -62,7 +62,7 @@
 		CA31EA402CF6FE880005A475 /* MoneyAndFinance12_MoneyReport.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA31EA3F2CF6FE880005A475 /* MoneyAndFinance12_MoneyReport.lottie */; };
 		CA31EA422CF706630005A475 /* MoneyAndFinance13_BankMoney.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA31EA412CF706630005A475 /* MoneyAndFinance13_BankMoney.lottie */; };
 		CA3338AB2D07D6440061A6F5 /* CourseCompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3338AA2D07D6440061A6F5 /* CourseCompletionView.swift */; };
-		CA3338AD2D07D6520061A6F5 /* CourseCompletionViewModel 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3338AC2D07D6520061A6F5 /* CourseCompletionViewModel 2.swift */; };
+		CA3338AD2D07D6520061A6F5 /* CourseAndNewsCompletionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3338AC2D07D6520061A6F5 /* CourseAndNewsCompletionViewModel.swift */; };
 		CA363E1B2D3529AF00C3DF0D /* JustifiedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA363E1A2D3529AF00C3DF0D /* JustifiedText.swift */; };
 		CA37DE4F2D5325FE00C5F090 /* PriceLevelNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37DE4E2D5325FE00C5F090 /* PriceLevelNewsView.swift */; };
 		CA39D54A2CFDAC3B0009AD1C /* ExchangeRateAndBalanceOfPayment4_Banana.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA39D5492CFDAC3B0009AD1C /* ExchangeRateAndBalanceOfPayment4_Banana.lottie */; };
@@ -73,12 +73,10 @@
 		CA3BBAB62CB50441007CA152 /* NavigationBackTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */; };
 		CA41026C2D082343000579C6 /* CourseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41026B2D082343000579C6 /* CourseManager.swift */; };
 		CA4102702D082C1F000579C6 /* CourseManager+ProgressSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41026F2D082C1F000579C6 /* CourseManager+ProgressSave.swift */; };
-		CA4AD4A92D1EC15700BA98BC /* 50PercentDiscount.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA4AD4A82D1EC15700BA98BC /* 50PercentDiscount.lottie */; };
 		CA4D3EFE2D01E9AF0087E55C /* EconomicIndicatorDown.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA4D3EFC2D01E9AF0087E55C /* EconomicIndicatorDown.lottie */; };
 		CA4D3EFF2D01E9AF0087E55C /* EconomicIndicatorUp.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA4D3EFD2D01E9AF0087E55C /* EconomicIndicatorUp.lottie */; };
 		CA4D88CE2CDC70210003DE3C /* BasicEconomy10View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D88CD2CDC70210003DE3C /* BasicEconomy10View.swift */; };
 		CA4DCE002D23F6110003F14C /* NewsCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4DCDFF2D23F6110003F14C /* NewsCoverView.swift */; };
-		CA4DCE022D23F61F0003F14C /* NewsIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4DCE012D23F61F0003F14C /* NewsIntroView.swift */; };
 		CA4DCE052D23F6390003F14C /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4DCE042D23F6390003F14C /* NewsViewModel.swift */; };
 		CA4DCE082D23F6DD0003F14C /* NewsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4DCE072D23F6DD0003F14C /* NewsType.swift */; };
 		CA4DCE0A2D23F70F0003F14C /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4DCE092D23F70F0003F14C /* News.swift */; };
@@ -259,8 +257,6 @@
 		CACF34322CEDD51F00ECC6FA /* MoneyAndFinance17View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF34312CEDD51F00ECC6FA /* MoneyAndFinance17View.swift */; };
 		CACF34342CEDD52500ECC6FA /* MoneyAndFinance18View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF34332CEDD52500ECC6FA /* MoneyAndFinance18View.swift */; };
 		CACF34362CEDD52A00ECC6FA /* MoneyAndFinance19View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF34352CEDD52A00ECC6FA /* MoneyAndFinance19View.swift */; };
-		CAD05E382D1E3F7D00B836E4 /* CampingBackground.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAD05E362D1E3F7D00B836E4 /* CampingBackground.lottie */; };
-		CAD05E392D1E3F7D00B836E4 /* StageLightEffect.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAD05E372D1E3F7D00B836E4 /* StageLightEffect.lottie */; };
 		CAD101DA2CB6853200CA9C6A /* NavigationGestureEnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */; };
 		CAD101E22CB6905F00CA9C6A /* ShortButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */; };
 		CAD101E42CB6959D00CA9C6A /* StudyingCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD101E32CB6959D00CA9C6A /* StudyingCourse.swift */; };
@@ -305,6 +301,8 @@
 		CAEE16652CAD0D7800210BD0 /* AuthViewModel+Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE16642CAD0D7800210BD0 /* AuthViewModel+Apple.swift */; };
 		CAF2271D2CAE569B002868F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAF2271C2CAE569B002868F4 /* GoogleService-Info.plist */; };
 		CAF2E6CF2CF5B34F000643C7 /* MoneyAndFinance7_MoneyControl.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAF2E6CE2CF5B34F000643C7 /* MoneyAndFinance7_MoneyControl.lottie */; };
+		CAFC58432D61B5B300F7EEB3 /* CompletionEffect.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CAFC58422D61B5B300F7EEB3 /* CompletionEffect.lottie */; };
+		CAFC58452D61B73900F7EEB3 /* NewsCompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFC58442D61B73900F7EEB3 /* NewsCompletionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -361,7 +359,7 @@
 		CA31EA3F2CF6FE880005A475 /* MoneyAndFinance12_MoneyReport.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance12_MoneyReport.lottie; sourceTree = "<group>"; };
 		CA31EA412CF706630005A475 /* MoneyAndFinance13_BankMoney.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance13_BankMoney.lottie; sourceTree = "<group>"; };
 		CA3338AA2D07D6440061A6F5 /* CourseCompletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCompletionView.swift; sourceTree = "<group>"; };
-		CA3338AC2D07D6520061A6F5 /* CourseCompletionViewModel 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseCompletionViewModel 2.swift"; sourceTree = "<group>"; };
+		CA3338AC2D07D6520061A6F5 /* CourseAndNewsCompletionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseAndNewsCompletionViewModel.swift; sourceTree = "<group>"; };
 		CA363E1A2D3529AF00C3DF0D /* JustifiedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifiedText.swift; sourceTree = "<group>"; };
 		CA37DE4E2D5325FE00C5F090 /* PriceLevelNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevelNewsView.swift; sourceTree = "<group>"; };
 		CA39D5492CFDAC3B0009AD1C /* ExchangeRateAndBalanceOfPayment4_Banana.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExchangeRateAndBalanceOfPayment4_Banana.lottie; sourceTree = "<group>"; };
@@ -372,12 +370,10 @@
 		CA3BBAB52CB50441007CA152 /* NavigationBackTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackTitleModifier.swift; sourceTree = "<group>"; };
 		CA41026B2D082343000579C6 /* CourseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseManager.swift; sourceTree = "<group>"; };
 		CA41026F2D082C1F000579C6 /* CourseManager+ProgressSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseManager+ProgressSave.swift"; sourceTree = "<group>"; };
-		CA4AD4A82D1EC15700BA98BC /* 50PercentDiscount.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = 50PercentDiscount.lottie; sourceTree = "<group>"; };
 		CA4D3EFC2D01E9AF0087E55C /* EconomicIndicatorDown.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = EconomicIndicatorDown.lottie; sourceTree = "<group>"; };
 		CA4D3EFD2D01E9AF0087E55C /* EconomicIndicatorUp.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = EconomicIndicatorUp.lottie; sourceTree = "<group>"; };
 		CA4D88CD2CDC70210003DE3C /* BasicEconomy10View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy10View.swift; sourceTree = "<group>"; };
 		CA4DCDFF2D23F6110003F14C /* NewsCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCoverView.swift; sourceTree = "<group>"; };
-		CA4DCE012D23F61F0003F14C /* NewsIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsIntroView.swift; sourceTree = "<group>"; };
 		CA4DCE042D23F6390003F14C /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		CA4DCE072D23F6DD0003F14C /* NewsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsType.swift; sourceTree = "<group>"; };
 		CA4DCE092D23F70F0003F14C /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
@@ -550,8 +546,6 @@
 		CACF34312CEDD51F00ECC6FA /* MoneyAndFinance17View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAndFinance17View.swift; sourceTree = "<group>"; };
 		CACF34332CEDD52500ECC6FA /* MoneyAndFinance18View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAndFinance18View.swift; sourceTree = "<group>"; };
 		CACF34352CEDD52A00ECC6FA /* MoneyAndFinance19View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAndFinance19View.swift; sourceTree = "<group>"; };
-		CAD05E362D1E3F7D00B836E4 /* CampingBackground.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = CampingBackground.lottie; sourceTree = "<group>"; };
-		CAD05E372D1E3F7D00B836E4 /* StageLightEffect.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = StageLightEffect.lottie; sourceTree = "<group>"; };
 		CAD101D92CB6853200CA9C6A /* NavigationGestureEnable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationGestureEnable.swift; sourceTree = "<group>"; };
 		CAD101E12CB6905F00CA9C6A /* ShortButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortButtonModifier.swift; sourceTree = "<group>"; };
 		CAD101E32CB6959D00CA9C6A /* StudyingCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyingCourse.swift; sourceTree = "<group>"; };
@@ -595,6 +589,8 @@
 		CAEE16642CAD0D7800210BD0 /* AuthViewModel+Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthViewModel+Apple.swift"; sourceTree = "<group>"; };
 		CAF2271C2CAE569B002868F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAF2E6CE2CF5B34F000643C7 /* MoneyAndFinance7_MoneyControl.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance7_MoneyControl.lottie; sourceTree = "<group>"; };
+		CAFC58422D61B5B300F7EEB3 /* CompletionEffect.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = CompletionEffect.lottie; sourceTree = "<group>"; };
+		CAFC58442D61B73900F7EEB3 /* NewsCompletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCompletionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1090,7 +1086,7 @@
 		CA41026D2D082400000579C6 /* Completion */ = {
 			isa = PBXGroup;
 			children = (
-				CA3338AC2D07D6520061A6F5 /* CourseCompletionViewModel 2.swift */,
+				CA3338AC2D07D6520061A6F5 /* CourseAndNewsCompletionViewModel.swift */,
 			);
 			path = Completion;
 			sourceTree = "<group>";
@@ -1127,7 +1123,6 @@
 			children = (
 				CA7086832D240C79009081D6 /* Component */,
 				CA4DCDFF2D23F6110003F14C /* NewsCoverView.swift */,
-				CA4DCE012D23F61F0003F14C /* NewsIntroView.swift */,
 				CA9CA79F2D33FDC500EEF9D3 /* 1_BasicEconomy */,
 				CA37DE4D2D5325DA00C5F090 /* 2_PriceLevel */,
 				CAB1CA472D5C67150026CB51 /* 3_UnEmployment */,
@@ -1264,6 +1259,7 @@
 			isa = PBXGroup;
 			children = (
 				CA7086842D240C89009081D6 /* NewsBackgroundView.swift */,
+				CAFC58442D61B73900F7EEB3 /* NewsCompletionView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1306,7 +1302,7 @@
 		CA77DFCB2CB24D0100992829 /* DotLottieFile */ = {
 			isa = PBXGroup;
 			children = (
-				CAD05E352D1E3F7000B836E4 /* StockPass */,
+				CAFC58412D61B5AB00F7EEB3 /* Effect */,
 				CA07D7832D05259B00ECD3E4 /* Chatbot */,
 				CA07D7682D0438CC00ECD3E4 /* Auth */,
 				CA4D3EFB2D01E99C0087E55C /* Home */,
@@ -1771,16 +1767,6 @@
 			path = 4_MoneyAndFinance;
 			sourceTree = "<group>";
 		};
-		CAD05E352D1E3F7000B836E4 /* StockPass */ = {
-			isa = PBXGroup;
-			children = (
-				CAD05E362D1E3F7D00B836E4 /* CampingBackground.lottie */,
-				CAD05E372D1E3F7D00B836E4 /* StageLightEffect.lottie */,
-				CA4AD4A82D1EC15700BA98BC /* 50PercentDiscount.lottie */,
-			);
-			path = StockPass;
-			sourceTree = "<group>";
-		};
 		CAD101D82CB6851200CA9C6A /* NavigationGesture */ = {
 			isa = PBXGroup;
 			children = (
@@ -1965,6 +1951,14 @@
 			path = Page10;
 			sourceTree = "<group>";
 		};
+		CAFC58412D61B5AB00F7EEB3 /* Effect */ = {
+			isa = PBXGroup;
+			children = (
+				CAFC58422D61B5B300F7EEB3 /* CompletionEffect.lottie */,
+			);
+			path = Effect;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2069,6 +2063,7 @@
 				CA6875A62CF182C100DC819A /* MainTab_Profile_On.lottie in Resources */,
 				CA6875A72CF182C100DC819A /* MainTab_Home.lottie in Resources */,
 				CA6875DB2CF1884500DC819A /* BasicEconomy10_Distribution.lottie in Resources */,
+				CAFC58432D61B5B300F7EEB3 /* CompletionEffect.lottie in Resources */,
 				CA6876092CF18DA100DC819A /* MoneyAndFinance1_Money.lottie in Resources */,
 				CA6875A82CF182C100DC819A /* MainTab_News_On.lottie in Resources */,
 				CA6875CB2CF185AE00DC819A /* BasicEconomy1_Earth.lottie in Resources */,
@@ -2087,8 +2082,6 @@
 				CA6875D12CF1864E00DC819A /* BasicEconomy6_MoneyStack.lottie in Resources */,
 				CA762CC72CF86BD100983308 /* MoneyAndFinance16_Wallet.lottie in Resources */,
 				CACD04962CFEC5EF00B2DA28 /* ExchangeRateAndBalanceOfPayment10_Union.lottie in Resources */,
-				CAD05E382D1E3F7D00B836E4 /* CampingBackground.lottie in Resources */,
-				CAD05E392D1E3F7D00B836E4 /* StageLightEffect.lottie in Resources */,
 				CA6875BF2CF1847300DC819A /* PriceLevelCourseCover.lottie in Resources */,
 				CA6875DD2CF1886700DC819A /* BasicEconomy10_Payment.lottie in Resources */,
 				CAA3A55E2CF6D9D3002C55A5 /* MoneyAndFinance9_GlobalMoney.lottie in Resources */,
@@ -2146,7 +2139,6 @@
 				CA9BB9CF2CABA59A00886A1A /* .gitignore in Resources */,
 				CA6875AD2CF1831900DC819A /* Bubble.lottie in Resources */,
 				CA762CC12CF8637A00983308 /* MoneyAndFinance15_EconomySearch.lottie in Resources */,
-				CA4AD4A92D1EC15700BA98BC /* 50PercentDiscount.lottie in Resources */,
 				CA9BB9D02CABA59A00886A1A /* Assets.xcassets in Resources */,
 				CAE84EA92CF36C31006FC09A /* MoneyAndFinance3_Tissue.lottie in Resources */,
 				CA6875F52CF18B9900DC819A /* PriceLevel9_GDP.lottie in Resources */,
@@ -2203,12 +2195,13 @@
 				CA9CF5782D00613200114807 /* EconomicIndicatorCycleContainer.swift in Sources */,
 				CAEE16632CAD0D7200210BD0 /* AuthViewModel+Kakao.swift in Sources */,
 				CAD255FA2CE6DE35008E7788 /* PriceLevel6View.swift in Sources */,
-				CA3338AD2D07D6520061A6F5 /* CourseCompletionViewModel 2.swift in Sources */,
+				CA3338AD2D07D6520061A6F5 /* CourseAndNewsCompletionViewModel.swift in Sources */,
 				CA58A4ED2CB6D9E900DB91BD /* ProgressCircleView.swift in Sources */,
 				CA17FC722CB005A10050250B /* MainTabCapsule.swift in Sources */,
 				CAAAC3662D02CC870006D8DE /* DummyVerticalInticatorView.swift in Sources */,
 				CA61CEB52CE0A0C3007BCF4E /* BasicEconomy11View.swift in Sources */,
 				CAD255FC2CE6DE3C008E7788 /* PriceLevel7View.swift in Sources */,
+				CAFC58452D61B73900F7EEB3 /* NewsCompletionView.swift in Sources */,
 				CACF34262CEDD4FD00ECC6FA /* MoneyAndFinance11View.swift in Sources */,
 				CA4102702D082C1F000579C6 /* CourseManager+ProgressSave.swift in Sources */,
 				CA06791B2CFABA0E0043E974 /* AuthViewModel+BasicSignup.swift in Sources */,
@@ -2294,7 +2287,6 @@
 				CA4DCE082D23F6DD0003F14C /* NewsType.swift in Sources */,
 				CACF341A2CEDD4D500ECC6FA /* MoneyAndFinance5View.swift in Sources */,
 				CACF341E2CEDD4E300ECC6FA /* MoneyAndFinance7View.swift in Sources */,
-				CA4DCE022D23F61F0003F14C /* NewsIntroView.swift in Sources */,
 				CAAA25082CE8558100F8C380 /* UnEmployment4View.swift in Sources */,
 				CACF34202CEDD4E900ECC6FA /* MoneyAndFinance8View.swift in Sources */,
 				CAE199932CFC1E59000CFAA2 /* ExchangeRateAndBalanceOfPayment3View.swift in Sources */,

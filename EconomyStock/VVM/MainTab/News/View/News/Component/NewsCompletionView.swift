@@ -1,15 +1,15 @@
 //
-//  CourseCompletionView.swift
+//  NewsCompletionView.swift
 //  EconomyStock
 //
-//  Created by 권형일 on 12/10/24.
+//  Created by 권형일 on 2/16/25.
 //
 
 import SwiftUI
 
-struct CourseCompletionView: View {
+struct NewsCompletionView: View {
     @Environment(NavigationRouter.self) var navRouter
-    @Environment(CourseListCapsule.self) var courseListViewCapule
+    @Environment(NewsListCapsule.self) var newsListCapule
     @State private var viewModel: CourseAndNewsCompletionViewModel
     
     @Binding var isPopupLoading: Bool
@@ -37,24 +37,24 @@ struct CourseCompletionView: View {
                     .fontWeight(.semibold)
                     .padding(.top)
                 
-                Text("강의를 성공적으로 마쳤어요!")
+                Text("뉴스를 성공적으로 마쳤어요!")
                     .font(.system(size: 20))
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
                     .padding(.top, 5)
                 
                 Button {
-                    withAnimation(.smooth(duration: 0.2)) {
-                        loadingBarState = true
-                    }
-                    
-                    Task {
-                        await viewModel.updateUserCoursePage()
-                        
-                        courseListViewCapule.isUpdateToggle.toggle()
-                    }
-                    
-                    navRouter.popToRoot()
+//                    withAnimation(.smooth(duration: 0.2)) {
+//                        loadingBarState = true
+//                    }
+//                    
+//                    Task {
+//                        await viewModel.updateUserCoursePage()
+//                        
+//                        newsListCapule.isUpdateToggle.toggle()
+//                    }
+//                    
+//                    navRouter.popToRoot()
                 } label: {
                     RoundedRectangle(cornerRadius: 20)
                         .frame(width: 80, height: 40)
@@ -78,7 +78,7 @@ struct CourseCompletionView: View {
 }
 
 #Preview {
-    CourseCompletionView(type: .basicEconomy, currentPage: 1, isPopupLoading: .constant(false), loadingBarState: .constant(false))
+    NewsCompletionView(type: .basicEconomy, currentPage: 1, isPopupLoading: .constant(false), loadingBarState: .constant(false))
         .environment(NavigationRouter())
         .environment(CourseListCapsule())
 }

@@ -87,10 +87,6 @@ enum NavigationDestinationPath: Hashable {
     case ExchangeRateAndBalanceOfPayment10View(CourseViewModel)
     case ExchangeRateAndBalanceOfPayment11View(CourseViewModel)
     
-    
-    // News
-    case NewsIntroView(NewsViewModel)
-    
         // 기초 경제
     case BasicEconomyNewsView(NewsViewModel)
     

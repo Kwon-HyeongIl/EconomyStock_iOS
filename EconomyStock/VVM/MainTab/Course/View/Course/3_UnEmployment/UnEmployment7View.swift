@@ -161,8 +161,8 @@ struct UnEmployment7View: View {
                 CourseCompletionView(type: .unEmployment, currentPage: viewModel.currentPage, isPopupLoading: $isPopupLoading, loadingBarState: $loadingBarState)
                     .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                     .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3.6) {
-                            withAnimation(.smooth(duration: 1.0)) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                            withAnimation {
                                 self.isPopupLoading = false
                             }
                         }

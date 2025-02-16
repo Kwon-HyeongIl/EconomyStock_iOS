@@ -18,7 +18,11 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
     
     @State private var animationOpacity = 0.0
     
-    @State private var popup = false
+    @State private var startPopup = false
+    @State private var endPopup = false
+    @State private var isPopupLoading = true
+    
+    @State private var loadingBarState = false
     
     var body: some View {
         ScrollViewReader { scrollProxy in
@@ -1064,12 +1068,10 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                     Spacer()
                                     
                                     Button {
-                                        self.bottomHeight = 160
-                                        withAnimation {
-                                            scrollProxy.scrollTo("4", anchor: .top)
-                                        }
-                                        self.progress.append(0)
-                                        self.animationOpacity = 0.0
+                                        let view = UIView(frame: .zero)
+                                        UIImpactFeedbackGenerator(style: .light, view: view).impactOccurred()
+                                        
+                                        endPopup = true
                                     } label: {
                                         LottieView(fileName: "CourseCompleteButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
                                             .padding(.top, 10)
@@ -1096,9 +1098,9 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                 }
             }
             .onAppear {
-                popup = true
+                startPopup = true
             }
-            .popup(isPresented: $popup) {
+            .popup(isPresented: $startPopup) {
                 HStack {
                     (Text("진행하시려면 화면을 ")
                     + Text("터치 ")
@@ -1117,6 +1119,29 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                     .type(.toast)
                     .closeOnTap(true)
                     .closeOnTapOutside(true)
+            }
+            .popup(isPresented: $endPopup) {
+                CourseCompletionView(type: .basicEconomy, currentPage: viewModel.currentPage, isPopupLoading: $isPopupLoading, loadingBarState: $loadingBarState)
+                    .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                            withAnimation {
+                                self.isPopupLoading = false
+                            }
+                        }
+                    }
+            } customize: {
+                $0
+                    .animation(.spring(duration: 0.7))
+                    .closeOnTapOutside(false)
+                    .closeOnTap(false)
+                    .backgroundColor(.gray.opacity(0.8))
+            }
+            .overlay {
+                if loadingBarState {
+                    LottieView(fileName: "Loading", loopMode: .loop, width: 200, height: 200)
+                        .padding(.bottom, 60)
+                }
             }
         }
     }

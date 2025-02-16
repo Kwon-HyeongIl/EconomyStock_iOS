@@ -156,10 +156,6 @@ class NavigationRouter {
             ExchangeRateAndBalanceOfPayment10View(viewModel: viewModel)
         case .ExchangeRateAndBalanceOfPayment11View(let viewModel):
             ExchangeRateAndBalanceOfPayment11View(viewModel: viewModel)
-            
-        // News
-        case .NewsIntroView(let viewModel):
-            NewsIntroView(viewModel: viewModel)
         
         case .BasicEconomyNewsView(let viewModel):
             BasicEconomyNewsView(viewModel: viewModel)
