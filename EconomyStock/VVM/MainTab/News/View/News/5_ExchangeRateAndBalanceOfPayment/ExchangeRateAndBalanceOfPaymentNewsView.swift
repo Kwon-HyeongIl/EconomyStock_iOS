@@ -292,6 +292,19 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                                 .font(.system(size: 16))
                                             
                                             Spacer()
+                                            
+                                            Button {
+                                                self.progress.removeFirst()
+                                            } label: {
+                                                Image(systemName: "arrow.uturn.left")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .foregroundStyle(Color.ESTitle)
+                                                    .fontWeight(.medium)
+                                                    .frame(width: 15)
+                                                    .padding(.trailing, 20)
+                                                    .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
+                                            }
                                         }
                                         .foregroundStyle(.red)
                                         .fontWeight(.bold)
@@ -337,9 +350,28 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                     VStack {
                                         Spacer()
                                         
-                                        Text("정답이에요😊")
-                                            .font(.system(size: 18).bold())
-                                            .foregroundStyle(.green)
+                                        ZStack {
+                                            Text("정답이에요😊")
+                                                .font(.system(size: 18).bold())
+                                                .foregroundStyle(.green)
+                                            
+                                            HStack {
+                                                Spacer()
+                                                
+                                                Button {
+                                                    self.selected_O = false
+                                                } label: {
+                                                    Image(systemName: "arrow.uturn.left")
+                                                        .resizable()
+                                                        .scaledToFit()
+                                                        .foregroundStyle(Color.ESTitle)
+                                                        .fontWeight(.medium)
+                                                        .frame(width: 15)
+                                                        .padding(.trailing, 20)
+                                                        .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
+                                                }
+                                            }
+                                        }
                                         
                                         Spacer()
                                         
@@ -379,9 +411,28 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                     VStack {
                                         Spacer()
                                         
-                                        Text("틀렸어요🥲")
-                                            .font(.system(size: 18).bold())
-                                            .foregroundStyle(.red)
+                                        ZStack {
+                                            Text("틀렸어요🥲")
+                                                .font(.system(size: 18).bold())
+                                                .foregroundStyle(.red)
+                                            
+                                            HStack {
+                                                Spacer()
+                                                
+                                                Button {
+                                                    self.selected_X = false
+                                                } label: {
+                                                    Image(systemName: "arrow.uturn.left")
+                                                        .resizable()
+                                                        .scaledToFit()
+                                                        .foregroundStyle(Color.ESTitle)
+                                                        .fontWeight(.medium)
+                                                        .frame(width: 15)
+                                                        .padding(.trailing, 20)
+                                                        .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
+                                                }
+                                            }
+                                        }
                                         
                                         Spacer()
                                         
@@ -432,6 +483,19 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                             .font(.system(size: 16))
                                         
                                         Spacer()
+                                        
+                                        Button {
+                                            self.progress.removeFirst()
+                                        } label: {
+                                            Image(systemName: "arrow.uturn.left")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .foregroundStyle(Color.ESTitle)
+                                                .fontWeight(.medium)
+                                                .frame(width: 15)
+                                                .padding(.trailing, 20)
+                                                .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
+                                        }
                                     }
                                     .foregroundStyle(Color.ESTitle)
                                     .fontWeight(.bold)
@@ -497,6 +561,19 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                                 .font(.system(size: 16))
                                             
                                             Spacer()
+                                            
+                                            Button {
+                                                self.progress.removeFirst()
+                                            } label: {
+                                                Image(systemName: "arrow.uturn.left")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .foregroundStyle(Color.ESTitle)
+                                                    .fontWeight(.medium)
+                                                    .frame(width: 15)
+                                                    .padding(.trailing, 20)
+                                                    .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
+                                            }
                                         }
                                         .foregroundStyle(.red)
                                         .fontWeight(.bold)
@@ -542,9 +619,28 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                     VStack {
                                         Spacer()
                                         
-                                        Text("정답이에요😊")
-                                            .font(.system(size: 18).bold())
-                                            .foregroundStyle(.green)
+                                        ZStack {
+                                            Text("정답이에요😊")
+                                                .font(.system(size: 18).bold())
+                                                .foregroundStyle(.green)
+                                            
+                                            HStack {
+                                                Spacer()
+                                                
+                                                Button {
+                                                    self.selected_O = false
+                                                } label: {
+                                                    Image(systemName: "arrow.uturn.left")
+                                                        .resizable()
+                                                        .scaledToFit()
+                                                        .foregroundStyle(Color.ESTitle)
+                                                        .fontWeight(.medium)
+                                                        .frame(width: 15)
+                                                        .padding(.trailing, 20)
+                                                        .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
+                                                }
+                                            }
+                                        }
                                         
                                         Spacer()
                                         
@@ -584,9 +680,28 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                     VStack {
                                         Spacer()
                                         
-                                        Text("틀렸어요🥲")
-                                            .font(.system(size: 18).bold())
-                                            .foregroundStyle(.red)
+                                        ZStack {
+                                            Text("틀렸어요🥲")
+                                                .font(.system(size: 18).bold())
+                                                .foregroundStyle(.red)
+                                            
+                                            HStack {
+                                                Spacer()
+                                                
+                                                Button {
+                                                    self.selected_X = false
+                                                } label: {
+                                                    Image(systemName: "arrow.uturn.left")
+                                                        .resizable()
+                                                        .scaledToFit()
+                                                        .foregroundStyle(Color.ESTitle)
+                                                        .fontWeight(.medium)
+                                                        .frame(width: 15)
+                                                        .padding(.trailing, 20)
+                                                        .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
+                                                }
+                                            }
+                                        }
                                         
                                         Spacer()
                                         
@@ -637,6 +752,19 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                             .font(.system(size: 16))
                                         
                                         Spacer()
+                                        
+                                        Button {
+                                            self.progress.removeFirst()
+                                        } label: {
+                                            Image(systemName: "arrow.uturn.left")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .foregroundStyle(Color.ESTitle)
+                                                .fontWeight(.medium)
+                                                .frame(width: 15)
+                                                .padding(.trailing, 20)
+                                                .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
+                                        }
                                     }
                                     .foregroundStyle(Color.ESTitle)
                                     .fontWeight(.bold)
@@ -699,6 +827,19 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                                 .font(.system(size: 16))
                                             
                                             Spacer()
+                                            
+                                            Button {
+                                                self.progress.removeFirst()
+                                            } label: {
+                                                Image(systemName: "arrow.uturn.left")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .foregroundStyle(Color.ESTitle)
+                                                    .fontWeight(.medium)
+                                                    .frame(width: 15)
+                                                    .padding(.trailing, 20)
+                                                    .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
+                                            }
                                         }
                                         .foregroundStyle(.red)
                                         .fontWeight(.bold)
@@ -752,9 +893,28 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                     VStack {
                                         Spacer()
                                         
-                                        Text("정답이에요😊")
-                                            .font(.system(size: 18).bold())
-                                            .foregroundStyle(.green)
+                                        ZStack {
+                                            Text("정답이에요😊")
+                                                .font(.system(size: 18).bold())
+                                                .foregroundStyle(.green)
+                                            
+                                            HStack {
+                                                Spacer()
+                                                
+                                                Button {
+                                                    self.selected_O = false
+                                                } label: {
+                                                    Image(systemName: "arrow.uturn.left")
+                                                        .resizable()
+                                                        .scaledToFit()
+                                                        .foregroundStyle(Color.ESTitle)
+                                                        .fontWeight(.medium)
+                                                        .frame(width: 15)
+                                                        .padding(.trailing, 20)
+                                                        .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
+                                                }
+                                            }
+                                        }
                                         
                                         Spacer()
                                         
@@ -792,9 +952,28 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                     VStack {
                                         Spacer()
                                         
-                                        Text("틀렸어요🥲")
-                                            .font(.system(size: 18).bold())
-                                            .foregroundStyle(.red)
+                                        ZStack {
+                                            Text("틀렸어요🥲")
+                                                .font(.system(size: 18).bold())
+                                                .foregroundStyle(.red)
+                                            
+                                            HStack {
+                                                Spacer()
+                                                
+                                                Button {
+                                                    self.selected_X = false
+                                                } label: {
+                                                    Image(systemName: "arrow.uturn.left")
+                                                        .resizable()
+                                                        .scaledToFit()
+                                                        .foregroundStyle(Color.ESTitle)
+                                                        .fontWeight(.medium)
+                                                        .frame(width: 15)
+                                                        .padding(.trailing, 20)
+                                                        .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
+                                                }
+                                            }
+                                        }
                                         
                                         Spacer()
                                         
@@ -842,6 +1021,19 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                             .font(.system(size: 16))
                                         
                                         Spacer()
+                                        
+                                        Button {
+                                            self.progress.removeFirst()
+                                        } label: {
+                                            Image(systemName: "arrow.uturn.left")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .foregroundStyle(Color.ESTitle)
+                                                .fontWeight(.medium)
+                                                .frame(width: 15)
+                                                .padding(.trailing, 20)
+                                                .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
+                                        }
                                     }
                                     .foregroundStyle(Color.ESTitle)
                                     .fontWeight(.bold)
