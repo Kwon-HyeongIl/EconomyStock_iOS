@@ -19,9 +19,6 @@ enum NavigationDestinationPath: Hashable {
     // Chatbot
     case ChatbotView(ChatbotEntranceType)
     
-    // Course
-    case CourseIntroView(CourseViewModel)
-    
         // 기초 경제
     case BasicEconomy1View(CourseViewModel)
     case BasicEconomy2View(CourseViewModel)

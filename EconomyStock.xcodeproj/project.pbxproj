@@ -86,7 +86,6 @@
 		CA4DCE0E2D2403600003F14C /* NewsListCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4DCE0D2D2403600003F14C /* NewsListCapsule.swift */; };
 		CA4E71A52CB78A8300BAA70C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E71A42CB78A8300BAA70C /* Course.swift */; };
 		CA4E71A82CB78B8400BAA70C /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E71A72CB78B8400BAA70C /* CourseViewModel.swift */; };
-		CA4E71AB2CB78DE900BAA70C /* CourseIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E71AA2CB78DE900BAA70C /* CourseIntroView.swift */; };
 		CA5577FE2CEE045000F7C4A6 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5577FD2CEE045000F7C4A6 /* LottieView.swift */; };
 		CA5578002CEE048700F7C4A6 /* LottieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5577FF2CEE048700F7C4A6 /* LottieRouter.swift */; };
 		CA5578022CEE04A200F7C4A6 /* LottieViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5578012CEE04A200F7C4A6 /* LottieViewMain.swift */; };
@@ -386,7 +385,6 @@
 		CA4DCE0D2D2403600003F14C /* NewsListCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListCapsule.swift; sourceTree = "<group>"; };
 		CA4E71A42CB78A8300BAA70C /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		CA4E71A72CB78B8400BAA70C /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
-		CA4E71AA2CB78DE900BAA70C /* CourseIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseIntroView.swift; sourceTree = "<group>"; };
 		CA5577FD2CEE045000F7C4A6 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		CA5577FF2CEE048700F7C4A6 /* LottieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieRouter.swift; sourceTree = "<group>"; };
 		CA5578012CEE04A200F7C4A6 /* LottieViewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewMain.swift; sourceTree = "<group>"; };
@@ -806,7 +804,6 @@
 			children = (
 				CA3338A32D07D5CE0061A6F5 /* Component */,
 				CA114FDC2CB631A500AD5AD9 /* CourseCoverView.swift */,
-				CA4E71AA2CB78DE900BAA70C /* CourseIntroView.swift */,
 				CA92DDB12CB7D74400A7D2A4 /* 1_BasicEconomy */,
 				CA08F3962CB838620093117E /* 2_PriceLevel */,
 				CAAA25002CE8550100F8C380 /* 3_UnEmployment */,
@@ -2312,7 +2309,6 @@
 				CA2E936C2CAFB05800A883F1 /* Notification.swift in Sources */,
 				CA07D7652D0433A800ECD3E4 /* ResetPasswordFocusField.swift in Sources */,
 				CAEE164B2CAD082500210BD0 /* User.swift in Sources */,
-				CA4E71AB2CB78DE900BAA70C /* CourseIntroView.swift in Sources */,
 				CAAA250A2CE8558700F8C380 /* UnEmployment5View.swift in Sources */,
 				CA9936D22D06D62300B2F89F /* ChatbotViewModel+Entrance.swift in Sources */,
 				CAC86FDB2CE2E6C200785D4F /* ProfileViewModel.swift in Sources */,

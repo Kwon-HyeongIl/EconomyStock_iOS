@@ -30,12 +30,6 @@ class NavigationRouter {
         // Chatbot
         case .ChatbotView(let type):
             ChatbotView(type: type)
-            
-        // Studying
-        case .CourseIntroView(let viewModel):
-            CourseIntroView(viewModel: viewModel)
-            
-        
         
             // 기초 경제
         case .BasicEconomy1View(let viewModel):
