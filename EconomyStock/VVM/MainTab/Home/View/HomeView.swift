@@ -23,7 +23,7 @@ struct HomeView: View {
     @State private var M2Info = false
     @State private var EGRInfo = false
     @State private var URInfo = false
-
+    
     var body: some View {
         VStack(spacing: 0) {
             VStack {
@@ -237,31 +237,29 @@ struct HomeView: View {
                                         Spacer()
                                         
                                         Button {
-                                            withAnimation {
-                                                self.BRInfo = true
-                                            } label: {
-                                                Image(systemName: "info.circle")
-                                                    .scaledToFit()
-                                                    .frame(width: 18, height: 18)
-                                                    .foregroundStyle(.gray.opacity(0.6))
-                                                    .padding(.top, 8)
-                                                    .padding(.trailing, 8)
-                                            }
-                                            .alert("기준금리", isPresented: $BRInfo) {
-                                                Button {
-                                                    
-                                                } label: {
-                                                    Text("확인")
-                                                }
-                                            } message: {
-                                                Text("금리 체계의 기준이 되는 금리를 의미하며, 매월 금융통화위원회에서 결정돼요")
-                                            }
+                                            self.BRInfo = true
+                                        } label: {
+                                            Image(systemName: "info.circle")
+                                                .scaledToFit()
+                                                .frame(width: 18, height: 18)
+                                                .foregroundStyle(.gray.opacity(0.6))
+                                                .padding(.top, 8)
+                                                .padding(.trailing, 8)
                                         }
-                                        
-                                        Spacer()
+                                        .alert("기준금리", isPresented: $BRInfo) {
+                                            Button {
+                                                
+                                            } label: {
+                                                Text("확인")
+                                            }
+                                        } message: {
+                                            Text("금리 체계의 기준이 되는 금리를 의미하며, 매월 금융통화위원회에서 결정돼요")
+                                        }
                                     }
-                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                    
+                                    Spacer()
                                 }
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
                             }
                             
                         } else {
