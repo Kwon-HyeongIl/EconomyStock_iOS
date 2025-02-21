@@ -103,7 +103,7 @@ struct ProfileView: View {
                     .frame(maxWidth: .infinity)
                     .background(.ultraThickMaterial)
                     .cornerRadius(20.0, corners: .allCorners)
-                    .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
+                    .shadow(color: .gray.opacity(0.1), radius: 3, x: 3, y: 3)
                     .padding(.horizontal, 10)
                     
                     
@@ -119,7 +119,7 @@ struct ProfileView: View {
                     .frame(height: 120)
                     .background(.ultraThickMaterial)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
-                    .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
+                    .shadow(color: .gray.opacity(0.1), radius: 3, x: 3, y: 3)
                     .padding(.horizontal, 10)
                     .padding(.top, 20)
                     
