@@ -171,6 +171,7 @@
 		CA8526E52D030E800042B6F9 /* BeforeYearType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8526E42D030E800042B6F9 /* BeforeYearType.swift */; };
 		CA8B5DB72CFF23020070DB71 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B5DB62CFF23020070DB71 /* HomeViewModel.swift */; };
 		CA8B5DBF2CFF24650070DB71 /* EconomicIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B5DBE2CFF24650070DB71 /* EconomicIndicatorManager.swift */; };
+		CA92A4102D688C390019D057 /* AuthManager+Studying.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92A40F2D688C390019D057 /* AuthManager+Studying.swift */; };
 		CA92DDB32CB7D7A600A7D2A4 /* BasicEconomy1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDB22CB7D7A600A7D2A4 /* BasicEconomy1View.swift */; };
 		CA92DDB52CB7D7AF00A7D2A4 /* BasicEconomy2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDB42CB7D7AF00A7D2A4 /* BasicEconomy2View.swift */; };
 		CA92DDB72CB7D7B900A7D2A4 /* BasicEconomy3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92DDB62CB7D7B900A7D2A4 /* BasicEconomy3View.swift */; };
@@ -466,6 +467,7 @@
 		CA8526E42D030E800042B6F9 /* BeforeYearType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeYearType.swift; sourceTree = "<group>"; };
 		CA8B5DB62CFF23020070DB71 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CA8B5DBE2CFF24650070DB71 /* EconomicIndicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndicatorManager.swift; sourceTree = "<group>"; };
+		CA92A40F2D688C390019D057 /* AuthManager+Studying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthManager+Studying.swift"; sourceTree = "<group>"; };
 		CA92DDB22CB7D7A600A7D2A4 /* BasicEconomy1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy1View.swift; sourceTree = "<group>"; };
 		CA92DDB42CB7D7AF00A7D2A4 /* BasicEconomy2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy2View.swift; sourceTree = "<group>"; };
 		CA92DDB62CB7D7B900A7D2A4 /* BasicEconomy3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEconomy3View.swift; sourceTree = "<group>"; };
@@ -1862,6 +1864,7 @@
 				CAEE16512CAD0C3F00210BD0 /* AuthManager+SocialLogin.swift */,
 				CAEE16592CAD0CBA00210BD0 /* AuthManager+Hash.swift */,
 				CAC288272D108AF3006B6415 /* AuthManager+Migrate.swift */,
+				CA92A40F2D688C390019D057 /* AuthManager+Studying.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -2295,6 +2298,7 @@
 				CACF34202CEDD4E900ECC6FA /* MoneyAndFinance8View.swift in Sources */,
 				CAE199932CFC1E59000CFAA2 /* ExchangeRateAndBalanceOfPayment3View.swift in Sources */,
 				CA92DDB72CB7D7B900A7D2A4 /* BasicEconomy3View.swift in Sources */,
+				CA92A4102D688C390019D057 /* AuthManager+Studying.swift in Sources */,
 				CA08F39E2CB839580093117E /* PriceLevel4View.swift in Sources */,
 				CA0679232CFB22680043E974 /* ExchangeRateAndBalanceOfPayment1View.swift in Sources */,
 				CAE1998F2CFBF790000CFAA2 /* Color+Hex.swift in Sources */,

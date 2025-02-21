@@ -20,6 +20,14 @@ class ProfileViewModel: Hashable, Equatable {
         AuthManager.shared.isLogin
     }
     
+    var totalStudyingRate: Double {
+        if isLogin {
+            AuthManager.shared.remoteUser?.totalStudyingRate ?? 0.0
+        } else {
+            AuthManager.shared.localUser?.totalStudyingRate ?? 0.0
+        }
+    }
+    
     func singOut() {
         AuthManager.shared.signOut()
     }

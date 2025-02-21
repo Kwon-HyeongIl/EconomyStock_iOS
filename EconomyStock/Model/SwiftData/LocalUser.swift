@@ -16,7 +16,7 @@ class LocalUser {
     var isNotificationBadge: Bool?
     var notificationType: [NotificationType]
     
-    var totalStudyingPercentage: Double
+    var totalStudyingRate: Double
     var studyingCourse: StudyingCourse
     var studyingNews: StudyingNews
     
@@ -25,7 +25,7 @@ class LocalUser {
         self.deviceToken = deviceToken
         self.isNotificationBadge = isNotificationBadge
         self.notificationType = notificationType
-        self.totalStudyingPercentage = totalStudyingPercentage
+        self.totalStudyingRate = totalStudyingPercentage
         self.studyingCourse = studyingCourse
         self.studyingNews = studyingNews
     }

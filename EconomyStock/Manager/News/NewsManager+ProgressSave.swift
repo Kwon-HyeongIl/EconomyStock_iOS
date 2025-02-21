@@ -25,6 +25,12 @@ extension NewsManager {
                     Task {
                         // DB User의 parmanentProgressPage 값 바꾸기
                         await self.updateUserNewsParmanentProgressPage(type: type, parmanentProgressPage: currentPage)
+                        
+                        // 이 블록은 최대 한번만 호출
+                        if isEnd {
+                            // DB User의 totalStudyingPercentage 증가
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
                 
@@ -35,13 +41,14 @@ extension NewsManager {
                 if localUser?.studyingNews.basicEconomyParmanentProgressPage ?? 0 < currentPage {
                     localUser?.studyingNews.basicEconomyParmanentProgressPage = currentPage
                     
-                    localUser?.studyingNews.basicEconomyLastPage = (isEnd ? 0 : currentPage)
-                    
-                    // SwiftData 원본 데이터에 반영
-                    DispatchQueue.main.async {
-                        try? AuthManager.shared.modelContainer.mainContext.save()
+                    if isEnd {
+                        Task {
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
+                
+                localUser?.studyingNews.basicEconomyLastPage = (isEnd ? 0 : currentPage)
             }
             
         case .priceLevel:
@@ -51,6 +58,10 @@ extension NewsManager {
                     
                     Task {
                         await self.updateUserNewsParmanentProgressPage(type: type, parmanentProgressPage: currentPage)
+                        
+                        if isEnd {
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
                 
@@ -60,12 +71,14 @@ extension NewsManager {
                 if localUser?.studyingNews.priceLevelParmanentProgressPage ?? 0 < currentPage {
                     localUser?.studyingNews.priceLevelParmanentProgressPage = currentPage
                     
-                    localUser?.studyingNews.priceLevelLastPage = (isEnd ? 0 : currentPage)
-                    
-                    DispatchQueue.main.async {
-                        try? AuthManager.shared.modelContainer.mainContext.save()
+                    if isEnd {
+                        Task {
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
+                
+                localUser?.studyingNews.priceLevelLastPage = (isEnd ? 0 : currentPage)
             }
             
         case .unEmployment:
@@ -75,6 +88,10 @@ extension NewsManager {
                     
                     Task {
                         await self.updateUserNewsParmanentProgressPage(type: type, parmanentProgressPage: currentPage)
+                        
+                        if isEnd {
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
                 
@@ -84,12 +101,14 @@ extension NewsManager {
                 if localUser?.studyingNews.unEmploymentParmanentProgressPage ?? 0 < currentPage {
                     localUser?.studyingNews.unEmploymentParmanentProgressPage = currentPage
                     
-                    localUser?.studyingNews.unEmploymentLastPage = (isEnd ? 0 : currentPage)
-                    
-                    DispatchQueue.main.async {
-                        try? AuthManager.shared.modelContainer.mainContext.save()
+                    if isEnd {
+                        Task {
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
+                
+                localUser?.studyingNews.unEmploymentLastPage = (isEnd ? 0 : currentPage)
             }
             
         case .moneyAndFinance:
@@ -99,6 +118,10 @@ extension NewsManager {
                     
                     Task {
                         await self.updateUserNewsParmanentProgressPage(type: type, parmanentProgressPage: currentPage)
+                        
+                        if isEnd {
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
                 
@@ -108,12 +131,14 @@ extension NewsManager {
                 if localUser?.studyingNews.moneyAndFinanceParmanentProgressPage ?? 0 < currentPage {
                     localUser?.studyingNews.moneyAndFinanceParmanentProgressPage = currentPage
                     
-                    localUser?.studyingNews.moneyAndFinanceLastPage = (isEnd ? 0 : currentPage)
-                    
-                    DispatchQueue.main.async {
-                        try? AuthManager.shared.modelContainer.mainContext.save()
+                    if isEnd {
+                        Task {
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
+                
+                localUser?.studyingNews.moneyAndFinanceLastPage = (isEnd ? 0 : currentPage)
             }
             
         case .exchangeRateAndBalanceOfPayment:
@@ -123,6 +148,10 @@ extension NewsManager {
                     
                     Task {
                         await self.updateUserNewsParmanentProgressPage(type: type, parmanentProgressPage: currentPage)
+                        
+                        if isEnd {
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
                 
@@ -132,12 +161,14 @@ extension NewsManager {
                 if localUser?.studyingNews.exchangeRateAndBalanceOfPaymentParmanentProgressPage ?? 0 < currentPage {
                     localUser?.studyingNews.exchangeRateAndBalanceOfPaymentParmanentProgressPage = currentPage
                     
-                    localUser?.studyingNews.exchangeRateAndBalanceOfPaymentLastPage = (isEnd ? 0 : currentPage)
-                    
-                    DispatchQueue.main.async {
-                        try? AuthManager.shared.modelContainer.mainContext.save()
+                    if isEnd {
+                        Task {
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
+                
+                localUser?.studyingNews.exchangeRateAndBalanceOfPaymentLastPage = (isEnd ? 0 : currentPage)
             }
         }
         
@@ -145,6 +176,12 @@ extension NewsManager {
             Task {
                 // DB User의 lastPage 값 바꾸기
                 await NewsManager.updateUserNewsLastPage(type: type, lastPage: (isEnd ? 0 : currentPage))
+            }
+            
+        } else {
+            // SwiftData 원본 데이터에 반영
+            DispatchQueue.main.async {
+                try? AuthManager.shared.modelContainer.mainContext.save()
             }
         }
     }

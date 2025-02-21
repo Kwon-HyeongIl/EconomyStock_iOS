@@ -25,6 +25,12 @@ extension CourseManager {
                     Task {
                         // DB User의 parmanentProgressPage 값 바꾸기
                         await self.updateUserCourseParmanentProgressPage(type: type, parmanentProgressPage: currentPage)
+                        
+                        // 이 블록은 최대 한번만 호출
+                        if isEnd {
+                            // DB User의 totalStudyingPercentage 증가
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
                 
@@ -35,13 +41,14 @@ extension CourseManager {
                 if localUser?.studyingCourse.basicEconomyParmanentProgressPage ?? 0 < currentPage {
                     localUser?.studyingCourse.basicEconomyParmanentProgressPage = currentPage
                     
-                    localUser?.studyingCourse.basicEconomyLastPage = (isEnd ? 1 : currentPage)
-                    
-                    // SwiftData 원본 데이터에 반영
-                    DispatchQueue.main.async {
-                        try? AuthManager.shared.modelContainer.mainContext.save()
+                    if isEnd {
+                        Task {
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
+                
+                localUser?.studyingCourse.basicEconomyLastPage = (isEnd ? 1 : currentPage)
             }
             
         case .priceLevel:
@@ -51,6 +58,10 @@ extension CourseManager {
                     
                     Task {
                         await self.updateUserCourseParmanentProgressPage(type: type, parmanentProgressPage: currentPage)
+                        
+                        if isEnd {
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
                 
@@ -60,12 +71,14 @@ extension CourseManager {
                 if localUser?.studyingCourse.priceLevelParmanentProgressPage ?? 0 < currentPage {
                     localUser?.studyingCourse.priceLevelParmanentProgressPage = currentPage
                     
-                    localUser?.studyingCourse.priceLevelLastPage = (isEnd ? 1 : currentPage)
-                    
-                    DispatchQueue.main.async {
-                        try? AuthManager.shared.modelContainer.mainContext.save()
+                    if isEnd {
+                        Task {
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
+                
+                localUser?.studyingCourse.priceLevelLastPage = (isEnd ? 1 : currentPage)
             }
             
         case .unEmployment:
@@ -75,6 +88,10 @@ extension CourseManager {
                     
                     Task {
                         await self.updateUserCourseParmanentProgressPage(type: type, parmanentProgressPage: currentPage)
+                        
+                        if isEnd {
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
                 
@@ -84,12 +101,14 @@ extension CourseManager {
                 if localUser?.studyingCourse.unEmploymentParmanentProgressPage ?? 0 < currentPage {
                     localUser?.studyingCourse.unEmploymentParmanentProgressPage = currentPage
                     
-                    localUser?.studyingCourse.unEmploymentLastPage = (isEnd ? 1 : currentPage)
-                    
-                    DispatchQueue.main.async {
-                        try? AuthManager.shared.modelContainer.mainContext.save()
+                    if isEnd {
+                        Task {
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
+                
+                localUser?.studyingCourse.unEmploymentLastPage = (isEnd ? 1 : currentPage)
             }
             
         case .moneyAndFinance:
@@ -99,6 +118,10 @@ extension CourseManager {
                     
                     Task {
                         await self.updateUserCourseParmanentProgressPage(type: type, parmanentProgressPage: currentPage)
+                        
+                        if isEnd {
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
                 
@@ -108,12 +131,14 @@ extension CourseManager {
                 if localUser?.studyingCourse.moneyAndFinanceParmanentProgressPage ?? 0 < currentPage {
                     localUser?.studyingCourse.moneyAndFinanceParmanentProgressPage = currentPage
                     
-                    localUser?.studyingCourse.moneyAndFinanceLastPage = (isEnd ? 1 : currentPage)
-                    
-                    DispatchQueue.main.async {
-                        try? AuthManager.shared.modelContainer.mainContext.save()
+                    if isEnd {
+                        Task {
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
+                
+                localUser?.studyingCourse.moneyAndFinanceLastPage = (isEnd ? 1 : currentPage)
             }
             
         case .exchangeRateAndBalanceOfPayment:
@@ -123,6 +148,10 @@ extension CourseManager {
                     
                     Task {
                         await self.updateUserCourseParmanentProgressPage(type: type, parmanentProgressPage: currentPage)
+                        
+                        if isEnd {
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
                 
@@ -132,12 +161,14 @@ extension CourseManager {
                 if localUser?.studyingCourse.exchangeRateAndBalanceOfPaymentParmanentProgressPage ?? 0 < currentPage {
                     localUser?.studyingCourse.exchangeRateAndBalanceOfPaymentParmanentProgressPage = currentPage
                     
-                    localUser?.studyingCourse.exchangeRateAndBalanceOfPaymentLastPage = (isEnd ? 1 : currentPage)
-                    
-                    DispatchQueue.main.async {
-                        try? AuthManager.shared.modelContainer.mainContext.save()
+                    if isEnd {
+                        Task {
+                            await AuthManager.updateTotalStudyingRate()
+                        }
                     }
                 }
+                
+                localUser?.studyingCourse.exchangeRateAndBalanceOfPaymentLastPage = (isEnd ? 1 : currentPage)
             }
         }
         
@@ -145,6 +176,12 @@ extension CourseManager {
             Task {
                 // DB User의 lastPage 값 바꾸기
                 await CourseManager.updateUserCourseLastPage(type: type, lastPage: (isEnd ? 1 : currentPage))
+            }
+            
+        } else {
+            // SwiftData 원본 데이터에 반영
+            DispatchQueue.main.async {
+                try? AuthManager.shared.modelContainer.mainContext.save()
             }
         }
     }
