@@ -73,7 +73,7 @@ struct NewsCompletionView: View {
                     }
                     
                     Task {
-//                        await viewModel.updateUserCoursePage()
+                        await viewModel.updateUserNewsPage()
                         
                         newsListCapule.isUpdateToggle.toggle()
                     }

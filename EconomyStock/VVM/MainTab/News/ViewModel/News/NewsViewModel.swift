@@ -11,7 +11,7 @@ import Foundation
 class NewsViewModel: Hashable, Equatable {
     let news: News
     
-    var currentPage = 1
+    var currentPage = 0
     
     var isLogin: Bool {
         AuthManager.shared.isLogin

@@ -58,6 +58,6 @@ class CourseAndNewsCompletionViewModel {
     }
     
     func updateUserNewsPage() async {
-//        NewsManager.updateUserNewsPageRoute(type: type, isEnd: true, currentPage: currentPage)
+        NewsManager.updateUserNewsPageRoute(type: type, isEnd: true, currentPage: currentPage)
     }
 }

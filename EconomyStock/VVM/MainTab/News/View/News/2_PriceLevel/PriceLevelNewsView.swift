@@ -253,6 +253,7 @@ struct PriceLevelNewsView: View {
                                         }
                                         self.progress.append(0)
                                         self.animationOpacity = 0.0
+                                        self.viewModel.currentPage += 1
                                     } label: {
                                         LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
                                             .padding(.top, 10)
@@ -286,6 +287,7 @@ struct PriceLevelNewsView: View {
                                             
                                             Button {
                                                 self.progress.removeFirst()
+                                                self.viewModel.currentPage -= 1
                                             } label: {
                                                 Image(systemName: "arrow.uturn.left")
                                                     .resizable()
@@ -383,6 +385,7 @@ struct PriceLevelNewsView: View {
                                             self.progress.append(0)
                                             self.selected_O = false
                                             self.animationOpacity = 0.0
+                                            self.viewModel.currentPage += 1
                                         } label: {
                                             LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
                                                 .padding(.top, 10)
@@ -444,6 +447,7 @@ struct PriceLevelNewsView: View {
                                             self.progress.append(0)
                                             self.selected_X = false
                                             self.animationOpacity = 0.0
+                                            self.viewModel.currentPage += 1
                                         } label: {
                                             LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
                                                 .padding(.top, 10)
@@ -477,6 +481,7 @@ struct PriceLevelNewsView: View {
                                         
                                         Button {
                                             self.progress.removeFirst()
+                                            self.viewModel.currentPage -= 1
                                         } label: {
                                             Image(systemName: "arrow.uturn.left")
                                                 .resizable()
@@ -519,6 +524,7 @@ struct PriceLevelNewsView: View {
                                         }
                                         self.progress.append(0)
                                         self.animationOpacity = 0.0
+                                        self.viewModel.currentPage += 1
                                     } label: {
                                         LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
                                             .padding(.top, 10)
@@ -551,6 +557,7 @@ struct PriceLevelNewsView: View {
                                             
                                             Button {
                                                 self.progress.removeFirst()
+                                                self.viewModel.currentPage -= 1
                                             } label: {
                                                 Image(systemName: "arrow.uturn.left")
                                                     .resizable()
@@ -648,6 +655,7 @@ struct PriceLevelNewsView: View {
                                             self.progress.append(0)
                                             self.selected_O = false
                                             self.animationOpacity = 0.0
+                                            self.viewModel.currentPage += 1
                                         } label: {
                                             LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
                                                 .padding(.top, 10)
@@ -709,6 +717,7 @@ struct PriceLevelNewsView: View {
                                             self.progress.append(0)
                                             self.selected_X = false
                                             self.animationOpacity = 0.0
+                                            self.viewModel.currentPage += 1
                                         } label: {
                                             LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
                                                 .padding(.top, 10)
@@ -742,6 +751,7 @@ struct PriceLevelNewsView: View {
                                         
                                         Button {
                                             self.progress.removeFirst()
+                                            self.viewModel.currentPage -= 1
                                         } label: {
                                             Image(systemName: "arrow.uturn.left")
                                                 .resizable()
@@ -776,6 +786,7 @@ struct PriceLevelNewsView: View {
                                         }
                                         self.progress.append(0)
                                         self.animationOpacity = 0.0
+                                        self.viewModel.currentPage += 1
                                     } label: {
                                         LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 2.3, width: 80, height: 80)
                                             .padding(.top, 10)
@@ -809,6 +820,7 @@ struct PriceLevelNewsView: View {
                                             
                                             Button {
                                                 self.progress.removeFirst()
+                                                self.viewModel.currentPage -= 1
                                             } label: {
                                                 Image(systemName: "arrow.uturn.left")
                                                     .resizable()
@@ -993,6 +1005,7 @@ struct PriceLevelNewsView: View {
             .onTapGesture {
                 if progress.count == 0 {
                     self.progress.append(0)
+                    self.viewModel.currentPage += 1
                 }
             }
             .onAppear {
