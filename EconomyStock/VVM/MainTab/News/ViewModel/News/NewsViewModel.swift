@@ -11,7 +11,7 @@ import Foundation
 class NewsViewModel: Hashable, Equatable {
     let news: News
     
-    var currentPage = 0
+    var currentPage: Int
     
     var isLogin: Bool {
         AuthManager.shared.isLogin
@@ -19,6 +19,7 @@ class NewsViewModel: Hashable, Equatable {
     
     init(news: News) {
         self.news = news
+        self.currentPage = news.lastPage
     }
     
     @MainActor

@@ -26,5 +26,5 @@ extension News {
     static var DUMMY_NEWS = News(id: UUID().uuidString, type: .basicEconomy, title: "기초 경제", newsTitle: "소비 투자 활황... 국민 소득 5% 증가", number: "III", lottieFileName: "BasicEconomyCourseCover", backgroundGradient: LinearGradient(
         gradient: Gradient(colors: [Color.yellow, Color.orange]),
         startPoint: .topLeading,
-        endPoint: .bottomTrailing), parmanentProgressPage: 5, progressRate: 100.0, lastPage: 3, totalPage: 5)
+        endPoint: .bottomTrailing), parmanentProgressPage: 5, progressRate: 100.0, lastPage: 0, totalPage: 5)
 }

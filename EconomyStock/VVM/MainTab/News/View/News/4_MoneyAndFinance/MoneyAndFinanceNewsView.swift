@@ -24,6 +24,14 @@ struct MoneyAndFinanceNewsView: View {
     
     @State private var loadingBarState = false
     
+    init(viewModel: NewsViewModel) {
+        self.viewModel = viewModel
+        
+        for _ in 0...viewModel.news.lastPage {
+            progress.append(0)
+        }
+    }
+    
     var body: some View {
         ScrollViewReader { scrollProxy in
             VStack {
@@ -69,120 +77,121 @@ struct MoneyAndFinanceNewsView: View {
                                     .foregroundStyle(.black)
                                     .padding(.top, 10)
                                 
-                                
-                                JustifiedText("최근 한국은행은 경기 부양을 위해 적극적으로 화폐공급을 확대하며, 금리 인하와 채권 매입 프로그램을 통해 시중에 유동성을 공급하고 있다. 이번 조치는 기업 투자와 소비 활성화를 목표로 하고 있으나, 과도한 자금 공급이 장기적으로 물가 상승 압력을 불러올 우려가 있다.")
-                                    .frame(height: 109)
-                                    .padding(.horizontal, 10)
-                                    .overlay {
-                                        if progress.count == 1 {
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .foregroundStyle(.yellow.opacity(0.3))
-                                                .padding(.horizontal, 7)
-                                                .opacity(animationOpacity)
-                                                .onAppear {
-                                                    withAnimation {
-                                                        animationOpacity = 1.0
+                                VStack(spacing: 10) {
+                                    JustifiedText("최근 한국은행은 경기 부양을 위해 적극적으로 화폐공급을 확대하며, 금리 인하와 채권 매입 프로그램을 통해 시중에 유동성을 공급하고 있다. 이번 조치는 기업 투자와 소비 활성화를 목표로 하고 있으나, 과도한 자금 공급이 장기적으로 물가 상승 압력을 불러올 우려가 있다.")
+                                        .frame(height: 106)
+                                        .padding(.horizontal, 10)
+                                        .overlay {
+                                            if progress.count == 1 {
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .foregroundStyle(.yellow.opacity(0.3))
+                                                    .padding(.horizontal, 7)
+                                                    .opacity(animationOpacity)
+                                                    .onAppear {
+                                                        withAnimation {
+                                                            animationOpacity = 1.0
+                                                        }
                                                     }
-                                                }
+                                            }
                                         }
-                                    }
-                                    .id("1")
-                                
-                                JustifiedText("공식 자료에 따르면, 중앙은행은 신용 공급 확대를 통해 내수 진작에 나서고 있다. 한 관계자는 “경기 부양은 물론 소비와 설비투자 활성화를 기대하지만, 동시에 인플레이션 관리에도 주의를 기울여야 한다”고 설명했다.")
-                                    .frame(height: 91)
-                                    .padding(.horizontal, 10)
-                                    .overlay {
-                                        if progress.count == 2 {
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .foregroundStyle(.red.opacity(0.3))
-                                                .padding(.horizontal, 7)
-                                                .opacity(animationOpacity)
-                                                .onAppear {
-                                                    withAnimation {
-                                                        animationOpacity = 1.0
+                                        .id("1")
+                                    
+                                    JustifiedText("공식 자료에 따르면, 중앙은행은 신용 공급 확대를 통해 내수 진작에 나서고 있다. 한 관계자는 “경기 부양은 물론 소비와 설비투자 활성화를 기대하지만, 동시에 인플레이션 관리에도 주의를 기울여야 한다”고 설명했다.")
+                                        .frame(height: 88)
+                                        .padding(.horizontal, 10)
+                                        .overlay {
+                                            if progress.count == 2 {
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .foregroundStyle(.red.opacity(0.3))
+                                                    .padding(.horizontal, 7)
+                                                    .opacity(animationOpacity)
+                                                    .onAppear {
+                                                        withAnimation {
+                                                            animationOpacity = 1.0
+                                                        }
                                                     }
-                                                }
+                                            }
                                         }
-                                    }
-                                    .id("2")
-                                
-                                JustifiedText("금융 전문가들은 단기 경기 회복 효과는 긍정적이지만, 유동성 과잉이 인플레이션으로 전환될 위험이 있다고 경고한다. “정책의 균형을 맞추기 위한 지속적인 모니터링이 필수적”이라는 의견이 나온다.")
-                                    .frame(height: 91)
-                                    .padding(.horizontal, 10)
-                                    .overlay {
-                                        if progress.count == 3 {
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .foregroundStyle(.yellow.opacity(0.3))
-                                                .padding(.horizontal, 7)
-                                                .opacity(animationOpacity)
-                                                .onAppear {
-                                                    withAnimation {
-                                                        animationOpacity = 1.0
+                                        .id("2")
+                                    
+                                    JustifiedText("금융 전문가들은 단기 경기 회복 효과는 긍정적이지만, 유동성 과잉이 인플레이션으로 전환될 위험이 있다고 경고한다. “정책의 균형을 맞추기 위한 지속적인 모니터링이 필수적”이라는 의견이 나온다.")
+                                        .frame(height: 88)
+                                        .padding(.horizontal, 10)
+                                        .overlay {
+                                            if progress.count == 3 {
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .foregroundStyle(.yellow.opacity(0.3))
+                                                    .padding(.horizontal, 7)
+                                                    .opacity(animationOpacity)
+                                                    .onAppear {
+                                                        withAnimation {
+                                                            animationOpacity = 1.0
+                                                        }
                                                     }
-                                                }
+                                            }
                                         }
-                                    }
-                                    .id("3")
-                                
-                                JustifiedText("기업들은 낮은 금리의 혜택을 받아 투자 확대에 나서고 있으나, 소비자들은 향후 물가 상승으로 인한 생활비 부담 증가를 우려하고 있다. 일부 소비자 대표는 “금융 지원이 단기적으로는 도움이 되겠지만, 장기적으로 물가에 반영될 것”이라며 우려를 표명했다.")
-                                    .frame(height: 109)
-                                    .padding(.horizontal, 10)
-                                    .overlay {
-                                        if progress.count == 4 {
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .foregroundStyle(.red.opacity(0.3))
-                                                .padding(.horizontal, 7)
-                                                .opacity(animationOpacity)
-                                                .onAppear {
-                                                    withAnimation {
-                                                        animationOpacity = 1.0
+                                        .id("3")
+                                    
+                                    JustifiedText("기업들은 낮은 금리의 혜택을 받아 투자 확대에 나서고 있으나, 소비자들은 향후 물가 상승으로 인한 생활비 부담 증가를 우려하고 있다. 일부 소비자 대표는 “금융 지원이 단기적으로는 도움이 되겠지만, 장기적으로 물가에 반영될 것”이라며 우려를 표명했다.")
+                                        .frame(height: 106)
+                                        .padding(.horizontal, 10)
+                                        .overlay {
+                                            if progress.count == 4 {
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .foregroundStyle(.red.opacity(0.3))
+                                                    .padding(.horizontal, 7)
+                                                    .opacity(animationOpacity)
+                                                    .onAppear {
+                                                        withAnimation {
+                                                            animationOpacity = 1.0
+                                                        }
                                                     }
-                                                }
+                                            }
                                         }
-                                    }
-                                    .id("4")
-                                
-                                JustifiedText("또한, 글로벌 경제 변화와 외부 충격 역시 국내 경제에 영향을 미치고 있어, 중앙은행의 정책 결정은 국제 여건과의 연계성을 고려해야 한다. 이러한 요인들은 화폐공급 확대의 효과를 더욱 복잡하게 만든다.")
-                                    .frame(height: 91)
-                                    .padding(.horizontal, 10)
-                                    .overlay {
-                                        if progress.count == 5 {
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .foregroundStyle(.yellow.opacity(0.3))
-                                                .padding(.horizontal, 7)
-                                                .opacity(animationOpacity)
-                                                .onAppear {
-                                                    withAnimation {
-                                                        animationOpacity = 1.0
+                                        .id("4")
+                                    
+                                    JustifiedText("또한, 글로벌 경제 변화와 외부 충격 역시 국내 경제에 영향을 미치고 있어, 중앙은행의 정책 결정은 국제 여건과의 연계성을 고려해야 한다. 이러한 요인들은 화폐공급 확대의 효과를 더욱 복잡하게 만든다.")
+                                        .frame(height: 88)
+                                        .padding(.horizontal, 10)
+                                        .overlay {
+                                            if progress.count == 5 {
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .foregroundStyle(.yellow.opacity(0.3))
+                                                    .padding(.horizontal, 7)
+                                                    .opacity(animationOpacity)
+                                                    .onAppear {
+                                                        withAnimation {
+                                                            animationOpacity = 1.0
+                                                        }
                                                     }
-                                                }
+                                            }
                                         }
-                                    }
-                                    .id("5")
-                                
-                                JustifiedText("정부와 한국은행은 단기 경기 부양과 장기 물가 안정을 동시에 달성하기 위해 면밀한 정책 조정과 평가를 지속할 계획이다. 향후 유연한 대응이 한국 경제의 안정적 성장에 중요한 역할을 할 것으로 전망된다.")
-                                    .frame(height: 91)
-                                    .padding(.horizontal, 10)
-                                    .overlay {
-                                        if progress.count == 6 {
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .foregroundStyle(.red.opacity(0.3))
-                                                .padding(.horizontal, 7)
-                                                .opacity(animationOpacity)
-                                                .onAppear {
-                                                    withAnimation {
-                                                        animationOpacity = 1.0
+                                        .id("5")
+                                    
+                                    JustifiedText("정부와 한국은행은 단기 경기 부양과 장기 물가 안정을 동시에 달성하기 위해 면밀한 정책 조정과 평가를 지속할 계획이다. 향후 유연한 대응이 한국 경제의 안정적 성장에 중요한 역할을 할 것으로 전망된다.")
+                                        .frame(height: 88)
+                                        .padding(.horizontal, 10)
+                                        .overlay {
+                                            if progress.count == 6 {
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .foregroundStyle(.red.opacity(0.3))
+                                                    .padding(.horizontal, 7)
+                                                    .opacity(animationOpacity)
+                                                    .onAppear {
+                                                        withAnimation {
+                                                            animationOpacity = 1.0
+                                                        }
                                                     }
-                                                }
+                                            }
                                         }
-                                    }
-                                    .id("6")
-                                
-                                JustifiedText("아울러, 이번 정책이 금융시장과 소비자 신뢰에 미치는 영향을 주기적으로 점검하여, 필요시 신속한 조정 조치를 취할 준비가 되어있음을 관계자들은 강조한다. 이는 단기적 경제 부양과 함께 장기적 경제 안정을 위한 체계적인 관리 시스템 구축의 일환으로 해석된다.")
-                                    .frame(height: 109)
-                                    .padding(.horizontal, 10)
-                                    .padding(.bottom, 10)
-                                    .id("7")
+                                        .id("6")
+                                    
+                                    JustifiedText("아울러, 이번 정책이 금융시장과 소비자 신뢰에 미치는 영향을 주기적으로 점검하여, 필요시 신속한 조정 조치를 취할 준비가 되어있음을 관계자들은 강조한다. 이는 단기적 경제 부양과 함께 장기적 경제 안정을 위한 체계적인 관리 시스템 구축의 일환으로 해석된다.")
+                                        .frame(height: 106)
+                                        .padding(.horizontal, 10)
+                                        .padding(.bottom, 10)
+                                        .id("7")
+                                }
                             }
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                             .background(Color(hex: "A4A4A4"))
@@ -1017,7 +1026,14 @@ struct MoneyAndFinanceNewsView: View {
                 }
             }
             .onAppear {
-                startPopup = true
+                if viewModel.news.lastPage == 0 {
+                    startPopup = true
+                    
+                } else {
+                    for _ in 0...viewModel.news.lastPage {
+                        progress.append(0)
+                    }
+                }
             }
             .popup(isPresented: $startPopup) {
                 HStack {
