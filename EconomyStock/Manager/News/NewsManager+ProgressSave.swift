@@ -29,13 +29,13 @@ extension NewsManager {
                 }
                 
                 // CurrentUser의 lastPage 값 바꾸기
-                AuthManager.shared.remoteUser?.studyingNews.basicEconomyLastPage = (isEnd ? 1 : currentPage)
+                AuthManager.shared.remoteUser?.studyingNews.basicEconomyLastPage = (isEnd ? 0 : currentPage)
                 
             } else {
                 if localUser?.studyingNews.basicEconomyParmanentProgressPage ?? 0 < currentPage {
                     localUser?.studyingNews.basicEconomyParmanentProgressPage = currentPage
                     
-                    localUser?.studyingNews.basicEconomyLastPage = (isEnd ? 1 : currentPage)
+                    localUser?.studyingNews.basicEconomyLastPage = (isEnd ? 0 : currentPage)
                     
                     // SwiftData 원본 데이터에 반영
                     DispatchQueue.main.async {
@@ -54,13 +54,13 @@ extension NewsManager {
                     }
                 }
                 
-                AuthManager.shared.remoteUser?.studyingNews.priceLevelLastPage = (isEnd ? 1 : currentPage)
+                AuthManager.shared.remoteUser?.studyingNews.priceLevelLastPage = (isEnd ? 0 : currentPage)
                 
             } else {
                 if localUser?.studyingNews.priceLevelParmanentProgressPage ?? 0 < currentPage {
                     localUser?.studyingNews.priceLevelParmanentProgressPage = currentPage
                     
-                    localUser?.studyingNews.priceLevelLastPage = (isEnd ? 1 : currentPage)
+                    localUser?.studyingNews.priceLevelLastPage = (isEnd ? 0 : currentPage)
                     
                     DispatchQueue.main.async {
                         try? AuthManager.shared.modelContainer.mainContext.save()
@@ -78,13 +78,13 @@ extension NewsManager {
                     }
                 }
                 
-                AuthManager.shared.remoteUser?.studyingNews.unEmploymentLastPage = (isEnd ? 1 : currentPage)
+                AuthManager.shared.remoteUser?.studyingNews.unEmploymentLastPage = (isEnd ? 0 : currentPage)
                 
             } else {
                 if localUser?.studyingNews.unEmploymentParmanentProgressPage ?? 0 < currentPage {
                     localUser?.studyingNews.unEmploymentParmanentProgressPage = currentPage
                     
-                    localUser?.studyingNews.unEmploymentLastPage = (isEnd ? 1 : currentPage)
+                    localUser?.studyingNews.unEmploymentLastPage = (isEnd ? 0 : currentPage)
                     
                     DispatchQueue.main.async {
                         try? AuthManager.shared.modelContainer.mainContext.save()
@@ -102,13 +102,13 @@ extension NewsManager {
                     }
                 }
                 
-                AuthManager.shared.remoteUser?.studyingNews.moneyAndFinanceLastPage = (isEnd ? 1 : currentPage)
+                AuthManager.shared.remoteUser?.studyingNews.moneyAndFinanceLastPage = (isEnd ? 0 : currentPage)
                 
             } else {
                 if localUser?.studyingNews.moneyAndFinanceParmanentProgressPage ?? 0 < currentPage {
                     localUser?.studyingNews.moneyAndFinanceParmanentProgressPage = currentPage
                     
-                    localUser?.studyingNews.moneyAndFinanceLastPage = (isEnd ? 1 : currentPage)
+                    localUser?.studyingNews.moneyAndFinanceLastPage = (isEnd ? 0 : currentPage)
                     
                     DispatchQueue.main.async {
                         try? AuthManager.shared.modelContainer.mainContext.save()
@@ -126,13 +126,13 @@ extension NewsManager {
                     }
                 }
                 
-                AuthManager.shared.remoteUser?.studyingNews.exchangeRateAndBalanceOfPaymentLastPage = (isEnd ? 1 : currentPage)
+                AuthManager.shared.remoteUser?.studyingNews.exchangeRateAndBalanceOfPaymentLastPage = (isEnd ? 0 : currentPage)
                 
             } else {
                 if localUser?.studyingNews.exchangeRateAndBalanceOfPaymentParmanentProgressPage ?? 0 < currentPage {
                     localUser?.studyingNews.exchangeRateAndBalanceOfPaymentParmanentProgressPage = currentPage
                     
-                    localUser?.studyingNews.exchangeRateAndBalanceOfPaymentLastPage = (isEnd ? 1 : currentPage)
+                    localUser?.studyingNews.exchangeRateAndBalanceOfPaymentLastPage = (isEnd ? 0 : currentPage)
                     
                     DispatchQueue.main.async {
                         try? AuthManager.shared.modelContainer.mainContext.save()
@@ -141,9 +141,11 @@ extension NewsManager {
             }
         }
         
-        Task {
-            // DB User의 lastPage 값 바꾸기
-            await NewsManager.updateUserNewsLastPage(type: type, lastPage: (isEnd ? 1 : currentPage))
+        if isLogin {
+            Task {
+                // DB User의 lastPage 값 바꾸기
+                await NewsManager.updateUserNewsLastPage(type: type, lastPage: (isEnd ? 0 : currentPage))
+            }
         }
     }
 }
