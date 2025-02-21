@@ -41,7 +41,7 @@ class NewsListViewModel {
         )
         
         let parmanentProgressPage = Double(isLogin ? remoteUser?.studyingNews.basicEconomyParmanentProgressPage ?? 0 : localUser?.studyingNews.basicEconomyParmanentProgressPage ?? 0)
-        let totalPage = 11.0
+        let totalPage = 8.0
         let progressRate = (parmanentProgressPage / totalPage) * 100.0
         
         let lastPage = isLogin ? remoteUser?.studyingNews.basicEconomyLastPage ?? 0 : localUser?.studyingNews.basicEconomyLastPage ?? 0
@@ -60,7 +60,7 @@ class NewsListViewModel {
         )
         
         let parmanentProgressPage = Double(isLogin ? remoteUser?.studyingNews.priceLevelParmanentProgressPage ?? 0 : localUser?.studyingNews.priceLevelParmanentProgressPage ?? 0)
-        let totalPage = 10.0
+        let totalPage = 6.0
         let progressRate = (parmanentProgressPage / totalPage) * 100.0
         
         let lastPage = isLogin ? remoteUser?.studyingNews.priceLevelLastPage ?? 0 : localUser?.studyingNews.priceLevelLastPage ?? 0
@@ -98,7 +98,7 @@ class NewsListViewModel {
         )
         
         let parmanentProgressPage = Double(isLogin ? remoteUser?.studyingNews.moneyAndFinanceParmanentProgressPage ?? 0 : localUser?.studyingNews.moneyAndFinanceParmanentProgressPage ?? 0)
-        let totalPage = 19.0
+        let totalPage = 6.0
         let progressRate = (parmanentProgressPage / totalPage) * 100.0
         
         let lastPage = isLogin ? remoteUser?.studyingNews.moneyAndFinanceLastPage ?? 0 : localUser?.studyingNews.moneyAndFinanceLastPage ?? 0
@@ -117,7 +117,7 @@ class NewsListViewModel {
         )
         
         let parmanentProgressPage = Double(isLogin ? remoteUser?.studyingNews.exchangeRateAndBalanceOfPaymentParmanentProgressPage ?? 0 : localUser?.studyingNews.exchangeRateAndBalanceOfPaymentParmanentProgressPage ?? 0)
-        let totalPage = 30.0
+        let totalPage = 7.0
         let progressRate = (parmanentProgressPage / totalPage) * 100.0
         
         let lastPage = isLogin ? remoteUser?.studyingNews.exchangeRateAndBalanceOfPaymentLastPage ?? 0 : localUser?.studyingNews.exchangeRateAndBalanceOfPaymentLastPage ?? 0

@@ -15,36 +15,35 @@ struct NewsToolbarModifier: ViewModifier {
     @State private var alertExit = false
     @State private var loadingBarState = false
     
-//    let currentPage: Int
-//    let totalPage: Int
+    let currentPage: Int
+    let totalPage: Int
     
     func body(content: Content) -> some View {
         content
             .navigationBarBackButtonHidden()
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-//                ToolbarItem(placement: .topBarLeading) {
-//                    Text("\(currentPage) / \(totalPage)")
-//                        .font(.system(size: 21))
-//                        .fontWeight(.bold)
-//                }
+                ToolbarItem(placement: .topBarLeading) {
+                    Text("\(currentPage) / \(totalPage)")
+                        .font(.system(size: 21))
+                        .fontWeight(.bold)
+                }
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     HStack {
                         Button {
-//                            switch viewModel.course.type {
-//                                
-//                            case .basicEconomy:
-//                                navRouter.navigate(.ChatbotView(.basicEconomyCourse))
-//                            case .priceLevel:
-//                                navRouter.navigate(.ChatbotView(.priceLevelCourse))
-//                            case .unEmployment:
-//                                navRouter.navigate(.ChatbotView(.unEmploymentCourse))
-//                            case .moneyAndFinance:
-//                                navRouter.navigate(.ChatbotView(.moneyAndFinanceCourse))
-//                            case .exchangeRateAndBalanceOfPayment:
-//                                navRouter.navigate(.ChatbotView(.exchangeRateAndBalanceOfPaymentCourse))
-//                            }
+                            switch viewModel.news.type {
+                            case .basicEconomy:
+                                navRouter.navigate(.ChatbotView(.basicEconomyCourse))
+                            case .priceLevel:
+                                navRouter.navigate(.ChatbotView(.priceLevelCourse))
+                            case .unEmployment:
+                                navRouter.navigate(.ChatbotView(.unEmploymentCourse))
+                            case .moneyAndFinance:
+                                navRouter.navigate(.ChatbotView(.moneyAndFinanceCourse))
+                            case .exchangeRateAndBalanceOfPayment:
+                                navRouter.navigate(.ChatbotView(.exchangeRateAndBalanceOfPaymentCourse))
+                            }
                         } label: {
                             ZStack {
                                 LottieView(fileName: "AIOrb", loopMode: .loop, speed: 1.4, width: 50, height: 50)
@@ -75,7 +74,7 @@ struct NewsToolbarModifier: ViewModifier {
                         loadingBarState = true
                     }
                     
-//                    CourseManager.updateUserCoursePageRoute(type: viewModel.course.type, isEnd: false, currentPage: currentPage)
+                    NewsManager.updateUserNewsPageRoute(type: viewModel.news.type, isEnd: false, currentPage: currentPage)
                     
                     // NewsListViewModel의 updateAllCourses 메서드 호출 (중간 인터페이스로 연결)
                     newsListCapsule.isUpdateToggle.toggle()

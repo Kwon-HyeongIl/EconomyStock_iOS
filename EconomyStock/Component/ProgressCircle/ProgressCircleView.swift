@@ -24,7 +24,7 @@ struct ProgressCircleView: View {
                 .scaledToFit()
                 .frame(width: 35)
                 .fontWeight(.semibold)
-                .foregroundStyle(.green)
+                .foregroundStyle(Color(hex: "E3732A"))
             
         } else {
             ZStack {

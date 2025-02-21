@@ -1091,7 +1091,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                     }
                 }
             }
-            .modifier(NewsToolbarModifier(viewModel: viewModel))
+            .modifier(NewsToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.news.totalPage))
             .onTapGesture {
                 if progress.count == 0 {
                     self.progress.append(0)

@@ -38,7 +38,6 @@ struct MoneyAndFinanceNewsView: View {
                                             .foregroundStyle(.black)
                                             .padding(.top, 20)
                                         
-                                        
                                         HStack {
                                             Spacer()
                                             
@@ -533,6 +532,7 @@ struct MoneyAndFinanceNewsView: View {
                                         animationOpacity = 1.0
                                     }
                                 }
+                                
                             } else if progress.count == 4 {
                                 if !selected_O && !selected_X {
                                     VStack {
@@ -997,7 +997,7 @@ struct MoneyAndFinanceNewsView: View {
                     }
                 }
             }
-            .modifier(NewsToolbarModifier(viewModel: viewModel))
+            .modifier(NewsToolbarModifier(viewModel: viewModel, currentPage: viewModel.currentPage, totalPage: viewModel.news.totalPage))
             .onTapGesture {
                 if progress.count == 0 {
                     self.progress.append(0)

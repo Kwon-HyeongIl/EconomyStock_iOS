@@ -11,13 +11,73 @@ struct NewsCoverView: View {
     @Environment(NavigationRouter.self) var navRouter
     @State private var viewModel: NewsViewModel
     
+    @State private var alertAskStartContinue = false
+    @State private var alertAskStartBeginning = false
+    @State private var alertFinishing = false
+    
     init(news: News) {
         self.viewModel = NewsViewModel(news: news)
     }
     
     var body: some View {
         Button {
-            navRouter.navigate(.BasicEconomyNewsView(viewModel))
+            switch viewModel.news.type {
+                
+            case .basicEconomy:
+                if viewModel.news.lastPage == 0 {
+                    navRouter.navigate(.BasicEconomyNewsView(viewModel))
+                    
+                } else if viewModel.news.lastPage == 8 {
+                    alertFinishing = true
+                    
+                } else {
+                    alertAskStartContinue = true
+                }
+                
+            case .priceLevel:
+                if viewModel.news.lastPage == 0 {
+                    navRouter.navigate(.PriceLevelNewsView(viewModel))
+                    
+                } else if viewModel.news.lastPage == 6 {
+                    alertFinishing = true
+                    
+                } else {
+                    alertAskStartContinue = true
+                }
+                
+            case .unEmployment:
+                if viewModel.news.lastPage == 0 {
+                    navRouter.navigate(.UnEmploymentNewsView(viewModel))
+                    
+                } else if viewModel.news.lastPage == 7 {
+                    alertFinishing = true
+                    
+                } else {
+                    alertAskStartContinue = true
+                }
+                
+            case .moneyAndFinance:
+                if viewModel.news.lastPage == 0 {
+                    navRouter.navigate(.MoneyAndFinanceNewsView(viewModel))
+                    
+                } else if viewModel.news.lastPage == 6 {
+                    alertFinishing = true
+                    
+                } else {
+                    alertAskStartContinue = true
+                }
+                
+            case .exchangeRateAndBalanceOfPayment:
+                if viewModel.news.lastPage == 0 {
+                    navRouter.navigate(.ExchangeRateAndBalanceOfPaymentNewsView(viewModel))
+                    
+                } else if viewModel.news.lastPage == 7 {
+                    alertFinishing = true
+                    
+                } else {
+                    alertAskStartContinue = true
+                }
+            }
         } label: {
             HStack {
                 ZStack {
@@ -98,6 +158,51 @@ struct NewsCoverView: View {
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .padding(.horizontal, 10)
             .environment(viewModel)
+        }
+        .alert("이이서 계속 하시겠습니까?", isPresented: $alertAskStartContinue) {
+            Button(role: .cancel) {
+                alertAskStartBeginning = true
+            } label: {
+                Text("취소")
+            }
+            
+            Button {
+                viewModel.newsContinue(viewModel: viewModel, navRouter: navRouter)
+            } label: {
+                Text("확인")
+            }
+        } message: {
+            Text("이전에 학습하시던 \(viewModel.news.lastPage)단계로 이동합니다.")
+        }
+        .alert("처음부터 시작하시겠습니까?", isPresented: $alertAskStartBeginning) {
+            Button(role: .cancel) {
+                
+            } label: {
+                Text("취소")
+            }
+            
+            Button {
+                viewModel.newsContinue(viewModel: viewModel, navRouter: navRouter)
+            } label: {
+                Text("확인")
+            }
+        } message: {
+            Text("강의 진행률은 초기화되지 않습니다.")
+        }
+        .alert("이미 완료한 강의입니다", isPresented: $alertFinishing) {
+            Button(role: .cancel) {
+                
+            } label: {
+                Text("취소")
+            }
+            
+            Button {
+                viewModel.newsContinue(viewModel: viewModel, navRouter: navRouter)
+            } label: {
+                Text("확인")
+            }
+        } message: {
+            Text("첫페이지로 돌아갑니다. 강의 진행률은 초기화되지 않습니다.")
         }
     }
 }

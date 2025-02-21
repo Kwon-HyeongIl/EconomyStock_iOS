@@ -85,7 +85,6 @@
 		CA4E71A82CB78B8400BAA70C /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E71A72CB78B8400BAA70C /* CourseViewModel.swift */; };
 		CA4F8F002D659478000E9A21 /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4F8EFF2D659478000E9A21 /* NewsManager.swift */; };
 		CA4F8F022D65A0AB000E9A21 /* NewsManager+ProgressSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4F8F012D65A0AB000E9A21 /* NewsManager+ProgressSave.swift */; };
-		CA4F8F042D65AF05000E9A21 /* NewsManager+Entrance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4F8F032D65AF05000E9A21 /* NewsManager+Entrance.swift */; };
 		CA5577FE2CEE045000F7C4A6 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5577FD2CEE045000F7C4A6 /* LottieView.swift */; };
 		CA5578002CEE048700F7C4A6 /* LottieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5577FF2CEE048700F7C4A6 /* LottieRouter.swift */; };
 		CA5578022CEE04A200F7C4A6 /* LottieViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5578012CEE04A200F7C4A6 /* LottieViewMain.swift */; };
@@ -384,7 +383,6 @@
 		CA4E71A72CB78B8400BAA70C /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		CA4F8EFF2D659478000E9A21 /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
 		CA4F8F012D65A0AB000E9A21 /* NewsManager+ProgressSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsManager+ProgressSave.swift"; sourceTree = "<group>"; };
-		CA4F8F032D65AF05000E9A21 /* NewsManager+Entrance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsManager+Entrance.swift"; sourceTree = "<group>"; };
 		CA5577FD2CEE045000F7C4A6 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		CA5577FF2CEE048700F7C4A6 /* LottieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieRouter.swift; sourceTree = "<group>"; };
 		CA5578012CEE04A200F7C4A6 /* LottieViewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewMain.swift; sourceTree = "<group>"; };
@@ -1149,7 +1147,6 @@
 			children = (
 				CA4F8EFF2D659478000E9A21 /* NewsManager.swift */,
 				CA4F8F012D65A0AB000E9A21 /* NewsManager+ProgressSave.swift */,
-				CA4F8F032D65AF05000E9A21 /* NewsManager+Entrance.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -2208,7 +2205,6 @@
 				CAAAC3662D02CC870006D8DE /* DummyVerticalInticatorView.swift in Sources */,
 				CA61CEB52CE0A0C3007BCF4E /* BasicEconomy11View.swift in Sources */,
 				CAD255FC2CE6DE3C008E7788 /* PriceLevel7View.swift in Sources */,
-				CA4F8F042D65AF05000E9A21 /* NewsManager+Entrance.swift in Sources */,
 				CAFC58452D61B73900F7EEB3 /* NewsCompletionView.swift in Sources */,
 				CACF34262CEDD4FD00ECC6FA /* MoneyAndFinance11View.swift in Sources */,
 				CA4102702D082C1F000579C6 /* CourseManager+ProgressSave.swift in Sources */,

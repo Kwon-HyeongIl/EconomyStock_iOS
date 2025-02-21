@@ -117,7 +117,7 @@ class CourseListViewModel {
         )
         
         let parmanentProgressPage = Double(isLogin ? remoteUser?.studyingCourse.exchangeRateAndBalanceOfPaymentParmanentProgressPage ?? 0 : localUser?.studyingCourse.exchangeRateAndBalanceOfPaymentParmanentProgressPage ?? 0)
-        let totalPage = 30.0
+        let totalPage = 11.0
         let progressRate = (parmanentProgressPage / totalPage) * 100.0
         
         let lastPage = isLogin ? remoteUser?.studyingCourse.exchangeRateAndBalanceOfPaymentLastPage ?? 0 : localUser?.studyingCourse.exchangeRateAndBalanceOfPaymentLastPage ?? 0
