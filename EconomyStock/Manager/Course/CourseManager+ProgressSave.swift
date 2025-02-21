@@ -141,9 +141,11 @@ extension CourseManager {
             }
         }
         
-        Task {
-            // DB User의 lastPage 값 바꾸기
-            await CourseManager.updateUserCourseLastPage(type: type, lastPage: (isEnd ? 1 : currentPage))
+        if isLogin {
+            Task {
+                // DB User의 lastPage 값 바꾸기
+                await CourseManager.updateUserCourseLastPage(type: type, lastPage: (isEnd ? 1 : currentPage))
+            }
         }
     }
 }
