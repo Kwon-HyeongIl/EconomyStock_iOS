@@ -15,7 +15,7 @@ struct AICourseSummaryView: View {
     @State private var isAILoading = true
     @Binding var isCompletePopupAppear: Bool
     
-    init(type: CourseType, isCompletePopupAppear: Binding<Bool>) {
+    init(type: CourseAndNewsType, isCompletePopupAppear: Binding<Bool>) {
         self.viewModel = AICourseSummaryViewModel(type: type)
         self._isCompletePopupAppear = isCompletePopupAppear
     }

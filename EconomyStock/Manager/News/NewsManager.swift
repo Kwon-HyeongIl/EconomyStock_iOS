@@ -1,34 +1,34 @@
 //
-//  CourseManager.swift
+//  NewsManager.swift
 //  EconomyStock
 //
-//  Created by 권형일 on 12/10/24.
+//  Created by 권형일 on 2/19/25.
 //
 
 import Foundation
 import FirebaseFirestore
 
-class CourseManager {
-    static func updateUserCourseParmanentProgressPage(type: CourseAndNewsType, parmanentProgressPage: Int) async {
+class NewsManager {
+    static func updateUserNewsParmanentProgressPage(type: CourseAndNewsType, parmanentProgressPage: Int) async {
         var editedData: [String: Any] = [:]
         
-        let courseTypeParmanentProgressPage: String
+        let newsTypeParmanentProgressPage: String
         
         switch type {
             
         case .basicEconomy:
-            courseTypeParmanentProgressPage = "basicEconomyParmanentProgressPage"
+            newsTypeParmanentProgressPage = "basicEconomyParmanentProgressPage"
         case .priceLevel:
-            courseTypeParmanentProgressPage = "priceLevelParmanentProgressPage"
+            newsTypeParmanentProgressPage = "priceLevelParmanentProgressPage"
         case .unEmployment:
-            courseTypeParmanentProgressPage = "unEmploymentParmanentProgressPage"
+            newsTypeParmanentProgressPage = "unEmploymentParmanentProgressPage"
         case .moneyAndFinance:
-            courseTypeParmanentProgressPage = "moneyAndFinanceParmanentProgressPage"
+            newsTypeParmanentProgressPage = "moneyAndFinanceParmanentProgressPage"
         case .exchangeRateAndBalanceOfPayment:
-            courseTypeParmanentProgressPage = "exchangeRateAndBalanceOfPaymentParmanentProgressPage"
+            newsTypeParmanentProgressPage = "exchangeRateAndBalanceOfPaymentParmanentProgressPage"
         }
         
-        editedData["studyingCourse.\(courseTypeParmanentProgressPage)"] = parmanentProgressPage
+        editedData["studyingNews.\(newsTypeParmanentProgressPage)"] = parmanentProgressPage
         
         guard let userId = AuthManager.shared.remoteUser?.id else { return }
         
@@ -42,26 +42,26 @@ class CourseManager {
         }
     }
     
-    static func updateUserCourseLastPage(type: CourseAndNewsType, lastPage: Int) async {
+    static func updateUserNewsLastPage(type: CourseAndNewsType, lastPage: Int) async {
         var editedData: [String: Any] = [:]
         
-        let courseTypeLastPage: String
+        let newsTypeLastPage: String
         
         switch type {
             
         case .basicEconomy:
-            courseTypeLastPage = "basicEconomyLastPage"
+            newsTypeLastPage = "basicEconomyLastPage"
         case .priceLevel:
-            courseTypeLastPage = "priceLevelLastPage"
+            newsTypeLastPage = "priceLevelLastPage"
         case .unEmployment:
-            courseTypeLastPage = "unEmploymentLastPage"
+            newsTypeLastPage = "unEmploymentLastPage"
         case .moneyAndFinance:
-            courseTypeLastPage = "moneyAndFinanceLastPage"
+            newsTypeLastPage = "moneyAndFinanceLastPage"
         case .exchangeRateAndBalanceOfPayment:
-            courseTypeLastPage = "exchangeRateAndBalanceOfPaymentLastPage"
+            newsTypeLastPage = "exchangeRateAndBalanceOfPaymentLastPage"
         }
         
-        editedData["studyingCourse.\(courseTypeLastPage)"] = lastPage
+        editedData["studyingCourse.\(newsTypeLastPage)"] = lastPage
         
         guard let userId = AuthManager.shared.remoteUser?.id else { return }
         

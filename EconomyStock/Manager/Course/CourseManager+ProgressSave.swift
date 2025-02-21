@@ -8,7 +8,7 @@
 import Foundation
 
 extension CourseManager {
-    static func updateUserCoursePageRoute(type: CourseType, isEnd: Bool, currentPage: Int) {
+    static func updateUserCoursePageRoute(type: CourseAndNewsType, isEnd: Bool, currentPage: Int) {
         let isLogin = AuthManager.shared.isLogin
         
         let localUser = AuthManager.shared.localUser
@@ -24,7 +24,7 @@ extension CourseManager {
                     
                     Task {
                         // DB User의 parmanentProgressPage 값 바꾸기
-                        await self.updateUserCourseParmanentProgressPage(courseType: type, parmanentProgressPage: currentPage)
+                        await self.updateUserCourseParmanentProgressPage(type: type, parmanentProgressPage: currentPage)
                     }
                 }
                 
@@ -50,7 +50,7 @@ extension CourseManager {
                     AuthManager.shared.remoteUser?.studyingCourse.priceLevelParmanentProgressPage = currentPage
                     
                     Task {
-                        await self.updateUserCourseParmanentProgressPage(courseType: type, parmanentProgressPage: currentPage)
+                        await self.updateUserCourseParmanentProgressPage(type: type, parmanentProgressPage: currentPage)
                     }
                 }
                 
@@ -74,7 +74,7 @@ extension CourseManager {
                     AuthManager.shared.remoteUser?.studyingCourse.unEmploymentParmanentProgressPage = currentPage
                     
                     Task {
-                        await self.updateUserCourseParmanentProgressPage(courseType: type, parmanentProgressPage: currentPage)
+                        await self.updateUserCourseParmanentProgressPage(type: type, parmanentProgressPage: currentPage)
                     }
                 }
                 
@@ -98,7 +98,7 @@ extension CourseManager {
                     AuthManager.shared.remoteUser?.studyingCourse.moneyAndFinanceParmanentProgressPage = currentPage
                     
                     Task {
-                        await self.updateUserCourseParmanentProgressPage(courseType: type, parmanentProgressPage: currentPage)
+                        await self.updateUserCourseParmanentProgressPage(type: type, parmanentProgressPage: currentPage)
                     }
                 }
                 
@@ -122,7 +122,7 @@ extension CourseManager {
                     AuthManager.shared.remoteUser?.studyingCourse.exchangeRateAndBalanceOfPaymentParmanentProgressPage = currentPage
                     
                     Task {
-                        await self.updateUserCourseParmanentProgressPage(courseType: type, parmanentProgressPage: currentPage)
+                        await self.updateUserCourseParmanentProgressPage(type: type, parmanentProgressPage: currentPage)
                     }
                 }
                 
@@ -143,7 +143,7 @@ extension CourseManager {
         
         Task {
             // DB User의 lastPage 값 바꾸기
-            await CourseManager.updateUserCourseLastPage(courseType: type, lastPage: (isEnd ? 1 : currentPage))
+            await CourseManager.updateUserCourseLastPage(type: type, lastPage: (isEnd ? 1 : currentPage))
         }
     }
 }

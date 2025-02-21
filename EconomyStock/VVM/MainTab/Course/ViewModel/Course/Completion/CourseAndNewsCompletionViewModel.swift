@@ -9,7 +9,7 @@ import Foundation
 
 @Observable
 class CourseAndNewsCompletionViewModel {
-    let type: CourseType
+    let type: CourseAndNewsType
     
     let currentPage: Int
     var courseName = ""
@@ -17,7 +17,7 @@ class CourseAndNewsCompletionViewModel {
     
     var newsName = ""
     
-    init(type: CourseType, currentPage: Int) {
+    init(type: CourseAndNewsType, currentPage: Int) {
         self.type = type
         self.currentPage = currentPage
         initCourseName()
@@ -55,5 +55,9 @@ class CourseAndNewsCompletionViewModel {
     
     func updateUserCoursePage() async {
         CourseManager.updateUserCoursePageRoute(type: type, isEnd: true, currentPage: currentPage)
+    }
+    
+    func updateUserNewsPage() async {
+//        NewsManager.updateUserNewsPageRoute(type: type, isEnd: true, currentPage: currentPage)
     }
 }

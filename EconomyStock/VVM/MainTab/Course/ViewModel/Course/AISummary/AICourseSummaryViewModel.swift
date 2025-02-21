@@ -10,7 +10,7 @@ import Combine
 
 @Observable
 class AICourseSummaryViewModel {
-    let type: CourseType
+    let type: CourseAndNewsType
     var chatbotEntranceType: ChatbotEntranceType = .main
     
     var displayedText = ""
@@ -19,7 +19,7 @@ class AICourseSummaryViewModel {
     
     var cancellable: AnyCancellable?
     
-    init(type: CourseType) {
+    init(type: CourseAndNewsType) {
         self.type = type
         initBaseText()
     }

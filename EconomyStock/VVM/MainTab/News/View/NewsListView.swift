@@ -34,7 +34,7 @@ struct NewsListView: View {
                     ForEach(viewModel.newsList) { news in
                         NewsCoverView(news: news)
                             .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
-                            .padding(.bottom, news.type == NewsType.exchangeRateAndBalanceOfPayment ? 70 : 0)
+                            .padding(.bottom, news.type == CourseAndNewsType.exchangeRateAndBalanceOfPayment ? 70 : 0)
                     }
                 }
             }

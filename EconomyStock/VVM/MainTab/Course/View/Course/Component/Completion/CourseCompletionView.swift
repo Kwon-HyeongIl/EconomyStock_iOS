@@ -15,7 +15,7 @@ struct CourseCompletionView: View {
     @Binding var isPopupLoading: Bool
     @Binding var loadingBarState: Bool
     
-    init(type: CourseType, currentPage: Int, isPopupLoading: Binding<Bool>, loadingBarState: Binding<Bool>) {
+    init(type: CourseAndNewsType, currentPage: Int, isPopupLoading: Binding<Bool>, loadingBarState: Binding<Bool>) {
         self.viewModel = CourseAndNewsCompletionViewModel(type: type, currentPage: currentPage)
         self._isPopupLoading = isPopupLoading
         self._loadingBarState = loadingBarState
@@ -60,7 +60,7 @@ struct CourseCompletionView: View {
                         .frame(width: 80, height: 40)
                         .foregroundStyle(Color.ESTitle)
                         .overlay {
-                            Text("돌아가기")
+                            Text("확인")
                                 .foregroundStyle(.white)
                                 .font(.system(size: 15))
                                 .fontWeight(.semibold)

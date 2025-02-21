@@ -19,6 +19,7 @@ enum NavigationDestinationPath: Hashable {
     // Chatbot
     case ChatbotView(ChatbotEntranceType)
     
+    // 강의
         // 기초 경제
     case BasicEconomy1View(CourseViewModel)
     case BasicEconomy2View(CourseViewModel)
@@ -87,8 +88,12 @@ enum NavigationDestinationPath: Hashable {
     case ExchangeRateAndBalanceOfPayment10View(CourseViewModel)
     case ExchangeRateAndBalanceOfPayment11View(CourseViewModel)
     
-        // 기초 경제
+    //뉴스
     case BasicEconomyNewsView(NewsViewModel)
+    case PriceLevelNewsView(NewsViewModel)
+    case UnEmploymentNewsView(NewsViewModel)
+    case MoneyAndFinanceNewsView(NewsViewModel)
+    case ExchangeRateAndBalanceOfPaymentNewsView(NewsViewModel)
     
     // Profile
     case AccountInfoView(ProfileViewModel)

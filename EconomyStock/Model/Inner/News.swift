@@ -10,7 +10,7 @@ import SwiftUI
 struct News: Identifiable {
     let id: String
     
-    let type: NewsType
+    let type: CourseAndNewsType
     let title: String
     let newsTitle: String
     let number: String
