@@ -20,6 +20,11 @@ class ProfileViewModel: Hashable, Equatable {
         AuthManager.shared.isLogin
     }
     
+    var dDay: Int {
+        let components = Calendar.current.dateComponents([.day], from: remoteUser?.startDate ?? Date(), to: Date())
+        return (components.day ?? 0) + 1
+    }
+    
     var totalStudyingRate: Double {
         if isLogin {
             AuthManager.shared.remoteUser?.totalStudyingRate ?? 0.0

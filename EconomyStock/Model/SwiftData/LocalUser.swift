@@ -11,7 +11,9 @@ import SwiftData
 @Model
 class LocalUser {
     var id: UUID
+    
     var deviceToken: String
+    var startDate: Date
     
     var isNotificationBadge: Bool?
     var notificationType: [NotificationType]
@@ -20,9 +22,10 @@ class LocalUser {
     var studyingCourse: StudyingCourse
     var studyingNews: StudyingNews
     
-    init(id: UUID, deviceToken: String, isNotificationBadge: Bool? = nil, notificationType: [NotificationType], totalStudyingPercentage: Double, studyingCourse: StudyingCourse, studyingNews: StudyingNews) {
+    init(id: UUID, deviceToken: String, startDate: Date, isNotificationBadge: Bool? = nil, notificationType: [NotificationType], totalStudyingPercentage: Double, studyingCourse: StudyingCourse, studyingNews: StudyingNews) {
         self.id = id
         self.deviceToken = deviceToken
+        self.startDate = startDate
         self.isNotificationBadge = isNotificationBadge
         self.notificationType = notificationType
         self.totalStudyingRate = totalStudyingPercentage

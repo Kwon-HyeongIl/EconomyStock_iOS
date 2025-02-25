@@ -39,23 +39,29 @@ struct ProfileView: View {
                                         .fontWeight(.semibold)
                                         .padding(.leading)
                                     
+                                    Image(systemName: "chevron.right")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 10)
+                                        .foregroundStyle(.gray)
+
                                     Spacer()
                                 }
                                 
                                 HStack(spacing: 0) {
                                     Text("경제스톡과 함께한지")
-                                        .font(.system(size: 10))
+                                        .font(.system(size: 11))
                                         .foregroundStyle(.gray)
-                                        .padding(.leading)
+                                        .padding(.leading, 17)
                                     
-                                    Text("+52")
+                                    Text("\(viewModel.dDay)")
                                         .font(.system(size: 13))
                                         .foregroundStyle(Color.ESTitle)
                                         .padding(.bottom, 2)
                                         .padding(.leading, 8)
                                     
                                     Text("일")
-                                        .font(.system(size: 10))
+                                        .font(.system(size: 11))
                                         .foregroundStyle(Color.ESTitle)
                                         .padding(.leading, 2)
                                     
