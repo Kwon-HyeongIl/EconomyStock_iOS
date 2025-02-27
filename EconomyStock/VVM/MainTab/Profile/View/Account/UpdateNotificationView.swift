@@ -31,6 +31,11 @@ struct UpdateNotificationView: View {
                             .fontWeight(.medium)
                             .tint(.ESTitle)
                             .padding(.horizontal)
+                            .onChange(of: eventNotification) { oldValue, newValue in
+                                Task {
+                                    await viewModel.editNotificationType(newValue)
+                                }
+                            }
                         Text(eventNotification ? "경제 지표 관련 주요한 변동이 있을 때 알림을 받을 수 있어요." : "경제 지표 관련 주요한 변동이 있어도 알림을 수신 받지 않아요.")
                             .font(.system(size: 12))
                             .foregroundStyle(.gray)
@@ -42,31 +47,7 @@ struct UpdateNotificationView: View {
                 }
             }
         }
-        .navigationBarBackButtonHidden()
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                Button {
-                    navRouter.back()
-                    
-                    Task {
-                        await viewModel.editNotificationType(eventNotification: eventNotification)
-                    }
-                } label: {
-                    Image(systemName: "chevron.left")
-                        .scaledToFit()
-                        .frame(width: 24)
-                        .fontWeight(.medium)
-                        .foregroundStyle(.black)
-                }
-            }
-            
-            ToolbarItem(placement: .principal) {
-                Text("알림")
-                    .font(.system(size: 18))
-                    .fontWeight(.semibold)
-            }
-        }
+        .modifier(NavigationBackTitleModifier(title: "알림"))
     }
 }
 

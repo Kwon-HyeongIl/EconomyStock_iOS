@@ -7,8 +7,11 @@
 
 import Foundation
 
+/*
+ 나중에 항목이 늘 경우 메서드를 항목별로 분리하기
+ */
 extension ProfileViewModel {
-    func editNotificationType(eventNotification: Bool) async {
+    func editNotificationType(_ eventNotification: Bool) async {
         var editedData: [String: Any] = [:]
         var editedDataUnit: [String] = []
         var notificationType: [NotificationType] = []
@@ -17,8 +20,6 @@ extension ProfileViewModel {
             editedDataUnit.append("event")
             notificationType.append(.event)
         }
-        
-        // 확장 가능
         
         editedData["notificationType"] = editedDataUnit
         
