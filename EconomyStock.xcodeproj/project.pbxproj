@@ -236,6 +236,10 @@
 		CAC33B202D70487E00B050E7 /* OneFocusField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC33B1F2D70487E00B050E7 /* OneFocusField.swift */; };
 		CAC33B222D704B0500B050E7 /* AuthManager+Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC33B212D704B0500B050E7 /* AuthManager+Profile.swift */; };
 		CAC33B242D704C5500B050E7 /* ProfileViewModel+Username.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC33B232D704C5500B050E7 /* ProfileViewModel+Username.swift */; };
+		CAC33B262D705A7900B050E7 /* UpdateNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC33B252D705A7900B050E7 /* UpdateNotificationView.swift */; };
+		CAC33B282D705AB400B050E7 /* ServiceCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC33B272D705AB400B050E7 /* ServiceCenterView.swift */; };
+		CAC33B2A2D705B9400B050E7 /* ProfileViewModel+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC33B292D705B9400B050E7 /* ProfileViewModel+Notification.swift */; };
+		CAC33B2C2D705BA300B050E7 /* ProfileViewModel+ServiceCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC33B2B2D705BA300B050E7 /* ProfileViewModel+ServiceCenter.swift */; };
 		CAC4E5BC2D38C45D002D209B /* PannelModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4E5BB2D38C45D002D209B /* PannelModifier.swift */; };
 		CAC86FDB2CE2E6C200785D4F /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC86FDA2CE2E6C200785D4F /* ProfileViewModel.swift */; };
 		CAC9650C2D19107200B7EAF1 /* LoginCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC9650B2D19107200B7EAF1 /* LoginCapsule.swift */; };
@@ -533,6 +537,10 @@
 		CAC33B1F2D70487E00B050E7 /* OneFocusField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneFocusField.swift; sourceTree = "<group>"; };
 		CAC33B212D704B0500B050E7 /* AuthManager+Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthManager+Profile.swift"; sourceTree = "<group>"; };
 		CAC33B232D704C5500B050E7 /* ProfileViewModel+Username.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewModel+Username.swift"; sourceTree = "<group>"; };
+		CAC33B252D705A7900B050E7 /* UpdateNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNotificationView.swift; sourceTree = "<group>"; };
+		CAC33B272D705AB400B050E7 /* ServiceCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCenterView.swift; sourceTree = "<group>"; };
+		CAC33B292D705B9400B050E7 /* ProfileViewModel+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewModel+Notification.swift"; sourceTree = "<group>"; };
+		CAC33B2B2D705BA300B050E7 /* ProfileViewModel+ServiceCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewModel+ServiceCenter.swift"; sourceTree = "<group>"; };
 		CAC4E5BB2D38C45D002D209B /* PannelModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PannelModifier.swift; sourceTree = "<group>"; };
 		CAC86FDA2CE2E6C200785D4F /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		CAC9650B2D19107200B7EAF1 /* LoginCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCapsule.swift; sourceTree = "<group>"; };
@@ -692,6 +700,8 @@
 			children = (
 				CA07D7702D044F2100ECD3E4 /* AccountInfoView.swift */,
 				CAC33B1C2D70462B00B050E7 /* UpdateUsernameView.swift */,
+				CAC33B252D705A7900B050E7 /* UpdateNotificationView.swift */,
+				CAC33B272D705AB400B050E7 /* ServiceCenterView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -701,6 +711,8 @@
 			children = (
 				CA07D7732D044F5200ECD3E4 /* ProfileViewModel+AccountInfo.swift */,
 				CAC33B232D704C5500B050E7 /* ProfileViewModel+Username.swift */,
+				CAC33B292D705B9400B050E7 /* ProfileViewModel+Notification.swift */,
+				CAC33B2B2D705BA300B050E7 /* ProfileViewModel+ServiceCenter.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -2208,6 +2220,7 @@
 				CAE4C1DF2CDE3F2E00CDD0CF /* BasicEconomy6View.swift in Sources */,
 				CA3338AB2D07D6440061A6F5 /* CourseCompletionView.swift in Sources */,
 				CAAA25042CE8555300F8C380 /* UnEmployment2View.swift in Sources */,
+				CAC33B262D705A7900B050E7 /* UpdateNotificationView.swift in Sources */,
 				CAEE165A2CAD0CBA00210BD0 /* AuthManager+Hash.swift in Sources */,
 				CAB6E7342D0EE66600B4AE82 /* CourseManager+Entrance.swift in Sources */,
 				CAEE16652CAD0D7800210BD0 /* AuthViewModel+Apple.swift in Sources */,
@@ -2242,12 +2255,15 @@
 				CA61CEB52CE0A0C3007BCF4E /* BasicEconomy11View.swift in Sources */,
 				CAD255FC2CE6DE3C008E7788 /* PriceLevel7View.swift in Sources */,
 				CAFC58452D61B73900F7EEB3 /* NewsCompletionView.swift in Sources */,
+				CAC33B2A2D705B9400B050E7 /* ProfileViewModel+Notification.swift in Sources */,
+				CAC33B2C2D705BA300B050E7 /* ProfileViewModel+ServiceCenter.swift in Sources */,
 				CACF34262CEDD4FD00ECC6FA /* MoneyAndFinance11View.swift in Sources */,
 				CA4102702D082C1F000579C6 /* CourseManager+ProgressSave.swift in Sources */,
 				CA06791B2CFABA0E0043E974 /* AuthViewModel+BasicSignup.swift in Sources */,
 				CACF34182CEDD4D000ECC6FA /* MoneyAndFinance4View.swift in Sources */,
 				CA07D75E2D04304900ECD3E4 /* ResetPasswordView.swift in Sources */,
 				CAC4E5BC2D38C45D002D209B /* PannelModifier.swift in Sources */,
+				CAC33B282D705AB400B050E7 /* ServiceCenterView.swift in Sources */,
 				CAC33B222D704B0500B050E7 /* AuthManager+Profile.swift in Sources */,
 				CA9BB9D42CABA8C300886A1A /* SplashView.swift in Sources */,
 				CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */,

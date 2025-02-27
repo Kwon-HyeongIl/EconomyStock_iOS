@@ -58,16 +58,24 @@ class NotificationManager {
         }
     }
     
-    static func editNotificationType(editedData: [String: Any]) async {
-        guard let userId = AuthManager.shared.remoteUser?.id else { return }
-        
-        do {
-            try await Firestore.firestore()
-                .collection("User").document(userId)
-                .updateData(editedData)
+    static func editNotificationType(editedData: [String: Any], _ notificationType: [NotificationType]) async {
+        if AuthManager.shared.isLogin {
+            AuthManager.shared.remoteUser?.notificationType = notificationType
+            AuthManager.shared.localUser?.notificationType = notificationType
             
-        } catch {
-            print(error.localizedDescription)
+            guard let userId = AuthManager.shared.remoteUser?.id else { return }
+            
+            do {
+                try await Firestore.firestore()
+                    .collection("User").document(userId)
+                    .updateData(editedData)
+                
+            } catch {
+                print(error.localizedDescription)
+            }
+            
+        } else {
+            AuthManager.shared.localUser?.notificationType = notificationType
         }
     }
 }

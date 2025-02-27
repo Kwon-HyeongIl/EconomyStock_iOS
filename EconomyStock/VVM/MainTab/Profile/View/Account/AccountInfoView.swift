@@ -118,15 +118,6 @@ struct AccountInfoView: View {
                 .shadow(color: .gray.opacity(0.1), radius: 3, x: 3, y: 3)
                 .padding()
             }
-            
-            Button {
-                viewModel.singOut()
-                capsule.isLoginToggle.toggle()
-            } label: {
-                Text("로그아웃")
-                    .font(.system(size: 13))
-                    .padding(.top, 50)
-            }
         }
         .scrollIndicators(.never)
         .modifier(NavigationBackTitleModifier(title: "계정 정보"))

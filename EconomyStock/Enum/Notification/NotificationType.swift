@@ -8,5 +8,5 @@
 import Foundation
 
 enum NotificationType: String, Codable {
-    case empty = "empty"
+    case event = "event"
 }

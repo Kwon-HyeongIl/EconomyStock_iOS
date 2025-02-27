@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ProfileView: View {
     @Environment(NavigationRouter.self) var navRouter
+    @Environment(LoginCapsule.self) var capsule
     @State private var viewModel = ProfileViewModel()
+    
+    @State private var alertSignOut = false
     
     var body: some View {
         VStack {
@@ -71,12 +74,12 @@ struct ProfileView: View {
                                         Text("\(viewModel.dDay)")
                                             .font(.system(size: 13))
                                             .foregroundStyle(Color.ESTitle)
-                                            .padding(.leading, 8)
+                                            .padding(.leading, 5)
                                         
                                         Text("일")
                                             .font(.system(size: 11))
                                             .foregroundStyle(Color.ESTitle)
-                                            .padding(.leading, 2)
+                                            .padding(.leading, 1)
                                         
                                         Spacer()
                                     }
@@ -150,7 +153,7 @@ struct ProfileView: View {
                     
                     VStack(spacing: 0) {
                         Button {
-                 
+                            navRouter.navigate(.UpdateNotificationView(viewModel))
                         } label: {
                             HStack {
                                 Image(systemName: "bell")
@@ -195,6 +198,26 @@ struct ProfileView: View {
                         }
                     }
                     .padding(.top, 30)
+                    
+                    if viewModel.isLogin {
+                        Button {
+                            self.alertSignOut = true
+                        } label: {
+                            Text("로그아웃")
+                                .font(.system(size: 13))
+                                .padding(.top, 50)
+                        }
+                        .alert("경고", isPresented: $alertSignOut) {
+                            Button {
+                                viewModel.singOut()
+                                capsule.isLoginToggle.toggle()
+                            } label: {
+                                Text("확인")
+                            }
+                        } message: {
+                            Text("정말 로그아웃 하시겠습니까?")
+                        }
+                    }
                 }
                 .padding()
             }
@@ -207,4 +230,5 @@ struct ProfileView: View {
 #Preview {
     ProfileView()
         .environment(NavigationRouter())
+        .environment(LoginCapsule())
 }
