@@ -70,9 +70,7 @@ struct NewsToolbarModifier: ViewModifier {
             }
             .alert("정말 나가시겠습니까?", isPresented: $alertExit) {
                 Button {
-                    withAnimation(.smooth(duration: 0.2)) {
-                        loadingBarState = true
-                    }
+                    loadingBarState = true
                     
                     NewsManager.updateUserNewsPageRoute(type: viewModel.news.type, isEnd: false, currentPage: currentPage)
                     

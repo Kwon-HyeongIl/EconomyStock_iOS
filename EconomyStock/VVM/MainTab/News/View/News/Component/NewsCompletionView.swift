@@ -68,9 +68,7 @@ struct NewsCompletionView: View {
                     .padding(.top, 5)
                 
                 Button {
-                    withAnimation(.smooth(duration: 0.2)) {
-                        loadingBarState = true
-                    }
+                    loadingBarState = true
                     
                     Task {
                         await viewModel.updateUserNewsPage()

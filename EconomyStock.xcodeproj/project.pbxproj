@@ -230,7 +230,12 @@
 		CAB6E7342D0EE66600B4AE82 /* CourseManager+Entrance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB6E7332D0EE66600B4AE82 /* CourseManager+Entrance.swift */; };
 		CAB77FD72CB8EC2900DF11D6 /* CourseToolbarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */; };
 		CAB77FD92CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */; };
+		CAB903F22D70414F00139511 /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB903F12D70414F00139511 /* LoginType.swift */; };
 		CAC288282D108AF3006B6415 /* AuthManager+Migrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC288272D108AF3006B6415 /* AuthManager+Migrate.swift */; };
+		CAC33B1D2D70462B00B050E7 /* UpdateUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC33B1C2D70462B00B050E7 /* UpdateUsernameView.swift */; };
+		CAC33B202D70487E00B050E7 /* OneFocusField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC33B1F2D70487E00B050E7 /* OneFocusField.swift */; };
+		CAC33B222D704B0500B050E7 /* AuthManager+Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC33B212D704B0500B050E7 /* AuthManager+Profile.swift */; };
+		CAC33B242D704C5500B050E7 /* ProfileViewModel+Username.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC33B232D704C5500B050E7 /* ProfileViewModel+Username.swift */; };
 		CAC4E5BC2D38C45D002D209B /* PannelModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4E5BB2D38C45D002D209B /* PannelModifier.swift */; };
 		CAC86FDB2CE2E6C200785D4F /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC86FDA2CE2E6C200785D4F /* ProfileViewModel.swift */; };
 		CAC9650C2D19107200B7EAF1 /* LoginCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC9650B2D19107200B7EAF1 /* LoginCapsule.swift */; };
@@ -522,7 +527,12 @@
 		CAB6E7332D0EE66600B4AE82 /* CourseManager+Entrance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseManager+Entrance.swift"; sourceTree = "<group>"; };
 		CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseToolbarModifier.swift; sourceTree = "<group>"; };
 		CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackHomeModifier.swift; sourceTree = "<group>"; };
+		CAB903F12D70414F00139511 /* LoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginType.swift; sourceTree = "<group>"; };
 		CAC288272D108AF3006B6415 /* AuthManager+Migrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthManager+Migrate.swift"; sourceTree = "<group>"; };
+		CAC33B1C2D70462B00B050E7 /* UpdateUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUsernameView.swift; sourceTree = "<group>"; };
+		CAC33B1F2D70487E00B050E7 /* OneFocusField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneFocusField.swift; sourceTree = "<group>"; };
+		CAC33B212D704B0500B050E7 /* AuthManager+Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthManager+Profile.swift"; sourceTree = "<group>"; };
+		CAC33B232D704C5500B050E7 /* ProfileViewModel+Username.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewModel+Username.swift"; sourceTree = "<group>"; };
 		CAC4E5BB2D38C45D002D209B /* PannelModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PannelModifier.swift; sourceTree = "<group>"; };
 		CAC86FDA2CE2E6C200785D4F /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		CAC9650B2D19107200B7EAF1 /* LoginCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCapsule.swift; sourceTree = "<group>"; };
@@ -681,6 +691,7 @@
 			isa = PBXGroup;
 			children = (
 				CA07D7702D044F2100ECD3E4 /* AccountInfoView.swift */,
+				CAC33B1C2D70462B00B050E7 /* UpdateUsernameView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -689,6 +700,7 @@
 			isa = PBXGroup;
 			children = (
 				CA07D7732D044F5200ECD3E4 /* ProfileViewModel+AccountInfo.swift */,
+				CAC33B232D704C5500B050E7 /* ProfileViewModel+Username.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -1552,6 +1564,7 @@
 		CA9BB9E52CABAF1B00886A1A /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				CAB903F02D70413E00139511 /* Auth */,
 				CA9936CE2D06B9BC00B2F89F /* Chatbot */,
 				CAD9A10E2CC515A300A4F70B /* CourseAndNews */,
 				CA77DFD02CB26CF100992829 /* Error */,
@@ -1718,12 +1731,28 @@
 			path = Course;
 			sourceTree = "<group>";
 		};
+		CAB903F02D70413E00139511 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				CAB903F12D70414F00139511 /* LoginType.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		CAC1FE512CEC988400DA1D4B /* Page7 */ = {
 			isa = PBXGroup;
 			children = (
 				CA6876062CF18D5C00DC819A /* UnEmployment7_Business.lottie */,
 			);
 			path = Page7;
+			sourceTree = "<group>";
+		};
+		CAC33B1E2D70486900B050E7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CAC33B1F2D70487E00B050E7 /* OneFocusField.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		CAC86FCF2CE2E5A600785D4F /* Profile */ = {
@@ -1817,6 +1846,7 @@
 		CAEDDAC02CB570610046162D /* FocusField */ = {
 			isa = PBXGroup;
 			children = (
+				CAC33B1E2D70486900B050E7 /* Common */,
 				CA424BBC2CDA6AC300209C2F /* Auth */,
 			);
 			path = FocusField;
@@ -1865,6 +1895,7 @@
 				CAEE16592CAD0CBA00210BD0 /* AuthManager+Hash.swift */,
 				CAC288272D108AF3006B6415 /* AuthManager+Migrate.swift */,
 				CA92A40F2D688C390019D057 /* AuthManager+Studying.swift */,
+				CAC33B212D704B0500B050E7 /* AuthManager+Profile.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -2185,6 +2216,7 @@
 				CA9CF57C2D00698900114807 /* DateType.swift in Sources */,
 				CAAAC35D2D02A0450006D8DE /* EconomicIndicatorManager+Date.swift in Sources */,
 				CAEE164D2CAD08E600210BD0 /* FCMManager.swift in Sources */,
+				CAC33B1D2D70462B00B050E7 /* UpdateUsernameView.swift in Sources */,
 				CACF34362CEDD52A00ECC6FA /* MoneyAndFinance19View.swift in Sources */,
 				CA8526E52D030E800042B6F9 /* BeforeYearType.swift in Sources */,
 				CA92DDB52CB7D7AF00A7D2A4 /* BasicEconomy2View.swift in Sources */,
@@ -2197,6 +2229,7 @@
 				CAAA25062CE8555F00F8C380 /* UnEmployment3View.swift in Sources */,
 				CACF342E2CEDD51500ECC6FA /* MoneyAndFinance15View.swift in Sources */,
 				CAEDDAC22CB570710046162D /* BasicLoginFocusField.swift in Sources */,
+				CAC33B202D70487E00B050E7 /* OneFocusField.swift in Sources */,
 				CAB1CA4C2D5F47D10026CB51 /* MoneyAndFinanceNewsView.swift in Sources */,
 				CA9CF5782D00613200114807 /* EconomicIndicatorCycleContainer.swift in Sources */,
 				CAEE16632CAD0D7200210BD0 /* AuthViewModel+Kakao.swift in Sources */,
@@ -2215,6 +2248,7 @@
 				CACF34182CEDD4D000ECC6FA /* MoneyAndFinance4View.swift in Sources */,
 				CA07D75E2D04304900ECD3E4 /* ResetPasswordView.swift in Sources */,
 				CAC4E5BC2D38C45D002D209B /* PannelModifier.swift in Sources */,
+				CAC33B222D704B0500B050E7 /* AuthManager+Profile.swift in Sources */,
 				CA9BB9D42CABA8C300886A1A /* SplashView.swift in Sources */,
 				CA9BB9E72CABAF5D00886A1A /* NavigationRouter.swift in Sources */,
 				CAD255FE2CE6DE44008E7788 /* PriceLevel8View.swift in Sources */,
@@ -2289,6 +2323,7 @@
 				CAC965142D19A2B800B7EAF1 /* BannerAd.swift in Sources */,
 				CA08F39C2CB839520093117E /* PriceLevel3View.swift in Sources */,
 				CAAAC3622D02CC650006D8DE /* DummyGraphIndicatorView.swift in Sources */,
+				CAB903F22D70414F00139511 /* LoginType.swift in Sources */,
 				CA17FC702CB005800050250B /* MainCustomTabView.swift in Sources */,
 				CAC9650C2D19107200B7EAF1 /* LoginCapsule.swift in Sources */,
 				CA4DCE0C2D2401240003F14C /* StudyingNews.swift in Sources */,
@@ -2300,6 +2335,7 @@
 				CA92DDB72CB7D7B900A7D2A4 /* BasicEconomy3View.swift in Sources */,
 				CA92A4102D688C390019D057 /* AuthManager+Studying.swift in Sources */,
 				CA08F39E2CB839580093117E /* PriceLevel4View.swift in Sources */,
+				CAC33B242D704C5500B050E7 /* ProfileViewModel+Username.swift in Sources */,
 				CA0679232CFB22680043E974 /* ExchangeRateAndBalanceOfPayment1View.swift in Sources */,
 				CAE1998F2CFBF790000CFAA2 /* Color+Hex.swift in Sources */,
 				CAB1CA4F2D5F53510026CB51 /* ExchangeRateAndBalanceOfPaymentNewsView.swift in Sources */,

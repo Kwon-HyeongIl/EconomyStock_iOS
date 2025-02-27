@@ -24,7 +24,6 @@ struct ProfileView: View {
                     
                     Spacer()
                 }
-                .padding(.bottom, 5)
             }
             .frame(height: 100)
             
@@ -34,17 +33,25 @@ struct ProfileView: View {
                         if viewModel.isLogin {
                             VStack(spacing: 5) {
                                 HStack {
-                                    Text(viewModel.remoteUser?.username ?? "")
-                                        .font(.system(size: 23))
-                                        .fontWeight(.semibold)
-                                        .padding(.leading)
+                                    Button {
+                                        navRouter.navigate(.AccountInfoView(viewModel))
+                                    } label: {
+                                        Text(viewModel.remoteUser?.username ?? "")
+                                            .font(.system(size: 23))
+                                            .fontWeight(.semibold)
+                                            .foregroundStyle(.black)
+                                            .padding(.leading)
+                                            .padding(.bottom, 3)
+                                        
+                                        Image(systemName: "chevron.right")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 7)
+                                            .foregroundStyle(.gray)
+                                            .fontWeight(.bold)
+                                            .padding(.leading, 5)
+                                    }
                                     
-                                    Image(systemName: "chevron.right")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 10)
-                                        .foregroundStyle(.gray)
-
                                     Spacer()
                                 }
                                 
@@ -52,12 +59,11 @@ struct ProfileView: View {
                                     Text("경제스톡과 함께한지")
                                         .font(.system(size: 11))
                                         .foregroundStyle(.gray)
-                                        .padding(.leading, 17)
+                                        .padding(.leading, 16)
                                     
                                     Text("\(viewModel.dDay)")
                                         .font(.system(size: 13))
                                         .foregroundStyle(Color.ESTitle)
-                                        .padding(.bottom, 2)
                                         .padding(.leading, 8)
                                     
                                     Text("일")
@@ -88,7 +94,7 @@ struct ProfileView: View {
                                             Text("로그인하여 진행상황을 안전하게 저장하세요")
                                                 .font(.system(size: 11))
                                                 .foregroundStyle(.gray)
-                                                .padding(.leading)
+                                                .padding(.leading, 16)
                                             
                                             Spacer()
                                         }
@@ -107,11 +113,13 @@ struct ProfileView: View {
                     }
                     .frame(height: 80)
                     .frame(maxWidth: .infinity)
-                    .background(.ultraThickMaterial)
-                    .cornerRadius(20.0, corners: .allCorners)
-                    .shadow(color: .gray.opacity(0.1), radius: 3, x: 3, y: 3)
-                    .padding(.horizontal, 10)
-                    
+                    .background(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(lineWidth: 1)
+                            .foregroundStyle(.gray.opacity(0.3))
+                    }
                     
                     HStack {
                         Text("전체 학습 진행률")
@@ -123,34 +131,33 @@ struct ProfileView: View {
                     }
                     .frame(maxWidth: .infinity)
                     .frame(height: 120)
-                    .background(.ultraThickMaterial)
+                    .background(.white)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
-                    .shadow(color: .gray.opacity(0.1), radius: 3, x: 3, y: 3)
-                    .padding(.horizontal, 10)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(lineWidth: 1)
+                            .foregroundStyle(.gray.opacity(0.3))
+                    }
                     .padding(.top, 20)
                     
                     VStack(spacing: 0) {
                         Button {
-                            if viewModel.isLogin {
-                                navRouter.navigate(.AccountInfoView(viewModel))
-                            } else {
-                                navRouter.navigate(.LoginView)
-                            }
+                 
                         } label: {
                             HStack {
-                                Image(systemName: "person")
+                                Image(systemName: "bell")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 20)
-                                    .padding(.leading, 30)
+                                    .padding(.leading)
                                 
-                                Text("계정 정보")
+                                Text("알림 관리")
                                     .font(.system(size: 15))
                                     .padding(.leading, 10)
                                 
                                 Spacer()
                                 
-                                Image(systemName: "chevron.right").padding(.trailing, 30)
+                                Image(systemName: "chevron.right").padding(.trailing)
                             }
                             .foregroundStyle(.black)
                         }
@@ -158,24 +165,30 @@ struct ProfileView: View {
                         Divider()
                             .padding()
                         
-                        HStack {
-                            Image(systemName: "bell")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 20)
-                                .padding(.leading, 30)
+                        Button {
                             
-                            Text("알림 관리")
-                                .font(.system(size: 15))
-                                .padding(.leading, 10)
-                            
-                            Spacer()
-                            
-                            Image(systemName: "chevron.right").padding(.trailing, 30)
+                        } label: {
+                            HStack {
+                                Image(systemName: "paperplane")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 20)
+                                    .padding(.leading)
+                                
+                                Text("고객 센터")
+                                    .font(.system(size: 15))
+                                    .padding(.leading, 10)
+                                
+                                Spacer()
+                                
+                                Image(systemName: "chevron.right").padding(.trailing)
+                            }
+                            .foregroundStyle(.black)
                         }
                     }
                     .padding(.top, 30)
                 }
+                .padding()
             }
             .scrollIndicators(.never)
         }

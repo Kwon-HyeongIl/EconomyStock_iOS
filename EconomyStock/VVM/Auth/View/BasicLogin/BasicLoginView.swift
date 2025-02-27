@@ -76,9 +76,7 @@ struct BasicLoginView: View {
                 
                 Button {
                     Task {
-                        withAnimation(.smooth(duration: 0.2)) {
-                            loadingBarState = true
-                        }
+                        loadingBarState = true
                         
                         guard await viewModel.login() else {
                             loadingBarState = false

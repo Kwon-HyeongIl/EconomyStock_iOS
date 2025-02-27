@@ -229,7 +229,11 @@ struct HomeView: View {
                                 .background {
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                                         .fill(.white)
-                                        .shadow(color: .gray.opacity(0.1), radius: 3, x: 3, y: 3)
+                                        .overlay {
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .stroke(lineWidth: 1)
+                                                .foregroundStyle(.gray.opacity(0.3))
+                                        }
                                 }
                                 
                                 VStack {
@@ -272,7 +276,11 @@ struct HomeView: View {
                                 .frame(maxWidth: .infinity)
                                 .frame(height: 80)
                                 .foregroundStyle(.white)
-                                .shadow(color: .gray.opacity(0.1), radius: 3, x: 3, y: 3)
+                                .overlay {
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(lineWidth: 1)
+                                        .foregroundStyle(.gray.opacity(0.3))
+                                }
                                 .overlay {
                                     BannerAd(unitId: "ca-app-pub-3940256099942544/2435281174")
                                         .frame(height: 80)
@@ -348,7 +356,11 @@ struct HomeView: View {
                                 .background {
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                                         .fill(.white)
-                                        .shadow(color: .gray.opacity(0.1), radius: 3, x: 3, y: 3)
+                                        .overlay {
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .stroke(lineWidth: 1)
+                                                .foregroundStyle(.gray.opacity(0.3))
+                                        }
                                 }
                                 
                                 VStack {
@@ -452,7 +464,11 @@ struct HomeView: View {
                                 .background {
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                                         .fill(.white)
-                                        .shadow(color: .gray.opacity(0.1), radius: 3, x: 3, y: 3)
+                                        .overlay {
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .stroke(lineWidth: 1)
+                                                .foregroundStyle(.gray.opacity(0.3))
+                                        }
                                 }
                                 
                                 VStack {
@@ -551,7 +567,11 @@ struct HomeView: View {
                                     .background {
                                         RoundedRectangle(cornerRadius: 10, style: .continuous)
                                             .fill(.white)
-                                            .shadow(color: .gray.opacity(0.1), radius: 3, x: 3, y: 3)
+                                            .overlay {
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .stroke(lineWidth: 1)
+                                                    .foregroundStyle(.gray.opacity(0.3))
+                                            }
                                     }
                                     
                                     VStack {
@@ -649,7 +669,11 @@ struct HomeView: View {
                                     .background {
                                         RoundedRectangle(cornerRadius: 10, style: .continuous)
                                             .fill(.white)
-                                            .shadow(color: .gray.opacity(0.1), radius: 3, x: 3, y: 3)
+                                            .overlay {
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .stroke(lineWidth: 1)
+                                                    .foregroundStyle(.gray.opacity(0.3))
+                                            }
                                     }
                                     
                                     VStack {
@@ -755,7 +779,11 @@ struct HomeView: View {
                                 .background {
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                                         .fill(.white)
-                                        .shadow(color: .gray.opacity(0.1), radius: 3, x: 3, y: 3)
+                                        .overlay {
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .stroke(lineWidth: 1)
+                                                .foregroundStyle(.gray.opacity(0.3))
+                                        }
                                 }
                                 
                                 VStack {
@@ -860,7 +888,11 @@ struct HomeView: View {
                                 .background {
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                                         .fill(.white)
-                                        .shadow(color: .gray.opacity(0.1), radius: 3, x: 3, y: 3)
+                                        .overlay {
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .stroke(lineWidth: 1)
+                                                .foregroundStyle(.gray.opacity(0.3))
+                                        }
                                 }
                                 
                                 VStack {
@@ -914,7 +946,6 @@ struct HomeView: View {
                             ZStack {
                                 LottieView(fileName: "AIOrb", loopMode: .loop, speed: 1.4, width: 90, height: 90)
                                     .blur(radius: 1.5)
-                                    .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                                 
                                 Image("Chatbot_Toktok")
                                     .resizable()

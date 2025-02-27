@@ -145,15 +145,11 @@ struct BasicSignupView: View {
                                 return
                             }
                             
-                            withAnimation(.smooth(duration: 0.2)) {
-                                loadingBarState = true
-                            }
+                            loadingBarState = true
                             
                             Task {
                                 if await !viewModel.checkEmailDuplication() {
-                                    withAnimation(.smooth(duration: 0.1)) {
-                                        loadingBarState = false
-                                    }
+                                    loadingBarState = false
                                     
                                     withAnimation(.easeOut(duration: 0.4)) {
                                         isPasswordTextFieldShowing = true
@@ -162,9 +158,7 @@ struct BasicSignupView: View {
                                     focus = .password
                                     
                                 } else {
-                                    withAnimation(.smooth(duration: 0.1)) {
-                                        loadingBarState = false
-                                    }
+                                    loadingBarState = false
                                     
                                     alertEmailDulication = true
                                 }
@@ -187,15 +181,11 @@ struct BasicSignupView: View {
                         } else if isUsernameTextFieldShowing {
                             // 완료
                             if !viewModel.username.isEmpty && viewModel.password.count >= 6 {
-                                withAnimation(.smooth(duration: 0.2)) {
-                                    loadingBarState = true
-                                }
+                                loadingBarState = true
                                 
                                 // 이메일 재검증 1
                                 guard viewModel.checkEmailFormValidation() else {
-                                    withAnimation(.smooth(duration: 0.1)) {
-                                        loadingBarState = false
-                                    }
+                                    loadingBarState = false
                                     
                                     alertEmailFormValidation = true
                                     return
@@ -204,9 +194,7 @@ struct BasicSignupView: View {
                                 Task {
                                     //이메일 재검증 2
                                     guard await !viewModel.checkEmailDuplication() else {
-                                        withAnimation(.smooth(duration: 0.1)) {
-                                            loadingBarState = false
-                                        }
+                                        loadingBarState = false
                                         
                                         alertEmailDulication = true
                                         return

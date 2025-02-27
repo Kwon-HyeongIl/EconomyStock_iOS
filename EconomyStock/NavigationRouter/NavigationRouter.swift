@@ -172,6 +172,8 @@ class NavigationRouter {
         // Profile
         case .AccountInfoView(let viewModel):
             AccountInfoView(viewModel: viewModel)
+        case .UpdateUsernameView(let viewModel):
+            UpdateUsernameView(viewModel: viewModel)
         }
     }
     

@@ -181,7 +181,7 @@ extension NewsManager {
         } else {
             // SwiftData 원본 데이터에 반영
             DispatchQueue.main.async {
-                try? AuthManager.shared.modelContainer.mainContext.save()
+                try? AuthManager.shared.modelContainer?.mainContext.save()
             }
         }
     }

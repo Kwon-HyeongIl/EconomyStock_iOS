@@ -71,9 +71,7 @@ struct CourseToolbarModifier: ViewModifier {
             }
             .alert("정말 나가시겠습니까?", isPresented: $alertExit) {
                 Button {
-                    withAnimation(.smooth(duration: 0.2)) {
-                        loadingBarState = true
-                    }
+                    loadingBarState = true
                     
                     CourseManager.updateUserCoursePageRoute(type: viewModel.course.type, isEnd: false, currentPage: currentPage)
                     

@@ -18,7 +18,7 @@ class AuthManager {
     var remoteUser: User?
     var localUser: LocalUser?
     
-    let modelContainer = try! ModelContainer(for: LocalUser.self)
+    let modelContainer = try? ModelContainer(for: LocalUser.self)
     
     var isLogin = false
     
@@ -48,12 +48,12 @@ class AuthManager {
             // 로컬 저장소
             } else {
                 try await MainActor.run {
-                    let user = try modelContainer.mainContext.fetch(FetchDescriptor<LocalUser>())
+                    let user = try modelContainer?.mainContext.fetch(FetchDescriptor<LocalUser>())
 
-                    if !user.isEmpty {
+                    if user != nil {
                         print("LocalUser 로드")
                         
-                        self.localUser = user.first
+                        self.localUser = user?.first
                         
                     // 처음 앱을 시작한 경우
                     } else {
@@ -74,11 +74,11 @@ class AuthManager {
         let deviceToken = FCMManager.shared.myDeviceToken ?? ""
         let user = LocalUser(id: UUID(), deviceToken: deviceToken, startDate: Date(), notificationType: [.empty], totalStudyingPercentage: 0.0, studyingCourse: StudyingCourse(), studyingNews: StudyingNews())
         
-        modelContainer.mainContext.insert(user)
+        modelContainer?.mainContext.insert(user)
         
-        try? modelContainer.mainContext.save()
+        try? modelContainer?.mainContext.save()
         
-        self.localUser = try modelContainer.mainContext.fetch(FetchDescriptor<LocalUser>()).first
+        self.localUser = try modelContainer?.mainContext.fetch(FetchDescriptor<LocalUser>()).first
     }
     
     func createUser(email: String, password: String, username: String, appleHashedUid: String = "", googleHashedUid: String = "", kakaoHashedUid: String = "") async {
@@ -142,8 +142,8 @@ class AuthManager {
     
     @MainActor
     private func deleteLocalUser() throws {
-        try self.modelContainer.mainContext.delete(model: LocalUser.self)
-        try modelContainer.mainContext.save()
+        try self.modelContainer?.mainContext.delete(model: LocalUser.self)
+        try modelContainer?.mainContext.save()
         
         self.localUser = nil
     }
