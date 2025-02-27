@@ -31,47 +31,55 @@ struct ProfileView: View {
                 VStack(spacing: 0) {
                     VStack {
                         if viewModel.isLogin {
-                            VStack(spacing: 5) {
-                                HStack {
-                                    Button {
-                                        navRouter.navigate(.AccountInfoView(viewModel))
-                                    } label: {
-                                        Text(viewModel.remoteUser?.username ?? "")
-                                            .font(.system(size: 23))
-                                            .fontWeight(.semibold)
-                                            .foregroundStyle(.black)
-                                            .padding(.leading)
-                                            .padding(.bottom, 3)
+                            HStack {
+                                Image("Profile_Toktok")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 50)
+                                    .padding(.leading)
+                                
+                                VStack(spacing: 5) {
+                                    HStack {
+                                        Button {
+                                            navRouter.navigate(.AccountInfoView(viewModel))
+                                        } label: {
+                                            Text(viewModel.remoteUser?.username ?? "")
+                                                .font(.system(size: 23))
+                                                .fontWeight(.semibold)
+                                                .foregroundStyle(.black)
+                                                .padding(.leading, 5)
+                                                .padding(.bottom, 3)
+                                            
+                                            Image(systemName: "chevron.right")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 7)
+                                                .foregroundStyle(.gray)
+                                                .fontWeight(.bold)
+                                                .padding(.leading, 5)
+                                        }
                                         
-                                        Image(systemName: "chevron.right")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 7)
-                                            .foregroundStyle(.gray)
-                                            .fontWeight(.bold)
-                                            .padding(.leading, 5)
+                                        Spacer()
                                     }
                                     
-                                    Spacer()
-                                }
-                                
-                                HStack(spacing: 0) {
-                                    Text("경제스톡과 함께한지")
-                                        .font(.system(size: 11))
-                                        .foregroundStyle(.gray)
-                                        .padding(.leading, 16)
-                                    
-                                    Text("\(viewModel.dDay)")
-                                        .font(.system(size: 13))
-                                        .foregroundStyle(Color.ESTitle)
-                                        .padding(.leading, 8)
-                                    
-                                    Text("일")
-                                        .font(.system(size: 11))
-                                        .foregroundStyle(Color.ESTitle)
-                                        .padding(.leading, 2)
-                                    
-                                    Spacer()
+                                    HStack(spacing: 0) {
+                                        Text("경제스톡과 함께한지")
+                                            .font(.system(size: 11))
+                                            .foregroundStyle(.gray)
+                                            .padding(.leading, 6)
+                                        
+                                        Text("\(viewModel.dDay)")
+                                            .font(.system(size: 13))
+                                            .foregroundStyle(Color.ESTitle)
+                                            .padding(.leading, 8)
+                                        
+                                        Text("일")
+                                            .font(.system(size: 11))
+                                            .foregroundStyle(Color.ESTitle)
+                                            .padding(.leading, 2)
+                                        
+                                        Spacer()
+                                    }
                                 }
                             }
                             
