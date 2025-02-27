@@ -47,10 +47,11 @@ struct UpdateNotificationView: View {
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 Button {
+                    navRouter.back()
+                    
                     Task {
                         await viewModel.editNotificationType(eventNotification: eventNotification)
                     }
-                    navRouter.back()
                 } label: {
                     Image(systemName: "chevron.left")
                         .scaledToFit()

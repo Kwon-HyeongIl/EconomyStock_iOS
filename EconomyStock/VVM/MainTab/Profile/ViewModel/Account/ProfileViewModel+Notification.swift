@@ -9,22 +9,19 @@ import Foundation
 
 extension ProfileViewModel {
     func editNotificationType(eventNotification: Bool) async {
+        var editedData: [String: Any] = [:]
+        var editedDataUnit: [String] = []
+        var notificationType: [NotificationType] = []
+        
         if eventNotification {
-            var editedData: [String : Any] = [:]
-            var firebaseNotificationType: [String] = []
-            firebaseNotificationType.append("event")
-            editedData["notificationType"] = firebaseNotificationType
-            
-            let notificationType: [NotificationType] = [.event]
-            
-            await NotificationManager.editNotificationType(editedData: editedData, notificationType)
-            
-        } else {
-            let editedData: [String : Any] = ["notificationType": []]
-            
-            let notificationType: [NotificationType] = []
-            
-            await NotificationManager.editNotificationType(editedData: editedData, notificationType)
+            editedDataUnit.append("event")
+            notificationType.append(.event)
         }
+        
+        // 확장 가능
+        
+        editedData["notificationType"] = editedDataUnit
+        
+        await NotificationManager.editNotificationType(editedData: editedData, notificationType)
     }
 }
