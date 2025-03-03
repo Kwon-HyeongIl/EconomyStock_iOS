@@ -10,7 +10,10 @@ import SwiftUI
 struct ProfileView: View {
     @Environment(NavigationRouter.self) var navRouter
     @Environment(LoginCapsule.self) var capsule
+    @Environment(\.openURL) var openURL
     @State private var viewModel = ProfileViewModel()
+    
+    
     
     @State private var alertSignOut = false
     
@@ -177,7 +180,9 @@ struct ProfileView: View {
                             .padding()
                         
                         Button {
+                            var email = SupportEmail(toAddress: "helpeconomystock@gmail.com", subject: "경제스톡 문의사항", messageHeader: "서비스에 대한 문의 사항은 메일로 받고 있습니다.\n\n사용하시는 기기와 iOS버전, 앱의 버전을 입력해주시면 더욱 신속한 처리가 가능합니다. \n 단말기 명: \n iOS 버전: \n\n[문의내용]\n여기에 문의할 내용을 적어주세요.\n\n\n\nUID: \(viewModel.isLogin ? viewModel.remoteUser?.id ?? "" : "-")\n")
                             
+                            email.send(openURL: openURL)
                         } label: {
                             HStack {
                                 Image(systemName: "paperplane")
