@@ -176,6 +176,8 @@ class NavigationRouter {
             UpdateUsernameView(viewModel: viewModel)
         case .UpdateNotificationView(let viewModel):
             UpdateNotificationView(viewModel: viewModel)
+        case .DeleteAccountView(let viewModel):
+            DeleteAccountView(viewModel: viewModel)
         }
     }
     

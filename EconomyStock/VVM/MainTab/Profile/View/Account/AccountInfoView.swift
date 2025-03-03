@@ -117,6 +117,15 @@ struct AccountInfoView: View {
                 }
                 .shadow(color: .gray.opacity(0.1), radius: 3, x: 3, y: 3)
                 .padding()
+                
+                Button {
+                    navRouter.navigate(.DeleteAccountView(viewModel))
+                } label: {
+                    Text("회원 탈퇴")
+                        .font(.system(size: 13))
+                        .foregroundStyle(.red)
+                        .padding(.top, 50)
+                }
             }
         }
         .scrollIndicators(.never)

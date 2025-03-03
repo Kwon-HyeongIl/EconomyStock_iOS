@@ -99,4 +99,5 @@ enum NavigationDestinationPath: Hashable {
     case AccountInfoView(ProfileViewModel)
     case UpdateUsernameView(ProfileViewModel)
     case UpdateNotificationView(ProfileViewModel)
+    case DeleteAccountView(ProfileViewModel)
 }

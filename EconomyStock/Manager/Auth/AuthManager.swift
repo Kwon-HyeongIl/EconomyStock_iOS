@@ -225,4 +225,20 @@ class AuthManager {
             print(error.localizedDescription)
         }
     }
+    
+    func deleteAccount() {
+        if  let user = Auth.auth().currentUser {
+            user.delete { error in
+                if let error {
+                    print(error.localizedDescription)
+                } else {
+                    // 삭제 성공
+                    Task {
+                        self.remoteUser = nil
+                        self.isLogin = false
+                    }
+                }
+            }
+        }
+    }
 }
