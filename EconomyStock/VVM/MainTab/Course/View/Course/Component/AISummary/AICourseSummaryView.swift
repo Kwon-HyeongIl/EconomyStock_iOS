@@ -30,7 +30,6 @@ struct AICourseSummaryView: View {
                                 ZStack {
                                     LottieView(fileName: "AIOrb", loopMode: .loop, speed: 1.4, width: 80, height: 80)
                                         .blur(radius: 1.5)
-                                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 5, y: 5)
                                     
                                     Image("Chatbot_Toktok")
                                         .resizable()
@@ -47,7 +46,7 @@ struct AICourseSummaryView: View {
                                 }
                                 .background(.regularMaterial)
                                 .cornerRadius(20, corners: .allCorners)
-                                .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
+                                .shadow(color: .gray.opacity(0.1), radius: 5, x: 5, y: 5)
                                 .padding(.top)
                                 .padding(.trailing)
                             }
@@ -63,6 +62,7 @@ struct AICourseSummaryView: View {
                     .overlay {
                         if isAILoading {
                             LottieView(fileName: "AISparkle", loopMode: .loop, width: 100, height: 100)
+                                .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
                         }
                     }
                     
@@ -75,8 +75,8 @@ struct AICourseSummaryView: View {
                                     navRouter.navigate(.ChatbotView(viewModel.chatbotEntranceType))
                                 } label: {
                                     RoundedRectangle(cornerRadius: 20)
-                                        .frame(width: 120, height: 25)
-                                        .foregroundStyle(Color.aiGradient)
+                                        .frame(width: 120, height: 35)
+                                        .foregroundStyle(Color.ESTitle)
                                         .overlay {
                                             Text("더 질문해보기")
                                                 .font(.system(size: 12))
@@ -84,7 +84,7 @@ struct AICourseSummaryView: View {
                                                 .fontWeight(.semibold)
                                                 .shadow(color: .gray.opacity(0.8), radius: 1, x: 1, y: 1)
                                         }
-                                        .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
+                                        .shadow(color: .gray.opacity(0.1), radius: 5, x: 5, y: 5)
                                 }
                                 
                                 Button {
@@ -92,16 +92,8 @@ struct AICourseSummaryView: View {
                                         self.isCompletePopupAppear = true
                                     }
                                 } label: {
-                                    Circle()
-                                        .frame(width: 45, height: 45)
-                                        .foregroundStyle(Color.ESTitle)
-                                        .overlay {
-                                            Text("끝내기")
-                                                .font(.system(size: 11))
-                                                .foregroundStyle(.white)
-                                                .fontWeight(.semibold)
-                                        }
-                                        .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
+                                    LottieView(fileName: "CourseNextButton", loopMode: .playOnce, speed: 0.5, scale: 3.0, width: 50, height: 50)
+                                        .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                 }
                             }
                             .padding(.bottom)

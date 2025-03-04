@@ -89,7 +89,7 @@ struct ChatbotView: View {
                                 .frame(width: 35, height: 35)
                                 .foregroundStyle(.regularMaterial)
                                 .padding(.bottom, 5)
-                                .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
+                                .shadow(color: .gray.opacity(0.1), radius: 5, x: 5, y: 5)
                         }
                     }
                 }
@@ -109,18 +109,18 @@ struct ChatbotView: View {
                 } label: {
                     Circle()
                         .frame(width: 35, height: 35)
-                        .foregroundStyle(Color.aiGradient)
+                        .foregroundStyle(Color.ESTitle)
                         .overlay {
                             Image(systemName: "arrow.up")
                                 .foregroundStyle(.white)
                                 .fontWeight(.black)
                                 .scaleEffect(1.1)
-                                .shadow(color: .gray.opacity(0.8), radius: 1, x: 1, y: 1)
+                                .shadow(color: .gray.opacity(0.5), radius: 1, x: 1, y: 1)
                         }
                         .padding(.leading, 5)
                         .padding(.trailing)
                         .padding(.vertical, 5)
-                        .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
+                        .shadow(color: .gray.opacity(0.1), radius: 5, x: 5, y: 5)
                 }
             }
             .background(.regularMaterial)
