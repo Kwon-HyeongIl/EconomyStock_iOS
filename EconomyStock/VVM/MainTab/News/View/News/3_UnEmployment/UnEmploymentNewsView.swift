@@ -84,7 +84,7 @@ struct UnEmploymentNewsView: View {
                                         .overlay {
                                             if progress.count == 1 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.3))
+                                                    .foregroundStyle(.yellow.opacity(0.2))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -101,7 +101,7 @@ struct UnEmploymentNewsView: View {
                                         .overlay {
                                             if progress.count == 2 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.red.opacity(0.3))
+                                                    .foregroundStyle(.red.opacity(0.2))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -118,7 +118,7 @@ struct UnEmploymentNewsView: View {
                                         .overlay {
                                             if progress.count == 3 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.3))
+                                                    .foregroundStyle(.yellow.opacity(0.2))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -135,7 +135,7 @@ struct UnEmploymentNewsView: View {
                                         .overlay {
                                             if progress.count == 4 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.red.opacity(0.3))
+                                                    .foregroundStyle(.red.opacity(0.2))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -152,7 +152,7 @@ struct UnEmploymentNewsView: View {
                                         .overlay {
                                             if progress.count == 5 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.3))
+                                                    .foregroundStyle(.yellow.opacity(0.2))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -169,7 +169,7 @@ struct UnEmploymentNewsView: View {
                                         .overlay {
                                             if progress.count == 6 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.red.opacity(0.3))
+                                                    .foregroundStyle(.red.opacity(0.2))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -186,7 +186,7 @@ struct UnEmploymentNewsView: View {
                                         .overlay {
                                             if progress.count == 7 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.3))
+                                                    .foregroundStyle(.yellow.opacity(0.2))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
