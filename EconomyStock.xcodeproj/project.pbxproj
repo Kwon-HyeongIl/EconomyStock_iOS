@@ -63,7 +63,6 @@
 		CA31EA422CF706630005A475 /* MoneyAndFinance13_BankMoney.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA31EA412CF706630005A475 /* MoneyAndFinance13_BankMoney.lottie */; };
 		CA3338AB2D07D6440061A6F5 /* CourseCompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3338AA2D07D6440061A6F5 /* CourseCompletionView.swift */; };
 		CA3338AD2D07D6520061A6F5 /* CourseAndNewsCompletionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3338AC2D07D6520061A6F5 /* CourseAndNewsCompletionViewModel.swift */; };
-		CA363E1B2D3529AF00C3DF0D /* JustifiedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA363E1A2D3529AF00C3DF0D /* JustifiedText.swift */; };
 		CA37DE4F2D5325FE00C5F090 /* PriceLevelNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37DE4E2D5325FE00C5F090 /* PriceLevelNewsView.swift */; };
 		CA39D54A2CFDAC3B0009AD1C /* ExchangeRateAndBalanceOfPayment4_Banana.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA39D5492CFDAC3B0009AD1C /* ExchangeRateAndBalanceOfPayment4_Banana.lottie */; };
 		CA39D54C2CFDB19C0009AD1C /* ExchangeRateAndBalanceOfPayment5_WonCoin.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA39D54B2CFDB19C0009AD1C /* ExchangeRateAndBalanceOfPayment5_WonCoin.lottie */; };
@@ -183,6 +182,7 @@
 		CA9936D22D06D62300B2F89F /* ChatbotViewModel+Entrance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9936D12D06D62300B2F89F /* ChatbotViewModel+Entrance.swift */; };
 		CA993A872CF1DBC0001C1DED /* PriceLevel3_BadEconomy.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA993A862CF1DBC0001C1DED /* PriceLevel3_BadEconomy.lottie */; };
 		CA993A8D2CF1E0B7001C1DED /* UnEmploymentCourseCover.lottie in Resources */ = {isa = PBXBuildFile; fileRef = CA993A8C2CF1E0B7001C1DED /* UnEmploymentCourseCover.lottie */; };
+		CA9B73572D7ABED500394A7B /* JustifiedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9B73562D7ABED500394A7B /* JustifiedText.swift */; };
 		CA9BB9CC2CABA59A00886A1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9C82CABA59A00886A1A /* ContentView.swift */; };
 		CA9BB9CD2CABA59A00886A1A /* EconomyStockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BB9C92CABA59A00886A1A /* EconomyStockApp.swift */; };
 		CA9BB9CE2CABA59A00886A1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA9BB9C42CABA59A00886A1A /* Preview Assets.xcassets */; };
@@ -372,7 +372,6 @@
 		CA31EA412CF706630005A475 /* MoneyAndFinance13_BankMoney.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoneyAndFinance13_BankMoney.lottie; sourceTree = "<group>"; };
 		CA3338AA2D07D6440061A6F5 /* CourseCompletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCompletionView.swift; sourceTree = "<group>"; };
 		CA3338AC2D07D6520061A6F5 /* CourseAndNewsCompletionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseAndNewsCompletionViewModel.swift; sourceTree = "<group>"; };
-		CA363E1A2D3529AF00C3DF0D /* JustifiedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifiedText.swift; sourceTree = "<group>"; };
 		CA37DE4E2D5325FE00C5F090 /* PriceLevelNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLevelNewsView.swift; sourceTree = "<group>"; };
 		CA39D5492CFDAC3B0009AD1C /* ExchangeRateAndBalanceOfPayment4_Banana.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExchangeRateAndBalanceOfPayment4_Banana.lottie; sourceTree = "<group>"; };
 		CA39D54B2CFDB19C0009AD1C /* ExchangeRateAndBalanceOfPayment5_WonCoin.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExchangeRateAndBalanceOfPayment5_WonCoin.lottie; sourceTree = "<group>"; };
@@ -489,6 +488,7 @@
 		CA9936D12D06D62300B2F89F /* ChatbotViewModel+Entrance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatbotViewModel+Entrance.swift"; sourceTree = "<group>"; };
 		CA993A862CF1DBC0001C1DED /* PriceLevel3_BadEconomy.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = PriceLevel3_BadEconomy.lottie; sourceTree = "<group>"; };
 		CA993A8C2CF1E0B7001C1DED /* UnEmploymentCourseCover.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = UnEmploymentCourseCover.lottie; sourceTree = "<group>"; };
+		CA9B73562D7ABED500394A7B /* JustifiedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifiedText.swift; sourceTree = "<group>"; };
 		CA9BB9C42CABA59A00886A1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA9BB9C62CABA59A00886A1A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CA9BB9C72CABA59A00886A1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1000,7 +1000,7 @@
 		CA363E172D35243500C3DF0D /* String */ = {
 			isa = PBXGroup;
 			children = (
-				CA363E1A2D3529AF00C3DF0D /* JustifiedText.swift */,
+				CA9B73562D7ABED500394A7B /* JustifiedText.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -2260,6 +2260,7 @@
 				CAD255FA2CE6DE35008E7788 /* PriceLevel6View.swift in Sources */,
 				CA3338AD2D07D6520061A6F5 /* CourseAndNewsCompletionViewModel.swift in Sources */,
 				CA58A4ED2CB6D9E900DB91BD /* ProgressCircleView.swift in Sources */,
+				CA9B73572D7ABED500394A7B /* JustifiedText.swift in Sources */,
 				CA17FC722CB005A10050250B /* MainTabCapsule.swift in Sources */,
 				CA4F8F022D65A0AB000E9A21 /* NewsManager+ProgressSave.swift in Sources */,
 				CAAAC3662D02CC870006D8DE /* DummyVerticalInticatorView.swift in Sources */,
@@ -2293,7 +2294,6 @@
 				CAB1CA492D5C67390026CB51 /* UnEmploymentNewsView.swift in Sources */,
 				CA4DCE002D23F6110003F14C /* NewsCoverView.swift in Sources */,
 				CACF34142CEDD4BF00ECC6FA /* MoneyAndFinance2View.swift in Sources */,
-				CA363E1B2D3529AF00C3DF0D /* JustifiedText.swift in Sources */,
 				CAC288282D108AF3006B6415 /* AuthManager+Migrate.swift in Sources */,
 				CA78C3092D084E4100E89532 /* AICourseSummaryView.swift in Sources */,
 				CAE199A12CFC1E9E000CFAA2 /* ExchangeRateAndBalanceOfPayment10View.swift in Sources */,

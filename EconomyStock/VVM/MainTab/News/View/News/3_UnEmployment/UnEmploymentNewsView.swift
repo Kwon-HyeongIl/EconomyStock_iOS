@@ -77,16 +77,16 @@ struct UnEmploymentNewsView: View {
                                     .font(.system(size: 20).bold())
                                     .foregroundStyle(.black)
                                     .padding(.top, 10)
+                                    .padding(.bottom, 20)
                                 
-                                VStack(spacing: 10) {
-                                    JustifiedText("최근 공식 실업률은 낮은 수치를 보이지만, 정규직에 미치지 못하는 비정규직, 임시직, 프리랜서 등 불안정 고용에 종사하는 ‘실망노동자’가 꾸준히 늘어나고 있다. 이들은 공식 통계에 잡히지 않아 보이지 않는 위기를 야기하고 있다.")
-                                        .frame(height: 88)
-                                        .padding(.horizontal, 10)
+                                VStack(spacing: 25) {
+                                    JustifiedText("최근 공식 실업률은 낮은 수치를 보이지만, 정규직에 미치지 못하는 비정규직, 임시직, 프리랜서 등 불안정 고용에 종사하는 ‘실망노동자’가 꾸준히 늘어나고 있다. 이들은 공식 통계에 잡히지 않아 보이지 않는 위기를 야기하고 있다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 1 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.yellow.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -97,14 +97,13 @@ struct UnEmploymentNewsView: View {
                                         }
                                         .id("1")
                                     
-                                    JustifiedText("정부 통계상 실업률은 약 3% 내외로 나타나지만, 불안정 고용에 머무는 노동자 수는 지속적으로 증가 중이다. 낮은 임금과 열악한 근로 조건 속에서 생계를 유지하는 이들은 정규직 전환 가능성이 낮아 미래에 대한 불안과 심리적 고통을 겪고 있다.")
-                                        .frame(height: 106)
-                                        .padding(.horizontal, 10)
+                                    JustifiedText("정부 통계상 실업률은 약 3% 내외로 나타나지만, 불안정 고용에 머무는 노동자 수는 지속적으로 증가 중이다. 낮은 임금과 열악한 근로 조건 속에서 생계를 유지하는 이들은 정규직 전환 가능성이 낮아 미래에 대한 불안과 심리적 고통을 겪고 있다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 2 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.red.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -115,14 +114,13 @@ struct UnEmploymentNewsView: View {
                                         }
                                         .id("2")
                                     
-                                    JustifiedText("노동 전문가들은 이를 ‘실업률 통계에 잡히지 않는 숨은 위기’라 부른다. 한 경제 연구소의 김 연구원은 단순한 실업률 수치만으로는 노동시장의 문제를 파악하기 어렵다며, 비정규직과 임시직 근로자의 열악한 환경 개선과 사회 안전망 확충이 시급하다고 강조한다.")
-                                        .frame(height: 106)
-                                        .padding(.horizontal, 10)
+                                    JustifiedText("노동 전문가들은 이를 ‘실업률 통계에 잡히지 않는 숨은 위기’라 부른다. 한 경제 연구소의 김 연구원은 단순한 실업률 수치만으로는 노동시장의 문제를 파악하기 어렵다며, 비정규직과 임시직 근로자의 열악한 환경 개선과 사회 안전망 확충이 시급하다고 강조한다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 3 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.yellow.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -133,14 +131,13 @@ struct UnEmploymentNewsView: View {
                                         }
                                         .id("3")
                                     
-                                    JustifiedText("젊은 층과 중년 노동자들 사이에서 정규직 취업에 대한 기대가 점차 줄어들고 있다. 한 중소기업 비정규직 직원은 “비용 절감을 이유로 정규직 전환 대신 비정규직 고용이 지속되는 현실에 실망하며, 매일 불안한 미래를 마주하는 것이 큰 스트레스”라고 토로했다.")
-                                        .frame(height: 106)
-                                        .padding(.horizontal, 10)
+                                    JustifiedText("젊은 층과 중년 노동자들 사이에서 정규직 취업에 대한 기대가 점차 줄어들고 있다. 한 중소기업 비정규직 직원은 “비용 절감을 이유로 정규직 전환 대신 비정규직 고용이 지속되는 현실에 실망하며, 매일 불안한 미래를 마주하는 것이 큰 스트레스”라고 토로했다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 4 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.red.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -151,14 +148,13 @@ struct UnEmploymentNewsView: View {
                                         }
                                         .id("4")
                                     
-                                    JustifiedText("정부는 고용 안정화와 실망노동자 문제 해소를 위해 다양한 정책을 펼치고 있으나, 현장의 목소리와 전문가 지적처럼 실질적 개선 효과는 미미하다. 노동시장 구조 개혁, 비정규직 전환 촉진, 사회 안전망 확충 등 근본적 해결책 마련이 시급하다.")
-                                        .frame(height: 88)
-                                        .padding(.horizontal, 10)
+                                    JustifiedText("정부는 고용 안정화와 실망노동자 문제 해소를 위해 다양한 정책을 펼치고 있으나, 현장의 목소리와 전문가 지적처럼 실질적 개선 효과는 미미하다. 노동시장 구조 개혁, 비정규직 전환 촉진, 사회 안전망 확충 등 근본적 해결책 마련이 시급하다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 5 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.yellow.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -169,14 +165,13 @@ struct UnEmploymentNewsView: View {
                                         }
                                         .id("5")
                                     
-                                    JustifiedText("실망노동자 문제는 소비 패턴과 경제 성장에도 부정적 영향을 미친다. 불안정 고용과 낮은 임금은 가계 소비를 위축시켜 내수 시장의 활력을 저해하고, 사회적 불신 및 계층 간 갈등을 심화시킬 위험이 있다. 이를 해소하기 위해 포괄적이고 지속 가능한 노동시장 개혁이 필요하다.")
-                                        .frame(height: 106)
-                                        .padding(.horizontal, 10)
+                                    JustifiedText("실망노동자 문제는 소비 패턴과 경제 성장에도 부정적 영향을 미친다. 불안정 고용과 낮은 임금은 가계 소비를 위축시켜 내수 시장의 활력을 저해하고, 사회적 불신 및 계층 간 갈등을 심화시킬 위험이 있다. 이를 해소하기 위해 포괄적이고 지속 가능한 노동시장 개혁이 필요하다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 6 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.red.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -187,14 +182,13 @@ struct UnEmploymentNewsView: View {
                                         }
                                         .id("6")
                                     
-                                    JustifiedText("낮은 공식 실업률 뒤에 숨은 ‘실망노동자’ 문제는 단순한 통계 이상의 의미를 가진다. 수많은 노동자들의 삶과 미래를 위협하는 이 심각한 사회 문제에 대해 정부와 관련 기관은 실질적인 대책 마련에 나서야 한다.")
-                                        .frame(height: 88)
-                                        .padding(.horizontal, 10)
+                                    JustifiedText("낮은 공식 실업률 뒤에 숨은 ‘실망노동자’ 문제는 단순한 통계 이상의 의미를 가진다. 수많은 노동자들의 삶과 미래를 위협하는 이 심각한 사회 문제에 대해 정부와 관련 기관은 실질적인 대책 마련에 나서야 한다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 7 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.yellow.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -205,10 +199,8 @@ struct UnEmploymentNewsView: View {
                                         }
                                         .id("7")
                                     
-                                    JustifiedText("더불어, 글로벌 경제 변화와 기술 발전에 따른 자동화 및 디지털 전환이 노동시장 구조에 추가적인 변동을 일으키고 있다. 정부와 기업은 미래 노동시장 변화에 선제적으로 대응할 새로운 정책과 교육 프로그램을 마련해, 실망노동자 문제의 장기적 악화를 방지해야 할 필요성이 대두되고 있다.")
-                                        .frame(height: 106)
-                                        .padding(.horizontal, 10)
-                                        .padding(.bottom, 10)
+                                    JustifiedText("더불어, 글로벌 경제 변화와 기술 발전에 따른 자동화 및 디지털 전환이 노동시장 구조에 추가적인 변동을 일으키고 있다. 정부와 기업은 미래 노동시장 변화에 선제적으로 대응할 새로운 정책과 교육 프로그램을 마련해, 실망노동자 문제의 장기적 악화를 방지해야 할 필요성이 대두되고 있다.", maxWidth: geometryProxy.size.width - 45)
+                                        .padding(.bottom)
                                         .id("8")
                                 }
                             }

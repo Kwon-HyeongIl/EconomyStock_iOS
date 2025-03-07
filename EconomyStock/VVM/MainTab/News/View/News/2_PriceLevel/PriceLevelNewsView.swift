@@ -69,16 +69,16 @@ struct PriceLevelNewsView: View {
                                     .font(.system(size: 20).bold())
                                     .foregroundStyle(.black)
                                     .padding(.top, 10)
+                                    .padding(.bottom, 20)
                                 
-                                VStack(spacing: 10) {
-                                    JustifiedText("최근 국내 물가 상승률이 지속되면서 소비자와 기업 모두 큰 부담을 겪고 있다. 생활비 부담 증가는 국민의 실질 구매력 감소와 생활 수준 하락 우려를 낳고 있으며, 정부와 중앙은행은 물가 안정을 위해 다양한 대응 전략을 펼치고 있다.")
-                                        .frame(height: 70)
-                                        .padding(.horizontal, 10)
+                                VStack(spacing: 25) {
+                                    JustifiedText("최근 국내 물가 상승률이 지속되면서 소비자와 기업 모두 큰 부담을 겪고 있다. 생활비 부담 증가는 국민의 실질 구매력 감소와 생활 수준 하락 우려를 낳고 있으며, 정부와 중앙은행은 물가 안정을 위해 다양한 대응 전략을 펼치고 있다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 1 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.yellow.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -89,14 +89,13 @@ struct PriceLevelNewsView: View {
                                         }
                                         .id("1")
                                     
-                                    JustifiedText("국제 원자재 급등, 공급망 병목, 에너지 가격 상승 등 복합 요인이 인플레이션의 주 원인이다. 팬데믹 복구 혼란과 지정학 갈등으로 원유·천연가스 가격 불안정이 국내 물가에 영향을 미치며, 코로나19 이후 소비 패턴 변화와 수요 급증도 가격 상승 압력을 높이고 있다.")
-                                        .frame(height: 106)
-                                        .padding(.horizontal, 10)
+                                    JustifiedText("국제 원자재 급등, 공급망 병목, 에너지 가격 상승 등 복합 요인이 인플레이션의 주 원인이다. 팬데믹 복구 혼란과 지정학 갈등으로 원유·천연가스 가격 불안정이 국내 물가에 영향을 미치며, 코로나19 이후 소비 패턴 변화와 수요 급증도 가격 상승 압력을 높이고 있다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 2 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.red.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -107,14 +106,13 @@ struct PriceLevelNewsView: View {
                                         }
                                         .id("2")
                                     
-                                    JustifiedText("소비자 물가 지수는 전년 대비 6% 이상의 상승률을 기록하며 식료품, 에너지, 주거비 등 주요 품목의 가격 인상이 두드러진다. 이로 인해 특히 저소득층과 중산층 가구에 큰 부담이 발생해 사회적 불평등 심화 문제도 제기되고 있다.")
-                                        .frame(height: 88)
-                                        .padding(.horizontal, 10)
+                                    JustifiedText("소비자 물가 지수는 전년 대비 6% 이상의 상승률을 기록하며 식료품, 에너지, 주거비 등 주요 품목의 가격 인상이 두드러진다. 이로 인해 특히 저소득층과 중산층 가구에 큰 부담이 발생해 사회적 불평등 심화 문제도 제기되고 있다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 3 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.yellow.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -125,14 +123,13 @@ struct PriceLevelNewsView: View {
                                         }
                                         .id("3")
                                     
-                                    JustifiedText("기업들은 원자재와 운송비 상승으로 인한 비용 부담을 제품 가격에 전가하는 상황이다. 단기적으로는 마진 축소와 소비자 부담 증가가 우려되지만, 장기적으로는 기술 혁신과 생산성 향상을 통해 비용 구조 개선을 시도하고 있다.")
-                                        .frame(height: 88)
-                                        .padding(.horizontal, 10)
+                                    JustifiedText("기업들은 원자재와 운송비 상승으로 인한 비용 부담을 제품 가격에 전가하는 상황이다. 단기적으로는 마진 축소와 소비자 부담 증가가 우려되지만, 장기적으로는 기술 혁신과 생산성 향상을 통해 비용 구조 개선을 시도하고 있다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 4 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.red.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -143,14 +140,13 @@ struct PriceLevelNewsView: View {
                                         }
                                         .id("4")
                                     
-                                    JustifiedText("정부는 필수 생활품 가격 안정을 위한 모니터링과 긴급 지원 대책을 마련하며 단기 대응에 주력하고 있다. 동시에 공급망 안정화와 에너지 자원 확보를 통한 중장기 대책도 추진 중이다. 중앙은행 역시 금리와 유동성 조절로 인플레이션 억제에 힘쓰고 있다.")
-                                        .frame(height: 106)
-                                        .padding(.horizontal, 10)
+                                    JustifiedText("정부는 필수 생활품 가격 안정을 위한 모니터링과 긴급 지원 대책을 마련하며 단기 대응에 주력하고 있다. 동시에 공급망 안정화와 에너지 자원 확보를 통한 중장기 대책도 추진 중이다. 중앙은행 역시 금리와 유동성 조절로 인플레이션 억제에 힘쓰고 있다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 5 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.yellow.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -161,14 +157,13 @@ struct PriceLevelNewsView: View {
                                         }
                                         .id("5")
                                     
-                                    JustifiedText("경제 전문가들은 이번 물가 상승이 외부 요인과 내부 구조적 문제의 복합 결과임을 지적하며, 정부와 중앙은행의 신속한 정책 대응이 중장기적으로 안정된 가격 수준 회복에 기여할 것이라고 전망한다.")
-                                        .frame(height: 88)
-                                        .padding(.horizontal, 10)
+                                    JustifiedText("경제 전문가들은 이번 물가 상승이 외부 요인과 내부 구조적 문제의 복합 결과임을 지적하며, 정부와 중앙은행의 신속한 정책 대응이 중장기적으로 안정된 가격 수준 회복에 기여할 것이라고 전망한다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 6 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.red.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -179,10 +174,8 @@ struct PriceLevelNewsView: View {
                                         }
                                         .id("6")
                                     
-                                    JustifiedText("이처럼 물가 상승은 국민 생활과 경제 전반에 복합적 영향을 미치고 있으며, 정부, 중앙은행, 기업이 협력하여 구조적 문제를 해결한다면 안정된 경제 환경을 회복할 수 있을 것으로 보인다.")
-                                        .frame(height: 88)
-                                        .padding(.horizontal, 10)
-                                        .padding(.bottom, 10)
+                                    JustifiedText("이처럼 물가 상승은 국민 생활과 경제 전반에 복합적 영향을 미치고 있으며, 정부, 중앙은행, 기업이 협력하여 구조적 문제를 해결한다면 안정된 경제 환경을 회복할 수 있을 것으로 보인다.", maxWidth: geometryProxy.size.width - 45)
+                                        .padding(.bottom)
                                         .id("7")
                                 }
                             }

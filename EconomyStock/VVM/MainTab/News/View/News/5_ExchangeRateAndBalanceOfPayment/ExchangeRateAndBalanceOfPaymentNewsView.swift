@@ -77,16 +77,16 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                     .font(.system(size: 20).bold())
                                     .foregroundStyle(.black)
                                     .padding(.top, 10)
+                                    .padding(.bottom, 20)
                                 
-                                VStack(spacing: 10) {
-                                    JustifiedText("최근 환율이 급등하면서 국내외 금융시장에 대한 우려가 커지고 있다. 급격한 환율 상승은 수출 기업에 일시적으로 이익을 줄 수 있지만, 동시에 수입 물가 상승과 원자재 가격 부담을 키워 전체 경제에 부정적인 파급 효과를 불러일으킬 수 있다는 지적이 나오고 있다.")
-                                        .frame(height: 106)
-                                        .padding(.horizontal, 10)
+                                VStack(spacing: 25) {
+                                    JustifiedText("최근 환율이 급등하면서 국내외 금융시장에 대한 우려가 커지고 있다. 급격한 환율 상승은 수출 기업에 일시적으로 이익을 줄 수 있지만, 동시에 수입 물가 상승과 원자재 가격 부담을 키워 전체 경제에 부정적인 파급 효과를 불러일으킬 수 있다는 지적이 나오고 있다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 1 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.yellow.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -97,14 +97,13 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         }
                                         .id("1")
                                     
-                                    JustifiedText("이와 동시에, 한국은행이 경기 부양을 목적으로 금리 인하를 단행하면서 환율 불안이 더욱 심화되고 있다는 분석이 제기된다. 한 금융 연구소의 김 연구원은 “금리 인하는 내수 진작에 도움이 되지만, 외국인 투자자들의 자본 이탈과 환율 상승을 부추길 수 있어 면밀한 정책 운용이 중요하다”고 설명했다.")
-                                        .frame(height: 106)
-                                        .padding(.horizontal, 10)
+                                    JustifiedText("이와 동시에, 한국은행이 경기 부양을 목적으로 금리 인하를 단행하면서 환율 불안이 더욱 심화되고 있다는 분석이 제기된다. 한 금융 연구소의 김 연구원은 “금리 인하는 내수 진작에 도움이 되지만, 외국인 투자자들의 자본 이탈과 환율 상승을 부추길 수 있어 면밀한 정책 운용이 중요하다”고 설명했다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 2 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.red.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -114,15 +113,14 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                             }
                                         }
                                         .id("2")
-                                    
-                                    JustifiedText("정부 관계자들은 이번 조치가 경기 부양을 위한 불가피한 선택이었다고 강조한다. “수출 부진과 내수 둔화를 동시에 해결하기 위해서는 금리 인하가 효과적인 수단이다. 그러나 환율 불안정성이 커질 위험이 있기 때문에, 외환시장 모니터링과 안정화 방안을 병행할 계획”이라는 입장을 밝혔다.")
-                                        .frame(height: 106)
-                                        .padding(.horizontal, 10)
+
+                                    JustifiedText("정부 관계자들은 이번 조치가 경기 부양을 위한 불가피한 선택이었다고 강조한다. “수출 부진과 내수 둔화를 동시에 해결하기 위해서는 금리 인하가 효과적인 수단이다. 그러나 환율 불안정성이 커질 위험이 있기 때문에, 외환시장 모니터링과 안정화 방안을 병행할 계획”이라는 입장을 밝혔다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 3 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.yellow.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -133,14 +131,15 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         }
                                         .id("3")
                                     
-                                    JustifiedText("문제는 환율 폭등이 국제수지의 불균형을 심화시킬 우려가 크다는 점이다. 수입 가격 상승으로 무역수지가 악화될 경우, 경상수지가 적자로 전환될 위험도 배제할 수 없다. 외환 전문가들은 “환율이 지나치게 변동할 때는 수출 경쟁력 확보보다 물가 상승, 자본 유출 등 부작용이 훨씬 클 수 있다”고 지적한다.")
-                                        .frame(height: 106)
-                                        .padding(.horizontal, 10)
+
+//                                    
+                                    JustifiedText("문제는 환율 폭등이 국제수지의 불균형을 심화시킬 우려가 크다는 점이다. 수입 가격 상승으로 무역수지가 악화될 경우, 경상수지가 적자로 전환될 위험도 배제할 수 없다. 외환 전문가들은 “환율이 지나치게 변동할 때는 수출 경쟁력 확보보다 물가 상승, 자본 유출 등 부작용이 훨씬 클 수 있다”고 지적한다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 4 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.red.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -150,15 +149,14 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                             }
                                         }
                                         .id("4")
-                                    
-                                    JustifiedText("시장 참여자들은 금리 인하가 소비와 투자 확대를 통해 내수 경제를 살리는 긍정적 효과가 있을 것으로 기대하면서도, 환율 폭등으로 인한 불확실성에 대해서는 여전히 우려를 표하고 있다. 한 중소기업 수출 담당자는 “수출 단가가 올라 이익이 늘어날 것 같지만, 해외 시장에서 가격 경쟁력을 잃을 수도 있어 상황을 지켜봐야 한다”고 전했다.")
-                                        .frame(height: 124)
-                                        .padding(.horizontal, 10)
+       
+                                    JustifiedText("시장 참여자들은 금리 인하가 소비와 투자 확대를 통해 내수 경제를 살리는 긍정적 효과가 있을 것으로 기대하면서도, 환율 폭등으로 인한 불확실성에 대해서는 여전히 우려를 표하고 있다. 한 중소기업 수출 담당자는 “수출 단가가 올라 이익이 늘어날 것 같지만, 해외 시장에서 가격 경쟁력을 잃을 수도 있어 상황을 지켜봐야 한다”고 전했다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 5 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.yellow.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -168,15 +166,14 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                             }
                                         }
                                         .id("5")
-                                    
-                                    JustifiedText("정부와 한국은행은 환율 변동성을 완화하기 위해 다양한 정책적 수단을 검토 중이라고 밝혔다. 외화 보유고 확충, 외환시장 개입, 무역금융 지원 확대 등 대책이 거론되고 있지만, 전문가들은 “조급한 시장 개입보다는 거시경제 안정화와 환율 흐름에 대한 중장기적 모니터링이 우선”이라고 강조한다.")
-                                        .frame(height: 106)
-                                        .padding(.horizontal, 10)
+
+                                    JustifiedText("정부와 한국은행은 환율 변동성을 완화하기 위해 다양한 정책적 수단을 검토 중이라고 밝혔다. 외화 보유고 확충, 외환시장 개입, 무역금융 지원 확대 등 대책이 거론되고 있지만, 전문가들은 “조급한 시장 개입보다는 거시경제 안정화와 환율 흐름에 대한 중장기적 모니터링이 우선”이라고 강조한다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 6 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.red.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -186,15 +183,14 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                             }
                                         }
                                         .id("6")
-                                    
-                                    JustifiedText("이번 환율 폭등과 금리 인하가 동시에 진행되는 현상은 국내외 경기와 국제수지에 복합적인 영향을 미치고 있다. 정부와 한국은행은 상황을 예의주시하며, 경제 주체들의 신뢰를 지켜나가기 위한 신속하고 유연한 대응 전략을 마련해야 한다는 목소리가 커지고 있다.")
-                                        .frame(height: 106)
-                                        .padding(.horizontal, 10)
+         
+                                    JustifiedText("이번 환율 폭등과 금리 인하가 동시에 진행되는 현상은 국내외 경기와 국제수지에 복합적인 영향을 미치고 있다. 정부와 한국은행은 상황을 예의주시하며, 경제 주체들의 신뢰를 지켜나가기 위한 신속하고 유연한 대응 전략을 마련해야 한다는 목소리가 커지고 있다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 7 {
                                                 RoundedRectangle(cornerRadius: 10)
                                                     .foregroundStyle(.yellow.opacity(0.3))
-                                                    .padding(.horizontal, 7)
+                                                    .padding(.horizontal, 8)
+                                                    .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
                                                     .onAppear {
                                                         withAnimation {
@@ -203,7 +199,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                                     }
                                             }
                                         }
-                                        .padding(.bottom, 10)
+                                        .padding(.bottom)
                                         .id("7")
                                 }
                             }
