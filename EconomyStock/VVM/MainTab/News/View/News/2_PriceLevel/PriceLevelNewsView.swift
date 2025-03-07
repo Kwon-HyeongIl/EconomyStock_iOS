@@ -255,7 +255,7 @@ struct PriceLevelNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 350))
+                                .modifier(PannelModifier(height: 355))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
@@ -303,7 +303,7 @@ struct PriceLevelNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -362,11 +362,11 @@ struct PriceLevelNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("공급망 병목 현상은 생산 및 유통 과정에서 제약을 발생시켜, 제품의 공급이 원활하지 못하게 만들어요.\n\n이로 인해 수요 대비 공급 부족 현상이 발생하면, 시장에서는 가격 상승 압력이 커지게 되어 인플레이션에 기여하는 결과를 낳아요.")
+                                        Text("공급망 병목 현상은 생산 및 유통 과정에서 제약을 발생시켜, 제품의 공급이 원활하지 못하게 만들어요.\n\n이로 인해 수요 대비 공급 부족 현상이 발생하면, 시장에서는 가격 상승 압력이 커지게 되어 인플레이션에 기여하는 결과를 낳아요. 따라서 올바른 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -424,11 +424,11 @@ struct PriceLevelNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("공급망 병목 현상은 생산 및 유통 과정에서 제약을 발생시켜, 제품의 공급이 원활하지 못하게 만들어요.\n\n이로 인해 수요 대비 공급 부족 현상이 발생하면, 시장에서는 가격 상승 압력이 커지게 되어 인플레이션에 기여하는 결과를 낳아요.")
+                                        Text("공급망 병목 현상은 생산 및 유통 과정에서 제약을 발생시켜, 제품의 공급이 원활하지 못하게 만들어요.\n\n이로 인해 수요 대비 공급 부족 현상이 발생하면, 시장에서는 가격 상승 압력이 커지게 되어 인플레이션에 기여하는 결과를 낳아요. 따라서 틀린 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -526,7 +526,7 @@ struct PriceLevelNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 320))
+                                .modifier(PannelModifier(height: 325))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
@@ -573,7 +573,7 @@ struct PriceLevelNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -632,11 +632,11 @@ struct PriceLevelNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("비용 상승을 소비자 가격에 전가하면 기업은 단기적으로 이윤 압박을 피할 수 있으나, 소비자 가격 상승으로 인해 소비자 물가 지수는 오히려 상승해요.\n\n따라서 소비자 물가 지수 하락 효과는 발생하지 않아요.")
+                                        Text("비용 상승을 소비자 가격에 전가하면 기업은 단기적으로 이윤 압박을 피할 수 있으나, 소비자 가격 상승으로 인해 소비자 물가 지수는 오히려 상승해요.\n\n따라서 소비자 물가 지수 하락 효과는 발생하지 않아요. 따라서 틀린 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -694,11 +694,11 @@ struct PriceLevelNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("비용 상승을 소비자 가격에 전가하면 기업은 단기적으로 이윤 압박을 피할 수 있으나, 소비자 가격 상승으로 인해 소비자 물가 지수는 오히려 상승해요.\n\n따라서 소비자 물가 지수 하락 효과는 발생하지 않아요.")
+                                        Text("비용 상승을 소비자 가격에 전가하면 기업은 단기적으로 이윤 압박을 피할 수 있으나, 소비자 가격 상승으로 인해 소비자 물가 지수는 오히려 상승해요.\n\n따라서 소비자 물가 지수 하락 효과는 발생하지 않아요. 따라서 올바른 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -836,14 +836,14 @@ struct PriceLevelNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
                                         
                                         HStack {
                                             Button {
-                                                self.bottomHeight = 325
+                                                self.bottomHeight = 330
                                                 withAnimation {
                                                     scrollProxy.scrollTo("7", anchor: .top)
                                                 }
@@ -854,7 +854,7 @@ struct PriceLevelNewsView: View {
                                             }
                                             
                                             Button {
-                                                self.bottomHeight = 325
+                                                self.bottomHeight = 330
                                                 withAnimation {
                                                     scrollProxy.scrollTo("7", anchor: .top)
                                                 }
@@ -903,11 +903,11 @@ struct PriceLevelNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("정부와 중앙은행의 정책 대응은 중장기적으로 가격 수준을 안정시키는 데 기여할 수 있으나, 단기적으로는 물가 상승 압력을 완전히 제거하기 어려워요.\n\n단기적 효과는 제한적이며, 즉각적인 인플레이션 완화는 기대하기 어렵다고 볼 수 있어요.")
+                                        Text("정부와 중앙은행의 정책 대응은 중장기적으로 가격 수준을 안정시키는 데 기여할 수 있으나, 단기적으로는 물가 상승 압력을 완전히 제거하기 어려워요.\n\n단기적 효과는 제한적이며, 즉각적인 인플레이션 완화는 기대하기 어렵다고 볼 수 있어요. 따라서 틀린 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -961,11 +961,11 @@ struct PriceLevelNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("정부와 중앙은행의 정책 대응은 중장기적으로 가격 수준을 안정시키는 데 기여할 수 있으나, 단기적으로는 물가 상승 압력을 완전히 제거하기 어려워요.\n\n단기적 효과는 제한적이며, 즉각적인 인플레이션 완화는 기대하기 어렵다고 볼 수 있어요.")
+                                        Text("정부와 중앙은행의 정책 대응은 중장기적으로 가격 수준을 안정시키는 데 기여할 수 있으나, 단기적으로는 물가 상승 압력을 완전히 제거하기 어려워요.\n\n단기적 효과는 제한적이며, 즉각적인 인플레이션 완화는 기대하기 어렵다고 볼 수 있어요. 따라서 올바른 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()

@@ -299,7 +299,7 @@ struct BasicEconomyNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 320))
+                                .modifier(PannelModifier(height: 310))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
@@ -357,6 +357,9 @@ struct BasicEconomyNewsView: View {
                                     Spacer()
                                     
                                     Button {
+                                        withAnimation {
+                                            scrollProxy.scrollTo("2", anchor: .top)
+                                        }
                                         self.progress.append(0)
                                         self.animationOpacity = 0.0
                                         self.viewModel.currentPage += 1
@@ -415,7 +418,7 @@ struct BasicEconomyNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -437,7 +440,7 @@ struct BasicEconomyNewsView: View {
                                         }
                                         .padding(.bottom, 10)
                                     }
-                                    .modifier(PannelModifier(height: 260))
+                                    .modifier(PannelModifier(height: 250))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -479,7 +482,7 @@ struct BasicEconomyNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -540,7 +543,7 @@ struct BasicEconomyNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -609,7 +612,7 @@ struct BasicEconomyNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -631,7 +634,7 @@ struct BasicEconomyNewsView: View {
                                         }
                                         .padding(.bottom, 10)
                                     }
-                                    .modifier(PannelModifier(height: 260))
+                                    .modifier(PannelModifier(height: 250))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -672,7 +675,7 @@ struct BasicEconomyNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -693,7 +696,7 @@ struct BasicEconomyNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 300))
+                                    .modifier(PannelModifier(height: 320))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -734,7 +737,7 @@ struct BasicEconomyNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -755,7 +758,7 @@ struct BasicEconomyNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 300))
+                                    .modifier(PannelModifier(height: 320))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -828,7 +831,7 @@ struct BasicEconomyNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 320))
+                                .modifier(PannelModifier(height: 300))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
@@ -876,7 +879,7 @@ struct BasicEconomyNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -898,7 +901,7 @@ struct BasicEconomyNewsView: View {
                                         }
                                         .padding(.bottom, 10)
                                     }
-                                    .modifier(PannelModifier(height: 260))
+                                    .modifier(PannelModifier(height: 250))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -939,13 +942,13 @@ struct BasicEconomyNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
                                         
                                         Button {
-                                            self.bottomHeight = 290
+                                            self.bottomHeight = 260
                                             withAnimation {
                                                 scrollProxy.scrollTo("11", anchor: .top)
                                             }
@@ -960,7 +963,7 @@ struct BasicEconomyNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 320))
+                                    .modifier(PannelModifier(height: 340))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -1001,13 +1004,13 @@ struct BasicEconomyNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
                                         
                                         Button {
-                                            self.bottomHeight = 290
+                                            self.bottomHeight = 260
                                             withAnimation {
                                                 scrollProxy.scrollTo("11", anchor: .top)
                                             }
@@ -1022,7 +1025,7 @@ struct BasicEconomyNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 270))
+                                    .modifier(PannelModifier(height: 340))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -1081,7 +1084,7 @@ struct BasicEconomyNewsView: View {
                                     Spacer()
                                     
                                     Button {
-                                        self.bottomHeight = 335
+                                        self.bottomHeight = 318
                                         withAnimation {
                                             scrollProxy.scrollTo("11", anchor: .top)
                                         }
@@ -1095,7 +1098,7 @@ struct BasicEconomyNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 270))
+                                .modifier(PannelModifier(height: 250))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
@@ -1168,7 +1171,7 @@ struct BasicEconomyNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 320))
+                                .modifier(PannelModifier(height: 310))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {

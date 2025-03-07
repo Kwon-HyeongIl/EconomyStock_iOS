@@ -280,7 +280,7 @@ struct UnEmploymentNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 330))
+                                .modifier(PannelModifier(height: 350))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
@@ -328,7 +328,7 @@ struct UnEmploymentNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -350,7 +350,7 @@ struct UnEmploymentNewsView: View {
                                         }
                                         .padding(.bottom, 10)
                                     }
-                                    .modifier(PannelModifier(height: 260))
+                                    .modifier(PannelModifier(height: 250))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -387,11 +387,11 @@ struct UnEmploymentNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("공식 실업률은 주로 정규직이나 구직 의사가 명확한 노동자를 대상으로 산정되므로, 불안정 고용(비정규직, 임시직, 프리랜서 등)은 통계에 제대로 반영되지 않아요.\n\n따라서 낮은 실업률 수치가 전체 노동시장의 안정성을 보장하지 않으며, 불안정 고용 증가는 별도의 중요한 경제적 이슈에요.")
+                                        Text("공식 실업률은 주로 정규직이나 구직 의사가 명확한 노동자를 대상으로 산정되므로, 불안정 고용(비정규직, 임시직, 프리랜서 등)은 통계에 제대로 반영되지 않아요.\n\n따라서 낮은 실업률 수치가 전체 노동시장의 안정성을 보장하지 않으며, 불안정 고용 증가는 별도의 중요한 경제적 이슈에요. 따라서 틀린 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -412,7 +412,7 @@ struct UnEmploymentNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 340))
+                                    .modifier(PannelModifier(height: 350))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -449,11 +449,11 @@ struct UnEmploymentNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("공식 실업률은 주로 정규직이나 구직 의사가 명확한 노동자를 대상으로 산정되므로, 불안정 고용(비정규직, 임시직, 프리랜서 등)은 통계에 제대로 반영되지 않아요.\n\n따라서 낮은 실업률 수치가 전체 노동시장의 안정성을 보장하지 않으며, 불안정 고용 증가는 별도의 중요한 경제적 이슈에요.")
+                                        Text("공식 실업률은 주로 정규직이나 구직 의사가 명확한 노동자를 대상으로 산정되므로, 불안정 고용(비정규직, 임시직, 프리랜서 등)은 통계에 제대로 반영되지 않아요.\n\n따라서 낮은 실업률 수치가 전체 노동시장의 안정성을 보장하지 않으며, 불안정 고용 증가는 별도의 중요한 경제적 이슈에요. 따라서 올바른 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -474,7 +474,7 @@ struct UnEmploymentNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 340))
+                                    .modifier(PannelModifier(height: 350))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -547,7 +547,7 @@ struct UnEmploymentNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 330))
+                                .modifier(PannelModifier(height: 350))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
@@ -594,7 +594,7 @@ struct UnEmploymentNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -653,11 +653,11 @@ struct UnEmploymentNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("정규직 취업 기대감의 하락은 단순한 경기 변동이 아니라, 노동시장 구조의 근본적인 문제인 비정규 고용 확대 및 고용 안정성 부족을 반영하므로 일시적인 현상으로 보기 어려워요.")
+                                        Text("정규직 취업 기대감의 하락은 단순한 경기 변동이 아니라, 노동시장 구조의 근본적인 문제인 비정규 고용 확대 및 고용 안정성 부족을 반영하는 것이에요.\n\n이러한 이유로 인해 정규직 취업 기대감의 하락은 일시적인 현상으로 보기 어려우며, 따라서 틀린 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -678,7 +678,7 @@ struct UnEmploymentNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 300))
+                                    .modifier(PannelModifier(height: 340))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -715,11 +715,11 @@ struct UnEmploymentNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("정규직 취업 기대감의 하락은 단순한 경기 변동이 아니라, 노동시장 구조의 근본적인 문제인 비정규 고용 확대 및 고용 안정성 부족을 반영하므로 일시적인 현상으로 보기 어려워요.")
+                                        Text("정규직 취업 기대감의 하락은 단순한 경기 변동이 아니라, 노동시장 구조의 근본적인 문제인 비정규 고용 확대 및 고용 안정성 부족을 반영하는 것이에요.\n\n이러한 이유로 인해 정규직 취업 기대감의 하락은 일시적인 현상으로 보기 어려우며, 따라서 올바른 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -740,7 +740,7 @@ struct UnEmploymentNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 300))
+                                    .modifier(PannelModifier(height: 340))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -865,14 +865,14 @@ struct UnEmploymentNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
                                         
                                         HStack {
                                             Button {
-                                                self.bottomHeight = 325
+                                                self.bottomHeight = 330
                                                 withAnimation {
                                                     scrollProxy.scrollTo("7", anchor: .top)
                                                 }
@@ -883,7 +883,7 @@ struct UnEmploymentNewsView: View {
                                             }
                                             
                                             Button {
-                                                self.bottomHeight = 325
+                                                self.bottomHeight = 330
                                                 withAnimation {
                                                     scrollProxy.scrollTo("7", anchor: .top)
                                                 }
@@ -895,7 +895,7 @@ struct UnEmploymentNewsView: View {
                                         }
                                         .padding(.bottom, 10)
                                     }
-                                    .modifier(PannelModifier(height: 260))
+                                    .modifier(PannelModifier(height: 250))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -932,17 +932,17 @@ struct UnEmploymentNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("불안정 고용과 낮은 임금은 노동자들의 실질 소득을 감소시켜 가계 소비를 줄여요.\n\n소비 감소는 내수 시장의 활성화를 저해하며, 이로 인해 경제 성장 둔화와 사회적 갈등 심화로 이어질 수 있어요.")
+                                        Text("불안정 고용과 낮은 임금은 노동자들의 실질 소득을 감소시켜 가계 소비를 줄여요.\n\n소비 감소는 내수 시장의 활성화를 저해하며, 이로 인해 경제 성장 둔화와 사회적 갈등 심화로 이어질 수 있어요. 따라서 올바른 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
                                         
                                         Button {
-                                            self.bottomHeight = 345
+                                            self.bottomHeight = 350
                                             withAnimation {
                                                 scrollProxy.scrollTo("7", anchor: .top)
                                             }
@@ -992,17 +992,17 @@ struct UnEmploymentNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("불안정 고용과 낮은 임금은 노동자들의 실질 소득을 감소시켜 가계 소비를 줄여요.\n\n소비 감소는 내수 시장의 활성화를 저해하며, 이로 인해 경제 성장 둔화와 사회적 갈등 심화로 이어질 수 있어요.")
+                                        Text("불안정 고용과 낮은 임금은 노동자들의 실질 소득을 감소시켜 가계 소비를 줄여요.\n\n소비 감소는 내수 시장의 활성화를 저해하며, 이로 인해 경제 성장 둔화와 사회적 갈등 심화로 이어질 수 있어요. 따라서 틀린 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
                                         
                                         Button {
-                                            self.bottomHeight = 345
+                                            self.bottomHeight = 350
                                             withAnimation {
                                                 scrollProxy.scrollTo("7", anchor: .top)
                                             }

@@ -131,8 +131,6 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         }
                                         .id("3")
                                     
-
-//                                    
                                     JustifiedText("문제는 환율 폭등이 국제수지의 불균형을 심화시킬 우려가 크다는 점이다. 수입 가격 상승으로 무역수지가 악화될 경우, 경상수지가 적자로 전환될 위험도 배제할 수 없다. 외환 전문가들은 “환율이 지나치게 변동할 때는 수출 경쟁력 확보보다 물가 상승, 자본 유출 등 부작용이 훨씬 클 수 있다”고 지적한다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 4 {
@@ -327,7 +325,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -349,7 +347,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         }
                                         .padding(.bottom, 10)
                                     }
-                                    .modifier(PannelModifier(height: 260))
+                                    .modifier(PannelModifier(height: 250))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -386,11 +384,11 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("금리 인하는 국내 경제에 유동성을 공급해 투자를 활성화하지만, 국내금리가 낮아지면 외국인 자본이 이탈하고 환율이 상승하는 부작용이 발생할 수 있어요.\n\n이는 환율 변동성을 높여 시장 불안을 가중시켜요.")
+                                        Text("금리 인하는 국내 경제에 유동성을 공급해 투자를 활성화하지만, 국내금리가 낮아지면 외국인 자본이 이탈하고 환율이 상승하는 부작용이 발생할 수 있어요.\n\n이는 환율 변동성을 높여 시장 불안을 가중시켜요. 따라서 올바른 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -448,11 +446,11 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("금리 인하는 국내 경제에 유동성을 공급해 투자를 활성화하지만, 국내금리가 낮아지면 외국인 자본이 이탈하고 환율이 상승하는 부작용이 발생할 수 있어요.\n\n이는 환율 변동성을 높여 시장 불안을 가중시켜요.")
+                                        Text("금리 인하는 국내 경제에 유동성을 공급해 투자를 활성화하지만, 국내금리가 낮아지면 외국인 자본이 이탈하고 환율이 상승하는 부작용이 발생할 수 있어요.\n\n이는 환율 변동성을 높여 시장 불안을 가중시켜요. 따라서 틀린 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -542,7 +540,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                     Button {
                                         self.bottomHeight = 160
                                         withAnimation {
-                                            scrollProxy.scrollTo("4", anchor: .top)
+                                            scrollProxy.scrollTo("3", anchor: .top)
                                         }
                                         self.progress.append(0)
                                         self.animationOpacity = 0.0
@@ -601,7 +599,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -660,11 +658,11 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("환율이 급등하면 원자재, 에너지 등 수입품 가격이 상승하여 국내 기업들의 생산 비용 부담이 커져요.\n\n이는 국제 경쟁력을 약화시켜 수출보다 수입 증가율이 더 높아질 수 있으며, 결국 무역수지 불균형을 심화시킬 위험이 있어요.")
+                                        Text("환율이 급등하면 원자재, 에너지 등 수입품 가격이 상승하여 국내 기업들의 생산 비용 부담이 커져요.\n\n이는 국제 경쟁력을 약화시켜 수출보다 수입 증가율이 더 높아질 수 있으며, 결국 무역수지 불균형을 심화시킬 위험이 있어요. 따라서 올바른 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -685,7 +683,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 300))
+                                    .modifier(PannelModifier(height: 330))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -722,11 +720,11 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("환율이 급등하면 원자재, 에너지 등 수입품 가격이 상승하여 국내 기업들의 생산 비용 부담이 커져요.\n\n이는 국제 경쟁력을 약화시켜 수출보다 수입 증가율이 더 높아질 수 있으며, 결국 무역수지 불균형을 심화시킬 위험이 있어요.")
+                                        Text("환율이 급등하면 원자재, 에너지 등 수입품 가격이 상승하여 국내 기업들의 생산 비용 부담이 커져요.\n\n이는 국제 경쟁력을 약화시켜 수출보다 수입 증가율이 더 높아질 수 있으며, 결국 무역수지 불균형을 심화시킬 위험이 있어요. 따라서 틀린 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -747,7 +745,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 300))
+                                    .modifier(PannelModifier(height: 330))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -872,14 +870,14 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
                                         
                                         HStack {
                                             Button {
-                                                self.bottomHeight = 325
+                                                self.bottomHeight = 330
                                                 withAnimation {
                                                     scrollProxy.scrollTo("7", anchor: .top)
                                                 }
@@ -890,7 +888,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                             }
                                             
                                             Button {
-                                                self.bottomHeight = 325
+                                                self.bottomHeight = 330
                                                 withAnimation {
                                                     scrollProxy.scrollTo("7", anchor: .top)
                                                 }
@@ -939,17 +937,17 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("과도한 환율 개입은 외환보유액 고갈, 통화 정책 왜곡, 대외 신뢰도 하락 등 부작용을 유발할 수 있어요.\n\n따라서 환율 변동성 억제책은 거시경제 안정을 위해 신중하고 제한적으로 이루어져야 해요.")
+                                        Text("과도한 환율 개입은 외환보유액 고갈, 통화 정책 왜곡, 대외 신뢰도 하락 등 부작용을 유발할 수 있어요.\n\n따라서 환율 변동성 억제책은 거시경제 안정을 위해 신중하고 제한적으로 이루어져야 해요. 따라서 올바른 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
                                         
                                         Button {
-                                            self.bottomHeight = 345
+                                            self.bottomHeight = 350
                                             withAnimation {
                                                 scrollProxy.scrollTo("7", anchor: .top)
                                             }
@@ -999,17 +997,17 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("과도한 환율 개입은 외환보유액 고갈, 통화 정책 왜곡, 대외 신뢰도 하락 등 부작용을 유발할 수 있어요.\n\n따라서 환율 변동성 억제책은 거시경제 안정을 위해 신중하고 제한적으로 이루어져야 해요.")
+                                        Text("과도한 환율 개입은 외환보유액 고갈, 통화 정책 왜곡, 대외 신뢰도 하락 등 부작용을 유발할 수 있어요.\n\n따라서 환율 변동성 억제책은 거시경제 안정을 위해 신중하고 제한적으로 이루어져야 해요. 따라서 틀린 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
                                         
                                         Button {
-                                            self.bottomHeight = 345
+                                            self.bottomHeight = 335
                                             withAnimation {
                                                 scrollProxy.scrollTo("7", anchor: .top)
                                             }
@@ -1099,7 +1097,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 370))
+                                .modifier(PannelModifier(height: 325))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {

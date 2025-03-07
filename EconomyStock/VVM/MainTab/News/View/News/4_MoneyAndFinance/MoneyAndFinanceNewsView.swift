@@ -266,7 +266,7 @@ struct MoneyAndFinanceNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 330))
+                                .modifier(PannelModifier(height: 320))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
@@ -314,7 +314,7 @@ struct MoneyAndFinanceNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -336,7 +336,7 @@ struct MoneyAndFinanceNewsView: View {
                                         }
                                         .padding(.bottom, 10)
                                     }
-                                    .modifier(PannelModifier(height: 260))
+                                    .modifier(PannelModifier(height: 250))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -373,11 +373,11 @@ struct MoneyAndFinanceNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("신용 공급 확대는 소비와 투자 활성화에 기여하지만, 일반적으로 저축률을 증가시키는 효과와는 무관하거나 반대 방향으로 작용할 수 있어요.\n\n유동성 증가로 인해 이자율이 낮아지면 저축 유인이 약해지고, 오히려 소비가 늘어날 가능성이 높아요.")
+                                        Text("신용 공급 확대는 소비와 투자 활성화에 기여하지만, 일반적으로 저축률을 증가시키는 효과와는 무관하거나 반대 방향으로 작용할 수 있어요.\n\n유동성 증가로 인해 이자율이 낮아지면 저축 유인이 약해지고, 오히려 소비가 늘어날 가능성이 높아요. 따라서 틀린 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -435,11 +435,11 @@ struct MoneyAndFinanceNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("신용 공급 확대는 소비와 투자 활성화에 기여하지만, 일반적으로 저축률을 증가시키는 효과와는 무관하거나 반대 방향으로 작용할 수 있어요.\n\n유동성 증가로 인해 이자율이 낮아지면 저축 유인이 약해지고, 오히려 소비가 늘어날 가능성이 높아요.")
+                                        Text("신용 공급 확대는 소비와 투자 활성화에 기여하지만, 일반적으로 저축률을 증가시키는 효과와는 무관하거나 반대 방향으로 작용할 수 있어요.\n\n유동성 증가로 인해 이자율이 낮아지면 저축 유인이 약해지고, 오히려 소비가 늘어날 가능성이 높아요. 따라서 올바른 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -533,7 +533,7 @@ struct MoneyAndFinanceNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 330))
+                                .modifier(PannelModifier(height: 335))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
@@ -581,7 +581,7 @@ struct MoneyAndFinanceNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -640,11 +640,11 @@ struct MoneyAndFinanceNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("확장적 통화정책은 기업들에 유리한 투자 환경을 조성해요. 그러나 유동성 확대가 물가 상승으로 이어지면 소비자들은 실질 소득 감소로 인해 생활비 부담을 겪게 되어, 경제 주체 간 이익이 상반된 결과가 나타날 수 있어요.")
+                                        Text("확장적 통화정책은 기업들에 유리한 투자 환경을 조성해요. 그러나 유동성 확대가 물가 상승으로 이어지면 소비자들은 실질 소득 감소로 인해 생활비 부담을 겪게 될 수 있어요.\n\n이로 인해 경제 주체 간 이익이 상반된 결과가 나타날 수 있으며, 따라서 올바른 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -665,7 +665,7 @@ struct MoneyAndFinanceNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 300))
+                                    .modifier(PannelModifier(height: 320))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -702,11 +702,11 @@ struct MoneyAndFinanceNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("확장적 통화정책은 기업들에 유리한 투자 환경을 조성해요. 그러나 유동성 확대가 물가 상승으로 이어지면 소비자들은 실질 소득 감소로 인해 생활비 부담을 겪게 되어, 경제 주체 간 이익이 상반된 결과가 나타날 수 있어요.")
+                                        Text("확장적 통화정책은 기업들에 유리한 투자 환경을 조성해요. 그러나 유동성 확대가 물가 상승으로 이어지면 소비자들은 실질 소득 감소로 인해 생활비 부담을 겪게 될 수 있어요.\n\n이로 인해 경제 주체 간 이익이 상반된 결과가 나타날 수 있으며, 따라서 틀린 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -727,7 +727,7 @@ struct MoneyAndFinanceNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 300))
+                                    .modifier(PannelModifier(height: 320))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -852,7 +852,7 @@ struct MoneyAndFinanceNewsView: View {
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -882,7 +882,7 @@ struct MoneyAndFinanceNewsView: View {
                                         }
                                         .padding(.bottom, 10)
                                     }
-                                    .modifier(PannelModifier(height: 260))
+                                    .modifier(PannelModifier(height: 255))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -919,11 +919,11 @@ struct MoneyAndFinanceNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("단기 경기 부양을 위해 유동성을 확대하거나 금리를 낮추면 인플레이션 압력이 커질 가능성이 있으며, 반대로 물가 안정을 중시하면 경기 진작 효과가 제한될 수 있어요.\n\n따라서 재정·통화 정책을 비롯한 여러 수단을 함께 조정해야 두 목표를 균형 있게 달성할 수 있어요.")
+                                        Text("단기 경기 부양을 위해 유동성을 확대하거나 금리를 낮추면 인플레이션 압력이 커질 가능성이 있으며, 반대로 물가 안정을 중시하면 경기 진작 효과가 제한될 수 있어요.\n\n따라서 재정·통화 정책을 비롯한 여러 수단을 함께 조정해야 두 목표를 균형 있게 달성할 수 있어요. 따라서 올바른 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -940,7 +940,7 @@ struct MoneyAndFinanceNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 320))
+                                    .modifier(PannelModifier(height: 330))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -977,11 +977,11 @@ struct MoneyAndFinanceNewsView: View {
                                         
                                         Spacer()
                                         
-                                        Text("단기 경기 부양을 위해 유동성을 확대하거나 금리를 낮추면 인플레이션 압력이 커질 가능성이 있으며, 반대로 물가 안정을 중시하면 경기 진작 효과가 제한될 수 있어요.\n\n따라서 재정·통화 정책을 비롯한 여러 수단을 함께 조정해야 두 목표를 균형 있게 달성할 수 있어요.")
+                                        Text("단기 경기 부양을 위해 유동성을 확대하거나 금리를 낮추면 인플레이션 압력이 커질 가능성이 있으며, 반대로 물가 안정을 중시하면 경기 진작 효과가 제한될 수 있어요.\n\n따라서 재정·통화 정책을 비롯한 여러 수단을 함께 조정해야 두 목표를 균형 있게 달성할 수 있어요. 따라서 틀린 문장이에요.")
                                             .font(.system(size: 16))
                                             .multilineTextAlignment(.center)
                                             .fontWeight(.semibold)
-                                            .padding(.top, 5)
+                                            .padding(.top, 10)
                                             .padding(.horizontal, 10)
                                         
                                         Spacer()
@@ -998,7 +998,7 @@ struct MoneyAndFinanceNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 320))
+                                    .modifier(PannelModifier(height: 330))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
