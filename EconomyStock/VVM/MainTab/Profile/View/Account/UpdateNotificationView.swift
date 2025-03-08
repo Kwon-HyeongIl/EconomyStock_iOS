@@ -25,7 +25,7 @@ struct UpdateNotificationView: View {
         VStack {
             ScrollView {
                 VStack {
-                    VStack(alignment: .leading, spacing: 10) {
+                    VStack(alignment: .leading, spacing: 7) {
                         Toggle("경제 지표 변동 사항", isOn: $eventNotification)
                             .font(.system(size: 18))
                             .fontWeight(.medium)
@@ -40,10 +40,13 @@ struct UpdateNotificationView: View {
                                     }
                                 }
                             }
+                        
                         Text(eventNotification ? "경제 지표 관련 주요한 변동이 있을 때 알림을 받을 수 있어요." : "경제 지표 관련 주요한 변동이 있어도 알림을 수신 받지 않아요.")
                             .font(.system(size: 12))
                             .foregroundStyle(.gray)
                             .padding(.horizontal)
+                            .padding(.bottom, 3)
+                        
                         Divider()
                             .padding(.horizontal)
                     }

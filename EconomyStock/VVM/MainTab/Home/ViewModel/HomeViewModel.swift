@@ -43,14 +43,13 @@ class HomeViewModel {
         initUR()
     }
 
-    // 기준금리
+    // 기준금리 (5년치 일 데이터를 1/7)
     func initBR() {
         EconomicIndicatorManager.requestBR { BR in
             DispatchQueue.main.async {
-                self.BR = BR.map { data in
-                    var modifiedData = data
-                    modifiedData.time = self.formatDateString(data.time, type: .day)
-                    
+                self.BR = stride(from: 0, to: BR.count, by: 7).map { index in
+                    var modifiedData = BR[index]
+                    modifiedData.time = self.formatDateString(BR[index].time, type: .day)
                     return modifiedData
                 }
             }
