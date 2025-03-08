@@ -33,7 +33,11 @@ struct UpdateNotificationView: View {
                             .padding(.horizontal)
                             .onChange(of: eventNotification) { oldValue, newValue in
                                 Task {
-                                    await viewModel.editNotificationType(newValue)
+                                    if newValue {
+                                        await viewModel.subscribeTopic(topic: "event")
+                                    } else {
+                                        await viewModel.unsubscribeTopic(topic: "event")
+                                    }
                                 }
                             }
                         Text(eventNotification ? "경제 지표 관련 주요한 변동이 있을 때 알림을 받을 수 있어요." : "경제 지표 관련 주요한 변동이 있어도 알림을 수신 받지 않아요.")

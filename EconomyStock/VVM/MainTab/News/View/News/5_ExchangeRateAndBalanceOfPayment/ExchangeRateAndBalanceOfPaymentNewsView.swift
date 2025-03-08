@@ -97,7 +97,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         }
                                         .id("1")
                                     
-                                    JustifiedText("이와 동시에, 한국은행이 경기 부양을 목적으로 금리 인하를 단행하면서 환율 불안이 더욱 심화되고 있다는 분석이 제기된다. 한 금융 연구소의 김 연구원은 “금리 인하는 내수 진작에 도움이 되지만, 외국인 투자자들의 자본 이탈과 환율 상승을 부추길 수 있어 면밀한 정책 운용이 중요하다”고 설명했다.", maxWidth: geometryProxy.size.width - 45)
+                                    JustifiedText("이와 동시에, 한국은행이 경기 부양을 목적으로 금리 인하를 단행하면서 환율 불안이 더욱 심화되고 있다는 분석이 제기된다. 한 금융 연구소의 톡톡씨는 “금리 인하는 내수 진작에 도움이 되지만, 외국인 투자자들의 자본 이탈과 환율 상승을 부추길 수 있어 면밀한 정책 운용이 중요하다”고 설명했다.", maxWidth: geometryProxy.size.width - 45)
                                         .overlay {
                                             if progress.count == 2 {
                                                 RoundedRectangle(cornerRadius: 10)

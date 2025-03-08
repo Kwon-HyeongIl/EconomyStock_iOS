@@ -48,18 +48,19 @@ class AuthManager {
             // 로컬 저장소
             } else {
                 try await MainActor.run {
-                    let user = try modelContainer?.mainContext.fetch(FetchDescriptor<LocalUser>())
-
-                    if user != nil {
-                        print("LocalUser 로드")
+                    if let user = try modelContainer?.mainContext.fetch(FetchDescriptor<LocalUser>()) {
                         
-                        self.localUser = user?.first
-                        
-                    // 처음 앱을 시작한 경우
-                    } else {
-                        print("LocalUser init")
-                        
-                        try initLocalUser()
+                        if !user.isEmpty  {
+                            print("LocalUser 로드")
+                            
+                            self.localUser = user.first
+                            
+                        // 처음 앱을 시작한 경우
+                        } else {
+                            print("LocalUser init")
+                            
+                            try initLocalUser()
+                        }
                     }
                 }
             }
@@ -79,6 +80,11 @@ class AuthManager {
         try? modelContainer?.mainContext.save()
         
         self.localUser = try modelContainer?.mainContext.fetch(FetchDescriptor<LocalUser>()).first
+        
+        // FCM 토픽 구독
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            FCMManager.shared.subscribe(to: "event")
+        }
     }
     
     func createUser(email: String, password: String, username: String, appleHashedUid: String = "", googleHashedUid: String = "", kakaoHashedUid: String = "") async {
@@ -133,25 +139,15 @@ class AuthManager {
             
             self.isLogin = true
             
-            try await deleteLocalUser()
-            
         } catch {
             print(error.localizedDescription)
         }
     }
     
-    @MainActor
-    private func deleteLocalUser() throws {
-        try self.modelContainer?.mainContext.delete(model: LocalUser.self)
-        try modelContainer?.mainContext.save()
-        
-        self.localUser = nil
-    }
-    
     func login(email: String, password: String) async -> Bool {
         guard let _ = try? await Auth.auth().signIn(withEmail: email, password: password) else { return false }
         
-        await updateDeviceToken()
+//        await updateDeviceToken()
         await loadCurrentUserData()
         
         self.isLogin = true
@@ -159,36 +155,36 @@ class AuthManager {
         return true
     }
     
-    func updateDeviceToken() async {
-        do {
-            guard let userId = Auth.auth().currentUser?.uid else { return }
-            var editedData: [String : Any] = [:]
-            editedData["deviceToken"] = FCMManager.shared.myDeviceToken ?? ""
-            
-            try await Firestore.firestore()
-                .collection("User").document(userId)
-                .updateData(editedData)
-            
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
+//    func updateDeviceToken() async {
+//        do {
+//            guard let userId = Auth.auth().currentUser?.uid else { return }
+//            var editedData: [String : Any] = [:]
+//            editedData["deviceToken"] = FCMManager.shared.myDeviceToken ?? ""
+//            
+//            try await Firestore.firestore()
+//                .collection("User").document(userId)
+//                .updateData(editedData)
+//            
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+//    }
     
-    func getSpecificUserDeviceToken(userId: String) async -> String {
-        do {
-            let userDocument = try await Firestore.firestore()
-                .collection("User").document(userId)
-                .getDocument()
-            
-            let user = try userDocument.data(as: User.self)
-            
-            return user.deviceToken
-            
-        } catch {
-            print(error.localizedDescription)
-            return ""
-        }
-    }
+//    func getSpecificUserDeviceToken(userId: String) async -> String {
+//        do {
+//            let userDocument = try await Firestore.firestore()
+//                .collection("User").document(userId)
+//                .getDocument()
+//            
+//            let user = try userDocument.data(as: User.self)
+//            
+//            return user.deviceToken
+//            
+//        } catch {
+//            print(error.localizedDescription)
+//            return ""
+//        }
+//    }
     
     func loadSpecificUser(userId: String) async -> User? {
         do {
