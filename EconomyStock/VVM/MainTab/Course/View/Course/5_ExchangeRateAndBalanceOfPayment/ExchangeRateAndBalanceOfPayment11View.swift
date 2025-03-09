@@ -71,6 +71,11 @@ struct ExchangeRateAndBalanceOfPayment11View: View {
                                             .padding(.top, 30)
                                     }
                                     
+                                    if contentImage {
+                                        LottieView(fileName: "ExchangeRateAndBalanceOfPayment11_Global", loopMode: .playOnce, width: 180, height: 180)
+                                            .padding(.top)
+                                    }
+                                    
                                     Spacer()
                                 }
                             }

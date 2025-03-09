@@ -61,6 +61,7 @@ struct ProfileView: View {
                                                 .foregroundStyle(.gray)
                                                 .fontWeight(.bold)
                                                 .padding(.leading, 5)
+                                                .padding(.bottom, 2)
                                         }
                                         
                                         Spacer()
@@ -76,6 +77,7 @@ struct ProfileView: View {
                                             .font(.system(size: 13))
                                             .foregroundStyle(Color.ESTitle)
                                             .padding(.leading, 5)
+                                            .padding(.bottom, 1)
                                         
                                         Text("일")
                                             .font(.system(size: 11))

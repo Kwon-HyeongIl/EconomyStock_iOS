@@ -55,7 +55,7 @@ struct ExchangeRateAndBalanceOfPayment10View: View {
                                     
                                     if contentText1_2 {
                                         (Text("미국이 기준금리를 인상하여 우리나라의 금리보다 훨씬 높은 수준이 된다면 ")
-                                         + Text("자본이 유츌")
+                                         + Text("\n\n자본이 유츌")
                                             .foregroundStyle(Color.ESTitle)
                                             .fontWeight(.bold)
                                          + Text("될 위험에 놓이고, ")
@@ -75,7 +75,7 @@ struct ExchangeRateAndBalanceOfPayment10View: View {
                                     }
                                     
                                     if contentImage {
-                                        LottieView(fileName: "ExchangeRateAndBalanceOfPayment10_Union", loopMode: .playOnce, fromProgress: 0.2, scale: 1.1, width: 180, height: 180)
+                                        LottieView(fileName: "ExchangeRateAndBalanceOfPayment10_MoneyCouple", loopMode: .playOnce, fromProgress: 0.2, width: 180, height: 180)
                                     }
                                     
                                     Spacer()

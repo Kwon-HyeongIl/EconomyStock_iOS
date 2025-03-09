@@ -124,7 +124,7 @@ struct AccountInfoView: View {
                     Text("회원 탈퇴")
                         .font(.system(size: 13))
                         .foregroundStyle(.red)
-                        .padding(.top, 50)
+                        .padding(.top, 30)
                 }
             }
         }
