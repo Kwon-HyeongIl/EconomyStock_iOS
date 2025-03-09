@@ -43,7 +43,7 @@ struct BasicSignupView: View {
                             .padding(.bottom, 5)
                             
                             TextField("닉네임", text: $viewModel.username)
-                                .font(.system(size: 20))
+                                .font(.system(size: 17))
                                 .padding(.leading, 20)
                                 .padding(.bottom, 10)
                                 .focused($focus, equals: .username)
@@ -72,7 +72,7 @@ struct BasicSignupView: View {
                             .padding(.bottom, 5)
                             
                             SecureField("비밀번호 (6자리 이상)", text: $viewModel.password)
-                                .font(.system(size: 20))
+                                .font(.system(size: 17))
                                 .padding(.leading, 20)
                                 .padding(.bottom, 10)
                                 .focused($focus, equals: .password)
@@ -100,7 +100,7 @@ struct BasicSignupView: View {
                         .padding(.bottom, 5)
                         
                         TextField("이메일", text: $viewModel.email)
-                            .font(.system(size: 20))
+                            .font(.system(size: 17))
                             .padding(.leading, 20)
                             .padding(.bottom, 10)
                             .focused($focus, equals: .email)

@@ -41,7 +41,7 @@ struct ResetPasswordView: View {
                     .padding(.bottom, 5)
                     
                     TextField("이메일", text: $viewModel.email)
-                        .font(.system(size: 20))
+                        .font(.system(size: 17))
                         .padding(.leading, 20)
                         .padding(.bottom, 10)
                         .focused($focus, equals: .email)

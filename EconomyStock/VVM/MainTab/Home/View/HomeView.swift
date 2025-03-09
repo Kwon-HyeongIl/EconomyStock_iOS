@@ -39,27 +39,27 @@ struct HomeView: View {
                     
                     Spacer()
                     
-                    Button {
-                        
-                    } label: {
-                        ZStack {
-                            Image(systemName: "bell")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 21)
-                                .foregroundStyle(Color.ESTitle)
-                                .padding(.trailing)
-                            
-                            //                        if viewModel.isNotificationBadge {
-                            //                            Circle()
-                            //                                .scaledToFit()
-                            //                                .frame(width: 7)
-                            //                                .foregroundStyle(.red)
-                            //                                .padding(.leading, 18)
-                            //                                .padding(.bottom, 24)
-                            //                        }
-                        }
-                    }
+//                    Button {
+//                        
+//                    } label: {
+//                        ZStack {
+//                            Image(systemName: "bell")
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(width: 21)
+//                                .foregroundStyle(Color.ESTitle)
+//                                .padding(.trailing)
+//                            
+//                            if viewModel.isNotificationBadge {
+//                                Circle()
+//                                    .scaledToFit()
+//                                    .frame(width: 7)
+//                                    .foregroundStyle(.red)
+//                                    .padding(.leading, 18)
+//                                    .padding(.bottom, 24)
+//                            }
+//                        }
+//                    }
                 }
                 .padding(.bottom, 5)
             }
