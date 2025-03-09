@@ -18,6 +18,8 @@ struct UnEmploymentNewsView: View {
     
     @State private var animationOpacity = 0.0
     
+    @State private var alertInfo = false
+    
     @State private var startPopup = false
     @State private var endPopup = false
     @State private var isPopupLoading = true
@@ -70,6 +72,30 @@ struct UnEmploymentNewsView: View {
                                             .padding(.leading)
                                         
                                         Spacer()
+                                    }
+                                    
+                                    HStack {
+                                        Spacer()
+                                        
+                                        Button {
+                                            self.alertInfo = true
+                                        } label: {
+                                            Image(systemName: "info.circle")
+                                                .scaledToFit()
+                                                .frame(width: 15, height: 15)
+                                                .foregroundStyle(.gray.opacity(0.8))
+                                                .padding(.trailing, 10)
+                                                .padding(.bottom, 45)
+                                        }
+                                        .alert("정보", isPresented: $alertInfo) {
+                                            Button {
+                                                
+                                            } label: {
+                                                Text("확인")
+                                            }
+                                        } message: {
+                                            Text("경제스톡 내의 뉴스는 가상으로 작성된 뉴스입니다.")
+                                        }
                                     }
                                 }
                                 
