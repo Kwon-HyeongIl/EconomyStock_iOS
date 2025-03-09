@@ -8,7 +8,7 @@
 import Foundation
 
 extension ProfileViewModel {
-    func deleteAccount() {
-        AuthManager.shared.deleteAccount()
+    func deleteAccount() async {
+        await AuthManager.shared.deleteAccount()
     }
 }

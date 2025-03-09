@@ -222,8 +222,21 @@ class AuthManager {
         }
     }
     
-    func deleteAccount() {
+    func deleteAccount() async {
         if  let user = Auth.auth().currentUser {
+            // Firestore 유저 삭제
+            guard let userId = self.remoteUser?.id else { return }
+            
+            do {
+                try await Firestore.firestore()
+                    .collection("User").document(userId)
+                    .delete()
+                
+            } catch {
+                print(error.localizedDescription)
+            }
+            
+            // Authentication 유저 삭제
             user.delete { error in
                 if let error {
                     print(error.localizedDescription)

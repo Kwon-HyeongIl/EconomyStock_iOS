@@ -19,17 +19,21 @@ struct DeleteAccountView: View {
             ZStack {
                 ScrollView {
                     VStack {
-                        Text("\(viewModel.remoteUser?.username ?? "")님\n\n정말 경제스톡을 떠나실 건가요?")
-                            .font(.system(size: 17))
-                            .fontWeight(.semibold)
-                            .multilineTextAlignment(.center)
-                        
-                        Image("Frustration_Toktok")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100)
-                            .scaleEffect(x: -1, y: 1)
-                            .padding(.top)
+                        VStack {
+                            Text("\(viewModel.remoteUser?.username ?? "")님\n\n정말 경제스톡을 떠나실 건가요?")
+                                .font(.system(size: 17))
+                                .fontWeight(.semibold)
+                                .multilineTextAlignment(.center)
+                                .padding(.top, 10)
+                            
+                            Image("Frustration_Toktok")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 100)
+                                .scaleEffect(x: -1, y: 1)
+                                .padding(.top)
+                        }
+                        .modifier(PannelModifier(height: 300))
                         
                         Text("아래의 확인 버튼을 누르면 사용자의 모든 데이터가 삭제됩니다.")
                             .font(.system(size: 17))
@@ -46,7 +50,9 @@ struct DeleteAccountView: View {
                     Button {
                         self.loadingBarState = true
                         
-                        viewModel.deleteAccount()
+                        Task {
+                            await viewModel.deleteAccount()
+                        }
                         
                         capsule.selectedTab = .home
                         navRouter.popToRoot()
