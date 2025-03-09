@@ -12,6 +12,10 @@ import GoogleGenerativeAI
 class ChatbotViewModel {
     var model: GenerativeModel
     
+    var isLogin: Bool {
+        AuthManager.shared.isLogin
+    }
+    
     let type: ChatbotEntranceType
     var messages = [ChatMessage]()
     var history = [ModelContent]()

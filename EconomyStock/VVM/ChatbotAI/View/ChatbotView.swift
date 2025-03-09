@@ -9,6 +9,7 @@ import SwiftUI
 import Combine
 
 struct ChatbotView: View {
+    @Environment(NavigationRouter.self) var navRouter
     @State private var viewModel: ChatbotViewModel
     
     @State private var position = ScrollPosition()
@@ -17,6 +18,8 @@ struct ChatbotView: View {
     
     @State private var userChatIndex = 0
     @State private var bottomHeight: CGFloat = 0
+    
+    @State private var alertLogin = false
     
     init(type: ChatbotEntranceType) {
         self.viewModel = ChatbotViewModel(type: type)
@@ -116,14 +119,19 @@ struct ChatbotView: View {
             }
             
             HStack {
-                TextField("질문을 입력해주세요", text: $viewModel.prompt, axis: .vertical)
+                TextField(viewModel.isLogin ? "질문을 입력해주세요" : "로그인이 필요한 서비스입니다", text: $viewModel.prompt, axis: .vertical)
                     .font(.system(size: 15))
                     .padding(.vertical)
                     .padding(.leading)
                 
                 Button {
-                    Task {
-                        await viewModel.requestChatbot()
+                    if viewModel.isLogin {
+                        Task {
+                            await viewModel.requestChatbot()
+                        }
+                        
+                    } else {
+                        self.alertLogin = true
                     }
                 } label: {
                     Circle()
@@ -140,6 +148,15 @@ struct ChatbotView: View {
                         .padding(.trailing)
                         .padding(.vertical, 5)
                         .shadow(color: .gray.opacity(0.1), radius: 5, x: 5, y: 5)
+                }
+                .alert("경고", isPresented: $alertLogin) {
+                    Button {
+                        navRouter.navigate(.LoginView)
+                    } label: {
+                        Text("확인")
+                    }
+                } message: {
+                    Text("로그인이 필요한 서비스입니다.")
                 }
             }
             .background(.regularMaterial)
