@@ -282,7 +282,7 @@ struct HomeView: View {
                                         .foregroundStyle(.gray.opacity(0.3))
                                 }
                                 .overlay {
-                                    BannerAd(unitId: "ca-app-pub-3940256099942544/2435281174")
+                                    BannerAd()
                                         .frame(height: 80)
                                         .frame(maxWidth: .infinity)
                                         .cornerRadius(10, corners: .allCorners)

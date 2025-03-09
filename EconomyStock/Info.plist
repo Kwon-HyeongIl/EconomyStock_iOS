@@ -228,5 +228,7 @@
 	</array>
 	<key>GOOGLE_ADMOB_BANNER_AD_UNIT_ID</key>
 	<string>${GOOGLE_ADMOB_BANNER_AD_UNIT_ID}</string>
+	<key>GOOGLE_ADMOB_BANNER_AD_UNIT_ID_TEST</key>
+	<string>${GOOGLE_ADMOB_BANNER_AD_UNIT_ID_TEST}</string>
 </dict>
 </plist>
