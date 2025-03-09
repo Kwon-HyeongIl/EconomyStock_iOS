@@ -15,6 +15,9 @@ struct ChatbotView: View {
     @State private var isAtBottom = false
     @State private var keyboardHeight: CGFloat = 0
     
+    @State private var userChatIndex = 0
+    @State private var bottomHeight: CGFloat = 0
+    
     init(type: ChatbotEntranceType) {
         self.viewModel = ChatbotViewModel(type: type)
     }
@@ -44,6 +47,18 @@ struct ChatbotView: View {
                                             ChatBubbleView(text: message.text, isUser: true)
                                                 .padding(.trailing)
                                                 .shadow(color: .gray.opacity(0.1), radius: 5, x: 5, y: 5)
+                                                .id(message.id)
+                                                .onAppear {
+                                                    self.bottomHeight += 500
+                                                    withAnimation {
+                                                        proxy.scrollTo(message.id, anchor: .top)
+                                                    }
+                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                                        withAnimation {
+                                                            self.bottomHeight -= 500
+                                                        }
+                                                    }
+                                                }
                                             
                                         } else {
                                             ChatBubbleView(text: message.text, isUser: false)
@@ -67,6 +82,10 @@ struct ChatbotView: View {
                                         }
                                 }
                             )
+                            
+                            Rectangle()
+                                .fill(.clear)
+                                .frame(height: bottomHeight)
                         }
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
@@ -95,7 +114,7 @@ struct ChatbotView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
-
+            
             HStack {
                 TextField("질문을 입력해주세요", text: $viewModel.prompt, axis: .vertical)
                     .font(.system(size: 15))
@@ -105,6 +124,8 @@ struct ChatbotView: View {
                 Button {
                     Task {
                         await viewModel.requestChatbot()
+                        
+                        
                     }
                 } label: {
                     Circle()
@@ -128,7 +149,7 @@ struct ChatbotView: View {
             .padding(.horizontal)
             .padding(.bottom, 10)
             .shadow(color: .gray.opacity(0.1), radius: 5, x: 5, y: 5)
-
+            
         }
         .modifier(NavigationBackModifier())
         .background(LottieView(fileName: "AIBackground", loopMode: .loop, scale: 1.8, width: 300, height: 530)
@@ -140,6 +161,7 @@ struct ChatbotView: View {
             // 키보드 내리기
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         }
+        .toolbarBackground(.hidden, for: .navigationBar)
     }
 }
 
