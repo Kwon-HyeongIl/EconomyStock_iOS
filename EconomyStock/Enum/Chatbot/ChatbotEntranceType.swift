@@ -15,4 +15,10 @@ enum ChatbotEntranceType {
     case unEmploymentCourse
     case moneyAndFinanceCourse
     case exchangeRateAndBalanceOfPaymentCourse
+    
+    case basicEconomyNews
+    case priceLevelNews
+    case unEmploymentNews
+    case moneyAndFinanceNews
+    case exchangeRateAndBalanceOfPaymentNews
 }

@@ -99,7 +99,7 @@ struct UnEmploymentNewsView: View {
                                     }
                                 }
                                 
-                                Text("고공행진 인플레이션, 서민 경제 직격탄")
+                                Text("실망노동자 증가... 실업률 통계에 잡히지 않는 '보이지 않는 위기'")
                                     .font(.system(size: 20).bold())
                                     .foregroundStyle(.black)
                                     .padding(.top, 10)
@@ -110,7 +110,7 @@ struct UnEmploymentNewsView: View {
                                         .overlay {
                                             if progress.count == 1 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.2))
+                                                    .foregroundStyle(.yellow.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -127,7 +127,7 @@ struct UnEmploymentNewsView: View {
                                         .overlay {
                                             if progress.count == 2 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.red.opacity(0.2))
+                                                    .foregroundStyle(.red.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -144,7 +144,7 @@ struct UnEmploymentNewsView: View {
                                         .overlay {
                                             if progress.count == 3 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.2))
+                                                    .foregroundStyle(.yellow.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -161,7 +161,7 @@ struct UnEmploymentNewsView: View {
                                         .overlay {
                                             if progress.count == 4 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.red.opacity(0.2))
+                                                    .foregroundStyle(.red.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -178,7 +178,7 @@ struct UnEmploymentNewsView: View {
                                         .overlay {
                                             if progress.count == 5 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.2))
+                                                    .foregroundStyle(.yellow.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -195,7 +195,7 @@ struct UnEmploymentNewsView: View {
                                         .overlay {
                                             if progress.count == 6 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.red.opacity(0.2))
+                                                    .foregroundStyle(.red.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -212,7 +212,7 @@ struct UnEmploymentNewsView: View {
                                         .overlay {
                                             if progress.count == 7 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.2))
+                                                    .foregroundStyle(.yellow.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -306,7 +306,7 @@ struct UnEmploymentNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 350))
+                                .modifier(PannelModifier(height: 345))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
@@ -573,7 +573,7 @@ struct UnEmploymentNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 350))
+                                .modifier(PannelModifier(height: 345))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
@@ -843,7 +843,7 @@ struct UnEmploymentNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 340))
+                                .modifier(PannelModifier(height: 330))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
@@ -1118,7 +1118,7 @@ struct UnEmploymentNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 340))
+                                .modifier(PannelModifier(height: 335))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {

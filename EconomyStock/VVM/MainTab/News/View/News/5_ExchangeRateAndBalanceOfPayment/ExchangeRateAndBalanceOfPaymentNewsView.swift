@@ -99,7 +99,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                     }
                                 }
                                 
-                                Text("고공행진 인플레이션, 서민 경제 직격탄")
+                                Text("환율 폭등 속 금리 인하... 시장 불안 가중")
                                     .font(.system(size: 20).bold())
                                     .foregroundStyle(.black)
                                     .padding(.top, 10)
@@ -110,7 +110,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         .overlay {
                                             if progress.count == 1 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.2))
+                                                    .foregroundStyle(.yellow.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -127,7 +127,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         .overlay {
                                             if progress.count == 2 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.red.opacity(0.2))
+                                                    .foregroundStyle(.red.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -144,7 +144,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         .overlay {
                                             if progress.count == 3 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.2))
+                                                    .foregroundStyle(.yellow.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -161,7 +161,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         .overlay {
                                             if progress.count == 4 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.red.opacity(0.2))
+                                                    .foregroundStyle(.red.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -178,7 +178,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         .overlay {
                                             if progress.count == 5 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.2))
+                                                    .foregroundStyle(.yellow.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -195,7 +195,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         .overlay {
                                             if progress.count == 6 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.red.opacity(0.2))
+                                                    .foregroundStyle(.red.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -212,7 +212,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         .overlay {
                                             if progress.count == 7 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.2))
+                                                    .foregroundStyle(.yellow.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -272,7 +272,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         .foregroundStyle(Color.ESTitle)
                                         .fontWeight(.bold)
                                      + Text("을 높여요.\n\n이는 ")
-                                     + Text("무역조건에 불균형.")
+                                     + Text("무역조건에 불균형")
                                         .foregroundStyle(Color.ESTitle)
                                         .fontWeight(.bold)
                                      + Text("을 가져오고, ")
@@ -303,7 +303,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 330))
+                                .modifier(PannelModifier(height: 325))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
@@ -578,7 +578,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 370))
+                                .modifier(PannelModifier(height: 365))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
@@ -848,7 +848,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 340))
+                                .modifier(PannelModifier(height: 335))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
@@ -1123,7 +1123,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 325))
+                                .modifier(PannelModifier(height: 320))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {

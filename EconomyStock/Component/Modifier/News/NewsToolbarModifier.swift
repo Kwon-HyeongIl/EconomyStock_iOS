@@ -34,15 +34,15 @@ struct NewsToolbarModifier: ViewModifier {
                         Button {
                             switch viewModel.news.type {
                             case .basicEconomy:
-                                navRouter.navigate(.ChatbotView(.basicEconomyCourse))
+                                navRouter.navigate(.ChatbotView(.basicEconomyNews))
                             case .priceLevel:
-                                navRouter.navigate(.ChatbotView(.priceLevelCourse))
+                                navRouter.navigate(.ChatbotView(.priceLevelNews))
                             case .unEmployment:
-                                navRouter.navigate(.ChatbotView(.unEmploymentCourse))
+                                navRouter.navigate(.ChatbotView(.unEmploymentNews))
                             case .moneyAndFinance:
-                                navRouter.navigate(.ChatbotView(.moneyAndFinanceCourse))
+                                navRouter.navigate(.ChatbotView(.moneyAndFinanceNews))
                             case .exchangeRateAndBalanceOfPayment:
-                                navRouter.navigate(.ChatbotView(.exchangeRateAndBalanceOfPaymentCourse))
+                                navRouter.navigate(.ChatbotView(.exchangeRateAndBalanceOfPaymentNews))
                             }
                         } label: {
                             ZStack {

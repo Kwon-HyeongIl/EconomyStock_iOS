@@ -109,7 +109,7 @@ struct BasicEconomyNewsView: View {
                                         .overlay {
                                             if progress.count == 1 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.2))
+                                                    .foregroundStyle(.yellow.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -126,7 +126,7 @@ struct BasicEconomyNewsView: View {
                                         .overlay {
                                             if progress.count == 2 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.2))
+                                                    .foregroundStyle(.yellow.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -143,7 +143,7 @@ struct BasicEconomyNewsView: View {
                                         .overlay {
                                             if progress.count == 3 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.red.opacity(0.2))
+                                                    .foregroundStyle(.red.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -163,7 +163,7 @@ struct BasicEconomyNewsView: View {
                                         .overlay {
                                             if progress.count == 4 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.red.opacity(0.2))
+                                                    .foregroundStyle(.red.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -183,7 +183,7 @@ struct BasicEconomyNewsView: View {
                                         .overlay {
                                             if progress.count == 5 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.2))
+                                                    .foregroundStyle(.yellow.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -203,7 +203,7 @@ struct BasicEconomyNewsView: View {
                                         .overlay {
                                             if progress.count == 6 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.red.opacity(0.2))
+                                                    .foregroundStyle(.red.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -220,7 +220,7 @@ struct BasicEconomyNewsView: View {
                                         .overlay {
                                             if progress.count == 7 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.2))
+                                                    .foregroundStyle(.yellow.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -237,7 +237,7 @@ struct BasicEconomyNewsView: View {
                                         .overlay {
                                             if progress.count == 8 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.2))
+                                                    .foregroundStyle(.yellow.opacity(0.3))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -857,7 +857,7 @@ struct BasicEconomyNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 300))
+                                .modifier(PannelModifier(height: 295))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
