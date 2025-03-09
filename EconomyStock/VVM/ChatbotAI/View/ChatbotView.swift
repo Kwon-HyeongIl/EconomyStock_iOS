@@ -49,14 +49,9 @@ struct ChatbotView: View {
                                                 .shadow(color: .gray.opacity(0.1), radius: 5, x: 5, y: 5)
                                                 .id(message.id)
                                                 .onAppear {
-                                                    self.bottomHeight += 500
+                                                    self.bottomHeight = min(self.bottomHeight + 500, 500)
                                                     withAnimation {
                                                         proxy.scrollTo(message.id, anchor: .top)
-                                                    }
-                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                                                        withAnimation {
-                                                            self.bottomHeight -= 500
-                                                        }
                                                     }
                                                 }
                                             
@@ -64,6 +59,11 @@ struct ChatbotView: View {
                                             ChatBubbleView(text: message.text, isUser: false)
                                                 .padding(.leading)
                                                 .shadow(color: .gray.opacity(0.1), radius: 5, x: 5, y: 5)
+                                                .onChange(of: viewModel.isChatEnd) {
+                                                    withAnimation {
+                                                        self.bottomHeight = max(self.bottomHeight - 500, 0)
+                                                    }
+                                                }
                                             
                                             Spacer()
                                         }
@@ -124,8 +124,6 @@ struct ChatbotView: View {
                 Button {
                     Task {
                         await viewModel.requestChatbot()
-                        
-                        
                     }
                 } label: {
                     Circle()

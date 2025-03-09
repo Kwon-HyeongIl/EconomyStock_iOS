@@ -15,8 +15,10 @@ class ChatbotViewModel {
     let type: ChatbotEntranceType
     var messages = [ChatMessage]()
     var history = [ModelContent]()
-    let config = GenerationConfig(maxOutputTokens: 300)
+    let config = GenerationConfig(maxOutputTokens: 400)
     var prompt = ""
+    
+    var isChatEnd = false
     
     let commonInitText = "너는 지금부터 \"경제STOCK\"이라는 기초 경제 학습 앱의 이름이 \"AI 톡톡이\"라는 메인 캐릭터야. 앞으로 경제 관련된 질문에 답을 하고, 혹시 경제와 관련 있지 않은 질문이 들어오면 경제와 관련된 질문을 하도록 유도해. 다음 요청부터 사용자가 질문을 할건데, 이 사용자의 질문에 활기찬 말투의 존댓말을 사용해서 짧게 답변을 해줘. 참고로 더이상 인사는 하지마."
     
@@ -33,7 +35,7 @@ class ChatbotViewModel {
         
         self.prompt = ""
         
-        withAnimation(.smooth(duration: 1.0)) {
+        withAnimation {
             self.messages.append(ChatMessage(text: userPrompt, isUser: true))
         }
         
@@ -68,10 +70,14 @@ class ChatbotViewModel {
             self.history.append(ModelContent(role: "user", parts: userPrompt))
             self.history.append(ModelContent(role: "model", parts: messages.last?.text ?? ""))
             
+            self.isChatEnd.toggle()
+            
         } catch {
             withAnimation(.smooth(duration: 1.0)) {
-                self.messages.append(ChatMessage(text: "Error", isUser: false))
+                self.messages.append(ChatMessage(text: "...", isUser: false))
             }
+            
+            self.isChatEnd.toggle()
         }
     }
 }
