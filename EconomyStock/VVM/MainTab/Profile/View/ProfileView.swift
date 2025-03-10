@@ -224,6 +224,11 @@ struct ProfileView: View {
                             Text("정말 로그아웃 하시겠습니까?")
                         }
                     }
+                    
+                    Text("v1.0.0")
+                        .font(.system(size: 10))
+                        .foregroundStyle(.gray.opacity(0.5))
+                        .padding(.top, 30)
                 }
                 .padding()
             }

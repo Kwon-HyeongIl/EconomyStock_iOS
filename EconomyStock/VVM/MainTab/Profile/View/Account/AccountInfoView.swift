@@ -19,6 +19,7 @@ struct AccountInfoView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 100)
+                    .padding(.top)
                 
                 VStack(spacing: 15) {
                     HStack {
