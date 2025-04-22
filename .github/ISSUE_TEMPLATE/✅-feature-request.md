@@ -1,6 +1,6 @@
 ---
 name: "✅ Feature request"
-about: Feature 작업 상황을 입력해주세요.
+about: Feature 작업 상황을 입력해 주세요.
 title: "[Feat] - "
 labels: feature
 assignees: ''
