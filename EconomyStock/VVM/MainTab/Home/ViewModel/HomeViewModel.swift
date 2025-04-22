@@ -14,8 +14,6 @@ class HomeViewModel {
         AuthManager.shared.isLogin
     }
     
-    var bannerUnitId = Bundle.main.infoDictionary?["GOOGLE_ADMOB_BANNER_AD_UNIT_ID"] as? String
-    
     var BR = [EconomicIndicatorCycleData]()
     var CPI = [EconomicIndicatorCycleData]()
     var WDER = [EconomicIndicatorCycleData]()
@@ -28,12 +26,13 @@ class HomeViewModel {
     var isRedacted = true
     
     // 그래프 X축 연도 필터
-    var BRYearFilter: [String] {
+    @ObservationIgnored var BRYearFilter: [String] {
         BR
             .filter { $0.time.hasSuffix("01.01") }
             .map { $0.time }
     }
     
+    @ObservationIgnored var bannerUnitId = Bundle.main.infoDictionary?["GOOGLE_ADMOB_BANNER_AD_UNIT_ID"] as? String
     @ObservationIgnored private var cancellables = Set<AnyCancellable>()
     
     init() {
@@ -72,85 +71,145 @@ class HomeViewModel {
     
     // 소비자물가지수
     func initCPI() {
-        EconomicIndicatorManager.requestCPI { CPI in
-            DispatchQueue.main.async {
-                self.CPI = CPI.map { data in
-                    var modifiedData = data
-                    modifiedData.time = self.formatDateString(data.time, type: .month)
-                    
-                    return modifiedData
+        EconomicIndicatorManager.requestCPI()
+            .map { [unowned self] cycle in
+                cycle.map { data in
+                    var item = data
+                    item.time = self.formatDateString(item.time, type: .month)
+                    return item
                 }
             }
-        }
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    print("CPI 요청 성공")
+                case .failure(let error):
+                    print("CPI 요청 실패:", error.localizedDescription)
+                }
+            }, receiveValue: { [weak self] data in
+                self?.CPI = data
+            })
+            .store(in: &cancellables)
     }
     
     // 원달러환율
     func initWDER() {
-        EconomicIndicatorManager.requestWDER { WDER in
-            DispatchQueue.main.async {
-                self.WDER = WDER.map { data in
-                    var modifiedData = data
-                    modifiedData.time = self.formatDateString(data.time, type: .day)
-                    
-                    return modifiedData
+        EconomicIndicatorManager.requestWDER()
+            .map { [unowned self] cycle in
+                cycle.map { data in
+                    var item = data
+                    item.time = self.formatDateString(item.time, type: .day)
+                    return item
                 }
             }
-        }
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    print("WDER 요청 성공")
+                case .failure(let error):
+                    print("WDER 요청 실패:", error.localizedDescription)
+                }
+            }, receiveValue: { [weak self] data in
+                self?.WDER = data
+            })
+            .store(in: &cancellables)
     }
     
     // M1
     func initM1() {
-        EconomicIndicatorManager.requestM1 { M1 in
-            DispatchQueue.main.async {
-                self.M1 = M1.map { data in
-                    var modifiedData = data
-                    modifiedData.time = self.formatDateString(data.time, type: .month)
-                    
-                    return modifiedData
+        EconomicIndicatorManager.requestM1()
+            .map { [unowned self] cycle in
+                cycle.map { data in
+                    var item = data
+                    item.time = self.formatDateString(item.time, type: .month)
+                    return item
                 }
             }
-        }
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    print("M1 요청 성공")
+                case .failure(let error):
+                    print("M1 요청 실패:", error.localizedDescription)
+                }
+            }, receiveValue: { [weak self] data in
+                self?.M1 = data
+            })
+            .store(in: &cancellables)
     }
     
     // M2
     func initM2() {
-        EconomicIndicatorManager.requestM2 { M2 in
-            DispatchQueue.main.async {
-                self.M2 = M2.map { data in
-                    var modifiedData = data
-                    modifiedData.time = self.formatDateString(data.time, type: .month)
-                    
-                    return modifiedData
+        EconomicIndicatorManager.requestM2()
+            .map { [unowned self] cycle in
+                cycle.map { data in
+                    var item = data
+                    item.time = self.formatDateString(item.time, type: .month)
+                    return item
                 }
             }
-        }
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    print("M2 요청 성공")
+                case .failure(let error):
+                    print("M2 요청 실패:", error.localizedDescription)
+                }
+            }, receiveValue: { [weak self] data in
+                self?.M2 = data
+            })
+            .store(in: &cancellables)
     }
     
     // EGR
     func initEGR() {
-        EconomicIndicatorManager.requestEGR { EGR in
-            DispatchQueue.main.async {
-                self.EGR = EGR.map { data in
-                    var modifiedData = data
-                    modifiedData.time = self.formatDateString(data.time, type: .quarter)
-                    
-                    return modifiedData
+        EconomicIndicatorManager.requestEGR()
+            .map { [unowned self] cycle in
+                cycle.map { data in
+                    var item = data
+                    item.time = self.formatDateString(item.time, type: .quarter)
+                    return item
                 }
             }
-        }
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    print("EGR 요청 성공")
+                case .failure(let error):
+                    print("EGR 요청 실패:", error.localizedDescription)
+                }
+            }, receiveValue: { [weak self] data in
+                self?.EGR = data
+            })
+            .store(in: &cancellables)
     }
     
     // UR
     func initUR() {
-        EconomicIndicatorManager.requestUR { UR in
-            DispatchQueue.main.async {
-                self.UR = UR.map { data in
-                    var modifiedData = data
-                    modifiedData.time = self.formatDateString(data.time, type: .month)
-                    
-                    return modifiedData
+        EconomicIndicatorManager.requestUR()
+            .map { [unowned self] cycle in
+                cycle.map { data in
+                    var item = data
+                    item.time = self.formatDateString(item.time, type: .month)
+                    return item
                 }
             }
-        }
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    print("UR 요청 성공")
+                case .failure(let error):
+                    print("UR 요청 실패:", error.localizedDescription)
+                }
+            }, receiveValue: { [weak self] data in
+                self?.UR = data
+            })
+            .store(in: &cancellables)
     }
 }

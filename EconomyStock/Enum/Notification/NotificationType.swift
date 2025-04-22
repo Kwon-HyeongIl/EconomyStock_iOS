@@ -11,6 +11,7 @@ enum NotificationType: String, Codable {
     case event = "event"
     case unknown = "unknown"
     
+    // SwiftData 디코딩 에러 방지
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let raw = try container.decode(String.self)
