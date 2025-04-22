@@ -24,9 +24,9 @@ class EconomicIndicatorManager {
         
         return AF.request(url)
             .validate()
-            .publishDecodable(type: EconomicIndicatorCycleContainer.self)
+            .publishDecodable(type: EconomicIndicatorResponse.self)
             .value()
-            .map { $0.statisticSearch.cycle }
+            .map { $0.statisticSearch.row }
             .mapError { $0 as Error }
             .eraseToAnyPublisher()
     }
@@ -44,9 +44,9 @@ class EconomicIndicatorManager {
         
         return AF.request(url)
             .validate()
-            .publishDecodable(type: EconomicIndicatorCycleContainer.self)
+            .publishDecodable(type: EconomicIndicatorResponse.self)
             .value()
-            .map { $0.statisticSearch.cycle }
+            .map { $0.statisticSearch.row }
             .mapError { $0 as Error }
             .eraseToAnyPublisher()
     }
@@ -64,9 +64,9 @@ class EconomicIndicatorManager {
         
         return AF.request(url)
             .validate()
-            .publishDecodable(type: EconomicIndicatorCycleContainer.self)
+            .publishDecodable(type: EconomicIndicatorResponse.self)
             .value()
-            .map { $0.statisticSearch.cycle }
+            .map { $0.statisticSearch.row }
             .mapError { $0 as Error }
             .eraseToAnyPublisher()
     }
@@ -84,9 +84,9 @@ class EconomicIndicatorManager {
         
         return AF.request(url)
             .validate()
-            .publishDecodable(type: EconomicIndicatorCycleContainer.self)
+            .publishDecodable(type: EconomicIndicatorResponse.self)
             .value()
-            .map { $0.statisticSearch.cycle }
+            .map { $0.statisticSearch.row }
             .mapError { $0 as Error }
             .eraseToAnyPublisher()
     }
@@ -104,9 +104,9 @@ class EconomicIndicatorManager {
         
         return AF.request(url)
             .validate()
-            .publishDecodable(type: EconomicIndicatorCycleContainer.self)
+            .publishDecodable(type: EconomicIndicatorResponse.self)
             .value()
-            .map { $0.statisticSearch.cycle }
+            .map { $0.statisticSearch.row }
             .mapError { $0 as Error }
             .eraseToAnyPublisher()
     }
@@ -124,9 +124,9 @@ class EconomicIndicatorManager {
         
         return AF.request(url)
             .validate()
-            .publishDecodable(type: EconomicIndicatorCycleContainer.self)
+            .publishDecodable(type: EconomicIndicatorResponse.self)
             .value()
-            .map { $0.statisticSearch.cycle }
+            .map { $0.statisticSearch.row }
             .mapError { $0 as Error }
             .eraseToAnyPublisher()
     }
@@ -144,9 +144,9 @@ class EconomicIndicatorManager {
         
         return AF.request(url)
             .validate()
-            .publishDecodable(type: EconomicIndicatorCycleContainer.self)
+            .publishDecodable(type: EconomicIndicatorResponse.self)
             .value()
-            .map { $0.statisticSearch.cycle }
+            .map { $0.statisticSearch.row }
             .mapError { $0 as Error }
             .eraseToAnyPublisher()
     }
