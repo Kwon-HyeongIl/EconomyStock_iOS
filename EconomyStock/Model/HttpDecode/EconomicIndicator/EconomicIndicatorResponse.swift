@@ -12,6 +12,10 @@ typealias EconomicIndicatorCycleData = EconomicIndicatorResponse.StatisticSearch
 struct EconomicIndicatorResponse: Decodable {
     let statisticSearch: StatisticSearch
     
+    private enum CodingKeys: String, CodingKey {
+        case statisticSearch = "StatisticSearch"
+    }
+    
     
     struct StatisticSearch: Decodable {
         let listTotalCount: Int
