@@ -7,28 +7,28 @@
 
 import Foundation
 import Alamofire
+import Combine
 
 class EconomicIndicatorManager {
+    
     // 기준금리
-    static func requestBR(completion: @escaping ([EconomicIndicatorCycleData]) -> Void) {
-        guard let key = Bundle.main.infoDictionary?["BANKOFKOREA_OPENAPI_KEY"] as? String else { return }
+    static func requestBR() -> AnyPublisher<[EconomicIndicatorCycleData], Error> {
+        guard let key = Bundle.main.infoDictionary?["BANKOFKOREA_OPENAPI_KEY"] as? String else {
+            return Fail(error: KeyError.missing)
+                .eraseToAnyPublisher()
+        }
+        
         let nowDate = getNowDate(type: .day)
         let fireYearsBeforeDate = getBeforeDate(year: .five, type: .day)
         let url = "https://ecos.bok.or.kr/api/StatisticSearch/\(key)/json/kr/1/3000/722Y001/D/\(fireYearsBeforeDate)/\(nowDate)/0101000/?/?/?"
         
-        AF.request(url)
+        return AF.request(url)
             .validate()
-            .responseDecodable(of: EconomicIndicatorCycleContainer.self) { response in
-                switch response.result {
-                    
-                case .success(let data):
-                    completion(data.statisticSearch.cycle)
-                    
-                case .failure(let error):
-                    print(error.localizedDescription)
-                    completion([])
-                }
-            }
+            .publishDecodable(type: EconomicIndicatorCycleContainer.self)
+            .value()
+            .map { $0.statisticSearch.cycle }
+            .mapError { $0 as Error }
+            .eraseToAnyPublisher()
     }
     
     // 소비자물가지수

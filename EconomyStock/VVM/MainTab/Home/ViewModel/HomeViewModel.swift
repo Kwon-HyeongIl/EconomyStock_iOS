@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 @Observable
 class HomeViewModel {
@@ -33,6 +34,8 @@ class HomeViewModel {
             .map { $0.time }
     }
     
+    @ObservationIgnored private var cancellables = Set<AnyCancellable>()
+    
     init() {
         initBR()
         initCPI()
@@ -45,15 +48,26 @@ class HomeViewModel {
 
     // 기준금리 (5년치 일 데이터를 1/7)
     func initBR() {
-        EconomicIndicatorManager.requestBR { BR in
-            DispatchQueue.main.async {
-                self.BR = stride(from: 0, to: BR.count, by: 7).map { index in
-                    var modifiedData = BR[index]
-                    modifiedData.time = self.formatDateString(BR[index].time, type: .day)
-                    return modifiedData
+        EconomicIndicatorManager.requestBR()
+            .map { [unowned self] cycle -> [EconomicIndicatorCycleData] in
+                stride(from: 0, to: cycle.count, by: 7).map { idx in
+                    var item = cycle[idx]
+                    item.time = self.formatDateString(item.time, type: .day)
+                    return item
                 }
             }
-        }
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    print("BR 요청 성공")
+                case .failure(let error):
+                    print("BR 요청 실패:", error.localizedDescription)
+                }
+            }, receiveValue: { [weak self] data in
+                self?.BR = data
+            })
+            .store(in: &cancellables)
     }
     
     // 소비자물가지수

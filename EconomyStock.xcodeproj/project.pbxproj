@@ -84,6 +84,7 @@
 		CA4E71A82CB78B8400BAA70C /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E71A72CB78B8400BAA70C /* CourseViewModel.swift */; };
 		CA4F8F002D659478000E9A21 /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4F8EFF2D659478000E9A21 /* NewsManager.swift */; };
 		CA4F8F022D65A0AB000E9A21 /* NewsManager+ProgressSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4F8F012D65A0AB000E9A21 /* NewsManager+ProgressSave.swift */; };
+		CA50A5CC2DB7B3C60055989C /* KeyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA50A5CB2DB7B3C60055989C /* KeyError.swift */; };
 		CA5577FE2CEE045000F7C4A6 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5577FD2CEE045000F7C4A6 /* LottieView.swift */; };
 		CA5578002CEE048700F7C4A6 /* LottieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5577FF2CEE048700F7C4A6 /* LottieRouter.swift */; };
 		CA5578022CEE04A200F7C4A6 /* LottieViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5578012CEE04A200F7C4A6 /* LottieViewMain.swift */; };
@@ -234,7 +235,6 @@
 		CAB77FD72CB8EC2900DF11D6 /* CourseToolbarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */; };
 		CAB77FD92CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */; };
 		CAB903F22D70414F00139511 /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB903F12D70414F00139511 /* LoginType.swift */; };
-		CAC288282D108AF3006B6415 /* AuthManager+Migrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC288272D108AF3006B6415 /* AuthManager+Migrate.swift */; };
 		CAC33B1D2D70462B00B050E7 /* UpdateUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC33B1C2D70462B00B050E7 /* UpdateUsernameView.swift */; };
 		CAC33B202D70487E00B050E7 /* OneFocusField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC33B1F2D70487E00B050E7 /* OneFocusField.swift */; };
 		CAC33B222D704B0500B050E7 /* AuthManager+Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC33B212D704B0500B050E7 /* AuthManager+Profile.swift */; };
@@ -394,6 +394,7 @@
 		CA4E71A72CB78B8400BAA70C /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		CA4F8EFF2D659478000E9A21 /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
 		CA4F8F012D65A0AB000E9A21 /* NewsManager+ProgressSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsManager+ProgressSave.swift"; sourceTree = "<group>"; };
+		CA50A5CB2DB7B3C60055989C /* KeyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyError.swift; sourceTree = "<group>"; };
 		CA5577FD2CEE045000F7C4A6 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		CA5577FF2CEE048700F7C4A6 /* LottieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieRouter.swift; sourceTree = "<group>"; };
 		CA5578012CEE04A200F7C4A6 /* LottieViewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewMain.swift; sourceTree = "<group>"; };
@@ -537,7 +538,6 @@
 		CAB77FD62CB8EC2900DF11D6 /* CourseToolbarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseToolbarModifier.swift; sourceTree = "<group>"; };
 		CAB77FD82CB8EE1F00DF11D6 /* NavigationBackHomeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackHomeModifier.swift; sourceTree = "<group>"; };
 		CAB903F12D70414F00139511 /* LoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginType.swift; sourceTree = "<group>"; };
-		CAC288272D108AF3006B6415 /* AuthManager+Migrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthManager+Migrate.swift"; sourceTree = "<group>"; };
 		CAC33B1C2D70462B00B050E7 /* UpdateUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUsernameView.swift; sourceTree = "<group>"; };
 		CAC33B1F2D70487E00B050E7 /* OneFocusField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneFocusField.swift; sourceTree = "<group>"; };
 		CAC33B212D704B0500B050E7 /* AuthManager+Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthManager+Profile.swift"; sourceTree = "<group>"; };
@@ -1352,6 +1352,7 @@
 			children = (
 				CA77DFD12CB26D0100992829 /* CustomError.swift */,
 				CA07D79C2D059EF000ECD3E4 /* ChatbotError.swift */,
+				CA50A5CB2DB7B3C60055989C /* KeyError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -1919,7 +1920,6 @@
 				CAEE16472CAD07B900210BD0 /* AuthManager.swift */,
 				CAEE16512CAD0C3F00210BD0 /* AuthManager+SocialLogin.swift */,
 				CAEE16592CAD0CBA00210BD0 /* AuthManager+Hash.swift */,
-				CAC288272D108AF3006B6415 /* AuthManager+Migrate.swift */,
 				CA92A40F2D688C390019D057 /* AuthManager+Studying.swift */,
 				CAC33B212D704B0500B050E7 /* AuthManager+Profile.swift */,
 			);
@@ -2298,7 +2298,6 @@
 				CAB1CA492D5C67390026CB51 /* UnEmploymentNewsView.swift in Sources */,
 				CA4DCE002D23F6110003F14C /* NewsCoverView.swift in Sources */,
 				CACF34142CEDD4BF00ECC6FA /* MoneyAndFinance2View.swift in Sources */,
-				CAC288282D108AF3006B6415 /* AuthManager+Migrate.swift in Sources */,
 				CA78C3092D084E4100E89532 /* AICourseSummaryView.swift in Sources */,
 				CAE199A12CFC1E9E000CFAA2 /* ExchangeRateAndBalanceOfPayment10View.swift in Sources */,
 				CA3BBAA82CB50063007CA152 /* BasicSignupView.swift in Sources */,
@@ -2321,6 +2320,7 @@
 				CA07D7672D04371200ECD3E4 /* SendEmailView.swift in Sources */,
 				CA17FC7D2CB00AB90050250B /* HomeView.swift in Sources */,
 				CA07D7972D055BC100ECD3E4 /* Color+AIGradient.swift in Sources */,
+				CA50A5CC2DB7B3C60055989C /* KeyError.swift in Sources */,
 				CA77DFD22CB26D0100992829 /* CustomError.swift in Sources */,
 				CAEDDABD2CB56C330046162D /* BasicLoginView.swift in Sources */,
 				CA17FC812CB00AC60050250B /* NewsListView.swift in Sources */,

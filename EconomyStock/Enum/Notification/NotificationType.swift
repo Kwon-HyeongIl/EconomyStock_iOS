@@ -9,4 +9,11 @@ import Foundation
 
 enum NotificationType: String, Codable {
     case event = "event"
+    case unknown = "unknown"
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let raw = try container.decode(String.self)
+        self = NotificationType(rawValue: raw) ?? .unknown
+    }
 }
