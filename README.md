@@ -1,5 +1,11 @@
 ![Image](https://github.com/user-attachments/assets/62f5c2c9-a8fc-4847-9b66-9381ef36b9ed)
 
+<div align="right">
+  <img src="https://github.com/user-attachments/assets/46f120e7-8fb4-46ef-9200-b7578eb66daa" height=30 width=30>&nbsp;
+  <a href="https://apps.apple.com/kr/app/%EA%B2%BD%EC%A0%9C%EC%8A%A4%ED%86%A1/id6739859649">AppStore에서 보기</a>
+</div>
+
+
 <br><br>
 
 ## 🙌 프로젝트 소개
@@ -18,7 +24,7 @@
 
 <br><br>
 
-[앱스토어 링크](https://apps.apple.com/kr/app/%EA%B2%BD%EC%A0%9C%EC%8A%A4%ED%86%A1/id6739859649)
+
 
 <br><br>
 
@@ -29,7 +35,7 @@
 | **권형일** | **정예은** |
 | :------: |  :------: |
 | <img src="https://github.com/user-attachments/assets/f21d71fe-ce7b-4be8-99ed-65d24529dcdf" height=150 width=150> | <img src="https://github.com/user-attachments/assets/cce7bf85-3b8c-4b3a-a594-d71c3930312d" height=150 width=150> |
-| iOS 개발 | 경제 교육 컨텐츠 기획 및 작성 |
+| iOS 개발 | 컨텐츠 기획 및 작성 |
 
 </div>
 
@@ -73,11 +79,27 @@
 <br>
 
 - **배포** <br><br>
-: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/379281ac-a00b-4d31-a595-337753e4b838" height=60 width=60> &nbsp; AppStore
+: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/46f120e7-8fb4-46ef-9200-b7578eb66daa" height=60 width=60> &nbsp; AppStore
 
 <br><br>
 
 ## 📱 핵심 기능
+
+<table>
+  <tr>
+    <td colspan="2" align="center"><b>초기화면</b></td>
+  </tr>
+  <tr>
+    <td align="center">
+      왼쪽 내용
+    </td>
+    <td align="center">
+      오른쪽 내용
+    </td>
+  </tr>
+</table>
+
+
 
 <br><br>
 
