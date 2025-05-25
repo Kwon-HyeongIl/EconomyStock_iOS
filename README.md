@@ -38,42 +38,42 @@
 ## 🎨 개발 환경
 
 - **클라이언트** <br><br>
-: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/1231bcae-0384-434b-af29-80e307cbc999" height=50 width=50> &nbsp; Swift, <img src="https://github.com/user-attachments/assets/34ae1446-2e29-4099-878e-e5ced09f5ad1" height=60 width=60> &nbsp;SwiftUI, <img src="https://github.com/user-attachments/assets/f6ea23db-3f7e-4a01-9569-f4c71262be7c" height=60 width=60> &nbsp;Combine
+: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/3e6d384d-7236-464c-92f0-242e52c7e4cd" height=80 width=80> &nbsp; Swift, &nbsp; <img src="https://github.com/user-attachments/assets/34ae1446-2e29-4099-878e-e5ced09f5ad1" height=80 width=80> &nbsp;SwiftUI, &nbsp; <img src="https://github.com/user-attachments/assets/f6ea23db-3f7e-4a01-9569-f4c71262be7c" height=80 width=80> &nbsp;Combine
 
 <br>
 
 - **백엔드** <br><br>
-: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/c396eca8-b46d-4c30-bf19-29ab9e03213a" height=50 width=40> &nbsp; Firebase, <img src="https://github.com/user-attachments/assets/abb6939b-4b89-4776-851c-d110ca452c47" height=50 width=50> &nbsp; Cloud Functions
+: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/c396eca8-b46d-4c30-bf19-29ab9e03213a" height=65 width=50> &nbsp; Firebase, &nbsp; <img src="https://github.com/user-attachments/assets/68311341-bb6f-4b19-8c4c-a75c9f142ae7" height=65 width=65> &nbsp; Cloud Functions
 
 <br>
 
 - **데이터베이스** <br><br>
-: Firebase Firestore, SwiftData
+: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/c4f953e5-c152-4048-be2c-56db24a66048" height=65 width=65> &nbsp; SwiftData, &nbsp; <img src="https://github.com/user-attachments/assets/7f696449-6dba-4390-96cf-46620035385d" height=65 width=55> &nbsp; Firebase Firestore, &nbsp; <img src="https://github.com/user-attachments/assets/137f9843-1b0c-42e7-a592-5e31bef334d7" height=68 width=68> &nbsp; Firebase Storage
 
 <br>
 
-- **푸시 서비스** <br><br>
-: Firebase Cloud Messaging API(V1)
+- **알림 서비스** <br><br>
+: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/e4385433-ad7b-4950-afa5-548a827b05b0" height=70 width=70> &nbsp; Firebase Cloud Messaging API(V1)
 
 <br>
 
 - **버전 및 이슈 관리** <br><br>
-: Git, Github Issue
+: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/1188196c-7469-4301-9592-ad1c9c029a09" height=65 width=65> &nbsp; Github, &nbsp; <img src="https://github.com/user-attachments/assets/1a7e3c68-90ac-442a-ae95-14f88c1dd0a0" height=60 width=60> &nbsp; Github Issue
 
 <br>
 
 - **협업** <br><br>
-: Notion
+: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/4e88ece5-cc26-4130-a05a-c6dc401e7bdd" height=65 width=65> &nbsp; Notion
 
 <br>
 
 - **디자인** <br><br>
-: Lottie, Goodnote Design
+: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/8b93e1bf-7f04-4882-943a-2267d40d40a6" height=60 width=60> &nbsp; Lottie, &nbsp; <img src="https://github.com/user-attachments/assets/9ec3f050-163b-4968-85b3-1528aaf85de5" height=60 width=60> &nbsp; Goodnote Design
 
 <br>
 
 - **배포** <br><br>
-: AppStore
+: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/379281ac-a00b-4d31-a595-337753e4b838" height=60 width=60> &nbsp; AppStore
 
 <br><br>
 
