@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>BANKOFKOREA_OPENAPI_KEY</key>
+	<string>${BANKOFKOREA_OPENAPI_KEY}</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -31,8 +33,16 @@
 	</array>
 	<key>FIREBASE_ECONOMYSTOCK_PROJECT_ID</key>
 	<string>${FIREBASE_ECONOMYSTOCK_PROJECT_ID}</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-1519090117224173~9626272298</string>
 	<key>GIDClientID</key>
 	<string>${GOOGLE_OAUTH_CLIENT_ID}</string>
+	<key>GOOGLE_ADMOB_BANNER_AD_UNIT_ID</key>
+	<string>${GOOGLE_ADMOB_BANNER_AD_UNIT_ID}</string>
+	<key>GOOGLE_ADMOB_BANNER_AD_UNIT_ID_TEST</key>
+	<string>${GOOGLE_ADMOB_BANNER_AD_UNIT_ID_TEST}</string>
+	<key>GOOGLE_AI_STUDIO_KEY</key>
+	<string>${GOOGLE_AI_STUDIO_KEY}</string>
 	<key>GOOGLE_OAUTH_ACCESS_TOKEN_URL_BODY</key>
 	<string>${GOOGLE_OAUTH_ACCESS_TOKEN_URL_BODY}</string>
 	<key>KAKAO_NATIVE_APP_KEY</key>
@@ -42,19 +52,6 @@
 		<string>kakaokompassauth</string>
 		<string>kakaolink</string>
 	</array>
-	<key>SOCIALLOGIN_HASH_KEY</key>
-	<string>${SOCIALLOGIN_HASH_KEY}</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>fetch</string>
-		<string>remote-notification</string>
-	</array>
-	<key>BANKOFKOREA_OPENAPI_KEY</key>
-	<string>${BANKOFKOREA_OPENAPI_KEY}</string>
-	<key>GOOGLE_AI_STUDIO_KEY</key>
-	<string>${GOOGLE_AI_STUDIO_KEY}</string>
-	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-1519090117224173~9626272298</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
@@ -226,9 +223,12 @@
 			<string>3qcr597p9d.skadnetwork</string>
 		</dict>
 	</array>
-	<key>GOOGLE_ADMOB_BANNER_AD_UNIT_ID</key>
-	<string>${GOOGLE_ADMOB_BANNER_AD_UNIT_ID}</string>
-	<key>GOOGLE_ADMOB_BANNER_AD_UNIT_ID_TEST</key>
-	<string>${GOOGLE_ADMOB_BANNER_AD_UNIT_ID_TEST}</string>
+	<key>SOCIALLOGIN_HASH_KEY</key>
+	<string>${SOCIALLOGIN_HASH_KEY}</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
 </dict>
 </plist>
