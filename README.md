@@ -70,7 +70,7 @@
 
 <table>
   <tr>
-    <td colspan="2" align="center"><b>초기화면</b></td>
+    <td colspan="2" align="center"><b>메인 화면</b></td>
   </tr>
   <tr>
     <td>
