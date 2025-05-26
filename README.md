@@ -91,15 +91,106 @@
   </tr>
   <tr>
     <td align="center">
-      왼쪽 내용
+      <img src="https://github.com/user-attachments/assets/9c9592bf-27dc-4925-814b-ff6bb33ce5e8">
     </td>
     <td align="center">
-      오른쪽 내용
+      - 앱 접속시 Combine을 활용하여 한국은행 Open API 기반 요청을 통한 경제 지표 데이터 수신<br><br>
+      - 수신한 데이터를 Swift Chart 및 최신 수치와 증감률 표시<br><br>
+      - Google AdMob의 배너 광고 로드
     </td>
   </tr>
 </table>
 
+<br>
 
+<table>
+  <tr>
+    <td colspan="2" align="center"><b>로그인 화면</b></td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/0e3392c3-3e77-4535-a9a7-1fe0c55f509e">
+    </td>
+    <td>
+      - 로그인을 수행한 이후부터 데이터를 SwiftData가 아닌 Firebase Firestore에 저장<br><br>
+      - Apple, Google, Kakao 소셜 로그인 및 이메일 기반 로그인 방식도 제공
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <td colspan="2" align="center"><b>경제 강의</b></td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/72f40fc2-52c9-442c-bafe-7334a21754dd">
+    </td>
+    <td>
+      - Lottie를 활용하여 애니메이션 기반 인터랙티브 UI 경제 강의 구현<br><br>
+      - 로그인 여부에 따라 강의 진행 기록을 SwiftData와 Firebase Firestore에 분기하여 저장<br><br>
+      - 프로젝트 네비게이션 전역을 관리하는 경로 클래스를 활용하여 특정 페이지부터 이어서 학습 가능<br><br>
+      - 뷰 내부의 요소에 id를 붙여 특정 요소로 자동 스크롤
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <td colspan="2" align="center"><b>경제 뉴스</b></td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/45e0274e-14fc-4c74-889f-8e220212d5fa">
+    </td>
+    <td>
+      - 가상의 경제 뉴스를 기반으로 경제 내용 분석 및 퀴즈 제공<br><br>
+      - 로그인 여부에 따라 강의 진행 기록을 SwiftData와 Firebase Firestore에 분기하여 저장<br><br>
+      - 프로젝트 네비게이션 전역을 관리하는 경로 클래스를 활용하여 특정 페이지부터 이어서 학습 가능<br><br>
+      - 뷰 내부의 요소에 id를 붙여 특정 요소로 자동 스크롤
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <td colspan="2" align="center"><b>AI 서비스</b></td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/767ff12c-adc7-48b0-bfb2-99322bf93e36">
+    </td>
+    <td>
+      - GoogleGenerativeAI SDK를 통해 Gemini-1.5-flash 모델을 사용하여 챗봇 구성<br><br>
+      - 챗봇 모델 생성시 초기값을 주입하여 경제 관련 답변만 하도록 챗봇 튜닝<br><br>
+      - history 방식을 사용하여 연속적인 질의에도 맥락을 이어갈 수 있도록 구현
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <td colspan="2" align="center"><b>알림 서비스</b></td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/8d57ada5-41af-42c4-9f86-74df81c3ec65">
+    </td>
+    <td>
+      - Firebase Cloud Messaging api(v1)을 사용하여 푸시 알림 시스템 구현
+      - 구글 OAuth 토큰을 발급 받는 Node.JS 코드를 Cloud Functions에 등록하여 
+
+    </td>
+  </tr>
+</table>
 
 <br><br>
 
