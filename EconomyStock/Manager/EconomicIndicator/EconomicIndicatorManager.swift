@@ -66,7 +66,6 @@ class EconomicIndicatorManager {
             .validate()
             .publishDecodable(type: EconomicIndicatorResponse.self)
             .value()
-            .print("❗️")
             .map { $0.statisticSearch.row }
             .mapError { $0 as Error }
             .eraseToAnyPublisher()

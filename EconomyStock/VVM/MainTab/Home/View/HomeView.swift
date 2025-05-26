@@ -271,7 +271,7 @@ struct HomeView: View {
                         }
                         
                         // 배너 AD
-                        if !viewModel.isRedacted {
+                        ZStack {
                             RoundedRectangle(cornerRadius: 10, style: .continuous)
                                 .frame(maxWidth: .infinity)
                                 .frame(height: 80)
@@ -287,9 +287,11 @@ struct HomeView: View {
                                         .frame(maxWidth: .infinity)
                                         .cornerRadius(10, corners: .allCorners)
                                 }
+                                .opacity(viewModel.isRedacted ? 0 : 1.0)
                             
-                        } else {
-                            DummyHorizontalIndicatorView()
+                            if viewModel.isRedacted {
+                                DummyHorizontalIndicatorView()
+                            }
                         }
                         
                         if !viewModel.isRedacted {
@@ -962,7 +964,7 @@ struct HomeView: View {
         .ignoresSafeArea(edges: .top)
         .onAppear {
             if viewModel.isFirstLoad {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 4.5) {
                     withAnimation(.easeOut(duration: 0.3)) {
                         viewModel.isRedacted = false
                     }
