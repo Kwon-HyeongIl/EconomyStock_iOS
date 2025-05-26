@@ -24,10 +24,6 @@
 
 <br><br>
 
-
-
-<br><br>
-
 ## 👥 팀원 구성
 <br>
 <div align="center">
@@ -44,56 +40,44 @@
 ## 🎨 개발 환경
 
 - **클라이언트** <br><br>
-: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/3e6d384d-7236-464c-92f0-242e52c7e4cd" height=80 width=80> &nbsp; Swift, &nbsp; <img src="https://github.com/user-attachments/assets/34ae1446-2e29-4099-878e-e5ced09f5ad1" height=80 width=80> &nbsp;SwiftUI, &nbsp; <img src="https://github.com/user-attachments/assets/f6ea23db-3f7e-4a01-9569-f4c71262be7c" height=80 width=80> &nbsp;Combine
-
-<br>
+: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/3e6d384d-7236-464c-92f0-242e52c7e4cd" height=50 width=50> &nbsp; Swift, &nbsp; <img src="https://github.com/user-attachments/assets/34ae1446-2e29-4099-878e-e5ced09f5ad1" height=50 width=50> &nbsp;SwiftUI, &nbsp; <img src="https://github.com/user-attachments/assets/f6ea23db-3f7e-4a01-9569-f4c71262be7c" height=50 width=50> &nbsp;Combine
 
 - **백엔드** <br><br>
-: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/c396eca8-b46d-4c30-bf19-29ab9e03213a" height=65 width=50> &nbsp; Firebase, &nbsp; <img src="https://github.com/user-attachments/assets/68311341-bb6f-4b19-8c4c-a75c9f142ae7" height=65 width=65> &nbsp; Cloud Functions
-
-<br>
+: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/c396eca8-b46d-4c30-bf19-29ab9e03213a" height=40 width=30> &nbsp; Firebase, &nbsp; <img src="https://github.com/user-attachments/assets/68311341-bb6f-4b19-8c4c-a75c9f142ae7" height=40 width=40> &nbsp; Cloud Functions
 
 - **데이터베이스** <br><br>
-: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/c4f953e5-c152-4048-be2c-56db24a66048" height=65 width=65> &nbsp; SwiftData, &nbsp; <img src="https://github.com/user-attachments/assets/7f696449-6dba-4390-96cf-46620035385d" height=65 width=55> &nbsp; Firebase Firestore, &nbsp; <img src="https://github.com/user-attachments/assets/137f9843-1b0c-42e7-a592-5e31bef334d7" height=68 width=68> &nbsp; Firebase Storage
-
-<br>
+: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/c4f953e5-c152-4048-be2c-56db24a66048" height=40 width=40> &nbsp; SwiftData, &nbsp; <img src="https://github.com/user-attachments/assets/7f696449-6dba-4390-96cf-46620035385d" height=40 width=35> &nbsp; Firebase Firestore, &nbsp; <img src="https://github.com/user-attachments/assets/137f9843-1b0c-42e7-a592-5e31bef334d7" height=42 width=42> &nbsp; Firebase Storage
 
 - **알림 서비스** <br><br>
-: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/e4385433-ad7b-4950-afa5-548a827b05b0" height=70 width=70> &nbsp; Firebase Cloud Messaging API(V1)
-
-<br>
+: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/e4385433-ad7b-4950-afa5-548a827b05b0" height=45 width=45> &nbsp; Firebase Cloud Messaging API(V1)
 
 - **버전 및 이슈 관리** <br><br>
-: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/1188196c-7469-4301-9592-ad1c9c029a09" height=65 width=65> &nbsp; Github, &nbsp; <img src="https://github.com/user-attachments/assets/1a7e3c68-90ac-442a-ae95-14f88c1dd0a0" height=60 width=60> &nbsp; Github Issue
-
-<br>
+: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/1188196c-7469-4301-9592-ad1c9c029a09" height=40 width=40> &nbsp; Github, &nbsp; <img src="https://github.com/user-attachments/assets/1a7e3c68-90ac-442a-ae95-14f88c1dd0a0" height=40 width=40> &nbsp; Github Issue
 
 - **협업** <br><br>
-: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/4e88ece5-cc26-4130-a05a-c6dc401e7bdd" height=65 width=65> &nbsp; Notion
-
-<br>
+: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/4e88ece5-cc26-4130-a05a-c6dc401e7bdd" height=40 width=40> &nbsp; Notion
 
 - **디자인** <br><br>
-: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/8b93e1bf-7f04-4882-943a-2267d40d40a6" height=60 width=60> &nbsp; Lottie, &nbsp; <img src="https://github.com/user-attachments/assets/9ec3f050-163b-4968-85b3-1528aaf85de5" height=60 width=60> &nbsp; Goodnote Design
-
-<br>
+: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/8b93e1bf-7f04-4882-943a-2267d40d40a6" height=40 width=40> &nbsp; Lottie, &nbsp; <img src="https://github.com/user-attachments/assets/9ec3f050-163b-4968-85b3-1528aaf85de5" height=40 width=40> &nbsp; Goodnote Design
 
 - **배포** <br><br>
-: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/46f120e7-8fb4-46ef-9200-b7578eb66daa" height=60 width=60> &nbsp; AppStore
+: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/46f120e7-8fb4-46ef-9200-b7578eb66daa" height=40 width=40> &nbsp; AppStore
 
 <br><br>
 
 ## 📱 핵심 기능
+
+<br>
 
 <table>
   <tr>
     <td colspan="2" align="center"><b>초기화면</b></td>
   </tr>
   <tr>
-    <td align="center">
+    <td>
       <img src="https://github.com/user-attachments/assets/9c9592bf-27dc-4925-814b-ff6bb33ce5e8">
     </td>
-    <td align="center">
+    <td>
       - 앱 접속시 Combine을 활용하여 한국은행 Open API 기반 요청을 통한 경제 지표 데이터 수신<br><br>
       - 수신한 데이터를 Swift Chart 및 최신 수치와 증감률 표시<br><br>
       - Google AdMob의 배너 광고 로드
@@ -185,9 +169,8 @@
       <img src="https://github.com/user-attachments/assets/8d57ada5-41af-42c4-9f86-74df81c3ec65">
     </td>
     <td>
-      - Firebase Cloud Messaging api(v1)을 사용하여 푸시 알림 시스템 구현
-      - 구글 OAuth 토큰을 발급 받는 Node.JS 코드를 Cloud Functions에 등록하여 
-
+      - Firebase Cloud Messaging api(v1)을 사용하여 푸시 알림 시스템 구현<br><br>
+      - Topic 구독 상태에 따라 알림 수신 여부를 제어하도록, 내부적으로 Topic 구독 및 해제 기능 구현
     </td>
   </tr>
 </table>
@@ -196,6 +179,6 @@
 
 ## 📅 개발 기간
 
-<br><br>
+- 2024.09~2025.04
 
-## 🗂️ 버전 내역
+<br><br>
