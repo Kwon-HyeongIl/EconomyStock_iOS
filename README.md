@@ -42,7 +42,7 @@
 : &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/3e6d384d-7236-464c-92f0-242e52c7e4cd" height=50 width=50> &nbsp; Swift, &nbsp; <img src="https://github.com/user-attachments/assets/34ae1446-2e29-4099-878e-e5ced09f5ad1" height=50 width=50> &nbsp;SwiftUI, &nbsp; <img src="https://github.com/user-attachments/assets/f6ea23db-3f7e-4a01-9569-f4c71262be7c" height=50 width=50> &nbsp;Combine
 
 - **백엔드** <br><br>
-: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/c396eca8-b46d-4c30-bf19-29ab9e03213a" height=40 width=30> &nbsp; Firebase, &nbsp; <img src="https://github.com/user-attachments/assets/68311341-bb6f-4b19-8c4c-a75c9f142ae7" height=40 width=40> &nbsp; Cloud Functions
+: &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/c396eca8-b46d-4c30-bf19-29ab9e03213a" height=40 width=30> &nbsp; Firebase
 
 - **데이터베이스** <br><br>
 : &nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/c4f953e5-c152-4048-be2c-56db24a66048" height=40 width=40> &nbsp; SwiftData, &nbsp; <img src="https://github.com/user-attachments/assets/7f696449-6dba-4390-96cf-46620035385d" height=40 width=35> &nbsp; Firebase Firestore, &nbsp; <img src="https://github.com/user-attachments/assets/137f9843-1b0c-42e7-a592-5e31bef334d7" height=42 width=42> &nbsp; Firebase Storage
