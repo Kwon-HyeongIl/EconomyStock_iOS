@@ -74,7 +74,7 @@
   </tr>
   <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/9c9592bf-27dc-4925-814b-ff6bb33ce5e8">
+      <img src="https://github.com/user-attachments/assets/0cba3a28-b391-4b8c-887f-89e05cff9af3">
     </td>
     <td>
       - 앱 접속시 Combine을 활용하여 한국은행 Open API 기반 요청을 통한 경제 지표 데이터 수신<br><br>
