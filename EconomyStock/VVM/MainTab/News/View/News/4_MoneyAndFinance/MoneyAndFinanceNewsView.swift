@@ -1057,9 +1057,9 @@ struct MoneyAndFinanceNewsView: View {
             .popup(isPresented: $startPopup) {
                 HStack {
                     (Text("진행하시려면 화면을 ")
-                    + Text("터치 ")
+                    + Text("\'터치\'")
                         .foregroundStyle(Color.ESTitle)
-                    + Text("해주세요"))
+                    + Text("해 주세요"))
                         .font(.system(size: 17))
                         .fontWeight(.semibold)
                 }
