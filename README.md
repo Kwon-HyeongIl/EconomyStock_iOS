@@ -109,7 +109,7 @@
   </tr>
   <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/72f40fc2-52c9-442c-bafe-7334a21754dd">
+      <img src="https://github.com/user-attachments/assets/2349259a-f99c-4779-a321-0bc4a8431752">
     </td>
     <td>
       - Lottie를 활용하여 애니메이션 기반 인터랙티브 UI 경제 강의 구현<br><br>
@@ -128,7 +128,7 @@
   </tr>
   <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/45e0274e-14fc-4c74-889f-8e220212d5fa">
+      <img src="https://github.com/user-attachments/assets/590ddde3-05fa-4916-909e-a31f2e700632">
     </td>
     <td>
       - 가상의 경제 뉴스를 기반으로 경제 내용 분석 및 퀴즈 제공<br><br>
