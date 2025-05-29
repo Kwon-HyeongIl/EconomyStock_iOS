@@ -128,7 +128,7 @@
   </tr>
   <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/590ddde3-05fa-4916-909e-a31f2e700632">
+      <img src="https://github.com/user-attachments/assets/0bbe2066-f03d-4c6c-aaf1-d87598a7fe31">
     </td>
     <td>
       - 가상의 경제 뉴스를 기반으로 경제 내용 분석 및 퀴즈 제공<br><br>
