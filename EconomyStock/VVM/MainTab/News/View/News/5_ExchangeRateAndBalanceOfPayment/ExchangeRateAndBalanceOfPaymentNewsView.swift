@@ -386,9 +386,18 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         Spacer()
                                         
                                         ZStack {
-                                            Text("정답이에요😊")
-                                                .font(.system(size: 18).bold())
-                                                .foregroundStyle(.green)
+                                            VStack {
+                                                Image(systemName: "checkmark.seal")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 35)
+                                                    .fontWeight(.semibold)
+                                                    .foregroundStyle(.green)
+                                                    .padding(.top, 10)
+                                                
+                                                Text("정답이에요!")
+                                                    .font(.system(size: 20).bold())
+                                            }
                                             
                                             HStack {
                                                 Spacer()
@@ -403,6 +412,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                                         .fontWeight(.medium)
                                                         .frame(width: 15)
                                                         .padding(.trailing, 20)
+                                                        .padding(.bottom, 45)
                                                         .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                                 }
                                             }
@@ -435,7 +445,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 320))
+                                    .modifier(PannelModifier(height: 345))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -448,9 +458,18 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         Spacer()
                                         
                                         ZStack {
-                                            Text("틀렸어요🥲")
-                                                .font(.system(size: 18).bold())
-                                                .foregroundStyle(.red)
+                                            VStack {
+                                                Image(systemName: "xmark.seal")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 35)
+                                                    .fontWeight(.semibold)
+                                                    .foregroundStyle(.red)
+                                                    .padding(.top, 10)
+                                                
+                                                Text("틀렸어요")
+                                                    .font(.system(size: 20).bold())
+                                            }
                                             
                                             HStack {
                                                 Spacer()
@@ -465,6 +484,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                                         .fontWeight(.medium)
                                                         .frame(width: 15)
                                                         .padding(.trailing, 20)
+                                                        .padding(.bottom, 45)
                                                         .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                                 }
                                             }
@@ -497,7 +517,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 320))
+                                    .modifier(PannelModifier(height: 345))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -660,9 +680,18 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         Spacer()
                                         
                                         ZStack {
-                                            Text("정답이에요😊")
-                                                .font(.system(size: 18).bold())
-                                                .foregroundStyle(.green)
+                                            VStack {
+                                                Image(systemName: "checkmark.seal")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 35)
+                                                    .fontWeight(.semibold)
+                                                    .foregroundStyle(.green)
+                                                    .padding(.top, 10)
+                                                
+                                                Text("정답이에요!")
+                                                    .font(.system(size: 20).bold())
+                                            }
                                             
                                             HStack {
                                                 Spacer()
@@ -677,6 +706,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                                         .fontWeight(.medium)
                                                         .frame(width: 15)
                                                         .padding(.trailing, 20)
+                                                        .padding(.bottom, 45)
                                                         .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                                 }
                                             }
@@ -709,7 +739,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 330))
+                                    .modifier(PannelModifier(height: 355))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -722,9 +752,18 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         Spacer()
                                         
                                         ZStack {
-                                            Text("틀렸어요🥲")
-                                                .font(.system(size: 18).bold())
-                                                .foregroundStyle(.red)
+                                            VStack {
+                                                Image(systemName: "xmark.seal")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 35)
+                                                    .fontWeight(.semibold)
+                                                    .foregroundStyle(.red)
+                                                    .padding(.top, 10)
+                                                
+                                                Text("틀렸어요")
+                                                    .font(.system(size: 20).bold())
+                                            }
                                             
                                             HStack {
                                                 Spacer()
@@ -739,6 +778,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                                         .fontWeight(.medium)
                                                         .frame(width: 15)
                                                         .padding(.trailing, 20)
+                                                        .padding(.bottom, 45)
                                                         .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                                 }
                                             }
@@ -771,7 +811,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 330))
+                                    .modifier(PannelModifier(height: 355))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -834,7 +874,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                     Spacer()
                                     
                                     Button {
-                                        self.bottomHeight = 265
+                                        self.bottomHeight = 270
                                         withAnimation {
                                             scrollProxy.scrollTo("4", anchor: .top)
                                         }
@@ -903,7 +943,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         
                                         HStack {
                                             Button {
-                                                self.bottomHeight = 330
+                                                self.bottomHeight = 355
                                                 withAnimation {
                                                     scrollProxy.scrollTo("7", anchor: .top)
                                                 }
@@ -914,7 +954,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                             }
                                             
                                             Button {
-                                                self.bottomHeight = 330
+                                                self.bottomHeight = 355
                                                 withAnimation {
                                                     scrollProxy.scrollTo("7", anchor: .top)
                                                 }
@@ -939,9 +979,18 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         Spacer()
                                         
                                         ZStack {
-                                            Text("정답이에요😊")
-                                                .font(.system(size: 18).bold())
-                                                .foregroundStyle(.green)
+                                            VStack {
+                                                Image(systemName: "checkmark.seal")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 35)
+                                                    .fontWeight(.semibold)
+                                                    .foregroundStyle(.green)
+                                                    .padding(.top, 10)
+                                                
+                                                Text("정답이에요!")
+                                                    .font(.system(size: 20).bold())
+                                            }
                                             
                                             HStack {
                                                 Spacer()
@@ -956,6 +1005,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                                         .fontWeight(.medium)
                                                         .frame(width: 15)
                                                         .padding(.trailing, 20)
+                                                        .padding(.bottom, 45)
                                                         .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                                 }
                                             }
@@ -973,7 +1023,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         Spacer()
                                         
                                         Button {
-                                            self.bottomHeight = 350
+                                            self.bottomHeight = 325
                                             withAnimation {
                                                 scrollProxy.scrollTo("7", anchor: .top)
                                             }
@@ -986,7 +1036,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 320))
+                                    .modifier(PannelModifier(height: 350))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -999,9 +1049,18 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         Spacer()
                                         
                                         ZStack {
-                                            Text("틀렸어요🥲")
-                                                .font(.system(size: 18).bold())
-                                                .foregroundStyle(.red)
+                                            VStack {
+                                                Image(systemName: "xmark.seal")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 35)
+                                                    .fontWeight(.semibold)
+                                                    .foregroundStyle(.red)
+                                                    .padding(.top, 10)
+                                                
+                                                Text("틀렸어요")
+                                                    .font(.system(size: 20).bold())
+                                            }
                                             
                                             HStack {
                                                 Spacer()
@@ -1016,6 +1075,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                                         .fontWeight(.medium)
                                                         .frame(width: 15)
                                                         .padding(.trailing, 20)
+                                                        .padding(.bottom, 45)
                                                         .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                                 }
                                             }
@@ -1033,7 +1093,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                         Spacer()
                                         
                                         Button {
-                                            self.bottomHeight = 335
+                                            self.bottomHeight = 325
                                             withAnimation {
                                                 scrollProxy.scrollTo("7", anchor: .top)
                                             }
@@ -1046,7 +1106,7 @@ struct ExchangeRateAndBalanceOfPaymentNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 320))
+                                    .modifier(PannelModifier(height: 350))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {

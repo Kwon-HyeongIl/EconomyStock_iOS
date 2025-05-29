@@ -389,9 +389,18 @@ struct UnEmploymentNewsView: View {
                                         Spacer()
                                         
                                         ZStack {
-                                            Text("틀렸어요🥲")
-                                                .font(.system(size: 18).bold())
-                                                .foregroundStyle(.red)
+                                            VStack {
+                                                Image(systemName: "xmark.seal")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 35)
+                                                    .fontWeight(.semibold)
+                                                    .foregroundStyle(.red)
+                                                    .padding(.top, 10)
+                                                
+                                                Text("틀렸어요")
+                                                    .font(.system(size: 20).bold())
+                                            }
                                             
                                             HStack {
                                                 Spacer()
@@ -406,6 +415,7 @@ struct UnEmploymentNewsView: View {
                                                         .fontWeight(.medium)
                                                         .frame(width: 15)
                                                         .padding(.trailing, 20)
+                                                        .padding(.bottom, 45)
                                                         .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                                 }
                                             }
@@ -438,7 +448,7 @@ struct UnEmploymentNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 350))
+                                    .modifier(PannelModifier(height: 390))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -451,9 +461,18 @@ struct UnEmploymentNewsView: View {
                                         Spacer()
                                         
                                         ZStack {
-                                            Text("정답이에요😊")
-                                                .font(.system(size: 18).bold())
-                                                .foregroundStyle(.green)
+                                            VStack {
+                                                Image(systemName: "checkmark.seal")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 35)
+                                                    .fontWeight(.semibold)
+                                                    .foregroundStyle(.green)
+                                                    .padding(.top, 10)
+                                                
+                                                Text("정답이에요!")
+                                                    .font(.system(size: 20).bold())
+                                            }
                                             
                                             HStack {
                                                 Spacer()
@@ -468,6 +487,7 @@ struct UnEmploymentNewsView: View {
                                                         .fontWeight(.medium)
                                                         .frame(width: 15)
                                                         .padding(.trailing, 20)
+                                                        .padding(.bottom, 45)
                                                         .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                                 }
                                             }
@@ -500,7 +520,7 @@ struct UnEmploymentNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 350))
+                                    .modifier(PannelModifier(height: 390))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -655,9 +675,18 @@ struct UnEmploymentNewsView: View {
                                         Spacer()
                                         
                                         ZStack {
-                                            Text("틀렸어요🥲")
-                                                .font(.system(size: 18).bold())
-                                                .foregroundStyle(.red)
+                                            VStack {
+                                                Image(systemName: "xmark.seal")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 35)
+                                                    .fontWeight(.semibold)
+                                                    .foregroundStyle(.red)
+                                                    .padding(.top, 10)
+                                                
+                                                Text("틀렸어요")
+                                                    .font(.system(size: 20).bold())
+                                            }
                                             
                                             HStack {
                                                 Spacer()
@@ -672,6 +701,7 @@ struct UnEmploymentNewsView: View {
                                                         .fontWeight(.medium)
                                                         .frame(width: 15)
                                                         .padding(.trailing, 20)
+                                                        .padding(.bottom, 45)
                                                         .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                                 }
                                             }
@@ -704,7 +734,7 @@ struct UnEmploymentNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 340))
+                                    .modifier(PannelModifier(height: 370))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -717,9 +747,18 @@ struct UnEmploymentNewsView: View {
                                         Spacer()
                                         
                                         ZStack {
-                                            Text("정답이에요😊")
-                                                .font(.system(size: 18).bold())
-                                                .foregroundStyle(.green)
+                                            VStack {
+                                                Image(systemName: "checkmark.seal")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 35)
+                                                    .fontWeight(.semibold)
+                                                    .foregroundStyle(.green)
+                                                    .padding(.top, 10)
+                                                
+                                                Text("정답이에요!")
+                                                    .font(.system(size: 20).bold())
+                                            }
                                             
                                             HStack {
                                                 Spacer()
@@ -734,6 +773,7 @@ struct UnEmploymentNewsView: View {
                                                         .fontWeight(.medium)
                                                         .frame(width: 15)
                                                         .padding(.trailing, 20)
+                                                        .padding(.bottom, 45)
                                                         .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                                 }
                                             }
@@ -766,7 +806,7 @@ struct UnEmploymentNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 340))
+                                    .modifier(PannelModifier(height: 370))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -829,9 +869,9 @@ struct UnEmploymentNewsView: View {
                                     Spacer()
                                     
                                     Button {
-                                        self.bottomHeight = 265
+                                        self.bottomHeight = 258
                                         withAnimation {
-                                            scrollProxy.scrollTo("4", anchor: .top)
+                                            scrollProxy.scrollTo("5", anchor: .top)
                                         }
                                         self.progress.append(0)
                                         self.animationOpacity = 0.0
@@ -898,7 +938,7 @@ struct UnEmploymentNewsView: View {
                                         
                                         HStack {
                                             Button {
-                                                self.bottomHeight = 330
+                                                self.bottomHeight = 358
                                                 withAnimation {
                                                     scrollProxy.scrollTo("7", anchor: .top)
                                                 }
@@ -909,7 +949,7 @@ struct UnEmploymentNewsView: View {
                                             }
                                             
                                             Button {
-                                                self.bottomHeight = 330
+                                                self.bottomHeight = 358
                                                 withAnimation {
                                                     scrollProxy.scrollTo("7", anchor: .top)
                                                 }
@@ -934,9 +974,18 @@ struct UnEmploymentNewsView: View {
                                         Spacer()
                                         
                                         ZStack {
-                                            Text("정답이에요😊")
-                                                .font(.system(size: 18).bold())
-                                                .foregroundStyle(.green)
+                                            VStack {
+                                                Image(systemName: "checkmark.seal")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 35)
+                                                    .fontWeight(.semibold)
+                                                    .foregroundStyle(.green)
+                                                    .padding(.top, 10)
+                                                
+                                                Text("정답이에요!")
+                                                    .font(.system(size: 20).bold())
+                                            }
                                             
                                             HStack {
                                                 Spacer()
@@ -951,6 +1000,7 @@ struct UnEmploymentNewsView: View {
                                                         .fontWeight(.medium)
                                                         .frame(width: 15)
                                                         .padding(.trailing, 20)
+                                                        .padding(.bottom, 45)
                                                         .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                                 }
                                             }
@@ -968,7 +1018,7 @@ struct UnEmploymentNewsView: View {
                                         Spacer()
                                         
                                         Button {
-                                            self.bottomHeight = 350
+                                            self.bottomHeight = 340
                                             withAnimation {
                                                 scrollProxy.scrollTo("7", anchor: .top)
                                             }
@@ -981,7 +1031,7 @@ struct UnEmploymentNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 320))
+                                    .modifier(PannelModifier(height: 350))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -994,9 +1044,18 @@ struct UnEmploymentNewsView: View {
                                         Spacer()
                                         
                                         ZStack {
-                                            Text("틀렸어요🥲")
-                                                .font(.system(size: 18).bold())
-                                                .foregroundStyle(.red)
+                                            VStack {
+                                                Image(systemName: "xmark.seal")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 35)
+                                                    .fontWeight(.semibold)
+                                                    .foregroundStyle(.red)
+                                                    .padding(.top, 10)
+                                                
+                                                Text("틀렸어요")
+                                                    .font(.system(size: 20).bold())
+                                            }
                                             
                                             HStack {
                                                 Spacer()
@@ -1011,6 +1070,7 @@ struct UnEmploymentNewsView: View {
                                                         .fontWeight(.medium)
                                                         .frame(width: 15)
                                                         .padding(.trailing, 20)
+                                                        .padding(.bottom, 45)
                                                         .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                                 }
                                             }
@@ -1028,7 +1088,7 @@ struct UnEmploymentNewsView: View {
                                         Spacer()
                                         
                                         Button {
-                                            self.bottomHeight = 350
+                                            self.bottomHeight = 340
                                             withAnimation {
                                                 scrollProxy.scrollTo("7", anchor: .top)
                                             }
@@ -1041,7 +1101,7 @@ struct UnEmploymentNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 320))
+                                    .modifier(PannelModifier(height: 350))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
