@@ -325,7 +325,7 @@ struct BasicEconomyNewsView: View {
                                             .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                     }
                                 }
-                                .modifier(PannelModifier(height: 310))
+                                .modifier(PannelModifier(height: 325))
                                 .opacity(animationOpacity)
                                 .onAppear {
                                     withAnimation {
@@ -359,6 +359,7 @@ struct BasicEconomyNewsView: View {
                                                 .fontWeight(.medium)
                                                 .frame(width: 15)
                                                 .padding(.trailing, 20)
+                                                .padding(.bottom, 5)
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
