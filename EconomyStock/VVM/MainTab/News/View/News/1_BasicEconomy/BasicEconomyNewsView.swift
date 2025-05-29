@@ -109,7 +109,7 @@ struct BasicEconomyNewsView: View {
                                         .overlay {
                                             if progress.count == 1 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.15))
+                                                    .foregroundStyle(.yellow.opacity(0.18))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -126,7 +126,7 @@ struct BasicEconomyNewsView: View {
                                         .overlay {
                                             if progress.count == 2 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.15))
+                                                    .foregroundStyle(.yellow.opacity(0.18))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -143,7 +143,7 @@ struct BasicEconomyNewsView: View {
                                         .overlay {
                                             if progress.count == 3 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.red.opacity(0.12))
+                                                    .foregroundStyle(.red.opacity(0.15))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -163,7 +163,7 @@ struct BasicEconomyNewsView: View {
                                         .overlay {
                                             if progress.count == 4 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.red.opacity(0.12))
+                                                    .foregroundStyle(.red.opacity(0.15))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -183,7 +183,7 @@ struct BasicEconomyNewsView: View {
                                         .overlay {
                                             if progress.count == 5 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.15))
+                                                    .foregroundStyle(.yellow.opacity(0.18))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -203,7 +203,7 @@ struct BasicEconomyNewsView: View {
                                         .overlay {
                                             if progress.count == 6 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.red.opacity(0.12))
+                                                    .foregroundStyle(.red.opacity(0.15))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -220,7 +220,7 @@ struct BasicEconomyNewsView: View {
                                         .overlay {
                                             if progress.count == 7 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.15))
+                                                    .foregroundStyle(.yellow.opacity(0.18))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -237,7 +237,7 @@ struct BasicEconomyNewsView: View {
                                         .overlay {
                                             if progress.count == 8 {
                                                 RoundedRectangle(cornerRadius: 10)
-                                                    .foregroundStyle(.yellow.opacity(0.15))
+                                                    .foregroundStyle(.yellow.opacity(0.18))
                                                     .padding(.horizontal, 8)
                                                     .scaleEffect(1.1)
                                                     .opacity(animationOpacity)
@@ -431,6 +431,7 @@ struct BasicEconomyNewsView: View {
                                                     .fontWeight(.medium)
                                                     .frame(width: 15)
                                                     .padding(.trailing, 20)
+                                                    .padding(.bottom, 10)
                                                     .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                             }
                                         }
@@ -479,9 +480,18 @@ struct BasicEconomyNewsView: View {
                                         Spacer()
                                         
                                         ZStack {
-                                            Text("틀렸어요🥲")
-                                                .font(.system(size: 18).bold())
-                                                .foregroundStyle(.red)
+                                            VStack {
+                                                Image(systemName: "xmark.seal")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 35)
+                                                    .fontWeight(.semibold)
+                                                    .foregroundStyle(.red)
+                                                    .padding(.top, 10)
+                                                
+                                                Text("틀렸어요")
+                                                    .font(.system(size: 20).bold())
+                                            }
                                             
                                             HStack {
                                                 Spacer()
@@ -496,6 +506,7 @@ struct BasicEconomyNewsView: View {
                                                         .fontWeight(.medium)
                                                         .frame(width: 15)
                                                         .padding(.trailing, 20)
+                                                        .padding(.bottom, 45)
                                                         .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                                 }
                                             }
@@ -528,7 +539,7 @@ struct BasicEconomyNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 320))
+                                    .modifier(PannelModifier(height: 350))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
@@ -541,9 +552,18 @@ struct BasicEconomyNewsView: View {
                                         Spacer()
                                         
                                         ZStack {
-                                            Text("정답이에요😊")
-                                                .font(.system(size: 18).bold())
-                                                .foregroundStyle(.green)
+                                            VStack {
+                                                Image(systemName: "checkmark.seal")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 35)
+                                                    .fontWeight(.semibold)
+                                                    .foregroundStyle(.green)
+                                                    .padding(.top, 10)
+                                                
+                                                Text("정답이에요!")
+                                                    .font(.system(size: 20).bold())
+                                            }
                                             
                                             HStack {
                                                 Spacer()
@@ -558,6 +578,7 @@ struct BasicEconomyNewsView: View {
                                                         .fontWeight(.medium)
                                                         .frame(width: 15)
                                                         .padding(.trailing, 20)
+                                                        .padding(.bottom, 45)
                                                         .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                                 }
                                             }
@@ -589,7 +610,7 @@ struct BasicEconomyNewsView: View {
                                                 .shadow(color: .gray.opacity(0.3), radius: 5, x: 5, y: 5)
                                         }
                                     }
-                                    .modifier(PannelModifier(height: 320))
+                                    .modifier(PannelModifier(height: 350))
                                     .opacity(animationOpacity)
                                     .onAppear {
                                         withAnimation {
