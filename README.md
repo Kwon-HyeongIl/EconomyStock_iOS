@@ -4,6 +4,14 @@
   <a href="https://apps.apple.com/kr/app/%EA%B2%BD%EC%A0%9C%EC%8A%A4%ED%86%A1/id6739859649">AppStore에서 다운로드 📲</a>
 </div>
 
+<p>
+  <img src="https://github.com/user-attachments/assets/a3f573b2-1618-4b4f-ac2c-dc50005d6b0a" width="8%"><br>
+  <img src="https://github.com/user-attachments/assets/30ea00e1-3663-44fb-8735-28a68a96924a" width="17%"><br>
+  <img src="https://github.com/user-attachments/assets/0cba3a28-b391-4b8c-887f-89e05cff9af3" width="24%">&nbsp;
+  <img src="https://github.com/user-attachments/assets/2349259a-f99c-4779-a321-0bc4a8431752" width="24%">&nbsp;
+  <img src="https://github.com/user-attachments/assets/0bbe2066-f03d-4c6c-aaf1-d87598a7fe31" width="24%">&nbsp;
+  <img src="https://github.com/user-attachments/assets/767ff12c-adc7-48b0-bfb2-99322bf93e36" width="24%">
+</p>
 
 <br><br>
 
